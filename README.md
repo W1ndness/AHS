@@ -1,5 +1,5 @@
 # AHS Dataset
-Language: ENG | [简体中文]()
+Language: **ENG** | [简体中文](https://github.com/W1ndness/AHS/blob/master/README-CN.md)
 
 ## Introduction
 
