@@ -3,7 +3,7 @@ Language: **ENG** | [简体中文](https://github.com/W1ndness/AHS/blob/master/R
 
 ## Introduction
 
-This is a dataset containing **academic homepages of scholars** from different schools. It can be used for tasks such as data mining and attribute extraction.
+This is a dataset containing **academic homepages of scholars**(AHS) from different schools. It can be used for tasks such as data mining and attribute extraction.
 
 ## Content
 
