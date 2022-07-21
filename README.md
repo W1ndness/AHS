@@ -38,7 +38,7 @@ The dataset contains 22 international universities, each of which contains its f
 
 ## Install
 You can install this dataset as follows:
-```bash
+```shell
 $ git clone https://github.com/W1ndness/AHS.git
 ```
 
