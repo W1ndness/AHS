@@ -1,0 +1,908 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>北京交通大学交通运输学院</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link href="/static/trans/css/bootstrap.css" rel="stylesheet">
+ 	<link href="/static/trans/css/custom.css" rel="stylesheet">
+ 	<link href="/static/trans/css/custom_list.css" rel="stylesheet">
+	<link rel="stylesheet" href="/static/ace1.3/css/jquery.dataTables.min.css" />
+	<style>
+	    .title_a{
+			margin-right:5px;
+			width:150px;
+			float:left;
+			}
+	    .title_a a{
+			line-height:30px;
+			}
+			
+		.zhiwei strong{margin-right:17px;}
+		.zhiwei a{margin-right:10px;display:inline;width:150px;float:left;margin-top:10px;}
+		#words a{line-height:25px;width:30px;height:25px;text-align:center;background:#e8f3fe;float:left;border:1px solid #c6dff7;margin-right:15px;margin-top:15px;}
+		#words a:hover{background:#11518f;color:#FF0;border:1px solid #11518f;}
+		.sub_con_tp{width:880px; margin:0 auto; padding:8px 0 2px}
+		.sub_con_tp h3{background:#fff url(/static/trans/img/h4_head.jpg) no-repeat left center;font-size:14px; font-weight:bold; color:#08509A; text-align:left; padding:14px 0 14px 40px; border-bottom:1px solid #AAAAAA; margin-bottom:12px}
+		.sub_con_tp p{line-height:24px; }
+		.sub_con_tp ul,li {margin:auto;}
+		
+		.sub_con_tp1{width:880px; margin:0 auto; padding:8px 0 2px}
+		.sub_con_tp1 h3{font-size:14px; font-weight:bold; color:#08509A; text-align:center; padding:14px 0; border-bottom:1px solid #AAAAAA; margin-bottom:12px}
+		.sub_con_tp1 p{line-height:24px; margin-bottom:8px; }								
+	</style> 
+    <script src="/static/ace1.3/js/jquery/1.11.0/jquery.min.js"></script>
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="/static/trans/js/html5shiv.js"></script>
+    <![endif]-->
+
+</head>
+<body>
+	<div class="boxbody">
+		<header>
+			<div class="container clearfix">
+				<div class="row-fluid">
+					<div class="span12">
+						<h1 class="brandlogo"><a href="http://trans.bjtu.edu.cn/cms/"><img src="/static/trans/img/logo.png" alt=""></a></h1>
+						<div class="topinfo">
+							<div class="list-soc">
+								<a href="http://trans1.bjtu.edu.cn/english/index.php">English</a>
+							</div>
+							<div class="infophone">
+								<div class="control-group">
+									<div class="controls">
+										<div class="input-prepend">
+                            				<form name="keyform" action="http://trans.bjtu.edu.cn/cms/item/" method="get">
+                              				<span class="add-on"><i class="icon-search"></i></span>
+                              				<input  id="inputIcon" type="text" class="input-medium"  name="keyword">
+                              				</form>
+                              			</div>
+                          			</div>
+                        		</div>
+							</div>
+			  			</div>
+						<div class="clearfix"></div>
+						<div class="row-nav navbar">
+							<div class="navbar-inner">
+								<ul id="nav" class="nav">
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+		<div class="text-center">
+			<img src="/static/trans/img/sha.png" class="slidershadow" alt="">
+		</div>
+		<div id="wrap">
+      		<div class="row-fluid container bggay">
+        		<div class="span4">
+          			<div class="leftbox_top">
+          				<div class="h4border">
+		                	<p>刘军</p>
+		                	<div class="clearfix"></div>
+		                </div>
+						<div class="list_sidebar">
+              				<div class="categories">
+              					<ul>
+									<li><a href="#basic">基本情况</a></li>
+                                    
+                                    <li><a href="#jybj">教育背景</a></li>
+                                    
+                                    <li><a href="#gzjl">工作经历</a></li>
+                                    
+                                    <li><a href="#yjfx">研究方向</a></li>
+                                    
+                                    <li><a href="#zszy">招生专业</a></li>
+                                    
+                                    <li><a href="#kyxm">科研项目</a></li>
+                                    
+                                    <li><a href="#jxgz">教学工作</a></li>
+                                    
+                                    <li><a href="#lwqk">论文/期刊</a></li>
+                                    
+                                    <li><a href="#zzyz">专著/译著</a></li>
+                                    
+                                    <li><a href="#zl">专利</a></li>
+                                    
+                                    <li><a href="#rjzzq">软件著作权</a></li>
+                                    
+                                    <li><a href="#hjry">获奖与荣誉</a></li>
+                                    
+                                    <li><a href="#shjz">社会兼职</a></li>
+                                    
+              					</ul>
+              				</div>
+          				</div>
+          			</div>
+        		</div>
+        		<div class="span8">
+          			<div class="mainleft_box "> 
+						<h4 class="h4border">	            	
+				  		个人简介
+		        		</h4>
+                		<div class="main_nr">
+							<div style="padding:0px 10px;">
+				            	
+				            	<div class="sub_con_tp">
+				            		<h3 style="width:830px;float:right"><a name="basic">基本情况</a></h3>
+									<div style="padding:15px; line-height:25px;">
+										<div class="MsoNormal">
+											<table class="MsoNormalTable" border="0" cellspacing="0" cellpadding="0" width="840" align="center" height="1964" style="width: 840px; border-collapse: collapse; height: auto">
+												<tbody>
+													<tr style="height: 20pt">
+														<td width="80" style=" padding-bottom: 0cm; padding-left: 5.4pt; padding-right: 5.4pt; height: 20pt;  padding-top: 0cm">
+															<p style="text-align: left"><span >姓&nbsp;&nbsp;名：</span></p>
+														</td>
+														<td width="216" style=" border-left: medium none; padding-bottom: 0cm; padding-left: 5.4pt; width: 162pt; padding-right: 5.4pt; height: 20pt;  padding-top: 0cm">
+															<p style="text-align: left"><span >刘军</span></p>
+														</td>
+														<td valign="top" rowspan="9" width="245" style=" border-left: medium none; padding-bottom: 0cm; padding-left: 5.4pt; width: 142.05pt; padding-right: 5.4pt; height: 20pt;  padding-top: 0cm">
+															
+															<img id="photo" src="/media/avatar/2016/12/06/20161206084247_33.JPG" width="216" height="252">
+														</td>
+													</tr>
+													<tr style="height: 20pt">
+														<td width="80" style=" padding-bottom: 0cm; padding-left: 5.4pt; padding-right: 5.4pt; height: 20pt; border-top: medium none;  padding-top: 0cm">
+														<p style="text-align: left"><span >职&nbsp;&nbsp;务：</span></p>
+														</td>
+														<td width="216" style=" border-left: medium none; padding-bottom: 0cm; padding-left: 5.4pt; width: 162pt; padding-right: 5.4pt; border-top: medium none;  padding-top: 0cm">
+														<p style="text-align: left"><span ></span></p>
+														</td>
+													</tr>
+													<tr style="height: 24pt">
+														<td width="80" style=" padding-bottom: 0cm; padding-left: 5.4pt; padding-right: 5.4pt; height: 24pt; border-top: medium none;  padding-top: 0cm">
+														<p style="text-align: left"><span >职&nbsp;&nbsp;称：</span></p>
+														</td>
+														<td width="216" style=" border-left: medium none; padding-bottom: 0cm; padding-left: 5.4pt; width: 162pt; padding-right: 5.4pt; height: 24pt; border-top: medium none;  padding-top: 0cm">
+														<p style="text-align: left"><span >教授</span></p>
+														</td>
+													</tr>
+													<tr style="height: 20pt">
+														<td width="80" style=" padding-bottom: 0cm; padding-left: 5.4pt; padding-right: 5.4pt; height: 20pt; border-top: medium none;  padding-top: 0cm">
+														<p style="text-align: left"><span >学&nbsp;&nbsp;历：</span></p>
+														</td>
+														<td width="216" style=" border-left: medium none; padding-bottom: 0cm; padding-left: 5.4pt; width: 162pt; padding-right: 5.4pt; height: 20pt; border-top: medium none;  padding-top: 0cm">
+														<p style="text-align: left"><span >研究生</span></p>
+														</td>
+													</tr>
+													<tr style="height: 20pt">
+														<td width="80" style=" padding-bottom: 0cm; padding-left: 5.4pt; padding-right: 5.4pt; height: 20pt; border-top: medium none;  padding-top: 0cm">
+														<p style="text-align: left"><span >学&nbsp;&nbsp;位：</span></p>
+														</td>
+														<td width="216" style=" border-left: medium none; padding-bottom: 0cm; padding-left: 5.4pt; width: 162pt; padding-right: 5.4pt; height: 20pt; border-top: medium none;  padding-top: 0cm">
+														<p style="text-align: left"><span >博士</span></p>
+														</td>
+													</tr>
+													<tr style="height: 24pt">
+														<td width="80" style=" padding-bottom: 0cm; padding-left: 5.4pt; padding-right: 5.4pt; height: 24pt; border-top: medium none;  padding-top: 0cm">
+														<p style="text-align: left"><span >通信地址：</span></p>
+														</td>
+														<td width="216" style=" border-left: medium none; padding-bottom: 0cm; padding-left: 5.4pt; width: 162pt; padding-right: 5.4pt; height: 24pt; border-top: medium none;  padding-top: 0cm">
+														<p style="text-align: left"><span >北京交通大学学校办公室</span></p>
+														</td>
+													</tr>
+													<tr style="height: 20pt">
+														<td width="80" style=" padding-bottom: 0cm; padding-left: 5.4pt; padding-right: 5.4pt; height: 20pt; border-top: medium none;  padding-top: 0cm">
+														<p style="text-align: left"><span >邮&nbsp;&nbsp;编：</span></p>
+														</td>
+														<td width="216" style=" border-left: medium none; padding-bottom: 0cm; padding-left: 5.4pt; width: 162pt; padding-right: 5.4pt; height: 20pt; border-top: medium none;  padding-top: 0cm">
+														<p style="text-align: left"><span >100044</span></p>
+														</td>
+													</tr>
+													<tr style="height: 20pt">
+														<td width="80" style=" padding-bottom: 0cm; padding-left: 5.4pt; padding-right: 5.4pt; height: 20pt; border-top: medium none;  padding-top: 0cm">
+														<p style="text-align: left"><span >办公电话：</span></p>
+														</td>
+														<td width="216" style=" border-left: medium none; padding-bottom: 0cm; padding-left: 5.4pt; width: 162pt; padding-right: 5.4pt; height: 20pt; border-top: medium none;  padding-top: 0cm">
+														<p style="text-align: left"><span ></span></p>
+														</td>
+													</tr>
+													<tr style="height: 24pt">
+														<td width="80" style=" padding-bottom: 0cm; padding-left: 5.4pt; padding-right: 5.4pt; height: 24pt; border-top: medium none;  padding-top: 0cm">
+														<p style="text-align: left"><span >电子邮箱：</span></p>
+														</td>
+														<td width="216" style=" border-left: medium none; padding-bottom: 0cm; padding-left: 5.4pt; width: 162pt; padding-right: 5.4pt; height: 24pt; border-top: medium none;  padding-top: 0cm">
+														<p style="text-align: left"><a href="mailto:jliu@bjtu.edu.cn"><span >jliu@bjtu.edu.cn</span></a></p>
+														</td>
+													</tr>
+				
+												</tbody>
+											</table>
+										</div>
+									</div>
+                                    
+                                    <h3 style="width:830px;float:right;"><a name = "jybj">教育背景</a></h3>
+									<div style="padding:15px; line-height:25px;">
+										<div class="MsoNormal">
+											<table class="MsoNormalTable" border="0" cellspacing="0" cellpadding="0" width="840" align="center" height="1964" style="width: 840px; border-collapse: collapse; height: auto">
+												<tbody>
+													<tr>
+														<td width="659" style=" padding-bottom: 0cm; padding-left: 5.4pt; padding-right: 5.4pt; height: 24pt;  padding-top: 0cm">
+															 <p>
+	<span style="color:black;font-size:9pt;">1967</span><span style="color:black;font-size:9pt;">年</span><span style="color:black;font-size:9pt;">2</span><span style="color:black;font-size:9pt;">月出生于新疆石河子市。</span> 
+</p>
+<p>
+	<span style="color:black;font-size:9pt;"></span><span style="color:black;font-size:9pt;">1994</span><span style="color:black;font-size:9pt;">年于北方交通大学获得博士学位后留校任教。</span> 
+</p>
+<p>
+	<span style="color:black;font-size:9pt;"></span>
+</p>
+
+														</td>
+													</tr>
+
+												</tbody>
+											</table>
+										</div>
+									</div>
+                                    
+                                    <h3 style="width:830px;float:right;"><a name = "gzjl">工作经历</a></h3>
+									<div style="padding:15px; line-height:25px;">
+										<div class="MsoNormal">
+											<table class="MsoNormalTable" border="0" cellspacing="0" cellpadding="0" width="840" align="center" height="1964" style="width: 840px; border-collapse: collapse; height: auto">
+												<tbody>
+													<tr>
+														<td width="659" style=" padding-bottom: 0cm; padding-left: 5.4pt; padding-right: 5.4pt; height: 24pt;  padding-top: 0cm">
+															 <p>
+	<span style="font-size:9pt;">1994</span><span style="font-size:9pt;">年</span><span style="font-size:9pt;">4</span><span style="font-size:9pt;">月至</span><span style="font-size:9pt;">1998</span><span style="font-size:9pt;">年任北方交通大学运输系统模拟中心研究室主任；</span>
+</p>
+<p>
+	<span style="font-size:9pt;"></span><span style="font-size:9pt;">1998</span><span style="font-size:9pt;">年至</span><span style="font-size:9pt;">2003</span><span style="font-size:9pt;">年历任交通运输学院信息教研室主任、交通信息管理系主任、院党委书记；</span>
+</p>
+<p>
+	<span style="font-size:9pt;"></span><span style="font-size:9pt;">2004</span><span style="font-size:9pt;">年</span><span style="font-size:9pt;">7</span><span style="font-size:9pt;">月至</span><span style="font-size:9pt;">2007</span><span style="font-size:9pt;">年</span><span style="font-size:9pt;">7</span><span style="font-size:9pt;">月任学校科技处处长，期间担任教育部科技委工程一部办公室主任；</span>
+</p>
+<p>
+	<span style="font-size:9pt;"></span><span style="font-size:9pt;">2007</span><span style="font-size:9pt;">年</span><span style="font-size:9pt;">7</span><span style="font-size:9pt;">月至</span><span style="font-size:9pt;">2012</span><span style="font-size:9pt;">年任交通运输学院院长，期间</span><span style="font-size:9pt;">2008</span><span style="font-size:9pt;">年</span><span style="font-size:9pt;">9</span><span style="font-size:9pt;">月至</span><span style="font-size:9pt;">12</span><span style="font-size:9pt;">月在国家教育行政学院中青年干部班学习。</span>
+</p>
+<p>
+	<span style="font-size:9pt;">2012</span><span style="font-size:9pt;">年</span><span style="font-size:9pt;">3</span><span style="font-size:9pt;">月任北京交通大学副校长、党委常委。</span>
+</p>
+<p>
+	<span style="font-size:9pt;">2019年11月北京交通大学交通运输学院教授。</span>
+</p>
+														</td>
+													</tr>
+
+												</tbody>
+											</table>
+										</div>
+									</div>
+                                    
+                                    <h3 style="width:830px;float:right;"><a name = "yjfx">研究方向</a></h3>
+									<div style="padding:15px; line-height:25px;">
+										<div class="MsoNormal">
+											<table class="MsoNormalTable" border="0" cellspacing="0" cellpadding="0" width="840" align="center" height="1964" style="width: 840px; border-collapse: collapse; height: auto">
+												<tbody>
+													<tr>
+														<td width="659" style=" padding-bottom: 0cm; padding-left: 5.4pt; padding-right: 5.4pt; height: 24pt;  padding-top: 0cm">
+															 <ul>
+
+    <li>交通运输规划与管理</li>
+
+    <li>电子商务技术与应用</li>
+
+    <li>控制科学与工程</li>
+
+    <li>交通运输（专业学位）</li>
+
+    <li>运输与物流理论与技术</li>
+
+    <li>运输组织理论与技术</li>
+
+    <li>智能运输系统理论与技术</li>
+
+    <li>系统工程（交通运输系统工程、管理系统工程、智能交通系统工程、物流系统工程）</li>
+
+    <li>交通运输智能自动化（智能建模与仿真、智能控制、智能调度优化、智能检测与技术）</li>
+
+    <li>轨道交通运输（专业学位）</li>
+
+</ul>
+														</td>
+													</tr>
+
+												</tbody>
+											</table>
+										</div>
+									</div>
+                                    
+                                    <h3 style="width:830px;float:right;"><a name = "zszy">招生专业</a></h3>
+									<div style="padding:15px; line-height:25px;">
+										<div class="MsoNormal">
+											<table class="MsoNormalTable" border="0" cellspacing="0" cellpadding="0" width="840" align="center" height="1964" style="width: 840px; border-collapse: collapse; height: auto">
+												<tbody>
+													<tr>
+														<td width="659" style=" padding-bottom: 0cm; padding-left: 5.4pt; padding-right: 5.4pt; height: 24pt;  padding-top: 0cm">
+															 <ul>
+
+    <li>交通运输规划与管理硕士</li>
+
+    <li>电子商务硕士</li>
+
+    <li>控制科学与工程硕士</li>
+
+    <li>交通运输硕士</li>
+
+    <li>交通运输规划与管理博士</li>
+
+    <li>控制科学与工程博士</li>
+
+    <li>交通运输博士</li>
+
+</ul>
+														</td>
+													</tr>
+
+												</tbody>
+											</table>
+										</div>
+									</div>
+                                    
+                                    <h3 style="width:830px;float:right;"><a name = "kyxm">科研项目</a></h3>
+									<div style="padding:15px; line-height:25px;">
+										<div class="MsoNormal">
+											<table class="MsoNormalTable" border="0" cellspacing="0" cellpadding="0" width="840" align="center" height="1964" style="width: 840px; border-collapse: collapse; height: auto">
+												<tbody>
+													<tr>
+														<td width="659" style=" padding-bottom: 0cm; padding-left: 5.4pt; padding-right: 5.4pt; height: 24pt;  padding-top: 0cm">
+															 
+<ol><li>北京交通大学：京沪高铁客运产品优化与收益预测研究，2013-07-01--2014-12-01，50.0万元，参加</li><li>北京交通大学：京沪高铁客流基本规律研究，2013-11-01--2014-11-01，50.0万元，参加</li><li>北京交通大学：京沪高铁客运产品分类与评价研究，2013-11-01--2014-11-01，40.0万元，参加</li><li>铁道部科技司：多等级票价下的票额投放策略研究，2013-12-01--2014-12-31，25.0万元，主持</li><li>北京市教委：北京城区非公交优先方向信号补偿技术及实验，2013-07-01--2014-06-30，80.0万元，主持</li><li>铁道部科技司：新一代客票系统关键技术研究——铁路客运移动商务模式及关键技术研究，2012-06-30--2014-06-30，25.0万元，参加</li><li>铁道部科技司：新一代客票系统关键技术研究——客运营销辅助决策技术研究，2012-06-30--2014-06-30，65.0万元，主持</li><li>铁道部科技司：铁路客运收益管理研究，2012-06-01--2013-06-30，12.0万元，参加</li><li>铁道部科技司：铁路客票分销体系建设与管理研究，2012-06-01--2013-06-30，20.0万元，参加</li><li>科技部“科技支撑”：成网条件下城轨交通运输组织关键技术 与系统研制--城轨交通网络化运营决策支持中心总体架构 ，2011-01-01--2013-12-31，236.31万元，主持</li><li>铁道部科技司：铁路运输组织系统理论及其发展，2010-07-01--2012-01-31，80.0万元，参加</li><li>北京交大创新科技中心：新疆准东经济技术开发区交通物流规划，2011-09-30--2012-12-31，20.0万元，参加</li><li>基本科研业务费：轨道交通运营培训及认证中心建设可行性研究，2011-10-01--2013-10-31，20.0万元，参加</li><li>北京交通大学：综合交通运输体系发展战略研究，2011-08-06--2011-12-31，40.0万元，参加</li><li>铁道部科技司：运营管理相关技术研究—城市地铁运营管理应急组织研究-1，2011-06-01--2012-12-31，5.0万元，参加</li><li>铁道部科技司：高速铁路客运管理与服务技术研究——高铁售票策略动态优化和旅程规划关键技术的研究，2011-06-01--2012-06-30，50.0万元，主持</li><li>其它部市：基于巨灾风险的中国应急物流网络规划研究，2011-06-13--2011-10-31，6.0万元，参加</li><li>校科技基金：“交通运输规划与管理”二级学科国家重点学科评估，2011-04-01--2011-12-31，8.0万元，参加</li><li>北京交通大学：铁路安全检测技术研究——铁路行包运输在途状态安全检测预警技术与装备的研究，2010-06-30--2011-10-31，55.0万元，主持</li><li>铁道部科技司：客运服务相关技术研究--铁路客运产品设计与优化决策支持技术研究，2010-06-01--2011-12-31，40.0万元，参加</li><li>铁道部科技司：铁路运输发展相关技术研究——客货分线后既有线运输组织战略研究，2010-06-01--2011-12-31，40.0万元，参加</li><li>铁道部科技司：客运服务相关技术研究--武广郑西高速铁路营销策略及关键技术研究，2010-05-30--2011-06-30，35.0万元，主持</li><li>铁道部科技司：高速铁路客运营销策略研究，2010-06-01--2010-06-30，16.0万元，参加</li><li>北京交大创新科技中心：新疆综合交通运输体系发展规划，2010-01-01--2010-10-31，379.54万元，参加</li><li>基本科研业务费：中国综合交通发展战略研究，2009-12-01--2010-12-31，20.0万元，参加</li><li>铁道部科技司：中国高速铁路运营模式与支撑体系研究，2009-12-01--2010-12-31，50.0万元，参加</li><li>国家重点实验室：京沪高速铁路中短期客流的两阶段协同预测方法，2010-01-01--2012-12-31，15.0万元，主持</li><li>铁道部科技司：铁路现代物流发展规划研究，2009-05-01--2010-08-31，14.0万元，参加</li><li>铁道部科技司：安全技术应用研究——数字化预案的大型客站联控应急救援技术研究，2009-05-27--2010-12-31，60.0万元，参加</li><li>铁道部科技司：旅客列车能力全程利用最大化研究，2009-06-01--2010-06-30，14.0万元，参加</li><li>北京市教委：科技成果转化与产业化项目--交通技术转移中心（2009年度），2009-01-01--2009-12-30，150.0万元，主持</li><li>科技部“科技支撑”：新型直线电机运输系统运输组织保障与运行控制关键技术及装备研制，2008-09-01--2010-12-31，594.0万元，参加</li><li>国家自然科学基金“重点”：列车运行控制系统的仿真理论与方法，2008-01-01--2011-12-31，220.0万元，参加</li><li>北京交通大学：2009年铁路旅客列车服务的用户满意度测评，2009-04-09--2009-08-31，100.0万元，参加</li><li>铁道部科技司：铁路应急预案管理研究，2008-01-01--2009-12-30，17.0万元，参加</li><li>铁道部科技司：客运专线运能及优化研究－－客运专线旅客运输计划与营销技术研究，2008-08-01--2009-12-30，60.0万元，参加</li><li>铁道部科技司：客运专线运能及优化方案—武广，郑西客运专线列车开行方案及辅助决策系统研究开发，2008-10-01--2009-12-30，70.0万元，参加</li><li>铁道部科技司：京泸高速铁路运营管理技术体系的研究，2008-01-01--2010-12-30，100.0万元，参加</li><li>科技部“973”：典型大城市交通疏堵问题的综合实证研究(第二批)，2008-10-01--2011-08-31，161.2万元，参加</li><li>科技部“973”：城市交通系统的组织优化与控制－２（第二批），2008-10-01--2011-08-31，124.0万元，参加</li><li>铁道部科技司：铁路运输管理技术研究－铁路专业运输物流资源综合利用及物流信息服务系统规划和系统集成技术的研究，2008-09-01--2009-09-30，80.0万元，主持</li><li>北京交大创新科技中心：新时速公司危险品查堵知识培训班，2008-05-12--2008-06-30，2.88万元，主持</li><li>北京交通大学：面向运输市场需求的中铁国际多式联运发展对策研究，2008-01-01--2008-12-31，25.0万元，参加</li><li>其它部市：快捷运输物流信息服务平台，2008-03-01--2009-03-31，50.0万元，主持</li><li>科技部“863”：公众交通出行全程动态智能向导技术，2007-12-15--2009-12-31，45.0万元，主持</li><li>铁道部科技司：集装箱运输组织及服务信息系统的设计和开发--1，2007-11-01--2008-12-31，10.0万元，主持</li><li>北京交通大学：《铁路旅客运输组织术语》制修订，2008-01-01--2008-12-31，2.835万元，参加</li><li>国家自然科学基金“重点”：列车运行控制系统的仿真理论与方法，2008-01-01--2010-12-31，200.0万元，参加</li><li>北京交通大学：2007年铁路旅客运输站车服务的用户满意度测评，2007-11-01--2008-01-30，130.0万元，参加</li><li>铁道部科技司：关于建设铁路客户服务中心的研究，2007-10-01--2008-05-10，16.0万元，参加</li><li>北京交大创新科技中心：铁道运输专业技术培训班，2007-09-12--2008-07-31，19.44万元，主持</li><li>铁道部科技司：铁路信息系统应用与技术研究——铁路客运营销管理辅助决策技术研究，2007-07-01--2008-12-31，40.0万元，主持</li><li>教育部“创新团队”：列车运行组织及控制的基础理论与方法，2007-01-01--2009-12-31，150.0万元，参加</li><li>校科技基金：我校依法治校的规章制度体系建设研究，2007-01-01--2008-12-31，3.0万元，参加</li><li>科技部“973”：典型大城市交通疏堵问题的综合实证研究，2006-09-01--2007-08-31，166.95万元，参加</li><li>科技部“973”：城市交通系统的组织优化与控制研究-2，2006-09-01--2011-08-31，114.0万元，参加</li><li>北京交大创新科技中心：铁路行包物流信息交换平台研究，2005-07-01--2006-12-30，47.25万元，主持</li><li>铁道部科技司：高速铁路基础资料库系统研究与开发，2005-12-01--2007-12-30，432.0万元，参加</li><li>博士点基金：铁路快捷货物运输服务网络设计理论与方法研究，2007-01-01--2009-12-31，6.0万元，主持</li><li>校科技基金：铁路客运专线列车运行组织实验平台研究，2006-01-01--2006-12-31，35.0万元，参加</li><li>北京交大科技发展中心：铁路行包运输发展“十一五”规划，2005-03-01--2005-05-31，29.5万元，参加</li><li>校科技基金：研究型大学战略绩效评价体系研究，2005-03-31--2006-09-30，3.0万元，参加</li><li>北京交通大学：铁一院信息化平台应用及安全等综合解决方案的研究，2004-06-01--2004-11-01，32.0万元，参加</li><li>北京交通大学：铁一院信息化系统总体方案的研究，2004-06-01--2004-11-01，25.0万元，参加</li><li>铁道部科技司：铁路货运资源优化配置及整合与建立货运中心的研究，2004-01-31--2005-12-31，14.0万元，参加</li><li>铁道部科技司：路网货车集结过程的计算机仿真研究，2004-01-01--2004-12-01，60.0万元，参加</li><li>铁道部科技司：行包专业话公司信息化规划设计与开发，2004-01-01--2004-12-31，85.0万元，主持</li><li>校科技基金：铁路行包运输方案优化设计，2003-09-01--2005-09-30，2.0万元，参加</li><li>科技部：铁路运输信息化的研究-决策支持与综合应用系统的研究，2003-01-01--2004-12-31，340.0万元，参加</li><li>科技部：铁路运输信息化-铁路电子商务系统的研究，2003-01-01--2003-12-31，530.0万元，主持</li><li>北京市科委：京津塘地区快捷客货运输体系的前期研究，2003-06-01--2004-05-31，20.0万元，参加</li><li>铁道部科技司：铁路运输组织模式及相关技术政策改革的前期研究，2003-05-01--2003-12-31，18.0万元，参加</li><li>铁道部科技司：铁路行包应用软件远程维护及在线技术支持系统研究，2003-01-01--2004-12-31，60.0万元，参加</li><li>铁道部科技司：基于路网的列车运行及其组织的模拟研究，2002-01-01--2003-12-31，50.0万元，参加</li><li>铁道部科技司：铁路行包运输组织管理的研究，2002-05-23--2002-12-31，13.0万元，主持</li><li>铁道部科技司：铁路专业运输管理体制的研究，2001-09-05--2002-04-05，12.0万元，参加</li><li>铁道部科技司：REID在铁路行包MIS中应用的可行性研究及实验，2001-04-01--2002-04-30，40.0万元，主持</li><li>铁道部科技司：铁路运输模拟系统的研究，2001-05-01--2002-05-30，60.0万元，参加</li><li>铁道部科技司：铁路行包运输营运管理系统实验及相关问题的研究，2000-04-01--2000-12-31，200.0万元，主持</li><li>铁道部科技司：铁路电子商务的研究-铁路运输电子商务应用研究，2000-04-01--2001-03-31，30.0万元，参加</li><li>铁道部科技司：铁路客货运销客户服务中心系统基本框架研究，2000-01-01--2000-11-30，2.0万元，主持</li><li>北京交通大学：西南出海通道物流趋向研究，1999-06-01--1999-09-01，12.0万元，参加</li><li>铁道部科技司：铁路行包运输管理信息系统开发及相关技术专题研究，1999-05-01--2000-12-01，150.0万元，参加</li><li>北京交通大学：计算机网络信息管理系统，1999-05-01--1999-12-01，12.0万元，参加</li><li>铁道部科技司：铁路企业内部网及用户统一界面，1998-10-01--2000-12-01，10.0万元，参加</li><li>铁道部科技基金：铁路行包运输二维条码应用方案研究，1998-08-01--1999-10-01，3.0万元，参加</li><li>铁道部科技基金：行包追踪模拟系统设计开发研究，1998-08-01--1999-09-01，2.5万元，主持</li><li>铁道部科技司：全路行包运输经营管理总体规划的研究，1998-04-01--1999-12-01，10.0万元，参加</li></ol>
+
+														</td>
+													</tr>
+
+												</tbody>
+											</table>
+										</div>
+									</div>
+                                    
+                                    <h3 style="width:830px;float:right;"><a name = "jxgz">教学工作</a></h3>
+									<div style="padding:15px; line-height:25px;">
+										<div class="MsoNormal">
+											<table class="MsoNormalTable" border="0" cellspacing="0" cellpadding="0" width="840" align="center" height="1964" style="width: 840px; border-collapse: collapse; height: auto">
+												<tbody>
+													<tr>
+														<td width="659" style=" padding-bottom: 0cm; padding-left: 5.4pt; padding-right: 5.4pt; height: 24pt;  padding-top: 0cm">
+															 
+
+														</td>
+													</tr>
+
+												</tbody>
+											</table>
+										</div>
+									</div>
+                                    
+                                    <h3 style="width:830px;float:right;"><a name = "lwqk">论文/期刊</a></h3>
+									<div style="padding:15px; line-height:25px;">
+										<div class="MsoNormal">
+											<table class="MsoNormalTable" border="0" cellspacing="0" cellpadding="0" width="840" align="center" height="1964" style="width: 840px; border-collapse: collapse; height: auto">
+												<tbody>
+													<tr>
+														<td width="659" style=" padding-bottom: 0cm; padding-left: 5.4pt; padding-right: 5.4pt; height: 24pt;  padding-top: 0cm">
+															 
+<p>
+	<span> <br />
+</span> 
+</p>
+<ol>
+	<li style="color:#000000;font-style:normal;font-weight:normal;">
+		<p style="color:#000000;font-style:normal;font-weight:normal;">
+			<span>Seat allotment method for
+single train based on stochastic demand Bao, Yun (State Key Laboratory of Rail
+Traffic Control and Safety, Beijing Jiaotong University, Beijing, China); Liu,
+Jun; Liu, Jiangchuan; Ma, Minshu Source: Zhongguo Tiedao Kexue/China Railway
+Science, v 36, n 2, p 96-102, March 1, 2015 </span> 
+		</p>
+	</li>
+	<li style="color:#000000;font-family:&quot;font-size:10.5pt;font-style:normal;font-weight:normal;">
+		<p style="color:#000000;font-family:&quot;font-size:10.5pt;font-style:normal;font-weight:normal;">
+			<span>Nested seat inventory control
+approach for high-speed trains Bao, Yun (Institute of Computing Technologies,
+China Academy of Railway Sciences, Beijing , China); Liu, Jun; Ma, Min-Shu;
+Meng, Ling-Yun Source: Tiedao Xuebao/Journal of the China Railway Society, v
+36, n 8, p 1-6, August 1, 2014</span> 
+		</p>
+	</li>
+	<li style="color:#000000;font-family:&quot;font-size:10.5pt;font-style:normal;font-weight:normal;">
+		<p style="color:#000000;font-family:&quot;font-size:10.5pt;font-style:normal;font-weight:normal;">
+			<span>Seat inventory control methods
+for Chinese passenger railways Bao, Yun (State Key Laboratory of Rail Traffic
+Control and Safety, Beijing Jiaotong University, Beijing 100044, China); Liu,
+Jun; Ma, Min-Shu; Meng, Ling-Yun Source: Journal of Central South University, v
+21, n 4, p 1672-1682, April 2014</span> 
+		</p>
+	</li>
+	<li style="color:#000000;font-family:&quot;font-size:10.5pt;font-style:normal;font-weight:normal;">
+		<p style="color:#000000;font-family:&quot;font-size:10.5pt;font-style:normal;font-weight:normal;">
+			<span>Short-term forecasting of
+railway passenger flow based on clustering of booking curves Ma, Minshu (School
+of Traffic and Transportation, Beijing Jiaotong University, Beijing 100044,
+China); Liu, Jun; Cao, Jingjia Source: Mathematical Problems in Engineering, v
+2014, 2014</span> 
+		</p>
+	</li>
+	<li style="color:#000000;font-family:&quot;font-size:10.5pt;font-style:normal;font-weight:normal;">
+		<p style="color:#000000;font-family:&quot;font-size:10.5pt;font-style:normal;font-weight:normal;">
+			<span>Analysis of subway station
+capacity with the use of queueing theory Xu, Xin-yue (State Key Lab of Rail
+Traffic Control and Safety, Beijing Jiaotong University, Beijing 100044,
+China); Liu, Jun; Li, Hai-ying; Hu, Jian-Qiang Source: Transportation Research
+Part C: Emerging Technologies, v 38, p 28-43, January 2014</span> 
+		</p>
+	</li>
+	<li style="color:#000000;font-family:&quot;font-size:10.5pt;font-style:normal;font-weight:normal;">
+		<p style="color:#000000;font-family:&quot;font-size:10.5pt;font-style:normal;font-weight:normal;">
+			<span>Calculation of gathering and
+distributing capacity of subway station by simulation and response surface
+methodology Xu, Xin-Yue (State Key Lab of Rail Traffic Control and Safety,
+Beijing Jiaotong University, Beijing 100044, China); Liu, Jun; Li, Hai-Ying;
+Jiang, Xi Source: Tiedao Xuebao/Journal of the China Railway Society, v 35, n
+1, p 8-18, January 2013</span> 
+		</p>
+	</li>
+	<li style="color:#000000;font-family:&quot;font-size:10.5pt;font-style:normal;font-weight:normal;">
+		<p style="color:#000000;font-family:&quot;font-size:10.5pt;font-style:normal;font-weight:normal;">
+			<span>An analytical method to
+calculate station evacuation capacity Xu, Xin-yue (State Key Laboratory of Rail
+Traffic Control &amp; Safety, Beijing Jiaotong University, Beijing, China);
+Liu, Jun; Li, Hai-ying; Zhou, Yan-fang Source: Journal of Central South
+University, v 21, n 10, p 4043-4050, October 17, 2014</span> 
+		</p>
+	</li>
+	<li style="color:#000000;font-family:&quot;font-size:10.5pt;font-style:normal;font-weight:normal;">
+		<p style="color:#000000;font-family:&quot;font-size:10.5pt;font-style:normal;font-weight:normal;">
+			<span>A fast algorithm for railway
+route planning on restricted network Lin, Dong-Mei (State Key Laboratory of
+Rail Traffic Control and Safety, Beijing Jiaotong University, Beijing 100044,
+China); Liu, Jun Source: Tiedao Xuebao/Journal of the China Railway Society, v
+35, n 2, p 8-13, February 2013</span> 
+		</p>
+	</li>
+	<li style="color:#000000;font-family:&quot;font-size:10.5pt;font-style:normal;font-weight:normal;">
+		<p style="color:#000000;font-family:&quot;font-size:10.5pt;font-style:normal;font-weight:normal;">
+			<span>Probabilistic model for remain
+passenger queues at subway station platform Xu, Xin-Yue (State Key Lab of Rail
+Traffic Control and Safety, Beijing Jiaotong University, Beijing 100044,
+China); Liu, Jun; Li, Hai-Ying; Zhou, Yan-Fang Source: Journal of Central South
+University, v 20, n 3, p 837-844, March 2013</span> 
+		</p>
+	</li>
+	<li style="color:#000000;font-family:&quot;font-size:10.5pt;font-style:normal;font-weight:normal;">
+		<p style="color:#000000;font-family:&quot;font-size:10.5pt;font-style:normal;font-weight:normal;">
+			<span>Analysis on the
+beijing-shanghai high-speed railway ticket discount strategy Chen, Yan (School
+of Traffic and Transportation, Beijing Jiaotong University, China); Liu, Jun
+Source: Applied Mechanics and Materials, v 411-414, p 2429-2433, 2013</span> 
+		</p>
+	</li>
+	<li style="color:#000000;font-family:&quot;font-size:10.5pt;font-style:normal;font-weight:normal;">
+		<p style="color:#000000;font-family:&quot;font-size:10.5pt;font-style:normal;font-weight:normal;">
+			<span>Model and algorithm of train
+operation plan under emergency Wang, Wei (Yinchuan Planning and Research
+Center, Yinchuan 750001, China); Liu, Jun; Li, Hai-Ying; Ma, MinShu Source:
+Xitong Gongcheng Lilun yu Shijian/System Engineering Theory and Practice, v 32,
+n 9, p 2057-2064, September 2012</span> 
+		</p>
+	</li>
+	<li style="color:#000000;font-family:&quot;font-size:10.5pt;font-style:normal;font-weight:normal;">
+		<p style="color:#000000;font-family:&quot;font-size:10.5pt;font-style:normal;font-weight:normal;">
+			<span>Optimization of the circulation
+plan for multiple units based on adjustable train path Wang, Ying (School of
+Traffic and Transportation, Beijing Jiaotong University, Beijing 100044,
+China); Liu, Jun; Miao, Jianrui Source: Zhongguo Tiedao Kexue/China Railway
+Science, v 33, n 4, p 112-119, July 2012</span> 
+		</p>
+	</li>
+	<li style="color:#000000;font-family:&quot;font-size:10.5pt;font-style:normal;font-weight:normal;">
+		<p style="color:#000000;font-family:&quot;font-size:10.5pt;font-style:normal;font-weight:normal;">
+			<span>Properties of Chinese railway
+passenger train service network Bao, Yun (State Key Laboratory of Rail Traffic
+Control and Safety, Beijing Jiaotong University, Beijing 100044, China); Liu,
+Jun; Li, Ting Source: Tiedao Xuebao/Journal of the China Railway Society, v 34,
+n 12, p 8-15, December 2012 </span> 
+		</p>
+	</li>
+	<li style="color:#000000;font-family:&quot;font-size:10.5pt;font-style:normal;font-weight:normal;">
+		<p style="color:#000000;font-family:&quot;font-size:10.5pt;font-style:normal;font-weight:normal;">
+			<span>The research on railway luggage
+&amp; package shipping plan based on service network Zheng, Jinzi (School of
+Traffic and Transportation, Beijing Jiaotong University, Beijing, China); Liu,
+Jun Source: Applied Mechanics and Materials, v 135-136, p 1087-1092, 2012,
+Advances in Science and Engineering II</span> 
+		</p>
+	</li>
+	<li style="color:#000000;font-family:&quot;font-size:10.5pt;font-style:normal;font-weight:normal;">
+		<p style="color:#000000;font-family:&quot;font-size:10.5pt;font-style:normal;font-weight:normal;">
+			<span>An assessment of subway station
+capacity Xu, Xinyue (State Key Lab of Rail Traffic Control and Safety, Beijing
+Jiaotong University, Beijing, China); Liu, Jun; Li, Haiying; Zhao, Lumin
+Source: Advanced Materials Research, v 291-294, p 3212-3215, 2011, Materials
+Processing Technology</span> 
+		</p>
+	</li>
+	<li style="color:#000000;font-family:&quot;font-size:10.5pt;font-style:normal;font-weight:normal;">
+		<p style="color:#000000;font-family:&quot;font-size:10.5pt;font-style:normal;font-weight:normal;">
+			<span>A two-phase mapping approach of
+dynamic traffic information integration Lin, Dongmei (School of Traffic and
+Transportation, Beijing Jiaotong University, Beijing 100044, China); Liu, Jun
+Source: ICCTP 2010: Integrated Transportation Systems: Green, Intelligent,
+Reliable - Proceedings of the 10th International Conference of Chinese
+Transportation Professionals, v 382, p 2192-2201, 2010, ICCTP 2010: Integrated
+Transportation Systems: Green, Intelligent, Reliable - Proceedings of the 10th
+International Conference of Chinese Transportation</span> 
+		</p>
+	</li>
+	<li style="color:#000000;font-family:&quot;font-size:10.5pt;font-style:normal;font-weight:normal;">
+		<p style="color:#000000;font-family:&quot;font-size:10.5pt;font-style:normal;font-weight:normal;">
+			<span>Multi-resolution modeling of
+high speed railway infrastructure for train operation simulation Jiang, Xi
+(State Key Lab. of Rail Traffic Control and Safety, Beijing Jiaotong
+University, Beijing, China); Ji, Xuesheng; Liu, Jun Source: Applied Mechanics
+and Materials, v 97-98, p 560-565, 2011</span> 
+		</p>
+	</li>
+	<li style="color:#000000;font-family:&quot;font-size:10.5pt;font-style:normal;font-weight:normal;">
+		<p style="color:#000000;font-family:&quot;font-size:10.5pt;font-style:normal;font-weight:normal;">
+			<span>A rolling optimization approach
+of train scheduling of passenger dedicated lines Wang, Ying (School of Traffic
+and Transportation, Beijing Jiaotong University, Beijing 100044, China); Miao,
+Jianrui; Lei, Fang; Liu, Jun Source: Proceedings of the Conference on Traffic
+and Transportation Studies, ICTTS, v 383, p 1166-1174, 2010, Traffic and
+Transportation Studies 2010 - Proceedings of the 7th International Conference
+on Traffic and Transportation Studies </span> 
+		</p>
+	</li>
+	<li style="color:#000000;font-family:&quot;font-size:10.5pt;font-style:normal;font-weight:normal;">
+		<p style="color:#000000;font-family:&quot;font-size:10.5pt;font-style:normal;font-weight:normal;">
+			<span>The design and implementation
+of Beijing Olympic Games public-travel website Lin, Dongmei (School of Traffic
+and Transportation, Beijing Jiaotong University, Beijing 100044, China); Wang,
+Zhenjun; Guan, Jizhen; Liu, Jun Source: IEEE Conference on Intelligent
+Transportation Systems, Proceedings, ITSC, p 1801-1806, 2010, 13th
+International IEEE Conference on Intelligent Transportation Systems, ITSC 2010</span> 
+		</p>
+	</li>
+	<li style="color:#000000;font-family:&quot;font-size:10.5pt;font-style:normal;font-weight:normal;">
+		<p style="color:#000000;font-family:&quot;font-size:10.5pt;font-style:normal;font-weight:normal;">
+			<span>The Vulnerability assessment
+method of railway network Wang, Wei (School of Traffic and Transportation,
+Beijing Jiaotong University, Beijing, 100044, China); Liu, Jun; Li, Haiying;
+Jiang, Xi Source: Proceedings of the ASME Joint Rail Conference 2010, JRC2010,
+v 1, p 461-465, 2010, Proceedings of the ASME Joint Rail Conference 2010,
+JRC2010 </span> 
+		</p>
+	</li>
+	<li style="color:#000000;font-family:&quot;font-size:10.5pt;font-style:normal;font-weight:normal;">
+		<p style="color:#000000;font-family:&quot;font-size:10.5pt;font-style:normal;font-weight:normal;">
+			<span>A novel coding strategy for
+GA-based numerical optimization Ma, Minshu (School of Traffic and
+Transportation, Beijing Jiaotong University, Beijing, China); Lv, Yongbo; Liu,
+Jun Source: Proceedings - 2010 6th International Conference on Natural
+Computation, ICNC 2010, v 5, p 2243-2248, 2010, Proceedings - 2010 6th
+International Conference on Natural Computation, ICNC 2010</span> 
+		</p>
+	</li>
+	<li style="color:#000000;font-family:&quot;font-size:10.5pt;font-style:normal;font-weight:normal;">
+		<p style="color:#000000;font-family:&quot;font-size:10.5pt;font-style:normal;font-weight:normal;">
+			<span>Survivability analysis of
+railway network Wang, Wei (School of Traffic and Transportation, Beijing
+Jiaotong University, Beijing 100044, China); Liu, Jun; Li, Hai-Ying; Jiang, Xi
+Source: Tiedao Xuebao/Journal of the China Railway Society, v 32, n 4, p 18-22,
+August 2010</span> 
+		</p>
+	</li>
+	<li style="color:#000000;font-family:&quot;font-size:10.5pt;font-style:normal;font-weight:normal;">
+		<p style="color:#000000;font-family:&quot;font-size:10.5pt;font-style:normal;font-weight:normal;">
+			<span>A method for organizing long-distance
+passengers on railway passenger dedicated lines Hua, Rong (School of Traffic
+and Transportation, Beijing Jiaotong University, Beijing 100844, China); Liu,
+Jun; Bao, Yun Source: Proceedings of the Conference on Traffic and
+Transportation Studies, ICTTS, v 383, p 1217-1227, 2010, Traffic and
+Transportation Studies 2010 - Proceedings of the 7th International Conference
+on Traffic and Transportation Studies </span> 
+		</p>
+	</li>
+	<li style="color:#000000;font-family:&quot;font-size:10.5pt;font-style:normal;font-weight:normal;">
+		<p style="color:#000000;font-family:&quot;font-size:10.5pt;font-style:normal;font-weight:normal;">
+			<span>A multi-agent model for
+optimizing train formation plan Wang, Wei (School of Traffic and
+Transportation, Beijing Jiaotong University, Beijing, 100044, China); Liu, Jun;
+Jiang, Xi Source: 2009 2nd International Conference on Information and
+Computing Science, ICIC 2009, v 4, p 256-259, 2009, 2009 2nd International
+Conference on Information and Computing Science, ICIC 2009</span> 
+		</p>
+	</li>
+	<li style="color:#000000;font-family:&quot;font-size:10.5pt;font-style:normal;font-weight:normal;">
+		<p style="color:#000000;font-family:&quot;font-size:10.5pt;font-style:normal;font-weight:normal;">
+			<span>Designing and implementing a
+service oriented traveler information system Liu, Jun (MOE Key Laboratory for
+Urban Traffic Complexity System Theory and Technology, Beijing Jiaotong
+University, Beijing 100044, China); Lin, Dongmei; Li, Chunyan Source:
+Proceedings of the Conference on Traffic and Transportation Studies, ICTTS, v
+383, p 741-749, 2010, Traffic and Transportation Studies 2010 - Proceedings of
+the 7th International Conference on Traffic and Transportation Studies</span> 
+		</p>
+	</li>
+	<li style="color:#000000;font-family:&quot;font-size:10.5pt;font-style:normal;font-weight:normal;">
+		<p style="color:#000000;font-family:&quot;font-size:10.5pt;font-style:normal;font-weight:normal;">
+			<span>The operating conditions of
+long-distance passenger trains on railway passenger dedicated lines Bao, Yun
+(School of Traffic and Transportation, Beijing Jiaotong University, Beijing
+100044, China); Hua, Rong; Liu, Jun Source: Proceedings of the Conference on
+Traffic and Transportation Studies, ICTTS, v 383, p 1228-1237, 2010, Traffic
+and Transportation Studies 2010 - Proceedings of the 7th International
+Conference on Traffic and Transportation Studies</span> 
+		</p>
+	</li>
+	<li style="color:#000000;font-family:&quot;font-size:10.5pt;font-style:normal;font-weight:normal;">
+		<p style="color:#000000;font-family:&quot;font-size:10.5pt;font-style:normal;font-weight:normal;">
+			<span>Column generation algorithms
+based optimization method for maintenance scheduling of multiple units Wang,
+Ying (School of Traffic and Transportation, Beijing Jiaotong University,
+Beijing 100044, China); Liu, Jun; Miao, Jianrui Source: Zhongguo Tiedao
+Kexue/China Railway Science, v 31, n 2, p 115-120, March 2010 </span> 
+		</p>
+	</li>
+	<li style="color:#000000;font-family:&quot;font-size:10.5pt;font-style:normal;font-weight:normal;">
+		<p style="color:#000000;font-family:&quot;font-size:10.5pt;font-style:normal;font-weight:normal;">
+			<span>Service network design for
+railway parcel transportation Rui, Shen (School of Traffic and Transportation,
+Beijing Jiaotong University, Beijing, 100044, China); Jun, Liu; Changxu, Ji
+Source: Proceedings of the Conference on Traffic and Transportation Studies,
+ICTTS, p 336-346, 2006, Proceedings of the Fifth International Conference on
+Traffic and Transportation Studies, ICTTS 2006</span> 
+		</p>
+	</li>
+	<li style="color:#000000;font-family:&quot;font-size:10.5pt;font-style:normal;font-weight:normal;">
+		<p style="color:#000000;font-family:&quot;font-size:10.5pt;font-style:normal;font-weight:normal;">
+			<span>A study of safety architecture
+of railway package transportation management information system Du, Peng
+(Northern Jiaotong University, Beijing 100044, China); Yang, Zhaoxia; Liu, Jun
+Source: Traffic and Transportation Studies Proceedings of ICTTS 2002, v 2, p
+1089-1094, 2002</span> 
+		</p>
+	</li>
+	<li style="color:#000000;font-family:&quot;font-size:10.5pt;font-style:normal;font-weight:normal;">
+		<p style="color:#000000;font-family:&quot;font-size:10.5pt;font-style:normal;font-weight:normal;">
+			<span>2. Study on performance of
+consignment stock cooperation under price-sensitive demand Gao, Xue-Xian; Liu,
+Jun Source: Beijing Jiaotong Daxue Xuebao/Journal of Beijing Jiaotong
+University, v 29, n 6, p 36-39, December 2005</span> 
+		</p>
+	</li>
+	<li style="color:#000000;font-family:&quot;font-size:10.5pt;font-style:normal;font-weight:normal;">
+		<p style="color:#000000;font-family:&quot;font-size:10.5pt;font-style:normal;font-weight:normal;">
+			<span>Study on intelligent management
+system of passenger station Liu, Jun; Du, Peng; Wang, Baoshan. Source:
+Proceedings of the Conference on Traffic and Transportation Studies, ICTTS, p
+859-864, 2000, Traffic and Transportation Studies - Proceedings of the 2nd
+International Conference on Transportation and Traffic Studies, ICTTS 2000</span> 
+		</p>
+	</li>
+</ol>
+<p>
+	<span> <br />
+</span> 
+</p>
+
+														</td>
+													</tr>
+
+												</tbody>
+											</table>
+										</div>
+									</div>
+                                    
+                                    <h3 style="width:830px;float:right;"><a name = "zzyz">专著/译著</a></h3>
+									<div style="padding:15px; line-height:25px;">
+										<div class="MsoNormal">
+											<table class="MsoNormalTable" border="0" cellspacing="0" cellpadding="0" width="840" align="center" height="1964" style="width: 840px; border-collapse: collapse; height: auto">
+												<tbody>
+													<tr>
+														<td width="659" style=" padding-bottom: 0cm; padding-left: 5.4pt; padding-right: 5.4pt; height: 24pt;  padding-top: 0cm">
+															 
+<ol><li>刘军，董宝田.电子商务系统的分析与设计[M]。，高等教育出版社，2003-07</li><li>刘军，季常煦,曾洁琼.电子商务系统的规划与设计[M]。，人民邮电出版社，2001-04</li><li>刘军，曾洁琼.电子商务系统的规划与设计[M]。，人民邮电出版社，</li></ol>
+
+														</td>
+													</tr>
+
+												</tbody>
+											</table>
+										</div>
+									</div>
+                                    
+                                    <h3 style="width:830px;float:right;"><a name = "zl">专利</a></h3>
+									<div style="padding:15px; line-height:25px;">
+										<div class="MsoNormal">
+											<table class="MsoNormalTable" border="0" cellspacing="0" cellpadding="0" width="840" align="center" height="1964" style="width: 840px; border-collapse: collapse; height: auto">
+												<tbody>
+													<tr>
+														<td width="659" style=" padding-bottom: 0cm; padding-left: 5.4pt; padding-right: 5.4pt; height: 24pt;  padding-top: 0cm">
+															 
+
+														</td>
+													</tr>
+
+												</tbody>
+											</table>
+										</div>
+									</div>
+                                    
+                                    <h3 style="width:830px;float:right;"><a name = "rjzzq">软件著作权</a></h3>
+									<div style="padding:15px; line-height:25px;">
+										<div class="MsoNormal">
+											<table class="MsoNormalTable" border="0" cellspacing="0" cellpadding="0" width="840" align="center" height="1964" style="width: 840px; border-collapse: collapse; height: auto">
+												<tbody>
+													<tr>
+														<td width="659" style=" padding-bottom: 0cm; padding-left: 5.4pt; padding-right: 5.4pt; height: 24pt;  padding-top: 0cm">
+															 
+
+														</td>
+													</tr>
+
+												</tbody>
+											</table>
+										</div>
+									</div>
+                                    
+                                    <h3 style="width:830px;float:right;"><a name = "hjry">获奖与荣誉</a></h3>
+									<div style="padding:15px; line-height:25px;">
+										<div class="MsoNormal">
+											<table class="MsoNormalTable" border="0" cellspacing="0" cellpadding="0" width="840" align="center" height="1964" style="width: 840px; border-collapse: collapse; height: auto">
+												<tbody>
+													<tr>
+														<td width="659" style=" padding-bottom: 0cm; padding-left: 5.4pt; padding-right: 5.4pt; height: 24pt;  padding-top: 0cm">
+															 <p class="MsoNormal">
+	<span style="font-family:宋体;font-size:9pt;"><strong>科研奖励</strong></span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-family:宋体;font-size:9pt;">1、北京市科学技术奖科技进步二等奖，超大规模轨道交通路网运输组织协同关键技术及工程应用，2020</span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-family:宋体;font-size:9pt;">2、中国铁道学会科学技术奖一等奖，铁路客运营销系统，2015</span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-family:宋体;font-size:9pt;">3、中国铁道学会科技进步二等奖，大型现代化综合交通枢纽运营管理方案研究，</span><span style="font-size:9pt;"><span>2009</span></span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-family:宋体;font-size:9pt;">4、北京市科学技术三等奖：列车运行调整智能辅助决策支持系统，</span><span style="font-size:9pt;"><span>2005</span></span><span style="font-family:宋体;font-size:9pt;">。</span><span style="font-size:9pt;"></span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-family:宋体;font-size:9pt;">5、中国铁道学会科技进步二等奖：全路行包运输经营管理新系统总体规划研究，</span><span style="font-size:9pt;"><span>2004</span></span><span style="font-family:宋体;font-size:9pt;">；</span><span style="font-size:9pt;"></span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-family:宋体;font-size:9pt;">6、中国铁道学会科技进步三等奖：铁路行包运输组织管理的研究，</span><span style="font-size:9pt;"><span>2004</span></span><span style="font-family:宋体;font-size:9pt;">；<br />
+<br />
+</span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-family:宋体;font-size:9pt;"><strong>教学奖励</strong></span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-family:宋体;font-size:9pt;">1、国家级一流课程，电子商务系统的分析与设计，2020</span>
+</p>
+<p class="MsoNormal">
+	<span style="font-family:宋体;font-size:9pt;">2、国家精品课程负责人，电子商务系统的分析设计，</span><span style="font-size:9pt;"><span>2010</span></span><span style="font-family:宋体;font-size:9pt;">；</span><span style="font-size:9pt;"></span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-family:宋体;font-size:9pt;">2、国家精品教材，《电子商务系统的分析与设计》（第二版），</span><span style="font-size:9pt;"><span>2009</span></span><span style="font-family:宋体;font-size:9pt;">；</span><span style="font-size:9pt;"></span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-family:宋体;font-size:9pt;">3、北京市精品教材奖，《电子商务系统的分析设计》，</span><span style="font-size:9pt;"><span>2005</span></span><span style="font-family:宋体;font-size:9pt;">年；</span><span style="font-size:9pt;"></span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-family:宋体;font-size:9pt;">4、“电子商务专业平台课程的改革与实践”获教学成果一等奖</span> 
+</p>
+
+														</td>
+													</tr>
+
+												</tbody>
+											</table>
+										</div>
+									</div>
+                                    
+                                    <h3 style="width:830px;float:right;"><a name = "shjz">社会兼职</a></h3>
+									<div style="padding:15px; line-height:25px;">
+										<div class="MsoNormal">
+											<table class="MsoNormalTable" border="0" cellspacing="0" cellpadding="0" width="840" align="center" height="1964" style="width: 840px; border-collapse: collapse; height: auto">
+												<tbody>
+													<tr>
+														<td width="659" style=" padding-bottom: 0cm; padding-left: 5.4pt; padding-right: 5.4pt; height: 24pt;  padding-top: 0cm">
+															 <table width="95%" align="center" class="table_sz ke-zeroborder" bordercolor="#c2c2c2" border="0" cellspacing="0" cellpadding="0">
+	<tbody>
+		<tr>
+			<td class="table_td" valign="top" colspan="2">
+				<span style="font-family:宋体;font-size:9pt;"><br />
+</span> 
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2">
+				<p>
+					<span>教育部电子商务本科专业教学指导委员会主任；</span> 
+				</p>
+				<p>
+					<span>铁道学会理事</span><span>；</span>
+				</p>
+				<p>
+					<span><span>《北京交通大学学报》编委</span></span> 
+				</p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+														</td>
+													</tr>
+
+												</tbody>
+											</table>
+										</div>
+									</div>
+                                    
+
+								</div>
+								<div class="clear"></div>
+								
+							</div>
+						</div>
+                  		<div class="clearfix"></div>
+              		</div>
+        		</div>
+       		</div>
+       		<div id="push"></div>
+    	</div>
+	    <div id="footer">
+       		<div class="copy">
+        		<p>版权所有©北京交通大学交通运输学院 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;BJTUICP备:14010705 &nbsp;&nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp;&nbsp;  学院信箱：saad@bjtu.edu.cn</p>
+      		</div>
+  		</div>
+	</div>
+
+		<script>
+		    $.ajax({
+		      dataType: 'JSONP',
+		      url:"http://trans.bjtu.edu.cn/ajax_menu/",
+		      success: function(data){
+		      	var arch_str = '<li class="first"><a href="http://trans.bjtu.edu.cn/cms/">首页</a></li>';
+		      	var left_Str = '';
+		        $.each(data, function(i, n)
+		        {
+		        	arch_str = arch_str + '<li class="divider-vertical"></li><li class="dropdown '
+		        	if (n.id == 16){arch_str = arch_str + 'active'}
+		        	arch_str = arch_str + '"><a href="http://trans.bjtu.edu.cn/cms/item/?cat=' + n.id +'">'+n.name+'</a></li>';
+
+		        	if (n.vcs)
+		        	{
+		        		$.each(n.vcs, function(i, m){
+		        			if (n.id == 16)
+		        			{
+		        				left_Str = left_Str + '<li><a target="_parent"  href="http://trans.bjtu.edu.cn/cms/item/?cat=' + m.id +'">' +m.name + '</a>';
+		        			
+		        				if (m.cvcs)
+		        				{
+		        					left_Str = left_Str + '<ul class="sec_li">';
+			        				$.each(m.cvcs, function(i, k){
+					        				left_Str = left_Str + '<li><a target="_parent"  href="http://trans.bjtu.edu.cn/cms/item/?cat=' + k.id +'">' +k.name + '</a></li>';
+					        		});
+					        		left_Str = left_Str + '</ul>';
+		        				}
+		        				left_Str = left_Str + '</li>';
+		        			}
+		        		});
+		        	}
+		        });
+		        $("#nav").html(arch_str);
+		      }
+		    });
+		</script>
+</body>
+</html>

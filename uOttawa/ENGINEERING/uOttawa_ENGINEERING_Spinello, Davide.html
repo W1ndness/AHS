@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <base href="/" />
+    <title>uOttawa Research Network</title>
+    <meta name="description" content="Explore the research community at the University of Ottawa." />
+    <meta name="author" content="Proximify" />
+    <meta name="keywords" content="Research Network" />
+    <meta name="robots" content="all | index | follow" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width" />
+    
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-54485056-4"></script>
+<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+</script>    
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="@Proximify" />
+<meta name="twitter:creator" content="@Proximify" />
+<meta property="og:url" content="https://uniweb.uottawa.ca/" />
+<meta property="og:title" content="uOttawa Research Network" />
+<meta property="og:description" content="Explore the research community at the University of Ottawa." />
+<meta property="og:image" content="https://uniweb.uottawa.ca/render.php" />
+    <!-- 
+	UNIWeb is a product of Proximify Inc. For more information, visit proximify.ca.
+	Copyright © 2020 Proximify. All rights reserved.
+	
+	Licenses: https://uniweb.uottawa.ca/LICENSES.TXT 
+-->
+
+    <link type="text/css" rel="stylesheet" href="css/uniweb_main1606260216.css">
+
+    <link rel="shortcut icon" href="img/clients/uOttawa/favicon.ico"/>
+
+    <!-- Shim for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+            <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+</head>
+
+<body class="PanelsLayout FixedNavbar">
+    		<!--[if lt IE 11]>
+			<style>
+				#OldBrowserMsg {
+					text-align: center;
+					margin: 0 0 0 16.666%;
+					position: absolute;
+					width: 60%;
+					z-index: 9999;
+					bottom: 15px;
+					background-color: #fdf2ab;
+					padding: 10px 25px;
+					border: 1px solid #9f0000;
+				}
+				#OldBrowserMsg #EnMsg:lang(fr),
+				#OldBrowserMsg #FrMsg:lang(en) {
+					display: none;
+				}
+			</style>
+			<div id="OldBrowserMsg">
+				<h5 id="EnMsg">
+					We have detected that the browser you are using is not fully
+					supported by the UNIWeb Application. This site may not
+					display properly, and you may not be able to fully use all
+					features. For the best experience, we suggest that you
+					update your browser to the latest released version or use an
+					alternative one.
+				</h5>
+				<h5 id="FrMsg">
+					Nous avons détecté que le navigateur que vous utilisez n’est
+					pas entièrement supporté par l'application UNIWeb. Ce site
+					pourrait avoir des problèmes d’affichages et vous pouvez ne
+					pas être en mesure d'utiliser pleinement toutes les
+					fonctionnalités. Pour une meilleure expérience, nous vous
+					suggérons de mettre à jour votre navigateur à la dernière
+					version disponible ou d'utiliser un navigateur alternatif.
+				</h5>
+			</div>
+			<![endif]-->
+    <div id="mainNavbar" class="TopNavbar">
+        <div id="HeadNavInner" class="FlexContainer ThreePanels LeftMidRightPanels" role="toolbar"><div id="SiteLogo" class="LeftPanel"><a href=""><img src="img/clients/uOttawa/uottawa_logo.svg" alt="uOttawa logo"></a></div><div class="MidPanel"><div id="navbarMenu" widget="MenuWidget"><div ~extend="recursive"></div></div><div widget="SearchBarWidget" id="SearchBar"></div></div><div id="CoreButtons" style="display: flex; padding-top: 15px;"><div id="userMenu" widget="MenuWidget"></div></div></div>    </div>
+    <div id="ModalHolder"></div>
+    <div id="TooltipHolder"></div>
+    <div id="FileDropHolder" style="position:absolute; z-index:999999; bottom:80px;right:80px; width:240px; display: none;">
+        <input type="file" id="FileDropInput" multiple></input>
+    </div>
+    <input id="ContextMenuHelper" style="position: absolute;z-index:-1;opacity: 0;pointer-events: none;"></input>
+
+    <div id="mainContainer" class="FlexContainer ThreePanels WithBorders">
+        <div id="mainLeftPanel" class="LeftPanel">
+            <div id="mainLeftPanelInner" class="InnerPanel FixedPosition"></div>
+        </div>
+        <div id="mainMidPanel" class="MidPanel">
+            <div class="InnerPanel">
+                <div id="contentHeader" class="FixedPosition">
+                    <div id="contentTitle"></div>
+                    <ul id="viewTabs" class="nav nav-tabs"></ul>
+                </div>
+                <div id="mainContentData" class="ContentData">
+                    <div id="loader" style="width:100vw;height:calc(100vh - 80px);display:flex;align-items:center;justify-content:center;opacity:.5">
+                        <img src="img/loading_large.gif" width="34px" alt="loading..." />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="mainRightPanel" class="RightPanel">
+            <div class="InnerPanel">
+                <div id="mainContextData" class="ContextData"></div>
+            </div>
+        </div>
+    </div>
+    <div id="itemEditorContainer" class="FlexContainer ThreePanels LeftMidRightPanels WithBorders" style="display:none">
+        <div class="LeftPanel"></div>
+        <div class="MidPanel">
+            <div class="InnerPanel">
+                <div id="itemEditorContentData" class="ContentData"></div>
+            </div>
+        </div>
+        <div class="RightPanel">
+            <div class="InnerPanel">
+                <div class="ContextData"></div>
+            </div>
+        </div>
+    </div>
+
+    <footer id="mainFooter" class="PageFooter">
+        <div id="global-footer-wrapper" class="uol--clearfix">
+	<div id="global-footer">
+		<div class="uos--full-width">
+			<div class="uottawa-B">
+				<div class="uottawa-B-1">
+					<div class="uottawa-B-1-1o1 uol--region">
+						<div class="panel-pane pane-snippet">
+							<div class="uos--standard-width">
+								<div class="uoe--view-mode uoe--view-mode--content-body content-snippet uoe--content">
+								
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="uottawa-global-footer" class="uol--page-container">
+			<div id="uottawa-global-footer-links">
+				<ul id="uottawa-global-footer-links-common">
+					<li class="first collapsed"><a href="http://www.uottawa.ca/en/students" lang="" hreflang="">Students-uoZone</a></li>
+					<li class="collapsed"><a href="http://www.uottawa.ca/en/employees" lang="" hreflang="">Employees</a></li>
+					<li class="leaf"><a href="http://www.hr.uottawa.ca/jobs" lang="" hreflang="">Jobs</a></li>
+					<li class="leaf"><a href="http://www.uottawa.ca/media/home.html" lang="" hreflang="">Media</a></li>
+					<li class="last leaf"><a href="http://www.uottawa.ca/about" lang="" hreflang="">About uOttawa</a></li>
+					<li class="last leaf mobile-only"><a href="http://www.uottawa.ca/en/contact" lang="" hreflang="">Contact the University of Ottawa, Canada</a></li>
+					<li class="last leaf mobile-only"><a href="http://www.uottawa.ca/en/a-z" lang="" hreflang="">A-Z Index</a></li>
+					<li class="last leaf mobile-only"><a href="http://www.uottawa.ca/en/repertoire-directory" lang="" hreflang="">Employee directory</a></li>
+					<li class="last leaf mobile-only"><a href="http://biblio.uottawa.ca/en" lang="" hreflang="">Library</a></li>
+					<li class="last leaf mobile-only"><a href="http://www.uottawa.ca/administration-and-governance" lang="" hreflang="">Governance</a></li>
+				</ul>
+
+				<ul id="uottawa-global-footer-links-social" class="uos--social">
+					<li class="first leaf"><a href="http://www.linkedin.com/edu/school?id=10858" target="_blank" class="uos--social--linkedin" lang="" hreflang=""><span class="uos--invisible">Visit the University of Ottawa's LinkedIn profile</span></a></li>
+					<li class="leaf"><a href="https://twitter.com/uottawa" target="_blank" class="uos--social--twitter" lang="" hreflang=""><span class="uos--invisible">Visit the University of Ottawa's Twitter profile</span></a></li>
+					<li class="leaf"><a href="https://www.facebook.com/uottawa" target="_blank" class="uos--social--facebook" lang="" hreflang=""><span class="uos--invisible">Visit the University of Ottawa's Facebook profile</span></a></li>
+					<li class="leaf"><a href="http://www.youtube.com/uottawa" target="_blank" class="uos--social--youtube" lang="" hreflang=""><span class="uos--invisible">Visit the University of Ottawa's Youtube profile</span></a></li>
+					<li class="leaf"><a href="http://uottawa.tumblr.com/" target="_blank" class="uos--social--tumblr" lang="" hreflang=""><span class="uos--invisible">Visit the University of Ottawa's Tumblr profile</span></a></li>
+					<li class="leaf"><a href="http://media.uottawa.ca/social-media" target="_blank" class="uos--social--more" lang="" hreflang=""><span class="uos--invisible">View all of the University of Ottawa's social profiles</span></a></li>
+				</ul>
+			</div>
+
+			<ul id="uottawa-global-footer-info">
+				<li><a href="http://biblio.uottawa.ca/en" id="siteinfonav-library" lang="" hreflang="">Library</a></li>
+				<li><a href="http://www.uottawa.ca/administration-and-governance" id="siteinfonav-governance" lang="" hreflang="">Governance</a></li>
+				<li><a href="http://www.uottawa.ca/about/policies-and-regulations" id="siteinfonav-policies" lang="" hreflang="">Policies</a></li>
+				<li><a href="http://www.uottawa.ca/respect/accessibility-hub/" id="siteinfonav-accessibility" lang="" hreflang="">Accessibility</a></li>
+				<li><a href="http://copyright.uottawa.ca" id="siteinfonav-copyright" lang="" hreflang="">Copyright</a></li>
+				<li class="right last university"><a href="http://www.uottawa.ca/en/contact" lang="" hreflang="">Contact the University of Ottawa, Canada</a></li>
+				<li class="right last emergency"><a href="http://www.uottawa.ca/en/emergency" lang="" hreflang=""><span class="uos--invisible">On-Campus</span> Emergency</a></li>
+			</ul>
+
+			<div class="mobile-footer">
+				<div class="mobile-phone-number">
+					<a href="http://www.uottawa.ca/en/emergency" lang="" hreflang="">Emergency</a> </div>
+				<div class="mobile-accessibility">
+					<a href="http://www.uottawa.ca/respect/accessibility-hub/" lang="" hreflang="">Accessibility</a> </div>
+				<div class="map-icon">
+					<a href="https://maps.google.ca/maps?q=75+Laurier+Avenue+East&amp;amp;hl=en&amp;amp;ll=45.424269,-75.685651&amp;amp;spn=0.010708,0.022702&amp;amp;sll=45.425685,-75.686531&amp;amp;sspn=0.171319,0.363235&amp;amp;hnear=75+Laurier+Ave+E,+Ottawa,+Ontario+K1N+6N6&amp;amp;t=m&amp;amp;z=16&amp;amp;iwloc=A"
+					 lang="" hreflang="">Find Us</a> </div>
+			</div>
+
+			<div class="clearfix"></div>
+		</div>
+
+		<div id="uottawa-global-footer-swoosh">
+			<div id="uottawa-global-footer-swoosh-left-bg"></div>
+			<div class="uol--page-container">
+				<div id="uottawa-global-footer-swoosh-left"></div>
+				<div id="uottawa-global-footer-swoosh-right"></div>
+			</div>
+			<div id="uottawa-global-footer-swoosh-right-bg"></div>
+		</div>
+	</div>
+</div>    </footer>
+
+    <script crossorigin="anonymous" src="https://polyfill.io/v3/polyfill.min.js?features=IntersectionObserver"></script>
+
+    
+
+    <script type="text/javascript" src="js/uniweb_main1606260216.new.js"></script>
+
+    <script type="text/javascript">
+        (function() {
+            window.activeUser = [];
+            window.activeLanguage = "en";
+
+            var onReadyFn = function() {
+                window.uniweb = new UniwebCore({"frame":{"mainNavbar":[{"id":"HeadNavInner","class":"FlexContainer ThreePanels LeftMidRightPanels","role":"toolbar","data":[{"id":"SiteLogo","class":"LeftPanel","data":"<a href=\"\"><img src=\"img\/clients\/uOttawa\/uottawa_logo.svg\" alt=\"uOttawa logo\"><\/a>"},{"class":"MidPanel","data":[{"id":"navbarMenu","widget":"MenuWidget","data":{"network":{"title":"Network","icon":"network"},"members":{"title":"Members","icon":"people","showViews":"onlyIfContentId","dynamicViews":true,"views":{"profile":"Profile","graph":"Connections","editprofile":{"title":"Edit Profile","desc":"Edit your public information and research interests.","rbac":"edit_members"},"cv":{"title":327,"desc":285,"rbac":"edit_members"}}},"gis":{"title":"Map","icon":"map-marker"},"themes":{"title":"Clusters","icon":"connections","viewType":"people","views":{"people":"Cluster","publications":"Publications"}},"equipment":{"title":"Resources","icon":"beaker","showViews":false,"views":{"profile":"Profile","graph":"Connections","editprofile":{"title":"Edit Profile","desc":"Edit your public information and research interests.","rbac":"edit_equipment"}},"disabled":false},"articles":{"title":"News","desc":"Create and manage articles and webpages.","icon":"excerpt","disabled":false,"showViews":false,"views":{"graph":[],"profile":{"title":"Profile","classes":"LeftMidRightPanels BlockSection2","draw":{"profile":{"contentType":"articles","viewType":"profile","editable":false},"context":"ArticlesProfileContext","navbar":"ArticlesProfileNavbar"}},"editprofile":{"title":"Edit Profile","classes":"LeftMidRightPanels BlockSection2","rbac":"edit_articles","draw":{"profile":{"contentType":"articles","viewType":"profile","editable":true},"context":"ArticlesProfileContext","navbar":"ArticlesProfileNavbar"}}}},"help":{"title":"Help","icon":"question-mark","classes":"LeftMidPanels WithBorders"},"more":{"collapser":true,"collapseAt":3,"title":"More","icon":"menu"},"~extend":"recursive"}},{"widget":"SearchBarWidget","id":"SearchBar","data":{"members":{"target":{"profile":{"membership_information":["first_name","middle_name","last_name"],"research_interests":["interest"],"research_description":["research_description"],"biography":["academic_biography"]}},"display":{"specs":{"showThumbnail":true},"data":[{"target":{"profile":{"membership_information":["first_name","middle_name","last_name"]}}},{"target":{"profile":{"membership_information":["position_title","academic_unit"]}},"delimiter":", "},{"target":{"profile":{"biography":["academic_biography"]}},"delimiter":", ","displayMode":"toggle"},{"target":{"profile":{"research_interests":["interest"]}},"displayMode":"themepills"}]},"view":{"icon":"people","label":{"client":"People","server":"Year..."},"hint":"People"}},"groups":{"target":{"profile":{"group_information":["group_name"],"group_description":["description"]}},"display":{"specs":{"showThumbnail":true,"quality":"banner"},"data":[{"target":{"profile":{"group_information":["group_name"]}}},{"target":{"profile":{"group_description":["description"]}},"displayMode":"toggle"}]},"view":{"icon":"connections","label":{"client":"Groups","server":"September"},"hint":"Groups"}},"themes":{"target":{"query":true},"display":{"specs":{"showThumbnail":false}},"view":{"icon":"tags","label":{"client":"Themes","server":"Back"},"hint":"Themes"}},"equipment":{"target":{"profile":{"equipment_information":["equipment_name"],"research_interests":["interest"],"sectors_of_application":["sectors"],"keywords":["keywords"]}},"display":{"specs":{"showThumbnail":true},"data":[{"target":{"profile":{"equipment_information":["equipment_name"]}}},{"target":{"profile":{"equipment_information":["model","manufacturer"]}},"delimiter":" - "},{"target":{"profile":{"equipment_purpose":["equipment_purpose"]}},"displayMode":"toggle"},{"target":{"profile":{"research_interests":["interest"]}},"displayMode":"themepills"}]},"view":{"icon":"beaker","label":{"client":"Resources","server":"Restore from a file"},"hint":"Resources"}},"~labels":{"all_150":"All","viewAll_88":"view all","search_648":"Search","searchFor_649":"Search for","matchFound_650":"Match found in: "}}}]},{"id":"CoreButtons","style":"display: flex; padding-top: 15px;","data":[{"id":"userMenu","widget":"MenuWidget","data":{"language":{"icon":"language.svg","tooltip":"Select language","title":"Language","submenu":[{"title":"English","id":"english","onclick":"uniweb.changeLanguage('en')"},{"title":"Fran\u00e7ais","id":"french","onclick":"uniweb.changeLanguage('fr')"}]},"login":{"title":"Login","icon":"person-genderless","href":"https:\/\/uniweb.uottawa.ca\/Shibboleth.sso\/Login?entityID=https:\/\/sts.windows.net\/d41fdab1-7e15-4cfd-b5fa-7200e54deb6b\/&target=https:\/\/uniweb.uottawa.ca\/signin.php?action=authenticateUserFederated"}}},""]}]}]},"tabs":{"network":{"title":"Network","icon":"network"},"members":{"title":"Members","icon":"people","showViews":"onlyIfContentId","dynamicViews":true,"views":{"profile":"Profile","graph":"Connections","editprofile":{"title":"Edit Profile","desc":"Edit your public information and research interests.","rbac":"edit_members"},"cv":{"title":327,"desc":285,"rbac":"edit_members"}}},"gis":{"title":"Map","icon":"map-marker"},"themes":{"title":"Clusters","icon":"connections","viewType":"people","views":{"people":"Cluster","publications":"Publications"}},"equipment":{"title":"Resources","icon":"beaker","showViews":false,"views":{"profile":"Profile","graph":"Connections","editprofile":{"title":"Edit Profile","desc":"Edit your public information and research interests.","rbac":"edit_equipment"}},"disabled":false},"articles":{"title":"News","desc":"Create and manage articles and webpages.","icon":"excerpt","disabled":false,"showViews":false,"views":{"graph":[],"profile":{"title":"Profile","classes":"LeftMidRightPanels BlockSection2","draw":{"profile":{"contentType":"articles","viewType":"profile","editable":false},"context":"ArticlesProfileContext","navbar":"ArticlesProfileNavbar"}},"editprofile":{"title":"Edit Profile","classes":"LeftMidRightPanels BlockSection2","rbac":"edit_articles","draw":{"profile":{"contentType":"articles","viewType":"profile","editable":true},"context":"ArticlesProfileContext","navbar":"ArticlesProfileNavbar"}}}},"help":{"title":"Help","icon":"question-mark","classes":"LeftMidPanels WithBorders"},"more":{"collapser":true,"collapseAt":3,"title":"More","icon":"menu"},"~extend":"recursive"},"defaultBodyClass":"PanelsLayout FixedNavbar","terms":"Terms of Use","notifInterval":"90000","memberTitles":{"1":["Professor"],"2":["Postdoctoral Fellow"],"3":["Doctoral Student"],"4":["Master's Student"],"5":["Webmaster"],"6":["University Administrator"],"7":["Research Facilitator"],"8":["Lecturer"],"9":["Teaching Associate"],"10":["Research Associate"],"11":["Research Assistant"],"12":["Librarian"],"13":["Alumnus"],"14":["Researcher"],"15":["Invited professor"],"16":["Industrial partner"],"17":["Undergraduate Student"],"18":["Medical Doctor"],"19":["Senior Fellow"],"20":["Chairholder"]},"langs":["en","fr"],"pictureResolutions":{"members":{"small":"30x30","medium":"50x50","large":"250x250"},"groups":{"small":"30x30","medium":"50x50","large":"250x250"},"equipment":{"small":"50x50","medium":"70x70","large":"500x500"},"publications":{"small":"77.5x48.5","medium":"100x100","large":"155x97"},"articles":{"small":"50x50","medium":"70x70","large":"500x500"}},"clusterNodeSize":["140","140"],"federatedLogin":true,"disableORCID":true,"gaTrackingId":"UA-54485056-4","ver":"2.9.893","framework":null,"indexCards":{"network":{"title":{"en":"uOttawa Research Network","fr":"R\u00e9seaux de recherche uOttawa"},"description":{"en":"Explore the research community at the University of Ottawa.","fr":"Explorez le milieu de recherche \u00e0 l'Universit\u00e9 d'Ottawa."}},"members":{"title":{"en":"Members","fr":"Membres"},"description":{"en":"Find members by their affiliation and academic position.","fr":"Trouvez les membres par leur affiliation et leur poste acad\u00e9mique."}},"themes":{"title":{"en":"Research Clusters","fr":"Grappes de recherche"},"description":{"en":"Discover research interests and connections on selected topics.","fr":"D\u00e9couvrez les int\u00e9r\u00eats de recherche et les liens sur des sujets choisis."}},"gis":{"title":{"en":"Research Places","fr":"Lieux de recherche"},"description":{"en":"Locate researchers at the places where they perform their work.","fr":"Localisez les chercheurs aux endroits o\u00f9 ils effectuent leur travail."}},"equipment":{"title":{"en":"Research Platforms","fr":"Plateformes de recherche"},"description":{"en":"Find advanced technical resources and expertise.","fr":"Trouvez des ressources techniques avanc\u00e9es et de l'expertise."}},"groups":{"title":{"en":"Research Groups","fr":"Plateformes de recherche"},"description":{"en":"Discover research groups, labs and projects.","fr":"D\u00e9couvrir des groupes de recherche, des laboratoires et des projets."}}},"logoutUrl":"","glotUrl":null,"paths":{"widgetDict":"dictionaries\/uniweb_main1606260217.json"}});
+                window.uniweb.init();
+            };
+
+            (document.attachEvent ? document.readyState === 'complete' : document.readyState !== 'loading') ?
+            onReadyFn(): document.addEventListener('DOMContentLoaded', onReadyFn);
+        })();
+    </script>
+</body>
+
+</html>

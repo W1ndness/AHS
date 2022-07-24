@@ -1,0 +1,495 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0">
+    <title>北京师范大学工商与经济管理学院</title>
+    <link rel="stylesheet" href="http://bs.bnu.edu.cn/new-ver-css/reset.css">
+    <link rel="stylesheet" href="http://bs.bnu.edu.cn/new-ver-css/index.css">
+	<link rel="stylesheet" href="http://bs.bnu.edu.cn/new-ver-css/xyslist.css">
+	<link rel="stylesheet" href="http://bs.bnu.edu.cn/new-ver-css/xys-tf.css">
+    <style>
+        .container{
+            width:100%;
+            height: auto;
+            overflow: hidden;
+        }
+        .header{
+            width:100%;
+            height:116px;
+            background:#EFF8FF;
+        }
+        .logo1{
+            width:1200px!important;
+            margin:0 auto;
+            position:relative;
+            float: none;
+			display:block;
+        }
+        .logo2{
+            float:right;
+        }
+        .logo1 p{
+            position:absolute;
+            top:5px;
+            right:5px;
+            font-size:13px;
+        }
+        .logo1 p:hover{
+            color:#112769;
+        }
+        .tu{
+            width:100%;
+            height:240px;
+            background:url('http://bs.bnu.edu.cn/newweb/grzy/images/tu.jpg') no-repeat top center;
+            background-size: 100%;
+        }
+        .lujing{
+            width:1200px;
+            height:58px;
+            margin:0 auto;
+            border-bottom:1px solid #aaa;
+            overflow:hidden;
+        }
+        .lujings{
+            margin:24px 0 0 0;
+            font-size:14px;
+        }
+        .content{
+            color:#333;
+            width:1200px;
+/*            height:2000px;*/
+            margin:0 auto;
+            margin-top:40px;
+/*            background:#c4c4c4;*/
+        }
+        
+        .xian{
+            width:100%;
+            height:8px;
+            background:#9A0812;
+        }
+        
+        .leftc{
+            float:left;
+        }
+        .rightc{
+            float:left;
+            margin-left:50px;
+/*            background:#666;*/
+            width:880px;
+/*            height:1000px;*/
+        }
+        .rheader{
+            width:880px;
+            height:210px;
+/*            background:yellow;*/
+        }
+        .xm{
+            font-size:30px;
+            height:40px;
+/*            border-bottom:4px solid #9A0812;*/
+            width:auto;
+            float:left;
+            line-height:40px;
+			margin-right:30px;
+        }
+        .zhiw{
+            font-size:18px;
+            height:40px;
+            line-height:50px;
+            margin-bottom:30px;
+        }
+        .tel{
+                font-size: 16px;
+                margin-top: 10px;
+                line-height: 20px;
+        }
+        .grjj{
+/*            height:300px;*/
+            width:880px;
+/*            background:yellow;*/
+            padding-bottom:40px;
+        }
+        .jjh{
+                font-size: 20px;
+                border-bottom: 1px solid #cecece;
+                height: 40px;
+                line-height: 40px;
+                padding-left: 30px;
+                background: url(http://bs.bnu.edu.cn/newweb/grzy/images/zw.png) no-repeat 0 16px;
+        }
+        
+        .jjc{
+            font-size:14px;
+            margin-top:30px;
+           
+            line-height:28px;
+            overflow:hidden;
+            text-align: justify;
+            text-justify:inter-ideograph;
+        }
+        .jjc1{
+            height:225px;
+            font-size:14px;
+            margin-top:30px;
+            
+            line-height:28px;
+            overflow:hidden;
+            text-align: justify;
+            text-justify:inter-ideograph;
+        }
+        
+        .dianji1{
+                background: url(http://bs.bnu.edu.cn/newweb/grzy/images/zw.png) no-repeat 0 -50px;
+                width: 13px;
+                height: 13px;
+                cursor: pointer;
+                display: block;
+            margin-top: 20px;
+            transition: all .2s linear;
+        }
+        .dianji1:hover{
+            background: url(http://bs.bnu.edu.cn/newweb/grzy/images/zw.png) no-repeat 0 -64px;
+        }
+        
+        .dianji{
+                background: url(http://bs.bnu.edu.cn/newweb/grzy/images/zw.png) no-repeat 0 -24px;
+                height: 13px;
+                cursor: pointer;
+                display: block;
+            margin-top: 20px;
+            transition: all .2s linear;
+        }
+        .dianji:hover{
+            background: url(http://bs.bnu.edu.cn/newweb/grzy/images/zw.png) no-repeat 0 -37px;
+        }
+        #jjc1{
+            text-indent:0em;
+        }
+        
+        .bks{
+            font-size:14px;
+            font-weight: 800;
+            margin-top:30px;
+            height:auto;
+            line-height:36px;
+        }
+        .bks1{
+            font-size:14px;
+            margin-top:30px;
+            height:auto;
+            line-height:36px;
+        }
+        .bksc{
+            height:36px;
+            line-height:36px;
+            font-size:14px;
+        }
+        
+        .yanzheng{
+            width:1200px;
+            height:100px;
+            margin:0 auto;
+        }
+        .yanzheng img{
+            display:block;
+            margin-top:26px;
+            float:left;
+        }
+		
+#appgame-leftside-share{width:42px; height:216px; position: fixed;bottom: 30px;right: 30px; z-index:9999;}
+.appgame-leftside-share{width:42px; height:259px;}
+#appgame-leftside-share a{display:block; width:42px; height:44px; background-color:#e6e6e6; z-index:1; position:absolute; left:0; box-sizing:border-box; -moz-box-sizing:border-box; border:1px #ddd solid; background-image:url(http://gh.bnu.edu.cn/images/share-icons.png); background-repeat:no-repeat; margin:0;  transition:0.4s; -webkit-transition:0.4s; -moz-transition:0.4s;}
+#appgame-leftside-share a:hover{background-color:#fff; border:1px #eee solid; z-index:2;}
+/*.appgame-leftside-weixin{top:0; background-position:-88px 0;}
+.appgame-leftside-weixin:hover{background-position:0px 0;}
+.appgame-leftside-qzone{top:43px; background-position:-88px -44px;}
+.appgame-leftside-qzone:hover{background-position:0px -44px;}*/
+.appgame-leftside-search{top:86px; background-position:-93px -89px;}
+.appgame-leftside-search:hover{background-position:-5px -86px;}
+.appgame-leftside-weixin{top:129px; background-position:-88px 0px;}
+.appgame-leftside-weixin:hover{background-position:0px 0px;}
+/*.appgame-leftside-fbook{top:172px; background-position:-88px -176px;}
+.appgame-leftside-fbook:hover{background-position:0px -176px;}
+.appgame-leftside-twi{top:215px; background-position:-88px -220px;}
+.appgame-leftside-twi:hover{background-position:0px -220px;}*/
+#appgame-leftside-share .appgame-leftside-top{background-image:url(http://gh.bnu.edu.cn/images/leftnav-off.png); background-position:-1px -395px; top:130px; cursor:pointer;}
+
+.rwt_share {
+/*	overflow:hidden;*/
+	float:left;
+	position:relative;
+}
+.rwt_share a {
+	display:inline-block;
+	margin-right:10px;
+	text-indent:-9999px;
+	margin-bottom:10px;
+	width:24px;
+	height:24px;
+	overflow:hidden;
+	cursor:pointer;
+	float:left;
+	font-size:12px;
+}
+.rwts_weixin {
+	background-position:0 -1612px;
+}
+.rwts_tsina {
+	background-position:0 -104px;
+}
+.rwts_tqq {
+	background-position:0 -260px;
+}
+.rwts_qzone {
+	background-position:0 -52px;
+}
+.rwts_sqq {
+	background-position:0 -2652px;
+}
+.rwts_tieba {
+	background-position:0 -728px;
+}
+.rwts_renren {
+	background-position:0 -208px;
+}
+.rwts_kaixin001 {
+	background-position:0 -312px;
+}
+.rwts_tqf {
+	background-position:0 -364px;
+}
+.rwts_douban {
+	background-position:0 -468px;
+}
+.rwts_twi {
+	background-position:0 -1404px;
+}
+.rwts_fbook {
+	background-position:0 -1352px;
+}
+.rwts_ty {
+	background-position:0 -1196px;
+}
+.rwts_mogujie {
+	background-position:0 -1768px;
+}
+.rwts_meilishuo {
+	background-position:0 -1716px;
+}
+.rwts_huaban {
+	background-position:0 -1872px;
+}
+.rwts_hi {
+	background-position:0 -416px;
+}
+.rwts_tsohu {
+	background-position:0 -520px;
+}
+.rwts_more {
+	background-position:0 0;
+}
+.rwt_share_wxShow_code>img {
+	width:100%;
+}
+.bks1 li{
+	list-style:disc;
+}
+@media screen and (max-width: 1200px){
+	.logo1{
+		width:100%!important;
+	}
+	.leftc img{
+		width:50%!important;
+		height:50%!important;
+	}
+	.logo2{display:none;}
+	.lujing{
+		width:90%;
+	}
+	.content{
+		width:90%;
+	}
+	.leftc{
+		float:none;
+		
+	}
+	.tu{display:none;}
+	
+	.rightc{
+		float:none;
+		width:100%;
+		margin-left:0px;
+	}
+	.footers{width:100%;}
+	.rheader{width:100%;}
+	.grjj{width:100%;}
+}
+@media screen and (max-width: 600px){
+.l3{width:95%;}
+.share{display:none;}
+.leftc img{
+		width:70%!important;
+		height:70%!important;
+	}
+}
+  
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo1">
+                <img src="http://bs.bnu.edu.cn/newweb/grzy/images/logo.png" alt="" class="l3" style="margin-top: 25px;float:left;">
+                <img src="http://bs.bnu.edu.cn/newweb/grzy/images/logo2.png" alt="" class="logo2">
+                <a href="http://bs.bnu.edu.cn/englishversion/facultyresearch/fulltimefaculty/azmsy/119492.html"><p>ENGLISH VERSION</p></a>
+            </div>
+        </div>
+        <div class="xian"></div>
+        <div class="tu"></div>
+        <div class="lujing">
+            <div class="lujings">
+                <a href="#">师资队伍</a>
+                 | 
+                <a href="#">人力资源管理系</a>
+            </div>
+        </div>
+        <div class="content">
+            <div class="leftc">
+                <img src="/Public/upload/touxiang/11112015011.jpg" alt="" width="270">
+            </div>
+            <div class="rightc">
+                <div class="rheader">
+                    <p class="xm">许志星</p>
+                    <p class="zhiw">副教授</p>
+                    <p class="tel"><strong style="display:block;width:100px;float:left;">电话</strong>：010-58801867</p> 
+                 <p class="tel"><strong style="display:block;width:100px;float:left;">E-mail</strong>：xuzhixing@bnu.edu.cn</p>
+                 <p class="tel"><strong style="display:block;width:100px;float:left;">Office hour</strong>：周一下午</p>
+                 <p class="tel"><strong style="display:block;width:100px;float:left;">系所中心</strong>：人力资源管理系</p>
+              </div>
+			  <div class="grjj">
+                    <p class="jjh">个人简历</p>
+                    <div class="bks1" id="jjc"><p style="font-family: " microsoft="" yahei="" font-size:16px="" margin-top:="" 8px=""><span style="font-family: 仿宋; font-size: 19px;">许志星，博士，博士生导师，人力资源管理系副主任，主持与参与国家自然科学基金、教育部人文社会科学基金等十几项研究项目，研究领域涉及绩效评估、教育满意度、创新创业、领导力发展以及商业伦理等多个方面。其研究结果发表在Journal of Business Ethics、Current Psychology、Ethics and Behavior、《北京师范大学学报》、《心理发展与教育》、《教育学报》等国内外知名期刊，并有多篇研究成果被《人大复印资料》及《高校文科学术文摘》等全文转载。同时还担任SSCI期刊Journal of Personality Assessment，Journal of Business Ethics，Journal of Knowledge Management, Current Psychology, CSSCI期刊《北京师范大学文科学报》、《北京工商大学学报》、《财贸研究》、《心理发展与教育》的匿名审稿人。在完成教学科研工作的同时，积极参与企事业单位委托的各类咨询项目，内容涉及战略规划与实施，绩效管理系统优化，研发团队管理等，特别是为国家自然科学基金委人事制度改革的报告受到基金委李静海主任的批示。</span><br /></p><p style="font-family: " microsoft="" yahei="" font-size:16px="" margin-top:="" 8px=""><span style="font-family: 宋体;"></span><br /></p><p style="font-family: " microsoft="" yahei="" font-size:16px="" margin-top:="" 8px=""><strong><span style="font-size: 19px; font-family: 楷体; color: rgb(0, 112, 192);"><br /></span></strong></p><p style="font-family: " microsoft="" yahei="" font-size:16px="" margin-top:="" 8px=""><strong><span style="font-size: 19px; font-family: 楷体; color: rgb(0, 112, 192);">教育经历：</span></strong></p><p style="font-family: " microsoft="" yahei="" font-size:16px="" text-indent:="" 21px="" line-height:="" 29px=""><span style="font-family: 宋体;">2011/9 - 2014/8</span><span style="font-family: 宋体;">，香港浸会大学，道德心理学，博士，导师：马庆强</span></p><p style="font-family: " microsoft="" yahei="" font-size:16px="" text-indent:="" 21px="" line-height:="" 29px=""><span style="font-family: 宋体;">2008/9 - 2011/7</span><span style="font-family: 宋体;">，北京师范大学，心理发展与教育，硕士，导师：邹泓</span></p><p style="font-family: " microsoft="" yahei="" font-size:16px="" text-indent:="" 21px="" line-height:="" 29px=""><span style="font-family: 宋体;">2003/9 - 2007/6</span><span style="font-family: 宋体;">，中南大学，汉语言文学，学士</span></p><p style="font-family: " microsoft="" yahei="" font-size:16px="" margin-top:="" 8px=""></p><p style="font-family: " microsoft="" yahei="" font-size:16px="" margin-top:="" 8px=""><strong><span style="font-size: 19px; font-family: 楷体; color: rgb(0, 112, 192);">工作经历</span></strong></p><p style="font-family: " microsoft="" yahei="" font-size:16px="" text-indent:="" 21px="" line-height:="" 29px=""><span style="font-family: 宋体;">2019/9 –&nbsp;</span><span style="font-family: 宋体;">至今，北京师范大学，经济与工商管理学院，副教授</span></p><p style="font-family: " microsoft="" yahei="" font-size:16px="" text-indent:="" 21px="" line-height:="" 29px=""><span style="font-family: 宋体;">2014/9 – 2019/7</span><span style="font-family: 宋体;">，北京师范大学，经济与工商管理学院，讲师</span></p><p style="font-family: " microsoft="" yahei="" font-size:16px="" text-indent:="" 24px="" line-height:="" 29px=""><span style="font-family: 宋体;">2007/6-2007/12,</span><span style="font-family: 宋体;">湖南梦洁家纺股份有限公司，总监办，总监助理</span></p><p style="font-family: " microsoft="" yahei="" font-size:16px="" margin-top:="" 8px=""><strong></strong></p><p style="font-family: " microsoft="" yahei="" font-size:16px=""><br /></p><p style="font-family: " microsoft="" yahei="" font-size:16px=""><span style="font-size: 19px; font-family: 仿宋;"><br /></span></p><p class="t c-title-en" style="font-size:16px; margin-top: 0px; margin-bottom: 1px; list-style: none; line-height: 1.54; color: rgb(51, 51, 51); font-family: arial;"><br /></p></div>
+                    
+                </div>				<div class="grjj">
+                    <p class="jjh">研究领域</p>
+                    <div class="bks1">绩效评估、人员招聘、商业伦理、领导力发展等</div>
+                </div>				<div class="grjj">
+                    <p class="jjh">研究成果</p>
+                    <div class="bks1" id="jjc1"><p style="font-family: " microsoft="" yahei="" font-size:16px="" margin-top:="" 8px=""><strong><span style="font-size: 19px; font-family: 楷体; color: rgb(0, 112, 192);">代表性研究成果</span></strong></p><p style="font-family: " microsoft="" yahei="" font-size:16px="" text-indent:="" 32px="" line-height:="" 29px=""><strong><span style="font-size: 18px; font-family: 楷体; color: rgb(0, 112, 192);">一、期刊论文</span></strong></p><p style="font-family: " microsoft="" yahei="" font-size:16px="" margin-left:="" 56px="" text-indent:="" 24px="" line-height:="" 29px=""><strong><span style="font-size: 18px; font-family: 楷体; color: rgb(0, 112, 192);">1.</span><span style="font-size: 18px; font-family: 楷体; color: rgb(0, 112, 192);">第一作者论文</span></strong></p><p style="font-family: " microsoft="" yahei="" font-size:16px="" text-indent:="" 32px="" line-height:="" 29px=""><span style="font-size: 18px;">（</span><span style="font-size: 18px; font-family: " times="" new="" roman="" serif="">1</span><span style="font-size: 18px;">）</span><span style="font-size: 18px; font-family: " times="" new="" roman="" serif="">.<strong>Xu, Zhi Xing</strong>, Wang, Y., Zhu, M., &amp; Ma, H. K. (2019). Is risk-taking propensity associated with unethical behaviors? An experimental study. Ethics &amp; Behavior, 1-15. DOI: 10.1080/10508422.2019.1585854</span></p><p style="font-family: " microsoft="" yahei="" font-size:16px="" text-indent:="" 32px="" line-height:="" 29px=""><span style="font-size: 18px;">（</span><span style="font-size: 18px; font-family: " times="" new="" roman="" serif="">2</span><span style="font-size: 18px;">）</span><span style="font-size: 18px; font-family: " times="" new="" roman="" serif="">.<strong>Xu, Zhi Xing*</strong>,Wang Yue, Ma, Hing Keung &amp; Li Jian. (2017). Maybe I Am Not As Moral As I Thought: Calibrating Moral Identity after Immoral Action. Current Psychology.DOI:https://doi.org/10.1007/s12144-017-9686-5</span></p><p style="font-family: " microsoft="" yahei="" font-size:16px="" text-indent:="" 32px="" line-height:="" 29px=""><span style="font-size: 18px;">（</span><span style="font-size: 18px; font-family: " times="" new="" roman="" serif="">3</span><span style="font-size: 18px;">）</span><span style="font-size: 18px; font-family: " times="" new="" roman="" serif="">.<strong>Xu, Zhi Xing*</strong>&nbsp;&amp; Ma, Hing Keung. (2016). How Can a Deontological Decision Lead to Moral Behavior? The Moderating Role of Moral Identity. Journal of business ethics, 137(3), 537–549. DOI: 10.1007/s10551-015-2576-6</span></p><p style="font-family: " microsoft="" yahei="" font-size:16px="" text-indent:="" 32px="" line-height:="" 29px=""><span style="font-size: 18px;">（</span><span style="font-size: 18px; font-family: " times="" new="" roman="" serif="">4</span><span style="font-size: 18px;">）</span><span style="font-size: 18px; font-family: " times="" new="" roman="" serif="">.<strong>Xu, Zhi Xing*</strong>&nbsp;&amp; Ma, Hing Keung. (2015). Does Honesty Result from Moral Will or Moral Grace? Why Moral Identity Matters. Journal of business ethics, 127(2), 371-384. DOI: 10.1007/s10551-014-2050-x.</span></p><p style="font-family: " microsoft="" yahei="" font-size:16px="" text-indent:="" 32px="" line-height:="" 29px=""><span style="font-size: 18px;">（</span><span style="font-size: 18px; font-family: " times="" new="" roman="" serif="">5</span><span style="font-size: 18px;">）</span><span style="font-size: 18px; font-family: " times="" new="" roman="" serif="">.</span><strong><span style="font-size: 18px;">许志星</span></strong><span style="font-size: 18px; font-family: " times="" new="" roman="" serif="">. (2015).&nbsp;</span><span style="font-size: 18px;">组织创造力：基于个体、环境和任务的分析视角</span><span style="font-size: 18px; font-family: " times="" new="" roman="" serif="">.&nbsp;</span><span style="font-size: 18px;">北京师范大学学报（社会科学版）</span><span style="font-size: 18px; font-family: " times="" new="" roman="" serif="">. 2015</span><span style="font-size: 18px;">年第</span><span style="font-size: 18px; font-family: " times="" new="" roman="" serif="">2</span><span style="font-size: 18px;">期</span><span style="font-size: 18px; font-family: " times="" new="" roman="" serif="">, 63-74.</span><span style="font-size: 18px;">（为《高等学校文科学术文摘》</span><span style="font-size: 18px; font-family: " times="" new="" roman="" serif="">2015.3&nbsp;</span><span style="font-size: 18px;">转载）</span></p><p style="font-family: " microsoft="" yahei="" font-size:16px="" text-indent:="" 32px="" line-height:="" 29px=""><span style="font-size: 18px;">（</span><span style="font-size: 18px; font-family: " times="" new="" roman="" serif="">6</span><span style="font-size: 18px;">）</span><span style="font-size: 18px; font-family: " times="" new="" roman="" serif="">.&nbsp;<strong>Xu, Zhi Xing*</strong>&nbsp;&amp; Ma, Hing Keung. (2014). Moral Identity in Chinese Context: Construction and Validation of an Objective Measure. Research on Humanities and Social Sciences, 4(2), 34-45.</span></p><p style="font-family: " microsoft="" yahei="" font-size:16px="" margin-left:="" 56px="" text-indent:="" 24px="" line-height:="" 29px=""><strong><span style="font-size: 18px; font-family: 楷体; color: rgb(0, 112, 192);">2.</span><span style="font-size: 18px; font-family: 楷体; color: rgb(0, 112, 192);">通讯作者论文</span></strong></p><p style="font-family: " microsoft="" yahei="" font-size:16px="" text-indent:="" 32px="" line-height:="" 29px=""><span style="font-size: 18px; font-family: 微软雅黑, sans-serif;">（</span><span style="font-size: 18px; font-family: " times="" new="" roman="" serif="">1</span><span style="font-size: 18px; font-family: 微软雅黑, sans-serif;">）</span><span style="font-size: 18px; font-family: " times="" new="" roman="" serif="">.</span>&nbsp;<span style="font-size: 18px; font-family: 微软雅黑, sans-serif;">王玥,<strong>许志星</strong></span><strong><span style="font-size: 18px; font-family: Garamond, serif;">*</span></strong><span style="font-size: 18px; font-family: Garamond, serif;">.(2019).&nbsp;</span><span style="font-size: 18px; font-family: 微软雅黑, sans-serif;">校</span><span style="font-size: 18px; font-family: 微软雅黑, sans-serif;">内外课业负担对初中学生发展水平的影响——家庭社会经济地位的双重效应.教育科究,2019(09):52-60. (人大复印资料2019年11期全文转载)</span></p><p style="font-family: " microsoft="" yahei="" font-size:16px="" text-indent:="" 32px="" line-height:="" 29px=""><span style="font-size: 18px; font-family: 微软雅黑, sans-serif;">（</span><span style="font-size: 18px; font-family: " times="" new="" roman="" serif="">2</span><span style="font-size: 18px; font-family: 微软雅黑, sans-serif;">）</span><span style="font-size: 18px; font-family: " times="" new="" roman="" serif="">.</span>&nbsp;<span style="font-size: 18px; font-family: 微软雅黑, sans-serif;">王玥</span><span style="font-size: 18px; font-family: Garamond, serif;">,</span><strong><span style="font-size: 18px; font-family: 微软雅黑, sans-serif;">许志星</span><span style="font-size: 18px; font-family: Garamond, serif;">*</span></strong><span style="font-size: 18px; font-family: Garamond, serif;">. (2017).&nbsp;</span><span style="font-size: 18px; font-family: 微软雅黑, sans-serif;">中小学生创新素养测量工具的研制和现状分析——以北京市中小学生为例</span><span style="font-size: 18px; font-family: Garamond, serif;">.&nbsp;</span><span style="font-size: 18px; font-family: 微软雅黑, sans-serif;">内蒙古师范大学学报</span><span style="font-size: 18px; font-family: Garamond, serif;">(</span><span style="font-size: 18px; font-family: 微软雅黑, sans-serif;">教育科学版</span><span style="font-size: 18px; font-family: Garamond, serif;">),30(06):19-24.</span></p><p style="font-family: " microsoft="" yahei="" font-size:16px="" text-indent:="" 32px="" line-height:="" 29px=""><span style="font-size: 18px; font-family: 微软雅黑, sans-serif;">（3）. 王玥</span><span style="font-size: 18px; font-family: Garamond, serif;">,&nbsp;</span><span style="font-size: 18px; font-family: 微软雅黑, sans-serif;">赵丽娟，<strong>许志星</strong></span><strong><span style="font-size: 18px; font-family: Garamond, serif;">*</span></strong><span style="font-size: 18px; font-family: Garamond, serif;">.(2016).&nbsp;</span><span style="font-size: 18px; font-family: 微软雅黑, sans-serif;">课业负担对学校生活满意度的影响：学校氛围的多水平调节作用</span><span style="font-size: 18px; font-family: Garamond, serif;">.</span><span style="font-size: 18px; font-family: 微软雅黑, sans-serif;">心理发展与教育</span><span style="font-size: 18px; font-family: Garamond, serif;">. 32(2),205-213.</span></p><p style="font-family: " microsoft="" yahei="" font-size:16px="" text-indent:="" 32px="" line-height:="" 29px=""><span style="font-size: 18px; font-family: 微软雅黑, sans-serif;">（4）. 张娜, 王玥, &amp;&nbsp;<strong>许志星*.</strong>&nbsp;</span><span style="font-size: 18px; font-family: Garamond, serif;">(2013).&nbsp;</span><span style="font-size: 18px; font-family: 微软雅黑, sans-serif;">家庭社会经济地位对家长教育满意度的影响研究. 教育学报. 9(3).81-91.</span></p><p style="font-family: " microsoft="" yahei="" font-size:16px="" margin-left:="" 56px="" text-indent:="" 24px="" line-height:="" 29px=""><strong><span style="font-size: 18px; font-family: 楷体; color: rgb(0, 112, 192);">3.</span><span style="font-size: 18px; font-family: 楷体; color: rgb(0, 112, 192);">既非第一作者又非通讯作者论文</span></strong></p><p style="font-family: " microsoft="" yahei="" font-size:16px="" text-indent:="" 32px="" line-height:="" 29px=""><span style="font-size: 18px;">（</span><span style="font-size: 18px; font-family: " times="" new="" roman="" serif="">1</span><span style="font-size: 18px;">）</span><span style="font-size: 18px; font-family: " times="" new="" roman="" serif="">.</span><span style="font-size: 18px;">刘文婧</span><span style="font-size: 18px; font-family: " times="" new="" roman="" serif="">,&nbsp;</span><strong><span style="font-size: 18px;">许志星</span></strong><span style="font-size: 18px; font-family: " times="" new="" roman="" serif="">, &amp;&nbsp;</span><span style="font-size: 18px;">邹泓</span><span style="font-size: 18px; font-family: " times="" new="" roman="" serif="">*. (2012).&nbsp;</span><span style="font-size: 18px;">父母教养方式对青少年社会适应的影响</span><span style="font-size: 18px; font-family: " times="" new="" roman="" serif="">:&nbsp;</span><span style="font-size: 18px;">人格类型的调节作用</span><span style="font-size: 18px; font-family: " times="" new="" roman="" serif="">.&nbsp;</span><span style="font-size: 18px;">心理发展与教育</span><span style="font-size: 18px; font-family: " times="" new="" roman="" serif="">. 28(06), 625-633.</span></p><p style="font-family: " microsoft="" yahei="" font-size:16px="" text-indent:="" 32px="" line-height:="" 29px=""><span style="font-size: 18px; font-family: 微软雅黑, sans-serif;">（人大复印资料</span><span style="font-size: 18px; font-family: " times="" new="" roman="" serif="">2013</span><span style="font-size: 18px; font-family: 微软雅黑, sans-serif;">年</span><span style="font-size: 18px; font-family: " times="" new="" roman="" serif="">4</span><span style="font-size: 18px; font-family: 微软雅黑, sans-serif;">期全文转载）</span></p><p style="font-family: " microsoft="" yahei="" font-size:16px="" text-indent:="" 32px="" line-height:="" 29px=""><span style="font-size: 18px;">（</span><span style="font-size: 18px; font-family: " times="" new="" roman="" serif="">2</span><span style="font-size: 18px;">）</span><span style="font-size: 18px; font-family: " times="" new="" roman="" serif="">.</span><span style="font-size: 18px;">杨颖</span><span style="font-size: 18px; font-family: " times="" new="" roman="" serif="">,&nbsp;</span><span style="font-size: 18px;">邹泓</span><span style="font-size: 18px; font-family: " times="" new="" roman="" serif="">*,&nbsp;</span><span style="font-size: 18px;">余益兵</span><span style="font-size: 18px; font-family: " times="" new="" roman="" serif="">&nbsp;&amp;&nbsp;</span><strong><span style="font-size: 18px;">许志星</span><span style="font-size: 18px; font-family: " times="" new="" roman="" serif="">.&nbsp;</span></strong><span style="font-size: 18px; font-family: " times="" new="" roman="" serif="">(2011).&nbsp;</span><span style="font-size: 18px;">中学生社会问题解决能力的特点及其与社会适应的关系</span><span style="font-size: 18px; font-family: " times="" new="" roman="" serif="">.&nbsp;</span><span style="font-size: 18px;">心理发展与教育</span><span style="font-size: 18px; font-family: " times="" new="" roman="" serif="">. 27(01), 44-52.</span></p><p style="font-family: " microsoft="" yahei="" font-size:16px="" margin-bottom:="" 3px="" text-indent:="" 32px="" line-height:="" 29px=""><strong><span style="font-size: 18px; font-family: 楷体; color: rgb(0, 112, 192);">二、会议论文</span></strong></p><p style="font-family: " microsoft="" yahei="" font-size:16px="" margin-bottom:="" 3px="" text-indent:="" 32px="" line-height:="" 29px=""><span style="font-size: 18px; font-family: " times="" new="" roman="" serif="">1.&nbsp;</span><strong><span style="font-size: 18px;">许志星</span><span style="font-size: 18px; font-family: " times="" new="" roman="" serif="">,&nbsp;</span></strong><span style="font-size: 18px;">张平淡</span><span style="font-size: 18px; font-family: " times="" new="" roman="" serif="">.&nbsp;</span><span style="font-size: 18px;">团队创新的影响因素：从结构到过程</span><span style="font-size: 18px; font-family: " times="" new="" roman="" serif="">.&nbsp;</span><span style="font-size: 18px;">中国管理学年会</span><span style="font-size: 18px; font-family: " times="" new="" roman="" serif="">, 2015,&nbsp;</span><span style="font-size: 18px;">合肥</span><span style="font-size: 18px; font-family: " times="" new="" roman="" serif="">,&nbsp;</span><span style="font-size: 18px;">安徽</span><span style="font-size: 18px; font-family: " times="" new="" roman="" serif="">,&nbsp;</span><span style="font-size: 18px;">中国</span><span style="font-size: 18px; font-family: " times="" new="" roman="" serif="">, 2015.11.6-2015.11.8.</span></p><p style="font-family: " microsoft="" yahei="" font-size:16px="" margin-bottom:="" 3px="" text-indent:="" 32px="" line-height:="" 29px=""><span style="font-size: 18px; font-family: " times="" new="" roman="" serif="">2.&nbsp;<strong>Xu, Zhi Xing*</strong>,Wang Yue, Ma, Hing Keung &amp; Li Jian. Maybe I Am Not As Moral As I Thought: Calibrating Moral Identity after Immoral Action.,&nbsp;</span><span style="font-size: 18px;">中国人力资源开发教学与实践研究会第</span><span style="font-size: 18px; font-family: " times="" new="" roman="" serif="">17</span><span style="font-size: 18px;">届年会</span><span style="font-size: 18px; font-family: " times="" new="" roman="" serif="">, 2016. Beijing, China, 2016.8.6-2016.8.7.</span></p><p style="font-family: " microsoft="" yahei="" font-size:16px="" margin-bottom:="" 3px="" text-indent:="" 32px="" line-height:="" 29px=""><span style="font-size: 18px; font-family: " times="" new="" roman="" serif="">3.&nbsp;</span><strong><span style="font-size: 18px;">许志星</span><span style="font-size: 18px; font-family: " times="" new="" roman="" serif="">,&nbsp;</span></strong><span style="font-size: 18px;">郭凯建</span><span style="font-size: 18px; font-family: " times="" new="" roman="" serif="">.&nbsp;</span><span style="font-size: 18px;">“富二代”如何变成“创二代”</span>&nbsp;<span style="font-size: 18px;">——家族性在企业家精神培养中的作用</span><span style="font-size: 18px; font-family: " times="" new="" roman="" serif="">,&nbsp;</span><span style="font-size: 18px;">第三届“职业发展与就业管理”国际论坛</span><span style="font-size: 18px; font-family: " times="" new="" roman="" serif="">, 2016. Beijing, China, 2016.11.05-2016.11.06.</span></p><p style="font-family: " microsoft="" yahei="" font-size:16px="" margin-bottom:="" 3px="" text-indent:="" 32px="" line-height:="" 29px=""><span style="font-size: 18px; font-family: " times="" new="" roman="" serif="">4.&nbsp;</span><strong><span style="font-size: 18px;">许志星</span><span style="font-size: 18px; font-family: " times="" new="" roman="" serif="">.&nbsp;</span></strong><span style="font-size: 18px;">家族性、继任者权威与家族企业传承</span><span style="font-size: 18px; font-family: " times="" new="" roman="" serif="">,&nbsp;</span><span style="font-size: 18px;">第</span><span style="font-size: 18px; font-family: " times="" new="" roman="" serif="">5</span><span style="font-size: 18px;">届中国人力资源管理论坛</span><span style="font-size: 18px; font-family: " times="" new="" roman="" serif="">, 2016.&nbsp;</span><span style="font-size: 18px;">武汉</span><span style="font-size: 18px; font-family: " times="" new="" roman="" serif="">,&nbsp;</span><span style="font-size: 18px;">湖北</span><span style="font-size: 18px; font-family: " times="" new="" roman="" serif="">,&nbsp;</span><span style="font-size: 18px;">中国</span><span style="font-size: 18px; font-family: " times="" new="" roman="" serif="">, 2016.11.26-2016.11.27.</span></p><p style="font-family: " microsoft="" yahei="" font-size:16px="" margin-bottom:="" 3px="" text-indent:="" 32px="" line-height:="" 29px=""><span style="font-size: 18px; font-family: " times="" new="" roman="" serif="">5.</span>&nbsp;<strong><span style="font-size: 18px; font-family: " times="" new="" roman="" serif="">Xu, Zhi Xing,</span></strong><span style="font-size: 18px; font-family: " times="" new="" roman="" serif="">&nbsp;Wang Yue, &amp; Zhu Min. The Dark Side of Risk-Taking Propensity in an Experimental Study: High Risk-Taking and High Cheating, International conference on human resources management in China and east Asia.2017, Göttingen, Germany, 2017.05.25-2017.05.26</span></p><p style="font-family: " microsoft="" yahei="" font-size:16px="" margin-bottom:="" 3px="" text-indent:="" 32px="" line-height:="" 29px=""><span style="font-size: 18px; font-family: " times="" new="" roman="" serif="">6.</span>&nbsp;<strong><span style="font-size: 18px; font-family: " times="" new="" roman="" serif="">Xu, Zhi Xing,</span></strong><span style="font-size: 18px; font-family: " times="" new="" roman="" serif="">&nbsp;Wang Yue, Ma, Hing Keung, &amp; Zhu Min The Dark Side of Risk-Taking Propensity in an Experimental Study,&nbsp;</span><span style="font-size: 18px;">中国心理学会社会心理学分会</span><span style="font-size: 18px; font-family: " times="" new="" roman="" serif="">2017</span><span style="font-size: 18px;">年学术年会</span><span style="font-size: 18px; font-family: " times="" new="" roman="" serif="">,&nbsp;</span><span style="font-size: 18px;">福州</span><span style="font-size: 18px; font-family: " times="" new="" roman="" serif="">,&nbsp;</span><span style="font-size: 18px;">福建</span><span style="font-size: 18px; font-family: " times="" new="" roman="" serif="">,&nbsp;</span><span style="font-size: 18px;">中国</span><span style="font-size: 18px; font-family: " times="" new="" roman="" serif="">, 2017.11.25-2017.11.26</span></p><p style="font-family: " microsoft="" yahei="" font-size:16px="" margin-bottom:="" 3px="" text-indent:="" 32px="" line-height:="" 29px=""><strong><span style="font-size: 18px; font-family: 楷体; color: rgb(0, 112, 192);">三、专著</span></strong></p><p style="font-family: " microsoft="" yahei="" font-size:16px="" text-indent:="" 32px="" line-height:="" 29px=""><strong><span style="font-size: 18px;">许志星</span></strong><span style="font-size: 18px;">，著：人才甄选：原则、工具与方法，经济科学出版社，</span><span style="font-size: 18px; font-family: " times="" new="" roman="" serif="">2018</span><span style="font-size: 18px;">年。</span></p></div>
+                    
+                </div>				<div class="grjj">
+                    <p class="jjh">研究课题</p>
+                  
+                    <div class="bks1"><p style="font-family: " microsoft="" yahei="" font-size:16px="">主持项目：</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">1.善有善报？道德行为影响伦理型领导的过程机制及边界条件 国家自然科学基金 22.8万 主持人：许志星 2019-2021&nbsp;</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">2.管理者道德行为的动机机制研究：基于道德认同和权力控制的二元逻辑 教育部人文社会科学基金8万 主持人：许志星 2018-2021&nbsp;</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">3.家长式领导对员工创造性行为的影响：基于合法判断的视角 北京师范大学自主科研基金 10万 主持人：许志星 2015-2017&nbsp;</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">4.首都互联网产经动态 北京市互联网信息办公室10万 主持人：许志星 2017-2018&nbsp;</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">5.石家庄市海绵城市建设相关规划项目——降雨数据分析 中国城市规划设计研究院13万 主持人：许志星 2016-2018&nbsp;</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">6.互联网企业创业者的成长经历与创业动机研究 北京师范大学985项目 20万 主持人：许志星 2018-2019&nbsp;</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">7.组织中的道德自我认同 北京师范大学经济与工商管理学院科研启动项目 2万 主持人：许志星 2014-2015&nbsp;</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">8.The evolution of consumer values and its impact on consumer behaviors: an intergenerational analysis of Chinese consumers UniSA-BNU seed funding 8348 澳元 主持人：许志星 2019.01-2020.12</p><p style="font-family: " microsoft="" yahei="" font-size:16px=""><br /></p><p style="font-family: " microsoft="" yahei="" font-size:16px="">参与项目</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">1.How Human Relationship Affects Moral Decision: A Pilot Study香港浸会大学 HK$4.994万 主持人：马庆强 2014-2015&nbsp;</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">2.Identity Crisis in Hong Kong University Students: A Study of the Psychological Problems in the Search for National Identity 香港浸会大学 HK$9.376万 主持人：马庆强 2015-2016&nbsp;</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">3.北京市中学生科学素养的现状与培养机制研究 北京市教育科学“十三五”规划项目 5万 主持人：王玥 2017-2019&nbsp;</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">4.公共部门管理会计理论与方法体系研究——以医院为例 中华人民共和国财政部 4万 主持人：崔学刚 2015-2017&nbsp;</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">5.科学基金机构定位与治理机制改革研究 国家自然科学基金应急项目 60万 主持人：赖德胜 2018.01-2020.12</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">6.高管成长经历、职业路径与公司财务行为：基于改革开放场景的研究 国家自然科学基金面上项目 48万 主持人：郝颍 2019.01-2021.12</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">7.中国式员工持股计划：实施动机、价值效应及作用机制 国家自然科学基金面上项目 48万 主持人：张会丽 2019-2021&nbsp;</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">8.是什么让员工沉默不语：中国组织情境下团队断层对员工建言行为影响机理的跨层次研究 教育部人文科学基金 8万 主持人：仇勇 2018-2021&nbsp;</p></div>
+                    
+                </div>				<div class="grjj">
+                    <p class="jjh">学生情况</p>
+                    <div class="bks1"><span style="font-family: " microsoft="" yahei="" font-size:16px="">2014-2015 励泓计划指导学生 韩家宝等</span><br /></div>
+                    
+                </div>				<div class="grjj">
+                    <p class="jjh">教授课程</p>
+                    <div class="bks1"><p style="font-family: " microsoft="" yahei="" font-size:16px="">本科生：</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">人力资源管理</p><p style="font-family: " microsoft="" yahei="" font-size:16px=""></p><p style="font-family: " microsoft="" yahei="" font-size:16px=""></p><p style="font-family: " microsoft="" yahei="" font-size:16px="">组织行为学(双语)</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">组织行为学（全英文）</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">学术研究生：</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">人员招募与甄选 （硕士）</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">管理研究方法（博士）<br /></p><p style="font-family: " microsoft="" yahei="" font-size:16px="">MBA</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">心理测量与人才甄选</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">组织行为学</p></div>
+                    
+                </div>            </div>
+        </div>
+         <footer style="overflow: hidden;">
+            <div class="footers">
+                <div class="footersl">
+                    <img src="http://bs.bnu.edu.cn/newweb/images/ewm.jpg" alt="" class="imgewm">
+                    <div class="footerxx">
+                        <p>Copyright © 2020 北京师范大学经济与工商管理学院</p>
+                        <p><i class="fas fa-map-marker-alt"></i> 地址：北京市新街口外大街19号</p>
+                        <p><i class="fas fa-portrait"></i> 传真：010-58801867</p>
+                        <p><i class="fas fa-phone"></i> 电话：010-58801867</p>
+                        <p><i class="fas fa-envelope"></i> 邮编：100875</p>
+                    </div>
+                </div>
+                <img src="http://bs.bnu.edu.cn/newweb/images/db.png" alt="" width="140" class="dbimg">
+                <img src="http://bs.bnu.edu.cn/newweb/images/yx.png" alt="" class="yuanxun">
+            </div>
+        </footer>
+    </div>
+	<div class="share">
+		  <div id="appgame-leftside-share">
+	        <div class="appgame-leftside-share rwt_share" id="rwt_share">
+	         
+	        <!--<a class="appgame-leftside-search" data-cmd="search" title="search"  href="javascript:void(0);" onclick="opens('id')">search</a> --> <!--<div class="searchs" id="id">
+	         <form name="dataForm" action="/cms/search/searchResults.jsp" target="_blank" method="post" accept-Charset="utf-8"  onsubmit="document.charset='utf-8';">
+			        	<p>
+			        		<input name="siteID" size="4" value="127" type = "hidden">
+			        		<input type="text" name="query" id="search" class="searchInput" value="输入搜索词">
+			        		<button type="submit"></button>
+			        	</p>
+			        	</form>
+			        </div>-->
+			        <!-- <a class="appgame-leftside-weixin" data-cmd="weixin" title="">微信</a> -->
+                    
+			        <!-- <a class="appgame-leftside-qzone" data-cmd="qzone" title="">qq空间</a>
+			        
+			        <a class="appgame-leftside-tsina" data-cmd="tsina" title="">微博</a> -->			    </div>
+			        <a class="appgame-leftside-top" onclick="gotoTPoint()"></a>			</div>
+			        
+		</div>
+</body>
+<script src="http://gh.bnu.edu.cn/js/jquery-1.9.0.min.js"></script>
+<script src="http://gh.bnu.edu.cn/js/share.min.js"></script>
+<script>
+    var dj=document.getElementById('dianji');
+    var jjc=document.getElementById('jjc');
+    var dj1=document.getElementById('dianji1');
+    var jjc1=document.getElementById('jjc1');
+    var a=1;
+    function zhedie(m,n){
+        m.onclick=function(){
+            if(a==1){
+                n.className='jjc';
+                m.className='dianji1'
+                a=0;
+            }else{
+                n.className='jjc1';
+                m.className='dianji'
+                a=1;
+            }
+        }
+    }
+    zhedie(dj,jjc);
+    zhedie(dj1,jjc1);
+	
+	
+</script>
+<script>
+
+	
+	
+    
+
+    /*回到顶部*/
+	$(function(){
+	 	$(window).resize(function(){
+						var h = $(window).height();
+						$('.goTop').css('top',h-60);
+						$(window).scroll(function(){				
+							var scrollTop = $(document).scrollTop();					  
+							$('.goTop').stop().animate({
+								top: h + scrollTop-60
+							},300);
+						});
+		}).resize();
+		});
+	//gotop
+
+			$('.goTop').click(function(){
+
+				$('body,html').stop().animate({scrollTop:0});
+
+				return false;
+
+			});
+	
+	function gotoTPoint(){
+		$("html,body").animate({scrollTop:0},500);
+	}
+</script>
+</html>

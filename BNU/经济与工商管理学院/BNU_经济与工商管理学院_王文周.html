@@ -1,0 +1,495 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0">
+    <title>北京师范大学工商与经济管理学院</title>
+    <link rel="stylesheet" href="http://bs.bnu.edu.cn/new-ver-css/reset.css">
+    <link rel="stylesheet" href="http://bs.bnu.edu.cn/new-ver-css/index.css">
+	<link rel="stylesheet" href="http://bs.bnu.edu.cn/new-ver-css/xyslist.css">
+	<link rel="stylesheet" href="http://bs.bnu.edu.cn/new-ver-css/xys-tf.css">
+    <style>
+        .container{
+            width:100%;
+            height: auto;
+            overflow: hidden;
+        }
+        .header{
+            width:100%;
+            height:116px;
+            background:#EFF8FF;
+        }
+        .logo1{
+            width:1200px!important;
+            margin:0 auto;
+            position:relative;
+            float: none;
+			display:block;
+        }
+        .logo2{
+            float:right;
+        }
+        .logo1 p{
+            position:absolute;
+            top:5px;
+            right:5px;
+            font-size:13px;
+        }
+        .logo1 p:hover{
+            color:#112769;
+        }
+        .tu{
+            width:100%;
+            height:240px;
+            background:url('http://bs.bnu.edu.cn/newweb/grzy/images/tu.jpg') no-repeat top center;
+            background-size: 100%;
+        }
+        .lujing{
+            width:1200px;
+            height:58px;
+            margin:0 auto;
+            border-bottom:1px solid #aaa;
+            overflow:hidden;
+        }
+        .lujings{
+            margin:24px 0 0 0;
+            font-size:14px;
+        }
+        .content{
+            color:#333;
+            width:1200px;
+/*            height:2000px;*/
+            margin:0 auto;
+            margin-top:40px;
+/*            background:#c4c4c4;*/
+        }
+        
+        .xian{
+            width:100%;
+            height:8px;
+            background:#9A0812;
+        }
+        
+        .leftc{
+            float:left;
+        }
+        .rightc{
+            float:left;
+            margin-left:50px;
+/*            background:#666;*/
+            width:880px;
+/*            height:1000px;*/
+        }
+        .rheader{
+            width:880px;
+            height:210px;
+/*            background:yellow;*/
+        }
+        .xm{
+            font-size:30px;
+            height:40px;
+/*            border-bottom:4px solid #9A0812;*/
+            width:auto;
+            float:left;
+            line-height:40px;
+			margin-right:30px;
+        }
+        .zhiw{
+            font-size:18px;
+            height:40px;
+            line-height:50px;
+            margin-bottom:30px;
+        }
+        .tel{
+                font-size: 16px;
+                margin-top: 10px;
+                line-height: 20px;
+        }
+        .grjj{
+/*            height:300px;*/
+            width:880px;
+/*            background:yellow;*/
+            padding-bottom:40px;
+        }
+        .jjh{
+                font-size: 20px;
+                border-bottom: 1px solid #cecece;
+                height: 40px;
+                line-height: 40px;
+                padding-left: 30px;
+                background: url(http://bs.bnu.edu.cn/newweb/grzy/images/zw.png) no-repeat 0 16px;
+        }
+        
+        .jjc{
+            font-size:14px;
+            margin-top:30px;
+           
+            line-height:28px;
+            overflow:hidden;
+            text-align: justify;
+            text-justify:inter-ideograph;
+        }
+        .jjc1{
+            height:225px;
+            font-size:14px;
+            margin-top:30px;
+            
+            line-height:28px;
+            overflow:hidden;
+            text-align: justify;
+            text-justify:inter-ideograph;
+        }
+        
+        .dianji1{
+                background: url(http://bs.bnu.edu.cn/newweb/grzy/images/zw.png) no-repeat 0 -50px;
+                width: 13px;
+                height: 13px;
+                cursor: pointer;
+                display: block;
+            margin-top: 20px;
+            transition: all .2s linear;
+        }
+        .dianji1:hover{
+            background: url(http://bs.bnu.edu.cn/newweb/grzy/images/zw.png) no-repeat 0 -64px;
+        }
+        
+        .dianji{
+                background: url(http://bs.bnu.edu.cn/newweb/grzy/images/zw.png) no-repeat 0 -24px;
+                height: 13px;
+                cursor: pointer;
+                display: block;
+            margin-top: 20px;
+            transition: all .2s linear;
+        }
+        .dianji:hover{
+            background: url(http://bs.bnu.edu.cn/newweb/grzy/images/zw.png) no-repeat 0 -37px;
+        }
+        #jjc1{
+            text-indent:0em;
+        }
+        
+        .bks{
+            font-size:14px;
+            font-weight: 800;
+            margin-top:30px;
+            height:auto;
+            line-height:36px;
+        }
+        .bks1{
+            font-size:14px;
+            margin-top:30px;
+            height:auto;
+            line-height:36px;
+        }
+        .bksc{
+            height:36px;
+            line-height:36px;
+            font-size:14px;
+        }
+        
+        .yanzheng{
+            width:1200px;
+            height:100px;
+            margin:0 auto;
+        }
+        .yanzheng img{
+            display:block;
+            margin-top:26px;
+            float:left;
+        }
+		
+#appgame-leftside-share{width:42px; height:216px; position: fixed;bottom: 30px;right: 30px; z-index:9999;}
+.appgame-leftside-share{width:42px; height:259px;}
+#appgame-leftside-share a{display:block; width:42px; height:44px; background-color:#e6e6e6; z-index:1; position:absolute; left:0; box-sizing:border-box; -moz-box-sizing:border-box; border:1px #ddd solid; background-image:url(http://gh.bnu.edu.cn/images/share-icons.png); background-repeat:no-repeat; margin:0;  transition:0.4s; -webkit-transition:0.4s; -moz-transition:0.4s;}
+#appgame-leftside-share a:hover{background-color:#fff; border:1px #eee solid; z-index:2;}
+/*.appgame-leftside-weixin{top:0; background-position:-88px 0;}
+.appgame-leftside-weixin:hover{background-position:0px 0;}
+.appgame-leftside-qzone{top:43px; background-position:-88px -44px;}
+.appgame-leftside-qzone:hover{background-position:0px -44px;}*/
+.appgame-leftside-search{top:86px; background-position:-93px -89px;}
+.appgame-leftside-search:hover{background-position:-5px -86px;}
+.appgame-leftside-weixin{top:129px; background-position:-88px 0px;}
+.appgame-leftside-weixin:hover{background-position:0px 0px;}
+/*.appgame-leftside-fbook{top:172px; background-position:-88px -176px;}
+.appgame-leftside-fbook:hover{background-position:0px -176px;}
+.appgame-leftside-twi{top:215px; background-position:-88px -220px;}
+.appgame-leftside-twi:hover{background-position:0px -220px;}*/
+#appgame-leftside-share .appgame-leftside-top{background-image:url(http://gh.bnu.edu.cn/images/leftnav-off.png); background-position:-1px -395px; top:130px; cursor:pointer;}
+
+.rwt_share {
+/*	overflow:hidden;*/
+	float:left;
+	position:relative;
+}
+.rwt_share a {
+	display:inline-block;
+	margin-right:10px;
+	text-indent:-9999px;
+	margin-bottom:10px;
+	width:24px;
+	height:24px;
+	overflow:hidden;
+	cursor:pointer;
+	float:left;
+	font-size:12px;
+}
+.rwts_weixin {
+	background-position:0 -1612px;
+}
+.rwts_tsina {
+	background-position:0 -104px;
+}
+.rwts_tqq {
+	background-position:0 -260px;
+}
+.rwts_qzone {
+	background-position:0 -52px;
+}
+.rwts_sqq {
+	background-position:0 -2652px;
+}
+.rwts_tieba {
+	background-position:0 -728px;
+}
+.rwts_renren {
+	background-position:0 -208px;
+}
+.rwts_kaixin001 {
+	background-position:0 -312px;
+}
+.rwts_tqf {
+	background-position:0 -364px;
+}
+.rwts_douban {
+	background-position:0 -468px;
+}
+.rwts_twi {
+	background-position:0 -1404px;
+}
+.rwts_fbook {
+	background-position:0 -1352px;
+}
+.rwts_ty {
+	background-position:0 -1196px;
+}
+.rwts_mogujie {
+	background-position:0 -1768px;
+}
+.rwts_meilishuo {
+	background-position:0 -1716px;
+}
+.rwts_huaban {
+	background-position:0 -1872px;
+}
+.rwts_hi {
+	background-position:0 -416px;
+}
+.rwts_tsohu {
+	background-position:0 -520px;
+}
+.rwts_more {
+	background-position:0 0;
+}
+.rwt_share_wxShow_code>img {
+	width:100%;
+}
+.bks1 li{
+	list-style:disc;
+}
+@media screen and (max-width: 1200px){
+	.logo1{
+		width:100%!important;
+	}
+	.leftc img{
+		width:50%!important;
+		height:50%!important;
+	}
+	.logo2{display:none;}
+	.lujing{
+		width:90%;
+	}
+	.content{
+		width:90%;
+	}
+	.leftc{
+		float:none;
+		
+	}
+	.tu{display:none;}
+	
+	.rightc{
+		float:none;
+		width:100%;
+		margin-left:0px;
+	}
+	.footers{width:100%;}
+	.rheader{width:100%;}
+	.grjj{width:100%;}
+}
+@media screen and (max-width: 600px){
+.l3{width:95%;}
+.share{display:none;}
+.leftc img{
+		width:70%!important;
+		height:70%!important;
+	}
+}
+  
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo1">
+                <img src="http://bs.bnu.edu.cn/newweb/grzy/images/logo.png" alt="" class="l3" style="margin-top: 25px;float:left;">
+                <img src="http://bs.bnu.edu.cn/newweb/grzy/images/logo2.png" alt="" class="logo2">
+                <a href="http://bs.bnu.edu.cn/englishversion/facultyresearch/fulltimefaculty/azmsy/119505.html"><p>ENGLISH VERSION</p></a>
+            </div>
+        </div>
+        <div class="xian"></div>
+        <div class="tu"></div>
+        <div class="lujing">
+            <div class="lujings">
+                <a href="#">师资队伍</a>
+                 | 
+                <a href="#">人力资源管理系</a>
+            </div>
+        </div>
+        <div class="content">
+            <div class="leftc">
+                <img src="/Public/upload/touxiang/11112010096.jpg" alt="" width="270">
+            </div>
+            <div class="rightc">
+                <div class="rheader">
+                    <p class="xm">王文周</p>
+                    <p class="zhiw">副教授 博士生导师</p>
+                    <p class="tel"><strong style="display:block;width:100px;float:left;">电话</strong>：010-58803090</p> 
+                 <p class="tel"><strong style="display:block;width:100px;float:left;">E-mail</strong>：wangwenzhou@bnu.edu.cn</p>
+                 <p class="tel"><strong style="display:block;width:100px;float:left;">Office hour</strong>：周五下午</p>
+                 <p class="tel"><strong style="display:block;width:100px;float:left;">系所中心</strong>：人力资源管理系</p>
+              </div>
+			  <div class="grjj">
+                    <p class="jjh">个人简历</p>
+                    <div class="bks1" id="jjc"><span style="font-family: " times="" new="" roman="" font-size:="" 14px="">毕业于中国科学院，管理学博士。现为人力资源管理系副教授，博士生导师。研究兴趣为项目管理、组织发展、绩效管理等，侧重临时和正式组织的效能提升问题研究，包括组织体系建设、领导力提升、失败学习与经验转化、绩效薪酬整合等问题。培养企业管理专业学术硕博研究生，工商管理（MBA）等专业硕士。长期指导国际项目协会（IPMA）认证的国际特级项目经理、国际高级项目经理、国际项目经理的认证和培训相关工作。长期指导（主持）多家大型组织管理成熟度诊断、一带一路海外工程人才培养，体系流程优化与项目复盘，组织人才发展与绩效提升等项目的有效实施。长期受邀到大型央企、民（外）企、政府机关事业单位授课，广受好评，讲授《管理学》课程，入选“学习强国”平台并获全国精品在线课程荣誉，并获国家级一流本科课程（线上课程）（线上线下混合式课程）社会兼职：中国项目管理研究委员会委员，中国统筹法优选法与经济数学研究会青年委员，全国优秀创新创业导师，首辅智库专家等。</span><br /></div>
+                    
+                </div>				<div class="grjj">
+                    <p class="jjh">研究领域</p>
+                    <div class="bks1">组织行为、人力资源管理、项目管理、管理学等领域</div>
+                </div>				<div class="grjj">
+                    <p class="jjh">研究成果</p>
+                    <div class="bks1" id="jjc1"><p style="font-family: " microsoft="" yahei="" font-size:16px=""></p><p class="p" style="margin: 10.5pt 0pt; text-indent: 0pt; padding: 0pt; line-height: 15.75pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><span style="font-family: Arial; letter-spacing: 0pt; font-size: 9pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><span style="font-family:宋体;">部分论文</span></span><span style="font-family: Arial; letter-spacing: 0pt; font-size: 9pt;"><o:p></o:p></span></p><p class="p" style="margin: 10.5pt 0pt; text-indent: 0pt; padding: 0pt; line-height: 15.75pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><span style="font-family: Arial; letter-spacing: 0pt; font-size: 9pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;">1.Wang Wenzhou etc.Shame on You! When and Why Failure-induced Shame Impedes Employees'Learning from Failure in the Chinese Context</span><span style="font-family: Arial; letter-spacing: 0pt; font-size: 9pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;">(SSCI)</span><span style="font-family: Arial; letter-spacing: 0pt; font-size: 9pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;">&nbsp;Frontiers in Psychology, 2021.,&nbsp;10(Oct) </span><span style="font-family: Arial; letter-spacing: 0pt; font-size: 9pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><o:p></o:p></span></p><p class="p" style="margin: 10.5pt 0pt; text-indent: 0pt; padding: 0pt; line-height: 15.75pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><span style="font-family: Arial; letter-spacing: 0pt; font-size: 9pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;">2.Wang Wenzhou etc.When Learning Goal OrientationLeads to Learning From Failure: TheRoles of Negative Emotion Coping Orientation and Positive Grieving&nbsp;</span><span style="font-family: Arial; letter-spacing: 0pt; font-size: 9pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;">(SSCI)</span><span style="font-family: Arial; letter-spacing: 0pt; font-size: 9pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;">Frontiers in Psychology, 2021.,&nbsp;4(April) </span><span style="font-family: Arial; letter-spacing: 0pt; font-size: 9pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><o:p></o:p></span></p><p class="p" style="margin: 10.5pt 0pt; text-indent: 0pt; padding: 0pt; line-height: 15.75pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><span style="font-family: Arial; letter-spacing: 0pt; font-size: 9pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;">3.When Error Learning Orientation Leads to Learning from Project Failure: The Moderating Role of Fear of Face Loss (SSCI) Frontiers in Psychology, 2019., 4(April)</span><span style="font-family: Arial; letter-spacing: 0pt; font-size: 9pt;"><o:p></o:p></span></p><p class="p" style="margin: 10.5pt 0pt; text-indent: 0pt; padding: 0pt; line-height: 15.75pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><span style="font-family: Arial; letter-spacing: 0pt; font-size: 9pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;">4.When Project Commitment Leads to Learning from Failure: The Roles of Perceived Shame and Personal Control,&nbsp;(SSCI)Frontiers in Psychology, 2018.2(February): 1~12</span><span style="font-family: Arial; letter-spacing: 0pt; font-size: 9pt;"><o:p></o:p></span></p><p class="p" style="margin: 10.5pt 0pt; text-indent: 0pt; padding: 0pt; line-height: 15.75pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><span style="font-family: Arial; letter-spacing: 0pt; font-size: 9pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;">5.The Effect of Vision, Artifacts, and Leader Values on Contextual Performance Behavior and Success in Technology Challenging Projects: Qualitative Evidence, International Journal of Innovation and Technology Management, 2014.8.12, 11(6)</span><span style="font-family: Arial; letter-spacing: 0pt; font-size: 9pt;"><o:p></o:p></span></p><p class="p" style="margin: 10.5pt 0pt; text-indent: 0pt; padding: 0pt; line-height: 15.75pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><span style="font-family: Arial; letter-spacing: 0pt; font-size: 9pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;">6.</span><span style="font-family: 宋体; letter-spacing: 0pt; font-size: 9pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><span style="font-family:宋体;">失败反应对失败学习的影响</span><span style="font-family:宋体;">——一项基于扎根理论的探索性研究 软科学</span><span style="font-family:Arial;">&nbsp;</span></span><span style="font-family: Arial; letter-spacing: 0pt; font-size: 9pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;">2021.9&nbsp;</span><span style="font-family: 宋体; letter-spacing: 0pt; font-size: 9pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><span style="font-family:宋体;">（</span></span><span style="font-family: Arial; letter-spacing: 0pt; font-size: 9pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;">CSSCI</span><span style="font-family: 宋体; letter-spacing: 0pt; font-size: 9pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><span style="font-family:宋体;">）</span></span><span style="font-family: Arial; letter-spacing: 0pt; font-size: 9pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><o:p></o:p></span></p><p class="p" style="margin: 10.5pt 0pt; text-indent: 0pt; padding: 0pt; line-height: 15.75pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><span style="font-family: Arial; letter-spacing: 0pt; font-size: 9pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;">7. <span style="font-family:宋体;">团队断层会阻碍员工创新吗？一个跨层次实证模型分析 科学学研究 </span><span style="font-family:Arial;">2019.5</span></span><span style="font-family: 宋体; letter-spacing: 0pt; font-size: 9pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><span style="font-family:宋体;">（</span></span><span style="font-family: Arial; letter-spacing: 0pt; font-size: 9pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;">CSSCI</span><span style="font-family: 宋体; letter-spacing: 0pt; font-size: 9pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><span style="font-family:宋体;">）</span></span><span style="font-family: Arial; letter-spacing: 0pt; font-size: 9pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><o:p></o:p></span></p><p class="p" style="margin: 10.5pt 0pt; text-indent: 0pt; padding: 0pt; line-height: 15.75pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><span style="font-family: Arial; letter-spacing: 0pt; font-size: 9pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;">8. <span style="font-family:宋体;">授权型校长对中小学高层管理团队绩效的影响机制研究 教育学报 </span><span style="font-family:Arial;">2019.6</span></span><span style="font-family: 宋体; letter-spacing: 0pt; font-size: 9pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><span style="font-family:宋体;">（</span></span><span style="font-family: Arial; letter-spacing: 0pt; font-size: 9pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;">CSSCI</span><span style="font-family: 宋体; letter-spacing: 0pt; font-size: 9pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><span style="font-family:宋体;">）</span></span><span style="font-family: Arial; letter-spacing: 0pt; font-size: 9pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><o:p></o:p></span></p><p class="p" style="margin: 10.5pt 0pt; text-indent: 0pt; padding: 0pt; line-height: 15.75pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><span style="font-family: Arial; letter-spacing: 0pt; font-size: 9pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;">9. <span style="font-family:宋体;">团队断层何以影响团队决策质量：一个被调节的中介效应模型 财经问题研究</span><span style="font-family:Arial;">2019.7</span></span><span style="font-family: 宋体; letter-spacing: 0pt; font-size: 9pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><span style="font-family:宋体;">（</span></span><span style="font-family: Arial; letter-spacing: 0pt; font-size: 9pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;">CSSCI</span><span style="font-family: 宋体; letter-spacing: 0pt; font-size: 9pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><span style="font-family:宋体;">）</span></span><span style="font-family: Arial; letter-spacing: 0pt; font-size: 9pt;"><o:p></o:p></span></p><p class="p" style="margin: 10.5pt 0pt; text-indent: 0pt; padding: 0pt; line-height: 15.75pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><span style="font-family: Arial; letter-spacing: 0pt; font-size: 9pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;">10. <span style="font-family:宋体;">团队断层的内涵、测量及效应：研究述评与展望</span><span style="font-family:Arial;">,</span><span style="font-family:宋体;">科技进步与对策</span><span style="font-family:Arial;">, 2018.1.20, 35(1): 153~160</span></span><span style="font-family: 宋体; letter-spacing: 0pt; font-size: 9pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><span style="font-family:宋体;">（</span></span><span style="font-family: Arial; letter-spacing: 0pt; font-size: 9pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;">CSSCI</span><span style="font-family: 宋体; letter-spacing: 0pt; font-size: 9pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><span style="font-family:宋体;">）</span></span><span style="font-family: Arial; letter-spacing: 0pt; font-size: 9pt;"><o:p></o:p></span></p><p class="p" style="margin: 10.5pt 0pt; text-indent: 0pt; padding: 0pt; line-height: 15.75pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><span style="font-family: Arial; letter-spacing: 0pt; font-size: 9pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;">11. <span style="font-family:宋体;">高校教师的组织公民行为</span><span style="font-family:Arial;">:</span><span style="font-family:宋体;">内涵结构、测量方法与群体差异</span><span style="font-family:Arial;">[J].</span><span style="font-family:宋体;">黑龙江高教研究</span><span style="font-family:Arial;">. 2018(06)</span></span><span style="font-family: Arial; letter-spacing: 0pt; font-size: 9pt;"><o:p></o:p></span></p><p class="p" style="margin: 10.5pt 0pt; text-indent: 0pt; padding: 0pt; line-height: 15.75pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><span style="font-family: Arial; letter-spacing: 0pt; font-size: 9pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;">12. <span style="font-family:宋体;">部门冲击和整体冲击的经济影响分析，中国管理科学，</span><span style="font-family:Arial;">Vol.21,No5,2013</span></span><span style="font-family: 宋体; letter-spacing: 0pt; font-size: 9pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><span style="font-family:宋体;">（</span></span><span style="font-family: Arial; letter-spacing: 0pt; font-size: 9pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;">CSSCI</span><span style="font-family: 宋体; letter-spacing: 0pt; font-size: 9pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><span style="font-family:宋体;">）</span></span><span style="font-family: Arial; letter-spacing: 0pt; font-size: 9pt;"><o:p></o:p></span></p><p class="p" style="margin: 10.5pt 0pt; text-indent: 0pt; padding: 0pt; line-height: 15.75pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><span style="font-family: Arial; letter-spacing: 0pt; font-size: 9pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;">13. <span style="font-family:宋体;">微型高新技术企业技术人员激励问题</span><span style="font-family:Arial;">——</span><span style="font-family:宋体;">基于北京和深圳的经验研究，财经问题研究，</span><span style="font-family:Arial;">2013</span><span style="font-family:宋体;">（</span><span style="font-family:Arial;">6</span><span style="font-family:宋体;">）</span></span><span style="font-family: 宋体; letter-spacing: 0pt; font-size: 9pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><span style="font-family:宋体;">（</span></span><span style="font-family: Arial; letter-spacing: 0pt; font-size: 9pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;">CSSCI</span><span style="font-family: 宋体; letter-spacing: 0pt; font-size: 9pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><span style="font-family:宋体;">）</span></span><span style="font-family: Arial; letter-spacing: 0pt; font-size: 9pt;"><o:p></o:p></span></p><p class="p" style="margin: 10.5pt 0pt; text-indent: 0pt; padding: 0pt; line-height: 15.75pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><span style="font-family: Arial; letter-spacing: 0pt; font-size: 9pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;">14. <span style="font-family:宋体;">高层管理团队多样性研究的回顾与展望</span><span style="font-family:Arial;">, </span><span style="font-family:宋体;">中国集体经济</span><span style="font-family:Arial;">, 2016.6.25, (18): 33~35</span></span><span style="font-family: Arial; letter-spacing: 0pt; font-size: 9pt;"><o:p></o:p></span></p><p class="p" style="margin: 10.5pt 0pt; text-indent: 0pt; padding: 0pt; line-height: 15.75pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><span style="font-family: Arial; letter-spacing: 0pt; font-size: 9pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;">15. <span style="font-family:宋体;">国内外失败学习研究现状评介与展望</span><span style="font-family:Arial;">, </span><span style="font-family:宋体;">经济研究参考</span><span style="font-family:Arial;">2015.10.26, (60): 45~52</span></span><span style="font-family: Arial; letter-spacing: 0pt; font-size: 9pt;"><o:p></o:p></span></p><p class="p" style="margin: 10.5pt 0pt; text-indent: 0pt; padding: 0pt; line-height: 15.75pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><span style="font-family: Arial; letter-spacing: 0pt; font-size: 9pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;">&nbsp;</span><span style="font-family: Arial; letter-spacing: 0pt; font-size: 9pt;"><o:p></o:p></span></p><p class="p" style="margin: 10.5pt 0pt; text-indent: 0pt; padding: 0pt; line-height: 15.75pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><span style="font-family: Arial; letter-spacing: 0pt; font-size: 9pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><span style="font-family:宋体;">部分专著、译著、参与教材、案例集等</span></span><span style="font-family: Arial; letter-spacing: 0pt; font-size: 9pt;"><o:p></o:p></span></p><p class="p" style="margin: 10.5pt 0pt; text-indent: 0pt; padding: 0pt; line-height: 15.75pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><span style="font-family: Arial; letter-spacing: 0pt; font-size: 9pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;">1.<span style="font-family:宋体;">《管理学》，</span><span style="font-family:Arial;">2021.8</span><span style="font-family:宋体;">，北京师范大学出版社</span></span><span style="font-family: Arial; letter-spacing: 0pt; font-size: 9pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><o:p></o:p></span></p><p class="p" style="margin: 10.5pt 0pt; text-indent: 0pt; padding: 0pt; line-height: 15.75pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><span style="font-family: Arial; letter-spacing: 0pt; font-size: 9pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;">1.<span style="font-family:宋体;">《中国建筑业系统演化特征研究与实证》，</span><span style="font-family:Arial;">2013</span><span style="font-family:宋体;">，中国建筑工业出版社</span></span><span style="font-family: Arial; letter-spacing: 0pt; font-size: 9pt;"><o:p></o:p></span></p><p class="p" style="margin: 10.5pt 0pt; text-indent: 0pt; padding: 0pt; line-height: 15.75pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><span style="font-family: Arial; letter-spacing: 0pt; font-size: 9pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;">2.<span style="font-family:宋体;">《成功的项目管理方法论》， </span><span style="font-family:Arial;">2010</span><span style="font-family:宋体;">，英国</span><span style="font-family:Arial;">TSO</span><span style="font-family:宋体;">出版</span></span><span style="font-family: Arial; letter-spacing: 0pt; font-size: 9pt;"><o:p></o:p></span></p><p class="p" style="margin: 10.5pt 0pt; text-indent: 0pt; padding: 0pt; line-height: 15.75pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><span style="font-family: Arial; letter-spacing: 0pt; font-size: 9pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;">3.<span style="font-family:宋体;">《项目组合、项目群与项目管理办公室指南》，</span><span style="font-family:Arial;">2009</span><span style="font-family:宋体;">，英国</span><span style="font-family:Arial;">TSO</span><span style="font-family:宋体;">出版</span></span><span style="font-family: Arial; letter-spacing: 0pt; font-size: 9pt;"><o:p></o:p></span></p><p class="p" style="margin: 10.5pt 0pt; text-indent: 0pt; padding: 0pt; line-height: 15.75pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><span style="font-family: Arial; letter-spacing: 0pt; font-size: 9pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;">4.<span style="font-family:宋体;">《高级项目管理师（第</span><span style="font-family:Arial;">2</span><span style="font-family:宋体;">版）</span><span style="font-family:Arial;">/</span><span style="font-family:宋体;">国家职业资格一级 》 机械工业出版社，</span><span style="font-family:Arial;">2015.11</span></span><span style="font-family: Arial; letter-spacing: 0pt; font-size: 9pt;"><o:p></o:p></span></p><p class="p" style="margin: 10.5pt 0pt; text-indent: 0pt; padding: 0pt; line-height: 15.75pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><span style="font-family: Arial; letter-spacing: 0pt; font-size: 9pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;">5.<span style="font-family:宋体;">《战略人力资源管理》 清华大学出版社，</span><span style="font-family:Arial;">2013</span><span style="font-family:宋体;">年</span><span style="font-family:Arial;">5</span><span style="font-family:宋体;">月</span></span><span style="font-family: Arial; letter-spacing: 0pt; font-size: 9pt;"><o:p></o:p></span></p><p class="p" style="margin: 10.5pt 0pt; text-indent: 0pt; padding: 0pt; line-height: 15.75pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><span style="font-family: Arial; letter-spacing: 0pt; font-size: 9pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;">6.<span style="font-family:宋体;">《绩效与薪酬整合管理》 清华大学出版社，</span><span style="font-family:Arial;">2014</span><span style="font-family:宋体;">年</span><span style="font-family:Arial;">3</span><span style="font-family:宋体;">月</span></span><span style="font-family: Arial; letter-spacing: 0pt; font-size: 9pt;"><o:p></o:p></span></p><p class="p" style="margin: 10.5pt 0pt; text-indent: 0pt; padding: 0pt; line-height: 15.75pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><span style="font-family: Arial; letter-spacing: 0pt; font-size: 9pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;">7.<span style="font-family:宋体;">《薪酬管理：原理</span><span style="font-family:Arial;">.</span><span style="font-family:宋体;">方法</span><span style="font-family:Arial;">.</span><span style="font-family:宋体;">实践》 北京交通大学出版社，</span><span style="font-family:Arial;">2013</span><span style="font-family:宋体;">年</span><span style="font-family:Arial;">5</span><span style="font-family:宋体;">月</span></span><span style="font-family: Arial; letter-spacing: 0pt; font-size: 9pt;"><o:p></o:p></span></p><p class="p" style="margin: 10.5pt 0pt; text-indent: 0pt; padding: 0pt; line-height: 15.75pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><span style="font-family: Arial; letter-spacing: 0pt; font-size: 9pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;">8.<span style="font-family:宋体;">《现代组织绩效管理学》 北京师范大学出版社，</span><span style="font-family:Arial;">2014</span><span style="font-family:宋体;">年</span><span style="font-family:Arial;">1</span><span style="font-family:宋体;">月</span></span><span style="font-family: Arial; letter-spacing: 0pt; font-size: 9pt;"><o:p></o:p></span></p><p class="p" style="margin: 10.5pt 0pt; text-indent: 0pt; padding: 0pt; line-height: 15.75pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><span style="font-family: Arial; letter-spacing: 0pt; font-size: 9pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;">9.<span style="font-family:宋体;">《中国劳动关系简史》企业管理出版社，</span><span style="font-family:Arial;">2016</span><span style="font-family:宋体;">年</span><span style="font-family:Arial;">9</span><span style="font-family:宋体;">月</span></span><span style="font-family: Arial; letter-spacing: 0pt; font-size: 9pt;"><o:p></o:p></span></p><p class="p" style="margin: 10.5pt 0pt; text-indent: 0pt; padding: 0pt; line-height: 15.75pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><span style="font-family: Arial; letter-spacing: 0pt; font-size: 9pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;">10.<span style="font-family:宋体;">《中国工程企业</span><span style="font-family:Arial;">“</span><span style="font-family:宋体;">走出去</span><span style="font-family:Arial;">”</span><span style="font-family:宋体;">经验与教训》 机械工业出版社，</span><span style="font-family:Arial;">2015.6</span></span><span style="font-family: Arial; letter-spacing: 0pt; font-size: 9pt;"><o:p></o:p></span></p><p class="p" style="margin: 10.5pt 0pt; text-indent: 0pt; padding: 0pt; line-height: 15.75pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><span style="font-family: Arial; letter-spacing: 0pt; font-size: 9pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;">11.<span style="font-family:宋体;">《</span><span style="font-family:Arial;">&quot;</span><span style="font-family:宋体;">一带一路</span><span style="font-family:Arial;">&quot;</span><span style="font-family:宋体;">大实践 国际产能合作经验与教训 》机械工业出版社，</span><span style="font-family:Arial;">2017.10</span></span><span style="font-family: Arial; letter-spacing: 0pt; font-size: 9pt;"><o:p></o:p></span></p><p class="p" style="margin: 10.5pt 0pt; text-indent: 0pt; padding: 0pt; line-height: 15.75pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><span style="font-family: Arial; letter-spacing: 0pt; font-size: 9pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;">12.<span style="font-family:宋体;">《</span><span style="font-family:Arial;">&quot;</span><span style="font-family:宋体;">一带一路</span><span style="font-family:Arial;">&quot;</span><span style="font-family:宋体;">大实践 中国工程企业走出去经验与教训 》机械工业出版社，</span><span style="font-family:Arial;">2016.10</span></span><span style="font-family: Arial; letter-spacing: 0pt; font-size: 9pt;"><o:p></o:p></span></p><p class="p" style="margin: 10.5pt 0pt; text-indent: 0pt; padding: 0pt; line-height: 15.75pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><span style="font-family: Arial; letter-spacing: 0pt; font-size: 9pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;">13,<span style="font-family:宋体;">《</span><span style="font-family:Arial;">2012</span><span style="font-family:宋体;">中国人本发展报告</span><span style="font-family:Arial;">—</span><span style="font-family:宋体;">企业用工》 经济科学出版社 </span><span style="font-family:Arial;">2012.12</span></span><span style="font-family: Arial; letter-spacing: 0pt; font-size: 9pt;"><o:p></o:p></span></p><p class="p" style="margin: 10.5pt 0pt; text-indent: 0pt; padding: 0pt; line-height: 15.75pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><span style="font-family: Arial; letter-spacing: 0pt; font-size: 9pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;">14.<span style="font-family:宋体;">《</span><span style="font-family:Arial;">2013</span><span style="font-family:宋体;">中国人本发展报告</span><span style="font-family:Arial;">—</span><span style="font-family:宋体;">民工生态》 经济科学出版社 </span><span style="font-family:Arial;">2013.11</span></span><span style="font-family: Arial; letter-spacing: 0pt; font-size: 9pt;"><o:p></o:p></span></p><p class="p" style="margin: 10.5pt 0pt; text-indent: 0pt; padding: 0pt; line-height: 15.75pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><span style="font-family: Arial; letter-spacing: 0pt; font-size: 9pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;">15.<span style="font-family:宋体;">《</span><span style="font-family:Arial;">2014</span><span style="font-family:宋体;">中国人本发展报告</span><span style="font-family:Arial;">—</span><span style="font-family:宋体;">走出低成本陷阱》 经济科学出版社</span><span style="font-family:Arial;">2014.6</span></span><span style="font-family: Arial; letter-spacing: 0pt; font-size: 9pt;"><o:p></o:p></span></p><p class="p" style="margin: 10.5pt 0pt; text-indent: 0pt; padding: 0pt; line-height: 15.75pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><span style="font-family: Arial; letter-spacing: 0pt; font-size: 9pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;">16.<span style="font-family:宋体;">《中国人力资源管理前沿问题高端论丛》（会议论文集收录）</span><span style="font-family:Arial;">2014.6</span></span><span style="font-family: Arial; letter-spacing: 0pt; font-size: 9pt;"><o:p></o:p></span></p><p class="p" style="margin: 10.5pt 0pt; text-indent: 0pt; padding: 0pt; line-height: 15.75pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><span style="font-family: Arial; letter-spacing: 0pt; font-size: 9pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;">17.<span style="font-family:宋体;">《北师大</span><span style="font-family:Arial;">MBA</span><span style="font-family:宋体;">管理案例精选》第一辑 北京师范大学出版社，</span><span style="font-family:Arial;">2015.10</span><span style="font-family:宋体;">（案例收录）</span></span><span style="font-family: Arial; letter-spacing: 0pt; font-size: 9pt;"><o:p></o:p></span></p><p class="p" style="margin: 10.5pt 0pt; text-indent: 0pt; padding: 0pt; line-height: 15.75pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><span style="font-family: Arial; letter-spacing: 0pt; font-size: 9pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;">18.<span style="font-family:宋体;">《北师大</span><span style="font-family:Arial;">MBA</span><span style="font-family:宋体;">管理案例精选》第二辑 北京师范大学出版社，</span><span style="font-family:Arial;">2015.10 </span><span style="font-family:宋体;">（案例收录）</span></span><span style="font-family: Arial; letter-spacing: 0pt; font-size: 9pt;"><o:p></o:p></span></p><p class="p" style="margin: 10.5pt 0pt; text-indent: 0pt; padding: 0pt; line-height: 15.75pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><span style="font-family: Arial; letter-spacing: 0pt; font-size: 9pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;">&nbsp;</span><span style="font-family: Arial; letter-spacing: 0pt; font-size: 9pt;"><o:p></o:p></span></p><p style="font-family: " microsoft="" yahei="" font-size:16px="" margin-top:="" 14px="" margin-bottom:="" margin-left:="" 22px=""></p></div>
+                    
+                </div>				<div class="grjj">
+                    <p class="jjh">研究课题</p>
+                  
+                    <div class="bks1"><p style="font-family: " microsoft="" yahei="" font-size:16px="">部分纵向课题：</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">教育部人文社科项目 《事件特征如何影响失败学习：基于社会认知神经科学视角的研究》</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">北京市教育科学重点项目《基础教育名校办分校背景下分校领导团队效能提升研究：异质性整合视角》</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">加拿大人文社科基金（SSHRC）项目《The impact of narcissistic CEOs and the CEO-TMT interface on corporate entrepreneurship strategy and firm performance》</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">中央高校基本科研专项 《失败学习对研发团队创新绩效影响机理研究》</p></div>
+                    
+                </div>				<div class="grjj">
+                    <p class="jjh">学生情况</p>
+                    <div class="bks1"><span style="font-family: " microsoft="" yahei="" font-size:16px="">已指导毕业各类研究生100余名。</span><br /></div>
+                    
+                </div>				<div class="grjj">
+                    <p class="jjh">教授课程</p>
+                    <div class="bks1"><p style="font-family: " microsoft="" yahei="" font-size:16px="">《管理学》</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">《领导力》</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">《人力资源管理》</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">《组织行为学》</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">《绩效薪酬管理》</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">《项目管理》</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">《高绩效沟通》</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">《团队管理与激励》</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">《管理素养提升与角色转换》</p></div>
+                    
+                </div>            </div>
+        </div>
+         <footer style="overflow: hidden;">
+            <div class="footers">
+                <div class="footersl">
+                    <img src="http://bs.bnu.edu.cn/newweb/images/ewm.jpg" alt="" class="imgewm">
+                    <div class="footerxx">
+                        <p>Copyright © 2020 北京师范大学经济与工商管理学院</p>
+                        <p><i class="fas fa-map-marker-alt"></i> 地址：北京市新街口外大街19号</p>
+                        <p><i class="fas fa-portrait"></i> 传真：010-58801867</p>
+                        <p><i class="fas fa-phone"></i> 电话：010-58801867</p>
+                        <p><i class="fas fa-envelope"></i> 邮编：100875</p>
+                    </div>
+                </div>
+                <img src="http://bs.bnu.edu.cn/newweb/images/db.png" alt="" width="140" class="dbimg">
+                <img src="http://bs.bnu.edu.cn/newweb/images/yx.png" alt="" class="yuanxun">
+            </div>
+        </footer>
+    </div>
+	<div class="share">
+		  <div id="appgame-leftside-share">
+	        <div class="appgame-leftside-share rwt_share" id="rwt_share">
+	         
+	        <!--<a class="appgame-leftside-search" data-cmd="search" title="search"  href="javascript:void(0);" onclick="opens('id')">search</a> --> <!--<div class="searchs" id="id">
+	         <form name="dataForm" action="/cms/search/searchResults.jsp" target="_blank" method="post" accept-Charset="utf-8"  onsubmit="document.charset='utf-8';">
+			        	<p>
+			        		<input name="siteID" size="4" value="127" type = "hidden">
+			        		<input type="text" name="query" id="search" class="searchInput" value="输入搜索词">
+			        		<button type="submit"></button>
+			        	</p>
+			        	</form>
+			        </div>-->
+			        <!-- <a class="appgame-leftside-weixin" data-cmd="weixin" title="">微信</a> -->
+                    
+			        <!-- <a class="appgame-leftside-qzone" data-cmd="qzone" title="">qq空间</a>
+			        
+			        <a class="appgame-leftside-tsina" data-cmd="tsina" title="">微博</a> -->			    </div>
+			        <a class="appgame-leftside-top" onclick="gotoTPoint()"></a>			</div>
+			        
+		</div>
+</body>
+<script src="http://gh.bnu.edu.cn/js/jquery-1.9.0.min.js"></script>
+<script src="http://gh.bnu.edu.cn/js/share.min.js"></script>
+<script>
+    var dj=document.getElementById('dianji');
+    var jjc=document.getElementById('jjc');
+    var dj1=document.getElementById('dianji1');
+    var jjc1=document.getElementById('jjc1');
+    var a=1;
+    function zhedie(m,n){
+        m.onclick=function(){
+            if(a==1){
+                n.className='jjc';
+                m.className='dianji1'
+                a=0;
+            }else{
+                n.className='jjc1';
+                m.className='dianji'
+                a=1;
+            }
+        }
+    }
+    zhedie(dj,jjc);
+    zhedie(dj1,jjc1);
+	
+	
+</script>
+<script>
+
+	
+	
+    
+
+    /*回到顶部*/
+	$(function(){
+	 	$(window).resize(function(){
+						var h = $(window).height();
+						$('.goTop').css('top',h-60);
+						$(window).scroll(function(){				
+							var scrollTop = $(document).scrollTop();					  
+							$('.goTop').stop().animate({
+								top: h + scrollTop-60
+							},300);
+						});
+		}).resize();
+		});
+	//gotop
+
+			$('.goTop').click(function(){
+
+				$('body,html').stop().animate({scrollTop:0});
+
+				return false;
+
+			});
+	
+	function gotoTPoint(){
+		$("html,body").animate({scrollTop:0},500);
+	}
+</script>
+</html>

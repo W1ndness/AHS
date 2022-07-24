@@ -1,0 +1,1006 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><script type="text/javascript">(window.NREUM||(NREUM={})).init={ajax:{deny_list:["bam.nr-data.net"]}};(window.NREUM||(NREUM={})).loader_config={licenseKey:"ab0374a39e",applicationID:"39297557"};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var i=e[n]={exports:{}};t[n][0].call(i.exports,function(e){var i=t[n][1][e];return r(i||e)},i,i.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(t,e,n){function r(){}function i(t,e,n,r){return function(){return s.recordSupportability("API/"+e+"/called"),o(t+e,[u.now()].concat(c(arguments)),n?null:this,r),n?void 0:this}}var o=t("handle"),a=t(9),c=t(10),f=t("ee").get("tracer"),u=t("loader"),s=t(4),d=NREUM;"undefined"==typeof window.newrelic&&(newrelic=d);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",v=l+"ixn-";a(p,function(t,e){d[e]=i(l,e,!0,"api")}),d.addPageAction=i(l,"addPageAction",!0),d.setCurrentRouteName=i(l,"routeName",!0),e.exports=newrelic,d.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(t,e){var n={},r=this,i="function"==typeof e;return o(v+"tracer",[u.now(),t,n],r),function(){if(f.emit((i?"":"no-")+"fn-start",[u.now(),r,i],n),i)try{return e.apply(this,arguments)}catch(t){throw f.emit("fn-err",[arguments,this,t],n),t}finally{f.emit("fn-end",[u.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){m[e]=i(v,e)}),newrelic.noticeError=function(t,e){"string"==typeof t&&(t=new Error(t)),s.recordSupportability("API/noticeError/called"),o("err",[t,u.now(),!1,e])}},{}],2:[function(t,e,n){function r(t){if(NREUM.init){for(var e=NREUM.init,n=t.split("."),r=0;r<n.length-1;r++)if(e=e[n[r]],"object"!=typeof e)return;return e=e[n[n.length-1]]}}e.exports={getConfiguration:r}},{}],3:[function(t,e,n){var r=!1;try{var i=Object.defineProperty({},"passive",{get:function(){r=!0}});window.addEventListener("testPassive",null,i),window.removeEventListener("testPassive",null,i)}catch(o){}e.exports=function(t){return r?{passive:!0,capture:!!t}:!!t}},{}],4:[function(t,e,n){function r(t,e){var n=[a,t,{name:t},e];return o("storeMetric",n,null,"api"),n}function i(t,e){var n=[c,t,{name:t},e];return o("storeEventMetrics",n,null,"api"),n}var o=t("handle"),a="sm",c="cm";e.exports={constants:{SUPPORTABILITY_METRIC:a,CUSTOM_METRIC:c},recordSupportability:r,recordCustom:i}},{}],5:[function(t,e,n){function r(){return c.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,c=t(11);e.exports=r,e.exports.offset=a,e.exports.getLastTimestamp=i},{}],6:[function(t,e,n){function r(t,e){var n=t.getEntries();n.forEach(function(t){"first-paint"===t.name?l("timing",["fp",Math.floor(t.startTime)]):"first-contentful-paint"===t.name&&l("timing",["fcp",Math.floor(t.startTime)])})}function i(t,e){var n=t.getEntries();if(n.length>0){var r=n[n.length-1];if(u&&u<r.startTime)return;var i=[r],o=a({});o&&i.push(o),l("lcp",i)}}function o(t){t.getEntries().forEach(function(t){t.hadRecentInput||l("cls",[t])})}function a(t){var e=navigator.connection||navigator.mozConnection||navigator.webkitConnection;if(e)return e.type&&(t["net-type"]=e.type),e.effectiveType&&(t["net-etype"]=e.effectiveType),e.rtt&&(t["net-rtt"]=e.rtt),e.downlink&&(t["net-dlink"]=e.downlink),t}function c(t){if(t instanceof y&&!w){var e=Math.round(t.timeStamp),n={type:t.type};a(n),e<=v.now()?n.fid=v.now()-e:e>v.offset&&e<=Date.now()?(e-=v.offset,n.fid=v.now()-e):e=v.now(),w=!0,l("timing",["fi",e,n])}}function f(t){"hidden"===t&&(u=v.now(),l("pageHide",[u]))}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var u,s,d,p,l=t("handle"),v=t("loader"),m=t(8),g=t(3),y=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){s=new PerformanceObserver(r);try{s.observe({entryTypes:["paint"]})}catch(h){}d=new PerformanceObserver(i);try{d.observe({entryTypes:["largest-contentful-paint"]})}catch(h){}p=new PerformanceObserver(o);try{p.observe({type:"layout-shift",buffered:!0})}catch(h){}}if("addEventListener"in document){var w=!1,b=["click","keydown","mousedown","pointerdown","touchstart"];b.forEach(function(t){document.addEventListener(t,c,g(!1))})}m(f)}},{}],7:[function(t,e,n){function r(t,e){if(!i)return!1;if(t!==i)return!1;if(!e)return!0;if(!o)return!1;for(var n=o.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var c=navigator.userAgent,f=c.match(a);f&&c.indexOf("Chrome")===-1&&c.indexOf("Chromium")===-1&&(i="Safari",o=f[1])}e.exports={agent:i,version:o,match:r}},{}],8:[function(t,e,n){function r(t){function e(){t(c&&document[c]?document[c]:document[o]?"hidden":"visible")}"addEventListener"in document&&a&&document.addEventListener(a,e,i(!1))}var i=t(3);e.exports=r;var o,a,c;"undefined"!=typeof document.hidden?(o="hidden",a="visibilitychange",c="visibilityState"):"undefined"!=typeof document.msHidden?(o="msHidden",a="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(o="webkitHidden",a="webkitvisibilitychange",c="webkitVisibilityState")},{}],9:[function(t,e,n){function r(t,e){var n=[],r="",o=0;for(r in t)i.call(t,r)&&(n[o]=e(r,t[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],10:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,i=n-e||0,o=Array(i<0?0:i);++r<i;)o[r]=t[e+r];return o}e.exports=r},{}],11:[function(t,e,n){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(t,e,n){function r(){}function i(t){function e(t){return t&&t instanceof r?t:t?u(t,f,a):a()}function n(n,r,i,o,a){if(a!==!1&&(a=!0),!l.aborted||o){t&&a&&t(n,r,i);for(var c=e(i),f=m(n),u=f.length,s=0;s<u;s++)f[s].apply(c,r);var p=d[w[n]];return p&&p.push([b,n,r,c]),c}}function o(t,e){h[t]=m(t).concat(e)}function v(t,e){var n=h[t];if(n)for(var r=0;r<n.length;r++)n[r]===e&&n.splice(r,1)}function m(t){return h[t]||[]}function g(t){return p[t]=p[t]||i(n)}function y(t,e){l.aborted||s(t,function(t,n){e=e||"feature",w[n]=e,e in d||(d[e]=[])})}var h={},w={},b={on:o,addEventListener:o,removeEventListener:v,emit:n,get:g,listeners:m,context:e,buffer:y,abort:c,aborted:!1};return b}function o(t){return u(t,f,a)}function a(){return new r}function c(){(d.api||d.feature)&&(l.aborted=!0,d=l.backlog={})}var f="nr@context",u=t("gos"),s=t(9),d={},p={},l=e.exports=i();e.exports.getOrSetContext=o,l.backlog=d},{}],gos:[function(t,e,n){function r(t,e,n){if(i.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return t[e]=r,r}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){i.buffer([t],r),i.emit(t,e,n)}var i=t("ee").get("handle");e.exports=r,r.ee=i},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,o,function(){return i++})}var i=1,o="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!M++){var t=T.info=NREUM.info,e=m.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&e))return u.abort();f(x,function(e,n){t[e]||(t[e]=n)});var n=a();c("mark",["onload",n+T.offset],null,"api"),c("timing",["load",n]);var r=m.createElement("script");0===t.agent.indexOf("http://")||0===t.agent.indexOf("https://")?r.src=t.agent:r.src=l+"://"+t.agent,e.parentNode.insertBefore(r,e)}}function i(){"complete"===m.readyState&&o()}function o(){c("mark",["domContent",a()+T.offset],null,"api")}var a=t(5),c=t("handle"),f=t(9),u=t("ee"),s=t(7),d=t(2),p=t(3),l=d.getConfiguration("ssl")===!1?"http":"https",v=window,m=v.document,g="addEventListener",y="attachEvent",h=v.XMLHttpRequest,w=h&&h.prototype,b=!1;NREUM.o={ST:setTimeout,SI:v.setImmediate,CT:clearTimeout,XHR:h,REQ:v.Request,EV:v.Event,PR:v.Promise,MO:v.MutationObserver};var E=""+location,x={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1216.min.js"},O=h&&w&&w[g]&&!/CriOS/.test(navigator.userAgent),T=e.exports={offset:a.getLastTimestamp(),now:a,origin:E,features:{},xhrWrappable:O,userAgent:s,disabled:b};if(!b){t(1),t(6),m[g]?(m[g]("DOMContentLoaded",o,p(!1)),v[g]("load",r,p(!1))):(m[y]("onreadystatechange",i),v[y]("onload",r)),c("mark",["firstbyte",a.getLastTimestamp()],null,"api");var M=0}},{}],"wrap-function":[function(t,e,n){function r(t,e){function n(e,n,r,f,u){function nrWrapper(){var o,a,s,p;try{a=this,o=d(arguments),s="function"==typeof r?r(o,a):r||{}}catch(l){i([l,"",[o,a,f],s],t)}c(n+"start",[o,a,f],s,u);try{return p=e.apply(a,o)}catch(v){throw c(n+"err",[o,a,v],s,u),v}finally{c(n+"end",[o,a,p],s,u)}}return a(e)?e:(n||(n=""),nrWrapper[p]=e,o(e,nrWrapper,t),nrWrapper)}function r(t,e,r,i,o){r||(r="");var c,f,u,s="-"===r.charAt(0);for(u=0;u<e.length;u++)f=e[u],c=t[f],a(c)||(t[f]=n(c,s?f+r:r,i,f,o))}function c(n,r,o,a){if(!v||e){var c=v;v=!0;try{t.emit(n,r,o,e,a)}catch(f){i([f,n,r,o],t)}v=c}}return t||(t=s),n.inPlace=r,n.flag=p,n}function i(t,e){e||(e=s);try{e.emit("internal-error",t)}catch(n){}}function o(t,e,n){if(Object.defineProperty&&Object.keys)try{var r=Object.keys(t);return r.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(o){i([o],n)}for(var a in t)l.call(t,a)&&(e[a]=t[a]);return e}function a(t){return!(t&&t instanceof Function&&t.apply&&!t[p])}function c(t,e){var n=e(t);return n[p]=t,o(t,n,s),n}function f(t,e,n){var r=t[e];t[e]=c(r,n)}function u(){for(var t=arguments.length,e=new Array(t),n=0;n<t;++n)e[n]=arguments[n];return e}var s=t("ee"),d=t(10),p="nr@original",l=Object.prototype.hasOwnProperty,v=!1;e.exports=r,e.exports.wrapFunction=c,e.exports.wrapInPlace=f,e.exports.argsToArray=u},{}]},{},["loader"]);</script>
+        <title>MECHE PEOPLE: Lallit Anand | MIT Department of Mechanical Engineering</title>
+        <meta name="description" content="MIT's Department of Mechanical Engineering (MechE) offers a world-class education that combines thorough analysis with hands-on discovery. One of the original six courses offered when MIT was founded in 1865, MechE's faculty and students conduct research that pushes boundaries and provides creative solutions for the world's problems.">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1">
+        <!--[if lt IE 9]>
+            <link href='http://fonts.googleapis.com/css?family=Rajdhani:300' rel='stylesheet' type='text/css' data-norem>
+            <link href='http://fonts.googleapis.com/css?family=Rajdhani:400' rel='stylesheet' type='text/css' data-norem>
+            <link href='http://fonts.googleapis.com/css?family=Rajdhani:500' rel='stylesheet' type='text/css' data-norem>
+            <link href='http://fonts.googleapis.com/css?family=Rajdhani:600' rel='stylesheet' type='text/css' data-norem>
+            <link href='http://fonts.googleapis.com/css?family=Rajdhani:700' rel='stylesheet' type='text/css' data-norem>
+            <link href='http://fonts.googleapis.com/css?family=Rajdhani:300' rel='stylesheet' type='text/css' data-norem>
+            <link href='http://fonts.googleapis.com/css?family=Rajdhani:300italic' rel='stylesheet' type='text/css' data-norem>
+            <link href='http://fonts.googleapis.com/css?family=Rajdhani:400' rel='stylesheet' type='text/css' data-norem>
+            <link href='http://fonts.googleapis.com/css?family=Rajdhani:400italic' rel='stylesheet' type='text/css' data-norem>
+            <link href='http://fonts.googleapis.com/css?family=Rajdhani:600' rel='stylesheet' type='text/css' data-norem>
+            <link href='http://fonts.googleapis.com/css?family=Rajdhani:600italic' rel='stylesheet' type='text/css' data-norem>
+            <link href='http://fonts.googleapis.com/css?family=Rajdhani:700' rel='stylesheet' type='text/css' data-norem>
+            <link href='http://fonts.googleapis.com/css?family=Rajdhani:700italic' rel='stylesheet' type='text/css' data-norem>
+        <![endif]-->
+
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="Generator" content="Drupal 7 (http://drupal.org)" />
+<meta name="format-detection" content="telephone=no"/><link rel="shortcut icon" href="http://meche.mit.edu/sites/all/themes/mit_meche/favicon.ico" type="image/vnd.microsoft.icon" />
+        <link type="text/css" rel="stylesheet" href="http://meche.mit.edu/sites/default/files/css/css_xE-rWrJf-fncB6ztZfd2huxqgxu4WO-qwma6Xer30m4.css" media="all" />
+<link type="text/css" rel="stylesheet" href="http://meche.mit.edu/sites/default/files/css/css_yqfEEn3F5mXOC0UUFM4YKvpmMs9qQxvb1Jy9f6FVT5Y.css" media="all" />
+<link type="text/css" rel="stylesheet" href="http://meche.mit.edu/sites/default/files/css/css_GckY0EjoR6WBLjIENeNuZVvw3ojQ1Mjn5COL87fZnj8.css" media="all" />
+        <script type="text/javascript" src="http://meche.mit.edu/sites/default/files/js/js_YD9ro0PAqY25gGWrTki6TjRUG8TdokmmxjfqpNNfzVU.js"></script>
+<script type="text/javascript" src="http://meche.mit.edu/sites/default/files/js/js_rsGiM5M1ffe6EhN-RnhM5f3pDyJ8ZAPFJNKpfjtepLk.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+(function(i,s,o,g,r,a,m){i["GoogleAnalyticsObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,"script","https://www.google-analytics.com/analytics.js","ga");ga("create", "UA-2242837-1", {"cookieDomain":"auto"});ga("set", "anonymizeIp", true);ga('create', 'UA-1592615-30',{'name':'mitsitewide'});ga("send", "pageview");ga('mitsitewide.send','pageview');
+//--><!]]>
+</script>
+<script type="text/javascript" src="http://meche.mit.edu/sites/default/files/js/js_uVZxTz_aN3L7bgFGkqfygEck8aPPFnm3VAGf9QBBomY.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings, {"basePath":"\/","pathPrefix":"","setHasJsCookie":0,"ajaxPageState":{"theme":"mit_meche","theme_token":"zJdAnBZCfvdjXsM4GMixKQpHk7YgXgwjX2Cww0CaCfE","js":{"misc\/jquery.js":1,"misc\/jquery-extend-3.4.0.js":1,"misc\/jquery-html-prefilter-3.5.0-backport.js":1,"misc\/jquery.once.js":1,"misc\/drupal.js":1,"sites\/all\/modules\/contrib\/google_analytics\/googleanalytics.js":1,"0":1,"sites\/all\/themes\/mit_meche\/js\/vendor\/video.js":1,"sites\/all\/themes\/mit_meche\/js\/vendor\/video.youtube.js":1,"sites\/all\/themes\/mit_meche\/js\/modernizr.prod.min.js":1},"css":{"modules\/system\/system.base.css":1,"modules\/system\/system.menus.css":1,"modules\/system\/system.messages.css":1,"modules\/system\/system.theme.css":1,"sites\/all\/modules\/contrib\/calendar\/css\/calendar_multiday.css":1,"modules\/comment\/comment.css":1,"sites\/all\/modules\/contrib\/date\/date_api\/date.css":1,"sites\/all\/modules\/contrib\/date\/date_popup\/themes\/datepicker.1.7.css":1,"modules\/field\/theme\/field.css":1,"modules\/node\/node.css":1,"modules\/user\/user.css":1,"sites\/all\/modules\/contrib\/views\/css\/views.css":1,"sites\/all\/modules\/contrib\/media\/modules\/media_wysiwyg\/css\/media_wysiwyg.base.css":1,"sites\/all\/modules\/contrib\/ctools\/css\/ctools.css":1,"sites\/all\/modules\/contrib\/shib_auth\/shib_auth.css":1,"modules\/search\/search.css":1,"sites\/all\/themes\/mit_meche\/css\/foundation.min.css":1,"sites\/all\/themes\/mit_meche\/css\/style.css":1,"sites\/all\/themes\/mit_meche\/css\/tablesaw.stackonly.css":1,"sites\/all\/themes\/mit_meche\/css\/video-js.css":1,"sites\/all\/themes\/mit_meche\/css\/vjs-sublime-skin.css":1,"https:\/\/cdnjs.cloudflare.com\/ajax\/libs\/jquery-modal\/0.9.1\/jquery.modal.min.css":1,"sites\/all\/themes\/mit_meche\/css\/extra.css":1}},"urlIsAjaxTrusted":{"\/people\/faculty\/anand@mit.edu":true},"googleanalytics":{"trackOutbound":1,"trackMailto":1,"trackDownload":1,"trackDownloadExtensions":"7z|aac|arc|arj|asf|asx|avi|bin|csv|doc(x|m)?|dot(x|m)?|exe|flv|gif|gz|gzip|hqx|jar|jpe?g|js|mp(2|3|4|e?g)|mov(ie)?|msi|msp|pdf|phps|png|ppt(x|m)?|pot(x|m)?|pps(x|m)?|ppam|sld(x|m)?|thmx|qtm?|ra(m|r)?|sea|sit|tar|tgz|torrent|txt|wav|wma|wmv|wpd|xls(x|m|b)?|xlt(x|m)|xlam|xml|z|zip"}});
+//--><!]]>
+</script>
+
+        <!-- Inlined Modernizr extensions to prevent delayed position jump ( Must be after Modernizr load ) -->
+        <script>
+            ;(function(Modernizr, window) {
+                Modernizr.addTest('positionfixed', function () {
+                    var test  = document.createElement('div'),
+                        control = test.cloneNode(false),
+                            fake = false,
+                            root = document.body || (function () {
+                            fake = true;
+                            return document.documentElement.appendChild(document.createElement('body'));
+                        }());
+
+                    var oldCssText = root.style.cssText;
+                    root.style.cssText = 'padding:0;margin:0';
+                    test.style.cssText = 'position:fixed;top:42px';
+                    root.appendChild(test);
+                    root.appendChild(control);
+               
+                    var ret = test.offsetTop !== control.offsetTop;
+               
+                    root.removeChild(test);
+                    root.removeChild(control);
+                    root.style.cssText = oldCssText;
+               
+                    if (fake) {
+                        document.documentElement.removeChild(root);
+                    }
+               
+                    return ret;
+                });
+                
+                Modernizr.addTest('iospositionfixed', function () {
+                    var test  = document.createElement('div'),
+                        ret,
+                        fake = false,
+                        root = document.body || (function () {
+                            fake = true;
+                            return document.documentElement.appendChild(document.createElement('body'));
+                        }());
+                    
+                    if (typeof document.body.scrollIntoViewIfNeeded === 'function') {
+                    
+                        var oldCssText = root.style.cssText,
+                            testScrollTop = 20,
+                            originalScrollTop = window.pageYOffset;
+
+                        root.appendChild(test);
+
+                        test.style.cssText = 'position:fixed;top:0px;height:10px;';
+
+                        root.style.height="3000px";
+                        
+                        /* avoided hoisting for clarity */
+                        var testScroll = function() {
+                            if (ret === undefined) {
+                                test.scrollIntoViewIfNeeded();
+                                if (window.pageYOffset === testScrollTop) {
+                                    ret = true;
+                                } else {
+                                    ret = false;
+                                }
+                            }
+                            window.removeEventListener('scroll', testScroll, false);
+                        }
+
+                        try {
+                        window.addEventListener('scroll', testScrollTop, false);
+                        }
+                        catch(err) {
+                        //      
+                        }
+                        
+                        window.setTimeout(testScroll, 20); // ios 4 does'nt publish the scroll event on scrollto
+                        window.scrollTo(0, testScrollTop);
+                        testScroll();
+
+                        root.removeChild(test);
+                        root.style.cssText = oldCssText;
+                        window.scrollTo(0, originalScrollTop);
+
+                    } else {
+                        ret = Modernizr.positionfixed; // firefox and IE doesnt have document.body.scrollIntoViewIfNeeded, so we test with the original modernizr test
+                    }
+                        
+                    if (fake) {
+                        document.documentElement.removeChild(root);
+                    }
+
+                    return ret;
+                });
+            })(Modernizr, window);
+        </script>
+
+        <!-- Inlined loading of web fonts to prevent FOUT -->
+        <script src="//ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont.js"></script>
+
+        <!-- New handler for font load so MecheController can be initialized once fonts are available -->
+        <script>
+            (function() {
+
+                var controllerUpdated = false;
+                var wait;
+
+                function updateControllerFonts() {
+                    
+                    if(typeof MecheController != "undefined") {
+                        clearInterval(wait);
+                        MecheController.initWithFonts();
+                        
+                    }
+                }
+
+                function onFontsLoaded() {
+                   
+                    if(typeof MecheController != "undefined") {
+                        MecheController.initWithFonts();
+                    } else {
+                        wait = setInterval(updateControllerFonts, 50);
+                    }
+                }
+                // load fonts
+                window.WebFontConfig
+                WebFont.load( {
+
+                        google: {
+                                families: ['Open Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700', 'Rajdhani:300,400,500,600,700']
+                        },
+                        active : onFontsLoaded,
+                        loading : function() {
+                                
+                        },
+                        timeout : 5000
+
+                });
+            })();
+            
+        </script>
+        
+
+        <title>MECHE PEOPLE: Lallit Anand | MIT Department of Mechanical Engineering</title>
+    </head>
+<body class="html not-front not-logged-in no-sidebars page-people page-people-faculty page-people-faculty-anandmitedu people faculty-plus mix-blend-mode mix-blend-mode" >
+      <div class="app-outer-wrap">
+      <div class="app-inner-wrap">
+      <a href="#" class="screen-btn exit-off-canvas">close menu</a>
+        <div class="region region-navigation">
+    <div id="block-block-1" class="block block-block">
+
+    
+  <div class="content">
+    <aside class="off-canvas-menu"><div class="nav-wrap">
+        <div class="main-nav-wrap nano-wrap">
+            <nav id="main-menu" class="main-nav nano-content overthrow" role="navigation" aria-label="main"><div class="main-nav-top">
+                      <a href="https://meche-res.mit.edu/resource_links/" class="resources-btn"><span class="fa fa-lock"></span><span>Find Resources</span><span class="fa fa-chevron-right"></span></a>
+                    <!-- NOTE | CHANGE on 10/08/15
+                         - - - - - - - - - - - - -
+                         Added <span class="visually-hidden">Close Menu</span> and aria-hidden="true" to the icon
+                    -->
+                    <a href="#exit-menu" class="close-btn exit-off-canvas" role="button" title="close side navigation">
+                        <span class="fa fa-close"></span>
+                        <span class="visually-hidden">Close Menu</span>
+                    </a>
+                </div>
+
+                <div class="main-nav-core">
+                    <div class="search-bar" role="search">
+                        <form class="search-form" action="/people/faculty/anand@mit.edu" method="post" id="search-form" accept-charset="UTF-8"><div><div class="container-inline form-wrapper" id="edit-basic"><div class="form-item form-type-textfield form-item-keys">
+  <input placeholder="Search" type="text" id="edit-keys" name="keys" value="" size="20" maxlength="255" class="form-text" /></div>
+<input type="submit" id="edit-submit" name="op" value="Search" class="form-submit" /><input type="hidden" name="get" value="[]" /><button type="submit"><i class="fa fa-search"></i></button></div><input type="hidden" name="form_build_id" value="form-E3xIzkrSkkgr-kf1O-QBXCSdgbYtp5HTDcmKMJ_hgm8" /><input type="hidden" name="form_id" value="apachesolr_search_custom_page_search_form_menu" /></div></form>                    </div>
+                    <hr class="meche-dots" /><!-- NOTE | CHANGE on 10/08/15
+                         - - - - - - - - - - - - -
+                         Added <span class="visually-hidden">...</span> to the icon button icons for
+                         each of the items that have a secondary navigation panel to support screen readers
+                    --><div role="region" aria-label="menu">
+                        <ul class="main-nav-items special"><li class="main-nav-item education" data-subnav="about">
+                                
+                                <h2 class="main-nav-item">
+                                    <a href="/about" class="main-nav-item-link">
+                                        <span class="main-nav-item-title">About</span>
+                                        <span class="main-nav-item-detail">Who we are</span>
+                                    </a>
+                                </h2>
+                                <a href="1" class="main-nav-item-more-btn" aria-haspopup="true" aria-owns="about-nav">
+                                    <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                                    <span class="visually-hidden">See About Menu</span>
+                                </a>
+                            </li>
+                            <li class="meche-dots" aria-hidden="true"></li>
+
+
+                            <li class="main-nav-item impact" data-subnav="impact">
+                                
+                                <h2 class="main-nav-item">
+                                    <a href="/impact" class="main-nav-item-link">
+                                        <span class="main-nav-item-title">Impact</span>
+                                        <span class="main-nav-item-detail">World-Changing Engineering</span>
+                                    </a>
+                                </h2>
+                                <a href="1" class="main-nav-item-more-btn" aria-haspopup="true" aria-owns="impact-nav">
+                                    <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                                    <span class="visually-hidden">See Impact Menu</span>
+                                </a>
+                            </li>
+                            <li class="meche-dots" aria-hidden="true"></li>
+                            <li class="main-nav-item research" data-subnav="research">
+                                <h2 class="main-nav-item">
+                                    <a class="main-nav-item-link" href="/research">
+                                        <span class="main-nav-item-title">Research</span>
+                                        <span class="main-nav-item-detail">Focus Areas and Labs</span>
+                                    </a>
+                                </h2>
+    
+                                <a href="2" class="main-nav-item-more-btn" aria-haspopup="true" aria-owns="research-nav">
+                                    <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                                    <span class="visually-hidden">See Research Menu</span>
+                                </a>
+                            </li>
+                            <li class="meche-dots" aria-hidden="true"></li>
+                            <li class="main-nav-item people" data-subnav="people">
+                                <h2 class="main-nav-item">
+                                    <a class="main-nav-item-link" href="/people">
+                                        <span class="main-nav-item-title">People</span>
+                                        <span class="main-nav-item-detail">Faculty and Staff</span>
+                                    </a>
+                                </h2>
+                                <a href="3" class="main-nav-item-more-btn" aria-haspopup="true" aria-owns="people-nav">
+                                    <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                                    <span class="visually-hidden">See People Submenu</span>
+                                </a>
+                            </li>
+                            <li class="meche-dots"></li>
+                            <li class="main-nav-item education" data-subnav="education">
+                                <h2 class="main-nav-item">
+                                    <a class="main-nav-item-link" href="/education">
+                                        <span class="main-nav-item-title">Education</span>
+                                        <span class="main-nav-item-detail">Degree Programs and Classes</span>
+                                    </a>
+                                </h2>
+                                
+                                <a href="4" class="main-nav-item-more-btn" aria-haspopup="true" aria-owns="education-nav">
+                                    <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                                    <span class="visually-hidden">See Education Menu</span>
+                                </a>
+                            </li>
+                            <li class="meche-dots"></li>
+                            <li class="main-nav-item news-and-media" data-subnav="news-media">
+                                <h2 class="main-nav-item">
+                                    <a class="main-nav-item-link" href="/news-media">
+                                        <span class="main-nav-item-title">News &amp; Video</span>
+                                        <span class="main-nav-item-detail">News, Press, Video and Photos</span>
+                                    </a>
+                                </h2>
+                                <a href="4" class="main-nav-item-more-btn" aria-haspopup="true" aria-owns="news-media-nav">
+                                    <i aria-hidden="true" class="fa fa-chevron-right"></i>
+                                    <span class="visually-hidden">See news and media menu</span>
+                                </a>
+                            </li>
+                        </ul></div>        
+                   <h2 class="support-meche-item"><a class="support-meche main-nav-item-app-link" href="/how-apply">Apply to MIT MechE</a></h2>
+                </div>
+            </nav></div>
+
+        
+        <div class="sub-nav-wrap nano-wrap">
+            <div class="nano-content overthrow"><!-- *** NEW NODE *** -->
+                <div class="sub-nav-top">
+                    <a href="#main-menu" class="btn-main-menu"><span class="fa fa-chevron-left"></span><span class="btn-label">Back</span></a>
+                    <a href="#close-menu" class="close-btn exit-off-canvas" role="button" title="close side navigation">
+                        <span class="fa fa-close"></span>
+                        <span class="visually-hidden">Close Menu</span>
+                    </a>
+                </div>
+                <div role="region" aria-label="submenu">
+
+                  <nav id="about-nav" class="sub-nav-group about" role="navigation" aria-label="about items"><div class="sub-nav-header">
+                            <a href="/about">
+                                <span>About</span>
+                            </a>
+                        </div>
+                        <!--<hr class="meche-dots" />-->
+                        <ul class="sub-nav-items"><li class="sub-nav-item"><a class="sub-nav-item-link" href="/meche-history-and-timeline">History</a></li>
+                            <li class="sub-nav-item"><a class="sub-nav-item-link" href="/people/diversity-equity-and-inclusion">Diversity Equity &amp; Inclusion</a></li>
+                            <li class="sub-nav-item"><a class="sub-nav-item-link" href="/ethics">Ethics and Integrity</a></li>
+                            <li class="sub-nav-item"><a class="sub-nav-item-link" href="/sites/default/files/2018-Strategic-Plan.pdf">Strategic Plan (PDF)</a></li>
+                            <li class="sub-nav-item"><a class="sub-nav-item-link" href="/faculty-positions">Faculty Openings</a></li>
+                            <li class="sub-nav-item"><a class="sub-nav-item-link" href="/alumni">Alumni</a></li>
+                            <li class="sub-nav-item"><a class="sub-nav-item-link" href="/alliance">MechE Alliance</a></li>
+                            <li class="sub-nav-item"><a class="sub-nav-item-link" href="https://giving.mit.edu/explore/schools/engineering/meche">Support MechE</a></li>
+                            <li class="sub-nav-item"><a class="sub-nav-item-link" href="/contact">Contact Us</a></li>
+                        </ul></nav><nav id="impact-nav" class="sub-nav-group impact" role="navigation" aria-label="impact items"><div class="sub-nav-header">
+                            <a href="/impact">
+                                <span>Impact</span>
+                            </a>
+                        </div>
+                        <!--<hr class="meche-dots" />-->
+                        <ul class="sub-nav-items"><li class="sub-nav-item"><a class="sub-nav-item-link" href="/impact/health">Health</a></li>
+                            <li class="sub-nav-item"><a class="sub-nav-item-link" href="/impact/environment">Environment</a></li>
+                            <li class="sub-nav-item"><a class="sub-nav-item-link" href="/impact/innovation">Innovation</a></li>
+                            <li class="sub-nav-item"><a class="sub-nav-item-link" href="/impact/energy">Energy</a></li>
+                            <li class="sub-nav-item"><a class="sub-nav-item-link" href="/impact/security">Security</a></li>
+                        </ul></nav><nav id="research-nav" class="sub-nav-group research" role="navigation" aria-label="research items"><div class="sub-nav-header">
+                            <a href="/research">
+                                <span>Research</span>
+                            </a>
+                        </div>
+                        <!--<hr class="meche-dots" />-->
+                        <ul class="sub-nav-items"><li class="sub-nav-item"><a class="sub-nav-item-link" href="/research/mechanics">Mechanics</a></li>
+                            <li class="sub-nav-item"><a class="sub-nav-item-link" href="/research/design">Design</a></li>
+                            <li class="sub-nav-item"><a class="sub-nav-item-link" href="/research/controls">Controls</a></li>
+                            <li class="sub-nav-item"><a class="sub-nav-item-link" href="/research/energy">Energy</a></li>
+                            <li class="sub-nav-item"><a class="sub-nav-item-link" href="/research/ocean">Ocean</a></li>
+                            <li class="sub-nav-item"><a class="sub-nav-item-link" href="/research/bioengineering">Bio</a></li>
+                            <li class="sub-nav-item"><a class="sub-nav-item-link" href="/research/nano">Micro + Nano</a></li>
+                        </ul></nav><nav id="people-nav" class="sub-nav-group people" role="navigation" aria-label="people"><div class="sub-nav-header">
+                            <a href="/people">
+                                <span>People</span>
+                            </a>
+                        </div>
+                        <!--<hr class="meche-dots" />-->
+                        <ul class="sub-nav-items"><li class="sub-nav-item"><a class="sub-nav-item-link" href="/people/diversity-equity-and-inclusion">Diversity, Equity, and Inclusion</a></li>
+                            <li class="sub-nav-item"><a class="sub-nav-item-link" href="/people?">Faculty</a></li>
+                            <li class="sub-nav-item"><a class="sub-nav-item-link" href="/people/emeritus">Faculty Emeritus</a></li>
+                            <li class="sub-nav-item"><a class="sub-nav-item-link" href="/people/staff-listing?field_staff_role_tid[]=46">Research Staff</a></li>
+                            <li class="sub-nav-item"><a class="sub-nav-item-link" href="/people/staff-listing?field_staff_role_tid[]=55">Post Docs</a></li>
+                            <li class="sub-nav-item"><a class="sub-nav-item-link" href="/people/staff-listing?field_staff_role_tid[]=47">Teaching Staff</a></li>
+                            <li class="sub-nav-item"><a class="sub-nav-item-link" href="/people/staff-listing?field_staff_role_tid[]=43">Admin Staff</a></li>
+                            <li class="sub-nav-item"><a class="sub-nav-item-link" href="/people/staff-listing?field_staff_role_tid[]=44">Support Staff</a></li>
+                            <li class="sub-nav-item"><a class="sub-nav-item-link" href="/people/all">Full Directory</a></li>
+                        </ul></nav><nav id="education-nav" class="sub-nav-group education" role="navigation" aria-label="education"><div class="sub-nav-header">
+                            <a href="/education">
+                                <span>Education</span>
+                            </a>
+                        </div>
+                        <!--<hr class="meche-dots" />-->
+                        <ul class="sub-nav-items"><li class="sub-nav-item"><a class="sub-nav-item-link" href="/featured-classes">Class Offerings</a></li>
+                            <li class="sub-nav-item"><a class="sub-nav-item-link" href="/education/prospective-students">Prospective Students</a></li>
+                            <li class="sub-nav-item"><a class="sub-nav-item-link" href="/education/undergraduate">Undergraduate</a></li>
+                            <li class="sub-nav-item"><a class="sub-nav-item-link" href="/education/graduate">Graduate</a></li>
+                            <li class="sub-nav-item"><a class="sub-nav-item-link" href="/education/post-doc">Post-Doc</a></li>
+                           <li class="sub-nav-item"><a class="sub-nav-item-link" href="/careers">Careers</a></li>
+                 <!-- removed 9/1/2000 per JF request
+                            <li class="sub-nav-item"><a class="sub-nav-item-link" href="/education/professional">Professional Education</a></li>
+                            <li class="sub-nav-item"><a class="sub-nav-item-link" href="/education/meche-summer-x">MechE Summer X</a></li>
+                 -->
+                        </ul></nav><nav id="culture-nav" class="sub-nav-group culture" role="navigation" aria-label="culture"><div class="sub-nav-header">
+                            <a href="/culture">
+                                <span>Culture</span>
+                            </a>
+                        </div>
+                        <hr class="meche-dots" /></nav><nav id="news-nav" class="sub-nav-group news-media" role="navigation" aria-label="news and media"><div class="sub-nav-header">
+                            <a href="/news-media">
+                                <span>News + Video</span>
+                            </a>
+                        </div>
+                        <!--<hr class="meche-dots" />-->
+                        <ul class="sub-nav-items"><li class="sub-nav-item"><a class="sub-nav-item-link" href="/news-media/news">Press</a></li>
+                            <li class="sub-nav-item"><a class="sub-nav-item-link" href="/news-media/video/">Video Galleries</a></li>
+                            <li class="sub-nav-item"><a class="sub-nav-item-link" href="/news-media/image-gallery/906">Photo Galleries</a></li>
+                            <li class="sub-nav-item"><a class="sub-nav-item-link" href="/meche-connects-newsletter">Newsletter</a></li>
+                            <li class="sub-nav-item"><a class="sub-nav-item-link" href="/international-colloquia-thermal-innovations">Colloquia</a></li>
+                        </ul></nav></div>
+            </div><!-- *** NEW NODE ( CLOSING TAG ) *** -->
+        </div>
+    </div>
+</aside>  </div>
+</div>
+  </div>
+
+      <div class="fluid">
+          <div class="hbar hbar-alert clearfix hide"><a href="#" class="small message"><i> ••• </i>Lorem ipsum dolor sit amet. Lorem ipsum.</a><a class="btn-close">Close Alert</a></div>
+      </div>
+      
+      <div class="hbar hbar-nav-main fixed" role="region" aria-label="navigation bar">
+          <a href="/" class="nav-bar-logo">MIT MechE</a>
+          <div id="vr-btn" class="btn-container">
+            <a class="btn btn-primary blue centered" style="margin-top:0px; background-color:#ef0166; padding-top: 0px; padding-bottom: 0px; min-width:0px; min-height: 0px; width: -moz-max-content; width: -webkit-max-content; width: max-content;" href="/meche-covid-19-resources">MechE Covid-19 Resources <i class="fa fa-arrow-circle-right"></i></a>
+          </div>
+          <nav class='breadcrumbs' role='menubar' aria-label='breadcrumbs'>
+    <li class='home' role='menuitem'><a href='/'><i class='fa fa-arrow-circle-o-left'></i>Home</a></li><li role='menuitem' ><a href='/people'>People</a></li><li role='menuitem' class='current'><a href='#'>Anand, Lallit</a></li></nav>          <a href="#main-menu" class="btn-side-menu right-off-canvas-toggle" role="button" aria-expanded="false" aria-controls="main-nav-side-menu"><span>menu</span><i class="fa fa-2x fa-navicon"></i></a>
+      </div>
+        <div class="region region-rotator">
+    <div id="block-meche-blocks-profile-hero" class="block block-meche-blocks">
+
+    
+  <div class="content">
+    <!-- ****************  F S   B A C K G R O U N D   I M A G E  ****************-->       
+    <div class='fluid panel-container fs-hero no-cover'>
+        <div>
+    
+            <!-- FULLSCREEN BG IMAGE -->
+            <div class='bg-fluid-image'>
+                <div class='mesh-bg light'></div>
+                <img class='bg-img bg-width' src='http://meche.mit.edu/sites/default/files/styles/hero/public/Lallit%20Anand.jpg?itok=rE3vDhO5' alt='Lallit Anand' />
+            </div>
+            <div class='bg-img-content vc-parent middle left' role='banner'>
+                <div class='vc-child faculty-plus-hero-content orange'>
+                    <hr class='meche-dots fat' />
+                    <div class='intro'>
+                        <h3 class='faculty-rank'>Professor</h3>
+                        <h1 class='faculty-name'>Lallit Anand </h1>
+                        <p>Warren and Towneley Rohsenow Professor of Mechanical Engineering</p>
+                    </div>
+                    <div class='interests'>
+                        <hr class='meche-dots hairline' />
+                        <h3>Interests</h3>
+                        <ol class='numeric'>
+                            <li class='inverted'>Mechanics of Materials</li><li class='inverted'>Solid Mechanics</li><li class='inverted'>Plasticity</li>
+                        </ol>
+                    </div>
+                    <hr class='meche-dots thin' />
+                </div>
+            </div>
+            
+        </div>
+    </div>
+  <div class='row hbar-secondary-container'>
+    <div class='scroll-btn-container align-c hide-for-small-only'>
+        <a class='btn btn-jumper'>
+            <p class='jump-label'>More About Lallit</p>
+            <i class='jump-icon fa fa-chevron-circle-down'></i>
+        </a>
+    </div>
+</div><section class='fluid layer'>
+    <div class='hbar hbar-faculty-details'>
+        <div class='top-details clearfix'>
+            <div class='info-header show-for-small-only'>
+                <h3>Contact Info</h3>
+            </div>
+            <div class='location-group clearfix'>
+                <div class='room-block vc-parent'>
+                    <div class='vc-child'>
+                        <span class='room-title'>room</span>
+                        <span class='room-number'><a href='http://whereis.mit.edu/?mapterms=1-310E' class='room-number'>1-310E<i class='fa fa-map-marker'></i></a></span>
+                    </div>
+                </div>
+                <div class='address-block vc-parent'>
+                    <div class='vc-child'>
+                        <p>Massachusetts Institute of Technology</p>
+                        <p>77 Massachusetts Avenue</p>
+                        <p>Cambridge, Massachusetts 02139</p>
+                    </div>
+                    
+                </div>
+            </div>
+            <div class='contact-group clearfix'>
+                <div class='contact-block digital vc-parent'>
+                    <div class='vc-child'>
+                        <ul>
+                            <li class='primary-contact-method email'><a href='mailto:anand@mit.edu'><i class='fa fa-envelope'></i><span>email</span></a></li></ul>
+                    </div>
+                </div>
+                <div class='contact-block vc-parent'>
+                    <div class='vc-child'>
+                        <ul>
+                            <li><a class='tel' href='tel:+1617.253.1635'><i class='fa fa-phone'></i><span>617.253.1635</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class='personal-group'>
+                <div class='cv-block vc-parent'>
+                    <div class='vc-child'>
+                        <a href='http://meche.mit.edu/sites/default/files/cv/anand_cv_2021_0.pdf' class='btn btn-primary orange'>Download CV <i class='fa fa-arrow-circle-down'></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class='research-group'>
+                <div class='ra-block vc-parent'>
+                    <div class='vc-child'>
+                        <div class='ra-icon-bar'>
+                            <span class='title'>Associated Research Areas</span>
+                            <ul class='clearfix'>
+                            <li class='active'>
+        <a href='/research/mechanics' data-tooltip aria-haspopup='true' data-options='additional_inheritable_classes: ra-tip;' class='has-tip tip-top ra-tip' title='mechanics'>
+            <i class='ra-icon mechanics'><span class='visually-hidden'>mechanics</span></i>
+        </a>
+        </li><li >
+        <a href='/research/design' data-tooltip aria-haspopup='true' data-options='additional_inheritable_classes: ra-tip;' class='has-tip tip-top ra-tip' title='design'>
+            <i class='ra-icon design'><span class='visually-hidden'>design</span></i>
+        </a>
+        </li><li >
+        <a href='/research/controls' data-tooltip aria-haspopup='true' data-options='additional_inheritable_classes: ra-tip;' class='has-tip tip-top ra-tip' title='controls'>
+            <i class='ra-icon controls'><span class='visually-hidden'>controls</span></i>
+        </a>
+        </li><li >
+        <a href='/research/energy' data-tooltip aria-haspopup='true' data-options='additional_inheritable_classes: ra-tip;' class='has-tip tip-top ra-tip' title='energy'>
+            <i class='ra-icon energy'><span class='visually-hidden'>energy</span></i>
+        </a>
+        </li><li >
+        <a href='/research/ocean' data-tooltip aria-haspopup='true' data-options='additional_inheritable_classes: ra-tip;' class='has-tip tip-top ra-tip' title='ocean'>
+            <i class='ra-icon ocean'><span class='visually-hidden'>ocean</span></i>
+        </a>
+        </li><li >
+        <a href='/research/bioengineering' data-tooltip aria-haspopup='true' data-options='additional_inheritable_classes: ra-tip;' class='has-tip tip-top ra-tip' title='bioengineering'>
+            <i class='ra-icon bio'><span class='visually-hidden'>bioengineering</span></i>
+        </a>
+        </li><li >
+        <a href='/research/nano' data-tooltip aria-haspopup='true' data-options='additional_inheritable_classes: ra-tip;' class='has-tip tip-top ra-tip' title='nano'>
+            <i class='ra-icon nano'><span class='visually-hidden'>nano</span></i>
+        </a>
+        </li></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><div class='hbar hbar-admin-details'>
+             <!-- ADMIN CONTACT -->
+            <div class='bottom-details'>
+                <div class='admin-details clearfix'>
+                    <span class='arrow-box admin-detail label'>Administrative Contact</span>
+                    <a class='arrow-box admin-detail person' href='/people/staff/mmiddleb@mit.edu'>Middlebrook, Morgan E</a>
+                    <span class='admin-detail contact-detail room'></span>
+                    <span class='admin-detail contact-detail email'><a href='mailto:MMIDDLEB@MIT.EDU'><i class='fa fa-envelope'></i>MMIDDLEB@MIT.EDU</a></span>
+                    <span class='admin-detail contact-detail phone'><a class='tel' href='tel:+1'><i class='fa fa-phone'></i></a></span>
+                </div>  
+            </div>
+        </div></section>  </div>
+</div>
+  </div>
+  <div class="region region-content">
+    <div id="block-meche-blocks-profile-highlights" class="block block-meche-blocks">
+
+    
+  <div class="content">
+    <!-- ****************  F E A T U R E D   B L O C K (s)  ****************-->
+      <section class='fluid panel-block default-featured-block layer gray-block'>   
+          <div class='row header-block'>
+              <div class='column small-12'>
+                  <h3 class='align-c xlarge'>Professor Anand News + Media</h3>
+                  <hr class='meche-dots thin black' />
+              </div>
+          </div>
+          <div class='row' data-equalizer><div class='column large-4'>
+                    <div class='news-block clearfix'>
+                        <div class='img-container'>
+                            <img src='http://meche.mit.edu/sites/default/files/styles/faculty_highlight/public/highlights/llalid_news1_460.jpg?itok=26X4AzGb' alt='Four MIT faculty elected to the National Academy of Engineering for 2018' />
+                        </div>
+                        <div class='news-block-details'>
+                            <div data-equalizer-watch>
+                                <h3>Four MIT faculty elected to the National Academy of Engineering for 2018</h3>
+                                <hr class='meche-dots thin black' />
+                                <p>Professor Lallit Anand, Professor Yang Shao-Horn, and Professor Stephen Graves have been elected to the National Academy of Engineering for 2018, one of the highest professional honors for an engineer. </p>
+                            </div>
+                            <div class='link-wrap'>
+                                <a class='link link-primary blue' href='http://meche.mit.edu/news-media/four-mit-faculty-elected-national-academy-engineering-2018'>READ MORE</a>
+                            </div>
+                        </div>
+                    </div>
+                </div><div class='column large-4'>
+                    <div class='news-block clearfix'>
+                        <div class='img-container'>
+                            <img src='http://meche.mit.edu/sites/default/files/styles/faculty_highlight/public/highlights/lallit_headshot_460.jpg?itok=b0oFDceU' alt='Lallit Anand selected for ASME Drucker Medal' />
+                        </div>
+                        <div class='news-block-details'>
+                            <div data-equalizer-watch>
+                                <h3>Lallit Anand selected for ASME Drucker Medal</h3>
+                                <hr class='meche-dots thin black' />
+                                <p>Professor of mechanical engineering receives one of the highest career achievement distinctions in mechanics</p>
+                            </div>
+                            <div class='link-wrap'>
+                                <a class='link link-primary blue' href='http://meche.mit.edu/news-media/lallit-anand-selected-asme-drucker-medal'>READ MORE</a>
+                            </div>
+                        </div>
+                    </div>
+                </div><div class='column large-4'>
+                    <div class='news-block clearfix'>
+                        <div class='img-container'>
+                            <img src='http://meche.mit.edu/sites/default/files/styles/faculty_highlight/public/highlights/lallit_news3_460.jpg?itok=saTnlusQ' alt='Understanding shape-shifting polymers' />
+                        </div>
+                        <div class='news-block-details'>
+                            <div data-equalizer-watch>
+                                <h3>Understanding shape-shifting polymers</h3>
+                                <hr class='meche-dots thin black' />
+                                <p>MIT analysis, led by Professor Lallit Anand, should enable easier design for biomedical uses of plastic materials that have a shape memory.</p>
+                            </div>
+                            <div class='link-wrap'>
+                                <a class='link link-primary blue' href='http://news.mit.edu/2010/memory-polymer-1206'>READ MORE</a>
+                            </div>
+                        </div>
+                    </div>
+                </div></div></section>  </div>
+</div>
+<div id="block-meche-blocks-profile-education-plus" class="block block-meche-blocks">
+
+    
+  <div class="content">
+    <section class='fluid jumper-nav-block white-block panel-block layer'>
+        <div class='row'>
+            <div class='column small-12 show-for-medium-up align-c'>
+                <h3 class='jump-nav-label'>Faculty Details</h3>
+            </div>
+            <div class='column small-12 show-for-medium-up align-c'>   
+                <div class='hbar hbar-nav-jumper'>
+                    <ul>
+                        <li><a href='#education'>Education</a></li>
+                        <li class='divider' aria-hidden='true'></li>
+                        <li><a href='#research-interests'>Research Interests</a></li>
+                        <li class='divider' aria-hidden='true'></li>
+                        <li><a href='#other-details'>Bio</a></li>
+                        <li class='divider' aria-hidden='true'></li>
+                        <li><a href='#online-data'>Online Data</a></li>
+                        <li class='divider' aria-hidden='true'></li>
+                        <li><a href='#honors-and-awards '>Honors/Awards</a></li>
+                        <li class='divider' aria-hidden='true'></li>
+                        <li><a href='#related-experience'>Related Experience</a></li>
+                        <li class='divider' aria-hidden='true'></li>
+                        <li><a href='#memberships'>Memberships</a></li>
+                    </ul>
+                    <ul>
+                        <li><a href='#professional-service'>Professional Service</a></li>
+                        <li class='divider' aria-hidden='true'></li>
+                        <li><a href='#mit-service'>MIT Service</a></li>
+                        <li class='divider' aria-hidden='true'></li>
+                        <li><a href='#classes'>Teaching</a></li>
+                        <li class='divider' aria-hidden='true'></li>
+                        <li><a href='#publications '>Publications</a></li>
+                        <li class='divider' aria-hidden='true'></li>
+                        <li><a href='#patents'>Patents</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section><section class='fluid panel-block profile-details layer'>
+        <div class='row'>
+            <div class='column small-12 education-block clearfix'>
+                <div id='education' class='education-block-content'>
+                    <h2>Education</h2>
+                    <div class='degrees'>
+                    <ul class='clearfix'><li class='degree'>
+            <div>
+                <h3>1970</h3>
+                <p>INDIAN INSTITUTE OF TECHNOLOGY</p>
+                <span>B.</span>
+            </div>
+        </li><li class='degree'>
+            <div>
+                <h3>1972</h3>
+                <p>BROWN UNIVERSITY</p>
+                <span>M.</span>
+            </div>
+        </li><li class='degree'>
+            <div>
+                <h3>1975</h3>
+                <p>BROWN UNIVERSITY</p>
+                <span>Ph.D.</span>
+            </div>
+        </li></ul></div></div></div><div class='column small-12 profile-block'>
+              <div id='research-interests' class='profile-block-content'><h2>Research Interests</h2><ul><li>Crystal-mechanics based large-deformation plasticity theory.</li>
+<li>Strain-gradient plasticity.</li>
+<li>Coupled diffusion-deformation-damage theories.</li>
+<li>Gel mechanics.</li>
+<li>Li-ion batteries.</li>
+<li>Hydrogen embrittlement in steels.</li>
+</ul></div></div><div class='column small-12 profile-block'>
+              <div id='online-data' class='profile-block-content'><h2>Online Data</h2><p><a href="http://www.researcherid.com/rid/B-6332-2009">http://www.researcherid.com/rid/B-6332-2009</a><br />
+<a href="https://scholar.google.com/citations?user=HStqO04AAAAJ&amp;hl=en">https://scholar.google.com/citations?user=HStqO04AAAAJ&amp;hl=en</a><br />
+<a href="https://en.wikipedia.org/wiki/Lallit_Anand">https://en.wikipedia.org/wiki/Lallit_Anand</a></p>
+</div></div><div class='column small-12 profile-block'>
+              <div id='honors-and-awards' class='profile-block-content'><h2>Honors + Awards</h2><ul><li>1983-85, Esther and Harold E. Edgerton Professor of Mechanical Engineering</li>
+<li>1992, Eric Reissner Medal, 1992. For outstanding contributions to the field of Mechanics of Materials in the past decade. From the International Society for Computational Engineering &amp; Sciences.</li>
+<li>1992, Southwest Mechanics Series Lecturer.</li>
+<li>1999-2005, Fellow of Singapore-MIT Alliance.</li>
+<li>2003, Fellow of American Society of Mechanical Engineers.</li>
+<li>2007, Khan International Medal, 2007. For outstanding life-long contributions to the field of Plasticity. With specific recognition for seminal contributions related to (a) development of plasticity theories at large strains (b) large-deformation, high-temperature isotropic viscoplasticity, (c) large-deformation crystal plasticity, and (d) development of attendant robust numerical methods. From the International Journal of Plasticity.</li>
+<li>2009--, Warren and Towneley Rohsenow Professor of Mechanical Engineering, MIT.</li>
+<li>2010, Special issue of the International Journal of Plasticity in Honor of Lallit Anand, Volume 26, Issue 8.</li>
+<li>2011, Distinguished Alumnus Award from Indian Institute of Technology(IIT), Kharagpur.</li>
+<li>2014, Symposium Honoring Professor Lallit Anand on the Occasion of his 65th Birthday at the 17th U. S. National Congress on Theoretical and Applied Mechanics, Michigan State University, East Lansing, Michigan</li>
+<li>2014,  Daniel C. Drucker Medal. This ASME medal recognizes distinguished contributions to the field of applied mechanics and mechanical engineering through research, teaching, and service to the community over a substantial period of time.</li>
+<li>2014, Symposium Honoring Professor Lallit Anand on the Occasion of his receiving the Daniel C. Drucker Medal,   ASME  2014  International Mechanical Engineering Congress and Exposition, Montreal, Canada.</li>
+<li>
+<div>2017, J. P. Den Hartog Distinguished Educator Award. This is the highest award conferred for excellence in teaching Mechanical Engineering at Massachusetts Institute of Technology.</div>
+</li>
+<li>
+<div>Brown University Engineering Alumni Medal, 2018.</div>
+</li>
+<li>
+<div>2018, William Prager Medal. This Society of Engineering Science Medal recognizes outstanding research contributions in Solid Mechanics.</div>
+</li>
+<li>
+<div>
+<div>2018,  Elected to the National Academy of Engineering for contributions to the development of plasticity for engineering technology: theory, experiment, and computation.</div>
+<div> </div>
+</div>
+</li>
+</ul><p> </p>
+</div></div><div class='column small-12 profile-block'>
+              <div id='related-experience' class='profile-block-content'><h2>Related Experience</h2><ul><li>2004, Clark B. Millikan Visiting Professorship at Caltech.</li>
+<li>2012, Aditya Birla Visiting Professorship, Department of Mechanical Engineering, Indian Institute of Science.</li>
+</ul></div></div><div class='column small-12 profile-block'>
+              <div id='memberships' class='profile-block-content'><h2>Memberships</h2><ul><li>American Society of Mechanical Engineers</li>
+<li>Society of Engineering Science</li>
+<li>Materials Research Society</li>
+<li>National Academy of Engineering</li>
+</ul></div></div><div class='column small-12 profile-block'>
+              <div id='professional-service' class='profile-block-content'><h2>Professional Service</h2><ul><li>1989-1991, Program Director for the Mechanics and Materials Program, as well as the Manufacturing Processes Program, in the Engineering Directorate of the National Science Foundation.</li>
+<li>1994-1999,  Executive Committee of the Applied Mechanics Division of ASME</li>
+<li>1999-2004 ASME medal selection committees for the Timoshenko, Drucker, and Koiter awards.</li>
+</ul></div></div><div class='column small-12 profile-block'>
+              <div id='mit-service' class='profile-block-content'><h2>MIT Service</h2><ul><li>1997-2001, Departmental Graduate  Admissions Officer</li>
+<li>2005-2008, Departmental Graduate Officer</li>
+<li>2008-2013, Head of the Area for    Mechanics:  Modeling, Experimentation, and Computation (MMEC).</li>
+</ul></div></div><div class='column small-12 profile-block'>
+              <div id='classes' class='profile-block-content'><h2>Teaching</h2><ul><li>Mechanics and Materials II (2002)</li>
+<li>Mechanics of Solid Materials (2.071)</li>
+<li>Continuum Mechanics (2.072)</li>
+<li>Plasticity (2.073)</li>
+</ul></div></div><div class='column small-12 profile-block'>
+              <div id='publications' class='profile-block-content'><h2>Publications</h2><ul><li><span style="font-size:14px;"><span style="font-family:arial,helvetica,sans-serif;">Anand, L., and Gurland, J., "The Relationship Between the Size of Cementite Particles and the Subgrain Size in Quenched-and-Tempered Steels", Metallurgical Transactions, 6A, 928--931, 1975.</span></span></li>
+<li><span style="font-size:14px;"><span style="font-family:arial,helvetica,sans-serif;">Anand, L. and Gurland, J., "Effect of Internal Boundaries on the Yield Strengths of Spheroidized Steels", Metallurgical Transactions, 7A, 191--197, 1976.</span></span></li>
+<li><span style="font-size:14px;"><span style="font-family:arial,helvetica,sans-serif;">Anand, L. and Gurland, J., "Strain-Hardening of Spheroidized High Carbon Steels", Acta Metallurgica, 24, 901--909, 1976.</span></span></li>
+<li><span style="font-size:14px;"><span style="font-family:arial,helvetica,sans-serif;">Anand, L., "On H. Hencky's Approximate in presStrain-Energy Function for Moderate Deformations", ASME Journal of Appliedin pr Mechanics, 46, 78--82, 1979.</span></span></li>
+<li><span style="font-size:14px;"><span style="font-family:arial,helvetica,sans-serif;">Anand, L., "Constitutive Equations for Rate-Independent, Isotropic Elastic-Plastic Solids Exhibiting Pressure-Sensitive Yielding and Plastic Dilatancy", ASME Journal of Applied Mechanics, 47, 439-441, 1980.</span></span></li>
+<li><span style="font-size:14px;"><span style="font-family:arial,helvetica,sans-serif;">Anand, L., and Spitzig, W. A., "Initiation of Localized Shear Bands in Plane Strain", Journal of the Mechanics and Physics of Solids, 28, 113--128, 1980.</span></span></li>
+<li><span style="font-size:14px;"><span style="font-family:arial,helvetica,sans-serif;">Anand, L. and Spitzig, W.A., "Shear Band Orientations in Plane Strain", Acta Metallurgica, 30, 553--561, 1982.</span></span></li>
+<li><span style="font-size:14px;"><span style="font-family:arial,helvetica,sans-serif;">Anand, L., "Constitutive Equations for the Rate-Dependent Deformation of Metals at Elevated Temperatures", ASME Journal of Engineering Materials and Technology, 104, 12--17, 1982.</span></span></li>
+<li><span style="font-size:14px;"><span style="font-family:arial,helvetica,sans-serif;">Anand, L., "Elastic Moduli of Gray and Ductile Cast Irons", Scripta Metallurgica, 16, 173--177, 1982.</span></span></li>
+<li><span style="font-size:14px;"><span style="font-family:arial,helvetica,sans-serif;">Anand, L., "Plane Deformations of Ideal Granular Materials", Journal of the Mechanics and Physics of Solids, 31, 105-122, 1983.</span></span></li>
+<li><span style="font-size:14px;"><span style="font-family:arial,helvetica,sans-serif;">Anand, L., "Some Experimental Observations on Localized Shear Bands in Plane Strain", Scripta Metallurgica, 18, 423--427, 1984.</span></span></li>
+<li><span style="font-size:14px;"><span style="font-family:arial,helvetica,sans-serif;">Anand, L., "A Rate Constitutive Equation for Moderate Strain Isotropic Elasticity", Mechanics Research Communications, 11, 345--352, 1984.</span></span></li>
+<li><span style="font-size:14px;"><span style="font-family:arial,helvetica,sans-serif;">Anand, L., "Constitutive Equations for Hot-Working of Metals", International Journal of Plasticity, 1, 213-231, 1985.</span></span></li>
+<li><span style="font-size:14px;"><span style="font-family:arial,helvetica,sans-serif;">Anand, L., "Moderate Deformations in Extension-Torsion of Incompressible Isotropic Elastic Materials", Journal of the Mechanics and Physics of Solids, 34, 293--304, 1986.</span></span></li>
+<li><span style="font-size:14px;"><span style="font-family:arial,helvetica,sans-serif;">Anand, L., Kim, K. H., and Shawki, T. G., "Onset of Shear Localization in Viscoplastic Solids", Journal of the Mechanics and Physics of Solids, 35, 407--429, 1987.</span></span></li>
+<li><span style="font-size:14px;"><span style="font-family:arial,helvetica,sans-serif;">Brown, S. B., Kim, K. H., and Anand, L., "An Internal Variable Constitutive Model for Hot Working of Metals", International Journal of Plasticity, 5, pp. 95-130, 1989.</span></span></li>
+<li><span style="font-size:14px;"><span style="font-family:arial,helvetica,sans-serif;">Lush, A. M., Weber, G., and Anand, L., "An Implicit Time-Integration Procedure For A Set Of Internal Variable Constitutive Equations For Isotropic Elasto-Viscoplasticity", International Journal of Plasticity, 5, pp. 521-549, 1989.</span></span></li>
+<li><span style="font-size:14px;"><span style="font-family:arial,helvetica,sans-serif;">Haghi, M., and Anand, L., "High Temperature Deformation Mechanisms and Constitutive Equations for the ODS Superalloy MA 956", Metallurgical Transactions, 21 A, pp. 353 - 364, 1990.</span></span></li>
+<li><span style="font-size:14px;"><span style="font-family:arial,helvetica,sans-serif;">Weber, G., and Anand, L.,"Finite Deformation Constitutive Equations, And A Time Integration Procedure For Isotropic, Hyperelastic Viscoplastic Solids", Computer Methods in Applied Mechanics And Engineering, 79, pp. 173 -- 202, 1990.</span></span></li>
+<li><span style="font-size:14px;"><span style="font-family:arial,helvetica,sans-serif;">White, C. S., Bronkhorst, C., and Anand, L.,"An Improved Isotropic-Kinematic Hardening Model For Moderate Deformation Metal Plasticity", Mechanics of Materials, 10, pp. 127-147, 1990.</span></span></li>
+<li><span style="font-size:14px;"><span style="font-family:arial,helvetica,sans-serif;">Weber, G. G., Lush, A. M., Zavaliangos, A., and Anand, L., " An Objective Time-Integration Procedure For Isotropic Rate-Independent And Rate-Dependent Elastic-Plastic Constitutive Equations", International Journal of Plasticity, 6, pp. 701 -- 744, 1990.</span></span></li>
+<li><span style="font-size:14px;"><span style="font-family:arial,helvetica,sans-serif;">Anand, L., and Zavaliangos, A.,"Hot Working -- Constitutive Equations and Computational Procedures", Annals of CIRP, 39, pp. 235--238, 1990.</span></span></li>
+<li><span style="font-size:14px;"><span style="font-family:arial,helvetica,sans-serif;">Haghi, M., and Anand, L.,"Analysis Of Strain-Hardening Viscoplastic Thick-Walled Sphere And Cylinder Under External Pressure", International Journal of Plasticity, 7, pp. 123 -- 140, 1991.</span></span></li>
+<li><span style="font-size:14px;"><span style="font-family:arial,helvetica,sans-serif;">Bronkhorst, C. A., Kalidindi, S. R., and Anand, L.,"An Experimental and Analytical Study of the Evolution of Crystallographic Texturing in FCC Materials", Textures and Microstructures, 14 -- 18, pp. 1031 - 1036, 1991.</span></span></li>
+<li><span style="font-size:14px;"><span style="font-family:arial,helvetica,sans-serif;">Zavaliangos, A., and Anand, L., "Towards A Capability For Predicting The Formation Of Defects During Bulk Deformation Processing," Annals of CIRP, 40, pp. 267 -- 271, 1991.</span></span></li>
+<li><span style="font-size:14px;"><span style="font-family:arial,helvetica,sans-serif;">Zavaliangos, A., and Anand, L.,"Thermal Aspects Of Shear Localization In Microporous Viscoplastic Solids," International Journal of Numerical Methods in Engineering, 33, pp. 595 -- 634, 1991.</span></span></li>
+<li><span style="font-size:14px;"><span style="font-family:arial,helvetica,sans-serif;">Kalidindi, S. R., Bronkhorst, C. A., and Anand, L.,"Crystallographic Texture Evolution In Bulk Deformation Processing Of FCC Metals," Journal of the Mechanics and Physics of Solids, 40, 537 -- 569, 1992.</span></span></li>
+<li><span style="font-size:14px;"><span style="font-family:arial,helvetica,sans-serif;">Haghi, M., and Anand, L.,"A Constitutive Model For Isotropic, Porous, Elasto-Viscoplastic Metals," Mechanics of Materials, 13, 37 -- 53, 1992.</span></span></li>
+<li><span style="font-size:14px;"><span style="font-family:arial,helvetica,sans-serif;">Kalidindi, S. R., and Anand, L., " An Approximate Procedure For Predicting The Evolution of Crystallographic Texture In Bulk Deformation Processing Of FCC Metals," International Journal of Mechanical Sciences, 34, 309-329, 1992.</span></span></li>
+<li><span style="font-size:14px;"><span style="font-family:arial,helvetica,sans-serif;">Bronkhorst, C. A., Kalidindi, S. R., and Anand, L.,"Polycrystalline Plasticity and the Evolution of Crystallographic Texture in F.C.C. Metals," Philosophical Transactions of The Royal Society, London A, 341, 443 -- 477, 1992.</span></span></li>
+<li><span style="font-size:14px;"><span style="font-family:arial,helvetica,sans-serif;">Kalidindi, S. R., and Anand, L., "Large Deformation Simple Compression Of A Copper Single Crystal," Metallurgical Transactions , 24A , 989 -- 992, 1993.</span></span></li>
+<li><span style="font-size:14px;"><span style="font-family:arial,helvetica,sans-serif;">Zavaliangos, A., and Anand, L.,"Thermo-Elastoviscoplasticity Of Isotropic Porous Materials," Journal of the Mechanics and Physics of Solids , 41 , 1087 -- 1118, 1993.</span></span></li>
+<li><span style="font-size:14px;"><span style="font-family:arial,helvetica,sans-serif;">Anand, L.,"A Constitutive Model For Interface Friction," Computational Mechanics , 12 , 197 -- 213, 1993.</span></span></li>
+<li><span style="font-size:14px;"><span style="font-family:arial,helvetica,sans-serif;">Anand, L., and Tong, W.,"A Constitutive Model For Friction In Forming," Annals of CIRP , 42 , 361 -- 366, 1993.</span></span></li>
+<li><span style="font-size:14px;"><span style="font-family:arial,helvetica,sans-serif;">Anand,L.,and Kalidindi, S. R.,"The Process Of Shear Band Formation In Plane Strain Compression Of FCC Metals: Effects Of Crystallographic Texture," Mechanics of Materials , 17 , 223 -- 243, 1994.</span></span></li>
+<li><span style="font-size:14px;"><span style="font-family:arial,helvetica,sans-serif;">Kalidindi, S. R., and Anand, L.,"Macroscopic Shape Change And Evolution Of Crystallographic Texture In Pre-Textured FCC Metals," Journal of the Mechanics and Physics of Solids, 42 , 459 -- 490, 1994.</span></span></li>
+<li><span style="font-size:14px;"><span style="font-family:arial,helvetica,sans-serif;">Balasubramanian, S., and Anand, L.,"Single Crystal and Polycrystal Elasto-Viscoplasticity: Application to Earing In CUP DRAWING of F.C.C. Materials," Computational Mechanics, 17, pp. 209 - 225, 1996.</span></span></li>
+<li><span style="font-size:14px;"><span style="font-family:arial,helvetica,sans-serif;">Anand, L., and Kothari, M.,"A Computational Procedure For Rate-Independent Crystal Plasticity," Journal of The Mechanics and Physics of Solids, 44, pp. 525 - 558, 1996.</span></span></li>
+<li><span style="font-size:14px;"><span style="font-family:arial,helvetica,sans-serif;">Anand, L., and Balasubramanian, S.,"Polycrystal Plasticity: Application to Earing In Cup Drawing," of CIRP, 45, pp. 263 -- 268, 1996.</span></span></li>
+<li><span style="font-size:14px;"><span style="font-family:arial,helvetica,sans-serif;">Anand, L.,"A Constitutive Model For Compressible Elastomeric Solids," Computational Mechanics, 18, pp. 339 - 355, 1996.</span></span></li>
+<li><span style="font-size:14px;"><span style="font-family:arial,helvetica,sans-serif;">Kothari, M., and Anand, L.,"Elasto-Viscoplastic Constitutive Equations for Polycrystalline Metals: Application to Tantalum," J. Mech. Phys. Solids, 46, pp. 51-83, 1998.</span></span></li>
+<li><span style="font-size:14px;"><span style="font-family:arial,helvetica,sans-serif;">Balasubramanian, S., and Anand, L., "Polycrystalline Plasticity: Application to Earing in Cup Drawing of Al2008-T4 Sheet," ASME Journal of Applied Mechanics, 65 , pp. 268 -- 271, 1998.</span></span></li>
+<li><span style="font-size:14px;"><span style="font-family:arial,helvetica,sans-serif;">Staroselsky, A., and Anand, L.,"Inelastic Deformation of F.C.C. Materials By Slip and Twinning," Journal of The Mechanics and Physics of Solids, 46, pp. 671-696, 1998.</span></span></li>
+<li><span style="font-size:14px;"><span style="font-family:arial,helvetica,sans-serif;">Anand, L., and Gu, C.,"Granular Materials: Constitutive Equations and Shear Localization," Journal of The Mechanics and Physics of Solids, 48, pp. 1710-1733, 2000.</span></span></li>
+<li><span style="font-size:14px;"><span style="font-family:arial,helvetica,sans-serif;">Gu, C., Kim, M., and Anand, L., " Constitutive Equations for Powder Metals: Application To Powder Forming Processes," International Journal of Plasticity, 17, 147--209, 2001.</span></span></li>
+<li><span style="font-size:14px;"><span style="font-family:arial,helvetica,sans-serif;">Gearing, B. P., Moon, H. S., and Anand, L.,"A Plasticity Model For Interface Friction: Application To Sheet Metal Forming," International Journal of Plasticity, 17, 237-271, 2001.</span></span></li>
+<li><span style="font-size:14px;"><span style="font-family:arial,helvetica,sans-serif;">Thamburaja, P., and Anand, L.,"Polycrystalline Shape-Memory Materials: Effect of Crystallographic Texture," J. Mech. Phys. Solids, 49, pp. 709-737, 2001.</span></span></li>
+<li><span style="font-size:14px;"><span style="font-family:arial,helvetica,sans-serif;">Balasubramanian, S, and Anand, L.,"Elasto-Viscoplastic Constitutive Equations For Polycrystalline F.C.C. Materials At Low Homologous Temperatures," J. Mech. Phys. Solids, 50, pp. 101-126, 2002.</span></span></li>
+<li><span style="font-size:14px;"><span style="font-family:arial,helvetica,sans-serif;">Balasubramanian, S, and Anand, L.,"Plasticity Of Initially-Textured Hexagonal Polycrystals At High Homologous Temperatures: Application To Titanium," Acta Materialia, 50, 133-148, 2002.</span></span></li>
+<li><span style="font-size:14px;"><span style="font-family:arial,helvetica,sans-serif;">Thamburaja, P., and Anand, L.,"Superelastic Behavior In Tension-Torsion Of An Initially-Textured Ti-Ni Shape-Memory Alloy," International Journal of Plasticity, 18, 1607-1617, 2002.</span></span></li>
+<li><span style="font-size:14px;"><span style="font-family:arial,helvetica,sans-serif;">Staroselsky, A., and Anand, L.,"A Constitutive Model for HCP Materials Deforming By Slip and Twinning: Application to Magnesium Alloy AZ31B," International Journal of Plasticity, 19, 1843-1864, 2003.</span></span></li>
+<li><span style="font-size:14px;"><span style="font-family:arial,helvetica,sans-serif;">Thamburaja, P. Anand, L., "Thermo-mechanically coupled superelastic response of initially-textured Ti-Ni sheet", Acta Materialia, 51, 325-338, 2003.</span></span></li>
+<li><span style="font-size:14px;"><span style="font-family:arial,helvetica,sans-serif;">Anand, L. and Gurtin, M. E., " A theory of amorphous solids undergoing large deformations, with applications to polymeric glasses," International Journal of Solids and Structures,40, 1465-1487, 2003.</span></span></li>
+<li><span style="font-size:14px;"><span style="font-family:arial,helvetica,sans-serif;">Anand, L. and Gurtin, M. E., "Thermal effects in the superelasticity of crystalline shape-memory materials," Journal of the Mechanics and Physics of solids, 51, 1015-1058, 2003.</span></span></li>
+<li><span style="font-size:14px;"><span style="font-family:arial,helvetica,sans-serif;">Gearing, B. P., and Anand, L., "Notch-sensitive fracture of polycarbonate," International Journal of Solids and Structures, 41, 827-845, 2004.</span></span></li>
+<li><span style="font-size:14px;"><span style="font-family:arial,helvetica,sans-serif;">Gearing, B. P., and Anand, L., "On modeling the deformation and fracture response of glassy polymers due to shear-yielding and crazing," International Journal of Solids and Structures, 41, 3125-3150, 2004.</span></span></li>
+<li><span style="font-size:14px;"><span style="font-family:arial,helvetica,sans-serif;">Su, C., Wei, Y. J., and Anand, L.,"An elastic-plastic interface constitutive model: application to adhesive joints," International Journal of Plasticity, 20, 2063-2081, 2004.</span></span></li>
+<li><span style="font-size:14px;"><span style="font-family:arial,helvetica,sans-serif;">Wei, Y. J., and Anand, L., "Grain-boundary separation and sliding: application to nanocrystalline materials ," Journal of the Mechanics and Physics of solids, 52, 2587-2616, 2004.</span></span></li>
+<li><span style="font-size:14px;"><span style="font-family:arial,helvetica,sans-serif;">Anand, L., "Single-crystal elasto-viscoplasticity: application to texture evolution in polycrystalline metals at large strains," Computer Methods in Applied Mechanics and Engineering, 193, 5359-5383 , 2004.</span></span></li>
+<li><span style="font-size:14px;"><span style="font-family:arial,helvetica,sans-serif;">Gurtin, M. E., and Anand, L.,"The decomposition $\F=\Fe\Fp$, material symmetry, and plastic irrotationality for solids that are isotropic-viscoplastic or amorphous," International Journal of Plasticity, 21, 1686-1719, 2005.</span></span></li>
+<li><span style="font-size:14px;"><span style="font-family:arial,helvetica,sans-serif;">Anand, L., and Su, C."A theory for amorphous viscoplastic materials undergoing finite deformations, with application to metallic glasses," Journal of the Mechanics and Physics of solids, 53, 1362-1396, 2005.</span></span></li>
+<li><span style="font-size:14px;"><span style="font-family:arial,helvetica,sans-serif;">Gurtin, M. E., and Anand, L.,"A theory of strain-gradient plasticity for isotropic, plastically irrotational materials. Part I: small deformations,"Journal of the Mechanics and Physics of solids, 53, 1624-1649, 2005.</span></span></li>
+<li><span style="font-size:14px;"><span style="font-family:arial,helvetica,sans-serif;">Anand, L., Gurtin, M. E., Lele, S. P., and Gething, C."A one-dimensional theory of strain-gradient plasticity: formulation, analysis, numerical results," Journal of the Mechanics and Physics of Solids, 53, 1789-1826, 2005.</span></span></li>
+<li><span style="font-size:14px;"><span style="font-family:arial,helvetica,sans-serif;">Gurtin, M. E., and Anand, L.,"A theory of strain-gradient plasticity for isotropic, plastically irrotational materials. Part II: finite deformations," International Journal of Plasticity, 21, 2297-2318, 2005.</span></span></li>
+<li><span style="font-size:14px;"><span style="font-family:arial,helvetica,sans-serif;">Gudlavalleti, S., Gearing, B. P., and Anand, L.,"Flexure-based Micromechanical Testing Machines," Experimental Mechanics, 45, 412-419, 2005.</span></span></li>
+<li><span style="font-size:14px;"><span style="font-family:arial,helvetica,sans-serif;">Anand, L., and Ames, N. M."On modeling the micro-indentation response of an amorphous polymer," International Journal of Plasticity, 22, 1123-1170, <span style="font-size:14px;"><span style="font-family:arial,helvetica,sans-serif;">2006.</span></span></span></span></li>
+<li><span style="font-size:14px;"><span style="font-family:arial,helvetica,sans-serif;">Su., C., and Anand, L. "Plane strain indentation of a Zr-based metallic glass: experiments and numerical simulation," Acta Materialia, 54, 179-189, 2006.</span></span></li>
+<li><span style="font-size:14px;"><span style="font-family:arial,helvetica,sans-serif;">Wei, Y., Su, C, and Anand, L. "A computational study of the mechanical behavior of nanocrystalline fcc metals," Acta Materialia, 54, 3177-3190, 2006.</span></span></li>
+<li><span style="font-size:14px;"><span style="font-family:arial,helvetica,sans-serif;">Wei, Y., and Anand, L. "A constitutive model for powder-processed nanocrystalline metals," Acta Materialia,55. 921-931, 2007.</span></span></li>
+<li><span style="font-size:14px;"><span style="font-family:arial,helvetica,sans-serif;">Anand, L. , and Su, C. "A constitutive theory for metallic glasses at high homologous temperatures," Acta Materialia, 55, 3735-3747.</span></span></li>
+<li><span style="font-size:14px;"><span style="font-family:arial,helvetica,sans-serif;">Gurtin, M. E., and Anand, L., "A gradient theory of single-crystal plasticity," Modelling and Simulation in Materials Science and Engineering, 15, S263-S270, 2007</span></span></li>
+<li><span style="font-size:14px;"><span style="font-family:arial,helvetica,sans-serif;">Gurtin, M. E., Anand, L., and Lele, S. P., "A gradient single-crystal plasticity with free energy dependent on dislocation densities ," Journal of the Mechanics and Physics of Solids, 55, 1853-1878, 2007.</span></span></li>
+<li><span style="font-size:14px;"><span style="font-family:arial,helvetica,sans-serif;">Gurtin, M. E., and Anand, L., "Nanocrystalline grain boundaries that slip and separate: A gradient theory that accounts for grain-boundary stress and conditions at a triple-junction.’’ Journal of the Mechanics and Physics of Solids, 56, 184-199, 2008.</span></span></li>
+<li><span style="font-size:14px;"><span style="font-family:arial,helvetica,sans-serif;">Wei, Y., and Anand, L. "On   micro-cracking,  inelastic dilatancy, and the brittle-ductile transition in  compact rocks: a micromechanical study," International Journal of Solids and Structures, 45,  2785-2798, 2008.</span></span></li>
+<li><span style="font-size:14px;"><span style="font-family:arial,helvetica,sans-serif;">Henann, D., and Anand, L., "A constitutive theory for the mechanical response of amorphous metals at high temperatures spanning the glass transition temperature: application to microscale thermoplastic  forming."  Acta Materialia, 56, 3290-3305, 2008.</span></span></li>
+<li><span style="font-size:14px;"><span style="font-family:arial,helvetica,sans-serif;">Lele, S. P., and Anand, L.,"A small-deformation strain-gradient theory for isotropic  viscoplastic materials." Philosophical Magazine, 88, 3655--3689, 2008.</span></span></li>
+<li><span style="font-size:14px;"><span style="font-family:arial,helvetica,sans-serif;"> Lele, S. P., and Anand, L.,"A large-deformation strain-gradient theory for isotropic  viscoplastic materials," International Journal of Plasticity,   25, 420-453, 2009.</span></span></li>
+<li><span style="font-size:14px;"><span style="font-family:arial,helvetica,sans-serif;">Anand, L.,  Ames, N. M., Srivastava, V, and Chester, S., "A thermo-mechanically-coupled theory for large deformations  of amorphous polymers. Part I: formulation." International Journal of Plasticity,  25, 1474-1494, 2009.</span></span></li>
+<li><span style="font-size:14px;"><span style="font-family:arial,helvetica,sans-serif;"> Ames, N. M., Srivastava, V, ,Chester, S., and Anand, L,  "A thermo-mechanically-coupled theory for large deformations  of amorphous polymers. Part II: applications." International Journal of Plasticity,   25, 1495-1539, 2009.</span></span></li>
+<li><span style="font-size:14px;"><span style="font-family:arial,helvetica,sans-serif;">Gurtin, M. E., and Anand, L.,  "Thermodynamics applied to gradient theories involving the accumulated plastic strain: The theories of Aifantis and Fleck and Hutchinson and their generalization."  Journal of the Mechanics and Physics of Solids 57, 405--21, 2009.</span></span></li>
+<li><span style="font-size:14px;"><span style="font-family:arial,helvetica,sans-serif;">Henann, D. L., and Anand, L., "A large deformation theory for rate-dependent elastic-plastic materials with combined isotropic and kinematic hardening," International Journal of Plasticity, 25, 1833-1878, 2009.</span></span></li>
+<li><span style="font-size:14px;"><span style="font-family:arial,helvetica,sans-serif;">Henann, D. L., and Anand, L., "Fracture of metallic glasses at notches: Effects of notch-root radius and the ratio of the elastic shear modulus to the bulk modulus on toughness,"  Acta Materialia,  57, 6057-6074, 2009.</span></span></li>
+<li><span style="font-size:14px;"><span style="font-family:arial,helvetica,sans-serif;">Henann, D. L., Srivastava, V. Taylor, H.K., Hale, M.R., Hardt, D.E., and Anand, L.,  "Metallic glasses: viable tool materials for the production of surface microstructures in amorphous polymers by micro-hot-embossing," Journal of Micromechanics and Microengineering,  19, Article Number: 115030, 2009.</span></span></li>
+<li><span style="font-size:14px;"><span style="font-family:arial,helvetica,sans-serif;">Srivastava, V., Chester, S. A., Ames, N. M., and Anand, L.,"A thermo-mechanically-coupled large-deformation theory for amorphous polymers in a temperature range which spans their glass transition," International Journal of Plasticity, 26, 1138-1182, 2010.</span></span></li>
+<li><span style="font-size:14px;"><span style="font-family:arial,helvetica,sans-serif;">Chester, S. A., and Anand, L., "A coupled theory of fluid permeation and large deformations  for elastomeric materials." Journal of the Mechanics and Physics of Solids 58,  1879--1906, 2010.</span></span></li>
+<li><span style="font-size:14px;"><span style="font-family:arial,helvetica,sans-serif;">Henann, D. L., and Anand, L., "Surface tension-driven shape-recovery of  micro/nanometer-scale surface features in  a Pt-Ni-C-P  metallic glass  in the supercooled liquid region: a numerical modeling capability. " Journal of the Mechanics and Physics of Solids 58,  1947--1962, 2010.</span></span></li>
+<li><span style="font-size:14px;"><span style="font-family:arial,helvetica,sans-serif;"> Anand, L.,  "`A thermo-mechanically-coupled theory accounting for hydrogen diffusion and large elastic-viscoplastic deformations of metals." International Journal of Solids and Structures 48, 962--971, 2011.</span></span></li>
+<li><span style="font-size:14px;"><span style="font-family:arial,helvetica,sans-serif;"> Jena, R.K., Chester, S.A., Srivastava, V., Yue, C.Y., Anand, L., and Lam, Y.C.. `" Large-strain thermo-mechanical behavior of cyclicolefin copolymers: Application to hot embossing and thermal bonding for the fabrication of microfluidic devices." Sensors and Actuators B: Chemical 155, 93--105, 2011.</span></span></li>
+<li><span style="font-size:14px;"><span style="font-family:arial,helvetica,sans-serif;">Jena, R.K.,  Yue, C.Y.,  and Anand, L.,"Improvement of thermal bond strength and surface properties of Cyclic Olefin Copolymer (COC) based microfluidic device using the photo-grafting technique." Sensors and Actuators B: Chemical 157, 518--526, 2011.</span></span></li>
+<li><span style="font-size:14px;"><span style="font-family:arial,helvetica,sans-serif;">Loeffel, K., and Anand, L.,  "A chemo-thermo-mechanically coupled theory for elastic-viscoplastic deformation, diffusion, and volumetric swelling due to a chemical reaction."  International Journal of Plasticity 27, 1409--1431, 2011.</span></span></li>
+<li><span style="font-size:14px;"><span style="font-family:arial,helvetica,sans-serif;">Henann, D L., and Anand, L., "A large strain isotropic elasticity model based on molecular dynamics simulations of a metallic glass. " Journal of Elasticity 104,  281--302, 2011.</span></span></li>
+<li><span style="font-size:14px;"><span style="font-family:arial,helvetica,sans-serif;">Chester, S.A., and Anand, L.,"A thermo-mechanically coupled theory for fluid permeation in elastomeric materials: Application to thermally responsive gels." Journal of the Mechanics and Physics of Solids  59,  1978--2006, 2011.</span></span></li>
+<li><span style="font-size:14px;"><span style="font-family:arial,helvetica,sans-serif;">Roy, S., Yue, C.Y., Wang, Z.Y., Anand, L., "Thermal bonding of microfluidic devices: Factors that affect interfacial strength of similar and dissimilar cyclic olefin copolymers."  Sensors and Actuators, B: Chemical 161,  1067--1073, 2012.</span></span></li>
+<li><span style="font-size:14px;"><span style="font-family:arial,helvetica,sans-serif;">Anand, L., Aslan, O., and Chester, S. A., "A large-deformation gradient theory for elastic–plastic materials: Strain softening and regularization of shear bands."  International Journal of Plasticity 30-3, 116-143, 2012.</span></span></li>
+<li><span style="font-size:14px;"><span style="font-family:arial,helvetica,sans-serif;">Tran, N.K., Chester, S.A., Lam, Y.C., Anand, L., Yue, C.Y.,"Numerical simulation of aluminum alloy 6061 micro-mold fabrication for the production of polymeric microstructures by micro-hot-embossing." Journal of Micromechanics and Microengineering 22, 085005,  1--11, 2012.</span></span></li>
+<li><span style="font-size:14px;"><span style="font-family:arial,helvetica,sans-serif;">Anand, L.,  "A Cahn-Hilliard-type theory for species diffusion coupled with large elastic-plastic deformations." Journal of the Mechanics and Physics of Solids 60, 1983--2002, 2012.</span></span></li>
+<li><span style="font-size:14px;"><span style="font-family:arial,helvetica,sans-serif;">Loeffel, K., Anand, L., Gasem, Z.M., "On modeling the oxidation of high-temperature alloys."  Acta Materialia 16, 399--424, 2013.</span></span></li>
+<li><span style="font-size:14px;"><span style="font-family:arial,helvetica,sans-serif;">Di Leo, C.V., Anand, L.,"Hydrogen in metals: a coupled theory for  species diffusion   and large elastic-plastic deformations." International Journal of Plasticity 43,   42  69, 2013</span></span></li>
+<li><span style="font-size:14px;"><span style="font-family:arial,helvetica,sans-serif;"> Al-Athel, K., Loeffel, K., Liu, H., and Anand, L.,"Modeling decohesion of a top-coat from a thermally-growing oxide in a thermal barrier coating." Surface and Coatings Technolog 222,  68--78, 2013.</span></span></li>
+<li><span style="font-size:14px;"><span style="font-family:arial,helvetica,sans-serif;">Di Leo, C.V.,   Luk-Cyr J.,  Loeffel, K., Al-Athel A., Anand, L.,  "A new methodology for characterizing  traction-separation  relations for  interfacial delamination of thermal barrier coatings." Acta Materialia 71, 306-318, 2014.</span></span></li>
+<li><span style="font-size:14px;"><span style="font-family:arial,helvetica,sans-serif;">Di Leo, C.V.,   Rejovitzky, E., Anand, L., " A Cahn-Hilliard-type phase-field theory for species diffusion coupled with large elastic deformations: application to phase-separating Li-ion electrode materials."  Journal of the Mechanics and Physics of Solids  70, 1-29, 2014.</span></span></li>
+<li><span style="font-size:14px;"><span style="font-family:arial,helvetica,sans-serif;">Anand, L,   Gurtin,  M.E.,  Reddy, B.D.,  "The stored energy of cold work,   thermal annealing,  and other thermodynamic issues in single crystal plasticity at small length scales." International Journal of Plasticity 64, 1-25, 2015</span></span></li>
+<li><span style="font-size:14px;"><span style="font-family:arial,helvetica,sans-serif;">Chester, S.,  Di Leo, C.V.,  Anand, L., "A finite element implementation of a coupled diffusion-deformation theory for elastomeric gels."  International Journal of Solids and Structures   52, 1-18, 2015.</span></span></li>
+<li><span style="font-size:14px;"><span style="font-family:arial,helvetica,sans-serif;">Rejovitzky, E.,   Di Leo, C.V.,  Anand,L.,  "A theory and a simulation capability for the growth of a solid electrolyte interphase layer at an anode particle in a Li-ion battery." Journal of the Mechanics and Physics of Solids 78, 210-230, 2015.</span></span></li>
+<li><span style="font-size:14px;"><span style="font-family:arial,helvetica,sans-serif;">Di Leo, C.V.,   Rejovitzky, E., Anand, L., 2015. Diffusion-deformation theory for amorphous silicon anodes: the role of plastic deformation on electrochemical performance. International Journal of Solids and Structures 67-68,  283-296.</span></span></li>
+<li><span style="font-size:14px;"><span style="font-family:arial,helvetica,sans-serif;">Anand, L., 2015. A derivation of the theory of linear poroelasticity from chemoelasticity. ASME Journal of Applied Mechanics 82, 111005.</span></span></li>
+<li><span style="font-size:14px;"><span style="font-family:arial,helvetica,sans-serif;">Anand, L., 2016. A theory for non-Newtonian viscoelastic polymeric liquids.  International Journal of Plasticity 83, 273-301.</span></span></li>
+<li><span style="font-size:14px;"><span style="font-family:arial,helvetica,sans-serif;">Anand, L., 2017.  A large deformation poroplasticity theory for microporous polymeric materials. Journal of the Mechanics and Physics of Solids 98, 126-155.</span></span></li>
+<li><span style="font-size:14px;"><span style="font-family:arial,helvetica,sans-serif;">Mao, Y., Talamani, B., Anand, L., 2017. Rupture of polymers by chain scission. Extreme Mechanics Letters 13,  17-24.</span></span></li>
+<li><span style="font-size:14px;"><span style="font-family:arial,helvetica,sans-serif;">Mao, Y., Lin, S., Zhao, X., Anand, L., 2017. Large deformation viscoelastic model for double-network hydrogels. Journal of the Mechanics and Physics of Solids 100,  103-130.</span></span></li>
+<li><span style="font-size:14px;"><span style="font-family:arial,helvetica,sans-serif;">Talamini, B., Mao, Anand, L., 2018. Progressive damage and rupture in polymers. Journal of the Mechanics and Physics of Solids 111,  434-457.</span></span></li>
+<li><span style="font-size:14px;"><span style="font-family:arial,helvetica,sans-serif;">Mao, Y., Anand, L., 2018. A theory for fracture of polymeric gels. Journal of the Mechanics and Physics of Solids 115, 30-53.</span></span></li>
+<li><span style="font-size:14px;"><span style="font-family:arial,helvetica,sans-serif;">Mao, Y., Anand, L., 2018. Fracture of elastomeric materials by crosslink failure. ASME Journal of Applied Mechanics 85,  081008.</span></span></li>
+<li><span style="font-size:14px;"><span style="font-family:arial,helvetica,sans-serif;">Narayan, S., Anand, L., 2018. A large deformation elastic–viscoplastic model for lithium. Extreme Mechanics Letters 24,  21-29.</span></span></li>
+<li><span style="font-size:14px;"><span style="font-family:arial,helvetica,sans-serif;">Anand, L.,  Mao, Y.,  Talamini, B., Anand, L., 2019. On  modeling   fracture of ferritic steels due to hydrogen embrittlement. Journal of the Mechanics and Physics of Solids, 122, 280-314.</span></span></li>
+<li><span style="font-size:14px;"><span style="font-family:arial,helvetica,sans-serif;">Anand, L., Narayan, S., 2019. An Elastic-Viscoplastic Model for Lithium. Journal of The Electrochemical Society 166, A1092-A1095.</span></span></li>
+<li><span style="font-size:14px;"><span style="font-family:arial,helvetica,sans-serif;">Narayan, S., Anand, L.,  2019. A gradient-damage theory for fracture of quasi-brittle materials. Journal of the Mechanics and Physics of Solids 129, 119-146.</span></span></li>
+<li><span style="font-size:14px;"><span style="font-family:arial,helvetica,sans-serif;">Narayan, S., Anand, L.,  2020.On modeling the detrimental effects of inhomogeneous   plating-and-stripping  at  a lithium-metal/solid-electrolyte  interface  in a   solid-state-battery. Journal of The Electrochemical Society 167, 040525.</span></span></li>
+<li><span style="font-size:14px;"><span style="font-family:arial,helvetica,sans-serif;">Narayan, S., Anand, L.,  2021. Fracture of amorphous polymers: A gradient-damage theory. </span></span><span style="font-family: arial, helvetica, sans-serif; font-size: 14px;">Journal of the Mechanics and Physics of Solids 146, 104164.</span></li>
+<li>
+<p style="margin-top: 0px; margin-bottom: 0px; font-stretch: normal; font-size: 18px; line-height: normal; font-family: Helvetica;"><span style="font-size:14px;"><span style="font-family:arial,helvetica,sans-serif;">Narayan, S.,  Stewart, E.M., Anand, L.,  2021 Coupled electro-chemo-elasticity: Application to modeling the actuation response of ionic polymer-metal composites. Journal of the Mechanics and Physics of Solids 152,  104394.</span></span></p>
+<div> </div>
+</li>
+</ul></div></div></div></section>  </div>
+</div>
+  </div>
+        <div class="region region-footer">
+    <div id="block-block-2" class="block block-block">
+
+    
+  <div class="content">
+    <footer><div class="footer-inner mesh-bg light">
+        <div class="clearfix row full-width">
+            <div class="helpful-links clearfix large-6 medium-12 columns">
+                <ul class="link-group"><li class="top-link"><a href="#"><span class="heavy">at MechE</span></a></li>
+                    <li><a href="/sites/default/files/ME-Diversity-Statement.pdf">Diversity Statement</a></li>    
+                    <li><a href="/faculty-positions">Faculty Positions</a></li> 
+                    <li><a href="/contact">Contact</a></li>
+                    <li><a href="/how-apply">Apply</a></li>
+                    <li><a href="/sitemap.xml">Sitemap</a></li>
+                    <li><a href="/privacy">Privacy</a></li>
+                    <li><a href="https://accessibility.mit.edu/">Accessibility</a></li>
+                    <li><a href="/credits">Credits</a></li>
+                    <li><a class="toggle-contrast" href="#">Toggle High Contrast</a></li>
+                </ul><ul class="link-group"><li class="top-link"><a href="#"><span class="heavy">Student</span> <span class="light">Resources</span></a></li>
+                    <li><a href="https://meche-ad-portal.mit.edu/">MechE Academic Dashboard</a></li>
+                    <li><a href="https://meundergrad.mit.edu/">MechE Undergrad Portal</a></li>
+                    <li><a href="https://meche-res.mit.edu/resources/2A/">Online 2A Contract</a></li>
+                    <li><a href="https://meundergrad.mit.edu/sb-thesis-information">SB Thesis Information</a></li>
+                    <li><a href="https://meche-res.mit.edu/resources/grad/">Online Grad Card</a></li>
+                    <li><a href="http://odge.mit.edu/gpp/oversight/petitions/">ODGE Petition</a></li>
+                        <li><a href="/sites/default/files/ON-LINE_THESIS_SUBMISSION.pdf">On-Line Thesis Submission</a></li>
+                    <li><a href="/sites/default/files/Zoom%20Instructions%20for%20PhD%20Thesis%20Defenses.pdf">Zoom Instructions for Virtual Defenses</a></li>
+                    <li><a href="/sites/default/files/MechE_Grad_Guide.pdf">Guide to Graduate Study</a></li>
+                    <li><a href="http://handbook.mit.edu/">MIT's Mind &amp; Hand Book</a></li>
+                </ul><ul class="link-group"><li class="top-link"><a href="#"><span class="heavy">Staff</span> <span class="light">Resources</span></a></li>
+                    <li><a href="https://meche-reservations.mit.edu/Web/">Room Reservations</a></li>
+                   <li><a href="https://meche-res.mit.edu/resource_links/">MechE Resources</a></li>
+                   <li><a href="https://meche.mit.edu/Shibboleth.sso/Login?target=https://meche.mit.edu/handy-links">Edit My Profile <i class="fa fa-lock"></i></a></li>
+                </ul></div>
+            
+            <div class="social-links large-3 medium-12 columns">
+                <hr class="meche-dots thin pad-both" /><p>Follow our research.<br />Or, just follow us.</p>
+                <ul class="social-btns"><li><a href="http://facebook.com/mitmeche" target="_blank" class="social-btn"><i class="fa fa-facebook"></i><span>Facebook</span></a></li>
+                    <li><a href="http://twitter.com/mitmeche" target="_blank" class="social-btn"><i class="fa fa-twitter"></i><span>Twitter</span></a></li>
+                    <li><a href="http://www.youtube.com/mitmeche" target="_blank" class="social-btn"><i class="fa fa-youtube"></i><span>YouTube</span></a></li>
+                    <li><a href="http://instagram.com/mitmeche" target="_blank" class="social-btn"><i class="fa fa-instagram"></i><span>Instagram</span></a></li>
+                    <li><a href="https://www.linkedin.com/company/11244119/" target="_blank" class="social-btn"><i class="fa fa-linkedin"></i><span>Linkedin</span></a></li>
+                </ul><hr class="meche-dots thin pad-both" /><link href="//cdn-images.mailchimp.com/embedcode/slim-10_7.css" rel="stylesheet" type="text/css" /><style type="text/css">
+<!--/*--><![CDATA[/* ><!--*/
+
+                #mc_embed_signup{clear:left; font-family:"Rajdhani",Helvetica,sans-serif; margin-top: 20px; margin-left: 0px; padding-let: 0px;}
+                /* Add your own Mailchimp form style overrides in your site stylesheet or in this style block.
+                   We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+
+/*--><!]]>*/
+</style><div id="mc_embed_signup">
+<form action="https://mit.us17.list-manage.com/subscribe/post?u=6f5c7fd40df3024d6e08b1cbd&amp;id=917562481d" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate="">
+    <div id="mc_embed_signup_scroll">
+                <p><label for="mce-EMAIL" style="color: #02b2f4; font-weight: normal;">Sign up for our monthly newsletter</label></p>
+                <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required="" style="width: 70%;" /><!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups--><div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_6f5c7fd40df3024d6e08b1cbd_917562481d" tabindex="-1" value="" /></div>
+    <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button" /></div>
+    </div>
+</form>
+</div>
+ 
+<!--End mc_embed_signup-->
+
+
+
+            </div>
+
+            <div class="find-us medium-12 columns clearfix">
+                
+                <hr class="meche-dots thin pad-both" /><div class="address-group">
+                    <h3><span class="heavy">MechE</span> <span class="light">Analog</span></h3>
+                    <p>Massachusetts Institute of Technology</p>
+                    <p class="heavy">Department of Mechanical Engineering</p><br /><p>77 Massachusetts Avenue, Room 3-173</p>
+                    <p>Cambridge, Massachusetts 02139</p>
+                </div>
+                <div class="clearfix find-us-logos">
+                    <a class="pull-left logo-meche" href="http://meche.mit.edu"><img src="/sites/all/themes/mit_meche/img/logo-meche-footer@2x.png" alt="MIT Mechanical Engineering" /></a>
+                    <a class="pull-left logo-mit" href="http://www.mit.edu"><img src="/sites/all/themes/mit_meche/img/logo-mit-footer@2x.png" alt="MIT" /></a>
+                </div>
+            </div>
+            
+        </div>
+        
+    </div>
+</footer>  </div>
+</div>
+  </div>
+      
+    </div> <!-- close off-canvas inner-wrap -->
+  </div> <!-- close off-canvas wrap -->
+
+
+          <!-- JS Files -->
+
+        <!-- Loaded from CDN -->
+        
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+        <script>window.jQuery || document.write('<script src="/js/vendor/jquery.js"><\/script>')</script>
+        <!--
+            Load Concatenated and Minified Scripts ( plugins.js, foundation.js, scripts.js )
+        -->
+        <!-- jQuery Modal -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+
+        <script src="/sites/all/themes/mit_meche/js/scripts.all.min.js"></script>
+        <script type="text/javascript" src="/sites/all/themes/mit_meche/js/vendor/packery.pkgd.min.js"></script>
+        
+  <script>
+
+      $(document).ready(function(){
+
+          MecheController.init({});
+          
+          $(window).on("throttledresize", function( event ) {
+          
+              MecheController.resize();
+
+          }).trigger("throttledresize");
+      });
+
+  </script>
+
+
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"ab0374a39e","applicationID":"39297557","transactionName":"Z1QGZBZQVkNYU0YNWV4eJVMQWFdeFl1XB15VbgZcC1JTQ2ZAQAtQWV0BbxRQX1U=","queueTime":0,"applicationTime":183,"atts":"SxMFEl5KRU0=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

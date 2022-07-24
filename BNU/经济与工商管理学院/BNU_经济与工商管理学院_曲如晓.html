@@ -1,0 +1,495 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0">
+    <title>北京师范大学工商与经济管理学院</title>
+    <link rel="stylesheet" href="http://bs.bnu.edu.cn/new-ver-css/reset.css">
+    <link rel="stylesheet" href="http://bs.bnu.edu.cn/new-ver-css/index.css">
+	<link rel="stylesheet" href="http://bs.bnu.edu.cn/new-ver-css/xyslist.css">
+	<link rel="stylesheet" href="http://bs.bnu.edu.cn/new-ver-css/xys-tf.css">
+    <style>
+        .container{
+            width:100%;
+            height: auto;
+            overflow: hidden;
+        }
+        .header{
+            width:100%;
+            height:116px;
+            background:#EFF8FF;
+        }
+        .logo1{
+            width:1200px!important;
+            margin:0 auto;
+            position:relative;
+            float: none;
+			display:block;
+        }
+        .logo2{
+            float:right;
+        }
+        .logo1 p{
+            position:absolute;
+            top:5px;
+            right:5px;
+            font-size:13px;
+        }
+        .logo1 p:hover{
+            color:#112769;
+        }
+        .tu{
+            width:100%;
+            height:240px;
+            background:url('http://bs.bnu.edu.cn/newweb/grzy/images/tu.jpg') no-repeat top center;
+            background-size: 100%;
+        }
+        .lujing{
+            width:1200px;
+            height:58px;
+            margin:0 auto;
+            border-bottom:1px solid #aaa;
+            overflow:hidden;
+        }
+        .lujings{
+            margin:24px 0 0 0;
+            font-size:14px;
+        }
+        .content{
+            color:#333;
+            width:1200px;
+/*            height:2000px;*/
+            margin:0 auto;
+            margin-top:40px;
+/*            background:#c4c4c4;*/
+        }
+        
+        .xian{
+            width:100%;
+            height:8px;
+            background:#9A0812;
+        }
+        
+        .leftc{
+            float:left;
+        }
+        .rightc{
+            float:left;
+            margin-left:50px;
+/*            background:#666;*/
+            width:880px;
+/*            height:1000px;*/
+        }
+        .rheader{
+            width:880px;
+            height:210px;
+/*            background:yellow;*/
+        }
+        .xm{
+            font-size:30px;
+            height:40px;
+/*            border-bottom:4px solid #9A0812;*/
+            width:auto;
+            float:left;
+            line-height:40px;
+			margin-right:30px;
+        }
+        .zhiw{
+            font-size:18px;
+            height:40px;
+            line-height:50px;
+            margin-bottom:30px;
+        }
+        .tel{
+                font-size: 16px;
+                margin-top: 10px;
+                line-height: 20px;
+        }
+        .grjj{
+/*            height:300px;*/
+            width:880px;
+/*            background:yellow;*/
+            padding-bottom:40px;
+        }
+        .jjh{
+                font-size: 20px;
+                border-bottom: 1px solid #cecece;
+                height: 40px;
+                line-height: 40px;
+                padding-left: 30px;
+                background: url(http://bs.bnu.edu.cn/newweb/grzy/images/zw.png) no-repeat 0 16px;
+        }
+        
+        .jjc{
+            font-size:14px;
+            margin-top:30px;
+           
+            line-height:28px;
+            overflow:hidden;
+            text-align: justify;
+            text-justify:inter-ideograph;
+        }
+        .jjc1{
+            height:225px;
+            font-size:14px;
+            margin-top:30px;
+            
+            line-height:28px;
+            overflow:hidden;
+            text-align: justify;
+            text-justify:inter-ideograph;
+        }
+        
+        .dianji1{
+                background: url(http://bs.bnu.edu.cn/newweb/grzy/images/zw.png) no-repeat 0 -50px;
+                width: 13px;
+                height: 13px;
+                cursor: pointer;
+                display: block;
+            margin-top: 20px;
+            transition: all .2s linear;
+        }
+        .dianji1:hover{
+            background: url(http://bs.bnu.edu.cn/newweb/grzy/images/zw.png) no-repeat 0 -64px;
+        }
+        
+        .dianji{
+                background: url(http://bs.bnu.edu.cn/newweb/grzy/images/zw.png) no-repeat 0 -24px;
+                height: 13px;
+                cursor: pointer;
+                display: block;
+            margin-top: 20px;
+            transition: all .2s linear;
+        }
+        .dianji:hover{
+            background: url(http://bs.bnu.edu.cn/newweb/grzy/images/zw.png) no-repeat 0 -37px;
+        }
+        #jjc1{
+            text-indent:0em;
+        }
+        
+        .bks{
+            font-size:14px;
+            font-weight: 800;
+            margin-top:30px;
+            height:auto;
+            line-height:36px;
+        }
+        .bks1{
+            font-size:14px;
+            margin-top:30px;
+            height:auto;
+            line-height:36px;
+        }
+        .bksc{
+            height:36px;
+            line-height:36px;
+            font-size:14px;
+        }
+        
+        .yanzheng{
+            width:1200px;
+            height:100px;
+            margin:0 auto;
+        }
+        .yanzheng img{
+            display:block;
+            margin-top:26px;
+            float:left;
+        }
+		
+#appgame-leftside-share{width:42px; height:216px; position: fixed;bottom: 30px;right: 30px; z-index:9999;}
+.appgame-leftside-share{width:42px; height:259px;}
+#appgame-leftside-share a{display:block; width:42px; height:44px; background-color:#e6e6e6; z-index:1; position:absolute; left:0; box-sizing:border-box; -moz-box-sizing:border-box; border:1px #ddd solid; background-image:url(http://gh.bnu.edu.cn/images/share-icons.png); background-repeat:no-repeat; margin:0;  transition:0.4s; -webkit-transition:0.4s; -moz-transition:0.4s;}
+#appgame-leftside-share a:hover{background-color:#fff; border:1px #eee solid; z-index:2;}
+/*.appgame-leftside-weixin{top:0; background-position:-88px 0;}
+.appgame-leftside-weixin:hover{background-position:0px 0;}
+.appgame-leftside-qzone{top:43px; background-position:-88px -44px;}
+.appgame-leftside-qzone:hover{background-position:0px -44px;}*/
+.appgame-leftside-search{top:86px; background-position:-93px -89px;}
+.appgame-leftside-search:hover{background-position:-5px -86px;}
+.appgame-leftside-weixin{top:129px; background-position:-88px 0px;}
+.appgame-leftside-weixin:hover{background-position:0px 0px;}
+/*.appgame-leftside-fbook{top:172px; background-position:-88px -176px;}
+.appgame-leftside-fbook:hover{background-position:0px -176px;}
+.appgame-leftside-twi{top:215px; background-position:-88px -220px;}
+.appgame-leftside-twi:hover{background-position:0px -220px;}*/
+#appgame-leftside-share .appgame-leftside-top{background-image:url(http://gh.bnu.edu.cn/images/leftnav-off.png); background-position:-1px -395px; top:130px; cursor:pointer;}
+
+.rwt_share {
+/*	overflow:hidden;*/
+	float:left;
+	position:relative;
+}
+.rwt_share a {
+	display:inline-block;
+	margin-right:10px;
+	text-indent:-9999px;
+	margin-bottom:10px;
+	width:24px;
+	height:24px;
+	overflow:hidden;
+	cursor:pointer;
+	float:left;
+	font-size:12px;
+}
+.rwts_weixin {
+	background-position:0 -1612px;
+}
+.rwts_tsina {
+	background-position:0 -104px;
+}
+.rwts_tqq {
+	background-position:0 -260px;
+}
+.rwts_qzone {
+	background-position:0 -52px;
+}
+.rwts_sqq {
+	background-position:0 -2652px;
+}
+.rwts_tieba {
+	background-position:0 -728px;
+}
+.rwts_renren {
+	background-position:0 -208px;
+}
+.rwts_kaixin001 {
+	background-position:0 -312px;
+}
+.rwts_tqf {
+	background-position:0 -364px;
+}
+.rwts_douban {
+	background-position:0 -468px;
+}
+.rwts_twi {
+	background-position:0 -1404px;
+}
+.rwts_fbook {
+	background-position:0 -1352px;
+}
+.rwts_ty {
+	background-position:0 -1196px;
+}
+.rwts_mogujie {
+	background-position:0 -1768px;
+}
+.rwts_meilishuo {
+	background-position:0 -1716px;
+}
+.rwts_huaban {
+	background-position:0 -1872px;
+}
+.rwts_hi {
+	background-position:0 -416px;
+}
+.rwts_tsohu {
+	background-position:0 -520px;
+}
+.rwts_more {
+	background-position:0 0;
+}
+.rwt_share_wxShow_code>img {
+	width:100%;
+}
+.bks1 li{
+	list-style:disc;
+}
+@media screen and (max-width: 1200px){
+	.logo1{
+		width:100%!important;
+	}
+	.leftc img{
+		width:50%!important;
+		height:50%!important;
+	}
+	.logo2{display:none;}
+	.lujing{
+		width:90%;
+	}
+	.content{
+		width:90%;
+	}
+	.leftc{
+		float:none;
+		
+	}
+	.tu{display:none;}
+	
+	.rightc{
+		float:none;
+		width:100%;
+		margin-left:0px;
+	}
+	.footers{width:100%;}
+	.rheader{width:100%;}
+	.grjj{width:100%;}
+}
+@media screen and (max-width: 600px){
+.l3{width:95%;}
+.share{display:none;}
+.leftc img{
+		width:70%!important;
+		height:70%!important;
+	}
+}
+  
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo1">
+                <img src="http://bs.bnu.edu.cn/newweb/grzy/images/logo.png" alt="" class="l3" style="margin-top: 25px;float:left;">
+                <img src="http://bs.bnu.edu.cn/newweb/grzy/images/logo2.png" alt="" class="logo2">
+                <a href="http://bs.bnu.edu.cn/englishversion/facultyresearch/fulltimefaculty/azmsy/119515.html"><p>ENGLISH VERSION</p></a>
+            </div>
+        </div>
+        <div class="xian"></div>
+        <div class="tu"></div>
+        <div class="lujing">
+            <div class="lujings">
+                <a href="#">师资队伍</a>
+                 | 
+                <a href="#">国际经济与贸易系, 全球化与创新研究中心</a>
+            </div>
+        </div>
+        <div class="content">
+            <div class="leftc">
+                <img src="/Public/upload/touxiang/03901.jpg" alt="" width="270">
+            </div>
+            <div class="rightc">
+                <div class="rheader">
+                    <p class="xm">曲如晓</p>
+                    <p class="zhiw">教授   博士生导师</p>
+                    <p class="tel"><strong style="display:block;width:100px;float:left;">电话</strong>：010-58805292</p> 
+                 <p class="tel"><strong style="display:block;width:100px;float:left;">E-mail</strong>：quruxiao@126.com    quruxiao@bnu.edu.cn</p>
+                 <p class="tel"><strong style="display:block;width:100px;float:left;">Office hour</strong>：邮件预约</p>
+                 <p class="tel"><strong style="display:block;width:100px;float:left;">系所中心</strong>：国际经济与贸易系, 全球化与创新研究中心</p>
+              </div>
+			  <div class="grjj">
+                    <p class="jjh">个人简历</p>
+                    <div class="bks1" id="jjc"><div style="top: 0px;"><span style="font-family:KaiTi_GB2312;"><span style="font-size:16px;">﻿<span style="font-family: " 16px="" yahei="" microsoft="">曲如晓，北京师范大学经济与工商管理学院教授（二级）、博士生导师，全球化与创新研究中心主任。1988年毕业于北京师范大学经济系获经济学学士学位，1991年毕业于山东大学经济学院获经济学硕士学位，2002年毕业于北京师范大学经济学院获经济学博士学位。1991年任教于山东财政学院（现山东财经大学），1996年破格晋升为副教授，2002年晋升教授。长期致力于国际贸易、世界经济等领域的教学和研究，并发表论文多篇。曾兼任山东省九届政协委员（2002-2007），兼中国世界经济学会常务理事，中国国际贸易学会理事。</span></span></span></div></div>
+                    
+                </div>				<div class="grjj">
+                    <p class="jjh">研究领域</p>
+                    <div class="bks1"><div style="top: 0px;">﻿﻿世界经济&nbsp; 国际贸易</div></div>
+                </div>				<div class="grjj">
+                    <p class="jjh">研究成果</p>
+                    <div class="bks1" id="jjc1"><div style="top: 0px;">﻿﻿<span style=" font-family: " 16px="" yahei="" microsoft=""><strong><span style="font-family:KaiTi_GB2312;font-size:16px;">主要论文</span></strong></span></div><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px;"></p><p><strong><span style="font-family:KaiTi_GB2312;"><span style="font-size:16px;">2019-2020年</span></span></strong></p><p><span style="font-family:KaiTi_GB2312;"><span style="font-size:16px;">1.曲如晓,李雪.<a href="https://kns.cnki.net/KNS8/Detail?sfield=fn&amp;QueryID=2&amp;CurRec=3&amp;recid=&amp;FileName=JJXD202002004&amp;DbName=CJFDLAST2020&amp;DbCode=CJFD&amp;yx=&amp;pr=&amp;URLID="><span style="color:black;">外国在华专利、吸收能力与中国企业创新</span></a>.经济学动态2020.02</span></span></p><p><span style="font-family:KaiTi_GB2312;"><span style="font-size:16px;">2.曲如晓,李婧.<a href="https://kns.cnki.net/KNS8/Detail?sfield=fn&amp;QueryID=2&amp;CurRec=2&amp;recid=&amp;FileName=JJDL202003012&amp;DbName=CJFDLAST2020&amp;DbCode=CJFD&amp;yx=&amp;pr=&amp;URLID="><span style="color:black;">世界高技术产品贸易格局及中国的贸易地位分析</span></a>.<a href="https://kns.cnki.net/KNS8/Navi?DBCode=CJFD&amp;BaseID=JJDL"><span style="color:black;">经济地理</span></a>2020.02</span></span><br /></p><p><span style="font-family:KaiTi_GB2312;"><span style="font-size:16px;">3.曲如晓, 刘霞. <a href="https://kns.cnki.net/KNS8/Detail?sfield=fn&amp;QueryID=2&amp;CurRec=5&amp;recid=&amp;FileName=SJJJ201911007&amp;DbName=CJFDLAST2019&amp;DbCode=CJFD&amp;yx=&amp;pr=&amp;URLID=">外国在华专利申请的技术外溢效应研究</a>.<a href="https://kns.cnki.net/KNS8/Navi?&amp;DBCode=CJFD&amp;BaseID=SJJJ">世界经济</a>2019.11</span></span></p><p><span style="font-family:KaiTi_GB2312;"><span style="font-size:16px;">4. 曲如晓刘霞 <a href="https://kns.cnki.net/KNS8/Detail?sfield=fn&amp;QueryID=2&amp;CurRec=6&amp;recid=&amp;FileName=BJSF201904014&amp;DbName=CJFDLAST2019&amp;DbCode=CJFD&amp;yx=&amp;pr=&amp;URLID="><span style="color: black;">国民对外语言沟通能力对企业出口行为的影响</span></a>.<a href="https://kns.cnki.net/KNS8/Navi?&amp;DBCode=CJFD&amp;BaseID=BJSF"><span style="color: black;">北京师范大学学报(</span><span style="color: black;">社会科学版)</span></a> 2019.07</span></span></p><p><span style="font-family:KaiTi_GB2312;"><span style="font-size:16px;">5. 曲如晓，杨修.全方位加强国际科技创新合作.人民日报，2019年5月16日13版.</span></span></p><p><span style="font-family:KaiTi_GB2312;"><span style="font-size:16px;">6.. 曲如晓,臧睿.自主创新、外国技术溢出与制造业出口产品质量升级.中国软科学,2019(05):18-30.</span></span></p><p><span style="font-family:KaiTi_GB2312;"><span style="font-size:16px;">7. 曲如晓,刘霞,于晓宇.国际科技创新合作对中国出口贸易影响的实证研究.经济经纬,2019,(04):48-55.</span></span></p><p><span style="font-family:KaiTi_GB2312;"><span style="font-size:16px;">8. 曲如晓,杨修,李婧.中国与中东欧国家文化产品贸易发展与对策研究.国际贸易,2019(03):81-90.</span></span></p><p><strong><span style="font-family:KaiTi_GB2312;"><span style="font-size:16px;">2016-2017年</span></span></strong></p><p><span style="font-family:KaiTi_GB2312;"><span style="font-size:16px;">1. 曾燕萍,曲如晓.社会信任对中国工业企业出口影响的实证研究.经济统计学(季刊),2017(02):133-151.</span></span></p><p><span style="font-family:KaiTi_GB2312;"><span style="font-size:16px;">2. 曲如晓,刘霞.论文化商品贸易的光环效应——基于中国进口市场的实证研究.国际贸易问题,2017(10):14-24.</span></span></p><p><span style="font-family:KaiTi_GB2312;"><span style="font-size:16px;">3. 曲如晓,李世恒,蔡宏波.中国城镇工资水平民族差异的实证分析.中央民族大学学报(哲学社会科学版),2016,(05):46-55.</span></span></p><p><span style="font-family:KaiTi_GB2312;"><span style="font-size:16px;">4. 曲如晓,曾燕萍.孔子学院对中国文化产品出口的影响.经济与管理研究,2016,(09):69-76.</span></span></p><p><span style="font-family:KaiTi_GB2312;"><span style="font-size:16px;">5. 曲如晓,杨修.“一带一路”战略下中国与中东欧国家经贸合作的机遇与挑战.国际贸易,2016(06):28-33.</span></span></p><p><span style="font-family:KaiTi_GB2312;"><span style="font-size:16px;">6. 曲如晓,李婧,杨修.文化认同对来华留学生规模的影响.经济经纬,2016,(03):48-53.</span></span></p><p><span style="font-family:KaiTi_GB2312;"><span style="font-size:16px;">7. 曲如晓,曾燕萍.国外文化资本研究综述.国外社会科学,2016(02):100-108.</span></span></p><p><strong><span style="font-family:KaiTi_GB2312;"><span style="font-size:16px;">2015年</span></span></strong></p><p><span style="font-family:KaiTi_GB2312;"><span style="font-size:16px;">1. 曲如晓,杨修,刘杨.文化差异、贸易成本与中国文化产品出口.世界经济,2015,(09):130-143.</span></span></p><p><span style="font-family:KaiTi_GB2312;"><span style="font-size:16px;">2. 曲如晓,曾燕萍.文化多样性影响中国文化产品贸易的实证研究.首都师范大学学报(社会科学版),2015(04):57-65.</span></span></p><p><span style="font-family:KaiTi_GB2312;"><span style="font-size:16px;">3. 申萌,曾燕萍,曲如晓.环境规制与企业出口:来自千家企业节能行动的微观证据.国际贸易问题,2015(08):43-50.</span></span></p><p><span style="font-family:KaiTi_GB2312;"><span style="font-size:16px;">4. 曲如晓,杨修.本地市场效应、要素禀赋优势与中国文化产品贸易.经济与管理研究,2015,(05):22-30.</span></span></p><p><span style="font-family:KaiTi_GB2312;"><span style="font-size:16px;">5. 何志雄,曲如晓.农业政策性金融供给与农村金融抑制——来自147个县的经验证据.金融研究,2015(02):148-159.</span></span></p><p><span style="font-family:KaiTi_GB2312;"><span style="font-size:16px;"><strong>2014年</strong></span></span></p><p><span style="font-family:KaiTi_GB2312;"><span style="font-size:16px;">1. 曲如晓,刘杨.贸易开放促进还是抑制了一国文化进步?.北京师范大学学报(社会科学版),2014(06):83-94.</span></span></p><p><span style="font-family:KaiTi_GB2312;"><span style="font-size:16px;">2. 曲如晓,曾燕萍.文化多样性测度研究评述.黑龙江社会科学,2014(06):62-66</span></span></p><p><span style="font-family:KaiTi_GB2312;"><span style="font-size:16px;">3. 刘杨,曲如晓,申萌.不同能源成本约束下的生产技术进步与工业行业增长.华东经济管理,2014,(08):66-73.</span></span></p><p><span style="font-family:KaiTi_GB2312;"><span style="font-size:16px;">4. 曲如晓,刘杨.国民收入、价格水平与省级政府公共文化支出.经济理论与经济管理,2014(06):5-15.</span></span></p><p><span style="font-family:KaiTi_GB2312;"><span style="font-size:16px;">5. 曲如晓,曾燕萍.APEC规制合作及其对中国的启示.亚太经济,2014(02):73-77.</span></span></p><p><span style="font-family:KaiTi_GB2312;"><span style="font-size:16px;"><strong>2012-2013年</strong></span></span></p><p><span style="font-family:KaiTi_GB2312;"><span style="font-size:16px;">1. 曲如晓,曾燕萍.中国图书版权贸易的发展及对策思考.国际经济合作,2013(12):54-57.</span></span></p><p><span style="font-family:KaiTi_GB2312;"><span style="font-size:16px;">2. 刘杨,曲如晓,曾燕萍.哪些关键因素影响了文化产品贸易——OECD国家的经验证据.国际贸易问题,2013(11):72-81.</span></span><br /></p><p><span style="font-family:KaiTi_GB2312;"><span style="font-size:16px;">3. 曲如晓,江铨.EU-ETS的发展成效、运行机制及其启示.黑龙江社会科学,2012(06):52-55.</span></span></p><p><span style="font-family:KaiTi_GB2312;"><span style="font-size:16px;">4. 曲如晓,董程.中国文化创意产品贸易特点及发展对策.国际经济合作,2012(10):20-26.</span></span></p><p><span style="font-family:KaiTi_GB2312;"><span style="font-size:16px;">5. 李凯杰,曲如晓.技术进步对碳排放的影响——基于省际面板的经验研究.北京师范大学学报(社会科学版),2012(05):129-139.</span></span></p><p><span style="font-family:KaiTi_GB2312;"><span style="font-size:16px;">6. 申萌,李凯杰,曲如晓.技术进步、经济增长与二氧化碳排放:理论和经验研究.世界经济,2012,(07):83-100.</span></span></p><p><span style="font-family:KaiTi_GB2312;"><span style="font-size:16px;">7. 李凯杰,曲如晓.中国对外贸易可持续发展影响因素的实证分析.经济学家,2012(07):53-61.</span></span></p><p><span style="font-family:KaiTi_GB2312;"><span style="font-size:16px;">8. 李凯杰,曲如晓.技术进步对中国碳排放的影响——基于向量误差修正模型的实证研究.中国软科学,2012(06):51-58.</span></span></p><p><span style="font-family:KaiTi_GB2312;"><span style="font-size:16px;">9. 李凯杰,曲如晓.碳排放交易体系初始排放权分配机制的研究进展.经济学动态,2012(06):130-138.</span></span></p><p><span style="font-family:KaiTi_GB2312;"><span style="font-size:16px;">10. 曲如晓,江铨.人口规模、结构对区域碳排放的影响研究——基于省级面板数据的经验分析.人口与经济,2012(02):10-17.</span></span></p><p><span style="font-family:KaiTi_GB2312;"><span style="font-size:16px;">11. 李凯杰,曲如晓.碳排放配额初始分配的经济效应及启示.国际经济合作,2012(03):21-24.</span></span></p><p><span style="font-family:KaiTi_GB2312;"><span style="font-size:16px;"><strong>2011年</strong></span></span></p><p><span style="font-family:KaiTi_GB2312;"><span style="font-size:16px;">1. 曲如晓,李凯杰.国际贸易中的“食物里程”.国际经济合作,2011(08):31-34.</span></span></p><p><span style="font-family:KaiTi_GB2312;"><span style="font-size:16px;">2. 曲如晓,韩丽丽.文化距离对中国文化产品贸易影响的实证研究.黑龙江社会科学,2011(04):34-39.</span></span></p><p><span style="font-family:KaiTi_GB2312;"><span style="font-size:16px;">3. 曲如晓,吴洁.论碳关税的福利效应.中国人口·资源与环境,2011,(04):37-42.</span></span></p><p><span style="font-family:KaiTi_GB2312;"><span style="font-size:16px;">4. 曲如晓,江铨.来华留学生区域选择及其影响因素分析.高等教育研究,2011,(03):30-38.</span></span></p><p><span style="font-family:KaiTi_GB2312;"><span style="font-size:16px;"><strong>2010年</strong></span></span></p><p><span style="font-family:KaiTi_GB2312;"><span style="font-size:16px;">1. 曲如晓,韩丽丽.中国文化商品贸易影响因素的实证研究.中国软科学,2010(11):19-31.</span></span></p><p><span style="font-family:KaiTi_GB2312;"><span style="font-size:16px;">2. 蔡宏波,曲如晓.低碳贸易协定:应对碳减排的贸易政策设计方案.国际贸易,2010(11):44-48.</span></span></p><p><span style="font-family:KaiTi_GB2312;"><span style="font-size:16px;">3. 曲如晓,吴洁.国际碳市场的发展以及对中国的启示.国外社会科学,2010(06):57-63.</span></span></p><p><span style="font-family:KaiTi_GB2312;"><span style="font-size:16px;">4. 马建平,曲如晓.开放条件下的环境技术效应决定因素实证研究.财贸经济,2010(11):138-144.</span></span></p><p><span style="font-family:KaiTi_GB2312;"><span style="font-size:16px;">5. 曲如晓,韩丽丽.中国图书版权贸易发展的问题与对策.国际经济合作,2010(08):35-39.</span></span></p><p><span style="font-family:KaiTi_GB2312;"><span style="font-size:16px;">6. 吴洁,曲如晓.论全球碳市场机制的完善及中国的对策选择.亚太经济,2010(04):3-8.</span></span></p><p><span style="font-family:KaiTi_GB2312;"><span style="font-size:16px;">7. 曲如晓,颜莹,周冠男.道德采购中的信息不对称问题及对策思考.经济经纬,2010(04):51-56.</span></span></p><p><span style="font-family:KaiTi_GB2312;"><span style="font-size:16px;">8. 吴洁,曲如晓.低碳经济下中日贸易促进和气候合作战略研究.贵州财经学院学报,2010(03):80-86.</span></span></p><p><span style="font-family:KaiTi_GB2312;"><span style="font-size:16px;">9. 曲如晓,赵方荣.公平贸易:问题与挑战.黑龙江社会科学,2010(02):46-50.</span></span></p><p><span style="font-family:KaiTi_GB2312;"><span style="font-size:16px;">10. 蔡宏波,曲如晓.美国服务贸易的环境效应——以出口为例.世界经济研究,2010(03):48-55</span></span></p><p><span style="font-family:KaiTi_GB2312;"><span style="font-size:16px;"><strong>2009年</strong></span></span></p><p><span style="font-family:KaiTi_GB2312;"><span style="font-size:16px;">1. 曲如晓,吴洁.碳排放权交易的环境效应及对策研究.北京师范大学学报(社会科学版),2009(06):127-134.</span></span></p><p><span style="font-family:KaiTi_GB2312;"><span style="font-size:16px;">2. 曲如晓,赵方荣.国际公平贸易:一个南北贸易的新潮流.国际贸易问题,2009(10):123-128.</span></span></p><p><span style="font-family:KaiTi_GB2312;"><span style="font-size:16px;">3. 曲如晓,马建平.贸易与气候变化:国际贸易的新热点.国际贸易,2009(07):39-42.</span></span></p><p><span style="font-family:KaiTi_GB2312;"><span style="font-size:16px;">4. 曲如晓,马建平.中国工业制品出口贸易与环境目标的相容性评估.经济理论与经济管理,2009(04):5-10.</span></span></p><p><span style="font-family:KaiTi_GB2312;"><span style="font-size:16px;">5. 马建平,曲如晓.我国气候友好商品的国际竞争力分析.国际经济合作,2009(03):87-91.</span></span></p><p><span style="font-family:KaiTi_GB2312;"><span style="font-size:16px;">6. 曲如晓,赵方荣.公平贸易运动:全球化背景下更具社会经济责任的贸易潮流.国际经济合作,2009(01):46-50.</span></span></p><p><span style="font-family:KaiTi_GB2312;"><span style="font-size:16px;"><strong>2005-2008年</strong></span></span></p><p><span style="font-family:KaiTi_GB2312;"><span style="font-size:16px;">1. 曲如晓,张旭.论跨国公司的道德采购.黑龙江社会科学,2008(01):65-68.</span></span></p><p><span style="font-family:KaiTi_GB2312;"><span style="font-size:16px;">2. 曲如晓,江铨.论反倾销保护对企业R&amp;D投入的影响.经济经纬,2007(05):43-47.</span></span></p><p><span style="font-family:KaiTi_GB2312;"><span style="font-size:16px;">3. 曲如晓,张业茹.协调贸易与环境的最佳途径——环境成本内部化.中国人口·资源与环境,2006(04):17-22.</span></span></p><p><span style="font-family:KaiTi_GB2312;"><span style="font-size:16px;">4. 曲如晓,焦志文.商品倾销、生态倾销与社会倾销的比较及应对.甘肃社会科学,2006(04):55-58.</span></span></p><p><span style="font-family:KaiTi_GB2312;"><span style="font-size:16px;">5. 曲如晓,邵愚.WTO框架下解决动物福利问题的思路.国际贸易,2006(07):27-29.</span></span></p><p><span style="font-family:KaiTi_GB2312;"><span style="font-size:16px;">6. 曲如晓.发挥《曼谷协定》潜力促进亚太区域合作.外交评论,2006(01):106-111.</span></span></p><p><span style="font-family:KaiTi_GB2312;"><span style="font-size:16px;">7. 曲如晓,焦志文.论贸易与健康的相互影响及协调路径.经济与管理研究,2005(12):57-60.</span></span></p><p><span style="font-family:KaiTi_GB2312;"><span style="font-size:16px;">8. 曲如晓 ,焦志文.论国际贸易的健康视野.国际贸易问题,2005(10):97-101.</span></span></p><p><span style="font-family:KaiTi_GB2312;"><span style="font-size:16px;">9. 曲如晓.中国成为贸易强国的战略路径.经济理论与经济管理,2005(09):21-25.</span></span></p><p><span style="font-family:KaiTi_GB2312;"><span style="font-size:16px;">10. 曲如晓,田桐桐.发展中的道德贸易.国际贸易,2005(06):23-26.</span></span></p><p><span style="font-family:KaiTi_GB2312;"><span style="font-size:16px;">11. 曲如晓.反补贴:中国出口贸易的潜在威胁.国际经济合作,2005(03):35-38.人大复印资料《外贸经济、国际贸易》2005.06 转载</span></span></p><p><span style="font-family:KaiTi_GB2312;"><span style="font-size:16px;"><strong>2000-2004年</strong></span></span></p><p><span style="font-family:KaiTi_GB2312;"><span style="font-size:16px;">1. 曲如晓.论服务业的环境影响.生态经济,2004(11):160-161+171.</span></span></p><p><span style="font-family:KaiTi_GB2312;"><span style="font-size:16px;">2. 曲如晓.SA8000对出口企业的影响及对策.经济与管理研究,2004(06):20-23.</span></span></p><p><span style="font-family:KaiTi_GB2312;"><span style="font-size:16px;">3. 曲如晓.贸易与环境的新旧论争.国际贸易问题,2004(09):44-47.</span></span></p><p><span style="font-family:KaiTi_GB2312;"><span style="font-size:16px;">4. 曲如晓,李群.论服务贸易自由化与环境保护.南京财经大学学报,2004(04):49-53.</span></span></p><p><span style="font-family:KaiTi_GB2312;"><span style="font-size:16px;">5. 曲如晓.论国际贸易中的环境关税.国际经贸探索,2004(04):4-7.</span></span></p><p><span style="font-family:KaiTi_GB2312;"><span style="font-size:16px;">6. 曲如晓.《曼谷协定》与中国对外贸易.当代亚太,2004(07):31-36.人大复印资料《外贸经济、国际贸易》2004.11全文转载</span></span></p><p><span style="font-family:KaiTi_GB2312;"><span style="font-size:16px;">7. 曲如晓.中国出口贸易面临的三大壁垒及应对策略.国际经济合作,2004(05):27-30.</span></span></p><p><span style="font-family:KaiTi_GB2312;"><span style="font-size:16px;">8. 曲如晓.国际贸易对发展中国家生态环境的影响.经济与管理研究,2003(06):68-71..</span></span></p><p><span style="font-family:KaiTi_GB2312;"><span style="font-size:16px;">9. 曲如晓.东盟环境合作的现状与前景.当代亚太,2002(02):52-56.</span></span></p><p><span style="font-family:KaiTi_GB2312;"><span style="font-size:16px;">10. 曲如晓.环境外部性与国际贸易福利效应.国际经贸探索,2002(01):10-14.</span></span></p><p><span style="font-family:KaiTi_GB2312;"><span style="font-size:16px;">11. 曲如晓.面临环保压力的南非出口.西亚非洲,2002(01):49-53+80.</span></span></p><p><span style="font-family:KaiTi_GB2312;"><span style="font-size:16px;">12. 曲如晓.南非的对外贸易与环境.国际经济合作,2001(12):47-50.</span></span></p><p><span style="font-family:KaiTi_GB2312;"><span style="font-size:16px;">13. 曲如晓,潘爱玲.论欧盟对外贸易政策的保护性.国际贸易问题,2001(12):21-14.人大复印资料.外贸经济.国际贸易2002.02转载</span></span></p><p><span style="font-family:KaiTi_GB2312;"><span style="font-size:16px;">15. 曲如晓.论环境保护与产品竞争力.经济纵横,2001(11):43-47.</span></span></p><p><span style="font-family:KaiTi_GB2312;"><span style="font-size:16px;">16. 曲如晓.环境保护与国际竞争力关系的新视角.中国工业经济,2001(09):59-63.</span></span></p><p><span style="font-family:KaiTi_GB2312;"><span style="font-size:16px;">17. 曲如晓.寻求最佳方案——协调环境保护与竞争力措施.国际贸易,2001(02):39-42.</span></span></p><p><span style="font-family:KaiTi_GB2312;"><span style="font-size:16px;">18. 曲如晓.环境政策的全球化—论环境政策的国际间协调.世界经济与政治,2001(01):50-54.</span></span></p><p><span style="font-family:KaiTi_GB2312;"><span style="font-size:16px;">19. 曲如晓.“千年回合”中的人员流动:发展中国家的新机遇.国际经济合作,2000(02):9-12.</span></span></p><p><span style="font-family:KaiTi_GB2312;"><span style="font-size:16px;"><strong>1994-1999年</strong></span></span></p><p><span style="font-family:KaiTi_GB2312;"><span style="font-size:16px;">1. 曲如晓.环保时代山东出口贸易面临的挑战及对策.国际贸易问题,1998(02):46-50.</span></span></p><p><span style="font-family:KaiTi_GB2312;"><span style="font-size:16px;">2. 曲如晓.经济开放度指标新探.经济学家,1997(05):75-81. 人大复印资料《国民经济管理与计划》1997.11转载</span></span></p><p><span style="font-family:KaiTi_GB2312;"><span style="font-size:16px;">3. 曲如晓.专业服务贸易自由化及我国的对策.国际经济合作,1997(05):11-14.</span></span></p><p><span style="font-family:KaiTi_GB2312;"><span style="font-size:16px;">4. 曲如晓.论服务贸易的保护.世界经济,1997(05):28-31.</span></span></p><p><span style="font-family:KaiTi_GB2312;"><span style="font-size:16px;">5. 曲如晓.国际环保大趋势对我国外贸的影响及对策思考.经济理论与经济管理,1997(01):72-76.人大复印资料《外贸经济.国际贸易》1997.03全文转载</span></span></p><p><span style="font-family:KaiTi_GB2312;"><span style="font-size:16px;">6. 曲如晓.树立商标保护意识，加强商标国外注册.现代企业导刊,1996.05 ,人大复印资料《商业企业管理》1996.08全文转载.</span></span></p><p><span style="font-family:KaiTi_GB2312;"><span style="font-size:16px;">7. 曲如晓.论多边环境协定的贸易条款与关贸总协定条款的相容性.国际贸易问题,1996(07):12-16.</span></span></p><p><span style="font-family:KaiTi_GB2312;"><span style="font-size:16px;">8. 曲如晓.加强商标的国外注册.经济管理,1996(05):46-47.</span></span></p><p><span style="font-family:KaiTi_GB2312;"><span style="font-size:16px;">9. 曲如晓.南非:外商投资的热土.世界经济文汇,1996(01):64-67.</span></span></p><p><span style="font-family:KaiTi_GB2312;"><span style="font-size:16px;">10. 曲如晓.环保时代国际贸易发展的新趋势.世界经济与政治,1996(01):28-30.</span></span></p><p><span style="font-family:KaiTi_GB2312;"><span style="font-size:16px;">11. 曲如晓.国际贸易中的环保包装.国际贸易,1995(12):11-12.</span></span></p><p><span style="font-family:KaiTi_GB2312;"><span style="font-size:16px;">12. 曲如晓.浅谈环境标志措施.国际经贸探索,1995(04):26-29..</span></span></p><p><span style="font-family:KaiTi_GB2312;"><span style="font-size:16px;">13. 曲如晓.进一步拓展欧共体市场.经济纵横,1994(03):25-27.</span></span></p><p><span style="font-family:KaiTi_GB2312;font-size:16px;">&nbsp;</span></p><p><strong><span style="font-family:KaiTi_GB2312;font-size:16px;">专著</span></strong></p><p><span style="font-family:KaiTi_GB2312;"><span style="font-size:16px;"><strong>1.</strong>曲如晓,杨修，刘霞《中国对外贸易发展报告-技术贸易篇》,经济科学出版社,2019年</span></span></p><p><span style="font-family:KaiTi_GB2312;"><span style="font-size:16px;">2. 曲如晓,曾燕萍,杨修.《中国对外贸易发展报告-文化贸易篇》,经济科学出版社,2018年</span></span></p><p><span style="font-family:KaiTi_GB2312;"><span style="font-size:16px;">3. 曲如晓,杨修,曾燕萍.《中国对外贸易发展报告-一带一路篇》,经济科学出版社,2017年</span></span></p><p><span style="font-family:KaiTi_GB2312;"><span style="font-size:16px;">4. 曲如晓.《中国文化产品贸易：理论与实证研究》,北京师范大学出版社 ,2017年</span></span></p><p><span style="font-family:KaiTi_GB2312;"><span style="font-size:16px;">5. 曲如晓,蔡宏波.《中国对外贸易发展报告—气候变化篇》,经济科学出版社2016年</span></span></p><p><span style="font-family:KaiTi_GB2312;"><span style="font-size:16px;">6. 曲如晓，赵春明, 仲鑫.《中国对外贸易发展报告-基于经济生态社会效益的评价》,北京师范大学出版社, 2014年</span></span></p><p><span style="font-family:KaiTi_GB2312;"><span style="font-size:16px;">7. 曲如晓.《WTO框架下的贸易壁垒及应对机制研究》,北京师范大学出版社,2010年</span></span></p><p><span style="font-family:KaiTi_GB2312;"><span style="font-size:16px;">8. 曲如晓.《贸易与环境：理论与政策研究》,人民出版社,2009年</span></span></p><p><span style="font-family:KaiTi_GB2312;font-size:16px;">&nbsp;</span></p><p><strong><span style="font-family:KaiTi_GB2312;font-size:16px;">教材</span></strong></p><p><span style="font-family:KaiTi_GB2312;"><span style="font-size:16px;">1. 曲如晓主编《报关实务》第3版 ,机械工业出版社,2019年7月.</span></span></p><p><span style="font-family:KaiTi_GB2312;"><span style="font-size:16px;">2. 曲如晓.曾燕萍主编《国际商务导论》,机械工业出版社,2018年11月.</span></span></p><p><span style="font-family:KaiTi_GB2312;"><span style="font-size:16px;">3. 曲如晓主编《中国对外贸易概论》第4版,机械工业出版社,2015年11月.</span></span></p><p><span style="font-family:KaiTi_GB2312;"><span style="font-size:16px;">4. 曲如晓主编《海关报关实务》,北京师范大学出版社,2013年2月.</span></span></p><p><span style="font-family:KaiTi_GB2312;"><span style="font-size:16px;">5. 曲如晓主编《中国对外贸易概论》第3版 ,机械工业出版社,2012年6月.</span></span></p><p><span style="font-family:KaiTi_GB2312;"><span style="font-size:16px;">6. 曲如晓主编《报关实务》,机械工业出版社,2010年3月.</span></span></p><p><span style="font-family:KaiTi_GB2312;"><span style="font-size:16px;">7. 曲如晓主编《中国对外贸易概论》第2版,机械工业出版社,2009年1月.</span></span></p><p><span style="font-family:KaiTi_GB2312;"><span style="font-size:16px;">8. 曲如晓韩庆华王玉琴主编《当代世界经济与政治》,经济科学出版社,2005年5月.</span></span></p><p><span style="font-family:KaiTi_GB2312;"><span style="font-size:16px;">9. 曲如晓主编《中国对外贸易概论》,机械工业出版社,2005年6月.</span></span></p><p><span style="font-family:KaiTi_GB2312;"><span style="font-size:16px;">10. 曲如晓闫庆悦主编《新编国际经济学》,经济管理出版社,2004年10月.</span></span></p><p><span style="font-family:KaiTi_GB2312;"><span style="font-size:16px;">11. 曲如晓陈宏伟主编《社会主义市场经济基本知识》,山东人民出版社,2001年.</span></span></p><p><span style="font-family:KaiTi_GB2312;font-size:16px;">&nbsp;</span><br /></p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px;"></p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px;"><strong><span style="font-family:KaiTi_GB2312;font-size:16px;">获奖</span></strong></p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px;"><span style="font-family:KaiTi_GB2312;font-size:16px;">1. 北京市第十九届哲学社会科学优秀成果二等奖（2019年）</span></p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px;"><span style="font-family:KaiTi_GB2312;font-size:16px;">2. 北京市高等教育教学成果奖二等奖（2018年）</span></p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px;"><span style="font-family:KaiTi_GB2312;font-size:16px;">3. 第二十届安子介国际贸易研究奖优秀著作三等奖（2018年）</span></p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px;"><span style="font-family:KaiTi_GB2312;font-size:16px;">4. 北京市第十二届哲学社会科学优秀成果二等奖（2012年）</span></p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px;"><span style="font-family:KaiTi_GB2312;font-size:16px;">5. 北京高等教育教学成果奖二等奖（2005年）</span></p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px;"><span style="font-family:KaiTi_GB2312;font-size:16px;">6. 山东省社会科学优秀论文三等奖（ 2002年）</span></p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px;"><span style="font-family:KaiTi_GB2312;font-size:16px;">7. 山东省社会科学优秀论文三等奖（1998年）</span></p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px;"><span style="font-family:KaiTi_GB2312;font-size:16px;">8. 山东省教委社科优秀论文三等奖（1998年）</span></p></div>
+                    
+                </div>				<div class="grjj">
+                    <p class="jjh">研究课题</p>
+                  
+                    <div class="bks1"><div style="top: 0px;"><span style="font-family:KaiTi_GB2312;"><span style="font-size:16px;"></span></span><pre class="prettyprint lang-html"></pre>﻿﻿<span style="font-family:KaiTi_GB2312;"><span style="font-size:16px;"><span style="color: black;">1</span>. <span style="color: black;">国家社科基金重大项目</span>,“<span style="color: black;">一带一路背景下中国文化海外传播对中国企业国际化影响研究</span>”,2019-2024.</span></span><p style="text-align:left;"><span style="font-family:KaiTi_GB2312;"><span style="font-size:16px;">2. <span style="color: black;">国家社科基金重点项目</span>,“<span style="color: black;">外国在华专利与中国对外贸易高质量发展研究</span>”,2019-2022.</span></span></p><p style="text-align:left;"><span style="font-family:KaiTi_GB2312;"><span style="font-size:16px;">3. <span style="color: black;">国家社科基金一般项目</span>,“<span style="color: black;">信任水平对中国外贸出口的影响及对策研究</span>”,2016-2019.</span></span></p><p style="text-align:left;"><span style="font-family:KaiTi_GB2312;"><span style="font-size:16px;">4. <span style="color: black;">北京市高等学校教育教学改革项目</span>,“<span style="color: black;">经济学科立体化课程体系与教学研究</span>”,2014-2017 .</span></span></p><p style="text-align:left;"><span style="font-family:KaiTi_GB2312;"><span style="font-size:16px;">5. <span style="color: black;">北京市社科重点项目</span>, “<span style="color: black;">北京市文化产品国际竞争力提升的路径研究</span>”,2015-2018.</span></span></p><p style="text-align:left;"><span style="font-family:KaiTi_GB2312;"><span style="font-size:16px;">6. <span style="color: black;">北京市教育科学</span>“<span style="color: black;">十二五</span>”<span style="color: black;">规划重点项目</span>,“<span style="color: black;">文化接受度对来华留学生规模、结构的影响分析：基于门槛效应的研究</span>”,2014-2018.</span></span></p><p style="text-align:left;"><span style="font-family:KaiTi_GB2312;"><span style="font-size:16px;">7. <span style="color: black;">国家社科基金重点项目</span>,“<span style="color: black;">文化多样性与中国文化产品贸易互动关系研究</span>”,2013-2016.</span></span></p><p style="text-align:left;"><span style="font-family:KaiTi_GB2312;"><span style="font-size:16px;">8. <span style="color: black;">欧盟玛丽居里项目（</span>CHETCH<span style="color: black;">）</span>,“<span style="color: black;">中欧中医药产品贸易研究</span>”,2013-2017.</span></span></p><p style="text-align:left;"><span style="font-family:KaiTi_GB2312;"><span style="font-size:16px;">9. <span style="color: black;">教育部社科后期资助项目</span>,“<span style="color: black;">公平贸易的公平性及福利效应研究</span>”,2012-2015.</span></span></p><p style="text-align:left;"><span style="font-family:KaiTi_GB2312;"><span style="font-size:16px;">10. <span style="color: black;">欧盟玛丽居里项目</span>“<span style="color: black;">中欧可再生能源与环境产品贸易发展与机遇研究</span>”,2012-2016<span style="font-size:color:black;">年</span>.</span></span></p><p style="text-align:left;"><span style="font-family:KaiTi_GB2312;"><span style="font-size:16px;">11. <span style="color: black;">国家社科基金项目</span>,“<span style="color: black;">碳关税的贸易与环境效应及我国政策选择的路径研究</span>”,2010-2013 .</span></span></p><p style="text-align:left;"><span style="font-family:KaiTi_GB2312;"><span style="font-size:16px;">12. <span style="color: black;">国家广电总局课题</span>,“<span style="color: black;">中国影视贸易及出口促进研究</span>”,2009-2011 .</span></span></p><p style="text-align:left;"><span style="font-family:KaiTi_GB2312;"><span style="font-size:16px;">13. <span style="color: black;">教育部人文社会科学规划项目</span>,“<span style="color: black;">文化距离对中国出口贸易影响的实证研究</span> ”,2009-2011 .</span></span></p><p style="text-align:left;"><span style="font-family:KaiTi_GB2312;"><span style="font-size:16px;">14. <span style="color: black;">教育部人文社会科学规划项目</span>,“<span style="color: black;">道德贸易问题研究</span>”,2006-2009.</span></span></p><p style="text-align:left;"><span style="font-family:KaiTi_GB2312;"><span style="font-size:16px;">15. <span style="color: black;">国家社会科学基金一般项目</span>,“WTO<span style="color: black;">框架下的贸易壁垒与我国的对策研究</span>”, 2005-2008.</span></span></p><p style="text-align:left;"><span style="font-family:KaiTi_GB2312;"><span style="font-size:16px;">16. <span style="color: black;">全国统计科学重点项目</span>,“<span style="color: black;">中国对外贸易评估指标体系研究</span>”,2005-2007.</span></span></p><p style="text-align:left;"><span style="font-family:KaiTi_GB2312;"><span style="font-size:16px;">17. <span style="color: black;">山东省社科重点项目</span>,“WTO<span style="color: black;">的环境规制与山东出口企业国际竞争力研究</span>”, 2002-2003.</span></span></p><p style="text-align:left;"><span style="font-family:KaiTi_GB2312;"><span style="font-size:16px;">18. <span style="color: black;">山东省高等院校中青年学术骨干基金项目</span>,“<span style="color: black;">国际贸易的可持续发展研究</span>” ,2000-2003.</span></span></p><p style="text-align:left;"><span style="font-family:KaiTi_GB2312;"><span style="font-size:16px;">19. <span style="color: black;">山东省教委项目</span>,“<span style="color: black;">环境壁垒与山东对外贸易</span>”, 2002-2003.</span></span></p></div></div>
+                    
+                </div>				<div class="grjj">
+                    <p class="jjh">学生情况</p>
+                    <div class="bks1"><div style="top: 0px;"><span style="font-family:KaiTi_GB2312;"><span style="font-size:16px;">﻿﻿<span style="font-family: " 16px="" yahei="" microsoft="">招收世界经济、国际贸易专业的硕士生、博士生、博士后、访问学者</span></span></span></div></div>
+                    
+                </div>				<div class="grjj">
+                    <p class="jjh">教授课程</p>
+                    <div class="bks1"><div style="top: 0px;">﻿<span style="font-family: " 16px="" yahei="" microsoft=""><span style="font-family:KaiTi_GB2312;font-size:16px;">本科生：中国对外贸易概论能源、环境与经济政策</span></span></div><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px;"><span style="font-family:KaiTi_GB2312;font-size:16px;">研究生：国际贸易专题研究</span></p></div>
+                    
+                </div>            </div>
+        </div>
+         <footer style="overflow: hidden;">
+            <div class="footers">
+                <div class="footersl">
+                    <img src="http://bs.bnu.edu.cn/newweb/images/ewm.jpg" alt="" class="imgewm">
+                    <div class="footerxx">
+                        <p>Copyright © 2020 北京师范大学经济与工商管理学院</p>
+                        <p><i class="fas fa-map-marker-alt"></i> 地址：北京市新街口外大街19号</p>
+                        <p><i class="fas fa-portrait"></i> 传真：010-58801867</p>
+                        <p><i class="fas fa-phone"></i> 电话：010-58801867</p>
+                        <p><i class="fas fa-envelope"></i> 邮编：100875</p>
+                    </div>
+                </div>
+                <img src="http://bs.bnu.edu.cn/newweb/images/db.png" alt="" width="140" class="dbimg">
+                <img src="http://bs.bnu.edu.cn/newweb/images/yx.png" alt="" class="yuanxun">
+            </div>
+        </footer>
+    </div>
+	<div class="share">
+		  <div id="appgame-leftside-share">
+	        <div class="appgame-leftside-share rwt_share" id="rwt_share">
+	         
+	        <!--<a class="appgame-leftside-search" data-cmd="search" title="search"  href="javascript:void(0);" onclick="opens('id')">search</a> --> <!--<div class="searchs" id="id">
+	         <form name="dataForm" action="/cms/search/searchResults.jsp" target="_blank" method="post" accept-Charset="utf-8"  onsubmit="document.charset='utf-8';">
+			        	<p>
+			        		<input name="siteID" size="4" value="127" type = "hidden">
+			        		<input type="text" name="query" id="search" class="searchInput" value="输入搜索词">
+			        		<button type="submit"></button>
+			        	</p>
+			        	</form>
+			        </div>-->
+			        <!-- <a class="appgame-leftside-weixin" data-cmd="weixin" title="">微信</a> -->
+                    
+			        <!-- <a class="appgame-leftside-qzone" data-cmd="qzone" title="">qq空间</a>
+			        
+			        <a class="appgame-leftside-tsina" data-cmd="tsina" title="">微博</a> -->			    </div>
+			        <a class="appgame-leftside-top" onclick="gotoTPoint()"></a>			</div>
+			        
+		</div>
+</body>
+<script src="http://gh.bnu.edu.cn/js/jquery-1.9.0.min.js"></script>
+<script src="http://gh.bnu.edu.cn/js/share.min.js"></script>
+<script>
+    var dj=document.getElementById('dianji');
+    var jjc=document.getElementById('jjc');
+    var dj1=document.getElementById('dianji1');
+    var jjc1=document.getElementById('jjc1');
+    var a=1;
+    function zhedie(m,n){
+        m.onclick=function(){
+            if(a==1){
+                n.className='jjc';
+                m.className='dianji1'
+                a=0;
+            }else{
+                n.className='jjc1';
+                m.className='dianji'
+                a=1;
+            }
+        }
+    }
+    zhedie(dj,jjc);
+    zhedie(dj1,jjc1);
+	
+	
+</script>
+<script>
+
+	
+	
+    
+
+    /*回到顶部*/
+	$(function(){
+	 	$(window).resize(function(){
+						var h = $(window).height();
+						$('.goTop').css('top',h-60);
+						$(window).scroll(function(){				
+							var scrollTop = $(document).scrollTop();					  
+							$('.goTop').stop().animate({
+								top: h + scrollTop-60
+							},300);
+						});
+		}).resize();
+		});
+	//gotop
+
+			$('.goTop').click(function(){
+
+				$('body,html').stop().animate({scrollTop:0});
+
+				return false;
+
+			});
+	
+	function gotoTPoint(){
+		$("html,body").animate({scrollTop:0},500);
+	}
+</script>
+</html>

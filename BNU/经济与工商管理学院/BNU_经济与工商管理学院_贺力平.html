@@ -1,0 +1,486 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0">
+    <title>北京师范大学工商与经济管理学院</title>
+    <link rel="stylesheet" href="http://bs.bnu.edu.cn/new-ver-css/reset.css">
+    <link rel="stylesheet" href="http://bs.bnu.edu.cn/new-ver-css/index.css">
+	<link rel="stylesheet" href="http://bs.bnu.edu.cn/new-ver-css/xyslist.css">
+	<link rel="stylesheet" href="http://bs.bnu.edu.cn/new-ver-css/xys-tf.css">
+    <style>
+        .container{
+            width:100%;
+            height: auto;
+            overflow: hidden;
+        }
+        .header{
+            width:100%;
+            height:116px;
+            background:#EFF8FF;
+        }
+        .logo1{
+            width:1200px!important;
+            margin:0 auto;
+            position:relative;
+            float: none;
+			display:block;
+        }
+        .logo2{
+            float:right;
+        }
+        .logo1 p{
+            position:absolute;
+            top:5px;
+            right:5px;
+            font-size:13px;
+        }
+        .logo1 p:hover{
+            color:#112769;
+        }
+        .tu{
+            width:100%;
+            height:240px;
+            background:url('http://bs.bnu.edu.cn/newweb/grzy/images/tu.jpg') no-repeat top center;
+            background-size: 100%;
+        }
+        .lujing{
+            width:1200px;
+            height:58px;
+            margin:0 auto;
+            border-bottom:1px solid #aaa;
+            overflow:hidden;
+        }
+        .lujings{
+            margin:24px 0 0 0;
+            font-size:14px;
+        }
+        .content{
+            color:#333;
+            width:1200px;
+/*            height:2000px;*/
+            margin:0 auto;
+            margin-top:40px;
+/*            background:#c4c4c4;*/
+        }
+        
+        .xian{
+            width:100%;
+            height:8px;
+            background:#9A0812;
+        }
+        
+        .leftc{
+            float:left;
+        }
+        .rightc{
+            float:left;
+            margin-left:50px;
+/*            background:#666;*/
+            width:880px;
+/*            height:1000px;*/
+        }
+        .rheader{
+            width:880px;
+            height:210px;
+/*            background:yellow;*/
+        }
+        .xm{
+            font-size:30px;
+            height:40px;
+/*            border-bottom:4px solid #9A0812;*/
+            width:auto;
+            float:left;
+            line-height:40px;
+			margin-right:30px;
+        }
+        .zhiw{
+            font-size:18px;
+            height:40px;
+            line-height:50px;
+            margin-bottom:30px;
+        }
+        .tel{
+                font-size: 16px;
+                margin-top: 10px;
+                line-height: 20px;
+        }
+        .grjj{
+/*            height:300px;*/
+            width:880px;
+/*            background:yellow;*/
+            padding-bottom:40px;
+        }
+        .jjh{
+                font-size: 20px;
+                border-bottom: 1px solid #cecece;
+                height: 40px;
+                line-height: 40px;
+                padding-left: 30px;
+                background: url(http://bs.bnu.edu.cn/newweb/grzy/images/zw.png) no-repeat 0 16px;
+        }
+        
+        .jjc{
+            font-size:14px;
+            margin-top:30px;
+           
+            line-height:28px;
+            overflow:hidden;
+            text-align: justify;
+            text-justify:inter-ideograph;
+        }
+        .jjc1{
+            height:225px;
+            font-size:14px;
+            margin-top:30px;
+            
+            line-height:28px;
+            overflow:hidden;
+            text-align: justify;
+            text-justify:inter-ideograph;
+        }
+        
+        .dianji1{
+                background: url(http://bs.bnu.edu.cn/newweb/grzy/images/zw.png) no-repeat 0 -50px;
+                width: 13px;
+                height: 13px;
+                cursor: pointer;
+                display: block;
+            margin-top: 20px;
+            transition: all .2s linear;
+        }
+        .dianji1:hover{
+            background: url(http://bs.bnu.edu.cn/newweb/grzy/images/zw.png) no-repeat 0 -64px;
+        }
+        
+        .dianji{
+                background: url(http://bs.bnu.edu.cn/newweb/grzy/images/zw.png) no-repeat 0 -24px;
+                height: 13px;
+                cursor: pointer;
+                display: block;
+            margin-top: 20px;
+            transition: all .2s linear;
+        }
+        .dianji:hover{
+            background: url(http://bs.bnu.edu.cn/newweb/grzy/images/zw.png) no-repeat 0 -37px;
+        }
+        #jjc1{
+            text-indent:0em;
+        }
+        
+        .bks{
+            font-size:14px;
+            font-weight: 800;
+            margin-top:30px;
+            height:auto;
+            line-height:36px;
+        }
+        .bks1{
+            font-size:14px;
+            margin-top:30px;
+            height:auto;
+            line-height:36px;
+        }
+        .bksc{
+            height:36px;
+            line-height:36px;
+            font-size:14px;
+        }
+        
+        .yanzheng{
+            width:1200px;
+            height:100px;
+            margin:0 auto;
+        }
+        .yanzheng img{
+            display:block;
+            margin-top:26px;
+            float:left;
+        }
+		
+#appgame-leftside-share{width:42px; height:216px; position: fixed;bottom: 30px;right: 30px; z-index:9999;}
+.appgame-leftside-share{width:42px; height:259px;}
+#appgame-leftside-share a{display:block; width:42px; height:44px; background-color:#e6e6e6; z-index:1; position:absolute; left:0; box-sizing:border-box; -moz-box-sizing:border-box; border:1px #ddd solid; background-image:url(http://gh.bnu.edu.cn/images/share-icons.png); background-repeat:no-repeat; margin:0;  transition:0.4s; -webkit-transition:0.4s; -moz-transition:0.4s;}
+#appgame-leftside-share a:hover{background-color:#fff; border:1px #eee solid; z-index:2;}
+/*.appgame-leftside-weixin{top:0; background-position:-88px 0;}
+.appgame-leftside-weixin:hover{background-position:0px 0;}
+.appgame-leftside-qzone{top:43px; background-position:-88px -44px;}
+.appgame-leftside-qzone:hover{background-position:0px -44px;}*/
+.appgame-leftside-search{top:86px; background-position:-93px -89px;}
+.appgame-leftside-search:hover{background-position:-5px -86px;}
+.appgame-leftside-weixin{top:129px; background-position:-88px 0px;}
+.appgame-leftside-weixin:hover{background-position:0px 0px;}
+/*.appgame-leftside-fbook{top:172px; background-position:-88px -176px;}
+.appgame-leftside-fbook:hover{background-position:0px -176px;}
+.appgame-leftside-twi{top:215px; background-position:-88px -220px;}
+.appgame-leftside-twi:hover{background-position:0px -220px;}*/
+#appgame-leftside-share .appgame-leftside-top{background-image:url(http://gh.bnu.edu.cn/images/leftnav-off.png); background-position:-1px -395px; top:130px; cursor:pointer;}
+
+.rwt_share {
+/*	overflow:hidden;*/
+	float:left;
+	position:relative;
+}
+.rwt_share a {
+	display:inline-block;
+	margin-right:10px;
+	text-indent:-9999px;
+	margin-bottom:10px;
+	width:24px;
+	height:24px;
+	overflow:hidden;
+	cursor:pointer;
+	float:left;
+	font-size:12px;
+}
+.rwts_weixin {
+	background-position:0 -1612px;
+}
+.rwts_tsina {
+	background-position:0 -104px;
+}
+.rwts_tqq {
+	background-position:0 -260px;
+}
+.rwts_qzone {
+	background-position:0 -52px;
+}
+.rwts_sqq {
+	background-position:0 -2652px;
+}
+.rwts_tieba {
+	background-position:0 -728px;
+}
+.rwts_renren {
+	background-position:0 -208px;
+}
+.rwts_kaixin001 {
+	background-position:0 -312px;
+}
+.rwts_tqf {
+	background-position:0 -364px;
+}
+.rwts_douban {
+	background-position:0 -468px;
+}
+.rwts_twi {
+	background-position:0 -1404px;
+}
+.rwts_fbook {
+	background-position:0 -1352px;
+}
+.rwts_ty {
+	background-position:0 -1196px;
+}
+.rwts_mogujie {
+	background-position:0 -1768px;
+}
+.rwts_meilishuo {
+	background-position:0 -1716px;
+}
+.rwts_huaban {
+	background-position:0 -1872px;
+}
+.rwts_hi {
+	background-position:0 -416px;
+}
+.rwts_tsohu {
+	background-position:0 -520px;
+}
+.rwts_more {
+	background-position:0 0;
+}
+.rwt_share_wxShow_code>img {
+	width:100%;
+}
+.bks1 li{
+	list-style:disc;
+}
+@media screen and (max-width: 1200px){
+	.logo1{
+		width:100%!important;
+	}
+	.leftc img{
+		width:50%!important;
+		height:50%!important;
+	}
+	.logo2{display:none;}
+	.lujing{
+		width:90%;
+	}
+	.content{
+		width:90%;
+	}
+	.leftc{
+		float:none;
+		
+	}
+	.tu{display:none;}
+	
+	.rightc{
+		float:none;
+		width:100%;
+		margin-left:0px;
+	}
+	.footers{width:100%;}
+	.rheader{width:100%;}
+	.grjj{width:100%;}
+}
+@media screen and (max-width: 600px){
+.l3{width:95%;}
+.share{display:none;}
+.leftc img{
+		width:70%!important;
+		height:70%!important;
+	}
+}
+  
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo1">
+                <img src="http://bs.bnu.edu.cn/newweb/grzy/images/logo.png" alt="" class="l3" style="margin-top: 25px;float:left;">
+                <img src="http://bs.bnu.edu.cn/newweb/grzy/images/logo2.png" alt="" class="logo2">
+                <a href="http://bs.bnu.edu.cn/englishversion/facultyresearch/fulltimefaculty/azmsy/119707.html"><p>ENGLISH VERSION</p></a>
+            </div>
+        </div>
+        <div class="xian"></div>
+        <div class="tu"></div>
+        <div class="lujing">
+            <div class="lujings">
+                <a href="#">师资队伍</a>
+                 | 
+                <a href="#">金融学系</a>
+            </div>
+        </div>
+        <div class="content">
+            <div class="leftc">
+                <img src="/Public/upload/touxiang/01022.jpg" alt="" width="270">
+            </div>
+            <div class="rightc">
+                <div class="rheader">
+                    <p class="xm">贺力平</p>
+                    <p class="zhiw">教授</p>
+                    <p class="tel"><strong style="display:block;width:100px;float:left;">电话</strong>：010 5880 5025</p> 
+                 <p class="tel"><strong style="display:block;width:100px;float:left;">E-mail</strong>：lphe@bnu.edu.cn</p>
+                 <p class="tel"><strong style="display:block;width:100px;float:left;">Office hour</strong>：周二下午</p>
+                 <p class="tel"><strong style="display:block;width:100px;float:left;">系所中心</strong>：金融学系</p>
+              </div>
+			  <div class="grjj">
+                    <p class="jjh">个人简历</p>
+                    <div class="bks1" id="jjc"><div style="top: 0px;">﻿﻿<span style="font-family: " microsoft="" yahei="" font-size:="" 16px="">教育背景</span></div><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei';font-size:16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;"></p><table style="border: 1px solid rgb(0, 0, 0); border-image: none; color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei';font-size:16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; border-collapse: collapse; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;"><tbody><tr class="firstRow"><td width="83" valign="top" style="padding: 2px 3px; border: 1px solid rgb(0, 0, 0); border-image: none; -ms-word-break: break-all;"><p style="margin: 0px; padding: 0px;">1996</p></td><td width="466" valign="top" style="padding: 2px 3px; border: 1px solid rgb(0, 0, 0); border-image: none; -ms-word-break: break-all;"><p style="margin: 0px; padding: 0px;">伦敦大学亚非学院经济学系 博士</p></td></tr><tr><td width="83" valign="top" style="padding: 2px 3px; border: 1px solid rgb(0, 0, 0); border-image: none; -ms-word-break: break-all;"><p style="margin: 0px; padding: 0px;">1987</p></td><td width="466" valign="top" style="padding: 2px 3px; border: 1px solid rgb(0, 0, 0); border-image: none;"><p style="margin: 0px; padding: 0px;">中国社会科学院研究生院世界经济系 硕士</p></td></tr><tr style="height: 5px;"><td width="83" valign="top" style="padding: 2px 3px; border: 1px solid rgb(0, 0, 0); border-image: none;"><p style="margin: 0px; padding: 0px;">1982</p></td><td width="466" valign="top" style="padding: 2px 3px; border: 1px solid rgb(0, 0, 0); border-image: none;"><p style="margin: 0px; padding: 0px;">四川财经学院政治经济学系 学士</p></td></tr></tbody></table><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei';font-size:16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;"><br /></p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei';font-size:16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;"></p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei';font-size:16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">工作经历</p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei';font-size:16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;"></p><table style="border: 1px solid rgb(0, 0, 0); border-image: none; color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei';font-size:16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; border-collapse: collapse; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;"><tbody><tr class="firstRow"><td width="83" valign="top" style="padding: 2px 3px; border: 1px solid rgb(0, 0, 0); border-image: none;"><p style="margin: 0px; padding: 0px;">2011-</p></td><td width="466" valign="top" style="padding: 2px 3px; border: 1px solid rgb(0, 0, 0); border-image: none;"><p style="margin: 0px; padding: 0px;">北京师范大学经济与工商管理学院 教授</p></td></tr><tr><td width="83" valign="top" style="padding: 2px 3px; border: 1px solid rgb(0, 0, 0); border-image: none;"><p style="margin: 0px; padding: 0px;">2001-2010</p></td><td width="466" valign="top" style="padding: 2px 3px; border: 1px solid rgb(0, 0, 0); border-image: none;"><p style="margin: 0px; padding: 0px;">北京师范大学经济与工商管理学院金融系 主任 教授</p></td></tr><tr><td width="83" valign="top" style="padding: 2px 3px; border: 1px solid rgb(0, 0, 0); border-image: none;"><p style="margin: 0px; padding: 0px;">2002-2003</p></td><td width="466" valign="top" style="padding: 2px 3px; border: 1px solid rgb(0, 0, 0); border-image: none;"><p style="margin: 0px; padding: 0px;">哥伦比亚大学商学院富布莱特访问学者</p></td></tr><tr><td width="83" valign="top" style="padding: 2px 3px; border: 1px solid rgb(0, 0, 0); border-image: none;"><p style="margin: 0px; padding: 0px;">1997-2000</p></td><td width="466" valign="top" style="padding: 2px 3px; border: 1px solid rgb(0, 0, 0); border-image: none;"><p style="margin: 0px; padding: 0px;">中国金融学院国际金融系 副教授；经济研究所 副所长</p></td></tr><tr><td width="83" valign="top" style="padding: 2px 3px; border: 1px solid rgb(0, 0, 0); border-image: none;"><p style="margin: 0px; padding: 0px;">1989-1991</p></td><td width="466" valign="top" style="padding: 2px 3px; border: 1px solid rgb(0, 0, 0); border-image: none;"><p style="margin: 0px; padding: 0px;">剑桥大学国际研究中心、经济系 访问学者</p></td></tr><tr><td width="83" valign="top" style="padding: 2px 3px; border: 1px solid rgb(0, 0, 0); border-image: none;"><p style="margin: 0px; padding: 0px;">1987-1989</p></td><td width="466" valign="top" style="padding: 2px 3px; border: 1px solid rgb(0, 0, 0); border-image: none;"><p style="margin: 0px; padding: 0px;">中国金融学院国际金融系国际金融教研室 副主任 讲师</p></td></tr><tr><td width="83" valign="top" style="padding: 2px 3px; border: 1px solid rgb(0, 0, 0); border-image: none;"><p style="margin: 0px; padding: 0px;">1982-1984</p></td><td width="466" valign="top" style="padding: 2px 3px; border: 1px solid rgb(0, 0, 0); border-image: none;"><p style="margin: 0px; padding: 0px;">四川财经学院政治经济学系世界经济教研室 助教</p></td></tr></tbody></table><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei';font-size:16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;"><br /></p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei';font-size:16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;"></p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei';font-size:16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;"></p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei';font-size:16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">学术兼职</p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei';font-size:16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;"></p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei';font-size:16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;"></p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei';font-size:16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">中国城市金融学会常务理事、学术委员会委员</p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei';font-size:16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">中国国际金融学会常务理事、学术委员会委员</p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei';font-size:16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">中国社会科学院美国研究所学术委员会 委员</p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei';font-size:16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">中国社会科学院世界经济与政治研究所学术委员会 委员</p></div>
+                    
+                </div>				<div class="grjj">
+                    <p class="jjh">研究领域</p>
+                    <div class="bks1"><div style="top: 0px;">﻿﻿世界经济、国际金融</div></div>
+                </div>				<div class="grjj">
+                    <p class="jjh">研究成果</p>
+                    <div class="bks1" id="jjc1"><div style="top: 0px;">﻿﻿<span style="font-family: " microsoft="" yahei="" font-size:="" 16px="">· 主要期刊论文</span></div><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei';font-size:16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;"></p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei';font-size:16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;"></p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei';font-size:16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">2018</p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei';font-size:16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">贺力平、赵雪燕、王佳“经济规模与货币国际地位的关系 ——兼论美元国际储备货币地位的决定” 《学术研究》2018年第8期</p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei';font-size:16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">贺力平“新时代世界经济新趋势及对策” 《世界经济研究》2018年第3期</p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei';font-size:16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;"></p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei';font-size:16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">2017</p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei';font-size:16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">贺力平、于航“企业部门债务率与经济增长波动的关系” 《金融论坛》2017年第11期</p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei';font-size:16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;"></p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei';font-size:16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">2016</p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei';font-size:16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">贺力平、马伟“论发展中国家的通货膨胀、汇率变动与贸易增长” 《金融评论》2016年第6期</p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei';font-size:16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;"></p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei';font-size:16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">2015</p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei';font-size:16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">贺力平“估值效应和货币错配再定义：兼论汇率风险概念的一个宏观经济新应用” 《国际金融研究》2015年第9期</p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei';font-size:16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">贺力平“论中国外汇储备的性质” 《学术研究》2015年第8期</p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei';font-size:16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;"></p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei';font-size:16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">2014</p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei';font-size:16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">贺力平“改革开放以来中国世界经济史学科发展综述” 《社会科学战线》2014年第10期</p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei';font-size:16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">贺力平“中国经济增长国际排名的变化趋势和前景” 《开放导报》2014年第3期</p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei';font-size:16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;"></p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei';font-size:16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">2013</p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei';font-size:16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">贺力平“人民币汇率改革的基本方向”《中国经济报告》2013年第2期</p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei';font-size:16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">贺力平“解读美联储超常规宽松货币政策”《金融市场研究》2013年第4期</p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei';font-size:16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">贺力平“人民币国际化的前景”《经济经纬》2013年第4期</p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei';font-size:16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;"></p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei';font-size:16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">2012</p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei';font-size:16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">贺力平、樊纲“从过热增长回归正常增长：近期中国宏观经济走势与前景”《开放导报》2012年第5期</p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei';font-size:16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">贺力平“牵一发而动全身：债务危机如何影响世界”《金融市场研究》2012.6总第1期（创刊号）</p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei';font-size:16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;"></p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei';font-size:16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">2011</p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei';font-size:16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">贺力平，林娟：“论外汇投资中的估值效应及其经济影响”《金融评论》2011年第6期</p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei';font-size:16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">贺力平、刘骞文：“中国外汇储备增长的新特征”《金融教育研究》2011年第.1期</p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei';font-size:16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;"></p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei';font-size:16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">2010</p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei';font-size:16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">贺力平“希腊债务危机的国际影响和借鉴”《经济学动态》2010年第7期</p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei';font-size:16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">贺力平、王珏：“中国股市的波动性及国际比较”《金融评论》2010年第4期</p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei';font-size:16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">贺力平、樊纲、胡嘉妮：“消费者价格指数与生产者价格指数：对商榷文章的回复意见”《经济研究》2010年第5期</p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei';font-size:16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;"></p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei';font-size:16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">2009</p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei';font-size:16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">贺力平、林娟：“试析国际金融危机与全球经济失衡的关系 – 兼评伯南克-保尔森“金融危机外因论”” 《国际金融研究》2009年第5期</p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei';font-size:16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">贺力平、卢川：“从现金/收入比率及其变动看我国支付产业的发展”《金融研究》2009年第3期</p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei';font-size:16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;"></p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei';font-size:16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">2008</p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei';font-size:16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">贺力平“人民币汇率与近年来中国经常帐户顺差”《金融研究》2008年第3期</p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei';font-size:16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">贺力平、姚睿冲：““创造性破坏过程”与积极股权投资的兴起”《中山大学学报》（社会科学版）2008年第4期</p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei';font-size:16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">贺力平、蔡兴：“从国际经验看中国国际收支双顺差之“谜”” 《国际金融研究》2008年第9期</p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei';font-size:16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">贺力平、樊纲、胡嘉妮：“消费者价格指数与生产者价格指数：谁带动谁？”《经济研究》2008年第11期</p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei';font-size:16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;"></p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei';font-size:16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">2007</p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei';font-size:16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">贺力平“鸦片贸易与白银外流关系之再检讨：兼论国内货币供给与对外贸易关系的历史演变”《社会科学战线》2007年第1期</p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei';font-size:16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">贺力平“从国际和历史角度看国际资本流动与金融安全问题”《国际经济评论》2007年第6期</p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei';font-size:16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">贺力平“银行业开放趋势及对中国金融的影响”《国际金融研究》2007年第3期</p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei';font-size:16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;"></p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei';font-size:16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">2006</p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei';font-size:16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">贺力平、范言慧、范小航：“美元汇率与美国国际收支平衡：变动的关系及初步解释”《金融研究》2006年第7期</p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei';font-size:16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">贺力平、修晶：“国际货币基金组织改革与国际汇率关系调整”《国际金融研究》2006年第10期</p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei';font-size:16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">贺力平、范言慧、范小航：“美元汇率与美国失业率的关系 – 兼论人民币汇率的作用”《国际金融研究》2006年第8期</p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei';font-size:16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;"></p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei';font-size:16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">2005</p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei';font-size:16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">贺力平“探讨人民币升值的长远影响”《国际经济评论》2005年第6期</p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei';font-size:16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">贺力平“美元汇率周期与人民币”《外交学院学报》2005年第1期</p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei';font-size:16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;"></p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei';font-size:16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">2004</p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei';font-size:16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">贺力平“金融发展与中国投资增长-1981-2002年数据测算及初步分析”《财贸经济》2004年第11期</p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei';font-size:16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">贺力平、张艳花：“资本外逃损害经济增长吗 – 对1982年以来中国数据的检验及初步解释”《经济研究》2004年第12期</p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei';font-size:16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;"></p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei';font-size:16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">2003</p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei';font-size:16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">贺力平“现在不是让人民币升值的时候”《国际经济评论》2003年第5期</p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei';font-size:16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;"></p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei';font-size:16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">2002</p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei';font-size:16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">贺力平“合作金融发展的国际经验及对中国的借鉴意义”《管理世界》2002年第1期</p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei';font-size:16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">贺力平“世界性通货紧缩对中国经济增长制约问题研究”《财贸经济》2002年第5期</p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei';font-size:16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;"></p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei';font-size:16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">2001</p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei';font-size:16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">贺力平“东亚金融危机后各国复苏之比较”《世界经济》2001年第2期</p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei';font-size:16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;"></p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei';font-size:16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">2000</p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei';font-size:16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">贺力平“全球化与中国经济可持续增长”《战略与管理》2000年第3期</p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei';font-size:16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;"></p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei';font-size:16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">1999</p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei';font-size:16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">贺力平“克服信息不对称障碍：谈金融机构与中小企业发展”《改革》1999年第2期</p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei';font-size:16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">贺力平“国内市场需求与中国长期经济增长”《经济研究》1999年第8期</p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei';font-size:16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;"></p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei';font-size:16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">1998</p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei';font-size:16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">贺力平“经济现代化：一个多世纪以来的进程、意义和展望”《国际经济评论》1998年第4期</p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei';font-size:16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">贺力平“货币政策新方向：反通货膨胀目标制及其理论依据”《经济研究》1998年第2期</p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei';font-size:16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;"></p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei';font-size:16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">1997</p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei';font-size:16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">贺力平“世界性通货膨胀的下降：一个长周期论的探讨”《国际经济评论》1997年第6期<br /><br /></p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei';font-size:16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">&nbsp; &nbsp;</p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei';font-size:16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;"></p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei';font-size:16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;"></p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei';font-size:16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">· 专著</p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei';font-size:16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;"></p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei';font-size:16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">Liping He, Hyperinflation: A World History, London and New York: Routledge, Taylor &amp; Francis Group, October 2017</p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei';font-size:16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;"></p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei';font-size:16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;"></p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei';font-size:16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;"></p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei';font-size:16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">樊纲、贺力平主编：《金融改革开放与中国国际收支再平衡》上海远东出版社，2012（中国改革与发展报告丛书）</p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei';font-size:16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;"></p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei';font-size:16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">张燕生、贺力平主编：《“不可能三角”再探讨：资本账户开放、国际收支平衡调整与人民币汇率改革相互匹配研究》中国商务出版社，2011</p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei';font-size:16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;"></p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei';font-size:16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">贺力平编：《财富二十讲》天津人民出版社，2008（大家西学丛书）</p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei';font-size:16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;"></p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei';font-size:16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">贺力平著：《融入世界经济：中国与国际发展经验》社会科学文献出版社，2007</p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei';font-size:16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;"></p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei';font-size:16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">（中国经济50人论坛丛书）</p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei';font-size:16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;"></p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei';font-size:16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">贺力平著：《个人支票与信用》天津人民出版社，2002（经济学观察丛书）</p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei';font-size:16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;"></p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei';font-size:16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">贺力平著：《经济增长：席卷全球的二十世纪进程》四川人民出版社，2000</p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei';font-size:16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;"></p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei';font-size:16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">贺力平主编：《货币政策工具操作程序》西南财经大学出版社，1998（金融实务与案例丛书）</p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei';font-size:16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;"></p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei';font-size:16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">贺力平、沈侠著：《比较优势与产业结构对策》中国社会科学出版社，1992</p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei';font-size:16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;"></p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei';font-size:16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">贺力平著：《开放、竞争、增长：发展的国际经济学》经济管理出版社，1989</p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei';font-size:16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;"></p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei';font-size:16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">贺力平、沈侠著《国际经济学方法论与基础理论研究》经济科学出版社，1989</p></div>
+                    
+                </div>												<div class="grjj">
+                    <p class="jjh">教授课程</p>
+                    <div class="bks1"><div style="top: 0px;">﻿﻿<span style="font-family: " microsoft="" yahei="" font-size:="" 16px="">《金融学基础》（双语）本科生二年级（2007年教育部首批双语教学示范课程）</span></div><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei';font-size:16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">《国际金融与中国》（英语） 国际留学生（研究生）一年级（教育部2013年度来华留学英语授课品牌课程）</p></div>
+                    
+                </div>            </div>
+        </div>
+         <footer style="overflow: hidden;">
+            <div class="footers">
+                <div class="footersl">
+                    <img src="http://bs.bnu.edu.cn/newweb/images/ewm.jpg" alt="" class="imgewm">
+                    <div class="footerxx">
+                        <p>Copyright © 2020 北京师范大学经济与工商管理学院</p>
+                        <p><i class="fas fa-map-marker-alt"></i> 地址：北京市新街口外大街19号</p>
+                        <p><i class="fas fa-portrait"></i> 传真：010-58801867</p>
+                        <p><i class="fas fa-phone"></i> 电话：010-58801867</p>
+                        <p><i class="fas fa-envelope"></i> 邮编：100875</p>
+                    </div>
+                </div>
+                <img src="http://bs.bnu.edu.cn/newweb/images/db.png" alt="" width="140" class="dbimg">
+                <img src="http://bs.bnu.edu.cn/newweb/images/yx.png" alt="" class="yuanxun">
+            </div>
+        </footer>
+    </div>
+	<div class="share">
+		  <div id="appgame-leftside-share">
+	        <div class="appgame-leftside-share rwt_share" id="rwt_share">
+	         
+	        <!--<a class="appgame-leftside-search" data-cmd="search" title="search"  href="javascript:void(0);" onclick="opens('id')">search</a> --> <!--<div class="searchs" id="id">
+	         <form name="dataForm" action="/cms/search/searchResults.jsp" target="_blank" method="post" accept-Charset="utf-8"  onsubmit="document.charset='utf-8';">
+			        	<p>
+			        		<input name="siteID" size="4" value="127" type = "hidden">
+			        		<input type="text" name="query" id="search" class="searchInput" value="输入搜索词">
+			        		<button type="submit"></button>
+			        	</p>
+			        	</form>
+			        </div>-->
+			        <!-- <a class="appgame-leftside-weixin" data-cmd="weixin" title="">微信</a> -->
+                    
+			        <!-- <a class="appgame-leftside-qzone" data-cmd="qzone" title="">qq空间</a>
+			        
+			        <a class="appgame-leftside-tsina" data-cmd="tsina" title="">微博</a> -->			    </div>
+			        <a class="appgame-leftside-top" onclick="gotoTPoint()"></a>			</div>
+			        
+		</div>
+</body>
+<script src="http://gh.bnu.edu.cn/js/jquery-1.9.0.min.js"></script>
+<script src="http://gh.bnu.edu.cn/js/share.min.js"></script>
+<script>
+    var dj=document.getElementById('dianji');
+    var jjc=document.getElementById('jjc');
+    var dj1=document.getElementById('dianji1');
+    var jjc1=document.getElementById('jjc1');
+    var a=1;
+    function zhedie(m,n){
+        m.onclick=function(){
+            if(a==1){
+                n.className='jjc';
+                m.className='dianji1'
+                a=0;
+            }else{
+                n.className='jjc1';
+                m.className='dianji'
+                a=1;
+            }
+        }
+    }
+    zhedie(dj,jjc);
+    zhedie(dj1,jjc1);
+	
+	
+</script>
+<script>
+
+	
+	
+    
+
+    /*回到顶部*/
+	$(function(){
+	 	$(window).resize(function(){
+						var h = $(window).height();
+						$('.goTop').css('top',h-60);
+						$(window).scroll(function(){				
+							var scrollTop = $(document).scrollTop();					  
+							$('.goTop').stop().animate({
+								top: h + scrollTop-60
+							},300);
+						});
+		}).resize();
+		});
+	//gotop
+
+			$('.goTop').click(function(){
+
+				$('body,html').stop().animate({scrollTop:0});
+
+				return false;
+
+			});
+	
+	function gotoTPoint(){
+		$("html,body").animate({scrollTop:0},500);
+	}
+</script>
+</html>

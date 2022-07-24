@@ -1,0 +1,495 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0">
+    <title>北京师范大学工商与经济管理学院</title>
+    <link rel="stylesheet" href="http://bs.bnu.edu.cn/new-ver-css/reset.css">
+    <link rel="stylesheet" href="http://bs.bnu.edu.cn/new-ver-css/index.css">
+	<link rel="stylesheet" href="http://bs.bnu.edu.cn/new-ver-css/xyslist.css">
+	<link rel="stylesheet" href="http://bs.bnu.edu.cn/new-ver-css/xys-tf.css">
+    <style>
+        .container{
+            width:100%;
+            height: auto;
+            overflow: hidden;
+        }
+        .header{
+            width:100%;
+            height:116px;
+            background:#EFF8FF;
+        }
+        .logo1{
+            width:1200px!important;
+            margin:0 auto;
+            position:relative;
+            float: none;
+			display:block;
+        }
+        .logo2{
+            float:right;
+        }
+        .logo1 p{
+            position:absolute;
+            top:5px;
+            right:5px;
+            font-size:13px;
+        }
+        .logo1 p:hover{
+            color:#112769;
+        }
+        .tu{
+            width:100%;
+            height:240px;
+            background:url('http://bs.bnu.edu.cn/newweb/grzy/images/tu.jpg') no-repeat top center;
+            background-size: 100%;
+        }
+        .lujing{
+            width:1200px;
+            height:58px;
+            margin:0 auto;
+            border-bottom:1px solid #aaa;
+            overflow:hidden;
+        }
+        .lujings{
+            margin:24px 0 0 0;
+            font-size:14px;
+        }
+        .content{
+            color:#333;
+            width:1200px;
+/*            height:2000px;*/
+            margin:0 auto;
+            margin-top:40px;
+/*            background:#c4c4c4;*/
+        }
+        
+        .xian{
+            width:100%;
+            height:8px;
+            background:#9A0812;
+        }
+        
+        .leftc{
+            float:left;
+        }
+        .rightc{
+            float:left;
+            margin-left:50px;
+/*            background:#666;*/
+            width:880px;
+/*            height:1000px;*/
+        }
+        .rheader{
+            width:880px;
+            height:210px;
+/*            background:yellow;*/
+        }
+        .xm{
+            font-size:30px;
+            height:40px;
+/*            border-bottom:4px solid #9A0812;*/
+            width:auto;
+            float:left;
+            line-height:40px;
+			margin-right:30px;
+        }
+        .zhiw{
+            font-size:18px;
+            height:40px;
+            line-height:50px;
+            margin-bottom:30px;
+        }
+        .tel{
+                font-size: 16px;
+                margin-top: 10px;
+                line-height: 20px;
+        }
+        .grjj{
+/*            height:300px;*/
+            width:880px;
+/*            background:yellow;*/
+            padding-bottom:40px;
+        }
+        .jjh{
+                font-size: 20px;
+                border-bottom: 1px solid #cecece;
+                height: 40px;
+                line-height: 40px;
+                padding-left: 30px;
+                background: url(http://bs.bnu.edu.cn/newweb/grzy/images/zw.png) no-repeat 0 16px;
+        }
+        
+        .jjc{
+            font-size:14px;
+            margin-top:30px;
+           
+            line-height:28px;
+            overflow:hidden;
+            text-align: justify;
+            text-justify:inter-ideograph;
+        }
+        .jjc1{
+            height:225px;
+            font-size:14px;
+            margin-top:30px;
+            
+            line-height:28px;
+            overflow:hidden;
+            text-align: justify;
+            text-justify:inter-ideograph;
+        }
+        
+        .dianji1{
+                background: url(http://bs.bnu.edu.cn/newweb/grzy/images/zw.png) no-repeat 0 -50px;
+                width: 13px;
+                height: 13px;
+                cursor: pointer;
+                display: block;
+            margin-top: 20px;
+            transition: all .2s linear;
+        }
+        .dianji1:hover{
+            background: url(http://bs.bnu.edu.cn/newweb/grzy/images/zw.png) no-repeat 0 -64px;
+        }
+        
+        .dianji{
+                background: url(http://bs.bnu.edu.cn/newweb/grzy/images/zw.png) no-repeat 0 -24px;
+                height: 13px;
+                cursor: pointer;
+                display: block;
+            margin-top: 20px;
+            transition: all .2s linear;
+        }
+        .dianji:hover{
+            background: url(http://bs.bnu.edu.cn/newweb/grzy/images/zw.png) no-repeat 0 -37px;
+        }
+        #jjc1{
+            text-indent:0em;
+        }
+        
+        .bks{
+            font-size:14px;
+            font-weight: 800;
+            margin-top:30px;
+            height:auto;
+            line-height:36px;
+        }
+        .bks1{
+            font-size:14px;
+            margin-top:30px;
+            height:auto;
+            line-height:36px;
+        }
+        .bksc{
+            height:36px;
+            line-height:36px;
+            font-size:14px;
+        }
+        
+        .yanzheng{
+            width:1200px;
+            height:100px;
+            margin:0 auto;
+        }
+        .yanzheng img{
+            display:block;
+            margin-top:26px;
+            float:left;
+        }
+		
+#appgame-leftside-share{width:42px; height:216px; position: fixed;bottom: 30px;right: 30px; z-index:9999;}
+.appgame-leftside-share{width:42px; height:259px;}
+#appgame-leftside-share a{display:block; width:42px; height:44px; background-color:#e6e6e6; z-index:1; position:absolute; left:0; box-sizing:border-box; -moz-box-sizing:border-box; border:1px #ddd solid; background-image:url(http://gh.bnu.edu.cn/images/share-icons.png); background-repeat:no-repeat; margin:0;  transition:0.4s; -webkit-transition:0.4s; -moz-transition:0.4s;}
+#appgame-leftside-share a:hover{background-color:#fff; border:1px #eee solid; z-index:2;}
+/*.appgame-leftside-weixin{top:0; background-position:-88px 0;}
+.appgame-leftside-weixin:hover{background-position:0px 0;}
+.appgame-leftside-qzone{top:43px; background-position:-88px -44px;}
+.appgame-leftside-qzone:hover{background-position:0px -44px;}*/
+.appgame-leftside-search{top:86px; background-position:-93px -89px;}
+.appgame-leftside-search:hover{background-position:-5px -86px;}
+.appgame-leftside-weixin{top:129px; background-position:-88px 0px;}
+.appgame-leftside-weixin:hover{background-position:0px 0px;}
+/*.appgame-leftside-fbook{top:172px; background-position:-88px -176px;}
+.appgame-leftside-fbook:hover{background-position:0px -176px;}
+.appgame-leftside-twi{top:215px; background-position:-88px -220px;}
+.appgame-leftside-twi:hover{background-position:0px -220px;}*/
+#appgame-leftside-share .appgame-leftside-top{background-image:url(http://gh.bnu.edu.cn/images/leftnav-off.png); background-position:-1px -395px; top:130px; cursor:pointer;}
+
+.rwt_share {
+/*	overflow:hidden;*/
+	float:left;
+	position:relative;
+}
+.rwt_share a {
+	display:inline-block;
+	margin-right:10px;
+	text-indent:-9999px;
+	margin-bottom:10px;
+	width:24px;
+	height:24px;
+	overflow:hidden;
+	cursor:pointer;
+	float:left;
+	font-size:12px;
+}
+.rwts_weixin {
+	background-position:0 -1612px;
+}
+.rwts_tsina {
+	background-position:0 -104px;
+}
+.rwts_tqq {
+	background-position:0 -260px;
+}
+.rwts_qzone {
+	background-position:0 -52px;
+}
+.rwts_sqq {
+	background-position:0 -2652px;
+}
+.rwts_tieba {
+	background-position:0 -728px;
+}
+.rwts_renren {
+	background-position:0 -208px;
+}
+.rwts_kaixin001 {
+	background-position:0 -312px;
+}
+.rwts_tqf {
+	background-position:0 -364px;
+}
+.rwts_douban {
+	background-position:0 -468px;
+}
+.rwts_twi {
+	background-position:0 -1404px;
+}
+.rwts_fbook {
+	background-position:0 -1352px;
+}
+.rwts_ty {
+	background-position:0 -1196px;
+}
+.rwts_mogujie {
+	background-position:0 -1768px;
+}
+.rwts_meilishuo {
+	background-position:0 -1716px;
+}
+.rwts_huaban {
+	background-position:0 -1872px;
+}
+.rwts_hi {
+	background-position:0 -416px;
+}
+.rwts_tsohu {
+	background-position:0 -520px;
+}
+.rwts_more {
+	background-position:0 0;
+}
+.rwt_share_wxShow_code>img {
+	width:100%;
+}
+.bks1 li{
+	list-style:disc;
+}
+@media screen and (max-width: 1200px){
+	.logo1{
+		width:100%!important;
+	}
+	.leftc img{
+		width:50%!important;
+		height:50%!important;
+	}
+	.logo2{display:none;}
+	.lujing{
+		width:90%;
+	}
+	.content{
+		width:90%;
+	}
+	.leftc{
+		float:none;
+		
+	}
+	.tu{display:none;}
+	
+	.rightc{
+		float:none;
+		width:100%;
+		margin-left:0px;
+	}
+	.footers{width:100%;}
+	.rheader{width:100%;}
+	.grjj{width:100%;}
+}
+@media screen and (max-width: 600px){
+.l3{width:95%;}
+.share{display:none;}
+.leftc img{
+		width:70%!important;
+		height:70%!important;
+	}
+}
+  
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo1">
+                <img src="http://bs.bnu.edu.cn/newweb/grzy/images/logo.png" alt="" class="l3" style="margin-top: 25px;float:left;">
+                <img src="http://bs.bnu.edu.cn/newweb/grzy/images/logo2.png" alt="" class="logo2">
+                <a href=""><p>ENGLISH VERSION</p></a>
+            </div>
+        </div>
+        <div class="xian"></div>
+        <div class="tu"></div>
+        <div class="lujing">
+            <div class="lujings">
+                <a href="#">师资队伍</a>
+                 | 
+                <a href="#">会计系</a>
+            </div>
+        </div>
+        <div class="content">
+            <div class="leftc">
+                <img src="/Public/upload/touxiang/11112017025.jpg" alt="" width="270">
+            </div>
+            <div class="rightc">
+                <div class="rheader">
+                    <p class="xm">郝 颖</p>
+                    <p class="zhiw">教授、博士生导师；国资国企研究中心主任</p>
+                    <p class="tel"><strong style="display:block;width:100px;float:left;">电话</strong>：010-58801867</p> 
+                 <p class="tel"><strong style="display:block;width:100px;float:left;">E-mail</strong>：haoying@bnu.edu.cn</p>
+                 <p class="tel"><strong style="display:block;width:100px;float:left;">Office hour</strong>：周一下午</p>
+                 <p class="tel"><strong style="display:block;width:100px;float:left;">系所中心</strong>：会计系</p>
+              </div>
+			  <div class="grjj">
+                    <p class="jjh">个人简历</p>
+                    <div class="bks1" id="jjc"><p style="font-family: " microsoft="" yahei="" font-size:16px=""></p><p><span style="font-family: SimSun;"><span style="font-size:16px;">郝颖，男，北京师范大学教授，博士生导师，院学术委员会委员，国资国企研究中心主任。清华大学经济管理学院博士后，美国哥伦比亚大学商学院访问学者。国家自然科学基金通讯评审专家，教育部博士点基金通讯评审专家，全国会计领军人才（学术类），人力资源和社会保障部干部教育培训专家，中国会计学会对外学术交流委员会委员，中国对外经济贸易会计学会理事，中国总会计师协会财务管理委员会委员。多本国际高水平期刊与国内权威期刊审稿人。主要研究领域为：公司财务、资本市场与财务会计。</span></span></p><p><span style="font-family: SimSun;"><span style="font-size:16px;">作为项目负责人，主持了国家自然科学基金3项，教育部人文社科基金1项，省部级重点项目1项。作为第一获奖人，获第八届高等学校科学研究优秀成果奖青年奖（人文社会科学）。已独立出版专著两部。</span></span></p><p><span style="font-family: SimSun;"><span style="font-size:16px;">近年来，作为第一作者或通讯作者，在《Review of Accounting Studies》、《Financial Management》、《Pacific Basin Finance Journal》 &nbsp;、《International Review of Financial Analysis 》、《International Journal of Finance &amp; Economics》等国际高水平期刊发表论文十几篇。</span></span></p><p><span style="font-family: SimSun;"><span style="font-size:16px;">作为第一作者，近年来分别在《经济研究》、《管理世界》、《管理科学学报》、《金融研究》、《会计研究》、《南开管理评论》、《财经研究》等国内外高水平杂志上发表论文三十几篇</span></span></p><p><span style="font-family: SimSun;"><span style="font-size:16px;">多次参加美国财务金融协会年会（Financial Management Association Conference）、美国金融学年会（American Finance Association）、美国Review of Accounting Studies年会、欧洲财务金融协会年会（European Finance Association Conference）、澳洲财务金融与银行年会（Australasian Finance andBanking Conference）等国际高水平学术会议，并作学术报告。2020年获得Review of Accounting Studies (RAST) Conference 2019–Best Paper Award</span></span></p><p style="font-family: " microsoft="" yahei="" font-size:16px=""></p></div>
+                    
+                </div>				<div class="grjj">
+                    <p class="jjh">研究领域</p>
+                    <div class="bks1"><p><span style="font-family: SimSun;"><span style="font-size:16px;">公司财务、公司金融、财务会计、资本市场</span></span></p></div>
+                </div>				<div class="grjj">
+                    <p class="jjh">研究成果</p>
+                    <div class="bks1" id="jjc1"><p style="font-family: " microsoft="" yahei="" font-size:16px=""></p><p><strong><span style="font-family: SimSun;"><u><span style="font-size:16px;">1、英文期刊论文</span></u></span></strong></p><p><span style="font-family: SimSun;"><span style="font-size:16px;">[1] Xia Chen1, &nbsp;Qiang Cheng1, <strong>Ying Hao（CorrespondingAuthor）</strong>and Qiang Liu. GDP growth incentives and earningsmanagement: Evidence from China , Review of Accounting Studies ,2020, 25:1002–1039</span></span></p><p><span style="font-family: SimSun;"><span style="font-size:16px;">[2] <strong>Ying Hao,</strong> Danni Han, Chong Ning. Culturefrom overseas and corporate transparency: Evidence from China, InternationalJournal of Finance and Economics, 2020 , Accept.(SSCI),DOI: 10.1002/ijfe.1917</span></span></p><p><span style="font-family: SimSun;"><span style="font-size:16px;">[3] <strong>Ying Hao</strong> and Jing Lu. The Impact ofGovernment Intervention on Corporate Investment Allocations and Efficiency:Evidence from China，Financial Management，2018, 9,22(17):21~55，SSCI</span></span></p><p><span style="font-family: SimSun;"><span style="font-size:16px;">[4] <strong>Ying Hao</strong>, Shaofei Wang , Robin K. Chouand Kuan-Cheng Ko. Boom-Baby CEOs, Career Experience, and Risk Taking: ANatural Experiment Using Chinese CEO Growth Paths，International Review of Finance，2019, 3，51(05)：17-39，SSCI</span></span></p><p><span style="font-family: SimSun;"><span style="font-size:16px;">[5] <strong>Ying Hao</strong>, Robin K.Chouc, Kuan-Cheng Ko,Nien-TzuYang. The 52-week high, momentum, and investor sentiment, InternationalReview of Financial Analysis, 2018，6，57(02)：167-183，SSCI</span></span></p><p><span style="font-family: SimSun;"><span style="font-size:16px;">[6] <strong>Ying Hao</strong>, Hsiang-Hui Chu, Kuan-Cheng Ko.Momentum Strategies and Investor Sentiment in the REIT Market，International Review of Finance，2016，3，96(01)：41~71，SSCI</span></span></p><p><span style="font-family: SimSun;"><span style="font-size:16px;">[7] <strong>Ying Hao </strong>,Robin K. Chou ,Keng-Yu Ho andPei-Shih Weng .The impact of foreign institutional traders on price efficiency:Evidence from the Taiwan futures market，Pacific-Basin Finance Journal，2015，9，34(3)：24~42，SSCI</span></span></p><p><span style="font-family: SimSun;"><span style="font-size:16px;">[8] <strong>Ying Hao,</strong> Robin K. Chou, Keng-Yu Ho, andPei-Shih Weng. Market Return, Liquidity,and Trading Activity of Various TraderTypes in the Emerging Market: A Study of the TAIFEX，Asia-Pacific Journal of Financial Studies，2016, 45(1)：499~534，SSCI，</span></span></p><p><span style="font-family: SimSun;"><span style="font-size:16px;">[9] <strong>Ying Hao,</strong> Hsiang-Hui Chu, Keng-Yu Ho andKuan-Cheng K. The 52-week high and momentum in the Taiwan stock market:Anchoring or recency biases?，International Review of Economics and Finance，2016, 43：121~138，SSCI</span></span></p><p><span style="font-family: SimSun;"><span style="font-size:16px;">[10] Chong Ning, <strong>Ying Hao</strong>, Zhibo Liu, YutingLiu. Business Social Norms from Overseas and Corporate SocialResponsibility Performance: Evidence from China. Asia-PacificJournal of Accounting and Economics ·2019, Accept. SSCI,&nbsp; </span></span></p><p><span style="font-family: SimSun;"><span style="font-size:16px;">DOI: 10.1080/16081625.2019.1600416</span></span></p><p><span style="font-family: SimSun;"><span style="font-size:16px;">[11] Qinqin Wu, <strong>Ying Hao</strong>, Jing Lu. Airpollution, stock returns, and trading activities in China. Pacific-BasinFinance Journal , 2018, 51, 342-365，SSCI</span></span></p><p><span style="font-family: SimSun;"><span style="font-size:16px;">[12] Qinqin Wu, <strong>Ying Hao</strong>, Jing Lu. Investorsentiment, idiosyncratic risk, and mispricing of American Depository Receipt.Journal of International Financial Markets, Institutions and Money , 2017, 51,1-14，SSCI</span></span></p><p><span style="font-family: SimSun;"><span style="font-size:16px;">[13] Guanghua Xie, Jianlin Chen, <strong>Ying Hao</strong>&amp; Jing Lu. Economic Policy Uncertainty and Corporate Investment Behavior:Evidence from China’s Five- Year Plan Cycles. Emerging Markets Finance and Trade,2019, Accept. SSCI, DOI: 10.1080/1540496X.2019.1673160</span></span></p><p><span style="font-family: SimSun;"><span style="font-size:16px;">[14]Qiang Liu, <strong>Ying Hao（CorrespondingAuthor）</strong>, Yong Du, Yuning Xing. GDP competition andcorporate investment: Evidence from China. Pacific Economic Review, 2019,Accept. SSCI, DOI: 10.1111/1468-0106.12312</span></span></p><p><span style="font-family: SimSun;"><span style="font-size:16px;">[15]Danni Han , Qiang Liu , Zi Wei and <strong>Ying Hao. </strong>Arefemale CFOs trailblazers or sustainers? Evidence from industry growth prospectsin China. Asia-Pacific Journal of Accounting &amp; Economics, 2020, Accept.SSCI, DOI:10.1080/16081625.2020.1847150</span></span></p><p><span style="font-family: SimSun;"><span style="font-size:16px;">&nbsp;</span></span></p><p><strong><span style="font-family: SimSun;"><u><span style="font-size:16px;">2、中文期刊论文</span></u></span></strong></p><p><span style="font-family: SimSun;"><span style="font-size:16px;">[1] <strong>郝颖、</strong>黄雨秀、宁冲、葛国庆. 公司社会声望与高管薪酬：公共服务抑或职业声誉. 《金融研究》，2020年，第10期</span></span></p><p><span style="font-family: SimSun;"><span style="font-size:16px;">[2] <strong>郝颖</strong>、谢光华、石锐. 外部监管、在职消费与企业绩效. 《会计研究》, 2018年，第08期</span></span></p><p><span style="font-family: SimSun;"><span style="font-size:16px;">[3] <strong>郝颖</strong>、辛清泉. 地区差异、企业投资与经济增长质量. 《经济研究》, 2014年，第03期</span></span></p><p><span style="font-family: SimSun;"><span style="font-size:16px;">[4] <strong>郝颖</strong>、刘星. 资本投向、利益攫取与挤占效应. 《管理世界》，2009年，第05期</span></span></p><p><span style="font-family: SimSun;"><span style="font-size:16px;">[5] <strong>郝颖</strong>、林朝南. 股权控制、投资规模与利益获取. 《管理科学学报》，2010年，第07期</span></span></p><p><span style="font-family: SimSun;"><span style="font-size:16px;">[6] <strong>郝颖</strong>、李晓欧. 终极控制、资本投向与配置绩效. 《管理科学学报》，2012年，第04期</span></span></p><p><span style="font-family: SimSun;"><span style="font-size:16px;">[7] <strong>郝颖</strong>, 刘星. 政府干预、资本投向与结构效率.《管理科学学报》，2011年，第06期</span></span></p><p><span style="font-family: SimSun;"><span style="font-size:16px;">[8] <strong>郝颖</strong>、刘星. 大股东自利动机下的资本投资与配置效率研究. 《中国管理科学》，2011年，第1期</span></span></p><p><span style="font-family: SimSun;"><span style="font-size:16px;">[9] <strong>郝颖</strong>、林朝南. 大股东控制下的资本投资与利益攫取研究. 《南开管理评论》，2009年，第02期</span></span></p><p><span style="font-family: SimSun;"><span style="font-size:16px;">[10] <strong>郝颖</strong>、林朝南. 资本投资控制权的私有利益攫取研究：评述与探析. 《管理评论》，2010年，第02期</span></span></p><p><span style="font-family: SimSun;"><span style="font-size:16px;">[11] <strong>郝颖</strong>、刘星. 基于公司治理视角的企业投资行为研究.《财经科学》，2010年，第09期</span></span></p><p><span style="font-family: SimSun;"><span style="font-size:16px;">[12] <strong>郝颖</strong>、刘星. 股票市价、所有权特征与公司投资行为研究——基于股权融资依赖视角.《管理学报》，2010年，第05期</span></span></p><p><span style="font-family: SimSun;"><span style="font-size:16px;">[13] <strong>郝颖</strong>、刘星. 基于控制权私利的投资效率与挤占效应研究. 《科研管理》，2010年，第03期</span></span></p><p><span style="font-family: SimSun;"><span style="font-size:16px;">[14] <strong>郝颖</strong>、刘星. 市场化进程与上市公司R＆D投资：基于产权特征视角.《科研管理》，2010年，第04期</span></span></p><p><span style="font-family: SimSun;"><span style="font-size:16px;">[15] <strong>郝颖</strong>、林朝南. 资本投资、控制特征与利益攫取.《财经科学》，2009年，第06期</span></span></p><p><span style="font-family: SimSun;"><span style="font-size:16px;">[16] <strong>郝颖</strong>. 基于委托代理理论的企业投资研究综述.《管理学报》，2010年，第07期</span></span></p><p><span style="font-family: SimSun;"><span style="font-size:16px;">[17] <strong>郝颖</strong>、林朝南. 基于不同形态投资的控制权私利攫取研究前沿探析. 《外国经济与管理》，2009年，第06期</span></span></p><p><span style="font-family: SimSun;"><span style="font-size:16px;">[18] <strong>郝颖</strong>、刘星. 股权融资依赖与公司投资行为——基于行为公司财务视角.《经济与管理研究》，2009年，第05期</span></span></p><p><span style="font-family: SimSun;"><span style="font-size:16px;">[19] <strong>郝颖</strong>、刘星. 股权融资与上市公司投资行为：基于非有效市场视角.《科研管理》，2008年，第04期</span></span></p><p><span style="font-family: SimSun;"><span style="font-size:16px;">[20] <strong>郝颖</strong>，伍良华. 基于内部人寻租的扭曲性过度投资行为研究. 《系统工程学报》，2007年，第02期</span></span></p><p><span style="font-family: SimSun;"><span style="font-size:16px;">[21] <strong>郝颖</strong>，林朝南. 我国上市公司高管人员过度自信与投资决策的实证研究. 《中国管理科学》，2005年，第05期</span></span></p><p><span style="font-family: SimSun;"><span style="font-size:16px;">[22] <strong>郝颖</strong>，林朝南.上市公司大股东控制下的资本配置行为研究——基于控制权收益视角的实证分析. 《财经研究》，2006年，第08期</span></span></p><p><span style="font-family: SimSun;"><span style="font-size:16px;">[23] 谢光华, <strong>郝颖</strong>, 靳姝菲. 风险投资对政府补贴的创新激励有效性的影响研究. 《管理学报》.&nbsp; 2018年，第09期</span></span></p><p><span style="font-family: SimSun;"><span style="font-size:16px;">[24] 谢光华, <strong>郝颖</strong>, 李思乐. 行业集中度、分析师行业专长与预测准确性. 《外国经济与管理》, 2019年，第02期</span></span></p><p><span style="font-family: SimSun;"><span style="font-size:16px;">[25] 窦炜 ,Sun Hua, <strong>郝颖. </strong>“高溢价”还是“高质量”？——我国上市公司并购重组业绩承诺可靠性研究. 《经济管理》, 2019年，第02期</span></span></p><p><span style="font-family: SimSun;"><span style="font-size:16px;">[26] 冉戎, <strong>郝颖</strong>. 控股股东利益动机、成长期权与投资时机策,《管理科学学报》，2012年，第07期</span></span></p><p><span style="font-family: SimSun;"><span style="font-size:16px;">[27] 辛清泉、孔东民、<strong>郝颖</strong>. 公司透明度与股价波动性，《金融研究》, 2014年第11期</span></span></p><p><span style="font-family: SimSun;"><span style="font-size:16px;">[28] 刘星，张超，<strong>郝颖</strong>. 货币政策对企业投资存在需求影响吗？——一项投资一现金流敏感性的研究，《经济科学》2014年第4期</span></span></p><p><span style="font-family: SimSun;"><span style="font-size:16px;">[29] 刘星, 代彬, <strong>郝颖</strong>. 高管权力与公司治理效率——基于国有上市公司高管变更的视角, 《管理工程学报》, 2012年，第01期</span></span></p><p><span style="font-family: SimSun;"><span style="font-size:16px;">[30] 代彬; 彭程; <strong>郝颖</strong> .国企高管控制权、审计监督与会计信息透明度, 《财经研究》，2011年，第11期</span></span></p><p><span style="font-family: SimSun;"><span style="font-size:16px;">[31] 付强; <strong>郝颖</strong>. 终极控制人、控制权转移与投资效率——基于上市公司并购事件的研究, 《经济与管理研究》， 2012年，第11期&nbsp; </span></span></p><p><span style="font-family: SimSun;"><span style="font-size:16px;">[32] 冉戎; <strong>郝颖</strong>. 终极控制、利益一致性与公司价值, 《管理科学学报》，2011年，第7期</span></span></p><p><span style="font-family: SimSun;"><span style="font-size:16px;">[33] 刘星，<strong>郝颖</strong>. 西部地区投资增长及其结构优化：重庆例证 .《改革》, 2006年第6期</span></span></p><p><span style="font-family: SimSun;"><span style="font-size:16px;">[34] 林朝南，刘星，<strong>郝颖</strong>. 行业特征与控制权私利：来自中国上市公司的经验证据. 《经济科学》, 2006年第3期</span></span></p><p><span style="font-family: SimSun;"><span style="font-size:16px;">&nbsp;</span></span></p><p><strong><span style="font-family: SimSun;"><u><span style="font-size:16px;">3、学术专著</span></u></span></strong></p><p><span style="font-family: SimSun;"><span style="font-size:16px;">[1] <strong>郝颖.</strong>大股东控制下的中国上市公司投资行为特征研究. 中国经济出版社，2009年5月，22万字</span></span></p><p><span style="font-family: SimSun;"><span style="font-size:16px;">[2] <strong>郝颖.</strong>产权控制、资本投向与配置效率. 中国经济出版社，2011年8月，18万字</span></span></p><p><span style="font-family: SimSun;"><span style="font-size:16px;">&nbsp;</span></span></p><p><strong><span style="font-family: SimSun;"><u><span style="font-size:16px;">4、学术交流与会议报告</span></u></span></strong></p><p><strong><span style="font-family: SimSun;"><u><span style="font-size:16px;">（1）近五年参加的国内外学术会议</span></u></span></strong></p><p><span style="font-family: SimSun;"><span style="font-size:16px;">[1] &nbsp;2020Abacus Special Issue Conference，Moderator，Online, June 6, 2020</span></span></p><p><span style="font-family: SimSun;"><span style="font-size:16px;">[2] 2019 Review of Accounting Studies (RAST) Conference,Presentations ,Singapore ,December 14，2019</span></span></p><p><span style="font-family: SimSun;"><span style="font-size:16px;">[3] 首届中国会计学者学术论坛，学术报告，2019年5月，北京大学，北京。</span></span></p><p><span style="font-family: SimSun;"><span style="font-size:16px;">[4] 第九届中国金融研究论坛，学术报告，2018年12 月，中国人民大学，北京。</span></span></p><p><span style="font-family: SimSun;"><span style="font-size:16px;">[5] 第四届文化与经济论坛，学术报告，2018年10月，中山大学，广州。</span></span></p><p><span style="font-family: SimSun;"><span style="font-size:16px;">[6] 第一届财务与会计高端学术论坛，学术报告，2018年12月，山东大学，济南。</span></span></p><p><span style="font-family: SimSun;"><span style="font-size:16px;">[7] 2017 年度 China Journal of Accounting Studies , 研讨会，学术报告, 2017年11 月，清华大学，北京。</span></span></p><p><span style="font-family: SimSun;"><span style="font-size:16px;">[8] 第十五届中国实证会计国际研讨会，学术报告，2016 年12 月，东北财经大学，大连。</span></span></p><p><span style="font-family: SimSun;"><span style="font-size:16px;">[9]第五届宏观经济政策与微观企业行为学术研讨会，学术报告，2016 年11 月，南京大学，南京。</span></span></p><p><span style="font-family: SimSun;"><span style="font-size:16px;">[10] The 25th European Finance ManagementAssociation (EFMA) Annual Conference, Presentations ,Basel, Switzerland , June30-July 2，2016</span></span></p><p><span style="font-family: SimSun;"><span style="font-size:16px;">[11] 2015 Financial Management Association (FMA)Annual Meeting, Presentations, Orlando,USA, December 15-17, 2015</span></span></p><p><span style="font-family: SimSun;"><span style="font-size:16px;">[12] 2015 Annual Meeting of the Asian FinanceAssociation，Presentation,Changsha, Hunan, China, June 29-July 2, 2015</span></span></p><p><span style="font-family: SimSun;"><span style="font-size:16px;">[13] 27th Australasian Finance &amp; BankingConference，Presentation,Sydney，AustraliaDecember 19-22, 2014</span></span></p><p><span style="font-family: SimSun;"><span style="font-size:16px;">&nbsp;</span></span></p><p><strong><span style="font-family: SimSun;"><u><span style="font-size:16px;">（2）国内外学术报告与研讨</span></u></span></strong></p><p><span style="font-family: SimSun;"><span style="font-size:16px;">[1] 中央财经大学，学术报告与研讨，2019 年1 月7日；</span></span></p><p><span style="font-family: SimSun;"><span style="font-size:16px;">[2] 西南财经大学，学术报告与研讨，2018 年11 月21日；</span></span></p><p><span style="font-family: SimSun;"><span style="font-size:16px;">[3] 四川大学，学术报告与研讨，2018 年11 月22日；</span></span></p><p><span style="font-family: SimSun;"><span style="font-size:16px;">[4] 西北工业大学，学术报告与研讨，2018 年6 月15日；</span></span></p><p><span style="font-family: SimSun;"><span style="font-size:16px;">[5] 上海交通大学，学术报告与研讨，2017 年11 月30 日；</span></span></p><p><span style="font-family: SimSun;"><span style="font-size:16px;">[6] 复旦大学，学术报告与研讨，2017 年11 月29 日；</span></span></p><p><span style="font-family: SimSun;"><span style="font-size:16px;">[7] 苏州大学，学术报告与研讨，2017 年10 月14 日</span></span></p><p><span style="font-family: SimSun;"><span style="font-size:16px;">[8] 山东大学，学术报告与研讨，2017 年10 月20 日</span></span></p><p><span style="font-family: SimSun;"><span style="font-size:16px;">[9] 清华大学，学术报告与研讨，2017 年9 月14 日</span></span></p><p><span style="font-family: SimSun;"><span style="font-size:16px;">[10] 暨南大学，学术报告与研讨，2016 年5 月13 日</span></span></p><p><span style="font-family: SimSun;"><span style="font-size:16px;">[11] 武汉大学，学术报告与研讨，2015 年12 月17 日</span></span></p><p><span style="font-family: SimSun;"><span style="font-size:16px;">[12] 中南财经政法大学，学术报告与研讨，2015 年12 月17 日</span></span></p><p><span style="font-family: SimSun;"><span style="font-size:16px;">[13] Columbia University, Short-Term Visiting,Seminars and Workshops，New York, USA, December , 2015</span></span></p><p><span style="font-family: SimSun;"><span style="font-size:16px;">[14] Cranfield University, Short-Term Visiting,Seminars and Workshop , the United Kingdom，September , 2015</span></span></p><p><span style="font-family: SimSun;"><span style="font-size:16px;">[15] 中国人民大学，学术报告与研讨，2015 年6 月29 日</span></span></p><p><span style="font-family: SimSun;"><span style="font-size:16px;">[16] 上海财经大学，学术报告与研讨，2015 年6 月12 日</span></span></p><p><span style="font-family: SimSun;"><span style="font-size:16px;">[17] 南京大学，学术报告与研讨，2015 年5 月7 日</span></span></p><p><span style="font-family: SimSun;"><span style="font-size:16px;">[18] 台湾大学，学术报告与研讨，2015 年2 月</span></span></p><p><span style="font-family: SimSun;"><span style="font-size:16px;">[19] 台湾政治大学，学术报告与研讨，2015 年2 月</span></span></p><p><span style="font-family: SimSun;"><span style="font-size:16px;">[20] 香港中文大学会计学院联合学术研讨会，学术报告与点评论文，2014 年12 月</span></span></p><p><span style="font-family: SimSun;"><span style="font-size:16px;">[21] 中山大学，学术报告与研讨，2014 年12 月1 日</span></span></p><p><span style="font-family: SimSun;"><span style="font-size:16px;">[22] 厦门大学，学术报告与研讨，2014 年11 月16 日</span></span></p><p><span style="font-family: SimSun;"><span style="font-size:16px;">[23] Columbia University, Seminars and Workshop，New York, USA, March 2014</span></span></p><p><span style="font-family: SimSun;"><span style="font-size:16px;">[24] University of Missouri, Seminars and Workshop，Columbia，USA, February 2014</span></span></p><p><span style="font-family: SimSun;"><span style="font-size:16px;">[25] University of Central Florida，Seminars and Workshop，Orlando，USA, January 2014</span></span></p><p><span style="font-family: SimSun;"><span style="font-size:16px;">[26] George Mason University，Seminars and Workshop , Virginia, USA, December 2013</span></span></p><p style="font-family: " microsoft="" yahei="" font-size:16px=""></p></div>
+                    
+                </div>				<div class="grjj">
+                    <p class="jjh">研究课题</p>
+                  
+                    <div class="bks1"><p style="font-family: " microsoft="" yahei="" font-size:16px=""></p><p><strong><span style="font-family: SimSun;"><u><span style="font-size:16px;">1、主持的科研项目</span></u></span></strong></p><p><span style="font-family: SimSun;"><span style="font-size:16px;">[1] 国家自然科学基金项目“高管成长经历、职业路径与公司财务行为：基于改革开放场景的研究”（批号: 71872017），（项目负责人）</span></span></p><p><span style="font-family: SimSun;"><span style="font-size:16px;">[2] 国家自然科学基金项目“政府干预动机下的企业投资取向与配置结构特征研究”（批号:71372137），（项目负责人）</span></span></p><p><span style="font-family: SimSun;"><span style="font-size:16px;">[3] 国家自然科学基金项目“大股东自利动机与上市公司资本投向研究”（批号:70902030），（项目负责人，已结题，评定为优）</span></span></p><p><span style="font-family: SimSun;"><span style="font-size:16px;">[4] 教育部人文社科基金“股权分置改革后的大股东自利机制与资本投资选择研究”（批号09YJC630242），（项目负责人，已结题）</span></span></p><p><span style="font-family: SimSun;"><span style="font-size:16px;">[5] 中国博士后基金特别资助项目“政府控制下的企业投资与配置绩效研究”（批号201104088）.（项目负责人，已结题）</span></span></p><p><span style="font-family: SimSun;"><span style="font-size:16px;">[6] 重庆市重大决策咨询研究课题（重点项目）“重庆本地民营企业发展存在问题与对策研究”（批号2013CQ006），（项目负责人，已结题）</span></span></p><p><span style="font-family: SimSun;"><span style="font-size:16px;">&nbsp;</span></span></p><p><strong><span style="font-family: SimSun;"><u><span style="font-size:16px;">2、参研的科研项目</span></u></span></strong></p><p><span style="font-family: SimSun;"><span style="font-size:16px;">[1]国家自然科学基金重点项目. 制度环境、公司财务政策选择和动态演化研究。批号: 71232004. （主要执笔人，子课题负责人）</span></span></p><p><span style="font-family: SimSun;"><span style="font-size:16px;">[2]国家自然科学基金项目.中国式员工持股计划：实施动机、价值效应及作用机制。批号: 71872014. （第二主研）</span></span></p><p><span style="font-family: SimSun;"><span style="font-size:16px;">[3]国家自然科学基金项目.基于高频限价订单簿的证券交易行为对市场质量影响的研究。批号: 71803012. （第一主研）</span></span></p><p><span style="font-family: SimSun;"><span style="font-size:16px;">[4]国家自然科学基金项目. 产权控制路径下的资本投资与配置效率研究。批号: 71172082. （第一主研）</span></span></p><p><span style="font-family: SimSun;"><span style="font-size:16px;">[5]国家自然科学基金项目. 交叉上市、政府控制与公司治理之演进。批号: 70802067. （第二主研，主要完成人）</span></span></p><p><span style="font-family: SimSun;"><span style="font-size:16px;">[6]国家自然科学基金项目. 大股东控制下的中国上市公司资本配置行为研究。批号: 70772100. （第三主研</span></span><span style="font-family:SimSun;font-size:12px;">）</span></p><p style="font-family: " microsoft="" yahei="" font-size:16px=""></p></div>
+                    
+                </div>				<div class="grjj">
+                    <p class="jjh">学生情况</p>
+                    <div class="bks1"><span style="font-family: " microsoft="" yahei="" font-size:16px=""></span><p><span style="font-family: SimSun;"><span style="font-size:16px;">招收博士研究生、学术型硕士研究生、专业学位研究生（MBA）</span></span></p><br /></div>
+                    
+                </div>				<div class="grjj">
+                    <p class="jjh">教授课程</p>
+                    <div class="bks1"><p style="font-family: " microsoft="" yahei="" font-size:16px=""></p><p><span style="font-family: SimSun;"><span style="font-size:16px;">1、为本科生讲授：会计学原理；公司财务（含双语）</span></span></p><p><span style="font-family: SimSun;"><span style="font-size:16px;">2、为硕士研究生讲授：公司财务；会计理论；财务理论</span></span></p><p><span style="font-family: SimSun;"><span style="font-size:16px;">3、为博士研究生讲授：高级财务理论与方法</span></span></p><p><span style="font-family: SimSun;"><span style="font-size:16px;">4、为MBA、EDP、政府机构、企业单位讲授：公司财务；公司治理；资本市场；企业投融资管理、企业内部控制等课程。</span></span></p><p style="font-family: " microsoft="" yahei="" font-size:16px=""></p></div>
+                    
+                </div>            </div>
+        </div>
+         <footer style="overflow: hidden;">
+            <div class="footers">
+                <div class="footersl">
+                    <img src="http://bs.bnu.edu.cn/newweb/images/ewm.jpg" alt="" class="imgewm">
+                    <div class="footerxx">
+                        <p>Copyright © 2020 北京师范大学经济与工商管理学院</p>
+                        <p><i class="fas fa-map-marker-alt"></i> 地址：北京市新街口外大街19号</p>
+                        <p><i class="fas fa-portrait"></i> 传真：010-58801867</p>
+                        <p><i class="fas fa-phone"></i> 电话：010-58801867</p>
+                        <p><i class="fas fa-envelope"></i> 邮编：100875</p>
+                    </div>
+                </div>
+                <img src="http://bs.bnu.edu.cn/newweb/images/db.png" alt="" width="140" class="dbimg">
+                <img src="http://bs.bnu.edu.cn/newweb/images/yx.png" alt="" class="yuanxun">
+            </div>
+        </footer>
+    </div>
+	<div class="share">
+		  <div id="appgame-leftside-share">
+	        <div class="appgame-leftside-share rwt_share" id="rwt_share">
+	         
+	        <!--<a class="appgame-leftside-search" data-cmd="search" title="search"  href="javascript:void(0);" onclick="opens('id')">search</a> --> <!--<div class="searchs" id="id">
+	         <form name="dataForm" action="/cms/search/searchResults.jsp" target="_blank" method="post" accept-Charset="utf-8"  onsubmit="document.charset='utf-8';">
+			        	<p>
+			        		<input name="siteID" size="4" value="127" type = "hidden">
+			        		<input type="text" name="query" id="search" class="searchInput" value="输入搜索词">
+			        		<button type="submit"></button>
+			        	</p>
+			        	</form>
+			        </div>-->
+			        <!-- <a class="appgame-leftside-weixin" data-cmd="weixin" title="">微信</a> -->
+                    
+			        <!-- <a class="appgame-leftside-qzone" data-cmd="qzone" title="">qq空间</a>
+			        
+			        <a class="appgame-leftside-tsina" data-cmd="tsina" title="">微博</a> -->			    </div>
+			        <a class="appgame-leftside-top" onclick="gotoTPoint()"></a>			</div>
+			        
+		</div>
+</body>
+<script src="http://gh.bnu.edu.cn/js/jquery-1.9.0.min.js"></script>
+<script src="http://gh.bnu.edu.cn/js/share.min.js"></script>
+<script>
+    var dj=document.getElementById('dianji');
+    var jjc=document.getElementById('jjc');
+    var dj1=document.getElementById('dianji1');
+    var jjc1=document.getElementById('jjc1');
+    var a=1;
+    function zhedie(m,n){
+        m.onclick=function(){
+            if(a==1){
+                n.className='jjc';
+                m.className='dianji1'
+                a=0;
+            }else{
+                n.className='jjc1';
+                m.className='dianji'
+                a=1;
+            }
+        }
+    }
+    zhedie(dj,jjc);
+    zhedie(dj1,jjc1);
+	
+	
+</script>
+<script>
+
+	
+	
+    
+
+    /*回到顶部*/
+	$(function(){
+	 	$(window).resize(function(){
+						var h = $(window).height();
+						$('.goTop').css('top',h-60);
+						$(window).scroll(function(){				
+							var scrollTop = $(document).scrollTop();					  
+							$('.goTop').stop().animate({
+								top: h + scrollTop-60
+							},300);
+						});
+		}).resize();
+		});
+	//gotop
+
+			$('.goTop').click(function(){
+
+				$('body,html').stop().animate({scrollTop:0});
+
+				return false;
+
+			});
+	
+	function gotoTPoint(){
+		$("html,body").animate({scrollTop:0},500);
+	}
+</script>
+</html>

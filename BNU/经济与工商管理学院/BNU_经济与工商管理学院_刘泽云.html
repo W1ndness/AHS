@@ -1,0 +1,495 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0">
+    <title>北京师范大学工商与经济管理学院</title>
+    <link rel="stylesheet" href="http://bs.bnu.edu.cn/new-ver-css/reset.css">
+    <link rel="stylesheet" href="http://bs.bnu.edu.cn/new-ver-css/index.css">
+	<link rel="stylesheet" href="http://bs.bnu.edu.cn/new-ver-css/xyslist.css">
+	<link rel="stylesheet" href="http://bs.bnu.edu.cn/new-ver-css/xys-tf.css">
+    <style>
+        .container{
+            width:100%;
+            height: auto;
+            overflow: hidden;
+        }
+        .header{
+            width:100%;
+            height:116px;
+            background:#EFF8FF;
+        }
+        .logo1{
+            width:1200px!important;
+            margin:0 auto;
+            position:relative;
+            float: none;
+			display:block;
+        }
+        .logo2{
+            float:right;
+        }
+        .logo1 p{
+            position:absolute;
+            top:5px;
+            right:5px;
+            font-size:13px;
+        }
+        .logo1 p:hover{
+            color:#112769;
+        }
+        .tu{
+            width:100%;
+            height:240px;
+            background:url('http://bs.bnu.edu.cn/newweb/grzy/images/tu.jpg') no-repeat top center;
+            background-size: 100%;
+        }
+        .lujing{
+            width:1200px;
+            height:58px;
+            margin:0 auto;
+            border-bottom:1px solid #aaa;
+            overflow:hidden;
+        }
+        .lujings{
+            margin:24px 0 0 0;
+            font-size:14px;
+        }
+        .content{
+            color:#333;
+            width:1200px;
+/*            height:2000px;*/
+            margin:0 auto;
+            margin-top:40px;
+/*            background:#c4c4c4;*/
+        }
+        
+        .xian{
+            width:100%;
+            height:8px;
+            background:#9A0812;
+        }
+        
+        .leftc{
+            float:left;
+        }
+        .rightc{
+            float:left;
+            margin-left:50px;
+/*            background:#666;*/
+            width:880px;
+/*            height:1000px;*/
+        }
+        .rheader{
+            width:880px;
+            height:210px;
+/*            background:yellow;*/
+        }
+        .xm{
+            font-size:30px;
+            height:40px;
+/*            border-bottom:4px solid #9A0812;*/
+            width:auto;
+            float:left;
+            line-height:40px;
+			margin-right:30px;
+        }
+        .zhiw{
+            font-size:18px;
+            height:40px;
+            line-height:50px;
+            margin-bottom:30px;
+        }
+        .tel{
+                font-size: 16px;
+                margin-top: 10px;
+                line-height: 20px;
+        }
+        .grjj{
+/*            height:300px;*/
+            width:880px;
+/*            background:yellow;*/
+            padding-bottom:40px;
+        }
+        .jjh{
+                font-size: 20px;
+                border-bottom: 1px solid #cecece;
+                height: 40px;
+                line-height: 40px;
+                padding-left: 30px;
+                background: url(http://bs.bnu.edu.cn/newweb/grzy/images/zw.png) no-repeat 0 16px;
+        }
+        
+        .jjc{
+            font-size:14px;
+            margin-top:30px;
+           
+            line-height:28px;
+            overflow:hidden;
+            text-align: justify;
+            text-justify:inter-ideograph;
+        }
+        .jjc1{
+            height:225px;
+            font-size:14px;
+            margin-top:30px;
+            
+            line-height:28px;
+            overflow:hidden;
+            text-align: justify;
+            text-justify:inter-ideograph;
+        }
+        
+        .dianji1{
+                background: url(http://bs.bnu.edu.cn/newweb/grzy/images/zw.png) no-repeat 0 -50px;
+                width: 13px;
+                height: 13px;
+                cursor: pointer;
+                display: block;
+            margin-top: 20px;
+            transition: all .2s linear;
+        }
+        .dianji1:hover{
+            background: url(http://bs.bnu.edu.cn/newweb/grzy/images/zw.png) no-repeat 0 -64px;
+        }
+        
+        .dianji{
+                background: url(http://bs.bnu.edu.cn/newweb/grzy/images/zw.png) no-repeat 0 -24px;
+                height: 13px;
+                cursor: pointer;
+                display: block;
+            margin-top: 20px;
+            transition: all .2s linear;
+        }
+        .dianji:hover{
+            background: url(http://bs.bnu.edu.cn/newweb/grzy/images/zw.png) no-repeat 0 -37px;
+        }
+        #jjc1{
+            text-indent:0em;
+        }
+        
+        .bks{
+            font-size:14px;
+            font-weight: 800;
+            margin-top:30px;
+            height:auto;
+            line-height:36px;
+        }
+        .bks1{
+            font-size:14px;
+            margin-top:30px;
+            height:auto;
+            line-height:36px;
+        }
+        .bksc{
+            height:36px;
+            line-height:36px;
+            font-size:14px;
+        }
+        
+        .yanzheng{
+            width:1200px;
+            height:100px;
+            margin:0 auto;
+        }
+        .yanzheng img{
+            display:block;
+            margin-top:26px;
+            float:left;
+        }
+		
+#appgame-leftside-share{width:42px; height:216px; position: fixed;bottom: 30px;right: 30px; z-index:9999;}
+.appgame-leftside-share{width:42px; height:259px;}
+#appgame-leftside-share a{display:block; width:42px; height:44px; background-color:#e6e6e6; z-index:1; position:absolute; left:0; box-sizing:border-box; -moz-box-sizing:border-box; border:1px #ddd solid; background-image:url(http://gh.bnu.edu.cn/images/share-icons.png); background-repeat:no-repeat; margin:0;  transition:0.4s; -webkit-transition:0.4s; -moz-transition:0.4s;}
+#appgame-leftside-share a:hover{background-color:#fff; border:1px #eee solid; z-index:2;}
+/*.appgame-leftside-weixin{top:0; background-position:-88px 0;}
+.appgame-leftside-weixin:hover{background-position:0px 0;}
+.appgame-leftside-qzone{top:43px; background-position:-88px -44px;}
+.appgame-leftside-qzone:hover{background-position:0px -44px;}*/
+.appgame-leftside-search{top:86px; background-position:-93px -89px;}
+.appgame-leftside-search:hover{background-position:-5px -86px;}
+.appgame-leftside-weixin{top:129px; background-position:-88px 0px;}
+.appgame-leftside-weixin:hover{background-position:0px 0px;}
+/*.appgame-leftside-fbook{top:172px; background-position:-88px -176px;}
+.appgame-leftside-fbook:hover{background-position:0px -176px;}
+.appgame-leftside-twi{top:215px; background-position:-88px -220px;}
+.appgame-leftside-twi:hover{background-position:0px -220px;}*/
+#appgame-leftside-share .appgame-leftside-top{background-image:url(http://gh.bnu.edu.cn/images/leftnav-off.png); background-position:-1px -395px; top:130px; cursor:pointer;}
+
+.rwt_share {
+/*	overflow:hidden;*/
+	float:left;
+	position:relative;
+}
+.rwt_share a {
+	display:inline-block;
+	margin-right:10px;
+	text-indent:-9999px;
+	margin-bottom:10px;
+	width:24px;
+	height:24px;
+	overflow:hidden;
+	cursor:pointer;
+	float:left;
+	font-size:12px;
+}
+.rwts_weixin {
+	background-position:0 -1612px;
+}
+.rwts_tsina {
+	background-position:0 -104px;
+}
+.rwts_tqq {
+	background-position:0 -260px;
+}
+.rwts_qzone {
+	background-position:0 -52px;
+}
+.rwts_sqq {
+	background-position:0 -2652px;
+}
+.rwts_tieba {
+	background-position:0 -728px;
+}
+.rwts_renren {
+	background-position:0 -208px;
+}
+.rwts_kaixin001 {
+	background-position:0 -312px;
+}
+.rwts_tqf {
+	background-position:0 -364px;
+}
+.rwts_douban {
+	background-position:0 -468px;
+}
+.rwts_twi {
+	background-position:0 -1404px;
+}
+.rwts_fbook {
+	background-position:0 -1352px;
+}
+.rwts_ty {
+	background-position:0 -1196px;
+}
+.rwts_mogujie {
+	background-position:0 -1768px;
+}
+.rwts_meilishuo {
+	background-position:0 -1716px;
+}
+.rwts_huaban {
+	background-position:0 -1872px;
+}
+.rwts_hi {
+	background-position:0 -416px;
+}
+.rwts_tsohu {
+	background-position:0 -520px;
+}
+.rwts_more {
+	background-position:0 0;
+}
+.rwt_share_wxShow_code>img {
+	width:100%;
+}
+.bks1 li{
+	list-style:disc;
+}
+@media screen and (max-width: 1200px){
+	.logo1{
+		width:100%!important;
+	}
+	.leftc img{
+		width:50%!important;
+		height:50%!important;
+	}
+	.logo2{display:none;}
+	.lujing{
+		width:90%;
+	}
+	.content{
+		width:90%;
+	}
+	.leftc{
+		float:none;
+		
+	}
+	.tu{display:none;}
+	
+	.rightc{
+		float:none;
+		width:100%;
+		margin-left:0px;
+	}
+	.footers{width:100%;}
+	.rheader{width:100%;}
+	.grjj{width:100%;}
+}
+@media screen and (max-width: 600px){
+.l3{width:95%;}
+.share{display:none;}
+.leftc img{
+		width:70%!important;
+		height:70%!important;
+	}
+}
+  
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo1">
+                <img src="http://bs.bnu.edu.cn/newweb/grzy/images/logo.png" alt="" class="l3" style="margin-top: 25px;float:left;">
+                <img src="http://bs.bnu.edu.cn/newweb/grzy/images/logo2.png" alt="" class="logo2">
+                <a href="http://bs.bnu.edu.cn/englishversion/facultyresearch/fulltimefaculty/azmsy/119687.html"><p>ENGLISH VERSION</p></a>
+            </div>
+        </div>
+        <div class="xian"></div>
+        <div class="tu"></div>
+        <div class="lujing">
+            <div class="lujings">
+                <a href="#">师资队伍</a>
+                 | 
+                <a href="#">经济系</a>
+            </div>
+        </div>
+        <div class="content">
+            <div class="leftc">
+                <img src="/Public/upload/touxiang/03094.jpg" alt="" width="270">
+            </div>
+            <div class="rightc">
+                <div class="rheader">
+                    <p class="xm">刘泽云</p>
+                    <p class="zhiw">教授，博士生导师</p>
+                    <p class="tel"><strong style="display:block;width:100px;float:left;">电话</strong>：010-58802167</p> 
+                 <p class="tel"><strong style="display:block;width:100px;float:left;">E-mail</strong>：zeyun_liu@bnu.edu.cn</p>
+                 <p class="tel"><strong style="display:block;width:100px;float:left;">Office hour</strong>：周三14：00-16：00</p>
+                 <p class="tel"><strong style="display:block;width:100px;float:left;">系所中心</strong>：经济系</p>
+              </div>
+			  <div class="grjj">
+                    <p class="jjh">个人简历</p>
+                    <div class="bks1" id="jjc"><div style="top: 0px;">﻿﻿<span style="" 16px="" yahei="" microsoft=""><strong><span style="font-size:16px;">教育背景：</span></strong></span></div><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei'; font-size: 16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">1993-1997年：北京师范大学物理系，理学学士</p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei'; font-size: 16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">1997-2000年：北京师范大学教育学院，管理学硕士</p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei'; font-size: 16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">2000-2003年：北京师范大学经济与工商管理学院，管理学博士</p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei'; font-size: 16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;"><br /></p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei'; font-size: 16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;"><strong>工作经历：</strong></p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei'; font-size: 16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">2003-2006年：北京师范大学经济与工商管理学院，讲师</p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei'; font-size: 16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">2006-2015年：北京师范大学经济与工商管理学院，副教授</p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei'; font-size: 16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">2015年-：北京师范大学经济与工商管理学院，教授</p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei'; font-size: 16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">2002年：香港中文大学教育学院研究助理</p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei'; font-size: 16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">2006年：美国耶鲁大学东亚研究所访问学者</p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei'; font-size: 16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">2009年：香港中文大学中国研究服务中心访问学者</p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei'; font-size: 16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;"><br /></p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei'; font-size: 16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;"></p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei'; font-size: 16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;"><strong>社会兼职：</strong></p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei'; font-size: 16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">2004-2015年： 中国教育经济学会秘书长、理事</p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei'; font-size: 16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">2015年-： 中国教育经济学会理事</p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei'; font-size: 16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;"><span style="display: inline !important; float: none; background-color: transparent; color: rgb(0, 0, 0); font-family: 'Microsoft YaHei'; font-size: 16px; font-style: normal; font-variant: normal; font-weight: 400; letter-spacing: normal; line-height: 24px; orphans: 2; text-align: left; text-decoration: none; text-indent: 0px; text-transform: none; -webkit-text-stroke-width: 0px; white-space: normal; widows: 2; word-spacing: 0px;">2016年-： 《教育经济评论》编辑部主任</span><br /></p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei'; font-size: 16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">2007-2012年： 英国国际发展部（DIFD）贫困农村社区发展项目（PRCDP）教育咨询专家<br /></p></div>
+                    
+                </div>				<div class="grjj">
+                    <p class="jjh">研究领域</p>
+                    <div class="bks1"><div style="top: 0px;">﻿﻿<span style="font-size:16px;">教育经济学，劳动经济学</span></div></div>
+                </div>				<div class="grjj">
+                    <p class="jjh">研究成果</p>
+                    <div class="bks1" id="jjc1"><p><strong><span style="font-size:10.5pt;font-family:宋体;color:#333333;">学术论文</span></strong></p><p><span style="font-size:10.5pt;font-family:'Times New Roman',serif;color:black;">1.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="font-size:10.5pt;color:black;">袁青青、刘泽云：“中国居民代际收入流动性趋势研究”，《经济学动态》，</span><span style="font-size:10.5pt;font-family:'Times New Roman',serif;color:black;">2022</span><span style="font-size:10.5pt;color:black;">年第</span><span style="font-size:10.5pt;font-family:'Times New Roman',serif;color:black;">1</span><span style="font-size:10.5pt;color:black;">期</span></p><p><span style="font-size:10.5pt;font-family:'Times New Roman',serif;color:black;">2.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="font-size:10.5pt;color:black;">袁青青、刘泽云：“教育在代际收入流动中的作用</span><span style="font-size:10.5pt;font-family:'Times New Roman',serif;color:black;">——</span><span style="font-size:10.5pt;color:black;">基于中介效应分析的研究</span><span style="font-size:10.5pt;font-family:'Times New Roman',serif;color:black;">”</span><span style="font-size:10.5pt;color:black;">，《教育经济评论》，</span><span style="font-size:10.5pt;font-family:'Times New Roman',serif;color:black;">2022</span><span style="font-size:10.5pt;color:black;">年第</span><span style="font-size:10.5pt;font-family:'Times New Roman',serif;color:black;">1</span><span style="font-size:10.5pt;color:black;">期</span></p><p><span style="font-size:10.5pt;font-family:'Times New Roman',serif;color:black;">3.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="font-size:10.5pt;color:black;">方芳、刘泽云：</span><span style="font-size:10.5pt;font-family:'Times New Roman',serif;color:black;">“</span><span style="font-size:10.5pt;color:black;">迈向普及化进程中地方普通高校生均经费差异分析</span><span style="font-size:10.5pt;font-family:'Times New Roman',serif;color:black;">”</span><span style="font-size:10.5pt;color:black;">，《教育经济评论》，</span><span style="font-size:10.5pt;font-family:'Times New Roman',serif;color:black;">2021</span><span style="font-size:10.5pt;color:black;">年第</span><span style="font-size:10.5pt;font-family:'Times New Roman',serif;color:black;">5</span><span style="font-size:10.5pt;color:black;">期。</span></p><p><span style="font-size:10.5pt;font-family:'Times New Roman',serif;color:black;">4.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="font-size:10.5pt;color:black;">刘泽云、袁青青：</span><span style="font-size:10.5pt;font-family:'Times New Roman',serif;color:black;">“</span><span style="font-size:10.5pt;color:black;">家庭背景对个人教育回报率的影响</span><span style="font-size:10.5pt;font-family:'Times New Roman',serif;color:black;">”</span><span style="font-size:10.5pt;color:black;">，《中国人口科学》，</span><span style="font-size:10.5pt;font-family:'Times New Roman',serif;color:black;">2021</span><span style="font-size:10.5pt;color:black;">年第</span><span style="font-size:10.5pt;font-family:'Times New Roman',serif;color:black;">2</span><span style="font-size:10.5pt;color:black;">期。</span></p><p><span style="font-size:10.5pt;font-family:'Times New Roman',serif;color:black;">5.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="font-size:10.5pt;color:black;">刘泽云、田梦：</span><span style="font-size:10.5pt;font-family:'Times New Roman',serif;color:black;">“</span><span style="font-size:10.5pt;color:black;">拥有更多的女生同伴有助于提高学习成绩吗？</span><span style="font-size:10.5pt;font-family:'Times New Roman',serif;color:black;">——</span><span style="font-size:10.5pt;color:black;">对性别同伴效应的估计</span><span style="font-size:10.5pt;font-family:'Times New Roman',serif;color:black;">”</span><span style="font-size:10.5pt;color:black;">，《教育经济评论》，</span><span style="font-size:10.5pt;font-family:'Times New Roman',serif;color:black;">2020</span><span style="font-size:10.5pt;color:black;">年第</span><span style="font-size:10.5pt;font-family:'Times New Roman',serif;color:black;">6</span><span style="font-size:10.5pt;color:black;">期</span></p><p><span style="font-size:10.5pt;font-family:'Times New Roman',serif;color:black;">6.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="font-size:10.5pt;color:black;">刘泽云、刘佳璇：</span><span style="font-size:10.5pt;font-family:'Times New Roman',serif;color:black;">“</span><span style="font-size:10.5pt;color:black;">中国教育收益率的元分析</span><span style="font-size:10.5pt;font-family:'Times New Roman',serif;color:black;">”</span><span style="font-size:10.5pt;color:black;">，《北京师范大学（社会科学版）》，</span><span style="font-size:10.5pt;font-family:'Times New Roman',serif;color:black;">2020</span><span style="font-size:10.5pt;color:black;">年第</span><span style="font-size:10.5pt;font-family:'Times New Roman',serif;color:black;">5</span><span style="font-size:10.5pt;color:black;">期</span></p><p><span style="font-size:10.5pt;font-family:'Times New Roman',serif;color:black;">7.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="font-size:10.5pt;color:black;">刘泽云、郭睿：</span><span style="font-size:10.5pt;font-family:'Times New Roman',serif;color:black;">“</span><span style="font-size:10.5pt;color:black;">流动儿童对本地儿童学习成绩的影响</span><span style="font-size:10.5pt;font-family:'Times New Roman',serif;color:black;">——</span><span style="font-size:10.5pt;color:black;">基于</span><span style="font-size:10.5pt;font-family:'Times New Roman',serif;color:black;">CEPS</span><span style="font-size:10.5pt;color:black;">数据的分析</span><span style="font-size:10.5pt;font-family:'Times New Roman',serif;color:black;">”</span><span style="font-size:10.5pt;color:black;">，《北京大学教育评论》，</span><span style="font-size:10.5pt;font-family:'Times New Roman',serif;color:black;">2020</span><span style="font-size:10.5pt;color:black;">年第</span><span style="font-size:10.5pt;font-family:'Times New Roman',serif;color:black;">4</span><span style="font-size:10.5pt;color:black;">期</span></p><p><span style="font-size:10.5pt;font-family:'Times New Roman',serif;">8.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="font-size:10.5pt;color:black;">刘泽云、郭睿：</span><span style="font-size:10.5pt;font-family:'Times New Roman',serif;color:black;">“</span><span style="font-size:10.5pt;color:black;">流动儿童同伴对学生学习成绩的影响</span><span style="font-size:10.5pt;font-family:'Times New Roman',serif;color:black;">——</span><span style="font-size:10.5pt;color:black;">基于北京市三个区的分析</span><span style="font-size:10.5pt;font-family:'Times New Roman',serif;color:black;">”</span><span style="font-size:10.5pt;color:black;">，《教育与经济》，</span><span style="font-size:10.5pt;font-family:'Times New Roman',serif;color:black;">2020</span><span style="font-size:10.5pt;color:black;">年第</span><span style="font-size:10.5pt;font-family:'Times New Roman',serif;color:black;">1</span><span style="font-size:10.5pt;color:black;">期</span></p><p><span style="font-size:10.5pt;font-family:'Times New Roman',serif;">9.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="font-size:10.5pt;color:black;">方芳、刘泽云：</span><span style="font-size:10.5pt;font-family:'Times New Roman',serif;color:black;">“</span><span style="font-size:10.5pt;color:black;">经费投入对地区高等教育规模的影响</span><span style="font-size:10.5pt;font-family:'Times New Roman',serif;color:black;">”</span><span style="font-size:10.5pt;color:black;">，《高等教育研究》，</span><span style="font-size:10.5pt;font-family:'Times New Roman',serif;color:black;">2019</span><span style="font-size:10.5pt;color:black;">年第</span><span style="font-size:10.5pt;font-family:'Times New Roman',serif;color:black;">1</span><span style="font-size:10.5pt;color:black;">期</span></p><p><span style="font-size:10.5pt;font-family:'Times New Roman',serif;">10.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="font-size:10.5pt;color:black;">方芳、刘泽云：</span><span style="font-size:10.5pt;font-family:'Times New Roman',serif;color:black;">“</span><span style="font-size:10.5pt;color:black;">高等教育投入模式的国际比较研究</span><span style="font-size:10.5pt;font-family:'Times New Roman',serif;color:black;">”</span><span style="font-size:10.5pt;color:black;">，《南京师大学报（社会科学版）》，</span><span style="font-size:10.5pt;font-family:'Times New Roman',serif;color:black;">2018</span><span style="font-size:10.5pt;color:black;">年第</span><span style="font-size:10.5pt;font-family:'Times New Roman',serif;color:black;">6</span><span style="font-size:10.5pt;color:black;">期</span></p><p><span style="font-size:10.5pt;font-family:'Times New Roman',serif;">11.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="font-size:10.5pt;color:black;">刘泽云、李杨、王骏：</span><span style="font-size:10.5pt;font-family:'Times New Roman',serif;color:black;">“</span><span style="font-size:10.5pt;color:black;">教育补习会影响小学生体质健康吗？</span><span style="font-size:10.5pt;font-family:'Times New Roman',serif;color:black;">”</span><span style="font-size:10.5pt;color:black;">，《教育经济评论》，</span><span style="font-size:10.5pt;font-family:'Times New Roman',serif;color:black;">2018</span><span style="font-size:10.5pt;color:black;">年第</span><span style="font-size:10.5pt;font-family:'Times New Roman',serif;color:black;">5</span><span style="font-size:10.5pt;color:black;">期</span></p><p><span style="font-size:10.5pt;font-family:'Times New Roman',serif;">12.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="font-size:10.5pt;color:black;">方芳、刘泽云：</span><span style="font-size:10.5pt;font-family:'Times New Roman',serif;color:black;">“2005—2015</span><span style="font-size:10.5pt;color:black;">年我国高等教育经费投入的变化与启示</span><span style="font-size:10.5pt;font-family:'Times New Roman',serif;color:black;">”</span><span style="font-size:10.5pt;color:black;">，《中国高教研究》，</span><span style="font-size:10.5pt;font-family:'Times New Roman',serif;color:black;">2018</span><span style="font-size:10.5pt;color:black;">年第</span><span style="font-size:10.5pt;font-family:'Times New Roman',serif;color:black;">4</span><span style="font-size:10.5pt;color:black;">期</span></p><p><span style="font-size:10.5pt;font-family:'Times New Roman',serif;">13.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="font-size:10.5pt;color:black;">刘泽云、王骏：</span><span style="font-size:10.5pt;font-family:'Times New Roman',serif;color:black;">“</span><span style="font-size:10.5pt;color:black;">中国城镇居民教育回报率的长期趋势</span><span style="font-size:10.5pt;font-family:'Times New Roman',serif;color:black;">”</span><span style="font-size:10.5pt;color:black;">，《华中师范大学学报（人文社科版）》</span><span style="font-size:10.5pt;font-family:'Times New Roman',serif;color:black;">2017</span><span style="font-size:10.5pt;color:black;">年第</span><span style="font-size:10.5pt;font-family:'Times New Roman',serif;color:black;">4</span><span style="font-size:10.5pt;color:black;">期</span></p><p><span style="font-size:10.5pt;font-family:'Times New Roman',serif;">14.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="font-size:10.5pt;color:black;">方芳、刘泽云：</span><span style="font-size:10.5pt;font-family:'Times New Roman',serif;color:black;">“</span><span style="font-size:10.5pt;color:black;">普通高校经费收入结构对生均经费的影响</span><span style="font-size:10.5pt;font-family:'Times New Roman',serif;color:black;">”</span><span style="font-size:10.5pt;color:black;">，《高等教育研究》，</span><span style="font-size:10.5pt;font-family:'Times New Roman',serif;color:black;">2017</span><span style="font-size:10.5pt;color:black;">年第</span><span style="font-size:10.5pt;font-family:'Times New Roman',serif;color:black;">3</span><span style="font-size:10.5pt;color:black;">期</span></p><p><span style="font-size:10.5pt;font-family:'Times New Roman',serif;">15.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="font-size:10.5pt;color:black;">刘泽云、邱牧远：</span><span style="font-size:10.5pt;font-family:'Times New Roman',serif;color:black;">“</span><span style="font-size:10.5pt;color:black;">上好大学值得吗？</span><span style="font-size:10.5pt;font-family:'Times New Roman',serif;color:black;">——</span><span style="font-size:10.5pt;color:black;">对大学质量回报的估计</span><span style="font-size:10.5pt;font-family:'Times New Roman',serif;color:black;">”</span><span style="font-size:10.5pt;color:black;">，《北京大学教育评论》，</span><span style="font-size:10.5pt;font-family:'Times New Roman',serif;color:black;">2017</span><span style="font-size:10.5pt;color:black;">年第</span><span style="font-size:10.5pt;font-family:'Times New Roman',serif;color:black;">1</span><span style="font-size:10.5pt;color:black;">期</span></p><p><span style="font-size:10.5pt;font-family:'Times New Roman',serif;">16.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="font-size:10.5pt;color:black;">刘泽云、原莹、王骏：</span><span style="font-size:10.5pt;font-family:'Times New Roman',serif;color:black;">“</span><span style="font-size:10.5pt;color:black;">普通高中招生</span><span style="font-size:10.5pt;font-family:'Times New Roman',serif;color:black;">‘</span><span style="font-size:10.5pt;color:black;">指标到校</span><span style="font-size:10.5pt;font-family:'Times New Roman',serif;color:black;">’</span><span style="font-size:10.5pt;color:black;">政策是否有利于农村初中学生？</span><span style="font-size:10.5pt;font-family:'Times New Roman',serif;color:black;">——</span><span style="font-size:10.5pt;color:black;">基于</span><span style="font-size:10.5pt;font-family:'Times New Roman',serif;color:black;">J</span><span style="font-size:10.5pt;color:black;">市的经验研究</span><span style="font-size:10.5pt;font-family:'Times New Roman',serif;color:black;">”</span><span style="font-size:10.5pt;color:black;">，《教育与经济》</span><span style="font-size:10.5pt;font-family:'Times New Roman',serif;color:black;">2017</span><span style="font-size:10.5pt;color:black;">年第</span><span style="font-size:10.5pt;font-family:'Times New Roman',serif;color:black;">1</span><span style="font-size:10.5pt;color:black;">期</span></p><p><span style="font-size:10.5pt;font-family:'Times New Roman',serif;">17.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="font-size:10.5pt;color:black;">刘泽云：</span><span style="font-size:10.5pt;font-family:'Times New Roman',serif;color:black;">“</span><span style="font-size:10.5pt;color:black;">教育投资存在外部收益吗</span><span style="font-size:10.5pt;font-family:'Times New Roman',serif;color:black;">?——</span><span style="font-size:10.5pt;color:black;">来自中国的经验证据</span><span style="font-size:10.5pt;font-family:'Times New Roman',serif;color:black;">”</span><span style="font-size:10.5pt;color:black;">，《教育经济评论》</span><span style="font-size:10.5pt;font-family:'Times New Roman',serif;color:black;">2016</span><span style="font-size:10.5pt;color:black;">年第</span><span style="font-size:10.5pt;font-family:'Times New Roman',serif;color:black;">2</span><span style="font-size:10.5pt;color:black;">期</span></p><p><span style="font-size:10.5pt;font-family:'Times New Roman',serif;">18.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="font-size:10.5pt;color:black;">刘泽云：</span><span style="font-size:10.5pt;font-family:'Times New Roman',serif;color:black;">“</span><span style="font-size:10.5pt;color:black;">上大学是有价值的投资吗？</span><span style="font-size:10.5pt;font-family:'Times New Roman',serif;color:black;">——</span><span style="font-size:10.5pt;color:black;">中国高等教育回报率的长期变动</span><span style="font-size:10.5pt;font-family:'Times New Roman',serif;color:black;">”</span><span style="font-size:10.5pt;color:black;">，《北京大学教育评论》，</span><span style="font-size:10.5pt;font-family:'Times New Roman',serif;color:black;">2015</span><span style="font-size:10.5pt;color:black;">年第</span><span style="font-size:10.5pt;font-family:'Times New Roman',serif;color:black;">4</span><span style="font-size:10.5pt;color:black;">期</span></p><p><span style="font-size:10.5pt;font-family:'Times New Roman',serif;">19.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="font-size:10.5pt;color:black;">王骏、刘泽云：</span><span style="font-size:10.5pt;font-family:'Times New Roman',serif;color:black;">“</span><span style="font-size:10.5pt;color:black;">教育：提升人力资本还是信号？</span><span style="font-size:10.5pt;font-family:'Times New Roman',serif;color:black;">”</span><span style="font-size:10.5pt;color:black;">，《教育与经济》，</span><span style="font-size:10.5pt;font-family:'Times New Roman',serif;color:black;">2015</span><span style="font-size:10.5pt;color:black;">年第</span><span style="font-size:10.5pt;font-family:'Times New Roman',serif;color:black;">4</span><span style="font-size:10.5pt;color:black;">期</span></p><p><span style="font-size:10.5pt;font-family:'Times New Roman',serif;">20.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="font-size:10.5pt;font-family:'Times New Roman',serif;color:black;">Xiao, Jin and Liu, Zeyun.“Inequalities in the financing of compulsory education in China: A comparativestudy of Gansu and Jiangsu Provinces with spatial analysis”. <em>International Journal of EducationalDevelopment</em>, 2014, Vol.39, 260-273</span></p><p><span style="font-size:10.5pt;font-family:'Times New Roman',serif;">21.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="font-size:10.5pt;color:black;">刘泽云、赵佳音：</span><span style="font-size:10.5pt;font-family:'Times New Roman',serif;color:black;">“</span><span style="font-size:10.5pt;color:black;">教育对地区性别工资差异的影响</span><span style="font-size:10.5pt;font-family:'Times New Roman',serif;color:black;">——</span><span style="font-size:10.5pt;color:black;">基于地市级数据的分析</span><span style="font-size:10.5pt;font-family:'Times New Roman',serif;color:black;">”</span><span style="font-size:10.5pt;color:black;">，《北京师范大学学报</span><span style="font-size:10.5pt;font-family:'Times New Roman',serif;color:black;">(</span><span style="font-size:10.5pt;color:black;">社会科学版</span><span style="font-size:10.5pt;font-family:'Times New Roman',serif;color:black;">)</span><span style="font-size:10.5pt;color:black;">》，</span><span style="font-size:10.5pt;font-family:'Times New Roman',serif;color:black;">2014</span><span style="font-size:10.5pt;color:black;">年第</span><span style="font-size:10.5pt;font-family:'Times New Roman',serif;color:black;">2</span><span style="font-size:10.5pt;color:black;">期</span></p><p><span style="font-size:10.5pt;font-family:'Times New Roman',serif;">22.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="font-size:10.5pt;color:black;">董俊燕、刘泽云：</span><span style="font-size:10.5pt;font-family:'Times New Roman',serif;color:black;">“</span><span style="font-size:10.5pt;color:black;">普通高中政府生均投入影响因素研究</span><span style="font-size:10.5pt;font-family:'Times New Roman',serif;color:black;">”</span><span style="font-size:10.5pt;color:black;">，《教育与经济》，</span><span style="font-size:10.5pt;font-family:'Times New Roman',serif;color:black;">2014</span><span style="font-size:10.5pt;color:black;">年第</span><span style="font-size:10.5pt;font-family:'Times New Roman',serif;color:black;">3</span><span style="font-size:10.5pt;color:black;">期</span></p><p><span style="font-size:10.5pt;font-family:'Times New Roman',serif;">23.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="font-size:10.5pt;color:black;">刘泽云、胡文斌：</span><span style="font-size:10.5pt;font-family:'Times New Roman',serif;color:black;">“</span><span style="font-size:10.5pt;color:black;">贫困农村地区小学教育普及情况分析</span><span style="font-size:10.5pt;font-family:'Times New Roman',serif;color:black;">——</span><span style="font-size:10.5pt;color:black;">以云南省为例</span><span style="font-size:10.5pt;font-family:'Times New Roman',serif;color:black;">”</span><span style="font-size:10.5pt;color:black;">，《北京大学教育评论》，</span><span style="font-size:10.5pt;font-family:'Times New Roman',serif;color:black;">2012</span><span style="font-size:10.5pt;color:black;">年第</span><span style="font-size:10.5pt;font-family:'Times New Roman',serif;color:black;">3</span><span style="font-size:10.5pt;color:black;">期</span></p><p><span style="font-size:10.5pt;font-family:'Times New Roman',serif;">24.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="font-size:10.5pt;color:black;">刘泽云、邱牧远：</span><span style="font-size:10.5pt;font-family:'Times New Roman',serif;color:black;">“</span><span style="font-size:10.5pt;color:black;">高等教育质量收益的估计：基于倾向指数匹配法的研究</span><span style="font-size:10.5pt;font-family:'Times New Roman',serif;color:black;">”</span><span style="font-size:10.5pt;color:black;">，《中国人口科学》，</span><span style="font-size:10.5pt;font-family:'Times New Roman',serif;color:black;">2011</span><span style="font-size:10.5pt;color:black;">年第</span><span style="font-size:10.5pt;font-family:'Times New Roman',serif;color:black;">5</span><span style="font-size:10.5pt;color:black;">期</span></p><p><span style="font-size:10.5pt;font-family:'Times New Roman',serif;">25.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="font-size:10.5pt;color:black;">刘泽云、邱牧远：</span><span style="font-size:10.5pt;font-family:'Times New Roman',serif;color:black;">“</span><span style="font-size:10.5pt;color:black;">中国农村工资性就业教育收益率的估计</span><span style="font-size:10.5pt;font-family:'Times New Roman',serif;color:black;">”</span><span style="font-size:10.5pt;color:black;">，《北京师范大学学报（人文社科版）》，</span><span style="font-size:10.5pt;font-family:'Times New Roman',serif;color:black;">2011</span><span style="font-size:10.5pt;color:black;">年第</span><span style="font-size:10.5pt;font-family:'Times New Roman',serif;color:black;">6</span><span style="font-size:10.5pt;color:black;">期</span></p><p><span style="font-size:10.5pt;font-family:'Times New Roman',serif;">26.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="font-size:10.5pt;color:black;">刘泽云、袁连生：</span><span style="font-size:10.5pt;font-family:'Times New Roman',serif;color:black;">“</span><span style="font-size:10.5pt;color:black;">教育发展的国际比较</span><span style="font-size:10.5pt;font-family:'Times New Roman',serif;color:black;">”</span><span style="font-size:10.5pt;color:black;">，《中国人民大学教育学刊》，</span><span style="font-size:10.5pt;font-family:'Times New Roman',serif;color:black;">2011</span><span style="font-size:10.5pt;color:black;">年第</span><span style="font-size:10.5pt;font-family:'Times New Roman',serif;color:black;">2</span><span style="font-size:10.5pt;color:black;">期</span></p><p><span style="font-size:10.5pt;font-family:'Times New Roman',serif;">27.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="font-size:10.5pt;color:black;">刘泽云：</span><span style="font-size:10.5pt;font-family:'Times New Roman',serif;color:black;">“</span><span style="font-size:10.5pt;color:black;">教育对工资不平等的影响：结构效应和价格效应</span><span style="font-size:10.5pt;font-family:'Times New Roman',serif;color:black;">”</span><span style="font-size:10.5pt;color:black;">，《北京师范大学学报（社会科学版）》，</span><span style="font-size:10.5pt;font-family:'Times New Roman',serif;color:black;">2009</span><span style="font-size:10.5pt;color:black;">年第</span><span style="font-size:10.5pt;font-family:'Times New Roman',serif;color:black;">5</span><span style="font-size:10.5pt;color:black;">期</span></p><p><span style="font-size:10.5pt;font-family:'Times New Roman',serif;">28.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="font-size:10.5pt;color:black;">孙志军、刘泽云、孙百才：</span><span style="font-size:10.5pt;font-family:'Times New Roman',serif;color:black;">“</span><span style="font-size:10.5pt;color:black;">家庭、学校与儿童的学习成绩</span><span style="font-size:10.5pt;font-family:'Times New Roman',serif;color:black;">”</span><span style="font-size:10.5pt;color:black;">，《北京师范大学学报（社会科学版）》，</span><span style="font-size:10.5pt;font-family:'Times New Roman',serif;color:black;">2009</span><span style="font-size:10.5pt;color:black;">年第</span><span style="font-size:10.5pt;font-family:'Times New Roman',serif;color:black;">5</span><span style="font-size:10.5pt;color:black;">期</span></p><p><span style="font-size:10.5pt;font-family:'Times New Roman',serif;">29.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="font-size:10.5pt;color:black;">刘泽云：</span><span style="font-size:10.5pt;font-family:'Times New Roman',serif;color:black;">“</span><span style="font-size:10.5pt;color:black;">教育与工资不平等：基于中国城镇地区的经验研究</span><span style="font-size:10.5pt;font-family:'Times New Roman',serif;color:black;">”</span><span style="font-size:10.5pt;color:black;">，《统计研究》，</span><span style="font-size:10.5pt;font-family:'Times New Roman',serif;color:black;">2009</span><span style="font-size:10.5pt;color:black;">年第</span><span style="font-size:10.5pt;font-family:'Times New Roman',serif;color:black;">4</span><span style="font-size:10.5pt;color:black;">期</span></p><p><span style="font-size:10.5pt;font-family:'Times New Roman',serif;">30.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="font-size:10.5pt;color:black;">刘泽云：</span><span style="font-size:10.5pt;font-family:'Times New Roman',serif;color:black;">“</span><span style="font-size:10.5pt;color:black;">我国普通高中经费政府分担比例问题研究</span><span style="font-size:10.5pt;font-family:'Times New Roman',serif;color:black;">”</span><span style="font-size:10.5pt;color:black;">，《教育与经济》，</span><span style="font-size:10.5pt;font-family:'Times New Roman',serif;color:black;">2009</span><span style="font-size:10.5pt;color:black;">年第</span><span style="font-size:10.5pt;font-family:'Times New Roman',serif;color:black;">1</span><span style="font-size:10.5pt;color:black;">期</span></p><p><span style="font-size:10.5pt;font-family:'Times New Roman',serif;">31.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="font-size:10.5pt;color:black;">刘泽云：</span><span style="font-size:10.5pt;font-family:'Times New Roman',serif;color:black;">“</span><span style="font-size:10.5pt;color:black;">筛选理论的经验验证：方法与结论</span><span style="font-size:10.5pt;font-family:'Times New Roman',serif;color:black;">”</span><span style="font-size:10.5pt;color:black;">，《比较教育研究》，</span><span style="font-size:10.5pt;font-family:'Times New Roman',serif;color:black;">2009</span><span style="font-size:10.5pt;color:black;">年第</span><span style="font-size:10.5pt;font-family:'Times New Roman',serif;color:black;">1</span><span style="font-size:10.5pt;color:black;">期</span></p><p><span style="font-size:10.5pt;font-family:'Times New Roman',serif;">32.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="font-size:10.5pt;color:black;">刘泽云：</span><span style="font-size:10.5pt;font-family:'Times New Roman',serif;color:black;">“</span><span style="font-size:10.5pt;color:black;">教育收益率估算中的几个方法问题</span><span style="font-size:10.5pt;font-family:'Times New Roman',serif;color:black;">”</span><span style="font-size:10.5pt;color:black;">，《北京大学教育评论》，</span><span style="font-size:10.5pt;font-family:'Times New Roman',serif;color:black;">2009</span><span style="font-size:10.5pt;color:black;">年第</span><span style="font-size:10.5pt;font-family:'Times New Roman',serif;color:black;">1</span><span style="font-size:10.5pt;color:black;">期</span></p><p><span style="font-size:10.5pt;font-family:'Times New Roman',serif;">33.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="font-size:10.5pt;color:black;">刘泽云：</span><span style="font-size:10.5pt;font-family:'Times New Roman',serif;color:black;">“</span><span style="font-size:10.5pt;color:black;">女性教育收益率为何高于男性</span><span style="font-size:10.5pt;font-family:'Times New Roman',serif;color:black;">——</span><span style="font-size:10.5pt;color:black;">基于工资性别歧视的分析</span><span style="font-size:10.5pt;font-family:'Times New Roman',serif;color:black;">”</span><span style="font-size:10.5pt;color:black;">，《经济科学》，</span><span style="font-size:10.5pt;font-family:'Times New Roman',serif;color:black;">2008</span><span style="font-size:10.5pt;color:black;">年第</span><span style="font-size:10.5pt;font-family:'Times New Roman',serif;color:black;">2</span><span style="font-size:10.5pt;color:black;">期</span></p><p><span style="font-size:10.5pt;font-family:'Times New Roman',serif;">34.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="font-size:10.5pt;color:black;">刘泽云：</span><span style="font-size:10.5pt;font-family:'Times New Roman',serif;color:black;">“</span><span style="font-size:10.5pt;color:black;">我国高中阶段教育政府投入的实证分析</span><span style="font-size:10.5pt;font-family:'Times New Roman',serif;color:black;">”</span><span style="font-size:10.5pt;color:black;">，《教育发展研究》，</span><span style="font-size:10.5pt;font-family:'Times New Roman',serif;color:black;">2008</span><span style="font-size:10.5pt;color:black;">年第</span><span style="font-size:10.5pt;font-family:'Times New Roman',serif;color:black;">19</span><span style="font-size:10.5pt;color:black;">期</span></p><p><span style="font-size:10.5pt;font-family:'Times New Roman',serif;">35.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="font-size:10.5pt;color:black;">刘泽云：</span><span style="font-size:10.5pt;font-family:'Times New Roman',serif;color:black;">“</span><span style="font-size:10.5pt;color:black;">筛选理论的经验研究综述</span><span style="font-size:10.5pt;font-family:'Times New Roman',serif;color:black;">”</span><span style="font-size:10.5pt;color:black;">，《经济学动态》，</span><span style="font-size:10.5pt;font-family:'Times New Roman',serif;color:black;">2008</span><span style="font-size:10.5pt;color:black;">年第</span><span style="font-size:10.5pt;font-family:'Times New Roman',serif;color:black;">7</span><span style="font-size:10.5pt;color:black;">期</span></p><p><span style="font-size:10.5pt;font-family:'Times New Roman',serif;">36.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="font-size:10.5pt;color:black;">刘泽云：</span><span style="font-size:10.5pt;font-family:'Times New Roman',serif;color:black;">“</span><span style="font-size:10.5pt;color:black;">教育收益率的性别差异分析</span><span style="font-size:10.5pt;font-family:'Times New Roman',serif;color:black;">”</span><span style="font-size:10.5pt;color:black;">，《妇女研究论丛》，</span><span style="font-size:10.5pt;font-family:'Times New Roman',serif;color:black;">2008</span><span style="font-size:10.5pt;color:black;">年第</span><span style="font-size:10.5pt;font-family:'Times New Roman',serif;color:black;">2</span><span style="font-size:10.5pt;color:black;">期</span></p><p><span style="font-size:10.5pt;font-family:'Times New Roman',serif;">37.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="font-size:10.5pt;color:black;">袁连生、刘泽云：</span><span style="font-size:10.5pt;font-family:'Times New Roman',serif;color:black;">“</span><span style="font-size:10.5pt;color:black;">我国义务教育贫困学生资助制度分析</span><span style="font-size:10.5pt;font-family:'Times New Roman',serif;color:black;">”</span><span style="font-size:10.5pt;color:black;">，《北京师范大学学报（社会科学版）》，</span><span style="font-size:10.5pt;font-family:'Times New Roman',serif;color:black;">2007</span><span style="font-size:10.5pt;color:black;">年第</span><span style="font-size:10.5pt;font-family:'Times New Roman',serif;color:black;">5</span><span style="font-size:10.5pt;color:black;">期</span></p><p><span style="font-size:10.5pt;font-family:'Times New Roman',serif;">38.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="font-size:10.5pt;font-family:'Times New Roman',serif;color:black;">Liu, Zeyun and Yuan,Liansheng, The ratio of public investment in education in China. <em>Frontiers of Education in China</em>, 2007,2(2): 240–249</span></p><p><span style="font-size:10.5pt;font-family:'Times New Roman',serif;">39.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="font-size:10.5pt;color:black;">刘泽云：</span><span style="font-size:10.5pt;font-family:'Times New Roman',serif;color:black;">“</span><span style="font-size:10.5pt;color:black;">农村儿童受教育水平的决定因素</span><span style="font-size:10.5pt;font-family:'Times New Roman',serif;color:black;">——</span><span style="font-size:10.5pt;color:black;">基于</span><span style="font-size:10.5pt;font-family:'Times New Roman',serif;color:black;">Cox</span><span style="font-size:10.5pt;color:black;">比例风险模型的经验研究</span><span style="font-size:10.5pt;font-family:'Times New Roman',serif;color:black;">”</span><span style="font-size:10.5pt;color:black;">，《中国人口科学》，</span><span style="font-size:10.5pt;font-family:'Times New Roman',serif;color:black;">2007</span><span style="font-size:10.5pt;color:black;">年第</span><span style="font-size:10.5pt;font-family:'Times New Roman',serif;color:black;">2</span><span style="font-size:10.5pt;color:black;">期</span></p><p><span style="font-size:10.5pt;font-family:'Times New Roman',serif;">40.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="font-size:10.5pt;color:black;">刘泽云、袁连生：</span><span style="font-size:10.5pt;font-family:'Times New Roman',serif;color:black;">“</span><span style="font-size:10.5pt;color:black;">公共教育投资比例国际比较研究</span><span style="font-size:10.5pt;font-family:'Times New Roman',serif;color:black;">”</span><span style="font-size:10.5pt;color:black;">，《比较教育研究》，</span><span style="font-size:10.5pt;font-family:'Times New Roman',serif;color:black;">2007</span><span style="font-size:10.5pt;color:black;">年第</span><span style="font-size:10.5pt;font-family:'Times New Roman',serif;color:black;">2</span><span style="font-size:10.5pt;color:black;">期</span></p><p><span style="font-size:10.5pt;font-family:'Times New Roman',serif;">41.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="font-size:10.5pt;color:black;">刘泽云：</span><span style="font-size:10.5pt;font-family:'Times New Roman',serif;color:black;">“</span><span style="font-size:10.5pt;color:black;">农村儿童为何失学？</span><span style="font-size:10.5pt;font-family:'Times New Roman',serif;color:black;">——</span><span style="font-size:10.5pt;color:black;">基于多层模型的经验研究</span><span style="font-size:10.5pt;font-family:'Times New Roman',serif;color:black;">”</span><span style="font-size:10.5pt;color:black;">，《北京师范大学学报（社会科学版）》，</span><span style="font-size:10.5pt;font-family:'Times New Roman',serif;color:black;">2007</span><span style="font-size:10.5pt;color:black;">年第</span><span style="font-size:10.5pt;font-family:'Times New Roman',serif;color:black;">2</span><span style="font-size:10.5pt;color:black;">期</span></p><p><span style="font-size:10.5pt;font-family:'Times New Roman',serif;">42.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="font-size:10.5pt;color:black;">王蕊、萧今、刘泽云：</span><span style="font-size:10.5pt;font-family:'Times New Roman',serif;color:black;">“</span><span style="font-size:10.5pt;color:black;">上海、重庆企业职工对技能认识的分类及其影响因素：三水平分析</span><span style="font-size:10.5pt;font-family:'Times New Roman',serif;color:black;">”</span><span style="font-size:10.5pt;color:black;">，《北京大学教育评论》，</span><span style="font-size:10.5pt;font-family:'Times New Roman',serif;color:black;">2007</span><span style="font-size:10.5pt;color:black;">年第</span><span style="font-size:10.5pt;font-family:'Times New Roman',serif;color:black;">1</span><span style="font-size:10.5pt;color:black;">期</span></p><p><span style="font-size:10.5pt;font-family:'Times New Roman',serif;">43.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="font-size:10.5pt;color:black;">刘泽云：</span><span style="font-size:10.5pt;font-family:'Times New Roman',serif;color:black;">“</span><span style="font-size:10.5pt;color:black;">美国学校选择研究的最新进展与经验</span><span style="font-size:10.5pt;font-family:'Times New Roman',serif;color:black;">”</span><span style="font-size:10.5pt;color:black;">，《北京大学教育评论》，</span><span style="font-size:10.5pt;font-family:'Times New Roman',serif;color:black;">2007</span><span style="font-size:10.5pt;color:black;">年第</span><span style="font-size:10.5pt;font-family:'Times New Roman',serif;color:black;">1</span><span style="font-size:10.5pt;color:black;">期</span></p><p><span style="font-size:10.5pt;font-family:'Times New Roman',serif;">44.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="font-size:10.5pt;font-family:'Times New Roman',serif;color:black;">Liu, Zeyun and Xiao, Jin.“The Accumulation of Human Capital over Time and Its Impact on Salary Growth inChina”. <em>Education Economics</em>, 2006,14(2):155-180</span></p><p><span style="font-size:10.5pt;font-family:'Times New Roman',serif;">45.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="font-size:10.5pt;color:black;">刘泽云、袁连生：</span><span style="font-size:10.5pt;font-family:'Times New Roman',serif;color:black;">“</span><span style="font-size:10.5pt;color:black;">我国公共教育投资比例研究</span><span style="font-size:10.5pt;font-family:'Times New Roman',serif;color:black;">”</span><span style="font-size:10.5pt;color:black;">（与袁连生合作），《高等教育研究》，</span><span style="font-size:10.5pt;font-family:'Times New Roman',serif;color:black;">2006</span><span style="font-size:10.5pt;color:black;">年第</span><span style="font-size:10.5pt;font-family:'Times New Roman',serif;color:black;">2</span><span style="font-size:10.5pt;color:black;">期</span></p><p><span style="font-size:10.5pt;font-family:'Times New Roman',serif;">46.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="font-size:10.5pt;color:black;">刘泽云：</span><span style="font-size:10.5pt;font-family:'Times New Roman',serif;color:black;">“</span><span style="font-size:10.5pt;color:black;">政府如何为农村义务教育买单？</span><span style="font-size:10.5pt;font-family:'Times New Roman',serif;color:black;">——</span><span style="font-size:10.5pt;color:black;">农村义务教育财政体制改革新论</span><span style="font-size:10.5pt;font-family:'Times New Roman',serif;color:black;">”</span><span style="font-size:10.5pt;color:black;">，《华中师范大学学报（人文社科版）》，</span><span style="font-size:10.5pt;font-family:'Times New Roman',serif;color:black;">2005</span><span style="font-size:10.5pt;color:black;">年第</span><span style="font-size:10.5pt;font-family:'Times New Roman',serif;color:black;">3</span><span style="font-size:10.5pt;color:black;">期</span></p><p><span style="font-size:10.5pt;font-family:'Times New Roman',serif;">47.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="font-size:10.5pt;color:black;">刘泽云：</span><span style="font-size:10.5pt;font-family:'Times New Roman',serif;color:black;">“</span><span style="font-size:10.5pt;color:black;">西方发达国家的义务教育财政转移支付制度</span><span style="font-size:10.5pt;font-family:'Times New Roman',serif;color:black;">”</span><span style="font-size:10.5pt;color:black;">，《比较教育研究》，</span><span style="font-size:10.5pt;font-family:'Times New Roman',serif;color:black;">2003</span><span style="font-size:10.5pt;color:black;">年第</span><span style="font-size:10.5pt;font-family:'Times New Roman',serif;color:black;">1</span><span style="font-size:10.5pt;color:black;">期</span></p><p><span style="font-size:10.5pt;font-family:'Times New Roman',serif;">48.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="font-size:10.5pt;color:black;">刘泽云：</span><span style="font-size:10.5pt;font-family:'Times New Roman',serif;color:black;">“</span><span style="font-size:10.5pt;color:black;">九五期间我国政府对教育投入努力程度的实证分析</span><span style="font-size:10.5pt;font-family:'Times New Roman',serif;color:black;">”</span><span style="font-size:10.5pt;color:black;">，《高等教育研究》，</span><span style="font-size:10.5pt;font-family:'Times New Roman',serif;color:black;">2003</span><span style="font-size:10.5pt;color:black;">年第</span><span style="font-size:10.5pt;font-family:'Times New Roman',serif;color:black;">2</span><span style="font-size:10.5pt;color:black;">期</span></p><p><span style="font-size:10.5pt;font-family:'Times New Roman',serif;">49.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="font-size:10.5pt;color:black;">刘泽云：</span><span style="font-size:10.5pt;font-family:'Times New Roman',serif;color:black;">“</span><span style="font-size:10.5pt;color:black;">从分割的高等教育市场看民办高等教育的发展</span><span style="font-size:10.5pt;font-family:'Times New Roman',serif;color:black;">”</span><span style="font-size:10.5pt;color:black;">，《江苏高教》，</span><span style="font-size:10.5pt;font-family:'Times New Roman',serif;color:black;">2003</span><span style="font-size:10.5pt;color:black;">年第</span><span style="font-size:10.5pt;font-family:'Times New Roman',serif;color:black;">2</span><span style="font-size:10.5pt;color:black;">期</span></p><p><span style="font-size:10.5pt;font-family:'Times New Roman',serif;">50.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="font-size:10.5pt;color:black;">刘泽云：</span><span style="font-size:10.5pt;font-family:'Times New Roman',serif;color:black;">“</span><span style="font-size:10.5pt;color:black;">我国教育财政体制中的问题与对策</span><span style="font-size:10.5pt;font-family:'Times New Roman',serif;color:black;">”</span><span style="font-size:10.5pt;color:black;">，《中国教育学刊》，</span><span style="font-size:10.5pt;font-family:'Times New Roman',serif;color:black;">2003</span><span style="font-size:10.5pt;color:black;">年第</span><span style="font-size:10.5pt;font-family:'Times New Roman',serif;color:black;">7</span><span style="font-size:10.5pt;color:black;">期</span></p><p><span style="font-size:10.5pt;font-family:'Times New Roman',serif;">51.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="font-size:10.5pt;color:black;">王善迈、刘泽云、孙志军：</span><span style="font-size:10.5pt;font-family:'Times New Roman',serif;color:black;">“2008</span><span style="font-size:10.5pt;color:black;">年北京市教育经费需求与供给预测</span><span style="font-size:10.5pt;font-family:'Times New Roman',serif;color:black;">”</span><span style="font-size:10.5pt;color:black;">，《教育科学研究》，</span><span style="font-size:10.5pt;font-family:'Times New Roman',serif;color:black;">2003</span><span style="font-size:10.5pt;color:black;">年</span><span style="font-size:10.5pt;font-family:'Times New Roman',serif;color:black;">7-8</span><span style="font-size:10.5pt;color:black;">期合刊</span></p><p><span style="font-size:10.5pt;font-family:'Times New Roman',serif;">52.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="font-size:10.5pt;color:black;">王善迈、袁连生、刘泽云：</span><span style="font-size:10.5pt;font-family:'Times New Roman',serif;color:black;">“</span><span style="font-size:10.5pt;color:black;">我国公共教育财政体制改革的进展、问题与对策</span><span style="font-size:10.5pt;font-family:'Times New Roman',serif;color:black;">”</span><span style="font-size:10.5pt;color:black;">，《北京师范大学学报（社会科学版）》，</span><span style="font-size:10.5pt;font-family:'Times New Roman',serif;color:black;">2003</span><span style="font-size:10.5pt;color:black;">年第</span><span style="font-size:10.5pt;font-family:'Times New Roman',serif;color:black;">6</span><span style="font-size:10.5pt;color:black;">期</span></p><p><span style="font-family:'Times New Roman',serif;">&nbsp;</span></p><p style="text-align:left;"><strong><span style="font-family:宋体;color:#333333;">个人著作</span></strong></p><p><span style="font-family:'Times New Roman',serif;">1.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="font-family:宋体;">刘泽云、郑磊、田志磊：《教育经济学》（译著），北京师范大学出版社，</span><span style="font-family:'Times New Roman',serif;">2017</span><span style="font-family:宋体;">年</span></p><p><span style="font-family:'Times New Roman',serif;">2.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="font-family:宋体;">刘泽云、孙志军：《计量经济学实验教程》（教材），北京师范大学出版社，</span><span style="font-family:'Times New Roman',serif;">2009</span><span style="font-family:宋体;">年</span></p><p style="text-align:left;"><span style="font-family:'Times New Roman',serif;color:#333333;">3.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="font-family:'Times New Roman',serif;color:#333333;">&nbsp;</span><span style="font-family:宋体;color:#333333;">刘泽云、萧今：《教育投资收益分析</span><span style="font-family:'Times New Roman',serif;color:#333333;">——</span><span style="font-family:宋体;color:#333333;">基于多层模型方法的研究》（专著），北京师范大学出版社，</span><span style="font-family:'Times New Roman',serif;color:#333333;">2009</span><span style="font-family:宋体;color:#333333;">年</span></p><p style="text-align:left;"><span style="font-family:'Times New Roman',serif;color:black;">4.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="font-family:宋体;color:#333333;">刘泽云</span><span style="font-family:宋体;color:black;">：《学校选择的经济学分析》（译著），北京师范大学出版社，</span><span style="font-family:'Times New Roman',serif;color:black;">2008</span><span style="font-family:宋体;color:black;">年</span></p><p style="text-align:left;"><span style="font-family:'Times New Roman',serif;color:black;">5.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="font-family:宋体;color:black;">刘泽云：《教育经济学》（教材），华东师范大学出版社，</span><span style="font-family:'Times New Roman',serif;color:black;">2008</span><span style="font-family:宋体;color:black;">年</span></p><p style="text-align:left;"><span style="font-family:'Times New Roman',serif;color:black;">6.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="font-family:宋体;color:black;">刘泽云、萧今：《教育投资收益分析</span><span style="font-family:'Times New Roman',serif;color:black;">——</span><span style="font-family:宋体;color:black;">基于中国企业职工工资收入的研究》（专著），北京师范大学出版社，</span><span style="font-family:'Times New Roman',serif;color:black;">2004</span><span style="font-family:宋体;color:black;">年</span></p><p style="text-align:left;"><span style="font-family:'Times New Roman',serif;color:black;">&nbsp;</span></p><p style="text-align:left;"><strong><span style="font-family:宋体;color:black;">参编的著作</span></strong></p><p style="text-align:left;"><span style="font-family:'Times New Roman',serif;color:black;">1.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="font-family:宋体;color:black;">《中国收入分配研究报告》，社会科学文献出版社，</span><span style="font-family:'Times New Roman',serif;color:black;">2013</span><span style="font-family:宋体;color:black;">年</span></p><p style="text-align:left;"><span style="font-family:'Times New Roman',serif;color:black;">2.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="font-family:宋体;color:black;">《公共财政框架下公共教育财政制度研究》，经济科学出版社，</span><span style="font-family:'Times New Roman',serif;color:black;">2012</span><span style="font-family:宋体;color:black;">年</span></p><p style="text-align:left;"><span style="font-family:'Times New Roman',serif;color:black;">3.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="font-family:宋体;color:black;">《中国地区教育发展报告》，北京师范大学出版社，</span><span style="font-family:'Times New Roman',serif;color:black;">2011</span><span style="font-family:宋体;color:black;">年</span></p><p style="text-align:left;"><span style="font-family:'Times New Roman',serif;color:black;">4.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="font-family:宋体;color:black;">《中国义务教育财政研究》，北京师范大学出版社，</span><span style="font-family:'Times New Roman',serif;color:black;">2009</span><span style="font-family:宋体;color:black;">年</span></p><p style="text-align:left;"><span style="font-family:'Times New Roman',serif;color:black;">5.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="font-family:宋体;color:black;">《</span><span style="font-family:'Times New Roman',serif;color:black;">2001</span><span style="font-family:宋体;color:black;">年中国教育发展报告</span><span style="font-family:'Times New Roman',serif;color:black;">: 90</span><span style="font-family:宋体;color:black;">年代后半期的教育财政与教育财政体制》，北京师范大学出版社，</span><span style="font-family:'Times New Roman',serif;color:black;">2002</span><span style="font-family:宋体;color:black;">年</span></p><div style="top: 0px;"></div></div>
+                    
+                </div>				<div class="grjj">
+                    <p class="jjh">研究课题</p>
+                  
+                    <div class="bks1"><div style="top: 0px;">﻿﻿<span style="" 16px="" yahei="" microsoft=""><strong><span style="font-size:16px;">个人主持的课题</span></strong></span></div><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei'; font-size: 16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">1. “同伴对本地儿童和流动儿童学业发展的影响”（北京市社科基金研究基地项目）</p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei'; font-size: 16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">2. “我国高等教育私人收益问题研究”（全国教育科学规划课题）</p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei'; font-size: 16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">3. “海淀区中小学安全管理评价体系研究”（北京市海淀区教委委托课题）</p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei'; font-size: 16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">4. “北京市义务教育财政公平研究”（北京市支持中央在京高校共建项目）</p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei'; font-size: 16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">5. “教育的人力资本功能与信号功能的经验检验” （北京师范大学自主科研基金项目）</p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei'; font-size: 16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">6. “中国农村教育收益率研究”（北京师范大学自主科研基金项目）</p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei'; font-size: 16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">7. “人力资本、公共政策与居民收入分配”（北京师范大学校级委托课题）</p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei'; font-size: 16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">8.“我国高等教育规模扩展对劳动力市场影响研究”（北京师范大学青年教师社会科学研究基金项目）</p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei'; font-size: 16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;"><br /></p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei'; font-size: 16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;"></p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei'; font-size: 16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;"><strong>作为主要成员参与的课题</strong></p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei'; font-size: 16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;"></p><p align="left" style="margin: 16px 0px 16px 36px; text-align: left; line-height: 18pt; text-indent: -21pt;"><span lang="EN-US" style="margin: 0px; color: black; font-family: '微软雅黑',sans-serif; font-size: 12pt;"><span style="margin: 0px;">1.<span style="font: 7pt 'Times New Roman'; margin: 0px; font-size-adjust: none; font-stretch: normal;">&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><span style="background: white; margin: 0px; color: black; font-family: '微软雅黑',sans-serif; font-size: 12pt;">“教育适应中国人口结构发展趋势研究”（国家社科基金“十三五”规划教育学重大项目）</span><span lang="EN-US" style="margin: 0px; color: black; font-family: '微软雅黑',sans-serif; font-size: 12pt;"></span></p><p align="left" style="margin: 16px 0px 16px 36px; text-align: left; line-height: 18pt; text-indent: -21pt;"><span lang="EN-US" style="margin: 0px; color: black; font-family: '微软雅黑',sans-serif; font-size: 12pt;"><span style="margin: 0px;">2.<span style="font: 7pt 'Times New Roman'; margin: 0px; font-size-adjust: none; font-stretch: normal;">&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><span lang="EN-US" style="margin: 0px; color: black; font-family: '微软雅黑',sans-serif; font-size: 12pt;">“</span><span style="margin: 0px; color: black; font-family: '微软雅黑',sans-serif; font-size: 12pt;">公共财政体制框架下教育财政制度研究<span lang="EN-US" style="margin: 0px;">”</span>（教育部哲学社会科学研究重大课题）<span lang="EN-US" style="margin: 0px;"></span></span></p><p align="left" style="margin: 16px 0px 16px 36px; text-align: left; line-height: 18pt; text-indent: -21pt;"><span lang="EN-US" style="margin: 0px; color: black; font-family: '微软雅黑',sans-serif; font-size: 12pt;"><span style="margin: 0px;">3.<span style="font: 7pt 'Times New Roman'; margin: 0px; font-size-adjust: none; font-stretch: normal;">&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><span lang="EN-US" style="margin: 0px; color: black; font-family: '微软雅黑',sans-serif; font-size: 12pt;">“</span><span style="margin: 0px; color: black; font-family: '微软雅黑',sans-serif; font-size: 12pt;">转型时期教育扩展对劳动力市场影响研究<span lang="EN-US" style="margin: 0px;">”</span>（全国教育科学十五规划课题）<span lang="EN-US" style="margin: 0px;"></span></span></p><p align="left" style="margin: 16px 0px 16px 36px; text-align: left; line-height: 18pt; text-indent: -21pt;"><span lang="EN-US" style="margin: 0px; color: black; font-family: '微软雅黑',sans-serif; font-size: 12pt;"><span style="margin: 0px;">4.<span style="font: 7pt 'Times New Roman'; margin: 0px; font-size-adjust: none; font-stretch: normal;">&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><span lang="EN-US" style="margin: 0px; color: black; font-family: '微软雅黑',sans-serif; font-size: 12pt;">“</span><span style="margin: 0px; color: black; font-family: '微软雅黑',sans-serif; font-size: 12pt;">深化教育财政体制改革、优化北京教育资源配置<span lang="EN-US" style="margin: 0px;">”</span>（北京市教育科学十五规划项目）<span lang="EN-US" style="margin: 0px;"></span></span></p><p align="left" style="margin: 16px 0px 16px 36px; text-align: left; line-height: 18pt; text-indent: -21pt;"><span lang="EN-US" style="margin: 0px; color: black; font-family: '微软雅黑',sans-serif; font-size: 12pt;"><span style="margin: 0px;">5.<span style="font: 7pt 'Times New Roman'; margin: 0px; font-size-adjust: none; font-stretch: normal;">&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><span lang="EN-US" style="margin: 0px; color: black; font-family: '微软雅黑',sans-serif; font-size: 12pt;">“</span><span style="margin: 0px; color: black; font-family: '微软雅黑',sans-serif; font-size: 12pt;">教育财政改革：政策与制度选择<span lang="EN-US" style="margin: 0px;">”</span>（教育部教育改革与发展战略重大课题）<span lang="EN-US" style="margin: 0px;"></span></span></p><p align="left" style="margin: 16px 0px 16px 36px; text-align: left; line-height: 18pt; text-indent: -21pt;"><span lang="EN-US" style="margin: 0px; color: black; font-family: '微软雅黑',sans-serif; font-size: 12pt;"><span style="margin: 0px;">6.<span style="font: 7pt 'Times New Roman'; margin: 0px; font-size-adjust: none; font-stretch: normal;">&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><span lang="EN-US" style="margin: 0px; color: black; font-family: '微软雅黑',sans-serif; font-size: 12pt;">“</span><span style="margin: 0px; color: black; font-family: '微软雅黑',sans-serif; font-size: 12pt;">义务教育财政改革<span lang="EN-US" style="margin: 0px;">”</span>（中国政府<span lang="EN-US" style="margin: 0px;">-</span>亚洲开发银行技术援助项目）<span lang="EN-US" style="margin: 0px;"></span></span></p><p align="left" style="margin: 16px 0px 16px 36px; text-align: left; line-height: 18pt; text-indent: -21pt;"><span lang="EN-US" style="margin: 0px; color: black; font-family: '微软雅黑',sans-serif; font-size: 12pt;"><span style="margin: 0px;">7.<span style="font: 7pt 'Times New Roman'; margin: 0px; font-size-adjust: none; font-stretch: normal;">&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><span lang="EN-US" style="margin: 0px; color: black; font-family: '微软雅黑',sans-serif; font-size: 12pt;">“</span><span style="margin: 0px; color: black; font-family: '微软雅黑',sans-serif; font-size: 12pt;">北京市幼儿园保育教育成本计算办法及收费政策研究<span lang="EN-US" style="margin: 0px;">” </span>（北京市教委委托课题）<span lang="EN-US" style="margin: 0px;"></span></span></p><p align="left" style="margin: 16px 0px 16px 36px; text-align: left; line-height: 18pt; text-indent: -21pt;"><span lang="EN-US" style="margin: 0px; color: black; font-family: '微软雅黑',sans-serif; font-size: 12pt;"><span style="margin: 0px;">8.<span style="font: 7pt 'Times New Roman'; margin: 0px; font-size-adjust: none; font-stretch: normal;">&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><span lang="EN-US" style="margin: 0px; color: black; font-family: '微软雅黑',sans-serif; font-size: 12pt;">“2008</span><span style="margin: 0px; color: black; font-family: '微软雅黑',sans-serif; font-size: 12pt;">年北京市教育经费预测<span lang="EN-US" style="margin: 0px;">”</span>（北京市教委课题）<span lang="EN-US" style="margin: 0px;"></span></span></p><p align="left" style="margin: 16px 0px 16px 36px; text-align: left; line-height: 18pt; text-indent: -21pt;"><span lang="EN-US" style="margin: 0px; color: black; font-family: '微软雅黑',sans-serif; font-size: 12pt;"><span style="margin: 0px;">9.<span style="font: 7pt 'Times New Roman'; margin: 0px; font-size-adjust: none; font-stretch: normal;">&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><span lang="EN-US" style="margin: 0px; color: black; font-family: '微软雅黑',sans-serif; font-size: 12pt;">“</span><span style="margin: 0px; color: black; font-family: '微软雅黑',sans-serif; font-size: 12pt;">北京市教育筹资研究<span lang="EN-US" style="margin: 0px;">” </span>（北京市教委课题）<span lang="EN-US" style="margin: 0px;"></span></span></p><p align="left" style="margin: 16px 0px 16px 36px; text-align: left; line-height: 18pt; text-indent: -21pt;"><span lang="EN-US" style="margin: 0px; color: black; font-family: '微软雅黑',sans-serif; font-size: 12pt;"><span style="margin: 0px;">10.<span style="font: 7pt 'Times New Roman'; margin: 0px; font-size-adjust: none; font-stretch: normal;">&nbsp; </span></span></span><span lang="EN-US" style="margin: 0px; color: black; font-family: '微软雅黑',sans-serif; font-size: 12pt;">“</span><span style="margin: 0px; color: black; font-family: '微软雅黑',sans-serif; font-size: 12pt;">基础教育成本分担与儿童入学<span lang="EN-US" style="margin: 0px;">”</span>（中英甘肃基础教育项目）<span lang="EN-US" style="margin: 0px;"></span></span></p><p align="left" style="margin: 16px 0px 16px 36px; text-align: left; line-height: 18pt; text-indent: -21pt;"><span lang="EN-US" style="margin: 0px; color: black; font-family: '微软雅黑',sans-serif; font-size: 12pt;"><span style="margin: 0px;">11.<span style="font: 7pt 'Times New Roman'; margin: 0px; font-size-adjust: none; font-stretch: normal;">&nbsp; </span></span></span><span lang="EN-US" style="margin: 0px; color: black; font-family: '微软雅黑',sans-serif; font-size: 12pt;">“</span><span style="margin: 0px; color: black; font-family: '微软雅黑',sans-serif; font-size: 12pt;">义务教育转移支付制度研究<span lang="EN-US" style="margin: 0px;">”</span>（世界银行贷款项目）<span lang="EN-US" style="margin: 0px;"></span></span></p><p align="left" style="margin: 16px 0px 16px 36px; text-align: left; line-height: 18pt; text-indent: -21pt;"><span lang="EN-US" style="margin: 0px; color: black; font-family: '微软雅黑',sans-serif; font-size: 12pt;"><span style="margin: 0px;">12.<span style="font: 7pt 'Times New Roman'; margin: 0px; font-size-adjust: none; font-stretch: normal;">&nbsp; </span></span></span><span lang="EN-US" style="margin: 0px; color: black; font-family: '微软雅黑',sans-serif; font-size: 12pt;">Barometer on China’s Development (BOCD):GIS Database on Prefectures and Counties</span><span style="margin: 0px; color: black; font-family: '微软雅黑',sans-serif; font-size: 12pt;">（香港中文大学课题）<span lang="EN-US" style="margin: 0px;"></span></span></p><p align="left" style="margin: 16px 0px 16px 36px; text-align: left; line-height: 18pt; text-indent: -21pt;"><span lang="EN-US" style="margin: 0px; color: black; font-family: '微软雅黑',sans-serif; font-size: 12pt;"><span style="margin: 0px;">13.<span style="font: 7pt 'Times New Roman'; margin: 0px; font-size-adjust: none; font-stretch: normal;">&nbsp; </span></span></span><span lang="EN-US" style="margin: 0px; color: black; font-family: '微软雅黑',sans-serif; font-size: 12pt;">Educational and Job Aspirations in RuralYunnan (CUHK-Yale Summer Project 2004)</span><span style="margin: 0px; color: black; font-family: '微软雅黑',sans-serif; font-size: 12pt;">（美国耶鲁大学<span lang="EN-US" style="margin: 0px;">-</span>香港中文大学课题）<span lang="EN-US" style="margin: 0px;"></span></span></p><p align="left" style="margin: 16px 0px 16px 36px; text-align: left; line-height: 18pt; text-indent: -21pt;"><span lang="EN-US" style="margin: 0px; color: black; font-family: '微软雅黑',sans-serif; font-size: 12pt;"><span style="margin: 0px;">14.<span style="font: 7pt 'Times New Roman'; margin: 0px; font-size-adjust: none; font-stretch: normal;">&nbsp; </span></span></span><span lang="EN-US" style="margin: 0px; color: black; font-family: '微软雅黑',sans-serif; font-size: 12pt;">Education and Work: The Efficacy ofSchooling in Human Resource Development in Three Regions in China (RGC:4379/00H)</span><span style="margin: 0px; color: black; font-family: '微软雅黑',sans-serif; font-size: 12pt;">（香港中文大学课题）</span><br /></p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei'; font-size: 16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;"></p></div>
+                    
+                </div>				<div class="grjj">
+                    <p class="jjh">学生情况</p>
+                    <div class="bks1"><div style="top: 0px;">﻿﻿<span style="" 16px="" yahei="" microsoft=""><span style="font-size:16px;">招收劳动经济学专业硕士研究生、教育经济与管理专业博士研究生</span></span></div></div>
+                    
+                </div>				<div class="grjj">
+                    <p class="jjh">教授课程</p>
+                    <div class="bks1"><div style="top: 0px;">﻿﻿<span style="font-size:16px;"><span style="text-align: left; color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: Arial,Helvetica,sans-serif; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; word-spacing: 0px; display: inline !important; white-space: normal; orphans: 2; float: none; -webkit-text-stroke-width: 0px; background-color: transparent;">计量经济学，</span><span style="" 16px="" yahei="" microsoft="">教育经济学，管理经济学，教育经济学经典文献选读</span></span></div></div>
+                    
+                </div>            </div>
+        </div>
+         <footer style="overflow: hidden;">
+            <div class="footers">
+                <div class="footersl">
+                    <img src="http://bs.bnu.edu.cn/newweb/images/ewm.jpg" alt="" class="imgewm">
+                    <div class="footerxx">
+                        <p>Copyright © 2020 北京师范大学经济与工商管理学院</p>
+                        <p><i class="fas fa-map-marker-alt"></i> 地址：北京市新街口外大街19号</p>
+                        <p><i class="fas fa-portrait"></i> 传真：010-58801867</p>
+                        <p><i class="fas fa-phone"></i> 电话：010-58801867</p>
+                        <p><i class="fas fa-envelope"></i> 邮编：100875</p>
+                    </div>
+                </div>
+                <img src="http://bs.bnu.edu.cn/newweb/images/db.png" alt="" width="140" class="dbimg">
+                <img src="http://bs.bnu.edu.cn/newweb/images/yx.png" alt="" class="yuanxun">
+            </div>
+        </footer>
+    </div>
+	<div class="share">
+		  <div id="appgame-leftside-share">
+	        <div class="appgame-leftside-share rwt_share" id="rwt_share">
+	         
+	        <!--<a class="appgame-leftside-search" data-cmd="search" title="search"  href="javascript:void(0);" onclick="opens('id')">search</a> --> <!--<div class="searchs" id="id">
+	         <form name="dataForm" action="/cms/search/searchResults.jsp" target="_blank" method="post" accept-Charset="utf-8"  onsubmit="document.charset='utf-8';">
+			        	<p>
+			        		<input name="siteID" size="4" value="127" type = "hidden">
+			        		<input type="text" name="query" id="search" class="searchInput" value="输入搜索词">
+			        		<button type="submit"></button>
+			        	</p>
+			        	</form>
+			        </div>-->
+			        <!-- <a class="appgame-leftside-weixin" data-cmd="weixin" title="">微信</a> -->
+                    
+			        <!-- <a class="appgame-leftside-qzone" data-cmd="qzone" title="">qq空间</a>
+			        
+			        <a class="appgame-leftside-tsina" data-cmd="tsina" title="">微博</a> -->			    </div>
+			        <a class="appgame-leftside-top" onclick="gotoTPoint()"></a>			</div>
+			        
+		</div>
+</body>
+<script src="http://gh.bnu.edu.cn/js/jquery-1.9.0.min.js"></script>
+<script src="http://gh.bnu.edu.cn/js/share.min.js"></script>
+<script>
+    var dj=document.getElementById('dianji');
+    var jjc=document.getElementById('jjc');
+    var dj1=document.getElementById('dianji1');
+    var jjc1=document.getElementById('jjc1');
+    var a=1;
+    function zhedie(m,n){
+        m.onclick=function(){
+            if(a==1){
+                n.className='jjc';
+                m.className='dianji1'
+                a=0;
+            }else{
+                n.className='jjc1';
+                m.className='dianji'
+                a=1;
+            }
+        }
+    }
+    zhedie(dj,jjc);
+    zhedie(dj1,jjc1);
+	
+	
+</script>
+<script>
+
+	
+	
+    
+
+    /*回到顶部*/
+	$(function(){
+	 	$(window).resize(function(){
+						var h = $(window).height();
+						$('.goTop').css('top',h-60);
+						$(window).scroll(function(){				
+							var scrollTop = $(document).scrollTop();					  
+							$('.goTop').stop().animate({
+								top: h + scrollTop-60
+							},300);
+						});
+		}).resize();
+		});
+	//gotop
+
+			$('.goTop').click(function(){
+
+				$('body,html').stop().animate({scrollTop:0});
+
+				return false;
+
+			});
+	
+	function gotoTPoint(){
+		$("html,body").animate({scrollTop:0},500);
+	}
+</script>
+</html>

@@ -1,0 +1,495 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0">
+    <title>北京师范大学工商与经济管理学院</title>
+    <link rel="stylesheet" href="http://bs.bnu.edu.cn/new-ver-css/reset.css">
+    <link rel="stylesheet" href="http://bs.bnu.edu.cn/new-ver-css/index.css">
+	<link rel="stylesheet" href="http://bs.bnu.edu.cn/new-ver-css/xyslist.css">
+	<link rel="stylesheet" href="http://bs.bnu.edu.cn/new-ver-css/xys-tf.css">
+    <style>
+        .container{
+            width:100%;
+            height: auto;
+            overflow: hidden;
+        }
+        .header{
+            width:100%;
+            height:116px;
+            background:#EFF8FF;
+        }
+        .logo1{
+            width:1200px!important;
+            margin:0 auto;
+            position:relative;
+            float: none;
+			display:block;
+        }
+        .logo2{
+            float:right;
+        }
+        .logo1 p{
+            position:absolute;
+            top:5px;
+            right:5px;
+            font-size:13px;
+        }
+        .logo1 p:hover{
+            color:#112769;
+        }
+        .tu{
+            width:100%;
+            height:240px;
+            background:url('http://bs.bnu.edu.cn/newweb/grzy/images/tu.jpg') no-repeat top center;
+            background-size: 100%;
+        }
+        .lujing{
+            width:1200px;
+            height:58px;
+            margin:0 auto;
+            border-bottom:1px solid #aaa;
+            overflow:hidden;
+        }
+        .lujings{
+            margin:24px 0 0 0;
+            font-size:14px;
+        }
+        .content{
+            color:#333;
+            width:1200px;
+/*            height:2000px;*/
+            margin:0 auto;
+            margin-top:40px;
+/*            background:#c4c4c4;*/
+        }
+        
+        .xian{
+            width:100%;
+            height:8px;
+            background:#9A0812;
+        }
+        
+        .leftc{
+            float:left;
+        }
+        .rightc{
+            float:left;
+            margin-left:50px;
+/*            background:#666;*/
+            width:880px;
+/*            height:1000px;*/
+        }
+        .rheader{
+            width:880px;
+            height:210px;
+/*            background:yellow;*/
+        }
+        .xm{
+            font-size:30px;
+            height:40px;
+/*            border-bottom:4px solid #9A0812;*/
+            width:auto;
+            float:left;
+            line-height:40px;
+			margin-right:30px;
+        }
+        .zhiw{
+            font-size:18px;
+            height:40px;
+            line-height:50px;
+            margin-bottom:30px;
+        }
+        .tel{
+                font-size: 16px;
+                margin-top: 10px;
+                line-height: 20px;
+        }
+        .grjj{
+/*            height:300px;*/
+            width:880px;
+/*            background:yellow;*/
+            padding-bottom:40px;
+        }
+        .jjh{
+                font-size: 20px;
+                border-bottom: 1px solid #cecece;
+                height: 40px;
+                line-height: 40px;
+                padding-left: 30px;
+                background: url(http://bs.bnu.edu.cn/newweb/grzy/images/zw.png) no-repeat 0 16px;
+        }
+        
+        .jjc{
+            font-size:14px;
+            margin-top:30px;
+           
+            line-height:28px;
+            overflow:hidden;
+            text-align: justify;
+            text-justify:inter-ideograph;
+        }
+        .jjc1{
+            height:225px;
+            font-size:14px;
+            margin-top:30px;
+            
+            line-height:28px;
+            overflow:hidden;
+            text-align: justify;
+            text-justify:inter-ideograph;
+        }
+        
+        .dianji1{
+                background: url(http://bs.bnu.edu.cn/newweb/grzy/images/zw.png) no-repeat 0 -50px;
+                width: 13px;
+                height: 13px;
+                cursor: pointer;
+                display: block;
+            margin-top: 20px;
+            transition: all .2s linear;
+        }
+        .dianji1:hover{
+            background: url(http://bs.bnu.edu.cn/newweb/grzy/images/zw.png) no-repeat 0 -64px;
+        }
+        
+        .dianji{
+                background: url(http://bs.bnu.edu.cn/newweb/grzy/images/zw.png) no-repeat 0 -24px;
+                height: 13px;
+                cursor: pointer;
+                display: block;
+            margin-top: 20px;
+            transition: all .2s linear;
+        }
+        .dianji:hover{
+            background: url(http://bs.bnu.edu.cn/newweb/grzy/images/zw.png) no-repeat 0 -37px;
+        }
+        #jjc1{
+            text-indent:0em;
+        }
+        
+        .bks{
+            font-size:14px;
+            font-weight: 800;
+            margin-top:30px;
+            height:auto;
+            line-height:36px;
+        }
+        .bks1{
+            font-size:14px;
+            margin-top:30px;
+            height:auto;
+            line-height:36px;
+        }
+        .bksc{
+            height:36px;
+            line-height:36px;
+            font-size:14px;
+        }
+        
+        .yanzheng{
+            width:1200px;
+            height:100px;
+            margin:0 auto;
+        }
+        .yanzheng img{
+            display:block;
+            margin-top:26px;
+            float:left;
+        }
+		
+#appgame-leftside-share{width:42px; height:216px; position: fixed;bottom: 30px;right: 30px; z-index:9999;}
+.appgame-leftside-share{width:42px; height:259px;}
+#appgame-leftside-share a{display:block; width:42px; height:44px; background-color:#e6e6e6; z-index:1; position:absolute; left:0; box-sizing:border-box; -moz-box-sizing:border-box; border:1px #ddd solid; background-image:url(http://gh.bnu.edu.cn/images/share-icons.png); background-repeat:no-repeat; margin:0;  transition:0.4s; -webkit-transition:0.4s; -moz-transition:0.4s;}
+#appgame-leftside-share a:hover{background-color:#fff; border:1px #eee solid; z-index:2;}
+/*.appgame-leftside-weixin{top:0; background-position:-88px 0;}
+.appgame-leftside-weixin:hover{background-position:0px 0;}
+.appgame-leftside-qzone{top:43px; background-position:-88px -44px;}
+.appgame-leftside-qzone:hover{background-position:0px -44px;}*/
+.appgame-leftside-search{top:86px; background-position:-93px -89px;}
+.appgame-leftside-search:hover{background-position:-5px -86px;}
+.appgame-leftside-weixin{top:129px; background-position:-88px 0px;}
+.appgame-leftside-weixin:hover{background-position:0px 0px;}
+/*.appgame-leftside-fbook{top:172px; background-position:-88px -176px;}
+.appgame-leftside-fbook:hover{background-position:0px -176px;}
+.appgame-leftside-twi{top:215px; background-position:-88px -220px;}
+.appgame-leftside-twi:hover{background-position:0px -220px;}*/
+#appgame-leftside-share .appgame-leftside-top{background-image:url(http://gh.bnu.edu.cn/images/leftnav-off.png); background-position:-1px -395px; top:130px; cursor:pointer;}
+
+.rwt_share {
+/*	overflow:hidden;*/
+	float:left;
+	position:relative;
+}
+.rwt_share a {
+	display:inline-block;
+	margin-right:10px;
+	text-indent:-9999px;
+	margin-bottom:10px;
+	width:24px;
+	height:24px;
+	overflow:hidden;
+	cursor:pointer;
+	float:left;
+	font-size:12px;
+}
+.rwts_weixin {
+	background-position:0 -1612px;
+}
+.rwts_tsina {
+	background-position:0 -104px;
+}
+.rwts_tqq {
+	background-position:0 -260px;
+}
+.rwts_qzone {
+	background-position:0 -52px;
+}
+.rwts_sqq {
+	background-position:0 -2652px;
+}
+.rwts_tieba {
+	background-position:0 -728px;
+}
+.rwts_renren {
+	background-position:0 -208px;
+}
+.rwts_kaixin001 {
+	background-position:0 -312px;
+}
+.rwts_tqf {
+	background-position:0 -364px;
+}
+.rwts_douban {
+	background-position:0 -468px;
+}
+.rwts_twi {
+	background-position:0 -1404px;
+}
+.rwts_fbook {
+	background-position:0 -1352px;
+}
+.rwts_ty {
+	background-position:0 -1196px;
+}
+.rwts_mogujie {
+	background-position:0 -1768px;
+}
+.rwts_meilishuo {
+	background-position:0 -1716px;
+}
+.rwts_huaban {
+	background-position:0 -1872px;
+}
+.rwts_hi {
+	background-position:0 -416px;
+}
+.rwts_tsohu {
+	background-position:0 -520px;
+}
+.rwts_more {
+	background-position:0 0;
+}
+.rwt_share_wxShow_code>img {
+	width:100%;
+}
+.bks1 li{
+	list-style:disc;
+}
+@media screen and (max-width: 1200px){
+	.logo1{
+		width:100%!important;
+	}
+	.leftc img{
+		width:50%!important;
+		height:50%!important;
+	}
+	.logo2{display:none;}
+	.lujing{
+		width:90%;
+	}
+	.content{
+		width:90%;
+	}
+	.leftc{
+		float:none;
+		
+	}
+	.tu{display:none;}
+	
+	.rightc{
+		float:none;
+		width:100%;
+		margin-left:0px;
+	}
+	.footers{width:100%;}
+	.rheader{width:100%;}
+	.grjj{width:100%;}
+}
+@media screen and (max-width: 600px){
+.l3{width:95%;}
+.share{display:none;}
+.leftc img{
+		width:70%!important;
+		height:70%!important;
+	}
+}
+  
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo1">
+                <img src="http://bs.bnu.edu.cn/newweb/grzy/images/logo.png" alt="" class="l3" style="margin-top: 25px;float:left;">
+                <img src="http://bs.bnu.edu.cn/newweb/grzy/images/logo2.png" alt="" class="logo2">
+                <a href="http://bs.bnu.edu.cn/englishversion/facultyresearch/fulltimefaculty/azmsy/119692.html"><p>ENGLISH VERSION</p></a>
+            </div>
+        </div>
+        <div class="xian"></div>
+        <div class="tu"></div>
+        <div class="lujing">
+            <div class="lujings">
+                <a href="#">师资队伍</a>
+                 | 
+                <a href="#">人力资源管理</a>
+            </div>
+        </div>
+        <div class="content">
+            <div class="leftc">
+                <img src="/Public/upload/touxiang/99033.jpg" alt="" width="270">
+            </div>
+            <div class="rightc">
+                <div class="rheader">
+                    <p class="xm">李宝元</p>
+                    <p class="zhiw">教授</p>
+                    <p class="tel"><strong style="display:block;width:100px;float:left;">电话</strong>：010-58801867</p> 
+                 <p class="tel"><strong style="display:block;width:100px;float:left;">E-mail</strong>：byli@163.com</p>
+                 <p class="tel"><strong style="display:block;width:100px;float:left;">Office hour</strong>：周一下午4：00-6:00</p>
+                 <p class="tel"><strong style="display:block;width:100px;float:left;">系所中心</strong>：人力资源管理</p>
+              </div>
+			  <div class="grjj">
+                    <p class="jjh">个人简历</p>
+                    <div class="bks1" id="jjc"><span style="font-family: " microsoft="" yahei="" font-size:16px="">李宝元，北京师范大学人本发展与管理研究中心主任，经济与工商管理学院人力资源管理系教授、博士生导师。兼任首都教育经济研究院人力资源开发与管理研究所所长，北京师范大学经济管理学院、资源与经济研究院学术委员会委员，北京师范大学MBA发展咨询委员会委员，北京师范大学中国彩票事业研究中心研究员。中国民主同盟会会员，中国宏观经济管理教育学会常务理事，中国劳动学会劳动标准专业委员会常务理事，中国人力资源开发研究会会员，国家职业技能鉴定专家委员会人力资源管理专业委员会委员，国家社会科学基金、留学基金管理委员会评审专家。先后在山西财经学院、洛阳工学院、中南财经大学、山东经济学院、中国人民大学和北京师范大学等六所大学研究学习和从事教学工作，具有近30年的高等经济管理教育职业生涯。在国内学术界较早，提出“人本经济学”、“社会科学技术论”、“三域配套改革战略”等理论观点及改革主张，有关研究成果曾引起学术界和政府决策部门的关注。曾先后承担国家社会科学基金、福特基金等纵横向科研项目20多项；在《经济学家》、《管理世界》、《经济理论与经济管理》、《财经问题研究》、《企业管理》、《中外管理》等学术刊物上发表论文150余篇，其中10多篇被《新华文摘》、人民大学复印报刊资料《理论经济学》、《体制改革》、《国民经济管理》和教育部《高等学校文科学报文摘》等全国著名文献转载或转摘；另外，在《人民日报》、《中国教育报》、《北京日报》、《中国财经报》、《科技日报》、《新京报》、《上海证券报》以及《中国改革》、《改革内刊》、《商业文化》等报刊杂志上发表评论随笔专栏文章百余篇，还在新浪、微信公众号等网络媒体撰写随笔时评剧评杂文千余篇。曾出版“现代人力资源管理三部曲著作”《战略性激励：现代企业人力资源管理精要》、《人本方略：现代公共人力资源开发与管理通论》和《战略性投资：现代学习型组织人力资源开发全鉴》，在业内有广泛影响；2011年以来，主编“现代组织通用人力资源管理精品系列教材”（共14本，已出版4部），主持出版《中国人本发展报告》绿皮书，已有广泛社会影响；共出版个人学术著作及教材40余部，主要代表作有《人本发展与管理》、《中国劳动关系简史》、《平衡计酬卡》、《多元成功路》、《人力资本论》、《战略性投资》、《追求永远》、《人本方略》、《战略性激励》、《人力资本与经济发展》、《宏观经济分析》、《市场经济中的国家计划》等。其著作曾获得国家图书奖、全国教育图书奖、中国软科学奖、（教育部）全国普通高等学校优秀教材奖、普通高等学校“十一五”国家级规划教材及北京市高等学校精品教材奖。</span><br /></div>
+                    
+                </div>				<div class="grjj">
+                    <p class="jjh">研究领域</p>
+                    <div class="bks1">主要研究方向：人本发展与管理；在国民经济与管理、新制度经济学与制度变革、战略规划方法与统计技术，特别是在人力资本理论，人力资源开发与管理以及人口、资源与环境经济学等领域有所建树。</div>
+                </div>				<div class="grjj">
+                    <p class="jjh">研究成果</p>
+                    <div class="bks1" id="jjc1"><p style="font-family: " microsoft="" yahei="" font-size:16px=""><strong>【学术论文154余篇】</strong></p><p style="font-family: " microsoft="" yahei="" font-size:16px=""></p><p style="font-family: " microsoft="" yahei="" font-size:16px="">[1] “中国管理学”何以自处？——一个文献整合性评论，经济研究参考，2017年第72期（72P-12，总第2848期）</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">[2] 中国管理学研究：大历史跨越中的逻辑困局——相关文献的一个整合性评论，管理世界，2017年第7期（157-169页，3万字）。</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">[3] 工作价值论，财经问题研究，2017年第7期。</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">[4] 全面深化改革的历史路径、现实困境及根本出路，特区实践与理论，2017年第3期。</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">[5] 组织管理研究领域“科学化”偏误批判，财经问题研究，2016年第5期，3-5页，与董青合作。人大复印报刊资料《管理科学》2016年第8期全文转载。</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">[6] 明清晋徽商帮组织劳动关系特性及其借鉴意义，北京社会科学，2015年第11期，31-37页，与仇勇、蔡宏波合作。</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">[7] BCC：战略性薪酬管理新尝试，北大商业评论，2015年10月总第135期，视野专栏文章，24-33页。</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">[8] 我国高校教师的薪酬制度改革研究，国家教育行政学院学报，2015年第10期，84-90页，与仇勇等合作。</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">[9] 企业绩薪整合管理体系及运作流程设计，中国人力资源开发，2015年8月第16期，与董青等合作。</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">[10] 中国企业人力资源战略竞争优势提升转换总体思路，经济研究参考，2015年第13（P-3）期</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">[11] 百年中国劳动关系演化的基本路径及走势，经济理论与经济管理，2015年第6期。</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">[12] 个体行为特征视角下的老龄化经济影响研究，经济研究参考，2014年第41（T-7）期</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">[13] 青岛啤酒：基于BSC实施战略转型（与董青&nbsp;<img class="anchorclass" style="background: url(" http:="" 172="" 16="" 212="" 57:8080="" cms="" ueditor="" themes="" default="" images="" anchor="" gif="" left="" center="" no-repeat="" scroll="" transparent="" cursor:="" auto="" display:="" inline-block="" height:="" 16px="" width:="" 15px="" alt="" /><img class="anchorclass" style="background: url(" http:="" 172="" 16="" 212="" 57:8080="" cms="" ueditor="" themes="" default="" images="" anchor="" gif="" left="" center="" no-repeat="" scroll="" transparent="" cursor:="" auto="" display:="" inline-block="" height:="" 16px="" width:="" 15px="" alt="" />仇勇 王明华 田雅琳合作），中国管理案例分享中心（案例库），2014年9月。</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">[14] 积极促进残疾人就业，全面建成小康社会——《2013中国劳动力市场发展报告》评介（与马洪立合作），中国编辑，2014年第1期。</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">[15] 中国进城务工人员群体生存状况调查在报告（与仇勇合作），经济研究参考，2014年第19M-3期。</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">[16] 人工低成本水平估算方法及国际比较的相关研究评述（与蒯鹏州、董青合作），中国人力资源开发，2014年7月号第14期（总308期），80页。</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">[17] 农民工陷于“双重边缘化”困境，中国发展观察，2014年第2期，62页。</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">[18] 中国企业如何打造“战略中心型组织”：基于青啤BSC导入实践的案例研究，（与王文周、王明华、田雅琳合作），《中国人力资源开发》（理论研究版）2013年第21期，77-84页，98页。中国人民大学书报资料中心《管理科学》2014年第2期（44-51页）转载。</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">[19] 人本管理经济学探索，《财经问题研究》，2013年第12期，18-25页。《高等学校文科学术文摘》2014年第1期（“学术前沿”栏目 ，134-144页）转摘。</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">[20] “低成本陷阱”：绿色发展背景下中国企业的战略困境，《2013中国绿色发展报告：区域比较》，第五篇专家论坛,213-21页，北京师范大学出版社，2013.9.</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">[21] 从平衡计分卡到平衡计酬卡：现代企业人力资源战略性激励焦点整合管理框架，与王文周合作，《中国人力资源开发》（理论研究版），2013/17。</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">[22] 转型期就业结构性矛盾的“杠杆解”：兼评赖德胜《实施扩大就业的发展战略研究》，人民论坛•学术前沿，2013.07下</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">[23] 拨开“商雾”看“淘大”，《中国人力资源开发》（管理创新版），2013/04</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">[24] 中国企业用工之困究竟困在何处？中国发展观察，2013.2</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">[25] 中国绿色人本发展“四维度”推进策略，与马洪立合作，中国发展观察，2013年第1期；中国绿色人本发展“四方位”推进策略，中国发展观察，2013年第1期，载《2012中国绿色发展指数报告》，北京师范大学出版社，2012年8月。</p><p style="font-family: " microsoft="" yahei="" font-size:16px=""><br /></p><p style="font-family: " microsoft="" yahei="" font-size:16px=""></p><p style="font-family: " microsoft="" yahei="" font-size:16px=""><strong>【报刊文章103余篇】</strong></p><p style="font-family: " microsoft="" yahei="" font-size:16px=""></p><p style="font-family: " microsoft="" yahei="" font-size:16px="">[1] 无非是“人性”，《国资报告》2015年第1期，专栏文章（1），76-77页</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">[2] “九斤老太”的谶语，《商业文化》2013年第11期（下），人本话题专栏文章（10），76页</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">[3] 问候语中有有文化，《商业文化》2013年第10期（下），人本话题专栏文章（9），84页</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">[4] 从孔圣论语到网民微博，《商业文化》2013年第8期（下），人本话题专栏文章（8），84页.</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">[5] 以价值观做选择，《商业文化》2013年第7期（下），人本话题专栏文章（7），87页.</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">[6] 人不能做神事，《商业文化》2013年第6期（下），人本话题专栏文章（6），78页.</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">[7] 人生在世，出场顺序很重要，《商业文化》2013年第5期（下），人本话题专栏文章（5），82页.</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">[8] 做人要低调，《商业文化》2013年第4期（下），人本话题专栏文章（4），72页。</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">[9] 诚信从哪里来？《商业文化》2013年第4期（下），15页。</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">[10] 从“中国式求人”看商业文化指向，《商业文化》2013年第3期（下），人本话题专栏文章（3），60页。</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">[11] 人谁比谁傻多少？！《商业文化》2013年第2期（下），人本话题专栏文章（2），60页。</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">[12] 商业盛衰文化理，漫话天命人事间，《商业文化》2013年第1期（下），人本话题专栏文章（1），60页。</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">[13] 企业员工调查,改革内参.2013年3月22日(综合10)</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">[14] 大学改革:期待”一号文件”,《改革内参》2011年第2期。</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">[15] 传承文化该不该“原汁原味”？《人民日报》2011年1月8日海外版第八版科教观潮。</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">[16] 我国需要绿色人本战略，《中国教育报》2010-12-6，A04“理论”版。</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">[17] 联考如何破解高招难题，《人民日报》2010-11-24“人民时评”。</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">[18] “学历拉动，全民应试”必须改变，《齐鲁晚报》2010-11-29，A02版。</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">[19] 高校“去行政化”就是“去官本位化”，《改革内参》2010年第11期。</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">[20] 农民工子女教育要寻求“杠杠解”，《改革内参》2010年第2期。</p><p style="font-family: " microsoft="" yahei="" font-size:16px=""><br /></p><p style="font-family: " microsoft="" yahei="" font-size:16px=""></p><p style="font-family: " microsoft="" yahei="" font-size:16px=""><strong>【主要著作50余部】</strong></p><p style="font-family: " microsoft="" yahei="" font-size:16px=""></p><p style="font-family: " microsoft="" yahei="" font-size:16px="">1. 《案例研究教学法》，李宝元著，中国工信出版集团、人民邮电出版社，2017年8月版（ISBN 978-7-115-45943-5，10.6万字）</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">2. 《2015/16中国人本发展报告：何以养老》,李宝元主编，中国财经出版传媒集团、经济科学出版社，2016年12月版（ISBN 978-7-5141-7569-1,32万字）</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">3. 《中国劳动关系简史》，李宝元主编，企业管理出版社，2016年10月版（ISBN 978-7-5164-1356-2,26.1万字）</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">4. 《绩效管理》，李宝元 仇勇 编著，高等教育出版社，2016年6月版（ISBN 978-7-04-044985-3,51万字）</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">5. 《人本发展与管理》，李宝元著，经济科学出版社，2016年5月版（ISBN978-7-5141-6797-9,36万字）</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">6. 《平衡计酬卡》，李宝元著，中信出版集团，2015年12月版（ISBN978-7-5086-5751-6/F·3548, 22.0万字）</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">7. 《职业生涯管理》李宝元 王明华 著，人民邮电出版社，2014年12月版（ISBN978-7-115-37635-0, 51.0万字）</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">8. 《组织行为学通论》（第2版），李宝元 严帆 董青 著，清华大学出版社，2014年9月版（ISBN978-7-302-36298-9, 54.5万字）</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">9. 《走出低成本陷阱：2014中国人本发展报告》，主编，经济科学出版社2014年6月版,（ISBN978-7-5141-46554-4，39万字）。</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">10. 《绩效薪酬整合管理》，李宝元、王文周、焦豪 编著，清华大学出版社，2014年3月版，（ISBN 978-7-302-35150-4，64.0万字）</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">11. 《民工生态：2013中国人本发展报告》，主编，经济科学出版社2013年11月版,（ISBN978-7-5141-4069-9，27万字）。有30多家平面、网络、杂志媒体参与发布会并先后在了报道，社会反响热烈。</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">12. 《薪酬管理：原理·方法·实践》，李宝元、王文周、蒯鹏州 编著，清华大学出版社、北京交通大学出版社2013年第二版（ISBN978-7-5121-1349-7/F·1132，56.3万字）。</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">13. 《人力资源战略管理》，李宝元、王文周、蒯鹏州 编著，清华大学出版社，2013年6月版，（ISBN 978-7-302-31750-0，68.3万字）</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">14. 《来的不是客》，主笔，北京师范大学出版社，2012年11月版,（ISBN 978-7-303-15526-2，15万字）。</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">15. 《企业用工之困：2012中国人本发展报告》，主笔，经济科学出版社2012年11月版,（ISBN978-7-5141-2684-6，35万字）</p><p style="font-family: " microsoft="" yahei="" font-size:16px=""><br /></p><p style="font-family: " microsoft="" yahei="" font-size:16px=""></p><p style="font-family: " microsoft="" yahei="" font-size:16px=""><strong>【主要社会性学术活动及政府决策活动】</strong></p><p style="font-family: " microsoft="" yahei="" font-size:16px="">[1] 1999年6月份，应国家发展计划委员会长期规划司邀请，在其杭州举办中长期规划方法高级研讨会上，作题为“市场经济国家的中长期规划”的学术报告，受到与会者普遍好评。</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">[2] 1999年8月份，应北京大学研究生会邀请，到北京大学经济学院作“人力资本与经济发展”的学术报告，受到北大学子热烈欢迎并引发了他们强烈的研讨兴趣和学术热情。</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">[3] 1999年6-10月份，作为主要执笔人参与文化部发展规划课题组，研究并起草《“十五”文化产业发展规划基本思路》，受到政府决策部门的关注和重视。</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">[4] 2000年11月26-28日，应邀到广州参加“中国可持续发展能力建设国际研讨会”，在会上作为嘉宾发表了题为“人本方略：新世纪中国经济可持续发展的战略选择”的演讲，受到与会者关注和好评，基本观点被摘要刊发在2000年11月28日的《人民日报》（华南新闻版）上，具有相当的社会影响。</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">[5] 2001年6月1日，应经济学院领导安排在日本樱美林大学教授来访学术交流会上发表题为“转型期国有企业人力资本运营问题研究”的演讲，并回答了与会者有关提问。</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">[6] 2001年9月28-30日，应邀参加“全国多元股份制理论与实践研讨会”，作为四位专家之一在大会上做关于“人力资本理论与企业人力资本股权化”的演讲，受到与会代表普遍关注和热烈欢迎。</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">[7]2001年11月15-16日，应邀于人民大会堂参加“企业家与专家高层论坛：国有企业改革新思路学术研讨会（2001）”，向会议提交了题为《国有企业人力资本运营转型研究》的学术论文。</p></div>
+                    
+                </div>				<div class="grjj">
+                    <p class="jjh">研究课题</p>
+                  
+                    <div class="bks1"><p style="font-family: " microsoft="" yahei="" font-size:16px="">1. 985项目《2015/16中国人本发展报告：何以养老》、《2017/18中国人本发展报告：教育为什么》</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">2. 北京市节能环保中心委托项目《首都节能环保人才队伍建设总体思路及发展规划研究》，2013年12月-2014年3月（9.5万元）</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">3. 共青团中央项目《新生代农民工生存状况及职业发展规划》，2012年6-12月（5万元）</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">4. 国家社科基金重大项目《构建和谐劳动关系研究》（批号12&amp;ZD094）子课题《我国劳动关系的历史流变与现状研究》，2012年9月，（6万元）</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">5. 国家社科基金一般项目《绿色发展、多重转型与中国企业HR战略竞争优势动态提升转换问题研究》（批号：11BGL015,15万元）,主持人，2011年6月30日-2013年12月30日。</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">6. 国家开发行北京分行委托七个“十二五”投融资规划项目，2010年10-12月，主持包括《金融性支持北京市顺义区科学发展规划（2010-2015）》、《金融性支持北京市通州区科学发展规划（2010-2015）》、《金融性支持北京市房山区科学发展规划（2010-2015）》、《金融性支持北京市石城镇科学发展规划（2010-2015）》、《金融性支持北京市保障性住房科学发展规划（2010-2015）》、《金融性支持北京市“十二五”城乡经济一体化科学发展规划（2010-2015）》、《金融性支持北京市北汽福田科学发展规划（2010-2015）》七个系列项目。（25万元）</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">7. 北京普华文化发展有限公司委托项目《新劳动法规约束下中国企业人力资源管理案例研究》（12000元），2009年10月至2010年10月。</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">8. 国家社会科学基金一般项目《从人口大国走向人力资源强国战略：基于人本视角的整合研究》（批号:08BRK002；9万元），2008年6月1日至2010年6月1日。</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">9. 教育部哲学社会科学研究重大课题攻关项目《马克思主义与以人为本的科学发展观研究》，韩震主持（50万元），2007年11月（2008-2010）；项目批准号：07JZD0001/项目合同号07JZDH001。子课题之五《当代中国社会总体发展战略的对策性研究: 马克思主义发展观的当代实践》（经费5万元）。</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">10. 北京市统计局合作项目：2007年北京市行业企业统计评价报告，主持人，2007年6-10月。1.1万元。</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">11. 北京市发展与改革委员会委托项目：首都经济发展的阶段性特征研究，主持人，2006年6月~12月。8万元</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">12. 教育部项目：“合理负担教育成本，促进高等教育入学机会均等”，“致力于更加公平的教育”子课题，主持人钟秉林校长，2006年7月10月。主要参与者。</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">13. 北师大：北京师范大学十一五发展规划，2005年6~12月，主要参与者。</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">14. 教育部社科司：十一五哲学社会科学规划，2005年5~6月，主要参与者。</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">15. 北京市国民经济和社会发展第十一个五年规划前期重点研究课题（北京市发展与改革委员会委托项目）：首都实现“以人为本，全面协调可持续发展”主题、思路及对策研究，主持人，2004年6月-2004年12月。20万</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">16. 成都市委托项目：成都科技中长期发展战略规划研究，主要参与者，2004年5-10月。</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">17. 国家中长期科学和技术发展规划战略研究项目：“人才队伍建设研究专题：高校科技人才队伍建设研究”，主要参与者，2003年8月-2004年3月。</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">18. 地方合作项目：大连市皮口经济社会发展战略规划研究，主持人，2003年2月-7月。</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">19. 国务院体改办中国小城镇改革发展中心课题：关于小城镇经济社会发展规划研究，主持人，2001年12月-2002年3月。</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">20. 北京师范大学青年教师人文社科基金资助课题：中国企业人力资本运营模式研究，主持人，2001-2003年。</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">21. 国家发展计划委员会长期规划司课题：中长期发展规划基本理论与方法研究，主要成员，2000年5月-2001年3月完成。</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">22. 国家文化部课题：十五时期文化产业规划研究，1999年完成。</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">23. 国家教委“九五”博士点基金项目：社会主义市场经济理论研究（王善迈教授主持），承担“转型发展中的政府”部分，1999-2000年完成。</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">24. 福特基金会资助项目：中国可持续发展战略研究——中国地区发展战略与人力资源开发，1998-1999年主笔（负责1/3工作量）完成。</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">25. 国家社会科学基金资助项目：现代各国市场经济模式中的计划问题全方位比较研究， 1995-1996年独立执笔完成。</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">山东省教委资助项目：市场经济中的计划问题研究，1995-1996年完成。</p></div>
+                    
+                </div>				<div class="grjj">
+                    <p class="jjh">学生情况</p>
+                    <div class="bks1"><span style="font-family: " microsoft="" yahei="" font-size:16px="">招收学术研究生、MBA和博士研究生。欢迎对学术感兴趣、有想法的同学联系报考！</span><br /></div>
+                    
+                </div>				<div class="grjj">
+                    <p class="jjh">教授课程</p>
+                    <div class="bks1"><p style="font-family: " microsoft="" yahei="" font-size:16px="">高校经济学和管理学教龄19年。先后为北京邮电大学录制《人力资源管理》教学片和北京师范大学网络教育学院录制《广告学》教学片各一部。</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">先后在工科院校、财经院校为相关专业大学生、研究生讲授的主要课程有：</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">1. 社会经济统计学原理；</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">2. 工业统计；</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">3. 国民经济综合平衡统计</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">4. 国民经济核算体系；</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">5. 国民经济综合平衡计划；</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">6. 计划经济学；</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">7. 宏观经济管理学；</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">8. 投入产出分析技术；</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">9. 政治经济学；</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">10. 社会主义经济理论与实践；</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">11. 西方宏观经济学；</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">12. 西方微观经济学；</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">13. 中国宏观经济分析；</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">14. 股份公司概论；</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">15. 企业涉外经营管理；</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">16. 企业经营战略；</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">17. 国际贸易实务；</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">18. 国际经济学；</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">19. 中国近代经济史；</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">20. 劳动经济学；</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">21. 人力资源管理；</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">22. 人力资源战略管理；</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">23. 组织学习与人力资源开发；</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">24. 公共人力资源开发与管理；</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">25. 职业生涯管理；</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">26. 组织行为学；</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">27. 人本管理经济学；</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">28. 中国人本发展战略问题研究；</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">29. 广告学</p></div>
+                    
+                </div>            </div>
+        </div>
+         <footer style="overflow: hidden;">
+            <div class="footers">
+                <div class="footersl">
+                    <img src="http://bs.bnu.edu.cn/newweb/images/ewm.jpg" alt="" class="imgewm">
+                    <div class="footerxx">
+                        <p>Copyright © 2020 北京师范大学经济与工商管理学院</p>
+                        <p><i class="fas fa-map-marker-alt"></i> 地址：北京市新街口外大街19号</p>
+                        <p><i class="fas fa-portrait"></i> 传真：010-58801867</p>
+                        <p><i class="fas fa-phone"></i> 电话：010-58801867</p>
+                        <p><i class="fas fa-envelope"></i> 邮编：100875</p>
+                    </div>
+                </div>
+                <img src="http://bs.bnu.edu.cn/newweb/images/db.png" alt="" width="140" class="dbimg">
+                <img src="http://bs.bnu.edu.cn/newweb/images/yx.png" alt="" class="yuanxun">
+            </div>
+        </footer>
+    </div>
+	<div class="share">
+		  <div id="appgame-leftside-share">
+	        <div class="appgame-leftside-share rwt_share" id="rwt_share">
+	         
+	        <!--<a class="appgame-leftside-search" data-cmd="search" title="search"  href="javascript:void(0);" onclick="opens('id')">search</a> --> <!--<div class="searchs" id="id">
+	         <form name="dataForm" action="/cms/search/searchResults.jsp" target="_blank" method="post" accept-Charset="utf-8"  onsubmit="document.charset='utf-8';">
+			        	<p>
+			        		<input name="siteID" size="4" value="127" type = "hidden">
+			        		<input type="text" name="query" id="search" class="searchInput" value="输入搜索词">
+			        		<button type="submit"></button>
+			        	</p>
+			        	</form>
+			        </div>-->
+			        <!-- <a class="appgame-leftside-weixin" data-cmd="weixin" title="">微信</a> -->
+                    
+			        <!-- <a class="appgame-leftside-qzone" data-cmd="qzone" title="">qq空间</a>
+			        
+			        <a class="appgame-leftside-tsina" data-cmd="tsina" title="">微博</a> -->			    </div>
+			        <a class="appgame-leftside-top" onclick="gotoTPoint()"></a>			</div>
+			        
+		</div>
+</body>
+<script src="http://gh.bnu.edu.cn/js/jquery-1.9.0.min.js"></script>
+<script src="http://gh.bnu.edu.cn/js/share.min.js"></script>
+<script>
+    var dj=document.getElementById('dianji');
+    var jjc=document.getElementById('jjc');
+    var dj1=document.getElementById('dianji1');
+    var jjc1=document.getElementById('jjc1');
+    var a=1;
+    function zhedie(m,n){
+        m.onclick=function(){
+            if(a==1){
+                n.className='jjc';
+                m.className='dianji1'
+                a=0;
+            }else{
+                n.className='jjc1';
+                m.className='dianji'
+                a=1;
+            }
+        }
+    }
+    zhedie(dj,jjc);
+    zhedie(dj1,jjc1);
+	
+	
+</script>
+<script>
+
+	
+	
+    
+
+    /*回到顶部*/
+	$(function(){
+	 	$(window).resize(function(){
+						var h = $(window).height();
+						$('.goTop').css('top',h-60);
+						$(window).scroll(function(){				
+							var scrollTop = $(document).scrollTop();					  
+							$('.goTop').stop().animate({
+								top: h + scrollTop-60
+							},300);
+						});
+		}).resize();
+		});
+	//gotop
+
+			$('.goTop').click(function(){
+
+				$('body,html').stop().animate({scrollTop:0});
+
+				return false;
+
+			});
+	
+	function gotoTPoint(){
+		$("html,body").animate({scrollTop:0},500);
+	}
+</script>
+</html>

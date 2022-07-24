@@ -1,0 +1,495 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0">
+    <title>北京师范大学工商与经济管理学院</title>
+    <link rel="stylesheet" href="http://bs.bnu.edu.cn/new-ver-css/reset.css">
+    <link rel="stylesheet" href="http://bs.bnu.edu.cn/new-ver-css/index.css">
+	<link rel="stylesheet" href="http://bs.bnu.edu.cn/new-ver-css/xyslist.css">
+	<link rel="stylesheet" href="http://bs.bnu.edu.cn/new-ver-css/xys-tf.css">
+    <style>
+        .container{
+            width:100%;
+            height: auto;
+            overflow: hidden;
+        }
+        .header{
+            width:100%;
+            height:116px;
+            background:#EFF8FF;
+        }
+        .logo1{
+            width:1200px!important;
+            margin:0 auto;
+            position:relative;
+            float: none;
+			display:block;
+        }
+        .logo2{
+            float:right;
+        }
+        .logo1 p{
+            position:absolute;
+            top:5px;
+            right:5px;
+            font-size:13px;
+        }
+        .logo1 p:hover{
+            color:#112769;
+        }
+        .tu{
+            width:100%;
+            height:240px;
+            background:url('http://bs.bnu.edu.cn/newweb/grzy/images/tu.jpg') no-repeat top center;
+            background-size: 100%;
+        }
+        .lujing{
+            width:1200px;
+            height:58px;
+            margin:0 auto;
+            border-bottom:1px solid #aaa;
+            overflow:hidden;
+        }
+        .lujings{
+            margin:24px 0 0 0;
+            font-size:14px;
+        }
+        .content{
+            color:#333;
+            width:1200px;
+/*            height:2000px;*/
+            margin:0 auto;
+            margin-top:40px;
+/*            background:#c4c4c4;*/
+        }
+        
+        .xian{
+            width:100%;
+            height:8px;
+            background:#9A0812;
+        }
+        
+        .leftc{
+            float:left;
+        }
+        .rightc{
+            float:left;
+            margin-left:50px;
+/*            background:#666;*/
+            width:880px;
+/*            height:1000px;*/
+        }
+        .rheader{
+            width:880px;
+            height:210px;
+/*            background:yellow;*/
+        }
+        .xm{
+            font-size:30px;
+            height:40px;
+/*            border-bottom:4px solid #9A0812;*/
+            width:auto;
+            float:left;
+            line-height:40px;
+			margin-right:30px;
+        }
+        .zhiw{
+            font-size:18px;
+            height:40px;
+            line-height:50px;
+            margin-bottom:30px;
+        }
+        .tel{
+                font-size: 16px;
+                margin-top: 10px;
+                line-height: 20px;
+        }
+        .grjj{
+/*            height:300px;*/
+            width:880px;
+/*            background:yellow;*/
+            padding-bottom:40px;
+        }
+        .jjh{
+                font-size: 20px;
+                border-bottom: 1px solid #cecece;
+                height: 40px;
+                line-height: 40px;
+                padding-left: 30px;
+                background: url(http://bs.bnu.edu.cn/newweb/grzy/images/zw.png) no-repeat 0 16px;
+        }
+        
+        .jjc{
+            font-size:14px;
+            margin-top:30px;
+           
+            line-height:28px;
+            overflow:hidden;
+            text-align: justify;
+            text-justify:inter-ideograph;
+        }
+        .jjc1{
+            height:225px;
+            font-size:14px;
+            margin-top:30px;
+            
+            line-height:28px;
+            overflow:hidden;
+            text-align: justify;
+            text-justify:inter-ideograph;
+        }
+        
+        .dianji1{
+                background: url(http://bs.bnu.edu.cn/newweb/grzy/images/zw.png) no-repeat 0 -50px;
+                width: 13px;
+                height: 13px;
+                cursor: pointer;
+                display: block;
+            margin-top: 20px;
+            transition: all .2s linear;
+        }
+        .dianji1:hover{
+            background: url(http://bs.bnu.edu.cn/newweb/grzy/images/zw.png) no-repeat 0 -64px;
+        }
+        
+        .dianji{
+                background: url(http://bs.bnu.edu.cn/newweb/grzy/images/zw.png) no-repeat 0 -24px;
+                height: 13px;
+                cursor: pointer;
+                display: block;
+            margin-top: 20px;
+            transition: all .2s linear;
+        }
+        .dianji:hover{
+            background: url(http://bs.bnu.edu.cn/newweb/grzy/images/zw.png) no-repeat 0 -37px;
+        }
+        #jjc1{
+            text-indent:0em;
+        }
+        
+        .bks{
+            font-size:14px;
+            font-weight: 800;
+            margin-top:30px;
+            height:auto;
+            line-height:36px;
+        }
+        .bks1{
+            font-size:14px;
+            margin-top:30px;
+            height:auto;
+            line-height:36px;
+        }
+        .bksc{
+            height:36px;
+            line-height:36px;
+            font-size:14px;
+        }
+        
+        .yanzheng{
+            width:1200px;
+            height:100px;
+            margin:0 auto;
+        }
+        .yanzheng img{
+            display:block;
+            margin-top:26px;
+            float:left;
+        }
+		
+#appgame-leftside-share{width:42px; height:216px; position: fixed;bottom: 30px;right: 30px; z-index:9999;}
+.appgame-leftside-share{width:42px; height:259px;}
+#appgame-leftside-share a{display:block; width:42px; height:44px; background-color:#e6e6e6; z-index:1; position:absolute; left:0; box-sizing:border-box; -moz-box-sizing:border-box; border:1px #ddd solid; background-image:url(http://gh.bnu.edu.cn/images/share-icons.png); background-repeat:no-repeat; margin:0;  transition:0.4s; -webkit-transition:0.4s; -moz-transition:0.4s;}
+#appgame-leftside-share a:hover{background-color:#fff; border:1px #eee solid; z-index:2;}
+/*.appgame-leftside-weixin{top:0; background-position:-88px 0;}
+.appgame-leftside-weixin:hover{background-position:0px 0;}
+.appgame-leftside-qzone{top:43px; background-position:-88px -44px;}
+.appgame-leftside-qzone:hover{background-position:0px -44px;}*/
+.appgame-leftside-search{top:86px; background-position:-93px -89px;}
+.appgame-leftside-search:hover{background-position:-5px -86px;}
+.appgame-leftside-weixin{top:129px; background-position:-88px 0px;}
+.appgame-leftside-weixin:hover{background-position:0px 0px;}
+/*.appgame-leftside-fbook{top:172px; background-position:-88px -176px;}
+.appgame-leftside-fbook:hover{background-position:0px -176px;}
+.appgame-leftside-twi{top:215px; background-position:-88px -220px;}
+.appgame-leftside-twi:hover{background-position:0px -220px;}*/
+#appgame-leftside-share .appgame-leftside-top{background-image:url(http://gh.bnu.edu.cn/images/leftnav-off.png); background-position:-1px -395px; top:130px; cursor:pointer;}
+
+.rwt_share {
+/*	overflow:hidden;*/
+	float:left;
+	position:relative;
+}
+.rwt_share a {
+	display:inline-block;
+	margin-right:10px;
+	text-indent:-9999px;
+	margin-bottom:10px;
+	width:24px;
+	height:24px;
+	overflow:hidden;
+	cursor:pointer;
+	float:left;
+	font-size:12px;
+}
+.rwts_weixin {
+	background-position:0 -1612px;
+}
+.rwts_tsina {
+	background-position:0 -104px;
+}
+.rwts_tqq {
+	background-position:0 -260px;
+}
+.rwts_qzone {
+	background-position:0 -52px;
+}
+.rwts_sqq {
+	background-position:0 -2652px;
+}
+.rwts_tieba {
+	background-position:0 -728px;
+}
+.rwts_renren {
+	background-position:0 -208px;
+}
+.rwts_kaixin001 {
+	background-position:0 -312px;
+}
+.rwts_tqf {
+	background-position:0 -364px;
+}
+.rwts_douban {
+	background-position:0 -468px;
+}
+.rwts_twi {
+	background-position:0 -1404px;
+}
+.rwts_fbook {
+	background-position:0 -1352px;
+}
+.rwts_ty {
+	background-position:0 -1196px;
+}
+.rwts_mogujie {
+	background-position:0 -1768px;
+}
+.rwts_meilishuo {
+	background-position:0 -1716px;
+}
+.rwts_huaban {
+	background-position:0 -1872px;
+}
+.rwts_hi {
+	background-position:0 -416px;
+}
+.rwts_tsohu {
+	background-position:0 -520px;
+}
+.rwts_more {
+	background-position:0 0;
+}
+.rwt_share_wxShow_code>img {
+	width:100%;
+}
+.bks1 li{
+	list-style:disc;
+}
+@media screen and (max-width: 1200px){
+	.logo1{
+		width:100%!important;
+	}
+	.leftc img{
+		width:50%!important;
+		height:50%!important;
+	}
+	.logo2{display:none;}
+	.lujing{
+		width:90%;
+	}
+	.content{
+		width:90%;
+	}
+	.leftc{
+		float:none;
+		
+	}
+	.tu{display:none;}
+	
+	.rightc{
+		float:none;
+		width:100%;
+		margin-left:0px;
+	}
+	.footers{width:100%;}
+	.rheader{width:100%;}
+	.grjj{width:100%;}
+}
+@media screen and (max-width: 600px){
+.l3{width:95%;}
+.share{display:none;}
+.leftc img{
+		width:70%!important;
+		height:70%!important;
+	}
+}
+  
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo1">
+                <img src="http://bs.bnu.edu.cn/newweb/grzy/images/logo.png" alt="" class="l3" style="margin-top: 25px;float:left;">
+                <img src="http://bs.bnu.edu.cn/newweb/grzy/images/logo2.png" alt="" class="logo2">
+                <a href=""><p>ENGLISH VERSION</p></a>
+            </div>
+        </div>
+        <div class="xian"></div>
+        <div class="tu"></div>
+        <div class="lujing">
+            <div class="lujings">
+                <a href="#">师资队伍</a>
+                 | 
+                <a href="#">市场营销系</a>
+            </div>
+        </div>
+        <div class="content">
+            <div class="leftc">
+                <img src="/Public/upload/2020/09/15/5f602dcc9660c.jpg" alt="" width="270">
+            </div>
+            <div class="rightc">
+                <div class="rheader">
+                    <p class="xm">童璐琼</p>
+                    <p class="zhiw">副教授</p>
+                    <p class="tel"><strong style="display:block;width:100px;float:left;">电话</strong>：010-58801867</p> 
+                 <p class="tel"><strong style="display:block;width:100px;float:left;">E-mail</strong>：tonglq@bnu.edu.cn</p>
+                 <p class="tel"><strong style="display:block;width:100px;float:left;">Office hour</strong>：周三下午14:00-16:00</p>
+                 <p class="tel"><strong style="display:block;width:100px;float:left;">系所中心</strong>：市场营销系</p>
+              </div>
+			  <div class="grjj">
+                    <p class="jjh">个人简历</p>
+                    <div class="bks1" id="jjc"><span style="font-family: arial, helvetica, sans-serif; font-size: 15px; line-height: 22.5px;">童璐琼，管理学博士，副教授，硕士生导师。</span><span style="font-family: arial, helvetica, sans-serif; font-size: 15px; line-height: 22.5px;">2005</span><span style="font-family: arial, helvetica, sans-serif; font-size: 15px; line-height: 22.5px;">年获得清华大学管理学学士（会计学方向），</span><span style="font-family: arial, helvetica, sans-serif; font-size: 15px; line-height: 22.5px;">2012</span><span style="font-family: arial, helvetica, sans-serif; font-size: 15px; line-height: 22.5px;">年获得清华大学管理学博士（市场营销方向）。曾在</span><span style="font-family: arial, helvetica, sans-serif;font-size:16px;"><span style="font-size: 15px; line-height: 22.5px;">International Journal of Research in Marketing, Marketing Letters</span></span><span style="font-family: arial, helvetica, sans-serif; font-size: 15px; line-height: 22.5px;">,&nbsp;</span><span style="font-family: arial, helvetica, sans-serif; font-size: 15px; line-height: 22.5px;">心理学报等国内外营销领域一流期刊发表多篇论文，并主持多项国家自然科学基金项目。获得多项教学科研奖项。</span><br /></div>
+                    
+                </div>				<div class="grjj">
+                    <p class="jjh">研究领域</p>
+                    <div class="bks1">消费者行为（公益行为、自我控制、创造力、情境因素影响）</div>
+                </div>				<div class="grjj">
+                    <p class="jjh">研究成果</p>
+                    <div class="bks1" id="jjc1"><p style="font-family: " microsoft="" yahei="" font-size:16px=""><strong><span style="text-decoration-line: underline;"><span style="font-family: 微软雅黑, sans-serif;">代表性论文</span></span></strong></p><p style="font-family: " microsoft="" yahei="" font-size:16px="" margin-top:="" 10px="" line-height:="" 24px=""><strong><span style="font-family: Arial, sans-serif;">Tong, L</span></strong><span style="font-family: Arial, sans-serif;">., Zhu, R. J., Zheng, Y., &amp; Zhao, P. (2018). Warmer or cooler: the influence of ambient temperature on complex choices.&nbsp;<em><strong>Marketing Letters</strong></em>, 29(3), 337-350. (SSCI ABS 3</span><span style="font-family: 微软雅黑, sans-serif;">星期刊</span><span style="font-family: Arial, sans-serif;">)</span></p><p style="font-family: " microsoft="" yahei="" font-size:16px="" margin-top:="" 10px="" line-height:="" 24px=""><span style="font-family: Arial, sans-serif;">Wang, X., &amp;&nbsp;<strong>Tong, L.</strong>* (2015). Hide the light or let it shine? Examining the factors influencing the effect of publicizing donations on donors’ happiness.&nbsp;<strong><em>International Journal of Research in Marketing</em></strong>, 32(4), 418-424. (SSCI ABS 4</span><span style="font-family: 微软雅黑, sans-serif;">星期刊</span><span style="font-family: Arial, sans-serif;">)</span></p><p style="font-family: " microsoft="" yahei="" font-size:16px="" margin-top:="" 10px="" line-height:="" 24px=""><strong><span style="font-family: Arial, sans-serif;">Tong, L.</span></strong><span style="font-family: Arial, sans-serif;">, Zheng, Y., &amp; Zhao, P. (2013). Is money really the root of all evil? The impact of priming money on consumer choice.&nbsp;<strong><em>Marketing Letters</em></strong>, 24(2), 119-129. (SSCI ABS 3</span><span style="font-family: 微软雅黑, sans-serif;">星期刊</span><span style="font-family: Arial, sans-serif;">)</span></p><p style="font-family: " microsoft="" yahei="" font-size:16px="" margin-top:="" 10px="" line-height:="" 24px=""><strong><span style="font-family: 微软雅黑, sans-serif;">童璐琼</span></strong><span style="font-family: Arial, sans-serif;">. (2015).&nbsp;</span><span style="font-family: 微软雅黑, sans-serif;">权力状态对消费者边界偏好的影响</span><span style="font-family: Arial, sans-serif;">.&nbsp;</span><strong><span style="font-family: 微软雅黑, sans-serif;">心理学报</span></strong><span style="font-family: Arial, sans-serif;">, 47(11), 1371-1378.</span></p><p style="font-family: " microsoft="" yahei="" font-size:16px="" margin-top:="" 10px="" line-height:="" 24px=""><strong><span style="font-family: 微软雅黑, sans-serif;">童璐琼</span></strong><span style="font-family: Arial, sans-serif;">,&nbsp;</span><span style="font-family: 微软雅黑, sans-serif;">郑毓煌</span><span style="font-family: Arial, sans-serif;">, &amp;&nbsp;</span><span style="font-family: 微软雅黑, sans-serif;">赵平</span><span style="font-family: Arial, sans-serif;">. (2011).&nbsp;</span><span style="font-family: 微软雅黑, sans-serif;">努力程度对消费者购买意愿的影响</span><span style="font-family: Arial, sans-serif;">.&nbsp;</span><strong><span style="font-family: 微软雅黑, sans-serif;">心理学报</span></strong><span style="font-family: Arial, sans-serif;">, 43(10), 1211-1218.</span></p><p style="font-family: " microsoft="" yahei="" font-size:16px="" margin-top:="" 10px="" line-height:="" 24px=""><strong><span style="font-family: 微软雅黑, sans-serif;">童璐琼</span></strong><span style="font-family: Arial, sans-serif;">,&nbsp;</span><span style="font-family: 微软雅黑, sans-serif;">苏凇</span><span style="font-family: Arial, sans-serif;">, &amp;&nbsp;</span><span style="font-family: 微软雅黑, sans-serif;">锁梦晨</span><span style="font-family: Arial, sans-serif;">. (2017).&nbsp;</span><span style="font-family: 微软雅黑, sans-serif;">自然环境价值观对消费者产品选择的影响</span><span style="font-family: Arial, sans-serif;">.&nbsp;</span><strong><span style="font-family: 微软雅黑, sans-serif;">经济与管理研究</span></strong><span style="font-family: Arial, sans-serif;">, 38(3), 114-121.</span></p><p style="font-family: " microsoft="" yahei="" font-size:16px="" margin-top:="" 10px="" line-height:="" 24px=""><strong><span style="font-family: 微软雅黑, sans-serif;">童璐琼</span></strong><span style="font-family: Arial, sans-serif;">,&nbsp;</span><span style="font-family: 微软雅黑, sans-serif;">郑毓煌</span><span style="font-family: Arial, sans-serif;">, &amp;&nbsp;</span><span style="font-family: 微软雅黑, sans-serif;">赵平</span><span style="font-family: Arial, sans-serif;">. (2011).&nbsp;</span><span style="font-family: 微软雅黑, sans-serif;">借我一双时间的慧眼</span><span style="font-family: Arial, sans-serif;">:&nbsp;</span><span style="font-family: 微软雅黑, sans-serif;">时间概念对消费者有益品和有害品选择的影响</span><span style="font-family: Arial, sans-serif;">.&nbsp;</span><strong><span style="font-family: 微软雅黑, sans-serif;">营销科学学报</span></strong><span style="font-family: Arial, sans-serif;">, 7(3), 42-50.</span></p><p style="font-family: " microsoft="" yahei="" font-size:16px="" margin-top:="" 10px="" margin-bottom:="" 18px=""></p><p style="font-family: " microsoft="" yahei="" font-size:16px="" margin-top:="" 10px=""><strong><span style="text-decoration-line: underline;"><span style="font-family: 微软雅黑, sans-serif;">学术奖励</span></span></strong></p><p style="font-family: " microsoft="" yahei="" font-size:16px="" margin-top:="" 10px="" line-height:="" 24px=""><span style="font-family: Arial, sans-serif;">2011</span><span style="font-family: 微软雅黑, sans-serif;">年</span>&nbsp;<span style="font-family: 微软雅黑, sans-serif;">中国营销科学学术年会</span>&nbsp;<span style="font-family: 微软雅黑, sans-serif;">大会优秀论文</span></p><p style="font-family: " microsoft="" yahei="" font-size:16px="" margin-top:="" 10px="" line-height:="" 24px=""><span style="font-family: Arial, sans-serif;">2011</span><span style="font-family: 微软雅黑, sans-serif;">年</span>&nbsp;<span style="font-family: 微软雅黑, sans-serif;">中国营销科学学术年会</span>&nbsp;<span style="font-family: 微软雅黑, sans-serif;">博士生论坛论文一等奖</span></p><p style="font-family: " microsoft="" yahei="" font-size:16px="" margin-top:="" 10px="" line-height:="" 24px=""><span style="font-family: Arial, sans-serif;">2011</span><span style="font-family: 微软雅黑, sans-serif;">年</span>&nbsp;<span style="font-family: 微软雅黑, sans-serif;">教育部全国博士生论坛（管理学）优秀论文奖</span></p><div><span style="font-family: 微软雅黑, sans-serif;"><br /></span></div></div>
+                    
+                </div>				<div class="grjj">
+                    <p class="jjh">研究课题</p>
+                  
+                    <div class="bks1"><p style="font-family: " microsoft="" yahei="" font-size:16px="" line-height:="" 24px="" margin-top:="" 10px=""><strong><span style="font-size: 15px; line-height: 22.5px; color: rgb(34, 34, 34); background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;">主持研究项目</span></strong></p><p style="font-family: " microsoft="" yahei="" font-size:16px="" line-height:="" 24px="" margin-top:="" 10px=""><span style="font-size: 15px; line-height: 22.5px; font-family: " times="" new="" roman="" serif="">2019-2022</span><span style="font-size: 15px; line-height: 22.5px;">年，国家自然科学基金项目。</span><span style="font-size: 15px; line-height: 22.5px; font-family: " times="" new="" roman="" serif="">“</span><span style="font-size: 15px; line-height: 22.5px;">公益信息的设计与呈现方式对消费者亲社会行为的影响研究</span><span style="font-size: 15px; line-height: 22.5px; font-family: " times="" new="" roman="" serif="">”</span><span style="font-size: 15px; line-height: 22.5px;">。主持人。</span><span style="font-size: 15px; line-height: 22.5px; font-family: " times="" new="" roman="" serif="">(</span><span style="font-size: 15px; line-height: 22.5px;">项目编号：</span><span style="font-size: 15px; line-height: 22.5px; font-family: " times="" new="" roman="" serif="">71872015)</span></p><p style="font-family: " microsoft="" yahei="" font-size:16px="" line-height:="" 24px="" margin-top:="" 10px=""><span style="font-size: 15px; line-height: 22.5px; font-family: " times="" new="" roman="" serif="">2014-2016</span><span style="font-size: 15px; line-height: 22.5px;">年，国家自然科学基金青年项目。</span><span style="font-size: 15px; line-height: 22.5px; font-family: " times="" new="" roman="" serif="">“</span><span style="font-size: 15px; line-height: 22.5px;">物理环境对消费者创造性的影响研究</span><span style="font-size: 15px; line-height: 22.5px; font-family: " times="" new="" roman="" serif="">”</span><span style="font-size: 15px; line-height: 22.5px;">。主持人。</span><span style="font-size: 15px; line-height: 22.5px; font-family: " times="" new="" roman="" serif="">(</span><span style="font-size: 15px; line-height: 22.5px;">项目编号：</span><span style="font-size: 15px; line-height: 22.5px; font-family: " times="" new="" roman="" serif="">71302024)</span></p></div>
+                    
+                </div>				<div class="grjj">
+                    <p class="jjh">学生情况</p>
+                    <div class="bks1"><p style="font-family: " microsoft="" yahei="" font-size:16px="" line-height:="" 24px="" margin-top:="" 10px=""><span style="font-family: arial, helvetica, sans-serif; font-size: 15px; line-height: 22.5px;">本科生励弘计划指导教师；本科生新生导师； 2015级会计系本科班主任。(2017年获评北京师范大学优秀辅导员）</span></p><p style="font-family: " microsoft="" yahei="" font-size:16px="" line-height:="" 24px="" margin-top:="" 10px=""><span style="font-family: arial, helvetica, sans-serif;"><span style="font-size: 15px; line-height: 22.5px;">指导学生的毕业去向：</span><span style="font-size: 15px; line-height: 22.5px;">London School of Economics and Political Science, Johns Hopkins University, University of Rochester,&nbsp;</span><span style="font-size: 15px; line-height: 22.5px;">北京大学、清华大学、香港大学等。</span></span></p><p style="font-family: " microsoft="" yahei="" font-size:16px="" line-height:="" 24px=""></p><p style="font-family: " microsoft="" yahei="" font-size:16px="" line-height:="" 24px="" margin-top:="" 10px=""><span style="font-family: arial, helvetica, sans-serif;"><span style="font-size: 15px; line-height: 22.5px;">指导学术研究生和</span><span style="font-size: 15px; line-height: 22.5px;">MBA</span><span style="font-size: 15px; line-height: 22.5px;">。欢迎对学术感兴趣的同学联系报考！</span></span></p></div>
+                    
+                </div>				<div class="grjj">
+                    <p class="jjh">教授课程</p>
+                    <div class="bks1"><p style="font-family: " microsoft="" yahei="" font-size:16px="" line-height:="" 24px="" margin-top:="" 10px=""><strong><span style="font-family: arial, helvetica, sans-serif;"><span style="font-size: 15px; line-height: 22.5px;">2016</span><span style="font-size: 15px; line-height: 22.5px;">年，北京师范大学第十五届青年教师教学基本功比赛，二等奖、最佳教案奖。</span></span></strong></p><p style="font-family: " microsoft="" yahei="" font-size:16px="" line-height:="" 24px=""></p><p style="font-family: " microsoft="" yahei="" font-size:16px="" line-height:="" 24px="" margin-top:="" 10px=""><span style="font-family: arial, helvetica, sans-serif;"><span style="font-size: 15px; line-height: 22.5px;">市场营销学（北京师范大学，全英文本科生学科核心课）</span></span></p><p style="font-family: " microsoft="" yahei="" font-size:16px="" line-height:="" 24px="" margin-top:="" 10px=""><span style="font-family: arial, helvetica, sans-serif;"><span style="font-size: 15px; line-height: 22.5px;">·</span><span style="font-size: 15px; line-height: 22.5px;">&nbsp;2016</span><span style="font-size: 15px; line-height: 22.5px;">年北京师范大学教学建设与改革项目资助课程</span></span></p><p style="font-family: " microsoft="" yahei="" font-size:16px="" line-height:="" 24px="" margin-top:="" 10px=""><span style="font-family: arial, helvetica, sans-serif;"><span style="font-size: 15px; line-height: 22.5px;">市场营销学（辅修）</span></span></p><p style="font-family: " microsoft="" yahei="" font-size:16px="" line-height:="" 24px="" margin-top:="" 10px=""><span style="font-family: arial, helvetica, sans-serif;"><span style="font-size: 15px; line-height: 22.5px;">品牌战略</span></span></p></div>
+                    
+                </div>            </div>
+        </div>
+         <footer style="overflow: hidden;">
+            <div class="footers">
+                <div class="footersl">
+                    <img src="http://bs.bnu.edu.cn/newweb/images/ewm.jpg" alt="" class="imgewm">
+                    <div class="footerxx">
+                        <p>Copyright © 2020 北京师范大学经济与工商管理学院</p>
+                        <p><i class="fas fa-map-marker-alt"></i> 地址：北京市新街口外大街19号</p>
+                        <p><i class="fas fa-portrait"></i> 传真：010-58801867</p>
+                        <p><i class="fas fa-phone"></i> 电话：010-58801867</p>
+                        <p><i class="fas fa-envelope"></i> 邮编：100875</p>
+                    </div>
+                </div>
+                <img src="http://bs.bnu.edu.cn/newweb/images/db.png" alt="" width="140" class="dbimg">
+                <img src="http://bs.bnu.edu.cn/newweb/images/yx.png" alt="" class="yuanxun">
+            </div>
+        </footer>
+    </div>
+	<div class="share">
+		  <div id="appgame-leftside-share">
+	        <div class="appgame-leftside-share rwt_share" id="rwt_share">
+	         
+	        <!--<a class="appgame-leftside-search" data-cmd="search" title="search"  href="javascript:void(0);" onclick="opens('id')">search</a> --> <!--<div class="searchs" id="id">
+	         <form name="dataForm" action="/cms/search/searchResults.jsp" target="_blank" method="post" accept-Charset="utf-8"  onsubmit="document.charset='utf-8';">
+			        	<p>
+			        		<input name="siteID" size="4" value="127" type = "hidden">
+			        		<input type="text" name="query" id="search" class="searchInput" value="输入搜索词">
+			        		<button type="submit"></button>
+			        	</p>
+			        	</form>
+			        </div>-->
+			        <!-- <a class="appgame-leftside-weixin" data-cmd="weixin" title="">微信</a> -->
+                    
+			        <!-- <a class="appgame-leftside-qzone" data-cmd="qzone" title="">qq空间</a>
+			        
+			        <a class="appgame-leftside-tsina" data-cmd="tsina" title="">微博</a> -->			    </div>
+			        <a class="appgame-leftside-top" onclick="gotoTPoint()"></a>			</div>
+			        
+		</div>
+</body>
+<script src="http://gh.bnu.edu.cn/js/jquery-1.9.0.min.js"></script>
+<script src="http://gh.bnu.edu.cn/js/share.min.js"></script>
+<script>
+    var dj=document.getElementById('dianji');
+    var jjc=document.getElementById('jjc');
+    var dj1=document.getElementById('dianji1');
+    var jjc1=document.getElementById('jjc1');
+    var a=1;
+    function zhedie(m,n){
+        m.onclick=function(){
+            if(a==1){
+                n.className='jjc';
+                m.className='dianji1'
+                a=0;
+            }else{
+                n.className='jjc1';
+                m.className='dianji'
+                a=1;
+            }
+        }
+    }
+    zhedie(dj,jjc);
+    zhedie(dj1,jjc1);
+	
+	
+</script>
+<script>
+
+	
+	
+    
+
+    /*回到顶部*/
+	$(function(){
+	 	$(window).resize(function(){
+						var h = $(window).height();
+						$('.goTop').css('top',h-60);
+						$(window).scroll(function(){				
+							var scrollTop = $(document).scrollTop();					  
+							$('.goTop').stop().animate({
+								top: h + scrollTop-60
+							},300);
+						});
+		}).resize();
+		});
+	//gotop
+
+			$('.goTop').click(function(){
+
+				$('body,html').stop().animate({scrollTop:0});
+
+				return false;
+
+			});
+	
+	function gotoTPoint(){
+		$("html,body").animate({scrollTop:0},500);
+	}
+</script>
+</html>

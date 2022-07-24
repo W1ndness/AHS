@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>北京交通大学交通运输学院</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link href="/static/trans/css/bootstrap.css" rel="stylesheet">
+ 	<link href="/static/trans/css/custom.css" rel="stylesheet">
+ 	<link href="/static/trans/css/custom_list.css" rel="stylesheet">
+	<link rel="stylesheet" href="/static/ace1.3/css/jquery.dataTables.min.css" />
+	<style>
+	    .title_a{
+			margin-right:5px;
+			width:150px;
+			float:left;
+			}
+	    .title_a a{
+			line-height:30px;
+			}
+			
+		.zhiwei strong{margin-right:17px;}
+		.zhiwei a{margin-right:10px;display:inline;width:150px;float:left;margin-top:10px;}
+		#words a{line-height:25px;width:30px;height:25px;text-align:center;background:#e8f3fe;float:left;border:1px solid #c6dff7;margin-right:15px;margin-top:15px;}
+		#words a:hover{background:#11518f;color:#FF0;border:1px solid #11518f;}
+		.sub_con_tp{width:880px; margin:0 auto; padding:8px 0 2px}
+		.sub_con_tp h3{background:#fff url(/static/trans/img/h4_head.jpg) no-repeat left center;font-size:14px; font-weight:bold; color:#08509A; text-align:left; padding:14px 0 14px 40px; border-bottom:1px solid #AAAAAA; margin-bottom:12px}
+		.sub_con_tp p{line-height:24px; }
+		.sub_con_tp ul,li {margin:auto;}
+		
+		.sub_con_tp1{width:880px; margin:0 auto; padding:8px 0 2px}
+		.sub_con_tp1 h3{font-size:14px; font-weight:bold; color:#08509A; text-align:center; padding:14px 0; border-bottom:1px solid #AAAAAA; margin-bottom:12px}
+		.sub_con_tp1 p{line-height:24px; margin-bottom:8px; }								
+	</style> 
+    <script src="/static/ace1.3/js/jquery/1.11.0/jquery.min.js"></script>
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="/static/trans/js/html5shiv.js"></script>
+    <![endif]-->
+
+</head>
+<body>
+	<div class="boxbody">
+		<header>
+			<div class="container clearfix">
+				<div class="row-fluid">
+					<div class="span12">
+						<h1 class="brandlogo"><a href="http://trans.bjtu.edu.cn/cms/"><img src="/static/trans/img/logo.png" alt=""></a></h1>
+						<div class="topinfo">
+							<div class="list-soc">
+								<a href="http://trans1.bjtu.edu.cn/english/index.php">English</a>
+							</div>
+							<div class="infophone">
+								<div class="control-group">
+									<div class="controls">
+										<div class="input-prepend">
+                            				<form name="keyform" action="http://trans.bjtu.edu.cn/cms/item/" method="get">
+                              				<span class="add-on"><i class="icon-search"></i></span>
+                              				<input  id="inputIcon" type="text" class="input-medium"  name="keyword">
+                              				</form>
+                              			</div>
+                          			</div>
+                        		</div>
+							</div>
+			  			</div>
+						<div class="clearfix"></div>
+						<div class="row-nav navbar">
+							<div class="navbar-inner">
+								<ul id="nav" class="nav">
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+		<div class="text-center">
+			<img src="/static/trans/img/sha.png" class="slidershadow" alt="">
+		</div>
+		<div id="wrap">
+      		<div class="row-fluid container bggay">
+        		<div class="span4">
+          			<div class="leftbox_top">
+          				<div class="h4border">
+		                	<p>杨扬</p>
+		                	<div class="clearfix"></div>
+		                </div>
+						<div class="list_sidebar">
+              				<div class="categories">
+              					<ul>
+									<li><a href="#basic">基本情况</a></li>
+                                    
+                                    <li><a href="#jybj">教育背景</a></li>
+                                    
+                                    <li><a href="#gzjl">工作经历</a></li>
+                                    
+                                    <li><a href="#yjfx">研究方向</a></li>
+                                    
+                                    <li><a href="#zszy">招生专业</a></li>
+                                    
+                                    <li><a href="#kyxm">科研项目</a></li>
+                                    
+                                    <li><a href="#jxgz">教学工作</a></li>
+                                    
+                                    <li><a href="#lwqk">论文/期刊</a></li>
+                                    
+                                    <li><a href="#zzyz">专著/译著</a></li>
+                                    
+                                    <li><a href="#zl">专利</a></li>
+                                    
+                                    <li><a href="#rjzzq">软件著作权</a></li>
+                                    
+                                    <li><a href="#hjry">获奖与荣誉</a></li>
+                                    
+                                    <li><a href="#shjz">社会兼职</a></li>
+                                    
+              					</ul>
+              				</div>
+          				</div>
+          			</div>
+        		</div>
+        		<div class="span8">
+          			<div class="mainleft_box "> 
+						<h4 class="h4border">	            	
+				  		个人简介
+		        		</h4>
+                		<div class="main_nr">
+							<div style="padding:0px 10px;">
+				            	
+				            	<div class="sub_con_tp">
+				            		<h3 style="width:830px;float:right"><a name="basic">基本情况</a></h3>
+									<div style="padding:15px; line-height:25px;">
+										<div class="MsoNormal">
+											<table class="MsoNormalTable" border="0" cellspacing="0" cellpadding="0" width="840" align="center" height="1964" style="width: 840px; border-collapse: collapse; height: auto">
+												<tbody>
+													<tr style="height: 20pt">
+														<td width="80" style=" padding-bottom: 0cm; padding-left: 5.4pt; padding-right: 5.4pt; height: 20pt;  padding-top: 0cm">
+															<p style="text-align: left"><span >姓&nbsp;&nbsp;名：</span></p>
+														</td>
+														<td width="216" style=" border-left: medium none; padding-bottom: 0cm; padding-left: 5.4pt; width: 162pt; padding-right: 5.4pt; height: 20pt;  padding-top: 0cm">
+															<p style="text-align: left"><span >杨扬</span></p>
+														</td>
+														<td valign="top" rowspan="9" width="245" style=" border-left: medium none; padding-bottom: 0cm; padding-left: 5.4pt; width: 142.05pt; padding-right: 5.4pt; height: 20pt;  padding-top: 0cm">
+															
+															<img id="photo" src="data:image/jpeg;base64,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" width="216" height="252">
+														</td>
+													</tr>
+													<tr style="height: 20pt">
+														<td width="80" style=" padding-bottom: 0cm; padding-left: 5.4pt; padding-right: 5.4pt; height: 20pt; border-top: medium none;  padding-top: 0cm">
+														<p style="text-align: left"><span >职&nbsp;&nbsp;务：</span></p>
+														</td>
+														<td width="216" style=" border-left: medium none; padding-bottom: 0cm; padding-left: 5.4pt; width: 162pt; padding-right: 5.4pt; border-top: medium none;  padding-top: 0cm">
+														<p style="text-align: left"><span ></span></p>
+														</td>
+													</tr>
+													<tr style="height: 24pt">
+														<td width="80" style=" padding-bottom: 0cm; padding-left: 5.4pt; padding-right: 5.4pt; height: 24pt; border-top: medium none;  padding-top: 0cm">
+														<p style="text-align: left"><span >职&nbsp;&nbsp;称：</span></p>
+														</td>
+														<td width="216" style=" border-left: medium none; padding-bottom: 0cm; padding-left: 5.4pt; width: 162pt; padding-right: 5.4pt; height: 24pt; border-top: medium none;  padding-top: 0cm">
+														<p style="text-align: left"><span >副教授</span></p>
+														</td>
+													</tr>
+													<tr style="height: 20pt">
+														<td width="80" style=" padding-bottom: 0cm; padding-left: 5.4pt; padding-right: 5.4pt; height: 20pt; border-top: medium none;  padding-top: 0cm">
+														<p style="text-align: left"><span >学&nbsp;&nbsp;历：</span></p>
+														</td>
+														<td width="216" style=" border-left: medium none; padding-bottom: 0cm; padding-left: 5.4pt; width: 162pt; padding-right: 5.4pt; height: 20pt; border-top: medium none;  padding-top: 0cm">
+														<p style="text-align: left"><span ></span></p>
+														</td>
+													</tr>
+													<tr style="height: 20pt">
+														<td width="80" style=" padding-bottom: 0cm; padding-left: 5.4pt; padding-right: 5.4pt; height: 20pt; border-top: medium none;  padding-top: 0cm">
+														<p style="text-align: left"><span >学&nbsp;&nbsp;位：</span></p>
+														</td>
+														<td width="216" style=" border-left: medium none; padding-bottom: 0cm; padding-left: 5.4pt; width: 162pt; padding-right: 5.4pt; height: 20pt; border-top: medium none;  padding-top: 0cm">
+														<p style="text-align: left"><span >博士</span></p>
+														</td>
+													</tr>
+													<tr style="height: 24pt">
+														<td width="80" style=" padding-bottom: 0cm; padding-left: 5.4pt; padding-right: 5.4pt; height: 24pt; border-top: medium none;  padding-top: 0cm">
+														<p style="text-align: left"><span >通信地址：</span></p>
+														</td>
+														<td width="216" style=" border-left: medium none; padding-bottom: 0cm; padding-left: 5.4pt; width: 162pt; padding-right: 5.4pt; height: 24pt; border-top: medium none;  padding-top: 0cm">
+														<p style="text-align: left"><span ></span></p>
+														</td>
+													</tr>
+													<tr style="height: 20pt">
+														<td width="80" style=" padding-bottom: 0cm; padding-left: 5.4pt; padding-right: 5.4pt; height: 20pt; border-top: medium none;  padding-top: 0cm">
+														<p style="text-align: left"><span >邮&nbsp;&nbsp;编：</span></p>
+														</td>
+														<td width="216" style=" border-left: medium none; padding-bottom: 0cm; padding-left: 5.4pt; width: 162pt; padding-right: 5.4pt; height: 20pt; border-top: medium none;  padding-top: 0cm">
+														<p style="text-align: left"><span ></span></p>
+														</td>
+													</tr>
+													<tr style="height: 20pt">
+														<td width="80" style=" padding-bottom: 0cm; padding-left: 5.4pt; padding-right: 5.4pt; height: 20pt; border-top: medium none;  padding-top: 0cm">
+														<p style="text-align: left"><span >办公电话：</span></p>
+														</td>
+														<td width="216" style=" border-left: medium none; padding-bottom: 0cm; padding-left: 5.4pt; width: 162pt; padding-right: 5.4pt; height: 20pt; border-top: medium none;  padding-top: 0cm">
+														<p style="text-align: left"><span ></span></p>
+														</td>
+													</tr>
+													<tr style="height: 24pt">
+														<td width="80" style=" padding-bottom: 0cm; padding-left: 5.4pt; padding-right: 5.4pt; height: 24pt; border-top: medium none;  padding-top: 0cm">
+														<p style="text-align: left"><span >电子邮箱：</span></p>
+														</td>
+														<td width="216" style=" border-left: medium none; padding-bottom: 0cm; padding-left: 5.4pt; width: 162pt; padding-right: 5.4pt; height: 24pt; border-top: medium none;  padding-top: 0cm">
+														<p style="text-align: left"><a href="mailto:y_yang@bjtu.edu.cn"><span >y_yang@bjtu.edu.cn</span></a></p>
+														</td>
+													</tr>
+				
+												</tbody>
+											</table>
+										</div>
+									</div>
+                                    
+                                    <h3 style="width:830px;float:right;"><a name = "jybj">教育背景</a></h3>
+									<div style="padding:15px; line-height:25px;">
+										<div class="MsoNormal">
+											<table class="MsoNormalTable" border="0" cellspacing="0" cellpadding="0" width="840" align="center" height="1964" style="width: 840px; border-collapse: collapse; height: auto">
+												<tbody>
+													<tr>
+														<td width="659" style=" padding-bottom: 0cm; padding-left: 5.4pt; padding-right: 5.4pt; height: 24pt;  padding-top: 0cm">
+															 
+
+														</td>
+													</tr>
+
+												</tbody>
+											</table>
+										</div>
+									</div>
+                                    
+                                    <h3 style="width:830px;float:right;"><a name = "gzjl">工作经历</a></h3>
+									<div style="padding:15px; line-height:25px;">
+										<div class="MsoNormal">
+											<table class="MsoNormalTable" border="0" cellspacing="0" cellpadding="0" width="840" align="center" height="1964" style="width: 840px; border-collapse: collapse; height: auto">
+												<tbody>
+													<tr>
+														<td width="659" style=" padding-bottom: 0cm; padding-left: 5.4pt; padding-right: 5.4pt; height: 24pt;  padding-top: 0cm">
+															 
+														</td>
+													</tr>
+
+												</tbody>
+											</table>
+										</div>
+									</div>
+                                    
+                                    <h3 style="width:830px;float:right;"><a name = "yjfx">研究方向</a></h3>
+									<div style="padding:15px; line-height:25px;">
+										<div class="MsoNormal">
+											<table class="MsoNormalTable" border="0" cellspacing="0" cellpadding="0" width="840" align="center" height="1964" style="width: 840px; border-collapse: collapse; height: auto">
+												<tbody>
+													<tr>
+														<td width="659" style=" padding-bottom: 0cm; padding-left: 5.4pt; padding-right: 5.4pt; height: 24pt;  padding-top: 0cm">
+															 <ul>
+
+    <li>交通运输规划与管理</li>
+
+    <li>交通运输（专业学位）</li>
+
+</ul>
+														</td>
+													</tr>
+
+												</tbody>
+											</table>
+										</div>
+									</div>
+                                    
+                                    <h3 style="width:830px;float:right;"><a name = "zszy">招生专业</a></h3>
+									<div style="padding:15px; line-height:25px;">
+										<div class="MsoNormal">
+											<table class="MsoNormalTable" border="0" cellspacing="0" cellpadding="0" width="840" align="center" height="1964" style="width: 840px; border-collapse: collapse; height: auto">
+												<tbody>
+													<tr>
+														<td width="659" style=" padding-bottom: 0cm; padding-left: 5.4pt; padding-right: 5.4pt; height: 24pt;  padding-top: 0cm">
+															 <ul>
+
+    <li>交通运输规划与管理硕士</li>
+
+    <li>交通运输硕士</li>
+
+</ul>
+														</td>
+													</tr>
+
+												</tbody>
+											</table>
+										</div>
+									</div>
+                                    
+                                    <h3 style="width:830px;float:right;"><a name = "kyxm">科研项目</a></h3>
+									<div style="padding:15px; line-height:25px;">
+										<div class="MsoNormal">
+											<table class="MsoNormalTable" border="0" cellspacing="0" cellpadding="0" width="840" align="center" height="1964" style="width: 840px; border-collapse: collapse; height: auto">
+												<tbody>
+													<tr>
+														<td width="659" style=" padding-bottom: 0cm; padding-left: 5.4pt; padding-right: 5.4pt; height: 24pt;  padding-top: 0cm">
+															 
+
+    <ul>
+    
+        <li>首都高端智库课题: 本市以降低小汽车依赖为导向的一揽子政策方案研究(1), 2022-2023</li>
+    
+        <li>首都高端智库课题: “四网融合”背景下的北京市郊铁路现代化运营管理体系研究（3）, 2022-2023</li>
+    
+        <li>重点资助项目: 综合交通运输大数据应用技术科研平台能力提升, 2022-2025</li>
+    
+        <li>自然科学横向项目: 内蒙古自治区智慧交通顶层设计与行动方案, 2022-2022</li>
+    
+        <li>首都高端智库课题: 我市轨道交通与地面公交、慢行系统多网融合发展问题研究（3）-1, 2022-2022</li>
+    
+        <li>重点资助项目: 综合交通运输大数据行业重点实验室促进实体化建设, 2021-2024</li>
+    
+        <li>北京市自然基金“轨道交通联合”: 城轨运营突发事件下诱导信息对乘客行为影响及客流演化机理研究, 2022-2024</li>
+    
+        <li>国家自然科学基金“面上”: 城市群尺度下城际出行行为分析与交通供给优化, 2022-2025</li>
+    
+        <li>首都高端智库课题: 我市轨道交通与地面公交、慢行系统多网融合发展问题研究（3）, 2021-2022</li>
+    
+        <li>国家自然科学基金“重点”: 多网络约束下主体差异协同的能源补给站选址定容优化, 2020-2024</li>
+    
+        <li>基础研究项目: 基于多源大数据和多网络约束的新能源补给站选址定容优化, 2021-2023</li>
+    
+        <li>自然科学横向项目: 高速公路隧道交通运行和事件影响分析研究, 2021-2023</li>
+    
+        <li>专利许可项目: “一种成网条件下城市轨道交通新线接入客流预测方法”专利许可, 2021-2022</li>
+    
+        <li>自然科学横向项目: 区域多制式轨道交通客流预测与协同调控技术研究, 2021-2022</li>
+    
+        <li>自然科学横向项目: 新一轮线网技术专题研究（运营类）运输服务项目-07, 2021-2021</li>
+    
+        <li>自然科学横向项目: 商务中心区城市公共交通组织措施研究, 2020-2023</li>
+    
+        <li>自然科学横向项目: 商务中心区交通稳静化措施适用性研究, 2020-2023</li>
+    
+        <li>其他部市(2020.10起仅限省部级科技计划\基金\专项): 2020年交通运输部民生实事重点工作评估研究, 2020-2021</li>
+    
+        <li>自然科学横向项目: 取消高速公路省界收费站技术评估咨询, 2020-2020</li>
+    
+        <li>国家自然科学基金“面上”: 基于深度强化学习的合乘出行服务系统非短视调度方法研究, 2020-2023</li>
+    
+        <li>国家自然科学基金“面上”: 基于精细网格化管理的交通小区划分与出行需求全景拟合方法, 2020-2023</li>
+    
+        <li>其他部市(2020.10起仅限省部级科技计划\基金\专项): 2019年交通运输部民生实事重点工作评估研究, 2019-2023</li>
+    
+        <li>国家重点研发计划-课题: 枢纽间换乘客流运行态势监测与运力动态协同调度及应急处置技术, 2019-2021</li>
+    
+        <li>其它: 通景公路交通运行的旅游影响研究, 2018-2021</li>
+    
+        <li>国家重点研发计划-任务: 公共路权导向运输系统安全保障理论与标准体系研究, 2018-2020</li>
+    
+        <li>其他部市(2020.10起仅限省部级科技计划\基金\专项): 北京市交通行业综合能效分析与碳排放管理关键技术研究与应用, 2018-2019</li>
+    
+        <li>自然科学横向项目: 城市客运车辆运行特征测试, 2018-2021</li>
+    
+        <li>自然科学横向项目: 城市公交车辆行驶特征数据测试, 2018-2019</li>
+    
+        <li>国家自然科学基金&quot;青年基金&quot;: 高速公路服务区充电设施配置优化方法研究, 2019-2021</li>
+    
+        <li>首都高端智库“开放课题”: 北京公益性交通企业绩效目标与财政补贴机制研究, 2018-2019</li>
+    
+        <li>基础研究项目: 基于综合交通大数据的运输结构调整关键技术研究, 2018-2021</li>
+    
+        <li>其他部市(2020.10起仅限省部级科技计划\基金\专项): 2018年交通运输部民生实事重点工作评估研究, 2018-2022</li>
+    
+        <li>研究生创新项目: 基于出行行为的共享电动汽车布局优化方法研究, 2018-2020</li>
+    
+        <li>其他部市(2020.10起仅限省部级科技计划\基金\专项): 交通运输部多式联运文件落实情况的评估研究, 2017-2020</li>
+    
+    </ul>
+
+														</td>
+													</tr>
+
+												</tbody>
+											</table>
+										</div>
+									</div>
+                                    
+                                    <h3 style="width:830px;float:right;"><a name = "jxgz">教学工作</a></h3>
+									<div style="padding:15px; line-height:25px;">
+										<div class="MsoNormal">
+											<table class="MsoNormalTable" border="0" cellspacing="0" cellpadding="0" width="840" align="center" height="1964" style="width: 840px; border-collapse: collapse; height: auto">
+												<tbody>
+													<tr>
+														<td width="659" style=" padding-bottom: 0cm; padding-left: 5.4pt; padding-right: 5.4pt; height: 24pt;  padding-top: 0cm">
+															 
+
+														</td>
+													</tr>
+
+												</tbody>
+											</table>
+										</div>
+									</div>
+                                    
+                                    <h3 style="width:830px;float:right;"><a name = "lwqk">论文/期刊</a></h3>
+									<div style="padding:15px; line-height:25px;">
+										<div class="MsoNormal">
+											<table class="MsoNormalTable" border="0" cellspacing="0" cellpadding="0" width="840" align="center" height="1964" style="width: 840px; border-collapse: collapse; height: auto">
+												<tbody>
+													<tr>
+														<td width="659" style=" padding-bottom: 0cm; padding-left: 5.4pt; padding-right: 5.4pt; height: 24pt;  padding-top: 0cm">
+															 
+
+    <ul>
+    
+        <li>
+            陈琳,姚恩建,杨扬,卢天伟.Modeling of transfer behavior between urban hubs of intermodal passengers [联程中转旅客的城市枢纽间换乘行为建模].Beijing Jiaotong Daxue Xuebao/Journal of Beijing Jiaotong University,2021,4(45)
+         </li>
+    
+        <li>
+            卢天伟,姚恩建,金方磊,杨扬.Analysis of incentive policies for electric vehicle adoptions after the abolishment of purchase subsidy policy.ENERGY,2022,None(239)
+         </li>
+    
+        <li>
+            卢天伟,姚恩建,杨扬,郇宁,陈琳.考虑弹性需求的城市枢纽间多方式时刻表优化.交通运输系统工程与信息,2021,1(21)
+         </li>
+    
+        <li>
+            卢天伟,姚恩建,张永生,杨扬.Joint Optimal Scheduling for a Mixed Bus Fleet Under Micro Driving Conditions.IEEE TRANSACTIONS ON INTELLIGENT TRANSPORTATION SYSTEMS,2021,4(22)
+         </li>
+    
+        <li>
+            潘龙,姚恩建,杨扬,张锐.A location model for electric vehicle (EV) public charging stations based on drivers? existing activities.SUSTAINABLE CITIES AND SOCIETY,2020,None(59)
+         </li>
+    
+        <li>
+            陈琳,姚恩建,杨扬,卢天伟.联程中转旅客的城市枢纽间换乘行为建模.北京交通大学学报,2021,4(45)
+         </li>
+    
+        <li>
+            王朝辉,杨扬,姚恩建,朱宇婷,饶宗皓.An analysis of commute mode choice behavior considering the impacts of built environment in Beijing.TRANSPORTATION LETTERS-THE INTERNATIONAL JOURNAL OF TRANSPORTATION RESEARCH,2021,Early Access(Early Access)
+         </li>
+    
+        <li>
+            姚恩建,王晓雯,杨扬,潘龙,宋媛媛.Traffic Flow Estimation Based on Toll Ticket Data Considering Multitype Vehicle Impact.JOURNAL OF TRANSPORTATION ENGINEERING PART A-SYSTEMS,2021,147(2)
+         </li>
+    
+        <li>
+            姚恩建,陈伟迪,卢天伟,杨扬.考虑出行者选择偏好的出行方式选择模型.北京交通大学学报,2020,1(44)
+         </li>
+    
+        <li>
+            姚恩建,李翠萍,郇宁,杨扬,李斌斌.共享单车对通勤走廊出行结构的影响.华南理工大学学报:自然科学版,2020,7(48)
+         </li>
+    
+        <li>
+            姚恩建,刘彤,卢天伟,杨扬.Optimization of electric vehicle scheduling with multiple vehicle types in public transport.Sustainable Cities and Society,2020,101862(52)
+         </li>
+    
+        <li>
+            郇宁,姚恩建,杨扬,李斌斌,张茜.电动汽车混入条件下随机动态用户均衡分配模型.交通运输工程学报,2019,19(5)
+         </li>
+    
+        <li>
+            郇宁,姚恩建,杨扬,卢天伟.Study on the impact of freeway toll rate on drivers’ route choice behavior.Advances in Transportation Studies: an international Journal,2019,47(2019)
+         </li>
+    
+        <li>
+            姚恩建,刘文婷,刘莎莎,杨扬.基于动态可达性的城轨末班车时刻表优化.华南理工大学学报,2018,1(46)
+         </li>
+    
+        <li>
+            姚恩建,邹萌,杨扬,潘龙.基于出行行为分析的停车换乘设施定价优化.系统工程理论与实践,2018,5(38)
+         </li>
+    
+        <li>
+            张锐,姚恩建,杨扬.Degradable Transportation Network with the Addition of Electric Vehicles: Network Equilibrium Analysis.PLOS ONE,2017,9(12)
+         </li>
+    
+        <li>
+            姚恩建,金方磊,胡倩雯,张永生,杨扬.考虑换乘次数阈值的城轨乘客 路径选择行为分析.西南交通大学学报,2017,52(3)
+         </li>
+    
+    </ul>
+
+														</td>
+													</tr>
+
+												</tbody>
+											</table>
+										</div>
+									</div>
+                                    
+                                    <h3 style="width:830px;float:right;"><a name = "zzyz">专著/译著</a></h3>
+									<div style="padding:15px; line-height:25px;">
+										<div class="MsoNormal">
+											<table class="MsoNormalTable" border="0" cellspacing="0" cellpadding="0" width="840" align="center" height="1964" style="width: 840px; border-collapse: collapse; height: auto">
+												<tbody>
+													<tr>
+														<td width="659" style=" padding-bottom: 0cm; padding-left: 5.4pt; padding-right: 5.4pt; height: 24pt;  padding-top: 0cm">
+															 
+
+    <ul>
+    
+    </ul>
+
+														</td>
+													</tr>
+
+												</tbody>
+											</table>
+										</div>
+									</div>
+                                    
+                                    <h3 style="width:830px;float:right;"><a name = "zl">专利</a></h3>
+									<div style="padding:15px; line-height:25px;">
+										<div class="MsoNormal">
+											<table class="MsoNormalTable" border="0" cellspacing="0" cellpadding="0" width="840" align="center" height="1964" style="width: 840px; border-collapse: collapse; height: auto">
+												<tbody>
+													<tr>
+														<td width="659" style=" padding-bottom: 0cm; padding-left: 5.4pt; padding-right: 5.4pt; height: 24pt;  padding-top: 0cm">
+															 
+
+														</td>
+													</tr>
+
+												</tbody>
+											</table>
+										</div>
+									</div>
+                                    
+                                    <h3 style="width:830px;float:right;"><a name = "rjzzq">软件著作权</a></h3>
+									<div style="padding:15px; line-height:25px;">
+										<div class="MsoNormal">
+											<table class="MsoNormalTable" border="0" cellspacing="0" cellpadding="0" width="840" align="center" height="1964" style="width: 840px; border-collapse: collapse; height: auto">
+												<tbody>
+													<tr>
+														<td width="659" style=" padding-bottom: 0cm; padding-left: 5.4pt; padding-right: 5.4pt; height: 24pt;  padding-top: 0cm">
+															 
+
+														</td>
+													</tr>
+
+												</tbody>
+											</table>
+										</div>
+									</div>
+                                    
+                                    <h3 style="width:830px;float:right;"><a name = "hjry">获奖与荣誉</a></h3>
+									<div style="padding:15px; line-height:25px;">
+										<div class="MsoNormal">
+											<table class="MsoNormalTable" border="0" cellspacing="0" cellpadding="0" width="840" align="center" height="1964" style="width: 840px; border-collapse: collapse; height: auto">
+												<tbody>
+													<tr>
+														<td width="659" style=" padding-bottom: 0cm; padding-left: 5.4pt; padding-right: 5.4pt; height: 24pt;  padding-top: 0cm">
+															 
+
+														</td>
+													</tr>
+
+												</tbody>
+											</table>
+										</div>
+									</div>
+                                    
+                                    <h3 style="width:830px;float:right;"><a name = "shjz">社会兼职</a></h3>
+									<div style="padding:15px; line-height:25px;">
+										<div class="MsoNormal">
+											<table class="MsoNormalTable" border="0" cellspacing="0" cellpadding="0" width="840" align="center" height="1964" style="width: 840px; border-collapse: collapse; height: auto">
+												<tbody>
+													<tr>
+														<td width="659" style=" padding-bottom: 0cm; padding-left: 5.4pt; padding-right: 5.4pt; height: 24pt;  padding-top: 0cm">
+															 <p>
+	<ul>
+		<li>
+			世界交通运输大会（WTC）运输规划学部综合运输规划与政策学科可持续交通运输技术委员会联合主席
+		</li>
+		<li>
+			综合交通运输大数据应用技术交通运输行业重点实验室办公室副主任
+		</li>
+	</ul>
+</p>
+
+														</td>
+													</tr>
+
+												</tbody>
+											</table>
+										</div>
+									</div>
+                                    
+
+								</div>
+								<div class="clear"></div>
+								
+							</div>
+						</div>
+                  		<div class="clearfix"></div>
+              		</div>
+        		</div>
+       		</div>
+       		<div id="push"></div>
+    	</div>
+	    <div id="footer">
+       		<div class="copy">
+        		<p>版权所有©北京交通大学交通运输学院 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;BJTUICP备:14010705 &nbsp;&nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp;&nbsp;  学院信箱：saad@bjtu.edu.cn</p>
+      		</div>
+  		</div>
+	</div>
+
+		<script>
+		    $.ajax({
+		      dataType: 'JSONP',
+		      url:"http://trans.bjtu.edu.cn/ajax_menu/",
+		      success: function(data){
+		      	var arch_str = '<li class="first"><a href="http://trans.bjtu.edu.cn/cms/">首页</a></li>';
+		      	var left_Str = '';
+		        $.each(data, function(i, n)
+		        {
+		        	arch_str = arch_str + '<li class="divider-vertical"></li><li class="dropdown '
+		        	if (n.id == 16){arch_str = arch_str + 'active'}
+		        	arch_str = arch_str + '"><a href="http://trans.bjtu.edu.cn/cms/item/?cat=' + n.id +'">'+n.name+'</a></li>';
+
+		        	if (n.vcs)
+		        	{
+		        		$.each(n.vcs, function(i, m){
+		        			if (n.id == 16)
+		        			{
+		        				left_Str = left_Str + '<li><a target="_parent"  href="http://trans.bjtu.edu.cn/cms/item/?cat=' + m.id +'">' +m.name + '</a>';
+		        			
+		        				if (m.cvcs)
+		        				{
+		        					left_Str = left_Str + '<ul class="sec_li">';
+			        				$.each(m.cvcs, function(i, k){
+					        				left_Str = left_Str + '<li><a target="_parent"  href="http://trans.bjtu.edu.cn/cms/item/?cat=' + k.id +'">' +k.name + '</a></li>';
+					        		});
+					        		left_Str = left_Str + '</ul>';
+		        				}
+		        				left_Str = left_Str + '</li>';
+		        			}
+		        		});
+		        	}
+		        });
+		        $("#nav").html(arch_str);
+		      }
+		    });
+		</script>
+</body>
+</html>

@@ -1,0 +1,495 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0">
+    <title>北京师范大学工商与经济管理学院</title>
+    <link rel="stylesheet" href="http://bs.bnu.edu.cn/new-ver-css/reset.css">
+    <link rel="stylesheet" href="http://bs.bnu.edu.cn/new-ver-css/index.css">
+	<link rel="stylesheet" href="http://bs.bnu.edu.cn/new-ver-css/xyslist.css">
+	<link rel="stylesheet" href="http://bs.bnu.edu.cn/new-ver-css/xys-tf.css">
+    <style>
+        .container{
+            width:100%;
+            height: auto;
+            overflow: hidden;
+        }
+        .header{
+            width:100%;
+            height:116px;
+            background:#EFF8FF;
+        }
+        .logo1{
+            width:1200px!important;
+            margin:0 auto;
+            position:relative;
+            float: none;
+			display:block;
+        }
+        .logo2{
+            float:right;
+        }
+        .logo1 p{
+            position:absolute;
+            top:5px;
+            right:5px;
+            font-size:13px;
+        }
+        .logo1 p:hover{
+            color:#112769;
+        }
+        .tu{
+            width:100%;
+            height:240px;
+            background:url('http://bs.bnu.edu.cn/newweb/grzy/images/tu.jpg') no-repeat top center;
+            background-size: 100%;
+        }
+        .lujing{
+            width:1200px;
+            height:58px;
+            margin:0 auto;
+            border-bottom:1px solid #aaa;
+            overflow:hidden;
+        }
+        .lujings{
+            margin:24px 0 0 0;
+            font-size:14px;
+        }
+        .content{
+            color:#333;
+            width:1200px;
+/*            height:2000px;*/
+            margin:0 auto;
+            margin-top:40px;
+/*            background:#c4c4c4;*/
+        }
+        
+        .xian{
+            width:100%;
+            height:8px;
+            background:#9A0812;
+        }
+        
+        .leftc{
+            float:left;
+        }
+        .rightc{
+            float:left;
+            margin-left:50px;
+/*            background:#666;*/
+            width:880px;
+/*            height:1000px;*/
+        }
+        .rheader{
+            width:880px;
+            height:210px;
+/*            background:yellow;*/
+        }
+        .xm{
+            font-size:30px;
+            height:40px;
+/*            border-bottom:4px solid #9A0812;*/
+            width:auto;
+            float:left;
+            line-height:40px;
+			margin-right:30px;
+        }
+        .zhiw{
+            font-size:18px;
+            height:40px;
+            line-height:50px;
+            margin-bottom:30px;
+        }
+        .tel{
+                font-size: 16px;
+                margin-top: 10px;
+                line-height: 20px;
+        }
+        .grjj{
+/*            height:300px;*/
+            width:880px;
+/*            background:yellow;*/
+            padding-bottom:40px;
+        }
+        .jjh{
+                font-size: 20px;
+                border-bottom: 1px solid #cecece;
+                height: 40px;
+                line-height: 40px;
+                padding-left: 30px;
+                background: url(http://bs.bnu.edu.cn/newweb/grzy/images/zw.png) no-repeat 0 16px;
+        }
+        
+        .jjc{
+            font-size:14px;
+            margin-top:30px;
+           
+            line-height:28px;
+            overflow:hidden;
+            text-align: justify;
+            text-justify:inter-ideograph;
+        }
+        .jjc1{
+            height:225px;
+            font-size:14px;
+            margin-top:30px;
+            
+            line-height:28px;
+            overflow:hidden;
+            text-align: justify;
+            text-justify:inter-ideograph;
+        }
+        
+        .dianji1{
+                background: url(http://bs.bnu.edu.cn/newweb/grzy/images/zw.png) no-repeat 0 -50px;
+                width: 13px;
+                height: 13px;
+                cursor: pointer;
+                display: block;
+            margin-top: 20px;
+            transition: all .2s linear;
+        }
+        .dianji1:hover{
+            background: url(http://bs.bnu.edu.cn/newweb/grzy/images/zw.png) no-repeat 0 -64px;
+        }
+        
+        .dianji{
+                background: url(http://bs.bnu.edu.cn/newweb/grzy/images/zw.png) no-repeat 0 -24px;
+                height: 13px;
+                cursor: pointer;
+                display: block;
+            margin-top: 20px;
+            transition: all .2s linear;
+        }
+        .dianji:hover{
+            background: url(http://bs.bnu.edu.cn/newweb/grzy/images/zw.png) no-repeat 0 -37px;
+        }
+        #jjc1{
+            text-indent:0em;
+        }
+        
+        .bks{
+            font-size:14px;
+            font-weight: 800;
+            margin-top:30px;
+            height:auto;
+            line-height:36px;
+        }
+        .bks1{
+            font-size:14px;
+            margin-top:30px;
+            height:auto;
+            line-height:36px;
+        }
+        .bksc{
+            height:36px;
+            line-height:36px;
+            font-size:14px;
+        }
+        
+        .yanzheng{
+            width:1200px;
+            height:100px;
+            margin:0 auto;
+        }
+        .yanzheng img{
+            display:block;
+            margin-top:26px;
+            float:left;
+        }
+		
+#appgame-leftside-share{width:42px; height:216px; position: fixed;bottom: 30px;right: 30px; z-index:9999;}
+.appgame-leftside-share{width:42px; height:259px;}
+#appgame-leftside-share a{display:block; width:42px; height:44px; background-color:#e6e6e6; z-index:1; position:absolute; left:0; box-sizing:border-box; -moz-box-sizing:border-box; border:1px #ddd solid; background-image:url(http://gh.bnu.edu.cn/images/share-icons.png); background-repeat:no-repeat; margin:0;  transition:0.4s; -webkit-transition:0.4s; -moz-transition:0.4s;}
+#appgame-leftside-share a:hover{background-color:#fff; border:1px #eee solid; z-index:2;}
+/*.appgame-leftside-weixin{top:0; background-position:-88px 0;}
+.appgame-leftside-weixin:hover{background-position:0px 0;}
+.appgame-leftside-qzone{top:43px; background-position:-88px -44px;}
+.appgame-leftside-qzone:hover{background-position:0px -44px;}*/
+.appgame-leftside-search{top:86px; background-position:-93px -89px;}
+.appgame-leftside-search:hover{background-position:-5px -86px;}
+.appgame-leftside-weixin{top:129px; background-position:-88px 0px;}
+.appgame-leftside-weixin:hover{background-position:0px 0px;}
+/*.appgame-leftside-fbook{top:172px; background-position:-88px -176px;}
+.appgame-leftside-fbook:hover{background-position:0px -176px;}
+.appgame-leftside-twi{top:215px; background-position:-88px -220px;}
+.appgame-leftside-twi:hover{background-position:0px -220px;}*/
+#appgame-leftside-share .appgame-leftside-top{background-image:url(http://gh.bnu.edu.cn/images/leftnav-off.png); background-position:-1px -395px; top:130px; cursor:pointer;}
+
+.rwt_share {
+/*	overflow:hidden;*/
+	float:left;
+	position:relative;
+}
+.rwt_share a {
+	display:inline-block;
+	margin-right:10px;
+	text-indent:-9999px;
+	margin-bottom:10px;
+	width:24px;
+	height:24px;
+	overflow:hidden;
+	cursor:pointer;
+	float:left;
+	font-size:12px;
+}
+.rwts_weixin {
+	background-position:0 -1612px;
+}
+.rwts_tsina {
+	background-position:0 -104px;
+}
+.rwts_tqq {
+	background-position:0 -260px;
+}
+.rwts_qzone {
+	background-position:0 -52px;
+}
+.rwts_sqq {
+	background-position:0 -2652px;
+}
+.rwts_tieba {
+	background-position:0 -728px;
+}
+.rwts_renren {
+	background-position:0 -208px;
+}
+.rwts_kaixin001 {
+	background-position:0 -312px;
+}
+.rwts_tqf {
+	background-position:0 -364px;
+}
+.rwts_douban {
+	background-position:0 -468px;
+}
+.rwts_twi {
+	background-position:0 -1404px;
+}
+.rwts_fbook {
+	background-position:0 -1352px;
+}
+.rwts_ty {
+	background-position:0 -1196px;
+}
+.rwts_mogujie {
+	background-position:0 -1768px;
+}
+.rwts_meilishuo {
+	background-position:0 -1716px;
+}
+.rwts_huaban {
+	background-position:0 -1872px;
+}
+.rwts_hi {
+	background-position:0 -416px;
+}
+.rwts_tsohu {
+	background-position:0 -520px;
+}
+.rwts_more {
+	background-position:0 0;
+}
+.rwt_share_wxShow_code>img {
+	width:100%;
+}
+.bks1 li{
+	list-style:disc;
+}
+@media screen and (max-width: 1200px){
+	.logo1{
+		width:100%!important;
+	}
+	.leftc img{
+		width:50%!important;
+		height:50%!important;
+	}
+	.logo2{display:none;}
+	.lujing{
+		width:90%;
+	}
+	.content{
+		width:90%;
+	}
+	.leftc{
+		float:none;
+		
+	}
+	.tu{display:none;}
+	
+	.rightc{
+		float:none;
+		width:100%;
+		margin-left:0px;
+	}
+	.footers{width:100%;}
+	.rheader{width:100%;}
+	.grjj{width:100%;}
+}
+@media screen and (max-width: 600px){
+.l3{width:95%;}
+.share{display:none;}
+.leftc img{
+		width:70%!important;
+		height:70%!important;
+	}
+}
+  
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo1">
+                <img src="http://bs.bnu.edu.cn/newweb/grzy/images/logo.png" alt="" class="l3" style="margin-top: 25px;float:left;">
+                <img src="http://bs.bnu.edu.cn/newweb/grzy/images/logo2.png" alt="" class="logo2">
+                <a href=""><p>ENGLISH VERSION</p></a>
+            </div>
+        </div>
+        <div class="xian"></div>
+        <div class="tu"></div>
+        <div class="lujing">
+            <div class="lujings">
+                <a href="#">师资队伍</a>
+                 | 
+                <a href="#">金融系</a>
+            </div>
+        </div>
+        <div class="content">
+            <div class="leftc">
+                <img src="/Public/upload/2021/01/23/600afce0aed0d.jpg" alt="" width="270">
+            </div>
+            <div class="rightc">
+                <div class="rheader">
+                    <p class="xm">胡聪慧</p>
+                    <p class="zhiw">副教授</p>
+                    <p class="tel"><strong style="display:block;width:100px;float:left;">电话</strong>：58801867</p> 
+                 <p class="tel"><strong style="display:block;width:100px;float:left;">E-mail</strong>：huconghui@bnu.edu.cn</p>
+                 <p class="tel"><strong style="display:block;width:100px;float:left;">Office hour</strong>：邮件预约</p>
+                 <p class="tel"><strong style="display:block;width:100px;float:left;">系所中心</strong>：金融系</p>
+              </div>
+			  <div class="grjj">
+                    <p class="jjh">个人简历</p>
+                    <div class="bks1" id="jjc"><span style="font-family:Microsoft YaHei;font-size:18px;">北京师范大学经济与工商管理学院副教授，北京大学光华管理学院金融学博士，武汉大学金融工程专业经济学学士。曾任对外经济贸易大学国际商学院副教授，美国哥伦比亚大学商学院访问学者。研究领域为资本市场与公司财务、行为金融，侧重从资本市场制度设计、投资者行为偏误等角度理解资产价格和公司财务决策。近年来，在<em>Journal of Corporate Finance</em>、<em>Journal of Financial Markets</em>、<em>Journal of Banking and Finance</em>、《经济研究》、《管理世界》、《金融研究》、《会计研究》、《经济学(季刊)》等国内外期刊上发表论文二十余篇。主持国家自然科学基金项目两项、作为核心成员参与上海证券交易所联合研究计划两项。曾荣获“2020年十大中经卓越青年”、“惠园优秀青年学者”、全国商务财会论文三等奖、全国博士生学术会议（金融论坛）优秀成果特等奖等荣誉，入选“复印报刊资料重要转载来源作者（2019版）”。&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span></div>
+                    
+                </div>				<div class="grjj">
+                    <p class="jjh">研究领域</p>
+                    <div class="bks1"><span style="font-size: 16px;">行为金融、资本市场与公司财务</span></div>
+                </div>				<div class="grjj">
+                    <p class="jjh">研究成果</p>
+                    <div class="bks1" id="jjc1"><p style="font-family: " microsoft="" yahei="" font-size:16px="" line-height:="" 27px=""></p><p></p><p></p><p><strong><u><span style="font-family:'微软雅黑',sans-serif;color:black;"><span style="font-size:16px;">英文论文</span></span></u></strong></p><p style="text-align:left;"><span style="font-size:16px;"><span style="font-family:'微软雅黑',sans-serif;">[1].&nbsp;&nbsp;</span><strong><span style="font-family:'微软雅黑',sans-serif;">Conghui Hu</span></strong><span style="font-family:'微软雅黑',sans-serif;">, Yu-Jane Liu, and Ji-ChaiLin, 2022, What Are the Benefits of Attracting Gambling Investors</span><span style="font-family:'微软雅黑',sans-serif;">：Evidence from Stock Splitsin China，<span style="color: rgb(51, 51, 255);"><em style=""><strong>Journal of Corporate Finance</strong></em><strong>&nbsp;</strong></span>(ABS 4),74,</span><span style="font-family:'微软雅黑',sans-serif;">102199.</span><span style="font-family:'微软雅黑',sans-serif;">（DOI:</span><span style="font-family:'微软雅黑',sans-serif;">10.1016/j.jcorpfin.2022.102199</span><span style="font-family:'微软雅黑',sans-serif;">）</span></span></p><blockquote style="margin: 0 0 0 40px; border: none; padding: 0px;"><p style="text-align:left;"><span style="font-size:16px;"><span style="font-family:'微软雅黑',sans-serif;">入选2019年中国金融国际年会(CICF)</span></span></p><p style="text-align:left;"><span style="font-size:16px;"><span style="font-family:'微软雅黑',sans-serif;">入选第五届东湖会计论坛(武汉，2019)</span></span></p><p style="text-align:left;"><span style="font-size:16px;"><span style="font-family:'微软雅黑',sans-serif;">入选第二届中国会计与财务学术年会(厦门，2018)</span></span></p></blockquote><p style="text-align:left;"><span style="font-size:16px;"><span style="font-family:'微软雅黑',sans-serif;">[2].&nbsp;&nbsp;</span><strong><span style="font-family:'微软雅黑',sans-serif;">Conghui Hu</span></strong><span style="font-family:'微软雅黑',sans-serif;">, Yu-Jane Liu, and Xin Xu.(2021). The Valuation Effect of Stock Dividends or Splits: Evidence from aCatering Perspective. <span style="color: rgb(51, 51, 255);"><em style=""><strong>Journal of Empirical Finance</strong></em><strong>&nbsp;</strong></span>(ABS3), 61,</span><span style="font-family:'Arial',sans-serif;color:#2E2E2E;"> 163-179</span><span style="font-family:'微软雅黑',sans-serif;">. (DOI:</span><span style="font-family:'微软雅黑',sans-serif;">10.1016/j.jempfin.2021.01.006)</span></span></p><p style="text-align:left;"><span style="font-size:16px;"><span style="font-family:'微软雅黑',sans-serif;">[3].&nbsp;&nbsp;</span><strong><span style="font-family:'微软雅黑',sans-serif;">Conghui Hu</span></strong><span style="font-family:'微软雅黑',sans-serif;">, Yu-Jane Liu, and Ning Zhu. (2021).Deleveraging Commonality. <span style="color: rgb(51, 51, 255);"><em><strong>Journal of Financial Markets&nbsp;</strong></em></span>(ABS 3)</span><span style="font-family:'微软雅黑',sans-serif;">，53,</span><span style="font-family:'Arial',sans-serif;color:#2E2E2E;"> 100582</span><span style="font-family:'微软雅黑',sans-serif;">.(DOI:</span><span style="font-family:'微软雅黑',sans-serif;">10.1016/j.finmar.2020.100582)</span></span></p><blockquote style="margin: 0 0 0 40px; border: none; padding: 0px;"><p style="text-align:left;"><span style="font-size:16px;"><span style="font-family:'微软雅黑',sans-serif;">入选2019年中国金融国际年会(CICF)</span></span></p></blockquote><p style="text-align:left;"><span style="font-size:16px;"><span style="font-family:'微软雅黑',sans-serif;">[4].&nbsp;&nbsp;</span><strong><span style="font-family:'微软雅黑',sans-serif;">Conghui Hu</span></strong><span style="font-family:'微软雅黑',sans-serif;">, Zhibing Li, and Xiaoyu Liu.(2020). Liquidity Shocks, Commodity Financialization, and Market Comovements. <span style="color: rgb(51, 51, 255);"><em><strong>Journal of Futures Markets</strong></em><strong>&nbsp;</strong></span>(ABS 3),40(9),</span><span style="font-family:'微软雅黑',sans-serif;">1315-1336.(DOI</span><span style="font-family:'微软雅黑',sans-serif;">：10.1002/fut.22127)</span></span></p><p style="text-align:left;"><span style="font-size:16px;"><span style="font-family:'微软雅黑',sans-serif;">[5].&nbsp;&nbsp;</span><strong><span style="font-family:'微软雅黑',sans-serif;">Conghui Hu</span></strong><span style="font-family:'微软雅黑',sans-serif;">, Yu-Jane Liu, Ning Zhu.(2019). De-Leverage and Illiquidity Contagion, <span style="color: rgb(51, 51, 255);"><em><strong>Journal of Banking &amp; Finance</strong></em></span> (ABS 3), 102, 1-18. (DOI:</span><span style="font-family:'微软雅黑',sans-serif;">10.1016/j.jbankfin.2019.02.011)</span></span></p><blockquote style="margin: 0 0 0 40px; border: none; padding: 0px;"><p style="text-align:left;"><span style="font-size:16px;"><span style="font-family:'微软雅黑',sans-serif;">入选2017年中国金融国际年会(CICF) </span></span></p><p style="text-align:left;"><span style="font-size:16px;"><span style="font-family:'微软雅黑',sans-serif;">入选2017年中国金融学术年会(CFRC)</span></span></p></blockquote><p style="text-align:left;"><span style="font-size:16px;"><span style="font-family:'微软雅黑',sans-serif;">[6].&nbsp;&nbsp;</span><strong><span style="font-family:'微软雅黑',sans-serif;">Conghui Hu</span></strong><span style="font-family:'微软雅黑',sans-serif;">, Yu-Jane Liu. (2015). Valuingdiversity: CEOs' career experiences and corporate investment.<span style="color: rgb(51, 51, 255);"> <em><strong>Journal of Corporate Finance</strong></em></span> (ABS 4), 30,11-31. (DOI:</span><span style="font-family:'微软雅黑',sans-serif;">10.1016/j.jcorpfin.2014.08.001)</span></span></p><blockquote style="margin: 0 0 0 40px; border: none; padding: 0px;"><p style="text-align:left;"><span style="font-size:16px;"><span style="font-family:'微软雅黑',sans-serif;">入选美国金融管理协会(FMA)2012年年会</span></span></p><p style="text-align:left;"><span style="font-size:16px;"><span style="font-family:'微软雅黑',sans-serif;">入选行为金融和经济协会(ABF&amp;E) 2012年年会</span></span></p></blockquote><p style="text-align:left;"><span style="font-size:16px;"><span style="font-family:'微软雅黑',sans-serif;">[7].&nbsp;&nbsp;</span><strong><span style="font-family:'微软雅黑',sans-serif;">Conghui Hu</span></strong><span style="font-family:'微软雅黑',sans-serif;">, Xun Zhang, Qiuming Gao.(2015). Synthetic CDO pricing: the perspective of risk integration. <span style="color: rgb(51, 51, 255);"><strong>Applied Economics</strong>&nbsp;</span>(ABS 2), 47(15), 1574-1587. (DOI:</span><span style="font-family:'微软雅黑',sans-serif;">10.1080/00036846.2014.1000525)</span></span></p><blockquote style="margin: 0 0 0 40px; border: none; padding: 0px;"><p style="text-align:left;"><span style="font-size:16px;"><span style="font-family:'微软雅黑',sans-serif;">中文版荣获2009年全国博士生学术会议金融论坛特等奖</span></span></p><p style="text-align:left;"><span style="font-size:16px;"><span style="font-family:'微软雅黑',sans-serif;">中文版荣获2009年风险管理新纪元论坛征文一等奖</span></span></p><p style="text-align:left;"><span style="font-size:16px;"><span style="font-family:'微软雅黑',sans-serif;">中文版入选第六届中国金融学年会</span></span></p></blockquote><p style="text-align:left;"><span style="font-size:16px;"><span style="font-family:'微软雅黑',sans-serif;">[8].&nbsp;&nbsp;</span><strong><span style="font-family:'微软雅黑',sans-serif;">Conghui Hu</span></strong><span style="font-family:'微软雅黑',sans-serif;">, Shasha Liu. (2013). Theimplications of low R<sup>2</sup>: evidence from China. <span style="color: rgb(51, 51, 255);"><strong>Emerging Markets Finance and Trade</strong></span> (ABS 2), 49(1), 17-32. (DOI:</span><span style="font-family:'微软雅黑',sans-serif;">10.2753/REE1540-496X490102)</span></span></p><p style="text-align:left;"><span style="font-size:16px;"><span style="font-family:'微软雅黑',sans-serif;">[9].&nbsp;&nbsp;</span><strong><span style="font-family:'微软雅黑',sans-serif;">Conghui Hu</span></strong><span style="font-family:'微软雅黑',sans-serif;">, Wei Xiong (PrincetonUniversity). (2013). Are Commodity Futures Prices Barometers of the GlobalEconomy?. <em>Apres le Deluge</em>: Financeand the Common Good after the Crisis, edited by E. Glen Weyl, Edward L. Glaeser,and Tano Santos. (DOI:</span><span style="font-family:'微软雅黑',sans-serif;">10.3386/w20003).</span></span></p><p style="text-align:left;"><strong><u><span style="font-family:'微软雅黑',sans-serif;color:black;"><span style="font-size:16px;"><br /></span></span></u></strong></p><p style="text-align:left;"><strong><u><span style="font-family:'微软雅黑',sans-serif;color:black;"><span style="font-size:16px;">中文论文</span></span></u></strong></p><p style="text-align:left;"><span style="font-size:16px;"><span style="font-family:'微软雅黑',sans-serif;">[1].&nbsp;&nbsp;</span><strong><span style="font-family:'微软雅黑',sans-serif;">胡聪慧</span></strong><span style="font-family:'微软雅黑',sans-serif;">、齐云飞，资本市场与企业投融资决策：基于新股定价制度调整的证据，《<strong><span style="color:#3333FF;">经济研究</span></strong>》，2021年第8期。</span></span></p><blockquote style="margin: 0 0 0 40px; border: none; padding: 0px;"><p style="text-align:left;"><span style="font-size:16px;"><span style="font-family:'微软雅黑',sans-serif;">入选第二届中国会计学者论坛（北京，2020）</span></span></p><p style="text-align:left;"><span style="font-size:16px;"><span style="font-family:'微软雅黑',sans-serif;">入选中国“银行与公司金融”青年论坛（北京，2021）</span></span></p><p style="text-align:left;"><span style="font-size:16px;"><span style="font-family:'微软雅黑',sans-serif;">人大复印报刊资料《财务与会计导刊(理论版)》2022年第3期全文转载</span></span></p></blockquote><p style="text-align:left;"><span style="font-size:16px;"><span style="font-family:'微软雅黑',sans-serif;">[2].&nbsp;&nbsp;</span><strong><span style="font-family:'微软雅黑',sans-serif;">胡聪慧</span></strong><span style="font-family:'微软雅黑',sans-serif;">、张勇、高明，价格时滞、投机性需求与股票收益，《<strong><span style="color:#3333FF;">管理世界</span></strong>》，2016年第1期。</span></span></p><blockquote style="margin: 0 0 0 40px; border: none; padding: 0px;"><p style="text-align:left;"><span style="font-size:16px;"><span style="font-family:'微软雅黑',sans-serif;">人大复印报刊资料《投资与证券》2016年第5期全文转载</span></span></p></blockquote><p style="text-align:left;"><span style="font-size:16px;"><span style="font-family:'微软雅黑',sans-serif;">[3].&nbsp;&nbsp;</span><span style="font-family:'微软雅黑',sans-serif;">支晓强、<strong>胡聪慧</strong>、童盼、马俊杰，股权分置改革与上市公司股利政策——基于迎合理论的证据，《<strong><span style="color:#3333FF;">管理世界</span></strong>》，2014年 第3期。</span></span></p><blockquote style="margin: 0 0 0 40px; border: none; padding: 0px;"><p style="text-align:left;"><span style="font-size:16px;"><span style="font-family:'微软雅黑',sans-serif;">人大复印报刊资料《投资与证券》2014年第7期全文转载</span></span></p></blockquote><p style="text-align:left;"><span style="font-size:16px;"><span style="font-family:'微软雅黑',sans-serif;">[4].&nbsp;&nbsp;</span><span style="font-family:'微软雅黑',sans-serif;">高明、<strong>胡聪慧</strong>（通讯作者），正规金融与非正规金融:机制、效率与实证挑战，《<strong><span style="color:#3333FF;">金融研究</span></strong>》，2022年第5期。</span></span></p><p style="text-align:left;"><span style="font-size:16px;"><span style="font-family:'微软雅黑',sans-serif;">[5].&nbsp;&nbsp;</span><span style="font-family:'微软雅黑',sans-serif;">李金甜、<strong>胡聪慧</strong>(通讯作者)、郑建明，资本市场双循环背景下的系统性流动性风险：基于错层的自然实验分析，《<strong><span style="color:#3333FF;">中国软科学</span></strong>》，2021年第5期。</span></span></p><p style="text-align:left;"><span style="font-size:16px;"><span style="font-family:'微软雅黑',sans-serif;">[6].&nbsp;&nbsp;</span><span style="font-family:'微软雅黑',sans-serif;">张新民、叶志伟、<strong>胡聪慧</strong>，产融结合如何服务实体经济：基于商业信用的证据，《<strong><span style="color:#3333FF;">南开管理评论</span></strong>》，2021年第1期。</span></span></p><blockquote style="margin: 0 0 0 40px; border: none; padding: 0px;"><p style="text-align:left;"><span style="font-size:16px;"><span style="font-family:'微软雅黑',sans-serif;">人大复印报刊资料《财务与会计导刊（理论版）》2021年第7期全文转载</span></span></p></blockquote><p style="text-align:left;"><span style="font-size:16px;"><span style="font-family:'微软雅黑',sans-serif;">[7].&nbsp;&nbsp;</span><strong><span style="font-family:'微软雅黑',sans-serif;">胡聪慧</span></strong><span style="font-family:'微软雅黑',sans-serif;">、朱菲菲、邱卉敏，股权质押、风险管理与大股东增持，《<strong><span style="color:#3333FF;">金融研究</span></strong>》，2020年第9期。</span></span></p><blockquote style="margin: 0 0 0 40px; border: none; padding: 0px;"><p style="text-align:left;"><span style="font-size:16px;"><span style="font-family:'微软雅黑',sans-serif;">入选2019年博雅会计论坛（北京，2019）</span></span></p></blockquote><blockquote style="margin: 0 0 0 40px; border: none; padding: 0px;"><p style="text-align:left;"><span style="font-size:16px;"><span style="font-family:'微软雅黑',sans-serif;">人大复印报刊资料《投资与证券》2021年第2期全文转载</span></span></p></blockquote><p style="text-align:left;"><span style="font-size:16px;"><span style="font-family:'微软雅黑',sans-serif;">[8].&nbsp;&nbsp;</span><span style="font-family:'微软雅黑',sans-serif;">李金甜、<strong>胡聪慧</strong>、郑建明，券商声誉与股票流动性：来自新三板市场的证据，《<strong><span style="color:#3333FF;">管理科学</span></strong>》，2020年第4期。</span></span></p><p style="text-align:left;"><span style="font-size:16px;"><span style="font-family:'微软雅黑',sans-serif;">[9].&nbsp;&nbsp;</span><strong><span style="font-family:'微软雅黑',sans-serif;">胡聪慧</span></strong><span style="font-family:'微软雅黑',sans-serif;">、于军、高明，中国上市公司送转动机研究：操纵迎合还是估值提升？，《<strong><span style="color:#3333FF;">会计研究</span></strong>》，2019年第4期。</span></span></p><blockquote style="margin: 0 0 0 40px; border: none; padding: 0px;"><p style="text-align:left;"><span style="font-size:16px;"><span style="font-family:'微软雅黑',sans-serif;">入选第十届中国金融与投资论坛(武汉，2017)</span></span></p><p style="text-align:left;"><span style="font-size:16px;"><span style="font-family:'微软雅黑',sans-serif;">人大复印报刊资料《投资与证券》2019年第7期全文转载</span></span></p></blockquote><p style="text-align:left;"><span style="font-size:16px;"><span style="font-family:'微软雅黑',sans-serif;">[10].&nbsp;</span><strong><span style="font-family:'微软雅黑',sans-serif;">胡聪慧</span></strong><span style="font-family:'微软雅黑',sans-serif;">、叶志伟、王征，市场分割、投资攀比与企业投资的本地联动性，《<strong><span style="color:#3333FF;">中国会计评论</span></strong>》，2019年第1期。</span></span></p><blockquote style="margin: 0 0 0 40px; border: none; padding: 0px;"><p style="text-align:left;"><span style="font-size:16px;"><span style="font-family:'微软雅黑',sans-serif;">入选第16届中国实证会计国际研讨会（南京，2017）</span></span></p></blockquote><p style="text-align:left;"><span style="font-size:16px;"><span style="font-family:'微软雅黑',sans-serif;">[11].&nbsp;</span><strong><span style="font-family:'微软雅黑',sans-serif;">胡聪慧</span></strong><span style="font-family:'微软雅黑',sans-serif;">、刘学良，大宗商品与股票市场联动性研究——基于融资流动性的视角，《<strong><span style="color:#3333FF;">金融研究</span></strong>》，2017年第7期。</span></span></p><blockquote style="margin: 0 0 0 40px; border: none; padding: 0px;"><p style="text-align:left;"><span style="font-size:16px;"><span style="font-family:'微软雅黑',sans-serif;">入选第十五届中国青年经济学者论坛（厦门，2015）</span></span></p></blockquote><blockquote style="margin: 0 0 0 40px; border: none; padding: 0px;"><p style="text-align:left;"><span style="font-size:16px;"><span style="font-family:'微软雅黑',sans-serif;">国研网股票市场栏目全文转载(2017/10/12)</span></span></p></blockquote><p style="text-align:left;"><span style="font-size:16px;"><span style="font-family:'微软雅黑',sans-serif;">[12].&nbsp;</span><strong><span style="font-family:'微软雅黑',sans-serif;">胡聪慧</span></strong><span style="font-family:'微软雅黑',sans-serif;">、于军，送转与定向增发——基于市值管理的视角，《<strong><span style="color:#3333FF;">财经研究</span></strong>》，2016年第12期。</span></span></p><blockquote style="margin: 0 0 0 40px; border: none; padding: 0px;"><p style="text-align:left;"><span style="font-size:16px;"><span style="font-family:'微软雅黑',sans-serif;">入选第十六届中国青年经济学者论坛（北京，2016）</span></span></p><p style="text-align:left;"><span style="font-size:16px;"><span style="font-family:'微软雅黑',sans-serif;">荣获2017年全国商务财会学术论文三等奖</span></span></p><p style="text-align:left;"><span style="font-size:16px;"><span style="font-family:'微软雅黑',sans-serif;">人大复印报刊资料《投资与证券》2017年第3期全文转载</span></span></p><p style="text-align:left;"><span style="font-size:16px;"><span style="font-family:'微软雅黑',sans-serif;">国研网股票市场栏目全文转载(2017/419)</span></span></p></blockquote><p style="text-align:left;"><span style="font-size:16px;"><span style="font-family:'微软雅黑',sans-serif;">[13].&nbsp;</span><strong><span style="font-family:'微软雅黑',sans-serif;">胡聪慧</span></strong><span style="font-family:'微软雅黑',sans-serif;">、燕翔、郑建明，有限注意、上市公司金融投资与股票回报率，《<strong><span style="color:#3333FF;">会计研究</span></strong>》，2015年第10期。</span></span></p><blockquote style="margin: 0 0 0 40px; border: none; padding: 0px;"><p style="text-align:left;"><span style="font-size:16px;"><span style="font-family:'微软雅黑',sans-serif;">入选2014年中国金融国际年会(CICF)</span></span></p><p style="text-align:left;"><span style="font-size:16px;"><span style="font-family:'微软雅黑',sans-serif;">人大复印报刊资料《投资与证券》2016年第3期全文转载</span></span></p></blockquote><p style="text-align:left;"><span style="font-size:16px;"><span style="font-family:'微软雅黑',sans-serif;">[14].&nbsp;</span><strong><span style="font-family:'微软雅黑',sans-serif;">胡聪慧</span></strong><span style="font-family:'微软雅黑',sans-serif;">、刘玉珍、吴天琪、郑建明，有限注意、行业信息扩散与股票收益，《<strong><span style="color:#3333FF;">经济学(季刊)</span></strong>》，2015年，14(3)。</span></span></p><blockquote style="margin: 0 0 0 40px; border: none; padding: 0px;"><p style="text-align:left;"><span style="font-size:16px;"><span style="font-family:'微软雅黑',sans-serif;">入选第九届中国金融学年会（杭州，2012）</span></span></p><p style="text-align:left;"><span style="font-size:16px;"><span style="font-family:'微软雅黑',sans-serif;">人大复印报刊资料《投资与证券》2015年第11期全文转载</span></span></p></blockquote><p style="text-align:left;"><span style="font-size:16px;"><span style="font-family:'微软雅黑',sans-serif;">[15].&nbsp;</span><span style="font-family:'微软雅黑',sans-serif;">支晓强、<strong>胡聪慧</strong>、吴偎立、刘玉珍，现金分红迎合了投资者吗——来自交易行为的证据，《<strong><span style="color:#3333FF;">金融研究</span></strong>》， 2014年第5期。</span></span></p><blockquote style="margin: 0 0 0 40px; border: none; padding: 0px;"><p style="text-align:left;"><span style="font-size:16px;"><span style="font-family:'微软雅黑',sans-serif;">人大复印报刊资料《财务与会计导刊(理论版)》2014年第8期全文转载</span></span></p></blockquote><p style="text-align:left;"><span style="font-size:16px;"><span style="font-family:'微软雅黑',sans-serif;">[16].&nbsp;</span><span style="font-family:'微软雅黑',sans-serif;">高秋明、<strong>胡聪慧</strong>(通讯作者)、燕翔，中国 A 股市场动量效应的特征和形成机理研究，《<strong><span style="color:#3333FF;">财经研究</span></strong>》，2014年第2期。</span></span></p><blockquote style="margin: 0 0 0 40px; border: none; padding: 0px;"><p style="text-align:left;"><span style="font-size:16px;"><span style="font-family:'微软雅黑',sans-serif;">入选第十三届中国青年经济学者论坛（北京，2013）</span></span></p></blockquote><p style="text-align:left;"><span style="font-size:16px;"><span style="font-family:'微软雅黑',sans-serif;">[17].&nbsp;</span><strong><span style="font-family:'微软雅黑',sans-serif;">胡聪慧</span></strong><span style="font-family:'微软雅黑',sans-serif;">、高明，噪音与证券分析师的迎合动机，《<strong><span style="color:#3333FF;">金融学(季刊)</span></strong>》, 2012年，6(2)。</span></span></p><blockquote style="margin: 0 0 0 40px; border: none; padding: 0px;"><p style="text-align:left;"><span style="font-size:16px;"><span style="font-family:'微软雅黑',sans-serif;">入选第四届《中国金融评论》国际研讨会（上海，2011）</span></span></p></blockquote><p style="text-align:left;"><strong><u><span style="font-family:'微软雅黑',sans-serif;color:black;"><span style="font-size:16px;"><br /></span></span></u></strong></p><p style="text-align:left;"><strong><u><span style="font-family:'微软雅黑',sans-serif;color:black;"><span style="font-size:16px;">工作论文</span></span></u></strong></p><p style="text-align:left;"><span style="font-size:16px;"><span style="font-family:'微软雅黑',sans-serif;">[1].&nbsp;&nbsp;</span><span style="font-family:'微软雅黑',sans-serif;">RubinHao</span><span style="font-family:'微软雅黑',sans-serif;">，<strong>ConghuiHu</strong>，Xin Xu, and Yu (Peter) Zhang, 2022, BeyondPerformance: the Financial Education Role of Robo-advising.</span></span></p><p style="text-align:left;"><span style="font-size:16px;"><span style="font-family:'微软雅黑',sans-serif;">[2].&nbsp;&nbsp;</span><strong><span style="font-family:'微软雅黑',sans-serif;">Conghui Hu</span></strong><span style="font-family:'微软雅黑',sans-serif;">, Yu-Jane Liu, Xin Xu, andJianfeng Yu, 2020, Priming and Stock Preferences: Evidence from IPO Lotteries.</span></span></p><blockquote style="margin: 0 0 0 40px; border: none; padding: 0px;"><p style="text-align:left;"><span style="font-size:16px;"><span style="font-family:'微软雅黑',sans-serif;">入选2021年中国金融学术年会(CFRC)</span></span></p></blockquote><p style="text-align:left;"><span style="font-size:16px;"><span style="font-family:'微软雅黑',sans-serif;">[3].&nbsp;&nbsp;</span><strong><span style="font-family:'微软雅黑',sans-serif;">胡聪慧</span></strong><span style="font-family:'微软雅黑',sans-serif;">、陈德球、王椿璞，2019，会计信息与企业债务融资：基于商誉的证据。</span></span></p><blockquote style="margin: 0 0 0 40px; border: none; padding: 0px;"><p style="text-align:left;"><span style="font-size:16px;"><span style="font-family:'微软雅黑',sans-serif;">入选第二届中国会计与财务学术年会(厦门，2018)</span></span></p><p style="text-align:left;"><span style="font-size:16px;"><span style="font-family:'微软雅黑',sans-serif;">入选第十八届中国青年经济学者论坛 (北京，2018)</span></span></p><p style="text-align:left;"><span style="font-size:16px;"><span style="font-family:'微软雅黑',sans-serif;">入选首届中国会计学者论坛（北京，2019）</span></span></p></blockquote><p style="text-align:left;"><span style="font-size:16px;"><span style="font-family:'微软雅黑',sans-serif;">[4].&nbsp;&nbsp;</span><span style="font-family:'微软雅黑',sans-serif;">黄浩东、刘玉珍、<strong>胡聪慧</strong>(通讯作者)，2020，迁移学习与股票量化投资。</span></span></p><blockquote style="margin: 0 0 0 40px; border: none; padding: 0px;"><p style="text-align:left;"><span style="font-size:16px;"><span style="font-family:'微软雅黑',sans-serif;">入选2021年中国国际风险论坛(CIRF)（成都，2021），并荣获最佳论文</span></span></p></blockquote><p style="text-align:left;"><span style="font-size:16px;"><span style="font-family:'微软雅黑',sans-serif;">[5].&nbsp;&nbsp;</span><span style="font-family:'微软雅黑',sans-serif;">高明、毕燕璐、<strong>胡聪慧</strong>(通讯作者)，2021，环境立法与投资者利益保护：基于股票市场异常波动的视角。</span></span></p><blockquote style="margin: 0 0 0 40px; border: none; padding: 0px;"><p style="text-align:left;"><span style="font-size:16px;"><span style="font-family:'微软雅黑',sans-serif;">入选第十七届中国金融学年会（深圳，2020）</span></span></p><p style="text-align:left;"><span style="font-size:16px;"><span style="font-family:'微软雅黑',sans-serif;">入选第四届中国金融学者论坛（成都，2021）</span></span></p><p style="text-align:left;"><span style="font-size:16px;"><span style="font-family:'微软雅黑',sans-serif;">入选第三届中国金融学术与政策论坛（北京，2021）</span></span></p></blockquote><p style="text-align:left;"><span style="font-size:16px;"><span style="font-family:'微软雅黑',sans-serif;">[6].&nbsp;&nbsp;</span><span style="font-family:'微软雅黑',sans-serif;">李松楠、刘玉珍、<strong>胡聪慧</strong>(通讯作者)，2021，价格笼子、流动性与价格发现效率：基于创业板注册制改革的证据。</span></span></p><blockquote style="margin: 0 0 0 40px; border: none; padding: 0px;"><p style="text-align:left;"><span style="font-size:16px;"><span style="font-family:'微软雅黑',sans-serif;">入选首届金融与发展论坛（北京，2021）</span></span></p><p style="text-align:left;"><span style="font-size:16px;"><span style="font-family:'微软雅黑',sans-serif;">入选第十八届中国金融学年会（厦门，2021）</span></span></p></blockquote><p style="text-align:left;"><span style="font-size:16px;"><span style="font-family:'微软雅黑',sans-serif;">[7].&nbsp;&nbsp;</span><span style="font-family:'微软雅黑',sans-serif;">刘玉珍、杜君、<strong>胡聪慧</strong>（通讯作者）, 2022, 行为偏误与投资者教育：基于股票投资的研究。</span></span></p><blockquote style="margin: 0 0 0 40px; border: none; padding: 0px;"><p style="text-align:left;"><span style="font-size:16px;"><span style="font-family:'微软雅黑',sans-serif;">入选第五届金融科技年会（天津，2022）</span></span></p><p style="text-align:left;"><span style="font-size:16px;"><span style="font-family:'微软雅黑',sans-serif;"><br /></span></span></p></blockquote><p style="text-align:left;"><strong><u><span style="font-family:'微软雅黑',sans-serif;color:black;"><span style="font-size:16px;">观点与专栏文章</span></span></u></strong></p><p><span style="font-size:16px;"><span style="font-family:'微软雅黑',sans-serif;">[1].&nbsp;&nbsp;</span><span style="font-family:'微软雅黑',sans-serif;">行为金融如何助力投资者教育&nbsp;</span><a href="https://new.qq.com/rain/a/20210118A0AKS400"><span style="font-family:'微软雅黑',sans-serif;"><span style="color:#3333ff;">中国经营网</span></span></a></span></p><p><span style="font-size:16px;"><span style="font-family:'微软雅黑',sans-serif;">[2].&nbsp;&nbsp;</span><span style="font-family:'微软雅黑',sans-serif;">智能投顾如何影响个人财富管理&nbsp;</span><span style="color:#3333ff;"><a href="https://news.cnstock.com/news,qy-202205-4883040.htm"><span style="font-family:'微软雅黑',sans-serif;"><span style="color:#3333ff;">上海证券报</span></span></a>&nbsp;<a href="http://www.zqrb.cn/huiyihuodong/2022-05-16/A1652701039075.html"><span style="font-family:'微软雅黑',sans-serif;"><span style="color:#3333ff;">证券日报</span></span></a>&nbsp;<a href="https://www.cnfin.com/cmjj-lb/detail/20220517/3610044_1.html"><span style="font-family:'微软雅黑',sans-serif;"><span style="color:#3333ff;">新华财经</span></span></a>&nbsp;<a href="http://www.rmlt.com.cn/2022/0517/647193.shtml"><span style="color:#3333ff;"><span style="font-family:'微软雅黑',sans-serif;">人民论坛</span><span style="font-family:'微软雅黑',sans-serif;">网</span></span></a></span></span></p><p><span style="font-size:16px;"><span style="font-family:'微软雅黑',sans-serif;">[3].&nbsp;&nbsp;</span><span style="font-family:'微软雅黑',sans-serif;">让投顾组合成为个人财富积累的“压舱石”</span><a href="https://baijiahao.baidu.com/s?id=1733340033731150865&amp;wfr=spider&amp;for=pc"><span style="font-family:'微软雅黑',sans-serif;"><span style="color:#3333ff;">金融界</span></span></a></span></p><p><span style="font-size:16px;"><span style="font-family:'微软雅黑',sans-serif;">[4].&nbsp;&nbsp;</span><span style="font-family:'微软雅黑',sans-serif;">如何破解“基金赚钱、基民不赚钱”难题&nbsp;</span><a href="http://www.cb.com.cn/index/show/zl/cv/cv13457831853"><span style="color:#3333ff;"><span style="font-family:'微软雅黑',sans-serif;">中国</span><span style="font-family:'微软雅黑',sans-serif;">经营网</span></span></a></span></p><p><span style="font-size:16px;"><span style="font-family:'微软雅黑',sans-serif;">[5].&nbsp;&nbsp;</span><span style="font-family:'微软雅黑',sans-serif;">智能投顾需要怎样的“投”与“顾”</span><a href="https://baijiahao.baidu.com/s?id=1733606290033609873&amp;wfr=spider&amp;for=pc"><span style="font-family:'微软雅黑',sans-serif;"><span style="color:#3333ff;">金融界</span></span></a></span></p></div>
+                    
+                </div>				<div class="grjj">
+                    <p class="jjh">研究课题</p>
+                  
+                    <div class="bks1"><p class="MsoListParagraph" style="font-family: " microsoft="" yahei="" font-size:16px="" margin-left:="" 28px=""><span style="font-family: 微软雅黑, " microsoft="" yahei="" font-size:="" 14px=""><span style="font-size:16px;">[1]. 国家自然科学基金面上项目，个人投资者杠杆交易动机与行为后果研究——基于股票账户数据的分析，主持，在研。</span></span></p><p class="MsoListParagraph" style="font-family: " microsoft="" yahei="" font-size:16px="" margin-left:="" 28px=""><span style="font-family: 微软雅黑, " microsoft="" yahei="" font-size:="" 14px=""><span style="font-size:16px;">[2]. 国家自然科学基金重大项目，互联网时代的公司财务行为研究，参与，在研。</span></span></p><p class="MsoListParagraph" style="font-family: " microsoft="" yahei="" font-size:16px="" margin-left:="" 28px=""><span style="font-family: 微软雅黑, " microsoft="" yahei="" font-size:="" 14px=""><span style="font-size:16px;">[3]. 国家自然科学基金青年项目，上市公司送转行为研究——基于投资者认可度和市值管理的视角，主持，已结项，结题评估优秀。</span></span></p><p class="MsoListParagraph" style="font-family: " microsoft="" yahei="" font-size:16px="" margin-left:="" 28px=""><span style="font-family: 微软雅黑, " microsoft="" yahei="" font-size:="" 14px=""><span style="font-size:16px;">[4]. 对外经济贸易大学优秀青年学者培育计划，市值管理与公司财务政策，主持，已结项。</span></span></p><p class="MsoListParagraph" style="font-family: " microsoft="" yahei="" font-size:16px="" margin-left:="" 28px=""><span style="font-family: 微软雅黑, " microsoft="" yahei="" font-size:="" 14px=""><span style="font-size:16px;">[5]. 教育部人文社科项目，上市公司参与影子银行业务的动机、后果与监管政策研究，参与，已结项。</span></span></p><p class="MsoListParagraph" style="font-family: " microsoft="" yahei="" font-size:16px="" margin-left:="" 28px=""><span style="font-family: 微软雅黑, " microsoft="" yahei="" font-size:="" 14px=""><span style="font-size:16px;">[6]. 上海证券交易所项目，竞价制度与市场稳定性，主要成员，已结项。</span></span></p><p class="MsoListParagraph" style="font-family: " microsoft="" yahei="" font-size:16px="" margin-left:="" 28px=""><span style="font-family: 微软雅黑, " microsoft="" yahei="" font-size:="" 14px=""><span style="font-size:16px;">[7]. 上海证券交易所项目，企业分红研究——投资人行为的视角，主要成员，已结项。</span></span></p></div>
+                    
+                </div>				<div class="grjj">
+                    <p class="jjh">学生情况</p>
+                    <div class="bks1"><p class="MsoListParagraph" style="font-family: " microsoft="" yahei="" font-size:16px="" margin-left:="" 28px="" line-height:="" 27px=""><span style="font-size:16px;"><span style="font-family: 微软雅黑, sans-serif;">[1].&nbsp;</span><span style="font-family: 微软雅黑, sans-serif;">招收对投资者行为、资产价格以及资本市场与公司财务等方向学术研究感兴趣的高年级本科生、研究生。</span></span></p><p class="MsoListParagraph" style="font-family: " microsoft="" yahei="" font-size:16px="" margin-left:="" 28px="" line-height:="" 27px=""><span style="font-size:16px;"><span style="font-family: 微软雅黑, sans-serif;">[2].&nbsp;</span><span style="font-family: 微软雅黑, sans-serif;">招收对财富管理、市值管理、资本市场与公司财务等领域案例开发感兴趣的学生。</span></span></p></div>
+                    
+                </div>				<div class="grjj">
+                    <p class="jjh">教授课程</p>
+                    <div class="bks1"><p class="MsoListParagraph" style="font-family: " microsoft="" yahei="" font-size:16px="" margin-left:="" 28px="" line-height:="" 27px=""><span style="font-size:16px;"><span style="font-family: 微软雅黑, sans-serif;">[1].&nbsp;</span><span style="font-family: 微软雅黑, sans-serif;">金融大类： 金融学 (本科)</span></span></p><p class="MsoListParagraph" style="font-family: " microsoft="" yahei="" font-size:16px="" margin-left:="" 28px="" line-height:="" 27px=""><span style="font-size:16px;"><span style="font-family: 微软雅黑, sans-serif;">[2].&nbsp;</span><span style="font-family: 微软雅黑, sans-serif;">公司金融： 公司理财（本科）；财务管理（MBA、EDP研修班）；高级财务管理理论与实务（MPAcc）</span></span></p><p class="MsoListParagraph" style="font-family: " microsoft="" yahei="" font-size:16px="" margin-left:="" 28px="" line-height:="" 27px=""><span style="font-size:16px;"><span style="font-family: 微软雅黑, sans-serif;">[3].&nbsp;</span><span style="font-family: 微软雅黑, sans-serif;">资产定价：证券投资理论与实验（本科）；投资学（硕士）；量化投资策略（硕士）</span></span></p><p class="MsoListParagraph" style="font-family: " microsoft="" yahei="" font-size:16px="" margin-left:="" 28px="" line-height:="" 27px=""><span style="font-size:16px;"><span style="font-family: 微软雅黑, sans-serif;">[4].&nbsp;</span><span style="font-family: 微软雅黑, sans-serif;">学术研究：实证公司金融专题（博士）</span></span></p><p class="MsoListParagraph" style="font-family: " microsoft="" yahei="" font-size:16px="" margin-left:="" 28px="" line-height:="" 27px=""><span style="font-size:16px;"><span style="font-family: 微软雅黑, sans-serif;">[5].&nbsp;</span><span style="font-family: 微软雅黑, sans-serif;">企业培训：股票投资通识课；行为金融与财富管理；资本市场与公司财务</span></span></p></div>
+                    
+                </div>            </div>
+        </div>
+         <footer style="overflow: hidden;">
+            <div class="footers">
+                <div class="footersl">
+                    <img src="http://bs.bnu.edu.cn/newweb/images/ewm.jpg" alt="" class="imgewm">
+                    <div class="footerxx">
+                        <p>Copyright © 2020 北京师范大学经济与工商管理学院</p>
+                        <p><i class="fas fa-map-marker-alt"></i> 地址：北京市新街口外大街19号</p>
+                        <p><i class="fas fa-portrait"></i> 传真：010-58801867</p>
+                        <p><i class="fas fa-phone"></i> 电话：010-58801867</p>
+                        <p><i class="fas fa-envelope"></i> 邮编：100875</p>
+                    </div>
+                </div>
+                <img src="http://bs.bnu.edu.cn/newweb/images/db.png" alt="" width="140" class="dbimg">
+                <img src="http://bs.bnu.edu.cn/newweb/images/yx.png" alt="" class="yuanxun">
+            </div>
+        </footer>
+    </div>
+	<div class="share">
+		  <div id="appgame-leftside-share">
+	        <div class="appgame-leftside-share rwt_share" id="rwt_share">
+	         
+	        <!--<a class="appgame-leftside-search" data-cmd="search" title="search"  href="javascript:void(0);" onclick="opens('id')">search</a> --> <!--<div class="searchs" id="id">
+	         <form name="dataForm" action="/cms/search/searchResults.jsp" target="_blank" method="post" accept-Charset="utf-8"  onsubmit="document.charset='utf-8';">
+			        	<p>
+			        		<input name="siteID" size="4" value="127" type = "hidden">
+			        		<input type="text" name="query" id="search" class="searchInput" value="输入搜索词">
+			        		<button type="submit"></button>
+			        	</p>
+			        	</form>
+			        </div>-->
+			        <!-- <a class="appgame-leftside-weixin" data-cmd="weixin" title="">微信</a> -->
+                    
+			        <!-- <a class="appgame-leftside-qzone" data-cmd="qzone" title="">qq空间</a>
+			        
+			        <a class="appgame-leftside-tsina" data-cmd="tsina" title="">微博</a> -->			    </div>
+			        <a class="appgame-leftside-top" onclick="gotoTPoint()"></a>			</div>
+			        
+		</div>
+</body>
+<script src="http://gh.bnu.edu.cn/js/jquery-1.9.0.min.js"></script>
+<script src="http://gh.bnu.edu.cn/js/share.min.js"></script>
+<script>
+    var dj=document.getElementById('dianji');
+    var jjc=document.getElementById('jjc');
+    var dj1=document.getElementById('dianji1');
+    var jjc1=document.getElementById('jjc1');
+    var a=1;
+    function zhedie(m,n){
+        m.onclick=function(){
+            if(a==1){
+                n.className='jjc';
+                m.className='dianji1'
+                a=0;
+            }else{
+                n.className='jjc1';
+                m.className='dianji'
+                a=1;
+            }
+        }
+    }
+    zhedie(dj,jjc);
+    zhedie(dj1,jjc1);
+	
+	
+</script>
+<script>
+
+	
+	
+    
+
+    /*回到顶部*/
+	$(function(){
+	 	$(window).resize(function(){
+						var h = $(window).height();
+						$('.goTop').css('top',h-60);
+						$(window).scroll(function(){				
+							var scrollTop = $(document).scrollTop();					  
+							$('.goTop').stop().animate({
+								top: h + scrollTop-60
+							},300);
+						});
+		}).resize();
+		});
+	//gotop
+
+			$('.goTop').click(function(){
+
+				$('body,html').stop().animate({scrollTop:0});
+
+				return false;
+
+			});
+	
+	function gotoTPoint(){
+		$("html,body").animate({scrollTop:0},500);
+	}
+</script>
+</html>

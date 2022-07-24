@@ -1,0 +1,495 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0">
+    <title>北京师范大学工商与经济管理学院</title>
+    <link rel="stylesheet" href="http://bs.bnu.edu.cn/new-ver-css/reset.css">
+    <link rel="stylesheet" href="http://bs.bnu.edu.cn/new-ver-css/index.css">
+	<link rel="stylesheet" href="http://bs.bnu.edu.cn/new-ver-css/xyslist.css">
+	<link rel="stylesheet" href="http://bs.bnu.edu.cn/new-ver-css/xys-tf.css">
+    <style>
+        .container{
+            width:100%;
+            height: auto;
+            overflow: hidden;
+        }
+        .header{
+            width:100%;
+            height:116px;
+            background:#EFF8FF;
+        }
+        .logo1{
+            width:1200px!important;
+            margin:0 auto;
+            position:relative;
+            float: none;
+			display:block;
+        }
+        .logo2{
+            float:right;
+        }
+        .logo1 p{
+            position:absolute;
+            top:5px;
+            right:5px;
+            font-size:13px;
+        }
+        .logo1 p:hover{
+            color:#112769;
+        }
+        .tu{
+            width:100%;
+            height:240px;
+            background:url('http://bs.bnu.edu.cn/newweb/grzy/images/tu.jpg') no-repeat top center;
+            background-size: 100%;
+        }
+        .lujing{
+            width:1200px;
+            height:58px;
+            margin:0 auto;
+            border-bottom:1px solid #aaa;
+            overflow:hidden;
+        }
+        .lujings{
+            margin:24px 0 0 0;
+            font-size:14px;
+        }
+        .content{
+            color:#333;
+            width:1200px;
+/*            height:2000px;*/
+            margin:0 auto;
+            margin-top:40px;
+/*            background:#c4c4c4;*/
+        }
+        
+        .xian{
+            width:100%;
+            height:8px;
+            background:#9A0812;
+        }
+        
+        .leftc{
+            float:left;
+        }
+        .rightc{
+            float:left;
+            margin-left:50px;
+/*            background:#666;*/
+            width:880px;
+/*            height:1000px;*/
+        }
+        .rheader{
+            width:880px;
+            height:210px;
+/*            background:yellow;*/
+        }
+        .xm{
+            font-size:30px;
+            height:40px;
+/*            border-bottom:4px solid #9A0812;*/
+            width:auto;
+            float:left;
+            line-height:40px;
+			margin-right:30px;
+        }
+        .zhiw{
+            font-size:18px;
+            height:40px;
+            line-height:50px;
+            margin-bottom:30px;
+        }
+        .tel{
+                font-size: 16px;
+                margin-top: 10px;
+                line-height: 20px;
+        }
+        .grjj{
+/*            height:300px;*/
+            width:880px;
+/*            background:yellow;*/
+            padding-bottom:40px;
+        }
+        .jjh{
+                font-size: 20px;
+                border-bottom: 1px solid #cecece;
+                height: 40px;
+                line-height: 40px;
+                padding-left: 30px;
+                background: url(http://bs.bnu.edu.cn/newweb/grzy/images/zw.png) no-repeat 0 16px;
+        }
+        
+        .jjc{
+            font-size:14px;
+            margin-top:30px;
+           
+            line-height:28px;
+            overflow:hidden;
+            text-align: justify;
+            text-justify:inter-ideograph;
+        }
+        .jjc1{
+            height:225px;
+            font-size:14px;
+            margin-top:30px;
+            
+            line-height:28px;
+            overflow:hidden;
+            text-align: justify;
+            text-justify:inter-ideograph;
+        }
+        
+        .dianji1{
+                background: url(http://bs.bnu.edu.cn/newweb/grzy/images/zw.png) no-repeat 0 -50px;
+                width: 13px;
+                height: 13px;
+                cursor: pointer;
+                display: block;
+            margin-top: 20px;
+            transition: all .2s linear;
+        }
+        .dianji1:hover{
+            background: url(http://bs.bnu.edu.cn/newweb/grzy/images/zw.png) no-repeat 0 -64px;
+        }
+        
+        .dianji{
+                background: url(http://bs.bnu.edu.cn/newweb/grzy/images/zw.png) no-repeat 0 -24px;
+                height: 13px;
+                cursor: pointer;
+                display: block;
+            margin-top: 20px;
+            transition: all .2s linear;
+        }
+        .dianji:hover{
+            background: url(http://bs.bnu.edu.cn/newweb/grzy/images/zw.png) no-repeat 0 -37px;
+        }
+        #jjc1{
+            text-indent:0em;
+        }
+        
+        .bks{
+            font-size:14px;
+            font-weight: 800;
+            margin-top:30px;
+            height:auto;
+            line-height:36px;
+        }
+        .bks1{
+            font-size:14px;
+            margin-top:30px;
+            height:auto;
+            line-height:36px;
+        }
+        .bksc{
+            height:36px;
+            line-height:36px;
+            font-size:14px;
+        }
+        
+        .yanzheng{
+            width:1200px;
+            height:100px;
+            margin:0 auto;
+        }
+        .yanzheng img{
+            display:block;
+            margin-top:26px;
+            float:left;
+        }
+		
+#appgame-leftside-share{width:42px; height:216px; position: fixed;bottom: 30px;right: 30px; z-index:9999;}
+.appgame-leftside-share{width:42px; height:259px;}
+#appgame-leftside-share a{display:block; width:42px; height:44px; background-color:#e6e6e6; z-index:1; position:absolute; left:0; box-sizing:border-box; -moz-box-sizing:border-box; border:1px #ddd solid; background-image:url(http://gh.bnu.edu.cn/images/share-icons.png); background-repeat:no-repeat; margin:0;  transition:0.4s; -webkit-transition:0.4s; -moz-transition:0.4s;}
+#appgame-leftside-share a:hover{background-color:#fff; border:1px #eee solid; z-index:2;}
+/*.appgame-leftside-weixin{top:0; background-position:-88px 0;}
+.appgame-leftside-weixin:hover{background-position:0px 0;}
+.appgame-leftside-qzone{top:43px; background-position:-88px -44px;}
+.appgame-leftside-qzone:hover{background-position:0px -44px;}*/
+.appgame-leftside-search{top:86px; background-position:-93px -89px;}
+.appgame-leftside-search:hover{background-position:-5px -86px;}
+.appgame-leftside-weixin{top:129px; background-position:-88px 0px;}
+.appgame-leftside-weixin:hover{background-position:0px 0px;}
+/*.appgame-leftside-fbook{top:172px; background-position:-88px -176px;}
+.appgame-leftside-fbook:hover{background-position:0px -176px;}
+.appgame-leftside-twi{top:215px; background-position:-88px -220px;}
+.appgame-leftside-twi:hover{background-position:0px -220px;}*/
+#appgame-leftside-share .appgame-leftside-top{background-image:url(http://gh.bnu.edu.cn/images/leftnav-off.png); background-position:-1px -395px; top:130px; cursor:pointer;}
+
+.rwt_share {
+/*	overflow:hidden;*/
+	float:left;
+	position:relative;
+}
+.rwt_share a {
+	display:inline-block;
+	margin-right:10px;
+	text-indent:-9999px;
+	margin-bottom:10px;
+	width:24px;
+	height:24px;
+	overflow:hidden;
+	cursor:pointer;
+	float:left;
+	font-size:12px;
+}
+.rwts_weixin {
+	background-position:0 -1612px;
+}
+.rwts_tsina {
+	background-position:0 -104px;
+}
+.rwts_tqq {
+	background-position:0 -260px;
+}
+.rwts_qzone {
+	background-position:0 -52px;
+}
+.rwts_sqq {
+	background-position:0 -2652px;
+}
+.rwts_tieba {
+	background-position:0 -728px;
+}
+.rwts_renren {
+	background-position:0 -208px;
+}
+.rwts_kaixin001 {
+	background-position:0 -312px;
+}
+.rwts_tqf {
+	background-position:0 -364px;
+}
+.rwts_douban {
+	background-position:0 -468px;
+}
+.rwts_twi {
+	background-position:0 -1404px;
+}
+.rwts_fbook {
+	background-position:0 -1352px;
+}
+.rwts_ty {
+	background-position:0 -1196px;
+}
+.rwts_mogujie {
+	background-position:0 -1768px;
+}
+.rwts_meilishuo {
+	background-position:0 -1716px;
+}
+.rwts_huaban {
+	background-position:0 -1872px;
+}
+.rwts_hi {
+	background-position:0 -416px;
+}
+.rwts_tsohu {
+	background-position:0 -520px;
+}
+.rwts_more {
+	background-position:0 0;
+}
+.rwt_share_wxShow_code>img {
+	width:100%;
+}
+.bks1 li{
+	list-style:disc;
+}
+@media screen and (max-width: 1200px){
+	.logo1{
+		width:100%!important;
+	}
+	.leftc img{
+		width:50%!important;
+		height:50%!important;
+	}
+	.logo2{display:none;}
+	.lujing{
+		width:90%;
+	}
+	.content{
+		width:90%;
+	}
+	.leftc{
+		float:none;
+		
+	}
+	.tu{display:none;}
+	
+	.rightc{
+		float:none;
+		width:100%;
+		margin-left:0px;
+	}
+	.footers{width:100%;}
+	.rheader{width:100%;}
+	.grjj{width:100%;}
+}
+@media screen and (max-width: 600px){
+.l3{width:95%;}
+.share{display:none;}
+.leftc img{
+		width:70%!important;
+		height:70%!important;
+	}
+}
+  
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo1">
+                <img src="http://bs.bnu.edu.cn/newweb/grzy/images/logo.png" alt="" class="l3" style="margin-top: 25px;float:left;">
+                <img src="http://bs.bnu.edu.cn/newweb/grzy/images/logo2.png" alt="" class="logo2">
+                <a href="http://bs.bnu.edu.cn/englishversion/facultyresearch/fulltimefaculty/azmsy/119508.html"><p>ENGLISH VERSION</p></a>
+            </div>
+        </div>
+        <div class="xian"></div>
+        <div class="tu"></div>
+        <div class="lujing">
+            <div class="lujings">
+                <a href="#">师资队伍</a>
+                 | 
+                <a href="#">经济系</a>
+            </div>
+        </div>
+        <div class="content">
+            <div class="leftc">
+                <img src="/Public/upload/2020/09/15/5f6028ff861f1.jpg" alt="" width="270">
+            </div>
+            <div class="rightc">
+                <div class="rheader">
+                    <p class="xm">孙志军</p>
+                    <p class="zhiw">教授</p>
+                    <p class="tel"><strong style="display:block;width:100px;float:left;">电话</strong>：58807879</p> 
+                 <p class="tel"><strong style="display:block;width:100px;float:left;">E-mail</strong>：szhijun@bnu.edu.cn</p>
+                 <p class="tel"><strong style="display:block;width:100px;float:left;">Office hour</strong>：邮件预约</p>
+                 <p class="tel"><strong style="display:block;width:100px;float:left;">系所中心</strong>：经济系</p>
+              </div>
+			  <div class="grjj">
+                    <p class="jjh">个人简历</p>
+                    <div class="bks1" id="jjc"><div style="top: 0px;">﻿﻿<span style="font-family: " microsoft="" yahei="" font-size:="" 16px="">2002年博士毕业于北京师范大学经济学院教育经济与管理专业。现任北京师范大学经济与工商管理学院教授、博士生导师、分党委书记，兼任北京师范大学首都教育经济研究院常务副院长。主要研究方向为教育财政、教育经济。作为项目主持人或主要参加人承担国家级重大项目、省部级科研项目和国际组织项目十余项，在公开刊物上发表学术论文40余篇，出版学术著作7部，曾获省部级教学科研奖项。主要社会兼职有《教育经济评论》主编、劳动经济学会副会长、中国教育学会教育经济学分会副理事长、中国教育发展战略学会教育财政专业委员会副理事长、国务院教育督导委员会办公室全国义务教育均衡督导评估专家、清华大学中国科技政策研究中心兼职研究员等。</span></div><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei';font-size:16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;"><br /></p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei';font-size:16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;"><strong>教育背景</strong></p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei';font-size:16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">1999-2002：北京师范大学经济学院，博士</p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei';font-size:16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">1996-1999：北京师范大学教育管理学院，硕士</p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei';font-size:16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">1990-1994：北京师范大学教育系，本科</p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei';font-size:16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;"><br /></p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei';font-size:16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;"></p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei';font-size:16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;"><strong>工作经历</strong></p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei';font-size:16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">2004.8-今 北京师范大学经济与工商管理学院，历任讲师、副教授、教授</p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei';font-size:16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">2015.1-今 北京师范大学经济与工商管理学院党委书记</p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei';font-size:16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">2012-今 北京师范大学首都教育经济研究院常务副院长</p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei';font-size:16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">2002.7-2004.7 清华大学公共管理学院 博士后‍</p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei';font-size:16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;"><br /></p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei';font-size:16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;"></p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei';font-size:16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;"><strong>主要兼职</strong></p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei';font-size:16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">《教育经济评论》主编</p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei';font-size:16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;"><span style="font-family: " microsoft="" yahei="" font-size:="" 16px="">劳动经济学会副会长</span></p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei';font-size:16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;"><span style="font-family: " microsoft="" yahei="" font-size:="" 16px="">中国教育学会教育经济学分会副理事长</span><br />中国教育发展战略学会教育财政专业委员会副理事长<br /></p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei';font-size:16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">国务院教育督导委员会办公室全国义务教育均衡督导评估专家<br /></p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei';font-size:16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">清华大学中国科技政策研究中心兼职研究员</p></div>
+                    
+                </div>				<div class="grjj">
+                    <p class="jjh">研究领域</p>
+                    <div class="bks1"><div style="top: 0px;">﻿﻿教育经济学、劳动经济学。主要研究兴趣包括教育财政体制改革与机制设计，教育政策的效果评估，家庭背景、学校教育与儿童发展之间的关系，教育、就业与收入分配等。</div></div>
+                </div>				<div class="grjj">
+                    <p class="jjh">研究成果</p>
+                    <div class="bks1" id="jjc1"><div style="top: 0px;">﻿﻿<span style=" font-family: " microsoft="" yahei="" font-size:="" 16px=""><strong>主要期刊论文</strong></span></div><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei';font-size:16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;"></p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-size: 16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;"></p><p style=""><span style="font-family:SimSun;">孙志军 郑磊：“撤点并校”是否减少了教育资源投入，教育研究，2021年第11期</span></p><p style=""><span style="font-family:SimSun;">孙志军 管振：教育扩张、劳动参与率与经济增长，北京师范大学学报(社会科学版)，2021年第5期。</span></p><p style=""><span style="font-family:SimSun;">成刚&nbsp;孙志军&nbsp;杜思慧：儿童青少年健康影响学业成绩吗? <a href="https://kns.cnki.net/KNS8/Navi?DBCode=CJFD&amp;BaseID=JYJP"><span style="color: windowtext;">教育经济评论</span></a>，2021年第2期。</span></p><p style=""><span style="font-family:SimSun;">成刚&nbsp;杜思慧&nbsp;陈瑾&nbsp;孙志军：青少年体重影响学业成绩吗——来自中国教育追踪调查的经验证据，湖南师范大学教育科学学报，2021年第2期。</span></p><p style=""><span style="font-family:SimSun;">管振&nbsp;孙志军（通讯作者）：教育收益中的人力资本与信号效应估计——基于学制改革的证据，劳动经济研究，2020年第4期。</span></p><p style=""><span style="font-family:SimSun;">王琦&nbsp;孙志军（通讯作者）&nbsp;赖德胜：“三新”经济背景下劳动力市场就业规模特征分析，中国劳动，2020年第4期。</span></p><span style="font-family:SimSun;"><span style="font-size: 10.5pt;">郑磊</span><span style="font-size: 10.5pt;">&nbsp;</span><span style="font-size: 10.5pt;">刘婕</span><span style="font-size: 10.5pt;">&nbsp;</span><span style="font-size: 10.5pt;">孙志军：</span><span style="font-size: 10.5pt;"><a href="https://kns.cnki.net/KNS8/Detail?sfield=fn&amp;QueryID=2&amp;CurRec=6&amp;recid=&amp;FileName=JYJP201906005&amp;DbName=CJFDLAST2020&amp;DbCode=CJFD&amp;yx=&amp;pr=&amp;URLID="><span style="color: windowtext;">在家说方言影响学生的认知发展吗?——</span><span style="color: windowtext;">基于CEPS</span><span style="color: windowtext;">数据的研究</span></a></span><span style="font-size: 10.5pt;">，教育经济评论，2019年第6期。</span></span><br /><span style="font-family:SimSun;">孙志军 郝苗：教育财政努力程度：概念与测量方法，教育经济评论，2018年第3期<br /></span><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-size: 16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;"><span style="font-family:SimSun;">苏丽锋; 孙志军; 李振宇：初中后教育选择意愿及影响因素研究——普高、中职还是不再读书? 华中师范大学学报(人文社会科学版)，2017年第5期（2017-09-27）</span></p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-size: 16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;"><span style="font-family:SimSun;">孙志军 彭顺绪 王骏 原莹：谁在学业竞赛中领先?——学业成绩的性别差异研究，北京师范大学学报(社会科学版)，2016年第3期。（2016.5）</span></p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-size: 16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;"><span style="font-family:SimSun;">苏丽锋 孙志军 李振宇：高中阶段教育选择影响因素研究，清华大学教育研究，2016年第4期。（2016.7）</span></p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-size: 16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;"><span style="font-family:SimSun;">苏丽锋 孙志军：我国高中阶段教育普及水平研究，华中师范大学学报(人文社会科学版) ，2016年第3期。（2016.5）</span></p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-size: 16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;"><span style="font-family:SimSun;">王骏 孙志军：重点高中能提高学生学业成绩吗？北京大学教育评论，2015年第13卷第4期（2015.10）</span></p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-size: 16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;"><span style="font-family:SimSun;">孙志军：基于双胞胎数据的教育收益率估计，经济学（季刊），2014第13卷第3期(2014.4)</span></p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-size: 16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;"><span style="font-family:SimSun;">孙志军：高校扩招使个体就业状况更糟糕吗？北京师范大学学报（社会科学版），2013.2</span></p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-size: 16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;"><span style="font-family:SimSun;">孙志军：我国初中升学率的变化及影响因素分析，教育与经济，2012.2</span></p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-size: 16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;"><span style="font-family:SimSun;">孙志军： 家庭背景、公共教育支出与高中阶段教育入学机会. 中国人民大学教育学刊2011.1</span></p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-size: 16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;"><span style="font-family:SimSun;">孙志军 杜育红 李婷婷：义务教育财政改革：增量效果与分配效果. 北京大学教育评论，2010.1《高等学校文科学术文摘》2010年第2期，全文转载</span></p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-size: 16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;"><span style="font-family:SimSun;">孙志军 杜育红：中国义务教育财政体制：进展、问题与建议. 华中师范大学学报（社科版），2010.1《新华文摘》2010年第9期，全文转载；人大复印报刊资料《体制改革》2010年第5期全文转载</span></p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-size: 16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;"><span style="font-family:SimSun;">孙志军 李婷婷：小学教育经费支出差异研究. 教育与经济，2009.4</span></p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-size: 16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;"><span style="font-family:SimSun;">孙志军 刘泽云 孙百才：家庭、学校与儿童的学习成绩. 北京师范大学学报（社科版），2009.5</span></p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-size: 16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;"><span style="font-family:SimSun;">孙志军 杜育红：学制改革对农村居民教育水平与收入的影响. 中国人口科学，2009.4</span></p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-size: 16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;"><span style="font-family:SimSun;">孙志军 王善迈 成刚： 论现代高等教育财政拨款制度. 教育研究，2009.6人大复印报刊资料《高等教育》2009年第期全文转载</span></p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-size: 16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;"><span style="font-family:SimSun;">孙志军：中国普通高校经费收入的变化及其解释. 清华大学教育研究，2009.4人大复印报刊资料《高等教育》2009年第期全文转载</span></p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-size: 16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;"><span style="font-family:SimSun;">成刚 孙志军：我国高校效率研究. 经济学季刊，2008</span></p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-size: 16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;"><span style="font-family:SimSun;">陶春梅 孙志军：高等学校基本支出拨款方式的改革与创新.财贸经济，2007.10</span></p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-size: 16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;"><span style="font-family:SimSun;">线联平 孙志军陶春梅 梁岩松： 北京市高等教育拨款制度的改革与创新.经济与管理研究，2007.9</span></p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-size: 16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;"><span style="font-family:SimSun;">孙志军 何晋秋：中国高校科技创新能力的实证分析. 清华大学教育研究，2006.</span></p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-size: 16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;"><span style="font-family:SimSun;">孙志军：儿童入学问题研究中的性别视角. 西北师大学报（哲学社会科学版），2006.1</span></p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-size: 16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;"><span style="font-family:SimSun;">孙志军：中国教育个人收益率研究：一个文献综述及其政策含义. 中国人口科学,2004年第5期</span></p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-size: 16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;"><span style="font-family:SimSun;">孙志军 杜育红：农村劳动力流动及其对收入的影响.人口与经济, 2004.4</span></p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-size: 16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;"><span style="font-family:SimSun;">孙志军 杜育红：农村人口的教育水平及其对收入的影响. 教育与经济, 2004.1</span></p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-size: 16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;"><span style="font-family:SimSun;">孙志军 金平：绩效拨款在高等教育中的实践. 高等教育研究, 2003.6</span></p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-size: 16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;"><span style="font-family:SimSun;">杜育红 孙志军：中国欠发达地区的教育、收入与劳动力市场经历.管理世界, 2003.9</span></p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-size: 16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;"><span style="font-family:SimSun;">孙志军：农村人口教育水平的决定因素. 中国人口科学, 2003.2</span></p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-size: 16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;"><span style="font-family:SimSun;">王善迈 刘泽云 孙志军：2008年北京教育经费供求预测. 教育科学研究,2003.7－8</span></p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-size: 16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;"><span style="font-family:SimSun;">王善迈 孙志军：中国高等教育改革与发展的现状与问题.《现代高等教育》（日本）2002.8</span></p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-size: 16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;"><span style="font-family:SimSun;">孙志军：过度教育的经济学研究述评.经济学动态.2001.5</span></p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei';font-size:16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;"><br /></p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei';font-size:16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;"></p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei';font-size:16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;"><strong>著作与教材</strong></p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei';font-size:16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">王善迈 孙志军：《普及高中阶段教育保障条件研究》，知识产权出版社2015年</p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei';font-size:16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">孙志军 孟大虎：《教育、就业与收入不平等》，北京师范大学出版社2013年</p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei';font-size:16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">刘泽云 孙志军：《计量经济学实验教程》，北京师范大学出版社2011年</p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei';font-size:16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">杜育红 孙志军《中国义务教育财政研究》，北京师范大学出版社2009年</p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei';font-size:16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">(Du Yuhong, Sun Zhijun: Research on Compulsory Education Financing in China, Springer-Verlag 2016.)</p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei';font-size:16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">孙志军《中国农村的教育成本、收益与家庭教育决策》，北京师范大学出版社2004年</p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei';font-size:16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">孙志军（副主编）《人力资本与欠发达地区经济发展》，中国人事出版社，2004年</p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei';font-size:16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;"><br /></p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei';font-size:16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;"></p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei';font-size:16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;"><strong>荣誉及奖项</strong></p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei';font-size:16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">2017年北京市高等教育教学成果奖二等奖</p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei';font-size:16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">第12届北京市哲学社会科学研究优秀成果奖一等奖(2012)</p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei';font-size:16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">教育部第6届高等学校科学研究优秀成果奖（人文社科类）二等奖(2012)</p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei';font-size:16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">教育部第7届高等学校科学研究优秀成果奖（人文社科类）二等奖(2015)</p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei';font-size:16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">北京师范大学“京师英才”一等奖（2012）</p></div>
+                    
+                </div>				<div class="grjj">
+                    <p class="jjh">研究课题</p>
+                  
+                    <div class="bks1"><div style="top: 0px;">﻿﻿<span style=" font-family: " microsoft="" yahei="" font-size:="" 16px=""><strong>科研项目</strong></span></div><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-size: 16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;"><span style="font-family: SimSun;">我国高等学校成本结构与效率研究，国家社科基金“十一五”规划课题（2006）</span><br /></p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-size: 16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;"><span style="font-family:SimSun;">北京市高等学校拨款方式改革研究，北京市教委、财政局委托（2003-2006）</span></p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-size: 16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;"><span style="font-family:SimSun;">北京市属高等学校拨款标准研究，北京市教委、财政局委托（2007）</span></p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-size: 16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;"><span style="font-family:SimSun;">北京市级所属学校定额标准研究，北京市教委、财政局委托项目（2008）</span></p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-size: 16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;"><span style="font-family:SimSun;">完善北京市属高校生均定额标准研究，北京市教委、北京教育科学研究院委托课题（2008）</span></p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-size: 16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;"><span style="font-family:SimSun;">高校拨款与中职学校拨款研究，北京市教委、财政局委托项目（2010-2015）</span></p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-size: 16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;"><span style="font-family:SimSun;">希望工程“一堂课”项目效果评估，中国青少年基金会（2013）</span></p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-size: 16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;"><span style="font-family:SimSun;">教育财政投入努力程度研究，北京市社会科学基金项目（2015）</span></p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-size: 16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;"><span style="font-family:SimSun;"></span></p><p><span style="font-size: 10.5pt;"><a href="http://172.16.213.18/business/project/project.do?actionType=view&amp;pageModeId=view&amp;bean.id=2c9055927451f10501746cd7348302be" style=""><span style="color: windowtext;">&quot;</span><span style="color: windowtext;">三新&quot;</span><span style="color: windowtext;">经济发展状况及带动就业研究</span></a></span><span style="font-size: 10.5pt;">，国务院第四次全国经济普查领导小组办公室（2020）</span><br /><span style="font-family:宋体;">《&lt;“十四五”就业促进规划&gt;重大任务实施机制研究及资料汇编》，国家发展改革委员会就业收入分配和消费司（2021）</span><br /></p><br /><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-size: 16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;"></p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-size: 16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;"><strong><span style="font-family:SimSun;">参与项目</span></strong></p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-size: 16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;"><span style="font-family:SimSun;"></span></p><p><a href="http://172.16.213.18/business/project/project.do?actionType=view&amp;pageModeId=view&amp;bean.id=2c905592754df708017622a6dbc95000"><span style="color: windowtext;">新时代基础教育财政体制与结构研究</span></a>，教育部哲学社会科学研究重大课题攻关项目（2020），子课题负责人</p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-size: 16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;"><span style="font-family:SimSun;">二孩政策下基础教育资源配置风险预警研究，国家自然科学基金应急项目（2018），子课题负责人</span></p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-size: 16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;"><span style="font-family:SimSun;">加快普及高中阶段教育的条件保障研究，国家社会科学基金教育学重点课题（2009－今），执行负责人</span></p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-size: 16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;"><span style="font-family:SimSun;">公共财政框架下公共教育财政制度研究，教育部哲学社会科学研究重大课题公关项目（2006-09），“高等教育财政制度研究”子课题负责人</span></p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-size: 16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;"><span style="font-family:SimSun;">中国现阶段高等教育大众化过程中的重大问题与对策研究，教育部哲学社会科学研究重大课题公关项目（2005-09），“高等教育大众化的财政政策研究”子课题负责人</span></p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-size: 16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;"><span style="font-family:SimSun;">实施扩大就业的发展战略研究，国家社科基金重大项目（2007－今），“教育与就业”子课题负责人</span></p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-size: 16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;"><br /></p></div>
+                    
+                </div>				<div class="grjj">
+                    <p class="jjh">学生情况</p>
+                    <div class="bks1"><div style="top: 0px;">﻿﻿指导<span style="font-family: " microsoft="" yahei="" font-size:="" 16px="">学术型劳动经济专业硕士生、教育经济与管理博士研究生、MBA</span></div></div>
+                    
+                </div>				<div class="grjj">
+                    <p class="jjh">教授课程</p>
+                    <div class="bks1"><div style="top: 0px;">﻿﻿<span style="font-family: " microsoft="" yahei="" font-size:="" 16px="">劳动经济学、经济计量方法与应用、发展经济学</span></div><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei';font-size:16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">教育经济学经典文献选读</p></div>
+                    
+                </div>            </div>
+        </div>
+         <footer style="overflow: hidden;">
+            <div class="footers">
+                <div class="footersl">
+                    <img src="http://bs.bnu.edu.cn/newweb/images/ewm.jpg" alt="" class="imgewm">
+                    <div class="footerxx">
+                        <p>Copyright © 2020 北京师范大学经济与工商管理学院</p>
+                        <p><i class="fas fa-map-marker-alt"></i> 地址：北京市新街口外大街19号</p>
+                        <p><i class="fas fa-portrait"></i> 传真：010-58801867</p>
+                        <p><i class="fas fa-phone"></i> 电话：010-58801867</p>
+                        <p><i class="fas fa-envelope"></i> 邮编：100875</p>
+                    </div>
+                </div>
+                <img src="http://bs.bnu.edu.cn/newweb/images/db.png" alt="" width="140" class="dbimg">
+                <img src="http://bs.bnu.edu.cn/newweb/images/yx.png" alt="" class="yuanxun">
+            </div>
+        </footer>
+    </div>
+	<div class="share">
+		  <div id="appgame-leftside-share">
+	        <div class="appgame-leftside-share rwt_share" id="rwt_share">
+	         
+	        <!--<a class="appgame-leftside-search" data-cmd="search" title="search"  href="javascript:void(0);" onclick="opens('id')">search</a> --> <!--<div class="searchs" id="id">
+	         <form name="dataForm" action="/cms/search/searchResults.jsp" target="_blank" method="post" accept-Charset="utf-8"  onsubmit="document.charset='utf-8';">
+			        	<p>
+			        		<input name="siteID" size="4" value="127" type = "hidden">
+			        		<input type="text" name="query" id="search" class="searchInput" value="输入搜索词">
+			        		<button type="submit"></button>
+			        	</p>
+			        	</form>
+			        </div>-->
+			        <!-- <a class="appgame-leftside-weixin" data-cmd="weixin" title="">微信</a> -->
+                    
+			        <!-- <a class="appgame-leftside-qzone" data-cmd="qzone" title="">qq空间</a>
+			        
+			        <a class="appgame-leftside-tsina" data-cmd="tsina" title="">微博</a> -->			    </div>
+			        <a class="appgame-leftside-top" onclick="gotoTPoint()"></a>			</div>
+			        
+		</div>
+</body>
+<script src="http://gh.bnu.edu.cn/js/jquery-1.9.0.min.js"></script>
+<script src="http://gh.bnu.edu.cn/js/share.min.js"></script>
+<script>
+    var dj=document.getElementById('dianji');
+    var jjc=document.getElementById('jjc');
+    var dj1=document.getElementById('dianji1');
+    var jjc1=document.getElementById('jjc1');
+    var a=1;
+    function zhedie(m,n){
+        m.onclick=function(){
+            if(a==1){
+                n.className='jjc';
+                m.className='dianji1'
+                a=0;
+            }else{
+                n.className='jjc1';
+                m.className='dianji'
+                a=1;
+            }
+        }
+    }
+    zhedie(dj,jjc);
+    zhedie(dj1,jjc1);
+	
+	
+</script>
+<script>
+
+	
+	
+    
+
+    /*回到顶部*/
+	$(function(){
+	 	$(window).resize(function(){
+						var h = $(window).height();
+						$('.goTop').css('top',h-60);
+						$(window).scroll(function(){				
+							var scrollTop = $(document).scrollTop();					  
+							$('.goTop').stop().animate({
+								top: h + scrollTop-60
+							},300);
+						});
+		}).resize();
+		});
+	//gotop
+
+			$('.goTop').click(function(){
+
+				$('body,html').stop().animate({scrollTop:0});
+
+				return false;
+
+			});
+	
+	function gotoTPoint(){
+		$("html,body").animate({scrollTop:0},500);
+	}
+</script>
+</html>

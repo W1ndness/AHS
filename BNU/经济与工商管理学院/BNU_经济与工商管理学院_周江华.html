@@ -1,0 +1,495 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0">
+    <title>北京师范大学工商与经济管理学院</title>
+    <link rel="stylesheet" href="http://bs.bnu.edu.cn/new-ver-css/reset.css">
+    <link rel="stylesheet" href="http://bs.bnu.edu.cn/new-ver-css/index.css">
+	<link rel="stylesheet" href="http://bs.bnu.edu.cn/new-ver-css/xyslist.css">
+	<link rel="stylesheet" href="http://bs.bnu.edu.cn/new-ver-css/xys-tf.css">
+    <style>
+        .container{
+            width:100%;
+            height: auto;
+            overflow: hidden;
+        }
+        .header{
+            width:100%;
+            height:116px;
+            background:#EFF8FF;
+        }
+        .logo1{
+            width:1200px!important;
+            margin:0 auto;
+            position:relative;
+            float: none;
+			display:block;
+        }
+        .logo2{
+            float:right;
+        }
+        .logo1 p{
+            position:absolute;
+            top:5px;
+            right:5px;
+            font-size:13px;
+        }
+        .logo1 p:hover{
+            color:#112769;
+        }
+        .tu{
+            width:100%;
+            height:240px;
+            background:url('http://bs.bnu.edu.cn/newweb/grzy/images/tu.jpg') no-repeat top center;
+            background-size: 100%;
+        }
+        .lujing{
+            width:1200px;
+            height:58px;
+            margin:0 auto;
+            border-bottom:1px solid #aaa;
+            overflow:hidden;
+        }
+        .lujings{
+            margin:24px 0 0 0;
+            font-size:14px;
+        }
+        .content{
+            color:#333;
+            width:1200px;
+/*            height:2000px;*/
+            margin:0 auto;
+            margin-top:40px;
+/*            background:#c4c4c4;*/
+        }
+        
+        .xian{
+            width:100%;
+            height:8px;
+            background:#9A0812;
+        }
+        
+        .leftc{
+            float:left;
+        }
+        .rightc{
+            float:left;
+            margin-left:50px;
+/*            background:#666;*/
+            width:880px;
+/*            height:1000px;*/
+        }
+        .rheader{
+            width:880px;
+            height:210px;
+/*            background:yellow;*/
+        }
+        .xm{
+            font-size:30px;
+            height:40px;
+/*            border-bottom:4px solid #9A0812;*/
+            width:auto;
+            float:left;
+            line-height:40px;
+			margin-right:30px;
+        }
+        .zhiw{
+            font-size:18px;
+            height:40px;
+            line-height:50px;
+            margin-bottom:30px;
+        }
+        .tel{
+                font-size: 16px;
+                margin-top: 10px;
+                line-height: 20px;
+        }
+        .grjj{
+/*            height:300px;*/
+            width:880px;
+/*            background:yellow;*/
+            padding-bottom:40px;
+        }
+        .jjh{
+                font-size: 20px;
+                border-bottom: 1px solid #cecece;
+                height: 40px;
+                line-height: 40px;
+                padding-left: 30px;
+                background: url(http://bs.bnu.edu.cn/newweb/grzy/images/zw.png) no-repeat 0 16px;
+        }
+        
+        .jjc{
+            font-size:14px;
+            margin-top:30px;
+           
+            line-height:28px;
+            overflow:hidden;
+            text-align: justify;
+            text-justify:inter-ideograph;
+        }
+        .jjc1{
+            height:225px;
+            font-size:14px;
+            margin-top:30px;
+            
+            line-height:28px;
+            overflow:hidden;
+            text-align: justify;
+            text-justify:inter-ideograph;
+        }
+        
+        .dianji1{
+                background: url(http://bs.bnu.edu.cn/newweb/grzy/images/zw.png) no-repeat 0 -50px;
+                width: 13px;
+                height: 13px;
+                cursor: pointer;
+                display: block;
+            margin-top: 20px;
+            transition: all .2s linear;
+        }
+        .dianji1:hover{
+            background: url(http://bs.bnu.edu.cn/newweb/grzy/images/zw.png) no-repeat 0 -64px;
+        }
+        
+        .dianji{
+                background: url(http://bs.bnu.edu.cn/newweb/grzy/images/zw.png) no-repeat 0 -24px;
+                height: 13px;
+                cursor: pointer;
+                display: block;
+            margin-top: 20px;
+            transition: all .2s linear;
+        }
+        .dianji:hover{
+            background: url(http://bs.bnu.edu.cn/newweb/grzy/images/zw.png) no-repeat 0 -37px;
+        }
+        #jjc1{
+            text-indent:0em;
+        }
+        
+        .bks{
+            font-size:14px;
+            font-weight: 800;
+            margin-top:30px;
+            height:auto;
+            line-height:36px;
+        }
+        .bks1{
+            font-size:14px;
+            margin-top:30px;
+            height:auto;
+            line-height:36px;
+        }
+        .bksc{
+            height:36px;
+            line-height:36px;
+            font-size:14px;
+        }
+        
+        .yanzheng{
+            width:1200px;
+            height:100px;
+            margin:0 auto;
+        }
+        .yanzheng img{
+            display:block;
+            margin-top:26px;
+            float:left;
+        }
+		
+#appgame-leftside-share{width:42px; height:216px; position: fixed;bottom: 30px;right: 30px; z-index:9999;}
+.appgame-leftside-share{width:42px; height:259px;}
+#appgame-leftside-share a{display:block; width:42px; height:44px; background-color:#e6e6e6; z-index:1; position:absolute; left:0; box-sizing:border-box; -moz-box-sizing:border-box; border:1px #ddd solid; background-image:url(http://gh.bnu.edu.cn/images/share-icons.png); background-repeat:no-repeat; margin:0;  transition:0.4s; -webkit-transition:0.4s; -moz-transition:0.4s;}
+#appgame-leftside-share a:hover{background-color:#fff; border:1px #eee solid; z-index:2;}
+/*.appgame-leftside-weixin{top:0; background-position:-88px 0;}
+.appgame-leftside-weixin:hover{background-position:0px 0;}
+.appgame-leftside-qzone{top:43px; background-position:-88px -44px;}
+.appgame-leftside-qzone:hover{background-position:0px -44px;}*/
+.appgame-leftside-search{top:86px; background-position:-93px -89px;}
+.appgame-leftside-search:hover{background-position:-5px -86px;}
+.appgame-leftside-weixin{top:129px; background-position:-88px 0px;}
+.appgame-leftside-weixin:hover{background-position:0px 0px;}
+/*.appgame-leftside-fbook{top:172px; background-position:-88px -176px;}
+.appgame-leftside-fbook:hover{background-position:0px -176px;}
+.appgame-leftside-twi{top:215px; background-position:-88px -220px;}
+.appgame-leftside-twi:hover{background-position:0px -220px;}*/
+#appgame-leftside-share .appgame-leftside-top{background-image:url(http://gh.bnu.edu.cn/images/leftnav-off.png); background-position:-1px -395px; top:130px; cursor:pointer;}
+
+.rwt_share {
+/*	overflow:hidden;*/
+	float:left;
+	position:relative;
+}
+.rwt_share a {
+	display:inline-block;
+	margin-right:10px;
+	text-indent:-9999px;
+	margin-bottom:10px;
+	width:24px;
+	height:24px;
+	overflow:hidden;
+	cursor:pointer;
+	float:left;
+	font-size:12px;
+}
+.rwts_weixin {
+	background-position:0 -1612px;
+}
+.rwts_tsina {
+	background-position:0 -104px;
+}
+.rwts_tqq {
+	background-position:0 -260px;
+}
+.rwts_qzone {
+	background-position:0 -52px;
+}
+.rwts_sqq {
+	background-position:0 -2652px;
+}
+.rwts_tieba {
+	background-position:0 -728px;
+}
+.rwts_renren {
+	background-position:0 -208px;
+}
+.rwts_kaixin001 {
+	background-position:0 -312px;
+}
+.rwts_tqf {
+	background-position:0 -364px;
+}
+.rwts_douban {
+	background-position:0 -468px;
+}
+.rwts_twi {
+	background-position:0 -1404px;
+}
+.rwts_fbook {
+	background-position:0 -1352px;
+}
+.rwts_ty {
+	background-position:0 -1196px;
+}
+.rwts_mogujie {
+	background-position:0 -1768px;
+}
+.rwts_meilishuo {
+	background-position:0 -1716px;
+}
+.rwts_huaban {
+	background-position:0 -1872px;
+}
+.rwts_hi {
+	background-position:0 -416px;
+}
+.rwts_tsohu {
+	background-position:0 -520px;
+}
+.rwts_more {
+	background-position:0 0;
+}
+.rwt_share_wxShow_code>img {
+	width:100%;
+}
+.bks1 li{
+	list-style:disc;
+}
+@media screen and (max-width: 1200px){
+	.logo1{
+		width:100%!important;
+	}
+	.leftc img{
+		width:50%!important;
+		height:50%!important;
+	}
+	.logo2{display:none;}
+	.lujing{
+		width:90%;
+	}
+	.content{
+		width:90%;
+	}
+	.leftc{
+		float:none;
+		
+	}
+	.tu{display:none;}
+	
+	.rightc{
+		float:none;
+		width:100%;
+		margin-left:0px;
+	}
+	.footers{width:100%;}
+	.rheader{width:100%;}
+	.grjj{width:100%;}
+}
+@media screen and (max-width: 600px){
+.l3{width:95%;}
+.share{display:none;}
+.leftc img{
+		width:70%!important;
+		height:70%!important;
+	}
+}
+  
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo1">
+                <img src="http://bs.bnu.edu.cn/newweb/grzy/images/logo.png" alt="" class="l3" style="margin-top: 25px;float:left;">
+                <img src="http://bs.bnu.edu.cn/newweb/grzy/images/logo2.png" alt="" class="logo2">
+                <a href="http://bs.bnu.edu.cn/englishversion/facultyresearch/fulltimefaculty/azmsy/119292.html"><p>ENGLISH VERSION</p></a>
+            </div>
+        </div>
+        <div class="xian"></div>
+        <div class="tu"></div>
+        <div class="lujing">
+            <div class="lujings">
+                <a href="#">师资队伍</a>
+                 | 
+                <a href="#">企业管理系</a>
+            </div>
+        </div>
+        <div class="content">
+            <div class="leftc">
+                <img src="/Public/upload/touxiang/11112013087.jpg" alt="" width="270">
+            </div>
+            <div class="rightc">
+                <div class="rheader">
+                    <p class="xm">周江华</p>
+                    <p class="zhiw">副教授，博士生导师</p>
+                    <p class="tel"><strong style="display:block;width:100px;float:left;">电话</strong>：010-58803089</p> 
+                 <p class="tel"><strong style="display:block;width:100px;float:left;">E-mail</strong>：zhoujh@bnu.edu.cn</p>
+                 <p class="tel"><strong style="display:block;width:100px;float:left;">Office hour</strong>：</p>
+                 <p class="tel"><strong style="display:block;width:100px;float:left;">系所中心</strong>：企业管理系</p>
+              </div>
+			  <div class="grjj">
+                    <p class="jjh">个人简历</p>
+                    <div class="bks1" id="jjc"><div style="top: 0px;">﻿﻿<span style="font-family: " microsoft="" yahei="" font-size:="" 16px="">清华大学经济管理学院博士，中国科学院大学博士后。北京师范大学经济与工商管理学院副教授，案例研究中心主任，MBA中心副主任。主要研究方向为创新管理、战略管理、创业管理。</span></div><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei';font-size:16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">主持国家自然科学基金等多项基金课题。在国际知名SSCI期刊、国内权威期刊发表多篇论文。担任多个知名SSCI期刊匿名审稿人。</p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei';font-size:16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">美国管理学会（AOM）、战略管理学会（SMS）和中国管理研究国际学会（IACMR）会员。研究成果获2018和2019IEEE-ISIE年会优秀论文、第十四、十五和十六届中国科技政策与管理学术年会优秀论文、第十五届中国技术管理学术年会优秀论文、领跑者5000项目等。</p></div>
+                    
+                </div>				<div class="grjj">
+                    <p class="jjh">研究领域</p>
+                    <div class="bks1"><div style="top: 0px;">﻿﻿战略管理、创新管理、创业管理、企业数字化转型</div></div>
+                </div>				<div class="grjj">
+                    <p class="jjh">研究成果</p>
+                    <div class="bks1" id="jjc1"><div style="top: 0px;">﻿﻿<span style=" font-family: " microsoft="" yahei="" font-size:="" 16px=""><strong>已发表（录用）杂志论文</strong></span></div><ol class=" list-paddingleft-2" style="margin: 0px; width: 1148.35px; color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; padding-left: 30px; font-family: " microsoft="" yahei="" font-size:="" 16px="" font-style:="" normal="" word-spacing:="" 0px="" list-style-type:="" decimal="" white-space:="" orphans:="" 2="" widows:="" font-variant-ligatures:="" font-variant-caps:="" -webkit-text-stroke-width:="" text-decoration-style:="" initial="" text-decoration-color:=""><li style="clear: both;"><p style=""><span style="font-family: " times="" new="" roman=""><span style="font-size: 10.5pt; font-family: " times="" new="" roman="" serif=""><strong>Zhou Jianghua,</strong></span><span style="font-size: 10.5pt; font-family: " times="" new="" roman="" serif=""> Liu Chenrui, XingXiaoqiang, Li Jizhen, How can Digital Technology-Related Acquisitions Affect a Firm's Innovation Performance?, International Journal of Technology Management(SSCI), 2021 (accepted).</span><br /></span></p></li><li style="font-weight: 400; clear: both;"><p><strong><span style="font-family: 'times new roman';">Zhou Jianghua,<span>&nbsp;</span></span></strong><span style="font-family: 'times new roman';">Liu Zixu, Li Jizhen, Zhang Gupeng, Foreign Equity, Exporting and Firm Innovation, Journal of Technology Transfer (SSCI, ABS 3星, IF 4.342), 2020, <span style="font-size:10.5pt;font-family:'Times New Roman',serif;">46(3): 606-628.</span>.</span></p></li><li style="font-weight: 400; clear: both;"><p style="line-height: 1.5em; text-indent: 0px;"><span style="font-family: 'times new roman'; font-size: 16px;"><strong><span style="line-height: 20px; font-family: 'times new roman';">Zhou Jianghua</span></strong><span style="line-height: 20px; font-family: 'times new roman';">, Liu Zixu, Li Jizhen, Zhang Gupeng, The Effects of Collaboration with Different Partners: A Contingency Model</span>, IEEE Transaction on Engineering Management<br /> (SSCI, ABS 3<span style="line-height: 20px; font-family: 'times new roman';">星)，2021,&nbsp;<span style="font-size: 10.5pt; font-family: " times="" new="" roman="" serif="">Volume: 68,</span><span style="font-size: 10.5pt; font-family: " times="" new="" roman="" serif="">&nbsp;Issue: 6, 1546-1557</span><span style="line-height: 20px; font-family: 宋体, SimSun;">.本文荣获2018年IEEE TEM年会优秀论文.</span></span></span></p></li><li style="font-weight: 400; clear: both;"><p><span style="font-size: 16px; font-family: " times="" new="" roman="" serif="">Li Jizhen, Liu Zixu,<span>&nbsp;</span><strong>Zhou Jianghua (</strong></span><span style="font-size: 16px; "><strong><span style="font-family: 宋体;">通讯作者</span><span style="font-family: 'Times New Roman', serif;">),</span></strong></span><span style="font-family: " times="" new="" roman="" serif=""><span style="font-size: 16px;">&nbsp;How to become the chosen one in the artificial intelligence market: The evidence from China, International Journal of Technology Management (SSCI), 2020,</span><span style="font-size:10px;"> <span style="font-family: " timesnewroman="" italic="" serif="">Vol.84, Nos. 1/2,</span><span style="font-family: " times="" new="" roman="" serif=""> 8-2</span><span style="font-family: " times="" new="" roman="" serif="">4</span>.</span></span><br /></p></li><li style="font-weight: 400; clear: both;"><p><span style="line-height: 20px; font-family: 'times new roman'; font-size: 16px;">Guo Jingjing, Guo Bin,<span>&nbsp;</span><strong>Zhou Jianghua</strong>, Wu Xiaobo, How does the ambidexterity of technological learning routine affect firm innovation performance within industrial clusters? The moderating effects of knowledge attributes, Technological Forecasting and Social Change (SSCI, ABS 3</span><span style="line-height: 20px; font-family: 宋体; font-size: 16px;">星</span><span style="line-height: 20px; font-family: 'times new roman'; font-size: 16px;">), 2020, Vol 155.</span><br /></p></li><li style="font-weight: 400; clear: both;"><p style="line-height: 1.5em; text-indent: 0px;"><span style="font-family: 'times new roman'; font-size: 16px;"><span style="line-height: 20px; font-family: 宋体;">孙忠娟，刘晨蕊，<strong>周江华</strong>，李纪珍，科技资助影响企业创新的资源门槛，科学学与科学技术管理，</span><span style="line-height: 20px; font-family: 'times new roman';">2020</span><span style="line-height: 20px; font-family: 宋体;">（</span><span style="line-height: 20px; font-family: 'times new roman';">2</span><span style="line-height: 20px; font-family: 宋体;">）。本文荣获第</span><span style="line-height: 20px; font-family: 'times new roman';">15</span><span style="line-height: 20px; font-family: 宋体;">届科技政策年会优秀论文。</span></span></p></li><li style="font-weight: 400; clear: both;"><p style="line-height: 1.5em; text-indent: 0px;"><span style="font-family: 'times new roman'; font-size: 16px;"><strong><span style="line-height: 20px; font-family: 'times new roman';">Zhou Jianghua</span></strong><span style="line-height: 20px; font-family: 宋体;">、</span><span style="line-height: 20px; font-family: 'times new roman';">Li Jizhen</span><span style="line-height: 20px; font-family: 宋体;">、</span><span style="line-height: 20px; font-family: 'times new roman';">Jiaohao</span><span style="line-height: 20px; font-family: 宋体;">、</span><span style="line-height: 20px; font-family: 'times new roman';">Qiu Hang</span><span style="line-height: 20px; font-family: 宋体;">、</span><span style="line-height: 20px; font-family: 'times new roman';">Liu Zixu. The more funding the better? The moderating role of knowledge stock on the effects of different government-funded research projects on firm innovation in Chinese cultural and creative industries. Technovation (SSCI, ABS 3</span><span style="line-height: 20px; font-family: 宋体;">星</span><span style="line-height: 20px; font-family: 'times new roman';">, Impact factor: 6.6), 2020, 92-93,&nbsp;<span lang="EN-US" style="font-size: 10.5pt; font-family: " times="" new="" roman="" serif="">102059, 1-13.</span><br /></span><span style="line-height: 20px; font-family: 'times new roman';"></span></span></p></li><li style="font-weight: 400; clear: both;"><p style="line-height: 1.5em;"><span style="font-family: 'times new roman'; font-size: 16px;"><strong><span style="line-height: 20px; font-family: 'times new roman'; font-size: 16px;">Zhou Jianghua,<span>&nbsp;</span></span></strong><span style="line-height: 20px; font-family: 'times new roman'; font-size: 16px;">Wu Rui, Li Jizhen, More Ties the Merrier? Different Social Ties and Firm Innovation Performance, Asia Pacific Journal of Management (SSCI, ABS 3</span><span style="line-height: 20px; font-family: 宋体; font-size: 16px;">星</span><span style="line-height: 20px; font-family: 'times new roman'; font-size: 16px;">) , 2019, 36: 445-471 .</span></span></p></li><li style="font-weight: 400; clear: both;"><p style="line-height: 1.5em;"><span style="line-height: 20px; font-family: 'times new roman'; font-size: 16px;">Jiaohao, Yang Jifeng,<span>&nbsp;</span><strong>Zhou Jianghua,<span>&nbsp;</span></strong>Li Jizhen, Commercial Partnership and Collaborative Innovation in the Chinese High-tech Industry: The Moderating Effect of Technological Uncertainty and Dynamic Capabilities,<span>&nbsp;</span><em>Journal of Knowledge Management (SSCI),<span>&nbsp;</span></em>2019, 9.</span></p></li><li style="font-weight: 400; clear: both;"><p style="line-height: 1.5em;"><span style="line-height: 20px; font-family: 宋体, SimSun; font-size: 16px;">李纪珍，<strong>周江华（通讯作者）</strong>，谷海洁<strong>，</strong>女性创业者合法性的构建、困境与重塑，管理世界，2019（6）：142-160。</span></p></li><li style="font-weight: 400; clear: both;"><p style="line-height: 1.5em;"><span style="font-family: 宋体, SimSun; font-size: 16px;"><strong><span style="line-height: 20px; font-family: 宋体; font-size: 16px;">周江华，</span></strong><span style="line-height: 20px; font-family: 宋体; font-size: 16px;">李纪珍，李碧清，刘子諝，合作与企业国际化创新</span><span style="line-height: 20px; font-family: 'times new roman'; font-size: 16px;">:</span><span style="line-height: 20px; font-family: 宋体; font-size: 16px;">政府参与的调节作用，科研管理（</span><span style="line-height: 20px; font-family: 'times new roman'; font-size: 16px;">CSSCI</span><span style="line-height: 20px; font-family: 宋体; font-size: 16px;">，国家自然科学基金委员会认定</span><span style="line-height: 20px; font-family: 'times new roman'; font-size: 16px;">A</span><span style="line-height: 20px; font-family: 宋体; font-size: 16px;">类期刊），</span><span style="line-height: 20px; font-family: 'times new roman'; font-size: 16px;">2018.5</span><span style="line-height: 20px; font-family: 宋体; font-size: 16px;">。（该论文荣获第十四届中国科技政策与管理学术年会优秀论文）</span></span></p></li><li style="font-weight: 400; clear: both;"><p style="line-height: 1.5em; text-indent: 0px;"><span style="font-family: 宋体, SimSun; font-size: 16px;"><strong><span style="line-height: 20px; font-family: 宋体;">周江华</span></strong><span style="line-height: 20px; font-family: 宋体;">，刘一凡，李纪珍，研发部门与市场部门竞合关系对企业创新绩效的影响，科学学研究（</span><span style="line-height: 20px; font-family: 'times new roman';">CSSCI</span><span style="line-height: 20px; font-family: 宋体;">，国家自然科学基金委员会认定</span><span style="line-height: 20px; font-family: 'times new roman';">A</span><span style="line-height: 20px; font-family: 宋体;">类期刊），</span><span style="line-height: 20px; font-family: 'times new roman';">2019.4</span><span style="line-height: 20px; font-family: 宋体;">。</span></span></p></li><li style="font-weight: 400; clear: both;"><p style="line-height: 1.5em; text-indent: 0px;"><span style="line-height: 20px; font-family: 宋体, SimSun; font-size: 16px;">刘子諝，<strong>周江华</strong>，李纪珍，<a></a><a><span style="color:#000000;">过犹不及：财政补贴对企业创新的多重作用机制分析</span></a>，科学学与科学技术管理</span><span style="font-size: 16px;"><span style="line-height: 20px; font-family: 宋体, SimSun;">（</span><span style="font-family: 宋体, SimSun;"><span style="line-height: 20px; font-family: 'times new roman';">CSSCI</span><span style="line-height: 20px; font-family: 宋体;">，国家自然科学基金委员会认定</span><span style="line-height: 20px; font-family: 'times new roman';">B</span><span style="line-height: 20px; font-family: 宋体;">类期刊），</span><span style="line-height: 20px; font-family: 'times new roman';">2019.1</span><span style="line-height: 20px; font-family: 宋体;">。（该论文荣获第十五届中国科技政策与管理学术年会优秀论文、第十五届中国技术管理学术年会优秀论文）</span></span></span></p></li><li style="font-weight: 400; clear: both;"><p style="line-height: 1.5em; text-indent: 0px;"><span style="font-family: 宋体, SimSun; font-size: 16px;"><span style="line-height: 20px; font-family: 宋体;">李纪珍</span><span style="line-height: 20px; font-family: 'times new roman';">,<span>&nbsp;</span></span><strong><span style="line-height: 20px; font-family: 宋体;">周江华</span></strong><span style="line-height: 20px; font-family: 'times new roman';">,<span>&nbsp;</span></span><span style="line-height: 20px; font-family: 宋体;">赫运涛</span><span style="line-height: 20px; font-family: 'times new roman';">, &amp;<span>&nbsp;</span></span><span style="line-height: 20px; font-family: 宋体;">江东谦</span><span style="line-height: 20px; font-family: 'times new roman';">. 2018.<span>&nbsp;</span></span><span style="line-height: 20px; font-family: 宋体;">从创新资金的供给面政策到创新券的需求面政策</span><span style="line-height: 20px; font-family: 'times new roman';">:<span>&nbsp;</span></span><span style="line-height: 20px; font-family: 宋体;">基于北京科技型中小企业的实证研究</span><span style="line-height: 20px; font-family: 'times new roman';">.<span>&nbsp;</span></span><span style="line-height: 20px; font-family: 宋体;">技术经济，</span><span style="line-height: 20px; font-family: 'times new roman';">2018</span><span style="line-height: 20px; font-family: 宋体;">（</span><span style="line-height: 20px; font-family: 'times new roman';">06</span><span style="line-height: 20px; font-family: 宋体;">）</span><span style="line-height: 20px; font-family: 'times new roman';">: 25-33,119.</span></span></p></li><li style="font-weight: 400; clear: both;"><p style="line-height: 1.5em; text-indent: 0px;"><span style="font-family: 宋体, SimSun; font-size: 16px;"><span style="line-height: 20px; font-family: 宋体;">程鹏</span><span style="line-height: 20px; font-family: 'times new roman';">,<span>&nbsp;</span></span><span style="line-height: 20px; font-family: 宋体;">柳卸林</span><span style="line-height: 20px; font-family: 'times new roman';">,<span>&nbsp;</span></span><span style="line-height: 20px; font-family: 宋体;">李洋</span><span style="line-height: 20px; font-family: 'times new roman';">, &amp;<span>&nbsp;</span></span><strong><span style="line-height: 20px; font-family: 宋体;">周江华</span></strong><span style="line-height: 20px; font-family: 'times new roman';">. 2018.<span>&nbsp;</span></span><span style="line-height: 20px; font-family: 宋体;">本土需求情景下破坏性创新的形成机理研究</span><span style="line-height: 20px; font-family: 'times new roman';">.<span>&nbsp;</span></span><span style="line-height: 20px; font-family: 宋体;">管理科学（</span><span style="line-height: 20px; font-family: 'times new roman';">CSSCI</span><span style="line-height: 20px; font-family: 宋体;">，国家自然科学基金委员会认定</span><span style="line-height: 20px; font-family: 'times new roman';">A</span><span style="line-height: 20px; font-family: 宋体;">类期刊），</span><span style="line-height: 20px; font-family: 'times new roman';">2018</span><span style="line-height: 20px; font-family: 宋体;">（</span><span style="line-height: 20px; font-family: 'times new roman';">02</span><span style="line-height: 20px; font-family: 宋体;">）</span><span style="line-height: 20px; font-family: 'times new roman';">: 33-44</span></span></p></li><li style="font-weight: 400; clear: both;"><p style="line-height: 1.5em;"><span style="font-family: 'times new roman'; font-size: 16px;"><strong><span style="line-height: 20px; font-family: 'times new roman'; font-size: 16px;">Zhou Jianghua</span></strong><span style="line-height: 20px; font-family: 宋体; font-size: 16px;">，</span><span style="line-height: 20px; font-family: 'times new roman'; font-size: 16px;">Jiao Hao</span><span style="line-height: 20px; font-family: 宋体; font-size: 16px;">，</span><span style="line-height: 20px; font-family: 'times new roman'; font-size: 16px;">Li Jizhen</span><span style="line-height: 20px; font-family: 宋体; font-size: 16px;">，</span><span style="line-height: 20px; font-family: 'times new roman'; font-size: 16px;">Providing Appropriate Technology for Emerging Markets: Case Study on China’s Solar Thermal Industry</span><span style="line-height: 20px; font-family: 宋体; font-size: 16px;">，</span><strong><span style="line-height: 20px; font-family: 'times new roman'; font-size: 16px;">Sustainability (SSCI)</span></strong><span style="line-height: 20px; font-family: 宋体; font-size: 16px;">，</span><span style="line-height: 20px; font-family: 'times new roman'; font-size: 16px;">2017.02.05</span><span style="line-height: 20px; font-family: 宋体; font-size: 16px;">，</span><span style="line-height: 20px; font-family: 'times new roman'; font-size: 16px;">9</span><span style="line-height: 20px; font-family: 宋体; font-size: 16px;">（</span><span style="line-height: 20px; font-family: 'times new roman'; font-size: 16px;">2</span><span style="line-height: 20px; font-family: 宋体; font-size: 16px;">）：</span><span style="line-height: 20px; font-family: 'times new roman'; font-size: 16px;">178.</span></span></p></li><li style="font-weight: 400; clear: both;"><p style="line-height: 1.5em;"><span style="font-family: 'times new roman'; font-size: 16px;"><span style="line-height: 20px; font-family: 'times new roman'; font-size: 16px;">Jiao Hao</span><span style="line-height: 20px; font-family: 宋体; font-size: 16px;">，</span><strong><span style="line-height: 20px; font-family: 'times new roman'; font-size: 16px;">Zhou Jianghua</span><span style="line-height: 20px; font-family: 宋体; font-size: 16px;">（通讯作者）</span></strong><span style="line-height: 20px; font-family: 宋体; font-size: 16px;">，</span><span style="line-height: 20px; font-family: 'times new roman'; font-size: 16px;">Gao Taishan</span><span style="line-height: 20px; font-family: 宋体; font-size: 16px;">，</span><span style="line-height: 20px; font-family: 'times new roman'; font-size: 16px;">Liu Xielin</span><span style="line-height: 20px; font-family: 宋体; font-size: 16px;">，</span><span style="line-height: 20px; font-family: 'times new roman'; font-size: 16px;">The more<sup><span>&nbsp;</span></sup>interactions the better? The moderating effect of the interaction between local<sup><span>&nbsp;</span></sup>producers and users of knowledge on the relationship between R&amp;D investment and<sup><span>&nbsp;</span></sup>regional innovation systems</span><span style="line-height: 20px; font-family: 宋体; font-size: 16px;">，</span><span style="line-height: 20px; font-family: 'times new roman'; font-size: 16px;">Technological Forecasting and Social<sup><span>&nbsp;</span></sup>Change<strong><span>&nbsp;</span>(</strong>SSCI, ABS 3</span><span style="line-height: 20px; font-family: 宋体; font-size: 16px;">星</span><strong><span style="line-height: 20px; font-family: 'times new roman'; font-size: 16px;">)</span></strong><span style="line-height: 20px; font-family: 宋体; font-size: 16px;">，</span><span style="line-height: 20px; font-family: 'times new roman'; font-size: 16px;">2016.9.01</span><span style="line-height: 20px; font-family: 宋体; font-size: 16px;">，</span><span style="line-height: 20px; font-family: 'times new roman'; font-size: 16px;">110</span><span style="line-height: 20px; font-family: 宋体; font-size: 16px;">：</span><span style="line-height: 20px; font-family: 'times new roman'; font-size: 16px;">13~20.</span></span></p></li><li style="font-weight: 400; clear: both;"><p style="line-height: 1.5em;"><span style="font-family: 'times new roman'; font-size: 16px;"><span style="line-height: 20px; font-family: 'times new roman'; font-size: 16px;">Zhang Gupeng</span><span style="line-height: 20px; font-family: 宋体; font-size: 16px;">，</span><strong><span style="line-height: 20px; font-family: 'times new roman'; font-size: 16px;">Zhou Jianghua</span></strong><span style="line-height: 20px; font-family: 宋体; font-size: 16px;">，</span><span style="line-height: 20px; font-family: 'times new roman'; font-size: 16px;">The effects of forward and reverse<sup><span>&nbsp;</span></sup>engineering on firm innovation performance in the stages of technology<sup><span>&nbsp;</span></sup>catch-up: An empirical study of China</span><span style="line-height: 20px; font-family: 宋体; font-size: 16px;">，</span><span style="line-height: 20px; font-family: 'times new roman'; font-size: 16px;">Technological Forecasting and Social<sup><span>&nbsp;</span></sup>Change<strong><span>&nbsp;</span>(SSCI, ABS 3</strong></span><strong><span style="line-height: 20px; font-family: 宋体; font-size: 16px;">星</span><span style="line-height: 20px; font-family: 'times new roman'; font-size: 16px;">)</span></strong><span style="line-height: 20px; font-family: 宋体; font-size: 16px;">，</span><span style="line-height: 20px; font-family: 'times new roman'; font-size: 16px;">2016.1.21</span><span style="line-height: 20px; font-family: 宋体; font-size: 16px;">，</span><span style="line-height: 20px; font-family: 'times new roman'; font-size: 16px;">104</span><span style="line-height: 20px; font-family: 宋体; font-size: 16px;">，</span><span style="line-height: 20px; font-family: 'times new roman'; font-size: 16px;">212-222.</span></span></p></li><li style="font-weight: 400; clear: both;"><p style="line-height: 1.5em;"><span style="font-family: 'times new roman'; font-size: 16px;"><span style="line-height: 20px; font-family: 'times new roman'; font-size: 16px;">Zhang Gupeng</span><span style="line-height: 20px; font-family: 宋体; font-size: 16px;">，</span><span style="line-height: 20px; font-family: 'times new roman'; font-size: 16px;">Duan Hongbo</span><span style="line-height: 20px; font-family: 宋体; font-size: 16px;">，</span><strong><span style="line-height: 20px; font-family: 'times new roman'; font-size: 16px;">Zhou Jianghua</span><span style="line-height: 20px; font-family: 宋体; font-size: 16px;">（通讯作者）</span></strong><span style="line-height: 20px; font-family: 宋体; font-size: 16px;">，</span><span style="line-height: 20px; font-family: 'times new roman'; font-size: 16px;">Small worldliness, Chinese<sup><span>&nbsp;</span></sup>culture, and firm innovation performance: an empirical study based on patent<sup><span>&nbsp;</span></sup>collaboration data of China</span><span style="line-height: 20px; font-family: 宋体; font-size: 16px;">，</span><span style="line-height: 20px; font-family: 'times new roman'; font-size: 16px;">Asian Journal of Technology<sup><span>&nbsp;</span></sup>Innovation<span>&nbsp;</span><strong>(SSCI)</strong></span><span style="line-height: 20px; font-family: 宋体; font-size: 16px;">，</span><span style="line-height: 20px; font-family: 'times new roman'; font-size: 16px;">2015.4.1</span><span style="line-height: 20px; font-family: 宋体; font-size: 16px;">，</span><span style="line-height: 20px; font-family: 'times new roman'; font-size: 16px;">23</span><span style="line-height: 20px; font-family: 宋体; font-size: 16px;">（</span><span style="line-height: 20px; font-family: 'times new roman'; font-size: 16px;">2</span><span style="line-height: 20px; font-family: 宋体; font-size: 16px;">）：</span><span style="line-height: 20px; font-family: 'times new roman'; font-size: 16px;">189~204</span></span></p></li><li style="font-weight: 400; clear: both;"><p style="line-height: 1.5em; text-indent: 0px;"><span style="line-height: 20px; font-family: 'times new roman'; font-size: 16px;">Jiao, H., Wang, Y., Xiao, H.,<strong><span>&nbsp;</span>Zhou, Jianghua</strong><span>&nbsp;</span>&amp; Zeng, W. 2017. Promoting profit model innovation in animation project in northeast Asia: Case study on Chinese cultural and creative industry. Sustainability (SSCI), 9(12): 2361.</span></p></li><li style="font-weight: 400; clear: both;"><p><span style="font-family: 'times new roman'; font-size: 16px; white-space: normal;"><span style="line-height: 20px; font-family: 宋体;">周江华</span></span><span style="line-height: 20px; font-family: 宋体; font-size: 16px;">，李纪珍，刘子諝，李子彪，政府创新政策对企业创新绩效的影响机制，技术经济（</span><span style="line-height: 20px; font-family: 'times new roman'; font-size: 16px;">CSSCI</span><span style="line-height: 20px; font-family: 宋体; font-size: 16px;">），2017.1.25，（01）：57</span><span style="line-height: 20px; font-family: 'times new roman'; font-size: 16px;">~</span><span style="line-height: 20px; font-family: 宋体; font-size: 16px;">65。</span><br /></p></li><li style="font-weight: 400; clear: both;"><p style="line-height: 1.5em;"><span style="font-family: 'times new roman'; font-size: 16px; white-space: normal;"><span style="line-height: 20px; font-family: 宋体;">周江华</span></span><span style="line-height: 20px; font-family: 宋体; font-size: 16px;">，刘子諝，邱航，知识创造企业未来，清华管理评论，2017.02.15，（Z1）：67</span><span style="line-height: 20px; font-family: 'times new roman'; font-size: 16px;">~</span><span style="line-height: 20px; font-family: 宋体; font-size: 16px;">73</span><br /></p></li><li style="font-weight: 400; clear: both;"><p><span style="font-family: 'times new roman';">Zhang Gupeng, Duan Hongbo,<strong><span>&nbsp;</span>Zhou Jianghua,</strong><span>&nbsp;</span><span style="font-family: 'Times New Roman', serif; font-size: 16px;">Investigating determinants of inter-regional technology transfer in China: a network analysis with provincial patent data,&nbsp;</span>Review of Managerial Science (SSCI)</span><br /></p></li><li style="font-weight: 400; clear: both;"><p><span style="font-family: 'times new roman';">Zhang Gupeng, Duan Hongbo,<strong><span>&nbsp;</span>Zhou Jianghua,<span>&nbsp;</span></strong>Net work stability, connectivity and innovation output, Technological Forecasting and Social Change (SSCI, ABS 3), 2016</span><br /></p></li><li style="font-weight: 400; clear: both;"><p style="line-height: 1.5em;"><span style="line-height: 20px; font-family: 宋体; font-size: 16px;">邢小强，<strong>周江华</strong>，仝允桓，包容性创新:研究综述及政策建议，科研管理（</span><span style="line-height: 20px; font-family: 'times new roman'; font-size: 16px;">CSSCI</span><span style="line-height: 20px; font-family: 宋体; font-size: 16px;">），2015.9.20，（09）：11</span><span style="line-height: 20px; font-family: 'times new roman'; font-size: 16px;">~</span><span style="line-height: 20px; font-family: 宋体; font-size: 16px;">18。</span><br /></p></li><li style="font-weight: 400; clear: both;"><p style="line-height: 1.5em;"><span style="font-family: 'times new roman'; font-size: 16px;"><span style="line-height: 20px; font-family: 宋体; font-size: 16px;">邢小强，<strong>周江华</strong>，仝允桓，面向新兴市场的节俭式创新研究，科学学与科学技术管理（</span><span style="line-height: 20px; font-family: 'times new roman'; font-size: 16px;">CSSCI</span><span style="line-height: 20px; font-family: 宋体; font-size: 16px;">），2014.11.10，（11）：69</span><span style="line-height: 20px; font-family: 'times new roman'; font-size: 16px;">~</span><span style="line-height: 20px; font-family: 宋体; font-size: 16px;">77。</span></span></p></li><li style="font-weight: 400; clear: both;"><p style="line-height: 1.5em;"><span style="font-family: 'times new roman'; font-size: 16px;"><span style="line-height: 20px; font-family: 宋体; font-size: 16px;">高太山，柳卸林，<strong>周江华</strong>，中国区域包容性创新绩效测度——理论模型与实证检验，科学学研究（</span><span style="line-height: 20px; font-family: 'times new roman'; font-size: 16px;">CSSCI</span><span style="line-height: 20px; font-family: 宋体; font-size: 16px;">），2014.04.01，（04）：613</span><span style="line-height: 20px; font-family: 'times new roman'; font-size: 16px;">~</span><span style="line-height: 20px; font-family: 宋体; font-size: 16px;">621。</span></span></p></li><li style="font-weight: 400; clear: both;"><p style="line-height: 1.5em;"><span style="font-family: 'times new roman'; font-size: 16px;"><span style="line-height: 20px; font-family: 'times new roman'; font-size: 16px;">Genia Kostka</span><span style="line-height: 20px; font-family: 宋体; font-size: 16px;">，</span><strong><span style="line-height: 20px; font-family: 'times new roman'; font-size: 16px;">Zhou Jianghua</span></strong><span style="line-height: 20px; font-family: 宋体; font-size: 16px;">，</span><span style="line-height: 20px; font-family: 'times new roman'; font-size: 16px;">Government-business alliances in state capitalist economies: evidence from low-income markets in China</span><span style="line-height: 20px; font-family: 宋体; font-size: 16px;">，</span><span style="line-height: 20px; font-family: 'times new roman'; font-size: 16px;">Business and Politics</span><span style="line-height: 20px; font-family: 宋体; font-size: 16px;">，</span><span style="line-height: 20px; font-family: 'times new roman'; font-size: 16px;">2013.06.01</span><span style="line-height: 20px; font-family: 宋体; font-size: 16px;">，</span><span style="line-height: 20px; font-family: 'times new roman'; font-size: 16px;">15</span><span style="line-height: 20px; font-family: 宋体; font-size: 16px;">（</span><span style="line-height: 20px; font-family: 'times new roman'; font-size: 16px;">2</span><span style="line-height: 20px; font-family: 宋体; font-size: 16px;">）：</span><span style="line-height: 20px; font-family: 'times new roman'; font-size: 16px;">245~274.</span></span></p></li><li style="font-weight: 400; clear: both;"><p style="line-height: 1.5em;"><span style="font-family: 'times new roman'; font-size: 16px;"><strong><span style="line-height: 20px; font-family: 宋体; font-size: 16px;">周江华，</span></strong><span style="line-height: 20px; font-family: 宋体; font-size: 16px;">仝允桓，李纪珍．基于金字塔底层（</span><span style="line-height: 20px; font-family: 'times new roman'; font-size: 16px;">BoP</span><span style="line-height: 20px; font-family: 宋体; font-size: 16px;">）市场的破坏性创新</span><span style="line-height: 20px; font-family: 'times new roman'; font-size: 16px;">—</span><span style="line-height: 20px; font-family: 宋体; font-size: 16px;">针对山寨手机行业的案例研究，管理世界，</span><span style="line-height: 20px; font-family: 'times new roman'; font-size: 16px;">2012</span><span style="line-height: 20px; font-family: 宋体; font-size: 16px;">（</span><span style="line-height: 20px; font-family: 'times new roman'; font-size: 16px;">2</span><span style="line-height: 20px; font-family: 宋体; font-size: 16px;">）：</span><span style="line-height: 20px; font-family: 'times new roman'; font-size: 16px;">112-130</span><span style="line-height: 20px; font-family: 宋体; font-size: 16px;">。</span></span></p></li><li style="font-weight: 400; clear: both;"><p style="line-height: 1.5em;"><span style="font-family: 'times new roman'; font-size: 16px;"><strong><span style="line-height: 20px; font-family: 宋体; font-size: 16px;">周江华，</span></strong><span style="line-height: 20px; font-family: 宋体; font-size: 16px;">刘宏程，仝允桓．企业网络能力对创新绩效的影响路径研究，科研管理，</span><span style="line-height: 20px; font-family: 'times new roman'; font-size: 16px;">2013</span><span style="line-height: 20px; font-family: 宋体; font-size: 16px;">。（该论文入选“精品期刊顶尖论文平台——领跑者</span><span style="line-height: 20px; font-family: 'times new roman'; font-size: 16px;">5000</span><span style="line-height: 20px; font-family: 宋体; font-size: 16px;">项目（</span><span style="line-height: 20px; font-family: 'times new roman'; font-size: 16px;">F5000</span><span style="line-height: 20px; font-family: 宋体; font-size: 16px;">）”）</span></span></p></li><li style="font-weight: 400; clear: both;"><p style="line-height: 1.5em;"><span style="font-family: 'times new roman'; font-size: 16px;"><span style="line-height: 20px; font-family: 宋体; font-size: 16px;">邢小强，周江华，仝允桓．包容性创新</span><span style="line-height: 20px; font-family: 'times new roman'; font-size: 16px;">:</span><span style="line-height: 20px; font-family: 宋体; font-size: 16px;">概念、特征与关键成功因素，科学学研究，</span><span style="line-height: 20px; font-family: 'times new roman'; font-size: 16px;">2013</span><span style="line-height: 20px; font-family: 宋体; font-size: 16px;">，（</span><span style="line-height: 20px; font-family: 'times new roman'; font-size: 16px;">06</span><span style="line-height: 20px; font-family: 宋体; font-size: 16px;">）：</span><span style="line-height: 20px; font-family: 'times new roman'; font-size: 16px;">923-931</span><span style="line-height: 20px; font-family: 宋体; font-size: 16px;">。</span></span></p></li><li style="font-weight: 400; clear: both;"><p style="line-height: 1.5em;"><span style="font-family: 'times new roman'; font-size: 16px;"><span style="line-height: 20px; font-family: 宋体; font-size: 16px;">龚丽敏，江诗松，董忆，周江华，向永胜．商业模式研究现状和流派分析：基于</span><span style="line-height: 20px; font-family: 'times new roman'; font-size: 16px;">1997-2010</span><span style="line-height: 20px; font-family: 宋体; font-size: 16px;">年</span><span style="line-height: 20px; font-family: 'times new roman'; font-size: 16px;">SSCI</span><span style="line-height: 20px; font-family: 宋体; font-size: 16px;">引用情况的文献计量研究，管理评论，</span><span style="line-height: 20px; font-family: 'times new roman'; font-size: 16px;">2013</span><span style="line-height: 20px; font-family: 宋体; font-size: 16px;">，（</span><span style="line-height: 20px; font-family: 'times new roman'; font-size: 16px;">06</span><span style="line-height: 20px; font-family: 宋体; font-size: 16px;">）：</span><span style="line-height: 20px; font-family: 'times new roman'; font-size: 16px;">131-140</span><span style="line-height: 20px; font-family: 宋体; font-size: 16px;">。</span></span></p></li><li style="font-weight: 400; clear: both;"><p style="line-height: 1.5em;"><span style="font-family: 'times new roman'; font-size: 16px;"><span style="line-height: 20px; font-family: 宋体; font-size: 16px;">邢小强，周江华，仝允桓．金字塔底层（</span><span style="line-height: 20px; font-family: 'times new roman'; font-size: 16px;">BOP</span><span style="line-height: 20px; font-family: 宋体; font-size: 16px;">）战略文献述评，财贸经济，</span><span style="line-height: 20px; font-family: 'times new roman'; font-size: 16px;">2011</span><span style="line-height: 20px; font-family: 宋体; font-size: 16px;">（</span><span style="line-height: 20px; font-family: 'times new roman'; font-size: 16px;">1</span><span style="line-height: 20px; font-family: 宋体; font-size: 16px;">）：</span><span style="line-height: 20px; font-family: 'times new roman'; font-size: 16px;">79-85</span><span style="line-height: 20px; font-family: 宋体; font-size: 16px;">。</span></span></p></li><li style="font-weight: 400; clear: both;"><p style="line-height: 1.5em;"><span style="font-family: 'times new roman'; font-size: 16px;"><span style="line-height: 20px; font-family: 宋体; font-size: 16px;">周江华，邵希．南京九康公司的包容性创新，北大商业评论，</span><span style="line-height: 20px; font-family: 'times new roman'; font-size: 16px;">2010</span><span style="line-height: 20px; font-family: 宋体; font-size: 16px;">（</span><span style="line-height: 20px; font-family: 'times new roman'; font-size: 16px;">12</span><span style="line-height: 20px; font-family: 宋体; font-size: 16px;">）：</span><span style="line-height: 20px; font-family: 'times new roman'; font-size: 16px;">94-97</span><span style="line-height: 20px; font-family: 宋体; font-size: 16px;">。</span></span></p></li><li style="font-weight: 400; clear: both;"><p style="line-height: 1.5em;"><span style="font-family: 'times new roman'; font-size: 16px;"><span style="line-height: 20px; font-family: 宋体; font-size: 16px;">焦豪，周江华．在公益领域创业——企业家的社会化潮流，北大商业评论，</span><span style="line-height: 20px; font-family: 'times new roman'; font-size: 16px;">2011</span><span style="line-height: 20px; font-family: 宋体; font-size: 16px;">（</span><span style="line-height: 20px; font-family: 'times new roman'; font-size: 16px;">1</span><span style="line-height: 20px; font-family: 宋体; font-size: 16px;">）。</span></span></p></li><li style="font-weight: 400; clear: both;"><p style="line-height: 1.5em;"><span style="font-family: 'times new roman'; font-size: 16px;"><span style="line-height: 20px; font-family: 宋体; font-size: 16px;">邢小强，周江华，仝允桓．面向金字塔底层的包容性创新系统研究，科学学与科学技术管理，</span><span style="line-height: 20px; font-family: 'times new roman'; font-size: 16px;">2010</span><span style="line-height: 20px; font-family: 宋体; font-size: 16px;">（</span><span style="line-height: 20px; font-family: 'times new roman'; font-size: 16px;">11</span><span style="line-height: 20px; font-family: 宋体; font-size: 16px;">）：</span><span style="line-height: 20px; font-family: 'times new roman'; font-size: 16px;">27-32</span><span style="line-height: 20px; font-family: 宋体; font-size: 16px;">。</span></span></p></li><li style="font-weight: 400; clear: both;"><p style="line-height: 1.5em;"><span style="font-family: 'times new roman'; font-size: 16px;"><span style="line-height: 20px; font-family: 宋体; font-size: 16px;">邢小强，周江华，仝允桓．面向低收入群体市场的创新研究，科学学研究，</span><span style="line-height: 20px; font-family: 'times new roman'; font-size: 16px;">2010</span><span style="line-height: 20px; font-family: 宋体; font-size: 16px;">（</span><span style="line-height: 20px; font-family: 'times new roman'; font-size: 16px;">10</span><span style="line-height: 20px; font-family: 宋体; font-size: 16px;">）：</span><span style="line-height: 20px; font-family: 'times new roman'; font-size: 16px;">1564-1570</span><span style="line-height: 20px; font-family: 宋体; font-size: 16px;">。</span></span></p></li><li style="font-weight: 400; clear: both;"><p style="line-height: 1.5em;"><span style="font-family: 'times new roman'; font-size: 16px;"><span style="line-height: 20px; font-family: 宋体; font-size: 16px;">周江华，仝允桓，李纪珍．企业面向低收入群体的创新模式研究，经济与管理研究，</span><span style="line-height: 20px; font-family: 'times new roman'; font-size: 16px;"><span>&nbsp;</span>2010</span><span style="line-height: 20px; font-family: 宋体; font-size: 16px;">年（</span><span style="line-height: 20px; font-family: 'times new roman'; font-size: 16px;">10</span><span style="line-height: 20px; font-family: 宋体; font-size: 16px;">）：</span><span style="line-height: 20px; font-family: 'times new roman'; font-size: 16px;">12-17</span><span style="line-height: 20px; font-family: 宋体; font-size: 16px;">。</span></span></p></li><li style="font-weight: 400; clear: both;"><p style="line-height: 1.5em;"><span style="font-family: 'times new roman'; font-size: 16px;"><span style="line-height: 20px; font-family: 宋体; font-size: 16px;">仝允桓，周江华，邢小强．面向低收入群体（</span><span style="line-height: 20px; font-family: 'times new roman'; font-size: 16px;">BOP</span><span style="line-height: 20px; font-family: 宋体; font-size: 16px;">）的创新理论</span><span style="line-height: 20px; font-family: 'times new roman'; font-size: 16px;">—</span><span style="line-height: 20px; font-family: 宋体; font-size: 16px;">述评和展望，，</span><span style="line-height: 20px; font-family: 'times new roman'; font-size: 16px;">2010</span><span style="line-height: 20px; font-family: 宋体; font-size: 16px;">（</span><span style="line-height: 20px; font-family: 'times new roman'; font-size: 16px;">2</span><span style="line-height: 20px; font-family: 宋体; font-size: 16px;">）：</span><span style="line-height: 20px; font-family: 'times new roman'; font-size: 16px;">169-176</span><span style="line-height: 20px; font-family: 宋体; font-size: 16px;">。</span></span></p></li><li style="font-weight: 400; clear: both;"><p style="line-height: 1.5em;"><span style="font-family: 'times new roman'; font-size: 16px;"><span style="line-height: 20px; font-family: 宋体; font-size: 16px;">赵晶，周江华，张帆．基于集群知识网络的技术学习路径研究</span><span style="line-height: 20px; font-family: 'times new roman'; font-size: 16px;">——</span><span style="line-height: 20px; font-family: 宋体; font-size: 16px;">以柳市低压电器产业集群为例，</span><span style="line-height: 20px; font-family: 'times new roman'; font-size: 16px;"><a href="http://166.111.120.107/KNS50/Navi/Bridge.aspx?LinkType=BaseLink&amp;DBCode=cjfd&amp;TableName=cjfdbaseinfo&amp;Field=BaseID&amp;Value=KJJB&amp;NaviLink=%e7%a7%91%e6%8a%80%e8%bf%9b%e6%ad%a5%e4%b8%8e%e5%af%b9%e7%ad%96" target="_blank"><span style="color: windowtext; line-height: 20px; font-family: 'times new roman'; font-size: 16px;"><u>科技进步与对策</u></span></a>，</span><span style="line-height: 20px; font-family: 'times new roman'; font-size: 16px;">2009</span><span style="line-height: 20px; font-family: 宋体; font-size: 16px;">（</span><span style="line-height: 20px; font-family: 'times new roman'; font-size: 16px;">02</span><span style="line-height: 20px; font-family: 宋体; font-size: 16px;">）：</span><span style="line-height: 20px; font-family: 'times new roman'; font-size: 16px;">60-63</span><span style="line-height: 20px; font-family: 宋体; font-size: 16px;">。</span></span></p></li><li style="font-weight: 400; clear: both;"><p style="line-height: 1.5em;"><span style="font-family: 'times new roman'; font-size: 16px;"><span style="line-height: 20px; font-family: 宋体; font-size: 16px;">仝允桓，周江华，赵晶．基于知识整合的企业内部技术转移模式分析，科学学与科学技术管理，</span><span style="line-height: 20px; font-family: 'times new roman'; font-size: 16px;">2008</span><span style="line-height: 20px; font-family: 宋体; font-size: 16px;">（</span><span style="line-height: 20px; font-family: 'times new roman'; font-size: 16px;">10</span><span style="line-height: 20px; font-family: 宋体; font-size: 16px;">）：</span><span style="line-height: 20px; font-family: 'times new roman'; font-size: 16px;">68-73</span><span style="line-height: 20px; font-family: 宋体; font-size: 16px;">。</span></span></p></li><li style="font-weight: 400; clear: both;"><p style="line-height: 1.5em;"><span style="font-family: 'times new roman'; font-size: 16px;"><span style="line-height: 20px; font-family: 宋体; font-size: 16px;">焦豪，周江华，谢振东．公司创业导向与企业绩效的关系研究：基于环境动态性的调节效应．科学学与科学技术管理</span><span style="line-height: 20px; font-family: 'times new roman'; font-size: 16px;">, 2007</span><span style="line-height: 20px; font-family: 宋体; font-size: 16px;">（</span><span style="line-height: 20px; font-family: 'times new roman'; font-size: 16px;">11</span><span style="line-height: 20px; font-family: 宋体; font-size: 16px;">）：</span><span style="line-height: 20px; font-family: 'times new roman'; font-size: 16px;">70-76</span><span style="line-height: 20px; font-family: 宋体; font-size: 16px;">。</span></span></p></li><li style="font-weight: 400; clear: both;"><p style="line-height: 1.5em;"><span style="font-family: 'times new roman'; font-size: 16px;"><span style="line-height: 20px; font-family: 宋体; font-size: 16px;">张海生，周江华．滨海新区生物医药产业发展现状与对策，中国科技投资，</span><span style="line-height: 20px; font-family: 'times new roman'; font-size: 16px;">2007</span><span style="line-height: 20px; font-family: 宋体; font-size: 16px;">（</span><span style="line-height: 20px; font-family: 'times new roman'; font-size: 16px;">9</span><span style="line-height: 20px; font-family: 宋体; font-size: 16px;">）。</span></span></p></li><li style="font-weight: 400; clear: both;"><p style="line-height: 1.5em;"><span style="font-family: 'times new roman'; font-size: 16px;"><span style="line-height: 20px; font-family: 宋体; font-size: 16px;">魏江，周江华，刘巧萍．基于并行吸收模式的外部技术消化模型，科学学与科学技术管理，</span><span style="line-height: 20px; font-family: 'times new roman'; font-size: 16px;">2004</span><span style="line-height: 20px; font-family: 宋体; font-size: 16px;">（</span><span style="line-height: 20px; font-family: 'times new roman'; font-size: 16px;">8</span><span style="line-height: 20px; font-family: 宋体; font-size: 16px;">）：</span><span style="line-height: 20px; font-family: 'times new roman'; font-size: 16px;">145-148</span><span style="line-height: 20px; font-family: 宋体; font-size: 16px;">。</span></span></p></li><li style="font-weight: 400; clear: both;"><p style="line-height: 1.5em;"><span style="font-family: 'times new roman'; font-size: 16px;"><span style="line-height: 20px; font-family: 宋体; font-size: 16px;">魏江，陈志辉，周江华．基于知识观的企业家人力资本系统构建研究，科学学研究，</span><span style="line-height: 20px; font-family: 'times new roman'; font-size: 16px;">2003</span><span style="line-height: 20px; font-family: 宋体; font-size: 16px;">（</span><span style="line-height: 20px; font-family: 'times new roman'; font-size: 16px;">12</span><span style="line-height: 20px; font-family: 宋体; font-size: 16px;">）：</span><span style="line-height: 20px; font-family: 'times new roman'; font-size: 16px;">215-219</span><span style="line-height: 20px; font-family: 宋体; font-size: 16px;">。</span></span></p></li></ol><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei';font-size:16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;"><br /></p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei';font-size:16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;"></p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei';font-size:16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;"><span style="font-family: 'times new roman';"><strong>发表（录用）的会议论文</strong></span></p><ol class="custom_num2 list-paddingleft-1" style="list-style: none; margin: 0px; width: 1148.35px; color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; padding-left: 0px; font-family: " microsoft="" yahei="" font-size:="" 16px="" font-style:="" normal="" word-spacing:="" 0px="" white-space:="" orphans:="" 2="" widows:="" font-variant-ligatures:="" font-variant-caps:="" -webkit-text-stroke-width:="" text-decoration-style:="" initial="" text-decoration-color:=""><li class="list-num-3-1 list-num2-paddingleft-1" style="background-position: 0px 3px; padding-left: 35px; clear: both; background-image: url(" http:="" bs="" baidu="" com="" listicon="" list-num-3-1="" gif="" background-repeat:="" no-repeat=""><p style="line-height: 20px;"><span style="font-family: " times="" new="" roman=""><span style="line-height: 20px; font-family: 宋体, SimSun;"><strong><span style="font-size:10.5pt;font-family:'Times New Roman',serif;">Zhou Jianghua, </span></strong><span style="font-size: 10.5pt; font-family: " times="" new="" roman="" serif="">Liu Chenrui, How canDigital Investment Affect a Firm’s Innovation Efficiency and InnovationQuality, AOM</span><span style="font-size: 10.5pt; font-family: 宋体;">会议，</span><span style="font-size: 10.5pt; font-family: " times="" new="" roman="" serif="">2021.</span><br /></span></span></p></li><li class="list-num-3-1 list-num2-paddingleft-1" style="font-weight: 400; background-position: 0px 3px; padding-left: 35px; clear: both; background-image: url(" http:="" bs="" baidu="" com="" listicon="" list-num-3-1="" gif="" background-repeat:="" no-repeat=""><p style="line-height: 20px;"><span style="font-family: 'times new roman';"><strong><span style="line-height: 20px; font-family: 宋体, SimSun;">Zhou Jianghua,<span>&nbsp;</span></span></strong><span style="line-height: 20px; font-family: 宋体, SimSun;">Zhang Linlin, Too much water drowned the miller：Returnees and Innovation in high-tech SMEs, Strategic Management Society special conference (SMS会议，战略管理领域顶级会议), 2020.</span></span></p></li><li class="list-num-3-2 list-num2-paddingleft-1" style="font-weight: 400; background-position: 0px 3px; padding-left: 35px; clear: both; background-image: url(" http:="" bs="" baidu="" com="" listicon="" list-num-3-2="" gif="" background-repeat:="" no-repeat=""><p style="line-height: 20px;"><span style="font-family: 'times new roman';"><strong><span style="line-height: 20px; font-family: 宋体;">周江华，</span></strong><span style="line-height: 20px; font-family: 宋体;">刘子諝，李纪珍，市场与技术双重机会窗口下的创新赶超：以中国风电产业的后发企业为例</span><span style="line-height: 20px; font-family: 'times new roman';">, International Association for Chinese Management Research (IACMR) Conference (IACMR 2020)</span><span style="line-height: 20px; font-family: 宋体;">，</span><span>&nbsp;</span><span style="line-height: 20px; font-family: 宋体;">中国企业管理案例与质性研究论坛</span><span style="line-height: 20px; font-family: 'times new roman';">(2019)</span></span></p></li><li class="list-num-3-3 list-num2-paddingleft-1" style="font-weight: 400; background-position: 0px 3px; padding-left: 35px; clear: both; background-image: url(" http:="" bs="" baidu="" com="" listicon="" list-num-3-3="" gif="" background-repeat:="" no-repeat=""><p style="line-height: 20px;"><span style="font-family: 'times new roman';"><strong><span style="line-height: 20px; font-family: 'times new roman';">Zhou Jianghua,</span></strong><span style="line-height: 20px; font-family: 'times new roman';"><span>&nbsp;</span>Liu Zixu, Li Jizhen, Technology Complementarity and Collaborative Innovation: The Moderating Effects of IT Adoption</span>, 2019 IEEE TEM<span style="line-height: 20px; font-family: 宋体;">年会优秀论文</span><span style="line-height: 20px; font-family: 'times new roman';">.</span></span></p></li><li class="list-num-3-4 list-num2-paddingleft-1" style="font-weight: 400; background-position: 0px 3px; padding-left: 35px; clear: both; background-image: url(" http:="" bs="" baidu="" com="" listicon="" list-num-3-4="" gif="" background-repeat:="" no-repeat=""><p style="line-height: 20px;"><span style="font-family: 'times new roman';"><strong><span style="line-height: 20px; font-family: 'times new roman';">Zhou Jianghua,<span>&nbsp;</span></span></strong><span style="line-height: 20px; font-family: 'times new roman';">Liu Yifan, Qi Yudong, Gu Ning, Do Tax Incentives Lead to Firm Innovation? An Empirical Study on China's Tax Incentive Schemes, The Academy of Management Annual Meeting (<strong>AOM</strong></span><span style="line-height: 20px; font-family: 宋体;">，美国管理学年会，管理学领域的顶级会议</span><span style="line-height: 20px; font-family: 'times new roman';">) , 2019, Boston, USA.</span></span></p></li><li class="list-num-3-5 list-num2-paddingleft-1" style="font-weight: 400; background-position: 0px 3px; padding-left: 35px; clear: both; background-image: url(" http:="" bs="" baidu="" com="" listicon="" list-num-3-5="" gif="" background-repeat:="" no-repeat=""><p style="line-height: 20px;"><span style="font-family: 'times new roman';"><span style="line-height: 20px; font-family: 'times new roman';">Liu Zixu,<span>&nbsp;</span><strong>Zhou Jianghua,</strong><span>&nbsp;</span>Qi Yudong, Liu Yifan, How Collaboration with Different Level of Engagement Influence Firm's Radical Innovation, The Academy of Management Annual Meeting (AOM</span><span style="line-height: 20px; font-family: 宋体;">，美国管理学年会，管理学领域的顶级会议</span><span style="line-height: 20px; font-family: 'times new roman';">) , 2019, Boston, USA.</span></span></p></li><li class="list-num-3-6 list-num2-paddingleft-1" style="font-weight: 400; background-position: 0px 3px; padding-left: 35px; clear: both; background-image: url(" http:="" bs="" baidu="" com="" listicon="" list-num-3-6="" gif="" background-repeat:="" no-repeat=""><p style="line-height: 20px;"><span style="font-family: 'times new roman';"><strong><span style="line-height: 20px; font-family: 'times new roman';">Zhou Jianghua,</span></strong><span style="line-height: 20px; font-family: 'times new roman';"><span>&nbsp;</span>Liu Zixu, Jiao Hao, Resource Heterogeneity and Collaborative Innovation: The Moderating Effects of IT Adoption, The Academy of Management Annual Meeting<strong><span>&nbsp;</span>(AOM</strong></span><strong><span style="line-height: 20px; font-family: 宋体;">，美国管理学年会，管理学领域的顶级会议</span><span style="line-height: 20px; font-family: 'times new roman';">)</span></strong><span style="line-height: 20px; font-family: 'times new roman';"><span>&nbsp;</span>, 2018, Chicago, USA.</span></span></p></li><li class="list-num-3-7 list-num2-paddingleft-1" style="font-weight: 400; background-position: 0px 3px; padding-left: 35px; clear: both; background-image: url(" http:="" bs="" baidu="" com="" listicon="" list-num-3-7="" gif="" background-repeat:="" no-repeat=""><p style="line-height: 20px;"><span style="font-family: 'times new roman';"><span style="line-height: 20px; font-family: 'times new roman';">Liu Zixu,<span>&nbsp;</span><strong>Zhou Jianghua</strong></span><strong><span style="line-height: 20px; font-family: 宋体;">（通讯作者）</span></strong><span style="line-height: 20px; font-family: 'times new roman';">, Li Jizhen, Not Only Additionality: The Dual Effects of Subsidies on Firm Innovation, The Academy of Management Annual Meeting<strong><span>&nbsp;</span>(AOM</strong></span><strong><span style="line-height: 20px; font-family: 宋体;">，美国管理学年会，管理学领域的顶级会议</span><span style="line-height: 20px; font-family: 'times new roman';">)</span></strong><span style="line-height: 20px; font-family: 'times new roman';"><span>&nbsp;</span>, 2018, Chicago, USA.</span></span></p></li><li class="list-num-3-8 list-num2-paddingleft-1" style="font-weight: 400; background-position: 0px 3px; padding-left: 35px; clear: both; background-image: url(" http:="" bs="" baidu="" com="" listicon="" list-num-3-8="" gif="" background-repeat:="" no-repeat=""><p style="line-height: 20px;"><span style="font-family: 'times new roman';"><span style="line-height: 20px; font-family: 'times new roman';">Liu Zixu,<span>&nbsp;</span><strong>Zhou Jianghua</strong></span><strong><span style="line-height: 20px; font-family: 宋体;">（通讯作者）</span><span style="line-height: 20px; font-family: 'times new roman';">,</span></strong><span style="line-height: 20px; font-family: 'times new roman';"><span>&nbsp;</span>Li Jizhen, Zhang Gupeng, Foreign Equity, Exporting and Firm Innovation,<span>&nbsp;</span></span><strong>International Association for Chinese Management Research (IACMR) Conference</strong>, Wuhan, China, 13-17 June<span style="font-family: 宋体;">，</span>2018;<span>&nbsp;</span><span style="line-height: 20px; font-family: 'times new roman';">27<sup>th</sup><span>&nbsp;</span>International Conference on Management of Technology (IAMOT), 2018, Birmingham, UK.</span></span></p></li><li class="list-num-3-9 list-num2-paddingleft-1" style="font-weight: 400; background-position: 0px 3px; padding-left: 35px; clear: both; background-image: url(" http:="" bs="" baidu="" com="" listicon="" list-num-3-9="" gif="" background-repeat:="" no-repeat=""><p style="line-height: 20px;"><span style="font-family: 'times new roman';"><strong><span style="line-height: 20px; font-family: 'times new roman';">Zhou Jianghua,</span></strong><span style="line-height: 20px; font-family: 'times new roman';"><span>&nbsp;</span>Liu Zixu, Li Jizhen, Jiao Hao, Market Dissimilarity, Technology Complementarity and Collaborative Innovation Performance: The Moderating Effects of IT Adoption,<span>&nbsp;</span><strong>International Association for Chinese Management Research (IACMR) Conference</strong>, Wuhan, China, 13-17 June</span><span style="line-height: 20px; font-family: 宋体;">，</span><span style="line-height: 20px; font-family: 'times new roman';">2018; 27<sup>th</sup><span>&nbsp;</span>International Conference on Management of Technology (IAMOT), 2018, Birmingham, UK.</span></span></p></li><li class="list-num-3-10 list-num2-paddingleft-2" style="font-weight: 400; background-position: 0px 3px; padding-left: 40px; clear: both; background-image: url(" http:="" bs="" baidu="" com="" listicon="" list-num-3-10="" gif="" background-repeat:="" no-repeat=""><p style="line-height: 20px;"><span style="font-family: 'times new roman';"><span style="line-height: 20px; font-family: 宋体;">周江华，顾柠，刘一凡，方太公司的水式管理之道，国际商务学会（</span><span style="line-height: 20px; font-family: 'times new roman';">AIB</span><span style="line-height: 20px; font-family: 宋体;">）</span><span style="line-height: 20px; font-family: 'times new roman';">2018</span><span style="line-height: 20px; font-family: 宋体;">年年会，上海。</span></span></p></li><li class="list-num-3-11 list-num2-paddingleft-2" style="font-weight: 400; background-position: 0px 3px; padding-left: 40px; clear: both; background-image: url(" http:="" bs="" baidu="" com="" listicon="" list-num-3-11="" gif="" background-repeat:="" no-repeat=""><p style="line-height: 20px;"><span style="line-height: 20px; font-family: 'times new roman';">Zhou Jianghua, Liu Yifan, Zhang Yuying, Coopetition between R&amp;D and Marketing department and firm innovation, Asia Academy of Manament &amp; Asia Pacific Journal of Management Paper Development Workshop (2018), Dali, Yunnan.</span></p></li><li class="list-num-3-12 list-num2-paddingleft-2" style="font-weight: 400; background-position: 0px 3px; padding-left: 40px; clear: both; background-image: url(" http:="" bs="" baidu="" com="" listicon="" list-num-3-12="" gif="" background-repeat:="" no-repeat=""><p style="line-height: 20px;"><span style="font-family: 'times new roman';"><strong><span style="line-height: 20px; font-family: 宋体;">周江华，</span></strong><span style="line-height: 20px; font-family: 宋体;">李纪珍，李碧清，刘子諝，合作与企业国际化创新</span><span style="line-height: 20px; font-family: 'times new roman';">:</span><span style="line-height: 20px; font-family: 宋体;">政府参与的调节作用，</span><span style="line-height: 20px; font-family: 'times new roman';">2017</span><span style="line-height: 20px; font-family: 宋体;">，第十四届中国科技政策与管理学术年会，优秀论文。</span></span></p></li><li class="list-num-3-13 list-num2-paddingleft-2" style="font-weight: 400; background-position: 0px 3px; padding-left: 40px; clear: both; background-image: url(" http:="" bs="" baidu="" com="" listicon="" list-num-3-13="" gif="" background-repeat:="" no-repeat=""><p style="line-height: 20px;"><span style="font-family: 'times new roman';"><strong><span style="line-height: 20px; font-family: 宋体;">周江华，</span></strong><span style="line-height: 20px; font-family: 宋体;">刘一凡，顾柠，张玉莹，挑战性压力对大学生专业承诺的影响机制研究，第十二届中国管理学年会（</span><span style="line-height: 20px; font-family: 'times new roman';">2017</span><span style="line-height: 20px; font-family: 宋体;">）。</span></span></p></li><li class="list-num-3-14 list-num2-paddingleft-2" style="font-weight: 400; background-position: 0px 3px; padding-left: 40px; clear: both; background-image: url(" http:="" bs="" baidu="" com="" listicon="" list-num-3-14="" gif="" background-repeat:="" no-repeat=""><p style="line-height: 20px;"><span style="font-family: 'times new roman';"><strong><span style="line-height: 20px; font-family: 'times new roman';">Zhou Jianghua</span></strong><span style="line-height: 20px; font-family: 宋体;">，</span><span style="line-height: 20px; font-family: 'times new roman';">Wu Rui</span><span style="line-height: 20px; font-family: 宋体;">，</span><span style="line-height: 20px; font-family: 'times new roman';">Li Jizhen</span><span style="line-height: 20px; font-family: 宋体;">，</span><span style="line-height: 20px; font-family: 'times new roman';">More Ties the Merrier? Different Social Ties and Firm Innovation Performance</span><span style="line-height: 20px; font-family: 宋体;">，</span><span style="line-height: 20px; font-family: 'times new roman';">The Academy of Management Annual Meeting<strong><span>&nbsp;</span>(AOM</strong></span><strong><span style="line-height: 20px; font-family: 宋体;">，美国管理学年会</span><span style="line-height: 20px; font-family: 'times new roman';">)</span></strong><span style="line-height: 20px; font-family: 宋体;">，</span><span style="line-height: 20px; font-family: 'times new roman';">Anaheim, California</span><span style="line-height: 20px; font-family: 宋体;">，</span><span style="line-height: 20px; font-family: 'times new roman';">2016.08.</span></span></p></li><li class="list-num-3-15 list-num2-paddingleft-2" style="font-weight: 400; background-position: 0px 3px; padding-left: 40px; clear: both; background-image: url(" http:="" bs="" baidu="" com="" listicon="" list-num-3-15="" gif="" background-repeat:="" no-repeat=""><p style="line-height: 20px;"><span style="font-family: 'times new roman';"><strong><span style="line-height: 20px; font-family: 'times new roman';">Zhou Jianghua,</span></strong><span style="line-height: 20px; font-family: 'times new roman';"><span>&nbsp;</span>Jiao Hao, Xing Xiaoqiang, Providing appropriate technology for emerging markets: A case study, The Academy of Management Annual Meeting<strong><span>&nbsp;</span>(AOM</strong></span><strong><span style="line-height: 20px; font-family: 宋体;">，美国管理学年会</span><span style="line-height: 20px; font-family: 'times new roman';">)</span></strong><span style="line-height: 20px; font-family: 宋体;">，</span><span style="line-height: 20px; font-family: 'times new roman';">Anaheim, California</span><span style="line-height: 20px; font-family: 宋体;">，</span><span style="line-height: 20px; font-family: 'times new roman';">2016.08.</span></span></p></li><li class="list-num-3-16 list-num2-paddingleft-2" style="font-weight: 400; background-position: 0px 3px; padding-left: 40px; clear: both; background-image: url(" http:="" bs="" baidu="" com="" listicon="" list-num-3-16="" gif="" background-repeat:="" no-repeat=""><p style="line-height: 20px;"><span style="font-family: 'times new roman';"><span style="line-height: 20px; font-family: 'times new roman';">Jiao Hao,<span>&nbsp;</span><strong>Zhou Jianghua<span>&nbsp;</span></strong></span><strong><span style="line-height: 20px; font-family: 宋体;">（通讯作者）</span></strong><span style="line-height: 20px; font-family: 'times new roman';">, Liu Xielin, The Interaction between Local Producers and Users of Knowledge and Regional Innovation Systems, The Academy of Management Annual Meeting<strong><span>&nbsp;</span>(AOM</strong></span><strong><span style="line-height: 20px; font-family: 宋体;">，美国管理学年会</span><span style="line-height: 20px; font-family: 'times new roman';">)</span></strong><span style="line-height: 20px; font-family: 宋体;">，</span><span style="line-height: 20px; font-family: 'times new roman';">Anaheim, California</span><span style="line-height: 20px; font-family: 宋体;">，</span><span style="line-height: 20px; font-family: 'times new roman';">2016.08.</span></span></p></li><li class="list-num-3-17 list-num2-paddingleft-2" style="font-weight: 400; background-position: 0px 3px; padding-left: 40px; clear: both; background-image: url(" http:="" bs="" baidu="" com="" listicon="" list-num-3-17="" gif="" background-repeat:="" no-repeat=""><p style="line-height: 20px;"><span style="font-family: 'times new roman';"><strong><span style="line-height: 20px; font-family: 'times new roman';">Zhou Jianghua,</span></strong><span style="line-height: 20px; font-family: 'times new roman';"><span>&nbsp;</span>Qiu Hang, Li Jizhen, Liu Zixu, Zhou Xingtong, The Different Effect of Central-Government-Funded and Local-Government-Funded Research Projects on Firm Innovation: A Contingency Model, PICMET 2017</span><span style="line-height: 20px; font-family: 宋体;">（</span><span style="line-height: 20px; font-family: 'times new roman';">EI</span><span style="line-height: 20px; font-family: 宋体;">检索）</span><span style="line-height: 20px; font-family: 'times new roman';">.</span></span></p></li><li class="list-num-3-18 list-num2-paddingleft-2" style="font-weight: 400; background-position: 0px 3px; padding-left: 40px; clear: both; background-image: url(" http:="" bs="" baidu="" com="" listicon="" list-num-3-18="" gif="" background-repeat:="" no-repeat=""><p style="line-height: 20px;"><span style="font-family: 'times new roman';"><strong><span style="line-height: 20px; font-family: 'times new roman';">Zhou Jianghua,<span>&nbsp;</span></span></strong><span style="line-height: 20px; font-family: 'times new roman';">Xia yinan, Hu Yimei, Zhang Si, How constraints trigger firms’ innovation: evidence from china, INFORMS 2016 International Conference, Hawaii, 2016.06.</span></span></p></li><li class="list-num-3-19 list-num2-paddingleft-2" style="font-weight: 400; background-position: 0px 3px; padding-left: 40px; clear: both; background-image: url(" http:="" bs="" baidu="" com="" listicon="" list-num-3-19="" gif="" background-repeat:="" no-repeat=""><p style="line-height: 20px;"><span style="font-family: 'times new roman';"><strong><span style="line-height: 20px; font-family: 宋体;">周江华，</span></strong><span style="line-height: 20px; font-family: 宋体;">邱航，刘子諝，周星彤，政府创新政策对企业创新绩效的影响机制研究，第十一届（2016）中国管理学年会。</span></span></p></li><li class="list-num-3-20 list-num2-paddingleft-2" style="font-weight: 400; background-position: 0px 3px; padding-left: 40px; clear: both; background-image: url(" http:="" bs="" baidu="" com="" listicon="" list-num-3-20="" gif="" background-repeat:="" no-repeat=""><p style="line-height: 20px;"><span style="font-family: 'times new roman';"><strong><span style="line-height: 20px; font-family: 宋体;">周江华，</span></strong><span style="line-height: 20px; font-family: 宋体;">耿思敏、谭星辰、赵玟懿、吴建宏，ZDJ地产集团的设计管理模式，第八届中国管理案例学术年会，2017。</span></span></p></li><li class="list-num-3-21 list-num2-paddingleft-2" style="font-weight: 400; background-position: 0px 3px; padding-left: 40px; clear: both; background-image: url(" http:="" bs="" baidu="" com="" listicon="" list-num-3-21="" gif="" background-repeat:="" no-repeat=""><p style="line-height: 20px;"><span style="line-height: 20px; font-family: 'times new roman';">Jianghua Zhou, Yunhuan Tong, Xielin Liu. Diffusion of solar thermal in China’s BoP market, PICMET 2012 (EI Indexed).</span></p></li><li class="list-num-3-22 list-num2-paddingleft-2" style="font-weight: 400; background-position: 0px 3px; padding-left: 40px; clear: both; background-image: url(" http:="" bs="" baidu="" com="" listicon="" list-num-3-22="" gif="" background-repeat:="" no-repeat=""><p style="line-height: 20px;"><span style="line-height: 20px; font-family: 'times new roman';">Jianghua Zhou, Yunhuan Tong, Jizhen Li, Disr</span></p></li></ol></div>
+                    
+                </div>				<div class="grjj">
+                    <p class="jjh">研究课题</p>
+                  
+                    <div class="bks1"><div style="top: 0px;">﻿﻿<span style="font-family: " microsoft="" yahei="" font-size:="" 16px="">1. 主持国家自然科学基金面上项目《知识异质性对企业破坏性创新影响机制研究》。</span></div><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei';font-size:16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">2. 主持国家自然科学基金青年项目《战略性新兴产业中后发企业破坏性创新过程研究》（2013年1月-2015年12月）。</p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei';font-size:16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">3. 主持北京师范大学自主科研项目《基于中国情景的企业创新模式研究（SKZZX2013038）》，。</p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei';font-size:16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">4. 主持横向项目《光伏产品在贫困地区的发展战略研究（SKHX2016559）》。</p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei';font-size:16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">5. 北京师范大学-南澳大学合作研究项目，Towards Increased Innovation – the Enabling Role of Performance Measurement in Family Business in Australia and China，中方联合负责人。</p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei';font-size:16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">6. 主持中国博士后科学基金项目《面向低收入群体（BoP）市场的破坏性创新研究》。</p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei';font-size:16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">7. 主持企业委托课题《中国信托产业未来的发展与管理的前景》</p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei';font-size:16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">8. 作为项目的子课题负责人承担了北京软件产品质量检测检验中心委托课题《项目管理和第三方软件测试研究》。</p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei';font-size:16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">9. 2012年5月2013年6月，作为项目负责人承担了中国科学院院长基金《战略性新兴产业中后发企业破坏性创新过程研究》。</p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei';font-size:16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">10. 国家自然科学基金面上项目《文化创意产业集群知识网络双重嵌入、动态能力对双元性创新影响机制的实证研究（71572017》，参与。</p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei';font-size:16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">11. 科技部平台中心项目《创新券促进科技资源开放共享机制模式分析》，参与。</p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei';font-size:16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">12. 2012年，作为外聘专家参与世界银行项目，中国的包容性创新政策研究（报告已出版）。</p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei';font-size:16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">13. 参与国家自然科学基金重点项目《全球化，突破性创新与产业领导力研究》（70932001）。</p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei';font-size:16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">14. 作为主要成员参与了国家自然科学基金面上项目《基于中国案例的企业可持续创新模式研究》</p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei';font-size:16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">15. 作为主要成员参与广东省软科学研究计划项目《广东省创新型企业成长路线图研究》。</p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei';font-size:16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">16. 作为项目组协调人参与国家自然科学基金国际重大合作项目《面向低收入群体市场的技术与商业创新模式研究》（项目批准号：70721017001）。</p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei';font-size:16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">17. UNDP, Growing Inclusive Markets Initiatives, 参与。</p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei';font-size:16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">18. 参与国家自然科学基金课题《高科技企业网络能力与创新关系研究》（项目批准号：70672006）。</p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei';font-size:16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">19. 作为主要研究者参与了国家自然科学基金课题《基于知识平台的企业技术能力整合和激活模式研究》（项目批准号：70172017）。</p></div>
+                    
+                </div>				<div class="grjj">
+                    <p class="jjh">学生情况</p>
+                    <div class="bks1"><div style="top: 0px;">﻿﻿<span style="font-family: " microsoft="" yahei="" font-size:="" 16px="">指导博士后、博士研究生、学术型研究生、专业学位研究生，欢迎加入合作。</span></div><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei';font-size:16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">担任本科生新生导师、励弘计划导师。作为励弘计划导师指导数十位本科生，学生撰写的论文分别在SSCI期刊（ABS3星）、国家自然科学基金委认定A类核心CSSCI期刊、美国管理学年会（AOM）等高水平期刊和国际顶级会议发表。所指导的学生获得国创、北创、本基等科研项目，荣获国家奖学金、挑战杯北京市一等奖、京师杯一等奖、二等奖、本科生论坛二等奖、IMA管理会计大赛华北赛区一等奖等奖项；学生毕业后分别进入北美高校、英国高校、清华、复旦、浙大、南大等国内外知名高校深造。</p></div>
+                    
+                </div>				<div class="grjj">
+                    <p class="jjh">教授课程</p>
+                    <div class="bks1"><div style="top: 0px;">﻿﻿<span style="font-family: " microsoft="" yahei="" font-size:="" 16px="">战略管理</span></div><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei';font-size:16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">管理学</p><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei';font-size:16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">创意与创新管理</p></div>
+                    
+                </div>            </div>
+        </div>
+         <footer style="overflow: hidden;">
+            <div class="footers">
+                <div class="footersl">
+                    <img src="http://bs.bnu.edu.cn/newweb/images/ewm.jpg" alt="" class="imgewm">
+                    <div class="footerxx">
+                        <p>Copyright © 2020 北京师范大学经济与工商管理学院</p>
+                        <p><i class="fas fa-map-marker-alt"></i> 地址：北京市新街口外大街19号</p>
+                        <p><i class="fas fa-portrait"></i> 传真：010-58801867</p>
+                        <p><i class="fas fa-phone"></i> 电话：010-58801867</p>
+                        <p><i class="fas fa-envelope"></i> 邮编：100875</p>
+                    </div>
+                </div>
+                <img src="http://bs.bnu.edu.cn/newweb/images/db.png" alt="" width="140" class="dbimg">
+                <img src="http://bs.bnu.edu.cn/newweb/images/yx.png" alt="" class="yuanxun">
+            </div>
+        </footer>
+    </div>
+	<div class="share">
+		  <div id="appgame-leftside-share">
+	        <div class="appgame-leftside-share rwt_share" id="rwt_share">
+	         
+	        <!--<a class="appgame-leftside-search" data-cmd="search" title="search"  href="javascript:void(0);" onclick="opens('id')">search</a> --> <!--<div class="searchs" id="id">
+	         <form name="dataForm" action="/cms/search/searchResults.jsp" target="_blank" method="post" accept-Charset="utf-8"  onsubmit="document.charset='utf-8';">
+			        	<p>
+			        		<input name="siteID" size="4" value="127" type = "hidden">
+			        		<input type="text" name="query" id="search" class="searchInput" value="输入搜索词">
+			        		<button type="submit"></button>
+			        	</p>
+			        	</form>
+			        </div>-->
+			        <!-- <a class="appgame-leftside-weixin" data-cmd="weixin" title="">微信</a> -->
+                    
+			        <!-- <a class="appgame-leftside-qzone" data-cmd="qzone" title="">qq空间</a>
+			        
+			        <a class="appgame-leftside-tsina" data-cmd="tsina" title="">微博</a> -->			    </div>
+			        <a class="appgame-leftside-top" onclick="gotoTPoint()"></a>			</div>
+			        
+		</div>
+</body>
+<script src="http://gh.bnu.edu.cn/js/jquery-1.9.0.min.js"></script>
+<script src="http://gh.bnu.edu.cn/js/share.min.js"></script>
+<script>
+    var dj=document.getElementById('dianji');
+    var jjc=document.getElementById('jjc');
+    var dj1=document.getElementById('dianji1');
+    var jjc1=document.getElementById('jjc1');
+    var a=1;
+    function zhedie(m,n){
+        m.onclick=function(){
+            if(a==1){
+                n.className='jjc';
+                m.className='dianji1'
+                a=0;
+            }else{
+                n.className='jjc1';
+                m.className='dianji'
+                a=1;
+            }
+        }
+    }
+    zhedie(dj,jjc);
+    zhedie(dj1,jjc1);
+	
+	
+</script>
+<script>
+
+	
+	
+    
+
+    /*回到顶部*/
+	$(function(){
+	 	$(window).resize(function(){
+						var h = $(window).height();
+						$('.goTop').css('top',h-60);
+						$(window).scroll(function(){				
+							var scrollTop = $(document).scrollTop();					  
+							$('.goTop').stop().animate({
+								top: h + scrollTop-60
+							},300);
+						});
+		}).resize();
+		});
+	//gotop
+
+			$('.goTop').click(function(){
+
+				$('body,html').stop().animate({scrollTop:0});
+
+				return false;
+
+			});
+	
+	function gotoTPoint(){
+		$("html,body").animate({scrollTop:0},500);
+	}
+</script>
+</html>

@@ -1,0 +1,1373 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><script type="text/javascript">(window.NREUM||(NREUM={})).init={ajax:{deny_list:["bam.nr-data.net"]}};(window.NREUM||(NREUM={})).loader_config={licenseKey:"ab0374a39e",applicationID:"39297557"};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var i=e[n]={exports:{}};t[n][0].call(i.exports,function(e){var i=t[n][1][e];return r(i||e)},i,i.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(t,e,n){function r(){}function i(t,e,n,r){return function(){return s.recordSupportability("API/"+e+"/called"),o(t+e,[u.now()].concat(c(arguments)),n?null:this,r),n?void 0:this}}var o=t("handle"),a=t(9),c=t(10),f=t("ee").get("tracer"),u=t("loader"),s=t(4),d=NREUM;"undefined"==typeof window.newrelic&&(newrelic=d);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",v=l+"ixn-";a(p,function(t,e){d[e]=i(l,e,!0,"api")}),d.addPageAction=i(l,"addPageAction",!0),d.setCurrentRouteName=i(l,"routeName",!0),e.exports=newrelic,d.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(t,e){var n={},r=this,i="function"==typeof e;return o(v+"tracer",[u.now(),t,n],r),function(){if(f.emit((i?"":"no-")+"fn-start",[u.now(),r,i],n),i)try{return e.apply(this,arguments)}catch(t){throw f.emit("fn-err",[arguments,this,t],n),t}finally{f.emit("fn-end",[u.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){m[e]=i(v,e)}),newrelic.noticeError=function(t,e){"string"==typeof t&&(t=new Error(t)),s.recordSupportability("API/noticeError/called"),o("err",[t,u.now(),!1,e])}},{}],2:[function(t,e,n){function r(t){if(NREUM.init){for(var e=NREUM.init,n=t.split("."),r=0;r<n.length-1;r++)if(e=e[n[r]],"object"!=typeof e)return;return e=e[n[n.length-1]]}}e.exports={getConfiguration:r}},{}],3:[function(t,e,n){var r=!1;try{var i=Object.defineProperty({},"passive",{get:function(){r=!0}});window.addEventListener("testPassive",null,i),window.removeEventListener("testPassive",null,i)}catch(o){}e.exports=function(t){return r?{passive:!0,capture:!!t}:!!t}},{}],4:[function(t,e,n){function r(t,e){var n=[a,t,{name:t},e];return o("storeMetric",n,null,"api"),n}function i(t,e){var n=[c,t,{name:t},e];return o("storeEventMetrics",n,null,"api"),n}var o=t("handle"),a="sm",c="cm";e.exports={constants:{SUPPORTABILITY_METRIC:a,CUSTOM_METRIC:c},recordSupportability:r,recordCustom:i}},{}],5:[function(t,e,n){function r(){return c.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,c=t(11);e.exports=r,e.exports.offset=a,e.exports.getLastTimestamp=i},{}],6:[function(t,e,n){function r(t,e){var n=t.getEntries();n.forEach(function(t){"first-paint"===t.name?l("timing",["fp",Math.floor(t.startTime)]):"first-contentful-paint"===t.name&&l("timing",["fcp",Math.floor(t.startTime)])})}function i(t,e){var n=t.getEntries();if(n.length>0){var r=n[n.length-1];if(u&&u<r.startTime)return;var i=[r],o=a({});o&&i.push(o),l("lcp",i)}}function o(t){t.getEntries().forEach(function(t){t.hadRecentInput||l("cls",[t])})}function a(t){var e=navigator.connection||navigator.mozConnection||navigator.webkitConnection;if(e)return e.type&&(t["net-type"]=e.type),e.effectiveType&&(t["net-etype"]=e.effectiveType),e.rtt&&(t["net-rtt"]=e.rtt),e.downlink&&(t["net-dlink"]=e.downlink),t}function c(t){if(t instanceof y&&!w){var e=Math.round(t.timeStamp),n={type:t.type};a(n),e<=v.now()?n.fid=v.now()-e:e>v.offset&&e<=Date.now()?(e-=v.offset,n.fid=v.now()-e):e=v.now(),w=!0,l("timing",["fi",e,n])}}function f(t){"hidden"===t&&(u=v.now(),l("pageHide",[u]))}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var u,s,d,p,l=t("handle"),v=t("loader"),m=t(8),g=t(3),y=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){s=new PerformanceObserver(r);try{s.observe({entryTypes:["paint"]})}catch(h){}d=new PerformanceObserver(i);try{d.observe({entryTypes:["largest-contentful-paint"]})}catch(h){}p=new PerformanceObserver(o);try{p.observe({type:"layout-shift",buffered:!0})}catch(h){}}if("addEventListener"in document){var w=!1,b=["click","keydown","mousedown","pointerdown","touchstart"];b.forEach(function(t){document.addEventListener(t,c,g(!1))})}m(f)}},{}],7:[function(t,e,n){function r(t,e){if(!i)return!1;if(t!==i)return!1;if(!e)return!0;if(!o)return!1;for(var n=o.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var c=navigator.userAgent,f=c.match(a);f&&c.indexOf("Chrome")===-1&&c.indexOf("Chromium")===-1&&(i="Safari",o=f[1])}e.exports={agent:i,version:o,match:r}},{}],8:[function(t,e,n){function r(t){function e(){t(c&&document[c]?document[c]:document[o]?"hidden":"visible")}"addEventListener"in document&&a&&document.addEventListener(a,e,i(!1))}var i=t(3);e.exports=r;var o,a,c;"undefined"!=typeof document.hidden?(o="hidden",a="visibilitychange",c="visibilityState"):"undefined"!=typeof document.msHidden?(o="msHidden",a="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(o="webkitHidden",a="webkitvisibilitychange",c="webkitVisibilityState")},{}],9:[function(t,e,n){function r(t,e){var n=[],r="",o=0;for(r in t)i.call(t,r)&&(n[o]=e(r,t[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],10:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,i=n-e||0,o=Array(i<0?0:i);++r<i;)o[r]=t[e+r];return o}e.exports=r},{}],11:[function(t,e,n){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(t,e,n){function r(){}function i(t){function e(t){return t&&t instanceof r?t:t?u(t,f,a):a()}function n(n,r,i,o,a){if(a!==!1&&(a=!0),!l.aborted||o){t&&a&&t(n,r,i);for(var c=e(i),f=m(n),u=f.length,s=0;s<u;s++)f[s].apply(c,r);var p=d[w[n]];return p&&p.push([b,n,r,c]),c}}function o(t,e){h[t]=m(t).concat(e)}function v(t,e){var n=h[t];if(n)for(var r=0;r<n.length;r++)n[r]===e&&n.splice(r,1)}function m(t){return h[t]||[]}function g(t){return p[t]=p[t]||i(n)}function y(t,e){l.aborted||s(t,function(t,n){e=e||"feature",w[n]=e,e in d||(d[e]=[])})}var h={},w={},b={on:o,addEventListener:o,removeEventListener:v,emit:n,get:g,listeners:m,context:e,buffer:y,abort:c,aborted:!1};return b}function o(t){return u(t,f,a)}function a(){return new r}function c(){(d.api||d.feature)&&(l.aborted=!0,d=l.backlog={})}var f="nr@context",u=t("gos"),s=t(9),d={},p={},l=e.exports=i();e.exports.getOrSetContext=o,l.backlog=d},{}],gos:[function(t,e,n){function r(t,e,n){if(i.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return t[e]=r,r}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){i.buffer([t],r),i.emit(t,e,n)}var i=t("ee").get("handle");e.exports=r,r.ee=i},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,o,function(){return i++})}var i=1,o="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!M++){var t=T.info=NREUM.info,e=m.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&e))return u.abort();f(x,function(e,n){t[e]||(t[e]=n)});var n=a();c("mark",["onload",n+T.offset],null,"api"),c("timing",["load",n]);var r=m.createElement("script");0===t.agent.indexOf("http://")||0===t.agent.indexOf("https://")?r.src=t.agent:r.src=l+"://"+t.agent,e.parentNode.insertBefore(r,e)}}function i(){"complete"===m.readyState&&o()}function o(){c("mark",["domContent",a()+T.offset],null,"api")}var a=t(5),c=t("handle"),f=t(9),u=t("ee"),s=t(7),d=t(2),p=t(3),l=d.getConfiguration("ssl")===!1?"http":"https",v=window,m=v.document,g="addEventListener",y="attachEvent",h=v.XMLHttpRequest,w=h&&h.prototype,b=!1;NREUM.o={ST:setTimeout,SI:v.setImmediate,CT:clearTimeout,XHR:h,REQ:v.Request,EV:v.Event,PR:v.Promise,MO:v.MutationObserver};var E=""+location,x={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1216.min.js"},O=h&&w&&w[g]&&!/CriOS/.test(navigator.userAgent),T=e.exports={offset:a.getLastTimestamp(),now:a,origin:E,features:{},xhrWrappable:O,userAgent:s,disabled:b};if(!b){t(1),t(6),m[g]?(m[g]("DOMContentLoaded",o,p(!1)),v[g]("load",r,p(!1))):(m[y]("onreadystatechange",i),v[y]("onload",r)),c("mark",["firstbyte",a.getLastTimestamp()],null,"api");var M=0}},{}],"wrap-function":[function(t,e,n){function r(t,e){function n(e,n,r,f,u){function nrWrapper(){var o,a,s,p;try{a=this,o=d(arguments),s="function"==typeof r?r(o,a):r||{}}catch(l){i([l,"",[o,a,f],s],t)}c(n+"start",[o,a,f],s,u);try{return p=e.apply(a,o)}catch(v){throw c(n+"err",[o,a,v],s,u),v}finally{c(n+"end",[o,a,p],s,u)}}return a(e)?e:(n||(n=""),nrWrapper[p]=e,o(e,nrWrapper,t),nrWrapper)}function r(t,e,r,i,o){r||(r="");var c,f,u,s="-"===r.charAt(0);for(u=0;u<e.length;u++)f=e[u],c=t[f],a(c)||(t[f]=n(c,s?f+r:r,i,f,o))}function c(n,r,o,a){if(!v||e){var c=v;v=!0;try{t.emit(n,r,o,e,a)}catch(f){i([f,n,r,o],t)}v=c}}return t||(t=s),n.inPlace=r,n.flag=p,n}function i(t,e){e||(e=s);try{e.emit("internal-error",t)}catch(n){}}function o(t,e,n){if(Object.defineProperty&&Object.keys)try{var r=Object.keys(t);return r.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(o){i([o],n)}for(var a in t)l.call(t,a)&&(e[a]=t[a]);return e}function a(t){return!(t&&t instanceof Function&&t.apply&&!t[p])}function c(t,e){var n=e(t);return n[p]=t,o(t,n,s),n}function f(t,e,n){var r=t[e];t[e]=c(r,n)}function u(){for(var t=arguments.length,e=new Array(t),n=0;n<t;++n)e[n]=arguments[n];return e}var s=t("ee"),d=t(10),p="nr@original",l=Object.prototype.hasOwnProperty,v=!1;e.exports=r,e.exports.wrapFunction=c,e.exports.wrapInPlace=f,e.exports.argsToArray=u},{}]},{},["loader"]);</script>
+        <title>MECHE PEOPLE: Ioannis Yannas | MIT Department of Mechanical Engineering</title>
+        <meta name="description" content="MIT's Department of Mechanical Engineering (MechE) offers a world-class education that combines thorough analysis with hands-on discovery. One of the original six courses offered when MIT was founded in 1865, MechE's faculty and students conduct research that pushes boundaries and provides creative solutions for the world's problems.">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1">
+        <!--[if lt IE 9]>
+            <link href='http://fonts.googleapis.com/css?family=Rajdhani:300' rel='stylesheet' type='text/css' data-norem>
+            <link href='http://fonts.googleapis.com/css?family=Rajdhani:400' rel='stylesheet' type='text/css' data-norem>
+            <link href='http://fonts.googleapis.com/css?family=Rajdhani:500' rel='stylesheet' type='text/css' data-norem>
+            <link href='http://fonts.googleapis.com/css?family=Rajdhani:600' rel='stylesheet' type='text/css' data-norem>
+            <link href='http://fonts.googleapis.com/css?family=Rajdhani:700' rel='stylesheet' type='text/css' data-norem>
+            <link href='http://fonts.googleapis.com/css?family=Rajdhani:300' rel='stylesheet' type='text/css' data-norem>
+            <link href='http://fonts.googleapis.com/css?family=Rajdhani:300italic' rel='stylesheet' type='text/css' data-norem>
+            <link href='http://fonts.googleapis.com/css?family=Rajdhani:400' rel='stylesheet' type='text/css' data-norem>
+            <link href='http://fonts.googleapis.com/css?family=Rajdhani:400italic' rel='stylesheet' type='text/css' data-norem>
+            <link href='http://fonts.googleapis.com/css?family=Rajdhani:600' rel='stylesheet' type='text/css' data-norem>
+            <link href='http://fonts.googleapis.com/css?family=Rajdhani:600italic' rel='stylesheet' type='text/css' data-norem>
+            <link href='http://fonts.googleapis.com/css?family=Rajdhani:700' rel='stylesheet' type='text/css' data-norem>
+            <link href='http://fonts.googleapis.com/css?family=Rajdhani:700italic' rel='stylesheet' type='text/css' data-norem>
+        <![endif]-->
+
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="Generator" content="Drupal 7 (http://drupal.org)" />
+<meta name="format-detection" content="telephone=no"/><link rel="shortcut icon" href="http://meche.mit.edu/sites/all/themes/mit_meche/favicon.ico" type="image/vnd.microsoft.icon" />
+        <link type="text/css" rel="stylesheet" href="http://meche.mit.edu/sites/default/files/css/css_xE-rWrJf-fncB6ztZfd2huxqgxu4WO-qwma6Xer30m4.css" media="all" />
+<link type="text/css" rel="stylesheet" href="http://meche.mit.edu/sites/default/files/css/css_yqfEEn3F5mXOC0UUFM4YKvpmMs9qQxvb1Jy9f6FVT5Y.css" media="all" />
+<link type="text/css" rel="stylesheet" href="http://meche.mit.edu/sites/default/files/css/css_GckY0EjoR6WBLjIENeNuZVvw3ojQ1Mjn5COL87fZnj8.css" media="all" />
+        <script type="text/javascript" src="http://meche.mit.edu/sites/default/files/js/js_YD9ro0PAqY25gGWrTki6TjRUG8TdokmmxjfqpNNfzVU.js"></script>
+<script type="text/javascript" src="http://meche.mit.edu/sites/default/files/js/js_rsGiM5M1ffe6EhN-RnhM5f3pDyJ8ZAPFJNKpfjtepLk.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+(function(i,s,o,g,r,a,m){i["GoogleAnalyticsObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,"script","https://www.google-analytics.com/analytics.js","ga");ga("create", "UA-2242837-1", {"cookieDomain":"auto"});ga("set", "anonymizeIp", true);ga('create', 'UA-1592615-30',{'name':'mitsitewide'});ga("send", "pageview");ga('mitsitewide.send','pageview');
+//--><!]]>
+</script>
+<script type="text/javascript" src="http://meche.mit.edu/sites/default/files/js/js_uVZxTz_aN3L7bgFGkqfygEck8aPPFnm3VAGf9QBBomY.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings, {"basePath":"\/","pathPrefix":"","setHasJsCookie":0,"ajaxPageState":{"theme":"mit_meche","theme_token":"-SFduKC4UGbcB_2pJvTCVv7TiGYvTMTuRS8cZYg3bWA","js":{"misc\/jquery.js":1,"misc\/jquery-extend-3.4.0.js":1,"misc\/jquery-html-prefilter-3.5.0-backport.js":1,"misc\/jquery.once.js":1,"misc\/drupal.js":1,"sites\/all\/modules\/contrib\/google_analytics\/googleanalytics.js":1,"0":1,"sites\/all\/themes\/mit_meche\/js\/vendor\/video.js":1,"sites\/all\/themes\/mit_meche\/js\/vendor\/video.youtube.js":1,"sites\/all\/themes\/mit_meche\/js\/modernizr.prod.min.js":1},"css":{"modules\/system\/system.base.css":1,"modules\/system\/system.menus.css":1,"modules\/system\/system.messages.css":1,"modules\/system\/system.theme.css":1,"sites\/all\/modules\/contrib\/calendar\/css\/calendar_multiday.css":1,"modules\/comment\/comment.css":1,"sites\/all\/modules\/contrib\/date\/date_api\/date.css":1,"sites\/all\/modules\/contrib\/date\/date_popup\/themes\/datepicker.1.7.css":1,"modules\/field\/theme\/field.css":1,"modules\/node\/node.css":1,"modules\/user\/user.css":1,"sites\/all\/modules\/contrib\/views\/css\/views.css":1,"sites\/all\/modules\/contrib\/media\/modules\/media_wysiwyg\/css\/media_wysiwyg.base.css":1,"sites\/all\/modules\/contrib\/ctools\/css\/ctools.css":1,"sites\/all\/modules\/contrib\/shib_auth\/shib_auth.css":1,"modules\/search\/search.css":1,"sites\/all\/themes\/mit_meche\/css\/foundation.min.css":1,"sites\/all\/themes\/mit_meche\/css\/style.css":1,"sites\/all\/themes\/mit_meche\/css\/tablesaw.stackonly.css":1,"sites\/all\/themes\/mit_meche\/css\/video-js.css":1,"sites\/all\/themes\/mit_meche\/css\/vjs-sublime-skin.css":1,"https:\/\/cdnjs.cloudflare.com\/ajax\/libs\/jquery-modal\/0.9.1\/jquery.modal.min.css":1,"sites\/all\/themes\/mit_meche\/css\/extra.css":1}},"urlIsAjaxTrusted":{"\/people\/faculty\/YANNAS@MIT.EDU":true},"googleanalytics":{"trackOutbound":1,"trackMailto":1,"trackDownload":1,"trackDownloadExtensions":"7z|aac|arc|arj|asf|asx|avi|bin|csv|doc(x|m)?|dot(x|m)?|exe|flv|gif|gz|gzip|hqx|jar|jpe?g|js|mp(2|3|4|e?g)|mov(ie)?|msi|msp|pdf|phps|png|ppt(x|m)?|pot(x|m)?|pps(x|m)?|ppam|sld(x|m)?|thmx|qtm?|ra(m|r)?|sea|sit|tar|tgz|torrent|txt|wav|wma|wmv|wpd|xls(x|m|b)?|xlt(x|m)|xlam|xml|z|zip"}});
+//--><!]]>
+</script>
+
+        <!-- Inlined Modernizr extensions to prevent delayed position jump ( Must be after Modernizr load ) -->
+        <script>
+            ;(function(Modernizr, window) {
+                Modernizr.addTest('positionfixed', function () {
+                    var test  = document.createElement('div'),
+                        control = test.cloneNode(false),
+                            fake = false,
+                            root = document.body || (function () {
+                            fake = true;
+                            return document.documentElement.appendChild(document.createElement('body'));
+                        }());
+
+                    var oldCssText = root.style.cssText;
+                    root.style.cssText = 'padding:0;margin:0';
+                    test.style.cssText = 'position:fixed;top:42px';
+                    root.appendChild(test);
+                    root.appendChild(control);
+               
+                    var ret = test.offsetTop !== control.offsetTop;
+               
+                    root.removeChild(test);
+                    root.removeChild(control);
+                    root.style.cssText = oldCssText;
+               
+                    if (fake) {
+                        document.documentElement.removeChild(root);
+                    }
+               
+                    return ret;
+                });
+                
+                Modernizr.addTest('iospositionfixed', function () {
+                    var test  = document.createElement('div'),
+                        ret,
+                        fake = false,
+                        root = document.body || (function () {
+                            fake = true;
+                            return document.documentElement.appendChild(document.createElement('body'));
+                        }());
+                    
+                    if (typeof document.body.scrollIntoViewIfNeeded === 'function') {
+                    
+                        var oldCssText = root.style.cssText,
+                            testScrollTop = 20,
+                            originalScrollTop = window.pageYOffset;
+
+                        root.appendChild(test);
+
+                        test.style.cssText = 'position:fixed;top:0px;height:10px;';
+
+                        root.style.height="3000px";
+                        
+                        /* avoided hoisting for clarity */
+                        var testScroll = function() {
+                            if (ret === undefined) {
+                                test.scrollIntoViewIfNeeded();
+                                if (window.pageYOffset === testScrollTop) {
+                                    ret = true;
+                                } else {
+                                    ret = false;
+                                }
+                            }
+                            window.removeEventListener('scroll', testScroll, false);
+                        }
+
+                        try {
+                        window.addEventListener('scroll', testScrollTop, false);
+                        }
+                        catch(err) {
+                        //      
+                        }
+                        
+                        window.setTimeout(testScroll, 20); // ios 4 does'nt publish the scroll event on scrollto
+                        window.scrollTo(0, testScrollTop);
+                        testScroll();
+
+                        root.removeChild(test);
+                        root.style.cssText = oldCssText;
+                        window.scrollTo(0, originalScrollTop);
+
+                    } else {
+                        ret = Modernizr.positionfixed; // firefox and IE doesnt have document.body.scrollIntoViewIfNeeded, so we test with the original modernizr test
+                    }
+                        
+                    if (fake) {
+                        document.documentElement.removeChild(root);
+                    }
+
+                    return ret;
+                });
+            })(Modernizr, window);
+        </script>
+
+        <!-- Inlined loading of web fonts to prevent FOUT -->
+        <script src="//ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont.js"></script>
+
+        <!-- New handler for font load so MecheController can be initialized once fonts are available -->
+        <script>
+            (function() {
+
+                var controllerUpdated = false;
+                var wait;
+
+                function updateControllerFonts() {
+                    
+                    if(typeof MecheController != "undefined") {
+                        clearInterval(wait);
+                        MecheController.initWithFonts();
+                        
+                    }
+                }
+
+                function onFontsLoaded() {
+                   
+                    if(typeof MecheController != "undefined") {
+                        MecheController.initWithFonts();
+                    } else {
+                        wait = setInterval(updateControllerFonts, 50);
+                    }
+                }
+                // load fonts
+                window.WebFontConfig
+                WebFont.load( {
+
+                        google: {
+                                families: ['Open Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700', 'Rajdhani:300,400,500,600,700']
+                        },
+                        active : onFontsLoaded,
+                        loading : function() {
+                                
+                        },
+                        timeout : 5000
+
+                });
+            })();
+            
+        </script>
+        
+
+        <title>MECHE PEOPLE: Ioannis Yannas | MIT Department of Mechanical Engineering</title>
+    </head>
+<body class="html not-front not-logged-in no-sidebars page-people page-people-faculty page-people-faculty-yannasmitedu people faculty-plus mix-blend-mode mix-blend-mode" >
+      <div class="app-outer-wrap">
+      <div class="app-inner-wrap">
+      <a href="#" class="screen-btn exit-off-canvas">close menu</a>
+        <div class="region region-navigation">
+    <div id="block-block-1" class="block block-block">
+
+    
+  <div class="content">
+    <aside class="off-canvas-menu"><div class="nav-wrap">
+        <div class="main-nav-wrap nano-wrap">
+            <nav id="main-menu" class="main-nav nano-content overthrow" role="navigation" aria-label="main"><div class="main-nav-top">
+                      <a href="https://meche-res.mit.edu/resource_links/" class="resources-btn"><span class="fa fa-lock"></span><span>Find Resources</span><span class="fa fa-chevron-right"></span></a>
+                    <!-- NOTE | CHANGE on 10/08/15
+                         - - - - - - - - - - - - -
+                         Added <span class="visually-hidden">Close Menu</span> and aria-hidden="true" to the icon
+                    -->
+                    <a href="#exit-menu" class="close-btn exit-off-canvas" role="button" title="close side navigation">
+                        <span class="fa fa-close"></span>
+                        <span class="visually-hidden">Close Menu</span>
+                    </a>
+                </div>
+
+                <div class="main-nav-core">
+                    <div class="search-bar" role="search">
+                        <form class="search-form" action="/people/faculty/YANNAS@MIT.EDU" method="post" id="search-form" accept-charset="UTF-8"><div><div class="container-inline form-wrapper" id="edit-basic"><div class="form-item form-type-textfield form-item-keys">
+  <input placeholder="Search" type="text" id="edit-keys" name="keys" value="" size="20" maxlength="255" class="form-text" /></div>
+<input type="submit" id="edit-submit" name="op" value="Search" class="form-submit" /><input type="hidden" name="get" value="[]" /><button type="submit"><i class="fa fa-search"></i></button></div><input type="hidden" name="form_build_id" value="form-BDP2q1zIslGEMHskjX0BB0wVJcHDv6WXV1vQmL5IptY" /><input type="hidden" name="form_id" value="apachesolr_search_custom_page_search_form_menu" /></div></form>                    </div>
+                    <hr class="meche-dots" /><!-- NOTE | CHANGE on 10/08/15
+                         - - - - - - - - - - - - -
+                         Added <span class="visually-hidden">...</span> to the icon button icons for
+                         each of the items that have a secondary navigation panel to support screen readers
+                    --><div role="region" aria-label="menu">
+                        <ul class="main-nav-items special"><li class="main-nav-item education" data-subnav="about">
+                                
+                                <h2 class="main-nav-item">
+                                    <a href="/about" class="main-nav-item-link">
+                                        <span class="main-nav-item-title">About</span>
+                                        <span class="main-nav-item-detail">Who we are</span>
+                                    </a>
+                                </h2>
+                                <a href="1" class="main-nav-item-more-btn" aria-haspopup="true" aria-owns="about-nav">
+                                    <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                                    <span class="visually-hidden">See About Menu</span>
+                                </a>
+                            </li>
+                            <li class="meche-dots" aria-hidden="true"></li>
+
+
+                            <li class="main-nav-item impact" data-subnav="impact">
+                                
+                                <h2 class="main-nav-item">
+                                    <a href="/impact" class="main-nav-item-link">
+                                        <span class="main-nav-item-title">Impact</span>
+                                        <span class="main-nav-item-detail">World-Changing Engineering</span>
+                                    </a>
+                                </h2>
+                                <a href="1" class="main-nav-item-more-btn" aria-haspopup="true" aria-owns="impact-nav">
+                                    <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                                    <span class="visually-hidden">See Impact Menu</span>
+                                </a>
+                            </li>
+                            <li class="meche-dots" aria-hidden="true"></li>
+                            <li class="main-nav-item research" data-subnav="research">
+                                <h2 class="main-nav-item">
+                                    <a class="main-nav-item-link" href="/research">
+                                        <span class="main-nav-item-title">Research</span>
+                                        <span class="main-nav-item-detail">Focus Areas and Labs</span>
+                                    </a>
+                                </h2>
+    
+                                <a href="2" class="main-nav-item-more-btn" aria-haspopup="true" aria-owns="research-nav">
+                                    <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                                    <span class="visually-hidden">See Research Menu</span>
+                                </a>
+                            </li>
+                            <li class="meche-dots" aria-hidden="true"></li>
+                            <li class="main-nav-item people" data-subnav="people">
+                                <h2 class="main-nav-item">
+                                    <a class="main-nav-item-link" href="/people">
+                                        <span class="main-nav-item-title">People</span>
+                                        <span class="main-nav-item-detail">Faculty and Staff</span>
+                                    </a>
+                                </h2>
+                                <a href="3" class="main-nav-item-more-btn" aria-haspopup="true" aria-owns="people-nav">
+                                    <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                                    <span class="visually-hidden">See People Submenu</span>
+                                </a>
+                            </li>
+                            <li class="meche-dots"></li>
+                            <li class="main-nav-item education" data-subnav="education">
+                                <h2 class="main-nav-item">
+                                    <a class="main-nav-item-link" href="/education">
+                                        <span class="main-nav-item-title">Education</span>
+                                        <span class="main-nav-item-detail">Degree Programs and Classes</span>
+                                    </a>
+                                </h2>
+                                
+                                <a href="4" class="main-nav-item-more-btn" aria-haspopup="true" aria-owns="education-nav">
+                                    <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                                    <span class="visually-hidden">See Education Menu</span>
+                                </a>
+                            </li>
+                            <li class="meche-dots"></li>
+                            <li class="main-nav-item news-and-media" data-subnav="news-media">
+                                <h2 class="main-nav-item">
+                                    <a class="main-nav-item-link" href="/news-media">
+                                        <span class="main-nav-item-title">News &amp; Video</span>
+                                        <span class="main-nav-item-detail">News, Press, Video and Photos</span>
+                                    </a>
+                                </h2>
+                                <a href="4" class="main-nav-item-more-btn" aria-haspopup="true" aria-owns="news-media-nav">
+                                    <i aria-hidden="true" class="fa fa-chevron-right"></i>
+                                    <span class="visually-hidden">See news and media menu</span>
+                                </a>
+                            </li>
+                        </ul></div>        
+                   <h2 class="support-meche-item"><a class="support-meche main-nav-item-app-link" href="/how-apply">Apply to MIT MechE</a></h2>
+                </div>
+            </nav></div>
+
+        
+        <div class="sub-nav-wrap nano-wrap">
+            <div class="nano-content overthrow"><!-- *** NEW NODE *** -->
+                <div class="sub-nav-top">
+                    <a href="#main-menu" class="btn-main-menu"><span class="fa fa-chevron-left"></span><span class="btn-label">Back</span></a>
+                    <a href="#close-menu" class="close-btn exit-off-canvas" role="button" title="close side navigation">
+                        <span class="fa fa-close"></span>
+                        <span class="visually-hidden">Close Menu</span>
+                    </a>
+                </div>
+                <div role="region" aria-label="submenu">
+
+                  <nav id="about-nav" class="sub-nav-group about" role="navigation" aria-label="about items"><div class="sub-nav-header">
+                            <a href="/about">
+                                <span>About</span>
+                            </a>
+                        </div>
+                        <!--<hr class="meche-dots" />-->
+                        <ul class="sub-nav-items"><li class="sub-nav-item"><a class="sub-nav-item-link" href="/meche-history-and-timeline">History</a></li>
+                            <li class="sub-nav-item"><a class="sub-nav-item-link" href="/people/diversity-equity-and-inclusion">Diversity Equity &amp; Inclusion</a></li>
+                            <li class="sub-nav-item"><a class="sub-nav-item-link" href="/ethics">Ethics and Integrity</a></li>
+                            <li class="sub-nav-item"><a class="sub-nav-item-link" href="/sites/default/files/2018-Strategic-Plan.pdf">Strategic Plan (PDF)</a></li>
+                            <li class="sub-nav-item"><a class="sub-nav-item-link" href="/faculty-positions">Faculty Openings</a></li>
+                            <li class="sub-nav-item"><a class="sub-nav-item-link" href="/alumni">Alumni</a></li>
+                            <li class="sub-nav-item"><a class="sub-nav-item-link" href="/alliance">MechE Alliance</a></li>
+                            <li class="sub-nav-item"><a class="sub-nav-item-link" href="https://giving.mit.edu/explore/schools/engineering/meche">Support MechE</a></li>
+                            <li class="sub-nav-item"><a class="sub-nav-item-link" href="/contact">Contact Us</a></li>
+                        </ul></nav><nav id="impact-nav" class="sub-nav-group impact" role="navigation" aria-label="impact items"><div class="sub-nav-header">
+                            <a href="/impact">
+                                <span>Impact</span>
+                            </a>
+                        </div>
+                        <!--<hr class="meche-dots" />-->
+                        <ul class="sub-nav-items"><li class="sub-nav-item"><a class="sub-nav-item-link" href="/impact/health">Health</a></li>
+                            <li class="sub-nav-item"><a class="sub-nav-item-link" href="/impact/environment">Environment</a></li>
+                            <li class="sub-nav-item"><a class="sub-nav-item-link" href="/impact/innovation">Innovation</a></li>
+                            <li class="sub-nav-item"><a class="sub-nav-item-link" href="/impact/energy">Energy</a></li>
+                            <li class="sub-nav-item"><a class="sub-nav-item-link" href="/impact/security">Security</a></li>
+                        </ul></nav><nav id="research-nav" class="sub-nav-group research" role="navigation" aria-label="research items"><div class="sub-nav-header">
+                            <a href="/research">
+                                <span>Research</span>
+                            </a>
+                        </div>
+                        <!--<hr class="meche-dots" />-->
+                        <ul class="sub-nav-items"><li class="sub-nav-item"><a class="sub-nav-item-link" href="/research/mechanics">Mechanics</a></li>
+                            <li class="sub-nav-item"><a class="sub-nav-item-link" href="/research/design">Design</a></li>
+                            <li class="sub-nav-item"><a class="sub-nav-item-link" href="/research/controls">Controls</a></li>
+                            <li class="sub-nav-item"><a class="sub-nav-item-link" href="/research/energy">Energy</a></li>
+                            <li class="sub-nav-item"><a class="sub-nav-item-link" href="/research/ocean">Ocean</a></li>
+                            <li class="sub-nav-item"><a class="sub-nav-item-link" href="/research/bioengineering">Bio</a></li>
+                            <li class="sub-nav-item"><a class="sub-nav-item-link" href="/research/nano">Micro + Nano</a></li>
+                        </ul></nav><nav id="people-nav" class="sub-nav-group people" role="navigation" aria-label="people"><div class="sub-nav-header">
+                            <a href="/people">
+                                <span>People</span>
+                            </a>
+                        </div>
+                        <!--<hr class="meche-dots" />-->
+                        <ul class="sub-nav-items"><li class="sub-nav-item"><a class="sub-nav-item-link" href="/people/diversity-equity-and-inclusion">Diversity, Equity, and Inclusion</a></li>
+                            <li class="sub-nav-item"><a class="sub-nav-item-link" href="/people?">Faculty</a></li>
+                            <li class="sub-nav-item"><a class="sub-nav-item-link" href="/people/emeritus">Faculty Emeritus</a></li>
+                            <li class="sub-nav-item"><a class="sub-nav-item-link" href="/people/staff-listing?field_staff_role_tid[]=46">Research Staff</a></li>
+                            <li class="sub-nav-item"><a class="sub-nav-item-link" href="/people/staff-listing?field_staff_role_tid[]=55">Post Docs</a></li>
+                            <li class="sub-nav-item"><a class="sub-nav-item-link" href="/people/staff-listing?field_staff_role_tid[]=47">Teaching Staff</a></li>
+                            <li class="sub-nav-item"><a class="sub-nav-item-link" href="/people/staff-listing?field_staff_role_tid[]=43">Admin Staff</a></li>
+                            <li class="sub-nav-item"><a class="sub-nav-item-link" href="/people/staff-listing?field_staff_role_tid[]=44">Support Staff</a></li>
+                            <li class="sub-nav-item"><a class="sub-nav-item-link" href="/people/all">Full Directory</a></li>
+                        </ul></nav><nav id="education-nav" class="sub-nav-group education" role="navigation" aria-label="education"><div class="sub-nav-header">
+                            <a href="/education">
+                                <span>Education</span>
+                            </a>
+                        </div>
+                        <!--<hr class="meche-dots" />-->
+                        <ul class="sub-nav-items"><li class="sub-nav-item"><a class="sub-nav-item-link" href="/featured-classes">Class Offerings</a></li>
+                            <li class="sub-nav-item"><a class="sub-nav-item-link" href="/education/prospective-students">Prospective Students</a></li>
+                            <li class="sub-nav-item"><a class="sub-nav-item-link" href="/education/undergraduate">Undergraduate</a></li>
+                            <li class="sub-nav-item"><a class="sub-nav-item-link" href="/education/graduate">Graduate</a></li>
+                            <li class="sub-nav-item"><a class="sub-nav-item-link" href="/education/post-doc">Post-Doc</a></li>
+                           <li class="sub-nav-item"><a class="sub-nav-item-link" href="/careers">Careers</a></li>
+                 <!-- removed 9/1/2000 per JF request
+                            <li class="sub-nav-item"><a class="sub-nav-item-link" href="/education/professional">Professional Education</a></li>
+                            <li class="sub-nav-item"><a class="sub-nav-item-link" href="/education/meche-summer-x">MechE Summer X</a></li>
+                 -->
+                        </ul></nav><nav id="culture-nav" class="sub-nav-group culture" role="navigation" aria-label="culture"><div class="sub-nav-header">
+                            <a href="/culture">
+                                <span>Culture</span>
+                            </a>
+                        </div>
+                        <hr class="meche-dots" /></nav><nav id="news-nav" class="sub-nav-group news-media" role="navigation" aria-label="news and media"><div class="sub-nav-header">
+                            <a href="/news-media">
+                                <span>News + Video</span>
+                            </a>
+                        </div>
+                        <!--<hr class="meche-dots" />-->
+                        <ul class="sub-nav-items"><li class="sub-nav-item"><a class="sub-nav-item-link" href="/news-media/news">Press</a></li>
+                            <li class="sub-nav-item"><a class="sub-nav-item-link" href="/news-media/video/">Video Galleries</a></li>
+                            <li class="sub-nav-item"><a class="sub-nav-item-link" href="/news-media/image-gallery/906">Photo Galleries</a></li>
+                            <li class="sub-nav-item"><a class="sub-nav-item-link" href="/meche-connects-newsletter">Newsletter</a></li>
+                            <li class="sub-nav-item"><a class="sub-nav-item-link" href="/international-colloquia-thermal-innovations">Colloquia</a></li>
+                        </ul></nav></div>
+            </div><!-- *** NEW NODE ( CLOSING TAG ) *** -->
+        </div>
+    </div>
+</aside>  </div>
+</div>
+  </div>
+
+      <div class="fluid">
+          <div class="hbar hbar-alert clearfix hide"><a href="#" class="small message"><i> ••• </i>Lorem ipsum dolor sit amet. Lorem ipsum.</a><a class="btn-close">Close Alert</a></div>
+      </div>
+      
+      <div class="hbar hbar-nav-main fixed" role="region" aria-label="navigation bar">
+          <a href="/" class="nav-bar-logo">MIT MechE</a>
+          <div id="vr-btn" class="btn-container">
+            <a class="btn btn-primary blue centered" style="margin-top:0px; background-color:#ef0166; padding-top: 0px; padding-bottom: 0px; min-width:0px; min-height: 0px; width: -moz-max-content; width: -webkit-max-content; width: max-content;" href="/meche-covid-19-resources">MechE Covid-19 Resources <i class="fa fa-arrow-circle-right"></i></a>
+          </div>
+          <nav class='breadcrumbs' role='menubar' aria-label='breadcrumbs'>
+    <li class='home' role='menuitem'><a href='/'><i class='fa fa-arrow-circle-o-left'></i>Home</a></li><li role='menuitem' ><a href='/people'>People</a></li><li role='menuitem' class='current'><a href='#'>Yannas, Ioannis V</a></li></nav>          <a href="#main-menu" class="btn-side-menu right-off-canvas-toggle" role="button" aria-expanded="false" aria-controls="main-nav-side-menu"><span>menu</span><i class="fa fa-2x fa-navicon"></i></a>
+      </div>
+        <div class="region region-rotator">
+    <div id="block-meche-blocks-profile-hero" class="block block-meche-blocks">
+
+    
+  <div class="content">
+    <!-- ****************  F S   B A C K G R O U N D   I M A G E  ****************-->       
+    <div class='fluid panel-container fs-hero no-cover'>
+        <div>
+    
+            <!-- FULLSCREEN BG IMAGE -->
+            <div class='bg-fluid-image'>
+                <div class='mesh-bg light'></div>
+                <img class='bg-img bg-width' src='http://meche.mit.edu/sites/default/files/styles/hero/public/Ioannis%20V.%20Yannas_1.jpg?itok=aDftbSb7' alt='Ioannis Yannas' />
+            </div>
+            <div class='bg-img-content vc-parent middle left' role='banner'>
+                <div class='vc-child faculty-plus-hero-content orange'>
+                    <hr class='meche-dots fat' />
+                    <div class='intro'>
+                        <h3 class='faculty-rank'>Professor</h3>
+                        <h1 class='faculty-name'>Ioannis Yannas </h1>
+                        <p>Professor of Polymer Science & Engineering</p>
+                    </div>
+                    <div class='interests'>
+                        <hr class='meche-dots hairline' />
+                        <h3>Interests</h3>
+                        <ol class='numeric'>
+                            <li class='inverted'>Basic science of organ regeneration</li><li class='inverted'>Regeneration of skin, peripheral nerves, spinal cord and conjunctiva</li><li class='inverted'>Molécular biological mechanism of induced regeneration </li>
+                        </ol>
+                    </div>
+                    <hr class='meche-dots thin' />
+                </div>
+            </div>
+            
+        </div>
+    </div>
+  <div class='row hbar-secondary-container'>
+    <div class='scroll-btn-container align-c hide-for-small-only'>
+        <a class='btn btn-jumper'>
+            <p class='jump-label'>More About Ioannis</p>
+            <i class='jump-icon fa fa-chevron-circle-down'></i>
+        </a>
+    </div>
+</div><section class='fluid layer'>
+    <div class='hbar hbar-faculty-details'>
+        <div class='top-details clearfix'>
+            <div class='info-header show-for-small-only'>
+                <h3>Contact Info</h3>
+            </div>
+            <div class='location-group clearfix'>
+                <div class='room-block vc-parent'>
+                    <div class='vc-child'>
+                        <span class='room-title'>room</span>
+                        <span class='room-number'><a href='http://whereis.mit.edu/?mapterms=3-332' class='room-number'>3-332<i class='fa fa-map-marker'></i></a></span>
+                    </div>
+                </div>
+                <div class='address-block vc-parent'>
+                    <div class='vc-child'>
+                        <p>Massachusetts Institute of Technology</p>
+                        <p>77 Massachusetts Avenue</p>
+                        <p>Cambridge, Massachusetts 02139</p>
+                    </div>
+                    
+                </div>
+            </div>
+            <div class='contact-group clearfix'>
+                <div class='contact-block digital vc-parent'>
+                    <div class='vc-child'>
+                        <ul>
+                            <li class='primary-contact-method email'><a href='mailto:yannas@mit.edu'><i class='fa fa-envelope'></i><span>email</span></a></li></ul>
+                    </div>
+                </div>
+                <div class='contact-block vc-parent'>
+                    <div class='vc-child'>
+                        <ul>
+                            <li><a class='tel' href='tel:+1617.253.4469'><i class='fa fa-phone'></i><span>617.253.4469</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class='personal-group'>
+                <div class='cv-block vc-parent'>
+                    <div class='vc-child'>
+                        <a href='http://meche.mit.edu/sites/default/files/cv/Curriculum%20Vitae%20of%20Ioannis%20V_0.pdf' class='btn btn-primary orange'>Download CV <i class='fa fa-arrow-circle-down'></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class='research-group'>
+                <div class='ra-block vc-parent'>
+                    <div class='vc-child'>
+                        <div class='ra-icon-bar'>
+                            <span class='title'>Associated Research Areas</span>
+                            <ul class='clearfix'>
+                            <li >
+        <a href='/research/mechanics' data-tooltip aria-haspopup='true' data-options='additional_inheritable_classes: ra-tip;' class='has-tip tip-top ra-tip' title='mechanics'>
+            <i class='ra-icon mechanics'><span class='visually-hidden'>mechanics</span></i>
+        </a>
+        </li><li >
+        <a href='/research/design' data-tooltip aria-haspopup='true' data-options='additional_inheritable_classes: ra-tip;' class='has-tip tip-top ra-tip' title='design'>
+            <i class='ra-icon design'><span class='visually-hidden'>design</span></i>
+        </a>
+        </li><li >
+        <a href='/research/controls' data-tooltip aria-haspopup='true' data-options='additional_inheritable_classes: ra-tip;' class='has-tip tip-top ra-tip' title='controls'>
+            <i class='ra-icon controls'><span class='visually-hidden'>controls</span></i>
+        </a>
+        </li><li >
+        <a href='/research/energy' data-tooltip aria-haspopup='true' data-options='additional_inheritable_classes: ra-tip;' class='has-tip tip-top ra-tip' title='energy'>
+            <i class='ra-icon energy'><span class='visually-hidden'>energy</span></i>
+        </a>
+        </li><li >
+        <a href='/research/ocean' data-tooltip aria-haspopup='true' data-options='additional_inheritable_classes: ra-tip;' class='has-tip tip-top ra-tip' title='ocean'>
+            <i class='ra-icon ocean'><span class='visually-hidden'>ocean</span></i>
+        </a>
+        </li><li class='active'>
+        <a href='/research/bioengineering' data-tooltip aria-haspopup='true' data-options='additional_inheritable_classes: ra-tip;' class='has-tip tip-top ra-tip' title='bioengineering'>
+            <i class='ra-icon bio'><span class='visually-hidden'>bioengineering</span></i>
+        </a>
+        </li><li >
+        <a href='/research/nano' data-tooltip aria-haspopup='true' data-options='additional_inheritable_classes: ra-tip;' class='has-tip tip-top ra-tip' title='nano'>
+            <i class='ra-icon nano'><span class='visually-hidden'>nano</span></i>
+        </a>
+        </li></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><div class='hbar hbar-admin-details'>
+             <!-- ADMIN CONTACT -->
+            <div class='bottom-details'>
+                <div class='admin-details clearfix'>
+                    <span class='arrow-box admin-detail label'>Administrative Contact</span>
+                    <a class='arrow-box admin-detail person' href='/people/staff/jgaken@mit.edu'>Gaken, Joseph Michael</a>
+                    <span class='admin-detail contact-detail room'><a href='http://whereis.mit.edu/?mapterms=3-469' class='room-number'><i class='fa fa-map-marker'></i>3-469</a></span>
+                    <span class='admin-detail contact-detail email'><a href='mailto:JGAKEN@MIT.EDU'><i class='fa fa-envelope'></i>JGAKEN@MIT.EDU</a></span>
+                    <span class='admin-detail contact-detail phone'><a class='tel' href='tel:+1617.324.6108'><i class='fa fa-phone'></i>617.324.6108</a></span>
+                </div>  
+            </div>
+        </div></section>  </div>
+</div>
+  </div>
+  <div class="region region-content">
+    <div id="block-meche-blocks-profile-highlights" class="block block-meche-blocks">
+
+    
+  <div class="content">
+    <!-- ****************  F E A T U R E D   B L O C K (s)  ****************-->
+      <section class='fluid panel-block default-featured-block layer gray-block'>   
+          <div class='row header-block'>
+              <div class='column small-12'>
+                  <h3 class='align-c xlarge'>Professor Yannas News + Media</h3>
+                  <hr class='meche-dots thin black' />
+              </div>
+          </div>
+          <div class='row' data-equalizer><div class='column large-4'>
+                    <div class='news-block clearfix'>
+                        <div class='img-container'>
+                            <img src='http://meche.mit.edu/sites/default/files/styles/faculty_highlight/public/highlights/Yanni_video_460.jpg?itok=uSFqdtqi' alt='Hope Regenerated: A life-saving discovery at MechE' />
+                        </div>
+                        <div class='news-block-details'>
+                            <div data-equalizer-watch>
+                                <h3>Hope Regenerated: A life-saving discovery at MechE</h3>
+                                <hr class='meche-dots thin black' />
+                                <p>A “failed experiment” became a life-saving discovery by MIT Professor Ioannis V. Yannas and his colleague Dr. John Burke when their search for a better way to treat severe burn victims led to the discovery of organ regeneration. </p>
+                            </div>
+                            <div class='link-wrap'>
+                                <a class='link link-primary blue' href='http://meche.mit.edu/news-media/video/0/1356'>WATCH VIDEO</a>
+                            </div>
+                        </div>
+                    </div>
+                </div><div class='column large-4'>
+                    <div class='news-block clearfix'>
+                        <div class='img-container'>
+                            <img src='http://meche.mit.edu/sites/default/files/styles/faculty_highlight/public/highlights/yannas_news1_460.jpg?itok=8eTZQFJ2' alt='Using mechanical forces to improve wound healing' />
+                        </div>
+                        <div class='news-block-details'>
+                            <div data-equalizer-watch>
+                                <h3>Using mechanical forces to improve wound healing</h3>
+                                <hr class='meche-dots thin black' />
+                                <p>Alum Dennis Orgill SM ’80, PhD ’83 applies the mechanical engineering principles he learned from Professor Ioannis V. Yannas to the operating room.</p>
+                            </div>
+                            <div class='link-wrap'>
+                                <a class='link link-primary blue' href='http://meche.mit.edu/news-media/using-mechanical-forces-improve-wound-healing'>READ MORE</a>
+                            </div>
+                        </div>
+                    </div>
+                </div><div class='column large-4'>
+                    <div class='news-block clearfix'>
+                        <div class='img-container'>
+                            <img src='http://meche.mit.edu/sites/default/files/styles/faculty_highlight/public/highlights/Ioannis_460.jpg?itok=2gLaKEp5' alt='Ioannis Yannas to be Inducted into the National Inventors Hall of Fame' />
+                        </div>
+                        <div class='news-block-details'>
+                            <div data-equalizer-watch>
+                                <h3>Ioannis Yannas to be Inducted into the National Inventors Hall of Fame</h3>
+                                <hr class='meche-dots thin black' />
+                                <p>Yannas’ invention of artificial skin did more than just block infection and retain moisture — it actually helped to regenerate the skin.</p>
+                            </div>
+                            <div class='link-wrap'>
+                                <a class='link link-primary blue' href='http://meche.mit.edu/news-media/ioannis-yannas-be-inducted-national-inventors-hall-fame'>READ MORE</a>
+                            </div>
+                        </div>
+                    </div>
+                </div></div></section>  </div>
+</div>
+<div id="block-meche-blocks-profile-education-plus" class="block block-meche-blocks">
+
+    
+  <div class="content">
+    <section class='fluid jumper-nav-block white-block panel-block layer'>
+        <div class='row'>
+            <div class='column small-12 show-for-medium-up align-c'>
+                <h3 class='jump-nav-label'>Faculty Details</h3>
+            </div>
+            <div class='column small-12 show-for-medium-up align-c'>   
+                <div class='hbar hbar-nav-jumper'>
+                    <ul>
+                        <li><a href='#education'>Education</a></li>
+                        <li class='divider' aria-hidden='true'></li>
+                        <li><a href='#research-interests'>Research Interests</a></li>
+                        <li class='divider' aria-hidden='true'></li>
+                        <li><a href='#other-details'>Bio</a></li>
+                        <li class='divider' aria-hidden='true'></li>
+                        <li><a href='#online-data'>Online Data</a></li>
+                        <li class='divider' aria-hidden='true'></li>
+                        <li><a href='#honors-and-awards '>Honors/Awards</a></li>
+                        <li class='divider' aria-hidden='true'></li>
+                        <li><a href='#related-experience'>Related Experience</a></li>
+                        <li class='divider' aria-hidden='true'></li>
+                        <li><a href='#memberships'>Memberships</a></li>
+                    </ul>
+                    <ul>
+                        <li><a href='#professional-service'>Professional Service</a></li>
+                        <li class='divider' aria-hidden='true'></li>
+                        <li><a href='#mit-service'>MIT Service</a></li>
+                        <li class='divider' aria-hidden='true'></li>
+                        <li><a href='#classes'>Teaching</a></li>
+                        <li class='divider' aria-hidden='true'></li>
+                        <li><a href='#publications '>Publications</a></li>
+                        <li class='divider' aria-hidden='true'></li>
+                        <li><a href='#patents'>Patents</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section><section class='fluid panel-block profile-details layer'>
+        <div class='row'>
+            <div class='column small-12 education-block clearfix'>
+                <div id='education' class='education-block-content'>
+                    <h2>Education</h2>
+                    <div class='degrees'>
+                    <ul class='clearfix'><li class='degree'>
+            <div>
+                <h3>1957</h3>
+                <p>HARVARD COLLEGE</p>
+                <span>A.B.</span>
+            </div>
+        </li><li class='degree'>
+            <div>
+                <h3>1959</h3>
+                <p>MASSACHUSETTS INSTITUTE OF TECHNOLOGY (MIT)</p>
+                <span>M.S.</span>
+            </div>
+        </li><li class='degree'>
+            <div>
+                <h3>1965</h3>
+                <p>PRINCETON UNIVERSITY</p>
+                <span>M.A.</span>
+            </div>
+        </li><li class='degree'>
+            <div>
+                <h3>1966</h3>
+                <p>PRINCETON UNIVERSITY</p>
+                <span>Ph.D.</span>
+            </div>
+        </li></ul></div></div></div><div class='column small-12 profile-block'>
+              <div id='research-interests' class='profile-block-content'><h2>Research Interests</h2><p>The principal research interest of Dr Yannas is the process of induced organ regeneration used to replace organs that are either severely injured or are terminally diseased.</p>
+<p><u>Initial discovery of dermis regeneration</u>. In 1976 Yannas and John F. Burke, MD discovered the first scaffold with regenerative activity.  Although the strctural features of a scaffold with regenerative activity were not appreciated at that time, they were eventually (1989, 2015; see references below) recognized as those of a highly porous analog of the extracellular matrix based on type I collagen, a biodegradable scaffold with highly specific structural features. These required features included a specific range of the pore size, defined degradation half-life and specified surface chemistry. When this cell-free scaffold was grafted on deep skin wounds in guinea pigs  it was unexpectedly observed in 1976 that it led to strong delay of wound contraction and eventually to wound closure by formation of scarless tissue that had the appearance of dermis. The full significance of this discovery was not understood at that time; it was explained adequately about 40 years later (see below). Use of this scaffold, named dermis regeneration template (DRT), with full-thickness skin wounds in animal and humans led to synthesis of a nearly physiological dermis (1975-81). When this scaffold was seeded with keratinocytes it led to simultaneous regeneration of the dermis and the epidermis in animals and in humans (Orgill PhD thesis, 1981-83). [Early versions of the active scaffold were based on a graft copolymer of type I collagen and chondroitin 6-sulfate, a glycosaminoglycan.] An account of the early discovery of a process for dermis regeneration has been published (Yannas IV. Hesitant steps from the artificial skin to organ regeneration. Regenerative Biomaterials 5: 189-195 (2018)).</p>
+<p>This outcome was totally unexpected: Although the epidermis regenerates spontaneously on a pre-existing dermal substrate, the completely excised dermis does not regenerate spontaneously in the adult mammal. The work eventually led to development of a medical device (commercial name: Integra<sup>TM</sup>) that is currently used with increasing frequency to treat patients who have lost skin due to trauma, or are undergoing plastic surgery, or with patients suffering from chronic skin wounds. Its use in skin regeneration has been documented in over 300 clinical studies over the past several years, many of which are cited in the following website: http://www.ncbi.nlm.nih.gov/pubmed/?term=Integra+substitute+skin. The collagen scaffold work by the MIT group during the period 1976-1990 has provided the original paradigm in the fields of regenerative medicine and tissue engineering. This work resulted in the first patent on induced organ regeneration. (Yannas, I.V.,  J.F. Burke, D.P. Orgill, and E.M. Skrabut, Method of Promoting the Regeneration of Tissue at a Wound, U.S. Pat. 4,418,691, December 6, 1983).</p>
+<p><u>From skin to peripheral nerves</u>. The work with skin has been extended by Yannas and coworkers at MIT to regenerate peripheral nerves. Early work showed that the transected rat sciatic nerve was regenerated over unprecedented distances using, at first, silicone tubes filled with DRT and later simply a tubular connector based on DRT. These findings were used in an industrial laboratory to develop a commercial device (Neuragen<sup>TM</sup>) which is currently used to treat humans with paralysis of extremities resulting from severe injury (Orgill, MD thesis, 1985; L. Chamberlain PhD thesis, 1998-2000; E. Soller, PhD thesis, 2010-12). It was also used to regenerate the conjunctiva in adult rabbits (Hsu et al., 2000).</p>
+<p>Study of the wound healing process in skin and peripheral nerves by the Yannas group showed that both organs healed by contraction and scar formation. In healing wounds, contraction is mediated by myofibroblasts (MFB), which appear to apply a planar mechanical stress field in full-thickness skin wounds and a circumferential mechanical compression field around the stump of a transected nerve. These mechanical fields have accounted well for the observed orientation of MFB axes in healing wounds in the two organs as well as the eventual orientation of collagen fibers both in dermal scar (planar orientation) and neural scar (circumferential orientation). The difference between the spatial features of wound contraction in the two organs appears to be entirely a result of differences in the macroscopic geometry of the respective organ, not due to differences in the cell biology of wound healing in each organ. This conclusion suggests the possibility that other organs which share the same wound healing process as skin and peripheral nerves may be successfully subjected to the same regenerative treatment based on use of DRT. It was eventually realized by the MIT group (2014-2016) that the entire regenerative treatment in these two organs amounted to a simple modification of the normal wound healing process. It was concluded that what was preventing the normal wound healing process from inducing regeneration (rather than normal healing by wound contraction and scar formation) was  a scaffold with the appropriate surface chemistry, which would induce appropriate surface biological processes leading to blocking of wound contraction. Normal  wound contraction had, therefore, to be blocked in order to induce regeneration; there was no apparent need to apply exogenous cells or active soluble substances, such as stem cells or growth factors. This conclusion simplifies greatly the methodology of organ regeneration.</p>
+<p><u>Regeneration of the crushed spinal cord in animals</u>. Our findings (in collabaration with coworkers in Crete, Greece) show  that injured mice treated with neural stem cell (NSC)-seeded scaffolds performed significantly better than the untreated crush group on the ladder-walking test over 9 weeks post injury. <span style="font-size: 11pt; font-family: Cambria, serif;">Histological assessment of spinal cord sections revealed that NSC-seeded scaffolds managed to stay in place and protect seeded cells <i>in vivo</i> for at least 9 weeks, significantly increased axonal regeneration, and significantly reduced astrogliosis. (</span>Alexandra Kourgiantaki, Dimitrios S. Tzeranis, Kanelina Karali, Sotirios Psilodimitrakopoulos,   Maria Nikou, Ioannis V. Yannas, Emmanuel Stratakis, Kyriaki Sidiropoulou, Ioannis Charalampopoulos, and Achille Gravanis (2020). Neural stem cell delivery via porous collagen scaffolds promotes neuronal differentiation and locomotion recovery in spinal cord injury. npjRegenerative Medicine.  <strong>5</strong>, ‏1-14). </p>
+<p><u>Mechanism of regeneration</u>. The molecular-biological mechanism of scaffold regenerative activity was elucidated by the same MIT group (Yannas, Tzeranis, So, 2007-2014). The regenerative activity of the DRT scaffold appears to be related closely to the known contraction blocking property of DRT. Blocking of wound contraction occurs only when the structure of the collagen scaffold has been modified to provide critical levels of the average pore diameter (20-120 µm), degradation half-life (14 ± 7 days) and required features for a specific surface chemistry. Critical features of the surface chemistry include a minimal level of ligand density for two integrins, α1β1 or α2β1, that exceeds approximately 200 μΜ α1β1 or α2β1 μΜ ligands (Tzeranis, PhD thesis, 2013-2015). Binding of a sufficient number of MFB to the ligands GFOGER and GLOGEN on the scaffold surface, during a critical period after the wound is generated, appears to explain the drastic modification of the MFB phenotype which is observed when DRT is grafted in the wound. The MFB phenotype changes due to DRT are observed as simultaneous reduction in MFB density in the wound, dispersion of MFB assemblies and disorientation of MFB long axes. This profound phenotype modification of contractile fibroblasts in the presence of DRT appears to explain the cancellation of macroscopic contraction force, an event which ushers in regeneration. A summary of the mechanism of organ regeneration at differnt scales has been poublished (<span style="font-family: &quot;Times New Roman&quot;, serif; font-size: medium;">Yannas IV, Tzeranis DS, So PTC. (2018) Regeneration mechanism for skin and peripheral</span><span style="font-family: &quot;Times New Roman&quot;, serif; font-size: medium;"> nerves clarified at the organ and molecular scales. Current Opinion in Biomedical Engineering, </span><b style="font-family: &quot;Times New Roman&quot;, serif;">6</b><span style="font-family: &quot;Times New Roman&quot;, serif; font-size: medium;">:1-7)</span></p>
+<p class="desc" style="margin: 0in; font-size: medium; font-family: &quot;Times New Roman&quot;, serif;"><p></p></p>
+<p><u>Severely injured vs diseased organs</u>. It has been shown in numerous clinical studies that diseased skin, beset with pathology unrelated to trauma, can be regenerated provided that the diseased region of the organ has been reduced to a viable wound prior to grafting with DRT. In this clinical approach, deliberate surgical injury is inflicted in order to initiate the wound healing process, which is then modified using DRT in order to induce regeneration. For example, with skin that had become diseased by skin necrosis due to <em>purpura fulminans</em> (Besner and Klamar, 1998), use of DRT following skin excision led to dermis regeneration. These independent findings suggest that an organ which has become severely dysfunctional can be replaced by deliberating generating a wound in the organ, followed by grafting with DRT to induce regeenration of a functional tissue mass.</p>
+<p>The methodology for organ regeneration described by the Yannas group appears to be applicable to organs other than skin and peripheral nerves or the conjunctiva. The necessary conditions for inducing regeenration appear to be availability of a severe, though normal, wound and treatment of that wound by a scaffold with regenerative activity. Applicability to other organs appears to require that a wound in the candidate organ heals by the same mechanism as in skin, peripheral nerves and the conjunctiva. The induced regeneration approach using an active scaffold is increasingly used as an alternative to currently popular clinical treatment of skin loss by autografting, suggesting that it may also be a viable alternative to transplantation of other organs requiring replacement. However, this method is probably not directly applicable to wounds in organs, e.g., bone, where wounds heal by processes not directly related to those in organs that have been shown capable of induced regeenration. </p>
+<p><u>Description of organ regeneration methods in a monograph</u>. Detailed references to the anatomical structures involved in regeneration and to the mechanism of regenerative activity are described in Yannas’ book <em>Tissue and Organ Regeneration in Adults, </em>now in its second edition (NY: Springer, 2015).</p>
+<p>The story of a severely burned patient who was treated with Integra<sup>TM</sup> was authored by Michael McCarthy in the book, <em>The Sun Farmer </em>(Chicago: Ivan R. Dee, 2007).</p>
+<p>A 10-minute MIT video describing the clinical application of induced skin regeneration can be viewed here: <a href="http://www.youtube.com/watch?v=36_pUKGOC-4">A Lifesaving Discovery at MIT</a>. In the early 1980s, before confirmation became available that the collagen scaffold induces regeneration of skin, the scaffold was commonly referred to as "artificial skin".</p>
+<p><u>Honors for discoveries</u>. For his discoveries in organ regeneration Yannas was elected to the US National Academy of Medicine (1987) and the National Academy of Engineering (2017), and was inducted in the US National Inventors Hall of Fame (2015). Other awards were also received. </p>
+</div></div><div class='column small-12 profile-block'>
+              <div id='other-details' class='profile-block-content'><h2>Bio</h2><p><u>Biographical information</u>. Ioannis Yannas was born in Athens, Greece.  </p>
+<p>In 1953 Ioannis entered Harvard College and majored in Chemistry, graduating in 1957 with the A.B. degree. He then entered MIT where he earned a M.S. degree in Chemical Engineering Practice in 1959. After a period of industrial research on polymers at Grace Co., Cambridge, MA, he entered Princeton University where he earned the M.A. degree (1965) and the Ph.D degree (1966), both in Physical Chemistry. His doctoral thesis dealt with the viscoelastic behavior and thermal transitions in gelatin, the amorphous counterpart of the protein, collagen.</p>
+<p>Since 1966 Yannas has been employed as a faculty member by Massachusetts Institute of Technology (MIT), Cambridge, MA. He currently holds a full-time appointment in the Mechanical Engineering Department. He also holds an appointment at the Harvard-MIT Health Sciences and Technology Program. He teaches classes in Biomaterials-Tissue Interactions; Tissue Engineering and Organ Regeneration; and Design of Medical Devices and Implants.</p>
+<p style="margin: 12pt 0in;"> </p>
+</div></div><div class='column small-12 profile-block'>
+              <div id='online-data' class='profile-block-content'><h2>Online Data</h2><p style="margin-left:9.35pt;"><u>Early reports of regeneration of the dermis</u> using the dermis regeneration template (DRT) by the MIT group in collaboration with J.F. Burke, MD, Harvard Medical School, appeared in the following:</p>
+<ul><li style="margin-left: 9.35pt;"><span style="font-size: 13.008px;">Yannas I.V. and J.F.Burke. 1980. Design of an artificial skin. I. Basic Design Principles. J Biomed Mater Research 14, 65-81.</span></li>
+<li style="margin-left: 9.35pt;">Yannas, I.V. 1981. Use of artiﬁcial skin in wound management. In <em>The Surgical Wound</em>, edited by Dineen, P. Philadelphia: Lea &amp; Febiger.</li>
+<li style="margin-left: 9.35pt;"><span style="font-size: 13.008px;">Yannas, I.V., J.F. Burke, M. Warpehoski, P. Stasikelis, E.M. Skrabut, D. Orgill, and D.J. Giard. 1981. Prompt, long-term functional replacement of skin. <em>Trans. Am. Soc. Artif. Intern. Organs </em>27:19–22.</span></li>
+<li style="margin-left: 9pt;">Burke, J.F., I.V. Yannas, W.C.Q. Jr., C.C. Bondoc, and W.K. Jung. 1981. Successful use of a physiologically acceptable artiﬁcial skin in the treatment of extensive burn injury. <em>Ann. Surg. </em>194:413–428.</li>
+<li style="margin-left: 9pt;"><span style="font-size: 13.008px;">Yannas, I.V., J.F. Burke, D.P. Orgill, and E.M. Skrabut. 1982. Wound tissue can utilize a polymeric template to synthesize a functional extension of skin. <em>Science </em>215:174–176.</span></li>
+<li style="margin-left: 9pt;">Yannas, I.V., J.F. Burke, D.P. Orgill, and E.M. Skrabut. 1982. Regeneration of skin following closure of deep wounds with a biodegradable template. <em>Trans. Soc. Biomater. </em>5:24–27.</li>
+</ul><p style="margin-left:9.0pt;"><u>Confirmation of regeneration of the dermis</u> following treatment of full-thickness (dermis-free) skin wounds in adult guinea pigs was first reported in the following publications based on studies by Dr George F. Murphy, Laboratory of Dermatopathology, Brigham and Womens Hospital, Boston, MA:</p>
+<ul><li style="margin-left: 9pt;">Yannas, I.V., E. Lee, D.P. Orgill, E.M. Skrabut, and G.F. Murphy. 1989. Synthesis and characterization of a model extracellular matrix which induces partial regenera­tion of adult mammalian skin. <em>Proc. Natl. Acad. Sci. USA </em>86:933–937.</li>
+<li style="margin-left: 9pt;"><span style="font-size: 13.008px;">Murphy,G.F., D.P.Orgill, I.V.Yannas. 1990. Partial dermal regeneration is induced by biodegradable collagen-glycosaminoglycan grafts. </span><em style="font-size: 13.008px;">Lab. Invest. </em><span style="font-size: 13.008px;">62:305–313.</span></li>
+</ul><p style="margin-left: 9pt;"><span style="font-size: 13.008px;"><span style="font-size: 13.008px;">Independent confirmation of regeneration of dermis was obtained by C.C. Compton, Department of Dermatology, Brigham and Women’s Hospital, Boston, MA.</span></span></p>
+<ul><li style="margin-left: 9pt;"><span style="font-size: 13.008px;"><span style="font-size: 13.008px;">C.C. Compton, C.E. Butler, I.V. Yannas, G. Warland, and D.P. Orgill. 1998. Orga­nized skin structure is regenerated in vivo from collagen-GAG matrices seeded with autologous keratinocytes. </span><em style="font-size: 13.008px;">J. Invest. Dermatol. </em><span style="font-size: 13.008px;">110:908–916.</span></span></li>
+</ul><p style="margin-left: 9pt;"><u style="font-size: 13.008px;">Structural identification and required structural features of the dermis regeneration template (DRT)</u><span style="font-size: 13.008px;"> were reported in:</span></p>
+<ul><li style="margin-left: 9pt;">Yannas, I.V., E. Lee, D.P. Orgill, E.M. Skrabut, and G.F. Murphy. 1989. Synthesis and characterization of a model extracellular matrix which induces partial regenera­tion of adult mammalian skin. <em>Proc. Natl. Acad. Sci. USA </em>86:933–937.</li>
+<li style="margin-left: 9pt;"><span style="font-size: 13.008px;">Soller EC, Tzeranis DS, Miu K, So PT, Yannas IV. 2012. Common features of optimal collagen scaffolds that disrupt wound contraction and enhnce regeneration both in peripheral nerves and in skin.</span><span style="font-size: 13.008px;"> <em>Biomaterials</em>. 2012 Jun;33(19):4783-91.   </span></li>
+<li style="margin-left: 9pt;"><span style="font-size: 13.008px;">Yannas I.V., D. Tzeranis and P.T. So. Surface biology of collagen scaffold explains blocking of wound contraction and regeneration of skin and peripheral nerves. <em>Biomedical Materials.</em> 11:014106 (2015).</span></li>
+</ul><p style="margin-left: 9pt;"><span style="font-size: 13.008px;"><u style="font-size: 13.008px;">Early studies of peripheral nerve regeneration</u><span style="font-size: 13.008px;">:</span></span></p>
+<ul><li style="margin-left: 9pt;">Yannas, I.V., D.P. Orgill, J. Silver, T.V. Norregaard, N.T. Zervas, and W.C. Schoene. 1985. Polymeric template facilitates regeneration of sciatic nerve across 15 mm gap. <em>Trans. Soc. Biomater. </em>8:146, 1985.</li>
+<li style="margin-left: 9pt;"><span style="font-size: 13.008px;">Orgill D.P. 1985. Partial regeneration in mammalian tissues using polymeric materials. MD thesis, Harvard Medical School.</span></li>
+<li style="margin-left: 9pt;"><span style="font-size: 13.008px;">Yannas, I.V., D.P. Orgill, J. Silver, T. Norregaard, N.T. Zervas, and W.C. Schoene. 1987. Regeneration of sciatic nerve across 15-mm gap by use of a polymeric tem­plate. In </span><em style="font-size: 13.008px;">Advances in Biomedical Materials</em><span style="font-size: 13.008px;">, edited by Gebelein, C.G. Washington, DC: American Chemical Society.                                                                 </span></li>
+<li style="margin-left: 9pt;"><span style="font-size: 13.008px;">Yannas, I.V., T.V. Norregaard, J. Silver, N.T. Zervas, J.F. Kirk, and M.J. Colt. 1987. Relations between properties of collagen-glycosaminoglycan graft and morphol­ogy of regenerating nerve. Part I. </span><em style="font-size: 13.008px;">Trans</em><span style="font-size: 13.008px;">. </span><em style="font-size: 13.008px;">Soc. Biomater</em><span style="font-size: 13.008px;">. 10:6.</span></li>
+<li style="margin-left: 9pt;">Yannas,I.V., A.S.Chang, C.Krarup, R.Sethi, T.V.Norregaard,and N.T.Zervas.1988. Conduction properties of peripheral nerves regenerated by use of copolymer matrices with different biodegradation rates. <em>Soc. Neurosci. Abs. </em>14:165.</li>
+</ul><p style="margin-left: 9pt;"><u>Advanced studies in peripheral nerve regeneration</u>.</p>
+<ul><li style="margin-left: 9pt;"><span style="font-size: 13.008px;">Chamberlain, L.J., I.V. Yannas, H.-P. Hsu, G. Strichartz, and M. Spector. 1998. Collagen-GAG substrate enhances the quality of nerve regeneration through collagen tubes up to level of autograft. </span><em style="font-size: 13.008px;">Exp. Neurol. </em><span style="font-size: 13.008px;">154:315–329.</span></li>
+<li style="margin-left: 9pt;"><span style="font-size: 13.008px;">Chamberlain, L.J., I.V. Yannas, H.-P. Hsu, and M.  Spector. 2000. Connective tissue response to tubular implants for peripheral nerve regeneration: The role of myoﬁ­broblasts. </span><em style="font-size: 13.008px;">J. Comp. Neurol. </em><span style="font-size: 13.008px;">417:415–430. </span></li>
+<li style="margin-left: 9pt;"><span style="font-size: 13.008px;">Chamberlain, L.J., I.V. Yannas, H.-P. Hsu, G.R. Strichartz, and M. Spector. 2000. Near terminus axonal structure and function following rat sciatic nerve regenera­tion through a collagen-GAG matrix in a 10-mm gap. </span><em style="font-size: 13.008px;">J. Neurosci. Res</em><span style="font-size: 13.008px;">. 60:666–677.    </span></li>
+<li style="margin-left: 9pt;"><span style="font-size: 13.008px;"><span style="font-size: 13.008px;">Yannas IV, Zhang M, Spilker MH, 2007. Standardized criterion to analyze and directly compare various materials and models for peripheral nerve regeneration. <em>J Biomater Sci Polymer Ed.</em> </span><span style="font-size: 13.008px;">18(8):943-66.</span></span></li>
+<li style="margin-left: 9pt;"><span style="font-size: 13.008px;">Soller EC, Tzeranis DS, Miu K, So PT, Yannas IV. 2012. </span><span style="font-size: 13.008px;">Common features of optimal collagen scaffolds that disrupt wound contraction and enhnce regeneration both in peripheral nerves and in skin. Biomaterials. 2012 Jun;33(19):4783-91.   </span></li>
+</ul><p style="margin-left: 9pt;"><span style="font-size: 13.008px;"><u>Mechanistic studies of organ regeneration</u>                </span></p>
+<ul><li style="margin-left: 9pt;"><span style="font-size: 13.008px;">Yannas, I.V. and J.F. Burke. 1980. Design of an artiﬁcial skin I. Basic design princi­ples. <em>J. Biomed. Mater. Res. </em>14:65–81.                                                                         </span></li>
+<li style="margin-left: 9pt;"><span style="font-size: 13.008px;">Yannas IV. 1990. Biologically active analogues of the extracellular matrix: Artificial skin and nerves. <em>Angew. Chemie Intl. Ed. English 29:20-35.                               </em></span></li>
+<li style="margin-left: 9pt;"><span style="font-size: 13.008px;">Yannas, I.V. 1997. Models of organ regeneration processes induced by templates. </span><em style="font-size: 13.008px;">Ann. N. Y. Acad. Sci. </em><span style="font-size: 13.008px;">831:280–293.</span></li>
+<li style="margin-left: 9pt;"><span style="font-size: 13.008px;">Yannas IV. 2005. Similarities and differences between induced organ regeneration in adults and early foetal regeneration.<em> J Roy Soc Interface</em> 2:403-417.</span></li>
+<li style="margin-left: 9pt;">Soller EC, Tzeranis DS, Miu K, So PT, Yannas IV. 2012. Common features of optimal collagen scaffolds that disrupt wound contraction and enhnce regeneration both in peripheral nerves and in skin. Biomaterials. 2012 Jun;33(19):4783-91. doi: 10.1016/j.biomaterials.2012.03.068. Epub 2012 Apr 6.</li>
+<li style="margin-left: 9pt;"><span style="font-size: 13.008px;">I.V. Yannas, D. Tzeranis and P.T. So. Surface Biology of Collagen Scaffold Explains Blocking of Wound Contraction and Regeneration Of Skin and Peripheral Nerves. <em>Biomedical Materials</em>, 11:014106 (2015).</span></li>
+<li style="margin-left: 9pt;"><span style="font-size: 13.008px;">Tzeranis DS, Soller EC, Buydash MC, So PT, Yannas IV. In situ quantification of surface chemistry in porous collagen biomaterials. <em>Ann. Biomed. Eng</em>. 44:803-15 (2016).</span></li>
+<li style="margin-left: 9pt;"><span style="font-family: arial, helvetica, clean, sans-serif; font-size: 11.99899959564209px; background-color: rgb(255, 255, 255);">Yannas IV, Tzeranis DS, So PTC. Regeneration of injured skin and peripheral nerves requires control of wound conraction, not scar formation. <em>Wound Repair Regen.</em> 25:177-191 (2017). doi: 10.1111/wrr.12516. Epub 2017 Apr 27</span></li>
+</ul></div></div><div class='column small-12 profile-block'>
+              <div id='honors-and-awards' class='profile-block-content'><h2>Honors + Awards</h2><ul><li>2017: National Academy of Engineering, elected Member “<em>for codeveloping the first commercially reproducible artificial skin that facilitates new growth, saving the lives of thousands of burn victims”. </em>                      </li>
+<li>2015: National Inventors Hall of Fame. Inducted as Member based on U.S. Pat. 4,418,691 (December 6, 1983) awarded to IV Yannas, J.F. Burke, D.P. Orgill, and E.M. Skrabut, for “<em>Method of Promoting the Regeneration of Tissue at a Wound</em>". It is believed that this is the first patent describing organ regeneration. </li>
+<li>2011: American Burn Association establishes Burke/Yannas annual bioengineering award </li>
+<li>2007: Matrix Biology Group Lecturer, London</li>
+<li>2002: Ray A. and Robert L. Kroc Lecturer, MIT </li>
+<li>2002: Sophia Award, Greek Institute, Cambridge, MA </li>
+<li>1996: Fellow in Biomaterials Science and Engineering (FBSE), Society for Biomaterials  </li>
+<li>1993: Founding Fellow, American Institute of Medical and Biological Engineering                                                        </li>
+<li>1992: Clemson Award for Applied Science and Engineering, Society for Biomaterials </li>
+<li>1988: Doolittle Award of the American Chemical Society</li>
+<li>1987: National Academy of Medicine, elected member. </li>
+<li>1985: Society of Plastics Engineers, Medical Plastics Division, "Best Technical Paper Award" </li>
+<li>1982: Society for Biomaterials, Founders Award </li>
+<li>1982: Society of Plastics Engineers, Fred O. Conley Award   </li>
+<li>1982: Cutty Sark/Science Digest Award  </li>
+<li><span style="font-size: 13.008px;">1982: Zinon Papanastassiou Memorial Lecturer, Hellenic College </span></li>
+<li><span style="font-size: 13.008px;">1981: Technology Magazine, selected for inclusion among "The Technology 100"</span></li>
+<li><span style="font-size: 13.008px;">1981: American Society for Artificial Internal Organs, selected among "Four Best Abstracts", Annual Meeting                                         </span></li>
+<li><span style="font-size: 13.008px;">1978: Hellenic Medical Society of New York, Annual Award</span></li>
+<li><span style="font-size: 13.008px;">1977: Greek World Magazine, Annual Award </span></li>
+<li><span style="font-size: 13.008px;">1968: DuPont Young Faculty Award, MIT  </span></li>
+<li><span style="font-size: 13.008px;">1963: Public Health Service Fellow, Princeton University   </span></li>
+<li><span style="font-size: 13.008px;">1958: Esso Standard Oil Fellow, MIT </span></li>
+<li><span style="font-size: 13.008px;">1954: Harvard College Scholar, Harvard University</span></li>
+</ul></div></div><div class='column small-12 profile-block'>
+              <div id='related-experience' class='profile-block-content'><h2>Related Experience</h2><p><u>Principal previous employment outside MIT</u></p>
+<ul><li><span style="font-size: 13.008px;">1980-81   Visiting Fellow, Shriners Hospital for Crippled Children, Boston, MA</span></li>
+<li><span style="font-size: 13.008px;">1980-81   Visiting Fellow in Surgery, Massachusetts General Hospital, Boston, MA</span></li>
+<li><span style="font-size: 13.008px;">1979-80   Professor of Polymer Science, National Technical University, Athens, Greece</span></li>
+<li><span style="font-size: 13.008px;">1974  Visiting Professor, Royal Institute of Technology, Stockholm, Sweden</span></li>
+<li><span style="font-size: 13.008px;">1959-63   W.R. Grace Co., Research Physical Chemist, Cambridge, MA</span></li>
+</ul><p><u><span style="font-size: 13.008px;">Industrial Consulting Record: </span></u></p>
+<p><u style="font-size: 13.008px;">Firm</u><span style="font-size: 13.008px;"> (Starting Date)</span></p>
+<ul><li>Foster-Miller Associates (1966)</li>
+<li>McNeill Engineering Co. (1968)</li>
+<li>Long Lok Corporation (1971)</li>
+<li>American Optical Company (1973)</li>
+<li>Parke-Davis (1975)</li>
+<li>Devro Inc. (1975)</li>
+<li>Belding Hemenway (1978)</li>
+<li>Meadox (1978)</li>
+<li>Becton Dickinson Division (1978)</li>
+<li>Hoague-Sprague Leasing Company (1979)</li>
+<li>AMF, Inc. (1979)</li>
+<li>American Can Company (1979)</li>
+<li>AVCO  (1979)</li>
+<li>Hellenic Industrial Develop. Bank (1980)</li>
+<li>Marion Laboratories (1981)</li>
+<li>Thermedics (1983)</li>
+<li>Integra Life Sciences Corp. (1992)</li>
+<li>Geistlick Biomaterials (1993)</li>
+<li>Shriners Hosp. for Crippled Children (1994)</li>
+<li>Various law firms (1990)</li>
+<li>Integra Life Sciences Corp. (1993-2001)</li>
+<li>Promethia Bioscience (2007-2008)</li>
+<li>Orthomimetics (UK) (2007-2010)</li>
+<li>L’Oréal (France) (2009-2010)</li>
+</ul><p><u>Reports of research in various media</u></p>
+<p><span style="font-size: 13.008px;">Dr. Yannas' research on artificial skin (skin regeneration), nerve regeneration and other areas of organ regeneration were reported in the following TV and printed media:</span></p>
+<ul><li><span style="font-size: 13.008px;">1996- TV: BBC, CNN, ABC, Discovery, and other channels.</span></li>
+<li><span style="font-size: 13.008px;">1975-2000 Press: New York Times, Boston Globe, Der Spiegel, Newsweek, Time, Wall Street Journal and several others.</span></li>
+<li><span style="font-size: 13.008px;">Monographs on biomedical developments, including </span><span style="font-size: 13.008px;">Frontiers of Science, national Geographic Society, 1982 (p. 169); Skin, the Human Fabric, Torstar Books 1984 (pp. 152-3); J.M.Cauwels, The Body Shop (pp. 85-6), St. Louis: C.V. Mosby, 1986.</span></li>
+<li><span style="font-size: 13.008px;">2007 A book, </span><em style="font-size: 13.008px;">The Sun Farmer </em><span style="font-size: 13.008px;">(Ivan R. Dee, Chicago, 2007), by Michael McCarthy, former reporter of the Wall Street Journal, describes the development of the product Integra</span><sup>©</sup><span style="font-size: 13.008px;"> (“artificial skin”) in Yannas’ MIT lab and its use to treat a severely burned farmer.</span></li>
+</ul><p><u>Major New Products in Worldwide Clinical Use</u></p>
+<ul><li><span style="font-size: 13.008px;">Two products were either invented under Dr Yannas’ supervision or were critically modified in his MIT laboratory, the Fibers and Polymers Lab at MIT, which he has directed for many years.</span></li>
+<li><span style="font-size: 13.008px;">The first, </span><u style="font-size: 13.008px;">Dermis Regeneration Template<sup>TMTM</sup></u><span style="font-size: 13.008px;">, commercialized as </span><u style="font-size: 13.008px;">Integra</u><sup>TM</sup><span style="font-size: 13.008px;">, was invented during the period 1975-1982 at the Fibers and Polymers Lab, MIT, supervised by IV Yannas, was manufactured by Integra Life Sciences Inc, Plainsboro NJ, was approved by the Food and Drug Administration (FDA) in 1996 and currently appears to be the only medical device that can be used to regenerate the dermis in patients with skin loss. These patients are either burn patients, patients who undergo plastic and reconstructive surgery, or patients who suffer from chronic skin wounds. It has been used with over 200,000 patients (as of 2012).</span></li>
+<li><span style="font-size: 13.008px;">The second device, </span><u style="font-size: 13.008px;">Nerve Regeneration Template<sup>TM</sup></u><span style="font-size: 13.008px;">, was synthesized as a porous collagen scaffold, and later as a scaffold tube, and was studied with animals by the Yannas lab at MIT as early as 1985 (Yannas et al., Trans Soc Biomat 8:1946, 1985; Orgill D.P., MD thesis, Harvard Medical School, 1985) to induce regeneration of peripheral nerves over unprecedented distances.  The related product </span><u style="font-size: 13.008px;">Neuragen</u><sup>TM</sup><span style="font-size: 13.008px;">, a modification of the Nerve Regeneration Template</span><sup>TM</sup><span style="font-size: 13.008px;"> , was later manufactured by Integra Life Sciences Inc., and was approved by the FDA in 2002 for the treatment of paralysis of limbs and facial nerves.</span></li>
+</ul><p><u><span style="font-size: 13.008px;">Companies cofounded by IV Yannas (Yannas owns no stock in any of the these comanies that he helped cofound)</span></u></p>
+<ul><li><span style="font-size: 13.008px;">Integra Life Sciences (Plainsboro, NJ, USA)</span></li>
+<li><span style="font-size: 13.008px;">Biofunction (Cambridge, MA)</span></li>
+<li><span style="font-size: 13.008px;">Orthomimetics (Cambridge, UK), subsequently owned by TiGenix Inc. (Belgium)</span></li>
+</ul></div></div><div class='column small-12 profile-block'>
+              <div id='memberships' class='profile-block-content'><h2>Memberships</h2><ul><li><span style="font-size: 13.008px;">National Academy of Engineering</span></li>
+<li>National Academy of Medicine</li>
+<li>National Inventors Hall of Fame</li>
+<li>American Institute of Medical and Biological Engineering (Founding Fellow)</li>
+<li>American Society for Cell Biology</li>
+<li>Biomedical Engineering Society (Charter Member)</li>
+<li>American Chemical Society</li>
+<li>Society for Biomaterials (Fellow)</li>
+<li>American Society for Cell Biology</li>
+</ul></div></div><div class='column small-12 profile-block'>
+              <div id='professional-service' class='profile-block-content'><h2>Professional Service</h2><ul><li><span style="font-size: 13.008px;">1972-Present: National Institutes of Health, grant reviewer  </span></li>
+<li><span style="font-size: 13.008px;">1966-Present: Several Journals, reviewer  </span></li>
+<li><span style="font-size: 13.008px;">1977, 2008: </span><span style="font-size: 13.008px;">National Institute of Health,</span><span style="font-size: 13.008px;"> Study section, Member </span></li>
+<li><span style="font-size: 13.008px;">1980: National Institute of Health </span><span style="font-size: 13.008px;">Study section, Chairman  </span></li>
+<li><span style="font-size: 13.008px;">1982: National Institute of Health, Member, </span><span style="font-size: 13.008px;">Consensus Panel, Conference on </span><span style="font-size: 13.008px;">Biomaterials  </span></li>
+<li><span style="font-size: 13.008px;">1985-87: </span><span style="font-size: 13.008px;">National Research Council, Committee </span><span style="font-size: 13.008px;">of Advanced Structural Materials </span></li>
+<li><span style="font-size: 13.008px;">1986-Present: </span><span style="font-size: 13.008px;">Editorial Board:  </span><em style="font-size: 13.008px;">Journal of Biomedical </em><span style="font-size: 13.008px;">  </span><em style="font-size: 13.008px;">Materials Research Part A</em></li>
+<li>1990-2007: Editorial Board:  <em>Journal of Materials </em><em style="font-size: 13.008px;">Science: Materials in Medicine </em><span style="font-size: 13.008px;">  </span></li>
+<li><span style="font-size: 13.008px;">1995-2008: </span><span style="font-size: 13.008px;">Editorial Board:</span><em style="font-size: 13.008px;"> Tissue Engineering</em><span style="font-size: 13.008px;"> (USA) </span></li>
+<li><span style="font-size: 13.008px;">2005-2007: </span><span style="font-size: 13.008px;">Editorial Board: </span><em style="font-size: 13.008px;">J Royal Soc Interface</em><span style="font-size: 13.008px;">  </span></li>
+<li><span style="font-size: 13.008px;">2005- Present: </span><span style="font-size: 13.008px;">Editorial Board: </span><em style="font-size: 13.008px;">Biomedical Materials</em><span style="font-size: 13.008px;"> (China) </span></li>
+<li><span style="font-size: 13.008px;">2009: </span><span style="font-size: 13.008px;">Editorial Board: J Tissue Engineering (UK)</span></li>
+<li><span style="font-size: 13.008px;">2010-Present: Editorial Board: Materials Science and Engineering </span><span style="font-size: 13.008px;">C: Materials for Biological Applications    </span></li>
+</ul></div></div><div class='column small-12 profile-block'>
+              <div id='mit-service' class='profile-block-content'><h2>MIT Service</h2><p>Can be supplied upon request.</p>
+</div></div><div class='column small-12 profile-block'>
+              <div id='classes' class='profile-block-content'><h2>Teaching</h2><p><u>Teaching Appointments at MIT</u></p>
+<ul><li>1957: <span style="font-size: 13.008px;">Teaching Assistant - Industrial Chemistry   </span></li>
+<li><span style="font-size: 13.008px;">1958: </span><span style="font-size: 13.008px;">Teaching Assistant - Chemical Engineering</span></li>
+<li><span style="font-size: 13.008px;">1966-68: Assistant Professor, Department of Mechanical </span><span style="font-size: 13.008px;">Engineering  </span></li>
+<li><span style="font-size: 13.008px;">1968-69: </span><span style="font-size: 13.008px;">DuPont Assistant Professor, Department of </span><span style="font-size: 13.008px;">Mechanical Engineering  </span></li>
+<li><span style="font-size: 13.008px;">1969-72: Associate Professor without tenure, Department </span><span style="font-size: 13.008px;">of Mechanical Engineering </span></li>
+<li><span style="font-size: 13.008px;">1973-78: </span><span style="font-size: 13.008px;">Tenured Associate Professor, Department </span><span style="font-size: 13.008px;">of Mechanical Engineering  </span></li>
+<li><span style="font-size: 13.008px;">1978-Present: </span><span style="font-size: 13.008px;">Professor, Department of Mechanical Engineering</span></li>
+<li><span style="font-size: 13.008px;">1983-2000: </span><span style="font-size: 13.008px;">Professor, Materials Science and Engineering </span></li>
+<li><span style="font-size: 13.008px;">2006-2012: </span><span style="font-size: 13.008px;">Professor, Department of Biological Engineering  </span></li>
+<li><span style="font-size: 13.008px;">1978-2000: Professor, Harvard-MIT Program in Health Sciences </span><span style="font-size: 13.008px;">and Technology, MIT </span></li>
+</ul></div></div><div class='column small-12 profile-block'>
+              <div id='publications' class='profile-block-content'><h2>Publications</h2><p style="margin-left:.25in;"><strong>A.   Books:</strong></p>
+<p style="margin-left:.25in;"><u style="font-size: 13.008px;">Sole author or editor</u></p>
+<ul><li style="margin-left: 0.25in;"><span style="font-size: 13.008px;">Yannas IV, </span><em style="font-size: 13.008px;">Tissue and Organ Regeneration in Adults</em><span style="font-size: 13.008px;">. New York, Springer, 2001.</span></li>
+<li style="margin-left: 0.25in;"><span style="font-size: 13.008px;">Yannas IV, </span><em style="font-size: 13.008px;">Tissue and Organ Regeneration in Adults. Extension of the Paradigm to Several Organs</em><span style="font-size: 13.008px;">. Second Edition. New York, Springer, 2015.</span></li>
+<li style="margin-left: 0.25in;">Editor, <em>Regenerative Medicine.</em> Two volumes. New York, Springer. 2005.</li>
+</ul><p style="margin-left: 0.25in;"><strong><span style="font-size: 13.008px;">B. Papers in Refereed Journals</span></strong></p>
+<ul><li style="margin-left: 0.5in;">1.  Yannas, I.V. (J.B.) and Gonzales, R.N., "A clear instance of rheopectic flow", <em>Nature</em> 191:1384-1385 (1961).</li>
+<li style="margin-left: 0.5in;">2.  Yannas, I.V. (J.B.) and Gonzales, F.N., "Phenomenological Characterization of a Rheopectic Suspension", <em>Rheological Bulletin</em> 30, No. 2 (1961).</li>
+<li style="margin-left: 0.5in;">3.  Yannas, I.V. (J.B.) and Gonzalez, R.N., "Low Shear Viscometry in the Prediction of Coating Performance", <em>Technical Association of Pulp and Paper Industry Journal</em> 45:156-159A (1962).</li>
+<li style="margin-left: 0.5in;">4.  Yannas, I.V., (J.B.) "Fractionation of Chemically Heterogeneous Latex Particles by Centrifugation", <em>Journal of Polymer Science</em> A2:1633-1640 (1964).</li>
+<li style="margin-left: 0.5in;">5.  Yannas, I.V., (J.B.) "Highly Precise Density Determination for Polymers in Latex Form", <em>Polymer Letters</em> 2:1005-1008 (1964).</li>
+<li style="margin-left: 0.5in;">6.  Yannas, I.V. (J.B.) and Isgur, I.D., "Chemically Heterogeneous Populations of Copolymer Latex Particles.  Preparation, Fractionation, and Characterization", <em>Journal of Polymer Science</em>    A2:4719­4726 (1964).</li>
+<li style="margin-left: 0.5in;">7.  Yannas, I.V. and Tobolsky, A.V., "Viscoelastic Properties of Plasticized Gelatin Films", <em>Journal of Physical Chemistry</em>   68:3880-3882 (1964).</li>
+<li style="margin-left: 0.5in;">8.  Yannas, I.V. and Tobolsky, A.V., "Approximate Master Curves for Amorphous Polymers from Modulus-Temperature Data", <em>Journal of Macromolecular Chemistry</em> 1(2):399-402 (1966).</li>
+<li style="margin-left: 0.5in;">9.  Yannas, I.V. and Tobolsky, A.V., "Transitions in Gelatin—Nonaqueous-diluent Systems", <em>Journal of Macromolecular Chemistry</em> 1(4):723-737 (1966).</li>
+<li style="margin-left: 0.5in;">10. Yannas, I.V. and Tobolsky, A.V., "Crosslinking of Gelatin by Dehydra­tion", <em>Nature</em> 215:509-510 (1967).</li>
+<li style="margin-left: 0.5in;">11. Yannas, I.V. and Tobolsky, A.V., "Stress Relaxation of Anhydrous Gelatin Rubbers", <em>Journal of Applied Polymer Science</em> 12:1-8 (1968).</li>
+<li style="margin-left: 0.5in;">12. Yannas, I.V. and Tobolsky, A.V., "High-Temperature Transformations of Gelatin", <em>European Polymer Journal</em> 4:257-264 (1968).</li>
+<li style="margin-left: 0.5in;">13. Yannas, I.V., "Isochronal Temperature-Concentration Diagram for a Polymer-Diluent System", <em>Journal of Polymer Science</em> A2(6):687-694 (1968).</li>
+<li style="margin-left: 0.5in;">14. Yannas, I.V., "Vitrification Temperature of Water", <em>Science</em> 160:298-299 (1968).</li>
+<li style="margin-left: 0.5in;">15. Yannas, I.V., "Massive Internal Fracture of an Amorphous Polyester", <em>Science</em> 166:227-228 (1969).</li>
+<li style="margin-left: 0.5in;">16. Yannas, I.V., "Involvement of articular cartilage in a linear relaxation process during walking", <em>Nature</em> 227, 1358-1360 (1970).</li>
+<li style="margin-left: 0.5in;">17. Yannas, I.V. and Lunn, A.C., "The transition from linear to non-linear viscoelastic behavior, Part I, Creep of polycarbonate", <em>Journal of Macromolecular Science</em> B4:603-620 (1970).</li>
+<li style="margin-left: 0.5in;">18. Yannas, I.V. and Lunn A.C., "Infrared spectroscopic evidence for poly­carbonate chain motion below Tg", <em>Polymer Letters</em> 9:611-615 (1971).</li>
+<li style="margin-left: 0.5in;">19.  Yannas, I.V. and Haskell, V., "Utility of the Green-Rivlin theory in polymer mechanics", <em>Journal of Applied Physics</em> 42:610-613 (1971).</li>
+<li style="margin-left: 0.5in;">20.  Yannas, I.V., Sung, N.-H., and Lunn, A.C., "The transition from linear to nonlinear viscoelastic behavior. Part II. Stress relaxation of polycarbonate", <em>Journal of Macromolecular Science</em> B5:487-503 (1971).</li>
+<li style="margin-left: 0.5in;">21.  Yannas, I.V., "Collagen and gelatin in the solid state", <em>Reviews in</em> <em>Macromolecular Chemistry</em> C7:49-104B (1972).</li>
+<li style="margin-left: 0.5in;">22.  Yannas, I.V., "The transition from linear to nonlinear viscoelastic behavior. Part III. Linearity below and above Tg", <em>Journal of</em> <em>Macromolecular Science</em> B6:91-100 (1972).</li>
+<li style="margin-left: 0.5in;">23.  Yannas, I.V. and Doyle, M.J., "Comparison of optical and mechanical limits of linear relaxation behavior in glassy polycarbonate", <em>Journal of Polymer Science</em> A-2(10):159-170 (1972).</li>
+<li style="margin-left: 0.5in;">24.  Yannas, I.V. and Huang, C., "Viscoelastic distinction between helical and coiled macromolecules", <em>Macromolecules</em> 5:99-100 (1972).</li>
+<li style="margin-left: 0.5in;">25.  Yannas, I.V. and Huang, C., "Fracture of tendon collagen", <em>Journal of</em> <em>Polymer Science</em> A2 (10):577-584 (1972).</li>
+<li style="margin-left: 0.5in;">26.  Lunn, A.C. and Yannas, I.V., "Chain-backbone motion in glassy polycar­bonate studied by polarized infrared spectroscopy", <em>Journal of</em> <em>Polymer Science</em> A2(10):2189-2208 (1972).</li>
+<li style="margin-left: 0.5in;">27.  Yannas, I.V. and Olson, D.A., "Linear relaxation analysis of the mechanochemical transformation of collagen fibers", <em>Biopolymers</em> 11:899-912 (1972).</li>
+<li style="margin-left: 0.5in;">28.  Yannas, I.V., Sung, N-H. and Huang, C., "Resolution of components of the optical rotation tensor of collagen", <em>Journal of Physical Chemistry</em>   76:2935 (1972).</li>
+<li style="margin-left: 0.5in;">29.  Yannas, I.V. and Grodzinsky, A.J., "Electromechanical energy conversion with collagen fibers in an aqueous medium", <em>Journal of</em> <em>Mechanochemi­stry and Cell Motility</em>   2:113-125 (1973).</li>
+<li style="margin-left: 0.5in;">30.  Lunn, A.C., Lee, B-L. and Yannas, I.V., "Strain recovery of polyester and nylon 66 monofilaments under various temperature histories", <em>Polymer Engineering and Science</em>  14:610-615 (1974).</li>
+<li style="margin-left: 0.5in;">31.  Gordon, P.L., Huang, C., Lord, R.C. and Yannas, I.V., "The far infrared spectrum of collagen", <em>Macromolecules</em> 7:954-956 (1974).</li>
+<li style="margin-left: 0.5in;">32.  Yannas, I.V., "Nonlinear viscoelasticity of solid polymers (in uniaxial tensile loading)", <em>Macromolecular Reviews</em>   9:163-190 (1974).</li>
+<li style="margin-left: 0.5in;">33.  Yannas, I.V., "A molecular mechanism for deformation in glassy and rubberlike polymers", <em>Bulletin of the American Physical Society</em>   20, Series II, No. 3, p. 402 (March 1975).</li>
+<li style="margin-left: 0.5in;">34.  Yannas, I.V., Burke, J.F., Huang, C. and Gordon P.L., "Correlation of <u>in</u> <u>vivo</u> collagen degradation rate with <u>in</u> <u>vitro</u> measurements", <em>Journal</em> <em>of Biomedical Materials Research</em> 9:623-628 (1975).</li>
+<li style="margin-left: 0.5in;">35.  Comminou, M. and Yannas, I.V., "Dependence of stress-strain nonlinearity of connective tissue on the geometry of collagen fibers", <em>Journal of</em> <em>Biomechanics</em> 9:427-433 (1976).</li>
+<li style="margin-left: 0.5in;">36.  Huang, C. and Yannas, I.V., "Mechanical studies of enzymatic degradation of insoluble collagen fibers", <em>Journal of Biomedical Materials</em> <em>Research</em>, Symposium No. 8, 137-154 (1977).</li>
+<li style="margin-left: 0.5in;">37.  Jansson, J-F. and Yannas, I.V., "The infrared dichroism of glassy polycarbonate at small strains", <em>Journal of Polymer Science</em> 15:2103-2111 (1977).</li>
+<li style="margin-left: 0.5in;">38.  Silver, F.H., Yannas, I.V. and Salzman, E.W., "Glycosaminoglycan inhibition of collagen induced platelet aggregation", <em>Thrombosis</em> <em>Research</em> 13:267-277 (1978).</li>
+<li style="margin-left: 0.5in;">39.  Bansil, R., Yannas, I.V. and Stanley, H.E., "Raman spectroscopy:  a structural probe of glycosaminoglycans", <em>Biochimica Biophysica Acta</em> 541:535-542 (1978).</li>
+<li style="margin-left: 0.5in;">40.  Markenscoff, X. and Yannas, I.V., "On the Stress-Strain Relation for Skin", <em>Journal of Biomechanics</em> 12:127-129 (1979).</li>
+<li style="margin-left: 0.5in;">41.  Silver, F.H., Yannas, I.V. and Salzman, E.W., "<u>In</u> <u>vitro</u> blood compatibility of glycosaminoglycan-precipitated collagens", <em>Journal of Biomedical Materials Research</em> 13:701-716 (1979).</li>
+<li style="margin-left: 0.5in;">42.  Yannas, I.V. and Burke, J.F., "Design of an Artificial Skin. I, Design Principles", <em>Journal of Biomedical Materials Research</em> 14, 65-68 (1980).</li>
+<li style="margin-left: 0.5in;">43.  Yannas, I.V., Burke, J.F., Gordon, P.L., Huang, C. and Rubenstein, R.H., "Design of an Artificial Skin. II. Control of Chemical Composition", <em>Journal of Biomedical Materials Research</em> 14:107-131 (1980).</li>
+<li style="margin-left: 0.5in;">44.  Dagalakis, N., Flink. J., Stasikelis, P., Burke, J.F. and Yannas, I.V., "Design of an Artificial Skin. Part III. Control of Pore Structure", <em>Journal of Biomedical Materials Research</em> 14:511-528 (1980).</li>
+<li style="margin-left: 0.5in;">45.  Yannas, I.V., Burke, J.F., Warpehoski, M., Stasikelis, P., Skrabut, E.M., Orgill, D. and Giard, D.J., "Prompt, long-term functional replacement of skin", <em>Transactions of American Society for Artificial</em> <em>Internal Organs</em> 27:19-22 (1981).</li>
+<li style="margin-left: 0.5in;">46.  Burke, J.F., Yannas, I.V., Quinby, W.C., Jr., Bondoc, C.C. and Jung, W.K., "Successful Use of a Physiologically Acceptable Artificial Skin in the Treatment of Extensive Burn Injury", <em>Annals of Surgery</em> 194:413-428 (1981).</li>
+<li style="margin-left: 0.5in;">47.  Yannas, I.V., Burke, J.F., Orgill, D.P., Skrabut, E.M., "Wound Tissue Can Utilize a Polymeric Template to Synthesize a Functional Extension of Skin", <em>Science</em> 215:174-176 (1982).</li>
+<li style="margin-left: 0.5in;">48.  Yannas, I.V. and Luise, R.R., "Distinction between Two Molecular Mechanisms of Deformation of Glassy Amorphous Polymers", <em>Journal of</em> <em>Macromolecular Science-Physics</em> B21:443-474 (1982).</li>
+<li style="margin-left: 0.5in;">49.  Yannas, I.V., "What Criteria Should be Used for Designing Artificial Skin Replacements and How Well do the Current Grafting Materials Meet These Criteria?" <em>J. Trauma</em> 24:S29-S31 (1984).</li>
+<li style="margin-left: 0.5in;">50.  Eman, W., Yannas, I.V. and Krueger, G.G., "Biology of Langerhans Cells:  Further Insights into Origin and Migration", in <em>Clinical Research</em> 32:581A (1984).</li>
+<li style="margin-left: 0.5in;">51.  Kardomateas, G. and Yannas, I.V., "A model for the Differing Crazing Behavior of Amorphous Polymer Glasses", <em>Philosophical Magazine</em> A52:39-50 (1985).</li>
+<li style="margin-left: 0.5in;">52.  Murphy, G.F., Orgill, D.P., Hancock, W.W., Fonferko, E.B. and Yannas, I.V., "Morphological Reconstitution of Skin by Use of a Biodegradable Polymeric Graft", <em>Laboratory Investigations</em> 54:45A (1986).</li>
+<li style="margin-left: 0.5in;">53.  Yannas, I.V., Lee, E., Orgill, D.P., Skrabut, E.M., and Murphy, G.F., "Synthesis and characterization of a model extracellular matrix that induces partial regeneration of adult mammalian skin", <em>Proceedings of the National Academy of Sciences USA</em>, 86:933-937 (l989).</li>
+<li style="margin-left: 0.5in;">54.  Sylvester, M.F., Yannas, I.V., Salzman, E.W., and Forbes, M.J., "Collagen Banded Fibril Structure and the Collagen-Platelet Reaction", <em>Thromb. Res.</em>  55:135-148 (1989).</li>
+<li style="margin-left: 0.5in;">55.  Murphy, G.F., Orgill, D.P., and Yannas, I.V., "Dermal Regeneration is Induced by Biodegradable Collagen-Glycosaminoglycan Grafts", <em>Lab. Invest.</em>  63:305-313 (1990).</li>
+<li style="margin-left: 0.5in;">56.  Yannas, I.V., "Biologically Active Analogs of the Extracellular Matrix", <em>Angewandte Chemie</em> 29:20-35 (1990).</li>
+<li style="margin-left: 0.5in;">57.  Ferdman, A.G. and Yannas, I.V., "The Scattering of Light from Histological Sections:  A New Method for the Analysis of Connective Tissue."  <em>J. Investigative Dermatology</em>, 100:710-716 (1993).</li>
+<li style="margin-left: 0.5in;">58.  Yannas, I.V. (1994). "Applications of ECM analogs in surgery." <em>J. Cell. Biochem</em>. 56:188-191.</li>
+<li style="margin-left: 0.5in;">59.  Louie, L.K., Yannas, I.V. and M. Spector (1994). "Development of a collagen-GAG copolymer implant for the study of tendon regeneration." <em>Mat. Res. Soc. Symp. Proc</em>. 331:19-24.</li>
+<li style="margin-left: 0.5in;">60.  Shafritz, T.A., Rosenberg, L.C. and Yannas, I.V. (1994). "Specific effects of glycosaminoglycans in an analog of extracellular matrix that delays wound contraction and induces regeneration." <em>Wound Rep. Reg</em>., 2:270-276.</li>
+<li style="margin-left: 0.5in;">61.  Yannas, I.V. (1995). "Tissue regeneration templates based on collagen-glycosaminoglycan copolymers." <em>Adv. Polymer Sci.</em> 122:219-244.</li>
+<li style="margin-left: 0.5in;">62.  Chen, C.S., Yannas, I.V. and Spector, M. (1995). "Pore strain behavior of collagen-glycosaminoglycan analogues of extracellular matrix." <em>Biomaterial</em>s, 16:777-783.</li>
+<li style="margin-left: 0.5in;">63.  Faryniarz, D.A., Chaponnier, C., Gabbiani, G., Yannas, I.V. and M. Spector (1995). "Myofibroblasts in the healing lapine collateral ligament: Possible mechanisms of contraction." <em>J. Ortho. Res.</em>, 14:228-237.</li>
+<li style="margin-left: 0.5in;">64.  Yannas, I.V., Colt, J. and Wai, Y.C. (1996)."Wound contraction and scar synthesis during development of the amphibian <em>Rana catesbeiana</em>."<em>Wound Rep. Reg</em>., 4:31-41.</li>
+<li style="margin-left: 0.5in;">65.  Ellis, D.L. and Yannas, I.V. (1996). Recent advances in tissue synthesis <em>in vivo</em> by use of collagen-glycosaminoglycan copolymers, <em>Biomaterials</em>, 17, No. 3, 291-299.</li>
+<li style="margin-left: 0.5in;">66.  Chamberlain, L. J., I. V. Yannas, H.-P. Hsu and M. Spector (1997). Histological response to a fully degradable collagen device implanted in a gap in the rat sciatic nerve. Tissue Eng. 3:353-362.</li>
+<li style="margin-left: 0.5in;">67.  Nehrer, S., Breinan, H.A., Ramappa, A., Shortkroff, S., Young, G., Minas, T., Sledge, C.B., Yannas, I.V. and Spector, M. (1997). Canine chondrocytes seeded in type I and type II collagen implants investigated In Vitro, J. Biomed Mater Res (Appl. Biomater.), 38:95-104.</li>
+<li style="margin-left: 0.5in;">68.  Nehrer, S., Breinan, H.A., Ramappa, A., Young, G., Shortkkroff, S., Louie, L.K., Sledge, C.B., Yannas, I.V. and Spector, M. (1997). Matrix collagen type and pore size influence behavior of seeded canine chondrocytes, Biomaterials 18:769-776.</li>
+<li style="margin-left: 0.5in;">69.  Spilker, M. H., I. V. Yannas, H.-P. Hsu, T. V. Norregaard, S. K. Kostyk and M. Spector (1997). The effects of collagen-based implants on early healing of the adult rat spinal cord. Tissue Eng. 3:309-317.</li>
+<li style="margin-left: 0.5in;">70.  Yannas, I. V. (1998). Studies on the biological activity of the dermal regeneration template. Wound Rep. Reg. 6:518-524.</li>
+<li style="margin-left: 0.5in;">71.  Brown, R. A., R. Prajapati, D. A. McGrouther, I. V. Yannas and M. Eastwood (1998). Tensional homeostasis in dermal fibroblasts: Mechanical responses to mechanical loading in three-dimensional substrates. J. Cell Physiol. 175:323-332.</li>
+<li style="margin-left: 0.5in;">72.  Orgill, D. P. and Yannas, I. V. (1998). Design of an artificial skin. IV Use of island graft to isolate organ regeneration from scar synthesis and other processes leading to skin wound closure. J. Biomed. Mater. Res. 36:531-535.</li>
+<li style="margin-left: 0.5in;">73.  Compton, C. C.,  C. E. Butler, I. V. Yannas, G. Warland and D. P. Orgill (1998). Organized skin structure is regenerated <em>in vivo</em> from collagen-GAG matrices seeded with autologous keratinocytes. J. Invest. Dermatol. 110:908-916.</li>
+<li style="margin-left: 0.5in;">74.  Butler, C. E., D. P. Orgill, I. V. Yannas and C. C. Compton (1998). Effect of keratinocyte seeding of collagen-glycosaminoglycan membranes on the regeneration of skin in a porcine model. Plast. Reconstr. Surg. 101:1572-1579.</li>
+<li style="margin-left: 0.5in;">75.  Chamberlain, L. J., I. V. Yannas, A. Arrizabalaga, H.-P. Hsu, T. V. Norregaard and M. Spector (1998). Early peripheral nerve healing in collagen and silicone tube implants: Myofibroblasts and the cellular response. Biomaterials 19:1393-1403.</li>
+<li style="margin-left: 0.5in;">76.  Chamberlain, L. J., I. V. Yannas, H-P. Hsu, G. Strichartz and M. Spector (1998). Collagen-GAG substrate enhances the quality of nerve regeneration through collagen tubes up to level of autograft. Exp. Neurol. 154:315-329.</li>
+<li style="margin-left: 0.5in;">77.  Orgill, D. P., C. Butler, J. F. Regan, M. S. Barlow, I. V. Yannas and C. C. Compton (1998). Vascularized collagen-glycosaminoglycan matrix provides a dermal substrate and improves take of cultured epithelial autografts. Plast. Reconstr. Surg. 102:423-429.</li>
+<li style="margin-left: 0.5in;">78.  Brown, R. A., R. Prajapati, D. A. McGrouther, I. V. Yannas and M. Eastwood (1998). Tensional homeostasis in dermal fibroblasts: Mechanical responses to mechanical loading in three-dimensional substrates. J. Cell Physiol. 175:323-332.</li>
+<li style="margin-left: 0.5in;">79.  Butler, C. E., I. V. Yannas, C. C. Compton and D. P. Orgill (1999). Comparison of cultured and uncultured keratinocytes seeded into a collagen-GAG matrix for skin replacement. Br. J. Plast. Surg. 52:127-132.</li>
+<li style="margin-left: 0.5in;">80.  Chamberlain, L. J., I. V. Yannas, H.-P. Hsu and M. Spector (2000). Connective tissue response to tubular implants for peripheral nerve regeneration: The role of myofibroblasts. J. Comp. Neurol. 417:415-430.</li>
+<li style="margin-left: 0.5in;">81.  Chamberlain, L. J., I. V. Yannas, H-P. Hsu, G. R. Strichartz and M. Spector (2000). Near-terminus axonal structure and function following rat sciatic nerve regeneration through a collagen-GAG matrix in a 10-mm gap. J.Neurosci. Res.60:666-677.</li>
+<li style="margin-left: 0.5in;">82.  Hsu, W-C., Spilker M. H., Yannas I. V., and Rubin P. A. D. (2000). Inhibition of conjunctival scarring and contraction by a porous collagen-GAG implant.  Invest. Ophthalmol. Vis. Sci. 41:2404-2411.</li>
+<li style="margin-left: 0.5in;">83.  Torres, D. S., T. M. Freyman, I. V. Yannas and M. Spector (2000). Tendon cell contraction of collagen-GAG matrices in vitro: effect of cross-linking. Biomaterials 21:1607-1619.</li>
+<li style="margin-left: 0.5in;">84.  Yannas, I. V. (2000). Synthesis of organs: In vitro or in vivo? Proc. Natl. Acad. Sci. USA 97:9354-9356.</li>
+<li style="margin-left: 0.5in;">85.  Freyman, T. M., I. V. Yannas and L. J. Gibson (2001). Cellular materials as porous scaffolds for tissue engineering. Progr. Mat. Sci. 46:273-282.</li>
+<li style="margin-left: 0.5in;">86.  Spilker MH, Asano K, Yannas IV, Spector M. (2001). Contraction of collagen-glycosaminoglycan matrices by peripheral nerve cells in vitro. Biomaterials. 22:1085-93</li>
+<li style="margin-left: 0.5in;">87.  Freyman, T. M., I. V. Yannas, Y-S. Pek, R. Yokoo and L. J. Gibson (2001). Micromechanics of fibroblast contraction of a collagen-GAG matrix. Exp Cell Res. 269:140-53.</li>
+<li style="margin-left: 0.5in;">88.  Zaleskas, J. M., B. Kinner, T. M. Freyman, I. V. Yannas, L. J. Gibson and M. Spector (2001). Growth factor regulation of smooth muscle actin expression and contraction of human articular chondrocytes and meniscal cells in a collagen-GAG matrix. Exp Cell Res. 270:21-31.</li>
+<li style="margin-left: 0.5in;">89.  Spilker MH, Yannas IV, Kostyk SK, Norregaard TV, Hsu H-P and Spector M (2001). The effect of tubulation on healing and scar formation after transection of the adult rat spinal cord. Restor. Neurol. Neurosci., 18:23-38.</li>
+<li style="margin-left: 0.5in;">90.  Freyman TM, Yannas IV, Yokoo R, Gibson LJ. (2001). Fibroblast contraction of a collagen-GAG matrix. Biomaterials. 22:2883-91.</li>
+<li style="margin-left: 0.5in;"><span style="font-size: 13.008px;">91. Freyman, T. M., Yannas, I. V., Yokoo R., and Gibson L. J. (2002).      Fibroblast      contractile force is independent of the stiffness which resists the      contraction.   Exp. Cell Res. 272:153-162.</span></li>
+<li style="margin-left: 0.5in;">92. Samuel, R. E., C. R. Lee, S. Ghivizanni, C. H. Evans, I. V. Yannas, B. R. Olsen and M. Spector (2002). Delivery of plasmid DNA to articular chondrocytes via novel collagen-GAG matrices. Human Gene Therapy. 13:791-802.</li>
+<li style="margin-left: 0.5in;">93. Sethi, K. K., I. V. Yannas, V. Mudera, M. Eastwood, C. McFarland and R. A. Brown (2002). Evidence for sequential utilization of fibronectin, vitronectin, and collagen during fibroblast-mediated collagen contraction. Wound Rep. Reg. 10:397-408.</li>
+<li style="margin-left: 0.5in;">94. Zaleskas, J. M., B. Kinner, T. M. Freyman, I. V. Yannas, L. J. Gibson and M. Spector (2003). Contractile forces generated by articular chondrocytes in collagen-glycosaminoglycan matrices. Biomaterials. 2004 Mar;25(7-8):1299-308.</li>
+<li style="margin-left: 0.5in;">95. YS Pek, M Spector, IV Yannas and LJ Gibson. 2003. Degradation of a Collagen Chondroitin-6-Sulfate Matrix            by Collagenase and by Chondroitinase. Biomaterials. 2004 Feb;25(3):473-82.</li>
+<li style="margin-left: 0.5in;">96. Yannas, I. V. and Hill, BJ (2004). Selection of biomaterials for peripheral nerve regeneration using data from the tubulation model. Biomaterials. 25:1593-600.</li>
+<li style="margin-left: 0.5in;">97.  O'Brien, F. J., B. A. Harley, I. V. Yannas, and L. Gibson. 2004. Influence of freezing rate on pore structure in freeze-dried collagen-GAG scaffolds. Biomaterials 25:1077-1086.</li>
+<li style="margin-left: 0.5in;"><span style="font-size: 13.008px;">98. Harley BA, Spilker MH, Wu JW, Asano K, Hsu HP, Spector M, Yannas IV. (2004). Optimal degradation rate for collagen chambers used for regeneration of peripheral nerves over long gaps. Cells Tissues Organs. 176:153-65.</span></li>
+<li style="margin-left: 0.5in;">99. I.V. Yannas. Synthesis of Tissues and Organs. ChemBioChem. 2004. 4:10-23.</li>
+<li style="margin-left: 0.5in;">100.  Vickers SM. Johnson LL, Zou LQ, Yannas IV, Gibson LJ and Spector M. (2004). Expression of a-smooth muscle actin by and contraction of cells derived from synovium. Tissue Eng. 10: 1214-1223.</li>
+<li style="margin-left: 0.5in;">101.  Lynn AK, Yannas IV, Bonfield W. (2004). Antigenicity and immunogenicity of collagen. J Biomed Mater Res. 71B(2):343-54.</li>
+<li style="margin-left: 0.5in;"><span style="font-size: 13.008px;">102.  Veilleux NH, Yannas IV, Spector M. (2004). Effect of passage number and collagen type on the proliferative, biosynthetic, and contractile activity of adult canine articular chondrocytes in type I and II collagen-glycosaminoglycan matrices in vitro. Tissue Eng. 10:119-27.</span></li>
+<li style="margin-left: 0.5in;"><span style="font-size: 13.008px;">103.  Zhang M and IV Yannas (2005) Peripheral nerve regeneration. Adv. Biochem. Engin./Biotechnol. 94:67-89.</span></li>
+<li style="margin-left: 0.5in;">104.  O'Brien FJ, Harley BA, Yannas IV, Gibson LJ. (2005). The effect of pore size on cell adhesion in collagen-GAG scaffolds. Biomaterials. 26(4):433-41.</li>
+<li style="margin-left: 0.5in;">105.  Yannas IV (2005). Facts and theories of organ regeneration. Adv. Biochem. Engin./Biotechnol. 93:1 -31.</li>
+<li style="margin-left: 0.5in;">106.  Chen P, Marsilio E, Goldstein RH, Yannas IV, and Spector M.(2005). Formation of Lung Alveolar-Like Structures in Collagen-Glycosaminoglycan Scaffolds <em>in Vitro</em>. Tissue Eng. 11:1436-1448.</li>
+<li style="margin-left: 0.5in;">107.  Yannas IV (2005). Similarities and differences between induced organ regeneration in adults and early foetal regeneration. J Roy Soc Interface 2:403-417.</li>
+<li style="margin-left: 0.5in;">108.  Harley BA, Hastings AZ, Yannas IV, Sannino A. (2006). Fabricating tubular scaffolds with a radial pore size gradient by a spinning technique. Biomaterials. 27(6):866-74.<span style="font-size: 13.008px;">     </span></li>
+<li style="margin-left: 0.5in;">109.  Farrell, A, O’Brien F.J., Doyle P, Fischer J, Yannas I, Harley BA, O’Connell B, Prendergast PJ, Campbell VA. A collagen-glycosaminoglycan scaffold supports adult rat mesenchymal cell differentiation along osteogenic and chondrogenic routes. (2006). Tissue Eng.  12:461-468.</li>
+<li style="margin-left: 0.5in;"><span style="font-size: 13.008px;">110. Yannas IV (2006). Artificial skin and dermal equivalents. In </span><em style="font-size: 13.008px;">Tissue Engineering and Artificial Organs</em><span style="font-size: 13.008px;">, The Biomedical Engineering Handbook,        3</span><sup>rd</sup><span style="font-size: 13.008px;"> ed., JD Bronzino, Ed. Chap. 75, pp. 75-1 to 75-15. Boca Raton: Taylor Francis.</span></li>
+<li style="margin-left: 0.5in;"><span style="font-size: 13.008px;">111. Yannas IV (2006). Biologically active scaffolds based on collagen-GAG copolymers. In </span><em style="font-size: 13.008px;">Scaffolds in Tissue Engineering</em><span style="font-size: 13.008px;">, PX Ma and J Elisseeff, Eds. Chap. 1, pp. 3-12. Boca Raton: Taylor and Francis.</span></li>
+<li style="margin-left: 0.5in;"><span style="font-size: 13.008px;"><span style="font-size: 13.008px;">112. Soller EC, Yannas IV (2006). Induced regeneration of skin and peripheral        nerves. In </span><em style="font-size: 13.008px;">The Diabetic Foot</em><span style="font-size: 13.008px;">, 2</span><sup>nd</sup><span style="font-size: 13.008px;"> ed., Veves A, et al., editors, Ch. 5, pp. 83-103, Totowa, NJ: Humana Press.</span></span></li>
+<li style="margin-left: 0.5in;"><span style="font-size: 13.008px;"><span style="font-size: 13.008px;"><span style="font-size: 13.008px;">113. Ingber DE, Mow VC, Butler D, Niklason L, Huard J, Mao J, Yannas I,        Kaplan D, Vunjak-Novakovich G. Tissue engineering and developmental biology: going biomimetic. (2006). Tissue Engineering 12:3265-3283.</span></span></span></li>
+<li style="margin-left: 0.5in;"><span style="font-size: 13.008px;"><span style="font-size: 13.008px;"><span style="font-size: 13.008px;"><span style="font-size: 13.008px;">114. </span><a href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?db=pubmed&amp;cmd=Search&amp;itool=pubmed_AbstractPlus&amp;term=%22O%27brien+FJ%22%5BAuthor%5D" style="font-size: 13.008px;" title="Click to search for citations by this author.">O'Brien FJ</a><span style="font-size: 13.008px;">, </span><a href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?db=pubmed&amp;cmd=Search&amp;itool=pubmed_AbstractPlus&amp;term=%22Harley+BA%22%5BAuthor%5D" style="font-size: 13.008px;" title="Click to search for citations by this author.">Harley BA</a><span style="font-size: 13.008px;">, </span><a href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?db=pubmed&amp;cmd=Search&amp;itool=pubmed_AbstractPlus&amp;term=%22Waller+MA%22%5BAuthor%5D" style="font-size: 13.008px;" title="Click to search for citations by this author.">Waller MA</a><span style="font-size: 13.008px;">, </span><a href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?db=pubmed&amp;cmd=Search&amp;itool=pubmed_AbstractPlus&amp;term=%22Yannas+IV%22%5BAuthor%5D" style="font-size: 13.008px;" title="Click to search for citations by this author.">Yannas IV</a><span style="font-size: 13.008px;">, </span><a href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?db=pubmed&amp;cmd=Search&amp;itool=pubmed_AbstractPlus&amp;term=%22Gibson+LJ%22%5BAuthor%5D" style="font-size: 13.008px;" title="Click to search for citations by this author.">Gibson LJ</a><span style="font-size: 13.008px;">, </span><a href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?db=pubmed&amp;cmd=Search&amp;itool=pubmed_AbstractPlus&amp;term=%22Prendergast+PJ%22%5BAuthor%5D" style="font-size: 13.008px;" title="Click to search for citations by this author.">Prendergast PJ</a><span style="font-size: 13.008px;">. (2007) The effect of pore size on permeability and cell attachment in collagen scaffolds for tissue engineering. </span><a style="font-size: 13.008px;">Technol Health Care.</a><span style="font-size: 13.008px;">15(1):3-17.</span></span></span></span></li>
+<li style="margin-left: 0.5in;"><span style="font-size: 13.008px;"><span style="font-size: 13.008px;"><span style="font-size: 13.008px;"><span style="font-size: 13.008px;"><span style="font-size: 13.008px;">115. </span><a href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?db=pubmed&amp;cmd=Search&amp;itool=pubmed_AbstractPlus&amp;term=%22Yannas+IV%22%5BAuthor%5D" style="font-size: 13.008px;" title="Click to search for citations by this author.">Yannas IV</a><span style="font-size: 13.008px;">, </span><a href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?db=pubmed&amp;cmd=Search&amp;itool=pubmed_AbstractPlus&amp;term=%22Kwan+MD%22%5BAuthor%5D" style="font-size: 13.008px;" title="Click to search for citations by this author.">Kwan MD</a><span style="font-size: 13.008px;">, </span><a href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?db=pubmed&amp;cmd=Search&amp;itool=pubmed_AbstractPlus&amp;term=%22Longaker+MT%22%5BAuthor%5D" style="font-size: 13.008px;" title="Click to search for citations by this author.">Longaker MT</a><span style="font-size: 13.008px;">. (2007) </span><a style="font-size: 13.008px;">Early fetal healing as a model        for adult organ regeneration. Tissue Eng.</a><span style="font-size: 13.008px;"> 13(8):1789-98; also Jan 1; [Epub ahead of print];</span></span></span></span></span></li>
+<li style="margin-left: 0.5in;"><span style="font-size: 13.008px;"><span style="font-size: 13.008px;"><span style="font-size: 13.008px;"><span style="font-size: 13.008px;"><span style="font-size: 13.008px;"><span style="font-size: 13.008px;">116. Yannas IV, M Zhang and MH Spilker (2007). Standardized criterion to analyze and directly compare various materials and models for peripheral nerve regeneration. J Biomater Sci Polymer Edn 18:943-966.</span></span></span></span></span></span></li>
+<li style="margin-left: 0.5in;"><span style="font-size: 13.008px;"><span style="font-size: 13.008px;"><span style="font-size: 13.008px;"><span style="font-size: 13.008px;"><span style="font-size: 13.008px;"><span style="font-size: 13.008px;"><span style="font-size: 13.008px;">117. </span><a href="http://www.ncbi.nlm.nih.gov/sites/entrez?Db=pubmed&amp;Cmd=Search&amp;Term=%22Madaghiele%20M%22%5BAuthor%5D&amp;itool=EntrezSystem2.PEntrez.Pubmed.Pubmed_ResultsPanel.Pubmed_RVAbstractPlus" style="font-size: 13.008px;">Madaghiele M</a><span style="font-size: 13.008px;">, </span><a href="http://www.ncbi.nlm.nih.gov/sites/entrez?Db=pubmed&amp;Cmd=Search&amp;Term=%22Sannino%20A%22%5BAuthor%5D&amp;itool=EntrezSystem2.PEntrez.Pubmed.Pubmed_ResultsPanel.Pubmed_RVAbstractPlus" style="font-size: 13.008px;">Sannino A</a><span style="font-size: 13.008px;">, </span><a href="http://www.ncbi.nlm.nih.gov/sites/entrez?Db=pubmed&amp;Cmd=Search&amp;Term=%22Yannas%20IV%22%5BAuthor%5D&amp;itool=EntrezSystem2.PEntrez.Pubmed.Pubmed_ResultsPanel.Pubmed_RVAbstractPlus" style="font-size: 13.008px;">Yannas IV</a><span style="font-size: 13.008px;">, </span><a href="http://www.ncbi.nlm.nih.gov/sites/entrez?Db=pubmed&amp;Cmd=Search&amp;Term=%22Spector%20M%22%5BAuthor%5D&amp;itool=EntrezSystem2.PEntrez.Pubmed.Pubmed_ResultsPanel.Pubmed_RVAbstractPlus" style="font-size: 13.008px;">Spector M</a><span style="font-size: 13.008px;">. Collagen-based      matrices with axially oriented pores. J Biomed Mater Res A. 2007 Sep 26;</span></span></span></span></span></span></span></li>
+<li style="margin-left: 0.5in;"><span style="font-size: 13.008px;"><span style="font-size: 13.008px;"><span style="font-size: 13.008px;"><span style="font-size: 13.008px;"><span style="font-size: 13.008px;"><span style="font-size: 13.008px;"><span style="font-size: 13.008px;"><span style="font-size: 13.008px;">118. Yannas IV. (2008) Organ Regeneration. In McGraw-Hill Yearbook of Science and Technology. pp. 245-7.</span></span></span></span></span></span></span></span></li>
+<li style="margin-left: 0.5in;">119. <span style="font-size: 13.008px;">Harley </span><span style="font-size: 13.008px;">BA, </span><span style="font-size: 13.008px;">Kim </span><span style="font-size: 13.008px;">H</span><span style="font-size: 13.008px;">D, </span><span style="font-size: 13.008px;">Zaman </span><span style="font-size: 13.008px;">MH, </span><span style="font-size: 13.008px;">Yannas </span><span style="font-size: 13.008px;">IV, </span><span style="font-size: 13.008px;">Lauffenburger </span><span style="font-size: 13.008px;">DA, </span><span style="font-size: 13.008px;">Gibson </span><span style="font-size: 13.008px;">LJ. </span><span style="font-size: 13.008px;">Micro </span><span style="font-size: 13.008px;">architecture </span><span style="font-size: 13.008px;">of </span><span style="font-size: 13.008px;">three </span><span style="font-size: 13.008px;">dimensional scaffolds influences cell migration behavior via junction interactions. Biophys J.(2008) Oct;95(8):4013-24.</span></li>
+<li style="margin-left: 0.5in;">120. Yannas IV (2008). Tissues and Organs, Synthesis of. Wiley Encyclopedia of Chemical Biology.</li>
+<li style="margin-left: 0.5in;"><span style="font-size: 13.008px;">121. Harley BA, Lynn AK, Wissner-Gross Z, Bonfield W, Yannas IV, Gibson LJ. Design of a Multiphase Osteochondral  Scaffold. III: Fabrication of layered scaffolds with soft interfaces. J Biomed Mater Res A, (2010) Mar 1;92(3): 1078-93.</span></li>
+<li style="margin-left: 0.5in;"><span style="font-size: 13.008px;"><span style="font-size: 13.008px;">122. Harley BA, Lynn AK, Wissner-Gross Z, Bonfield W, Yannas IV, Gibson LJ. Design of a Multiphase Osteochondral Scaffold. II: Fabrication of a mineralized collagen-GAG scaffold. J Biomed Mater Res A. (2010) Mar 1;92(3):1066-67.</span></span></li>
+<li style="margin-left: 0.5in;"><span style="font-size: 13.008px;"><span style="font-size: 13.008px;">123. Yannas IV (2009). Principles of skin regeneration. Chapter in Treatments of Skin Loss, Woodhead, London, UK. </span></span></li>
+<li style="margin-left: 0.5in;"><span style="font-size: 13.008px;"><span style="font-size: 13.008px;"><span style="font-size: 13.008px;">124. Lynn AK, Best SM, Cameron RE, Harley BA, Yannas IV, Gibson LJ, Bonfield W. </span><a href="http://www.ncbi.nlm.nih.gov/pubmed/19301264" style="font-size: 13.008px;">Design of a multiphase osteochondral scaffold. I. Control of chemical composition.</a><span style="font-size: 13.008px;"> J Biomed Mater Res A. (2010) Mar 1;92(3):1057- 65.</span></span></span></li>
+<li style="margin-left: 0.5in;"><span style="font-size: 13.008px;"><span style="font-size: 13.008px;"><span style="font-size: 13.008px;">125. Song G, Nguyen DT, Pietramaggiori G, Scherer S, Chen B, Zhan Q, Ogawa R, Yannas IV, Wagers AJ. Murphy GF, Kimberly R, Schanche RA,  Orgill DP, Murphy GF (2009). Hematopoietic Participation in Early Cutaneous Wound Healing Evaluated in a Parabiotic Model. Accepted for publication in Wound Repair and Regeneration.</span></span></span></li>
+<li style="margin-left: 0.5in;"><span style="font-size: 13.008px;"><span style="font-size: 13.008px;"><span style="font-size: 13.008px;">126. Lynn AK, Best SM, Cameron RE, Harley BA, Yannas IV, Gibson LJ, Bonfield W. (2009) Design of a Multiphase Osteochondral Scaffold I: Control of Chemical Composition. J Biomed Mater Res A. 2010 Mar 1;92(3):1057-65.</span></span></span></li>
+<li style="margin-left: 0.5in;"><span style="font-size: 13.008px;"><span style="font-size: 13.008px;"><span style="font-size: 13.008px;">127. Sannino A, Silvestri L, Madaghiele M, Harley B, Yannas IV. (2009). Modeling the fabrication process of micropatterned macromolecular scaffolds for peripheral nerve regeneration. J Applied Polymer Science. Accepted for publication. </span></span></span></li>
+<li style="margin-left: 0.5in;"><span style="font-size: 13.008px;"><span style="font-size: 13.008px;"><span style="font-size: 13.008px;"><span style="font-size: 13.008px;">128. I.V. Yannas, D.S. Tzeranis, B.A. Harley and P.T.C. So, (2010). Biologically active collagen-based scaffolds: Advances in processing and  characterization. Philosophical Transactions of Royal Society. A 368 2123-</span><span style="font-size: 13.008px;">2139, 2010.</span></span></span></span></li>
+<li style="margin-left: 0.5in;">129. Tzeranis DS, Roy A, So PT, Yannas IV. <a href="http://www.ncbi.nlm.nih.gov/pubmed/20671067" style="font-size: 13.008px;">An optical method to quantify the density of ligands for cell   adhesion receptors in three-dimensional matrices.</a><span style="font-size: 13.008px;"> J R Soc Interface. 2010 Jul 29. [Epub ahead of print]</span></li>
+<li style="margin-left: 0.5in;">130. Yannas IV, Orgill DP, Burke JF. Template for skin regeneration. Plast Reconstr Surg. 2011 Jan;127 Suppl 1:60S-70S. PMID: 21200274</li>
+<li style="margin-left: 0.5in;">131. Eric C. Soller, Dimitrios S. Tzeranis, Kathy Miu, Peter T.C. So, Ioannis V. Yannas. Biomaterials 33 (2012) 4783-4791. Common features of optimal collagen scaffolds that disrupt wound contraction and enhance regeneration both in peripheral nerves and in skin.</li>
+<li style="margin-left: 0.5in;">132. Yannas IV. Emerging rules for inducing organ regeneration. Biomaterials. 34:321-606 (2013).</li>
+<li style="margin-left: 0.5in;"><span style="font-size: 13.008px;">133. I.V. Yannas, D. Tzeranis and P.T. So. Surface Biology Of Collagen Scaffold Explains Blocking Of Wound Contraction And Regeneration Of Skin And </span><span style="font-size: 13.008px;">Peripheral Nerves. Biomedical Materials, 11:014106 (2015).</span></li>
+<li style="margin-left: 0.5in;">134. Tzeranis DS, Soller EC, Buydash MC, So PT, Yannas IV. In situ quantification of surface chemistry in porous collagen biomaterials. Ann. Biomed. Eng. 44:803-15 (2016).</li>
+<li style="margin-left: 0.5in;">135. <span style="font-family: arial, helvetica, clean, sans-serif; font-size: 11.99899959564209px; background-color: rgb(255, 255, 255);">Yannas IV, Tzeranis DS, So PTC. Regeneration of injured skin and peripheral nerves requires control of wound conraction, not scar formation. <em>Wound Repair Regen.</em> 25:177-191 (2017). doi: 10.1111/wrr.12516. Epub 2017 Apr 27</span></li>
+<li style="margin-left: 0.5in;"><span style="font-family: arial, helvetica, clean, sans-serif; font-size: 11.99899959564209px; background-color: rgb(255, 255, 255);">136. </span><span style="font-family: &quot;Times New Roman&quot;, serif; font-size: medium;">Yannas IV, Tzeranis DS, So PTC. (2018) Regeneration mechanism for skin and peripheral </span><br /><p class="desc" style="margin: 0in; font-size: medium; font-family: &quot;Times New Roman&quot;, serif;"><p></p></p>
+<p class="desc" style="margin: 0in; font-size: medium; font-family: &quot;Times New Roman&quot;, serif;">   nerves clarified at the organ and molecular scales. Current Opinion in Biomedical Engineering, <p></p></p>
+<p class="desc" style="margin: 0in; font-size: medium; font-family: &quot;Times New Roman&quot;, serif;"><b>   6</b>:1-7.</p>
+</li>
+<li style="margin-left: 0.5in;">
+<p class="desc" style="margin: 0in; font-size: medium; font-family: &quot;Times New Roman&quot;, serif;"><p>137. </p><span style="font-family: &quot;Lucida Grande&quot;, &quot;Lucida Sans Unicode&quot;, sans-serif; font-size: 13.008000373840332px;">Yannas IV. (2018). Hesitant steps from the artificial skin to organ regeneration. Regenerative </span><span style="font-family: &quot;Lucida Grande&quot;, &quot;Lucida Sans Unicode&quot;, sans-serif; font-size: 13.008000373840332px;">Biomaterials. </span><strong style="font-family: &quot;Lucida Grande&quot;, &quot;Lucida Sans Unicode&quot;, sans-serif; font-size: 13.008000373840332px;">5</strong><span style="font-family: &quot;Lucida Grande&quot;, &quot;Lucida Sans Unicode&quot;, sans-serif; font-size: 13.008000373840332px;">(4):189-195. doi: 10.1093/rb/rby012. Epub 2018 Jun 26.</span></p>
+</li>
+<li style="margin-left: 0.5in;">
+<p class="desc" style="margin: 0in; font-size: medium; font-family: &quot;Times New Roman&quot;, serif;"><span style="font-family: &quot;Lucida Grande&quot;, &quot;Lucida Sans Unicode&quot;, sans-serif; font-size: 13.008000373840332px;">138.</span><span style="font-family: &quot;Lucida Grande&quot;, &quot;Lucida Sans Unicode&quot;, sans-serif; font-size: 13.008000373840332px;"> Kourgiantaki A, Tzeranis DS, Karal K, Psilodimitrakopoulo S, </span><span style="font-family: &quot;Lucida Grande&quot;, &quot;Lucida Sans Unicode&quot;, sans-serif; font-size: 13.008000373840332px;">Niko M, Yannas IV, Stratakis E, Sidiropoulou K,   Charalampopoulos I, and Gravanis A (2020). Neural stem cell delivery via porous collagen</span><span style="font-family: &quot;Lucida Grande&quot;, &quot;Lucida Sans Unicode&quot;, sans-serif; font-size: 13.008000373840332px;"> scaffolds promotes neuronal differentiation and locomotion recovery in spinal cord injury. </span><span style="font-family: &quot;Lucida Grande&quot;, &quot;Lucida Sans Unicode&quot;, sans-serif; font-size: 13.008000373840332px;">npj Regenerative Medicine.  </span><strong style="font-family: &quot;Lucida Grande&quot;, &quot;Lucida Sans Unicode&quot;, sans-serif; font-size: 13.008000373840332px;">5</strong><span style="font-family: &quot;Lucida Grande&quot;, &quot;Lucida Sans Unicode&quot;, sans-serif; font-size: 13.008000373840332px;">, ‏1-14. </span></p>
+</li>
+</ul><p><strong> C.    Proceedings of Refereed Conferences: </strong></p>
+<ul><li style="margin-left: 0.5in;">1.  Yannas, I.V. and Gonzalez, R.N., "Phenomenological Characterization of a Paper-Coating Suspension", <em>Transactions of the Society of Rheology   </em>6:143-155 (1962).</li>
+<li style="margin-left: 0.5in;">2.  Yannas, I.V., "The Glass Transformation of a Protein", <em>First</em> <em>Northeast Regional Meeting of the Am. Chem. Soc</em>., Abst. No. 255, p. 116 (October 13-15, 1968).</li>
+<li style="margin-left: 0.5in;">3.  Yannas, I.V., Lunn, A.C., and Sung, N-H., "Mechanical Softening:  A Precursor to Cold Drawing", <em>Polymer Preprints</em> 10:1113-1116 (1969).</li>
+<li style="margin-left: 0.5in;">4.  Yannas, I.V., Arghyros, S., Sheik, A. and Turai, T., "Crosslinking of a Soluble Collagen by Dehydration", Abstracts, <em>3rd Internat'l Biophysics Congress</em>, Cambridge, MA  (Aug. 29-Sep. 3, 1969).</li>
+<li style="margin-left: 0.5in;">5.  Yannas, I.V. and Arends, C.B., "Massive internal fracture of amorphous polyester", Abstracts of Scientific Communications presented at the 4th IUPAC Microsymposium on Macromolecules, Prague, Abstract G4, (September 1-4, 1969).</li>
+<li style="margin-left: 0.5in;">6.  Yannas, I.V., "A critical modulus criterion for the onset of yielding in polymers", Abstracts of Scientific Communications presented at the 4th IUPAC Microsymposium on Macromolecules, Prague, Abstract J1, (September 1-4, 1969).</li>
+<li style="margin-left: 0.5in;">7.  Yannas, I.V., Lunn, A.C., and Sung, N-H., "Mechanical Softening: a precursor to cold drawing", Abstracts of Scientific Communications presented at the 4th IUPAC Microsymposium on Macromolecules, Prague, Abstract J2, (September 1-4, 1969).</li>
+<li style="margin-left: 0.5in;">8.  Yannas, I.V., Arghyros, S. and Huang, C., "Viscoelastic behavior of materials based on collagen and gelatin", Abstracts of Fifth Annual Meeting of the Association for the Advancement of Medical Instrumen­tation, Boston (March 23-25, 1970).</li>
+<li style="margin-left: 0.5in;">9.  Yannas, I.V., Huang, C. and Olson, D.A., "Materials science of collagen, gelatin and protein composites", Proceedings of the 23rd Annual Conference on Engineering in Medicine and Biology Washington, p. 157 (November 15-19, 1970).</li>
+<li style="margin-left: 0.5in;">10.  Yannas, I.V. and Lunn A.C., "Rupture and formation of secondary valence bonds during deformation of polycarbonate", <em>Polymer Preprints</em> 12:584-588 (1971).</li>
+<li style="margin-left: 0.5in;">11.  Yannas, I.V. and Huang, C., "Fracture of Tendon Collagen", <em>Polymer</em> <em>Preprints</em> A2:589-591 (1971).</li>
+<li style="margin-left: 0.5in;">12.  Yannas, I.V., Lunn, A.C. and Doyle, M.J., "The molecular basis of the transition from linear to nonlinear viscoelatic behavior in glassy polycarbonate", <em>Polymer Preprints</em> 13:96-100 (1972).</li>
+<li style="margin-left: 0.5in;">13.  Yannas, I.V., Lunn, A.C. and Doyle, M.J., "The molecular basis of the transition from linear to nonlinear viscoelastic behavior of polymers", Abstracts of IUPAC Symposium on Macromolecules, Helsinki, Abstract, p. 355 (July 2-7, 1972).</li>
+<li style="margin-left: 0.5in;">14.  Yannas, I.V. and Olson, D.A., "A linear model for mechanochemical transduction in human physiology", Proceedings of the 3rd Annual Meeting of the Biomedical Engineering Society, Baltimore, Abstract 9, (April 7-8, 1972).</li>
+<li style="margin-left: 0.5in;">15.  Yannas, I.V., Sung, N-H, Olson, D.A. and Huang, C., "Physicochemical definition of collagen as a polymeric substance in the solid state", Abstracts of IUPAC Symposium on Macromolecules, Helsinki, Abstract, p. 357 (July 2-7, l972).</li>
+<li style="margin-left: 0.5in;">16.  Yannas, I.V., "Characterization techniques for the molecular design of polymeric implants", <em>Proceedings of Biomedical Materials Conference</em>, Brighton, Utah, p. 133 (November 9-19, 1972).</li>
+<li style="margin-left: 0.5in;">17.  Yannas, I.V. and Sung, N-H., "Optical rotatory dispersion of collagen in the solid state:  A sensitive assay of helical content", <em>Polymer</em> <em>Preprints</em> 13:123-127 (1972).</li>
+<li style="margin-left: 0.5in;">18.  Yannas, I.V., "Nonlinear viscoelasticity of polymers", <em>Polymer Preprints</em> 14:803-812 (1973).</li>
+<li style="margin-left: 0.5in;">19.  Yannas, I.V., "Molecular interpretation of deformation in glassy polymers", <em>Proceedings of IUPAC International Symposium on Macromolecules</em>, Rio de Janeiro, 265-285 (July 26-31, 1974).</li>
+<li style="margin-left: 0.5in;">20.  Yannas, I.V., Burke, J.F., Huang, C., and Gordon, P.L. "Suppression of <em>in vivo degradability</em> and of immunogenicity of collagen by reaction with glycosaminoglycans", <em>Polymer Preprints</em> 16(2):209-214 (1975).</li>
+<li style="margin-left: 0.5in;">21.  Yannas, I.V. and Lunn, A.C., "Inter- versus intramolecular energy barriers during deformation of glassy amorphous polymers", <em>Polymer Preprints</em> 16(2):564-569 (1975).</li>
+<li style="margin-left: 0.5in;">22.  Yannas, I.V. and Silver, F., "Thromboresistant analogs of vascular tissue" <em>Polymer Preprints</em> 16(2):529-534 (1975).</li>
+<li style="margin-left: 0.5in;">23.  Huang, C. and Yannas, I.V., "Enzymatic stress relaxation of collagen and gelatin fibers", <em>Coatings and Plastics Reprints</em> (ACS) 36(2):243-248 (1976).</li>
+<li style="margin-left: 0.5in;">24.  Yannas, I.V., Burke, J.F., Huang, C. and Gordon, P.L.,"Control of biodegradation rate in design of collagenous skin substitutes", Abstracts of Third Annual Meeting of the Society for Biomaterials, New Orleans, Abstract 107 (April 15-19, 1977).</li>
+<li style="margin-left: 0.5in;">25.  Yannas, I.V., Silver, F.H. and Salzman, E.W., "Inhibition of the collagen-platelet reaction following collagen lattice disorganization by glycosaminoglycans", <em>Transactions of 4th Annual Meeting of the Society for Biomaterials</em>, San Antonio, p. 68 (April 29-May 2, 1978).</li>
+<li style="margin-left: 0.5in;">26.  Yannas, I.V., Burke, J.F., Umbreit, M. and Stasikelis, P., "Progress in Design of an Artificial Skin", <em>Fed. Proc</em>. 38:988 (1979).</li>
+<li style="margin-left: 0.5in;">27.  Yannas, I.V. and Burke, J.F., "Artificial Skin Design: Performance of Stage 1", Abst., First World Biomaterials Congress, Baden near Vienna, Austria, p. 1.4.1 (1980).</li>
+<li style="margin-left: 0.5in;">28.  Yannas, I.V. and Burke, J.F., "Wound Closure by a Single-Application Skin Substitute", Abst., AIChE 73rd Annual Meeting, Chicago, IL, (1980), p. T-45.</li>
+<li style="margin-left: 0.5in;">29.  Yannas, I.V., Burke, J.F., Trelstad, R.L., Stasikelis, P., Warpehoski, M., Skrabut, E., Giard, D., "Permanent Closure of Deep Wound with a Polymeric Membrane", 27th International Symposium on Macromolecules, Strasbourg, July 6-9, 1981.</li>
+<li style="margin-left: 0.5in;">30.  Yannas, I.V. and Burke, J.F., Use of Stage-1 Artificial Skin in early, complete closure of full-thickness wounds, <em>Abstracts, Amer. Soc. Artif. Int. Org</em>. <u>10</u>:75 (1981).</li>
+<li style="margin-left: 0.5in;">31.  Yannas, I.V., Burke, J.F., and Skrabut, E.M., "Artificial Skin:  Early, Single-Application Closure of Full-thickness Skin Wounds Without Use of Autograft", <em>Fed. Proc., Am. Soc. Exp. Biol</em>. 40:520 (1981).</li>
+<li style="margin-left: 0.5in;">32.  Yannas, I.V. and Burke, J.F., "Performance of Stage 1 Artificial Skin with Human Subjects:  Preliminary Results", <em>Transactions of the Seventh Annual Meeting of the Society for Biomaterials</em>, 4:91 (1981).</li>
+<li style="margin-left: 0.5in;">33.  Yannas, I.V., Burke, J.F., Orgill, D.P. and Skrabut, E.M., "Regeneration of Skin Following Closure of Deep Wounds with a Biodegradable Template", <em>Trans. Soc. Biomaterials</em> 5:24-29 (1982).</li>
+<li style="margin-left: 0.5in;">34.  Yannas, I.V., Burke, J.F., Chen, E., Orgill, D.P., and Skrabut, E.M., "Stage 2 Artificial Skin:  A Polymeric Template for Regeneration of New Skin", IUPAC Proceedings, 28th Macromolecular Symposium, Amherst, MA  July 12-16, 1982.</li>
+<li style="margin-left: 0.5in;">35.  Yannas, I.V. Salzman, E.W., Forbes, M.J., Sylverster, M.F., "Thrombogenic/Nonthrombogenic Collagen Fibers Effect of Pretreatment pH", <em>Soc. of Biomater. Abs</em>. (1982).</li>
+<li style="margin-left: 0.5in;">36.  Yannas, I.V., Salzman, E.W., Sylvester, M.L. and Forbes, M.J., "The Effect of Quaternary Structure on the Collagen-Platelet Reaction", American Chemical Society Meeting, Seattle, Washington (March 20-25, 1983).</li>
+<li style="margin-left: 0.5in;">37.  Yannas, I.V., Burke, J.F., Orgill, D., and Skrabut, E.M., "Skin Regeneration by Use of a Bioreplaceable Polymeric Template", <em>Trans., 2nd World Congress on Biomats. </em><u>VII</u>, p. 35 (1984).</li>
+<li style="margin-left: 0.5in;">38.  Yannas, I.V., Orgill, D.P., Silver, J., Norregaard, T.V., Zervas, N.T. and Schoene, W.C., "Polymeric Template Facilitates Regeneration of Sciatic Nerve Across 15-mm Gap", <em>Transactions of the Society of Biomaterials</em> 8:1946 (1985); <em>Proceedings, Am. Chem. Soc. Div. Polymeric Mat</em>. 53:216-218 (1985).</li>
+<li style="margin-left: 0.5in;">39.  Yannas, I.V. and Orgill, D.P., "A Fifth Route to Organ Repair", Proceedings, <em>Society of Plastics Engineers Congress</em>, 2233-2238 (1985).</li>
+<li style="margin-left: 0.5in;">40.  Yannas, I.V., Orgill, D.P., Silver, J., Norregaard, T.V., Zervas, N.T. and Schoene, W.C., "Morphometric Evidence of Peripheral Nerve Regeneration Following Grafting with a Polymeric Template", <em>Transactions Society Biomaterials</em> 9:174 (1986).</li>
+<li style="margin-left: 0.5in;">41.  Yannas, I.V., Krarup, C., Chang, A., Norregaard, T.V., Zervas, N.T., Sethi, R., "Conduction Properties of Nerve Fibers Regenerated Across Gap Bridged by Biodegradable Polymer Matrix", <em>Soc. of Neuroscience</em> <em>Abstract</em> 13:1043 (1987).</li>
+<li style="margin-left: 0.5in;">42.  Yannas, I.V., Norregaard, T.V., Silver, J., Zervas, N.T., Kirk, J.F. and Colt, J.J., "Relations Between Properties of Collagen-Glycosamino­gly­can Graft and Morphology of Regenerating Nerve. Part I." <em>Trans. Soc. Biomaterials</em> 10:6 (l987).</li>
+<li style="margin-left: 0.5in;">43.  Ferdman, A. and Yannas, I.V., "Small Angle Light Scattering From Histological Sections of Connective Tissue", <em>Trans. Soc. Biomaterials</em> 10:207 (l987).</li>
+<li style="margin-left: 0.5in;">44.  Yannas, I.V., "A Mechanism of Tissue Regeneration Using a Biodegradable Template, Part I." <em>Trans. Soc. Biomaterials</em> 10:l75 (l987).</li>
+<li style="margin-left: 0.5in;">45.  Yannas, I.V., Lee, E., Orgill, D.P., Ferdman, A., Skrabut, E.M. and Murphy, G.F., "De Novo Synthesis of Skin", <em>Proc. Am. Chem. Soc. Div. Polym. Mat</em>.  57:28-32 (l987).</li>
+<li style="margin-left: 0.5in;">46.  Yannas, I.V., Lee, E., E.M. Skrabut, E.M., Orgill, D.P., and G.F. Murphy, G.F., "Characterization of a Polymeric Matrix for Regenera­tion of Skin", abstract, <em>Journal of Cell Biology</em> 105:223a, (1987).</li>
+<li style="margin-left: 0.5in;">47.  Yannas, I.V., "Polymeric Matrices Induce Regeneration of Mammalian Skin: <em>Abs. Int. Symp. Cutaneous Dev., Aging Repair</em>, Padova, p. 29 (1987).</li>
+<li style="margin-left: 0.5in;">48.  Chang, A.S., Yannas, I.V., Krarup, C., Sethi, R., Norregaard, T.V., Zervas, N.T., "Conduction Properties in Peripheral Nerve Fibers Regenerated by Biodegradable Polymer Matrix", <em>MRS Symp. Abs</em>. p. 34l (1987).</li>
+<li style="margin-left: 0.5in;">49.  Yannas, I.V., Lee, E., Orgill, D.P., Skrabut, E.M., and Ferdman, A., "Certain Critical Structural Parameters of Polymeric Templates for Regeneration of Skin", <em>MRS Symp. Abs.</em> p. 341 (1987).</li>
+<li style="margin-left: 0.5in;">50.  Ferdman, A.G and Yannas, I.V., "Collagen Fiber Orientation in Tissue as Measured by Small-Angle Light Scattering", <em>MRS Symp. Abs.</em> p. 356 (1987).</li>
+<li style="margin-left: 0.5in;">51.  Yannas, I.V., "Properties of a Polymeric Matrix for the Regeneration of Skin and Nerve", <em>Transactions, 3rd World Biomaterials Congress</em>, XI p. 40 (1988).</li>
+<li style="margin-left: 0.5in;">52.  Chang, A.S., Yannas, I.V., Krarup, C., Sethi, R., Norregaard, T.V., and Zervas, N.T., "Polymeric Templates for Peripheral Nerve Regeneration. Electrophysiological Study of Functional Recovery.", <em>Proceedings of the ACS Division of Polymeric Materials: Science and Engineering</em>, 59:906-910 (1988).</li>
+<li style="margin-left: 0.5in;">53.  Yannas, I.V., Chang, A.S., Krarup, C., Sethi, R., Norregaard, T.V. and Zervas, N.T., "Conduction Properties of Peripheral Nerves Regenerated by Use of Copolymer Matrices with Different Biodegradation Rates", <em>Soc. of Neurosci. Abs</em>.  14:165 (1988).</li>
+<li style="margin-left: 0.5in;">54.  Carman, L.S., Schneider, G.E., and Yannas, I.V., "Extension of critical age for retinal axon regeneration by polymer bridges conditioned in neonatal cortex", <em>Soc. of Neurosci. Abs</em>.  14:498 (1988).</li>
+<li style="margin-left: 0.5in;">55.  Yannas, I.V., Chang, A.S., Krarup, C.,  Norregaard, T.V. and Zervas, N.T., "Environmental Preference of Regenerating Axons.  Effects of Matrix Pore Orientation, Pore Diameter and Degradation Rate", <em>Am. Soc. for Cell Biology Abs</em>.  107:732a (1989).  </li>
+<li style="margin-left: 0.5in;">56.  Loree, H.M., Yannas, I.V., Mikic, B., Chang, A.S., Perutz, S.M., Norregaard, T.V., and Krarup, C., "A Freeze-Drying Process for Fabrication of Polymeric Bridges for Peripheral Nerve Regeneration", <em>Proc. 15th</em> <em>Annual Northeast Bioeng. Conf.</em>, pp. 53-54 (1989).</li>
+<li style="margin-left: 0.5in;">57.  Chang, A.S., Yannas, I.V., Krarup, C., Sethi, R., Norregaard, T.V., and Zervas, N., "Conduction Properties in Peripheral Nerve Fibers Regenerated by Biodegradable Polymer Matrix", <em>Mat. Res. Soc. Symp.</em> 110:3-8 (1989).</li>
+<li style="margin-left: 0.5in;">58.  Yannas, I.V., Chang, A., Loree, H., Perutz, S., Krarup, C., and Norregaard, T.V., "Regeneration of Peripheral Nerves in Controlled Polymeric Environments", <em>Trans. Soc. Biomat.</em>  12:119 (1989).</li>
+<li style="margin-left: 0.5in;">59.  Yannas, I.V., Chang, A.S., Perutz, S., Krarup, C., Norregaard, T.V., and Zervas, N.T., "Requirement for a 1-µm Pore Channel Opening During Peripheral Nerve Regeneration Through a Biodegradable Chemical Analog of ECM", <em>Soc. for Neurosci. Abs.</em>  15:1257 (1989).</li>
+<li style="margin-left: 0.5in;">60.  Yannas, I.V., Chang, A.S., Perutz, S., Krarup, C., Norregaard, T.V., and Zervas, N.T., "Requirement for a 1-µm Pore Channel Opening During Peripheral Nerve Regeneration Through a Biodegradable Chemical Analog of ECM. <em>Proc. Am. Soc. Div. Polym. Mat.  </em>62:583-586 (1990).</li>
+<li style="margin-left: 0.5in;">61.  Yannas, I.V., Orgill, D.P., and Murphy, G.F., "Chemical Analogs of the Extracellular Matrix.  Cell-matrix Interactions." <em>Proc. Am. Soc. Div. Polym. Mat.  </em>62:801-803 (1990).</li>
+<li style="margin-left: 0.5in;">62.  Loree, H.M., Yannas, I.V., Mikic, B., Change A.S., and Perutz, S.M., "Peripheral Nerve Regeneration Using ECM Analogs. Control of Orientation Pore Channels." <em>AIChE l99l Annual Meeting Extended Abstract</em>, p. 3 (November l7-22, 1991).</li>
+<li style="margin-left: 0.5in;">63.  Yannas, I.V., Skrabut, E.M., Orgill, D.P., and Murphy, G.F., "De Novo Synthesis of Skin. Part II. Island Grafts."  <em>AIChE l99l Annual Meeting Extended Abstract</em>, p. 4 (November l7-22, 1991).</li>
+<li style="margin-left: 0.5in;">64.  Yannas, I.V., Skrabut, E.M. and Orgill, D.P., "In Vivo Synthesis of Organs by Use of ECM Analogs", <em>MRS Symp Abs.</em> p. 563 (1991).</li>
+<li style="margin-left: 0.5in;">65.  Troxel, K.S. and Yannas, I.V., "Myofibroblast axis orientation (alignment) is required for wound contraction." <em>J. Cell Biology Abstracts</em> 115 (3, Pt. 2):114a (1991).</li>
+<li style="margin-left: 0.5in;">66.  Yannas, I.V., "Templates for organ regeneration" <em>Biomaterials &amp; Intelligent Materials.  Technological Aspects &amp; Medical Applications</em>.<em> Syllabus &amp; Final Program</em>. p. 109 (September 21-26, 1992).</li>
+<li style="margin-left: 0.5in;">67.  Yannas, I.V., "Templates for organ regeneration", <em>Trans. and Final Program, Fourth World Biomaterials Congress</em> p. IL5 (April 24-28, 1992).</li>
+<li style="margin-left: 0.5in;">68.  Louie, L.K., Yannas, I.V., and Spector, M., “Development of a Collagen-GAG Copolymer Implant for the Study of Tendon Regeneration”, <em>Mat. Res. Soc. Symp. Proc.</em> 331:19-24 (1994).</li>
+<li style="margin-left: 0.5in;">69.  Butler, C.E., Orgill, D.P., Compton, C.  and Yannas, I.V.  (1996). Effects of cell culturing on keratinocyte-seeded collagen-glycosaminoglycan matrix skin replacement in full-thickness porcine wounds, <em>Surg. For.</em> 47: 752-754.</li>
+<li style="margin-left: 0.5in;">Several abstracts presented to Society for Biomaterials and other societies during the period 1996-2016.</li>
+</ul><p><strong>D. Other Major Publications (mostly chapters in books during 1971-2004; after 2004, chapters in books are listed under “Publications” above): </strong></p>
+<ul><li style="margin-left: 0.5in;">1. Tobolsky, A.V. and Yannas, I.V., "Thermodynamics of polymer solutions", Chapter 4 in <em>Polymer Science and Materials</em>, Vol. 1, 67-82 (1971).</li>
+<li style="margin-left: 0.5in;">2. Yannas, I.V., "Physical chemistry of collagen in the solid state", Chapter 3 in <em>Biomedical Physics and Biomaterials Science</em>, pp. 41-63 (1972).</li>
+<li style="margin-left: 0.5in;">3. Yannas, I.V., "Use of Artificial Skin in Wound Management", Chapter 15 in <em>The Surgical Wound</em>, P. Dineen, ed., Lea and Febiger, Philadelphia, pp. 171-190 (1981).</li>
+<li style="margin-left: 0.5in;">4. Yannas, I.V., Burke, J.F., Trelstad, R.L., Stasikelis, P., Warpehoski, M., Skrabut, E. and Giard, D., "Single-Application Closure of Deep Skin Wounds with a Polymeric Membrane", in <em>1981 Advances in Bioengineering</em>, D.C. Viano, editor, pp. 207-209 (1981).</li>
+<li style="margin-left: 0.5in;">5. Yannas, I.V. and Burke, J.F., "Artificial Skin Design:  Permanent Closure of Full Thickness Skin Wounds", in <em>Biomaterials 1980</em>, G.D. Winter, D.F. Gibbons and H. Plenck, Jr., John Wiley, New York, pp. 635-640 (1982).</li>
+<li style="margin-left: 0.5in;">6. Yannas, I.V. and Luise, R.R., "The Strophon Theory of Deformation of Glassy Amorphous Polymers.  Application to Small Deformations", in <em>The Strength and Stiffness of Polymers</em>, A.E. Zachariades and R.S. Porter, editors, Dekker, New York, Chapter 6, pp. 255-292 (1982).</li>
+<li style="margin-left: 0.5in;">7. Yannas, I.V., Burke, J.F., Wapehoski, M., Stasikelis, P., Skrabut, E.M., Orgill, D.P., Giard, D., "Design Principles and Preliminary Clinical Performance of an Artificial Skin", in <em>Biomaterials:  Interfacial Phenomena and Applications</em>, N. Peppas and S.L. Cooper, editor, Advances in Chemistry Series, ACS, Washington, No. 199, 475-481 (1982).</li>
+<li style="margin-left: 0.5in;">8. Yannas, I.V., Orgill, D.P., Skrabut, E.M. and Burke, J.F., "Skin Regeneration with a Bioreplaceable Polymeric Template", Chapter 13 in <em>Polymeric Materials and Artificial Organs</em>, C.G. Gebelein, editor, ACS, Washington, pp. 191-197 (1984).</li>
+<li style="margin-left: 0.5in;">9. Yannas, I.V. and Orgill, D.P., Artificial Skin:  A Fifth Route to Organ Repair, in <em>Polymeric Biomaterials</em>, E. Piskin and A.S. Hoffmann, eds., Martinas, Nijhogg, Dordrecht, pp. 221-230 (1986).</li>
+<li style="margin-left: 0.5in;">10.  Yannas, I.V., "Skin", in <em>McGraw-Hill Yearbook of Science and Technology</em>, S.P. Parker, editor, McGraw-Hill, NY pp. 422-423 (l987).</li>
+<li style="margin-left: 0.5in;">11.  Yannas, I.V., Orgill, D.P., Silver, J., Norregaard, T.V., Zervas, N.T., and Schoene, W.C., "Regeneration of Sciatic Nerve Across 15-mm Gap by Use of a Polymeric Template", in <em>Advances in Biomedical Polymers</em>, Charles G. Gebelein, editor, Plenum Publishing Corp., NY, pp. 1-9 (l987).</li>
+<li style="margin-left: 0.5in;">12.  Yannas, I.V., "Regeneration of Skin and Nerves by use of Collagen Templates", in Vol. III, <em>Collagen: Biotechnology</em>, M. Nimni, editor, CRC Press, Boca Raton, FL, Chapt. 4, pp. 87-115 (l988).</li>
+<li style="margin-left: 0.5in;">13.  Yannas, I.V., "Control of Kinetics and Mechanism of Skin Wound Healing By Use of a Bilayer Polymeric Membrane", in <em>Engineering Applications of New Composites</em>, S.A. Paipetis and G.C. Papanicolaou, eds., Omega Scientific, Wallingford, pp. 14­­­-16 (l988).</li>
+<li style="margin-left: 0.5in;">14.  Yannas, I.V., Lee, E., and Dionne Bentz, M., "Control of Skin Wound Contraction Rate by Critically Insoluble Collagen Matrices", in <em>Applied Bioactive Polymeric Materials</em>, C.G. Gebelein, C.E. Carraher, and V.R. Foster, eds., Plenum Press, NY, pp. 313-318 (1988).</li>
+<li style="margin-left: 0.5in;">15.  Yannas, I.V., "Skin, Regeneration Templates" in <em>Encyclopedia of Polymer Science and Engineering</em>, Vol. 15, second edition, Wiley, NY, pp. 317-334, (1989).</li>
+<li style="margin-left: 0.5in;">16.  Yannas, I.V., "Certain Biological Implications of Mammalian Skin Regeneration by a Model Extracellular Matrix", in <em>Cutaneous Development, Aging and Repair</em>, Davidson, J.M. and Abatangelo, G., editors, Liviana Press, Padova, pp.131-139 (1989).</li>
+<li style="margin-left: 0.5in;">17.  Chang, A.S., Yannas, I.V., Perutz, S., Loree, H., Sethi, R.R., Krarup, C., Norregaard, T.V., Zervas, N.T., and Silver, J., "Electro­physio­logical Study of Recovery of Peripheral Nerves Regenerated by a Collagen-Glycosaminoglycan Copolymer Matrix", in <em>Progress in Biomedical Polymers</em>, C.G. Gebelein, ed., Plenum Press, NY, pp. 107-120, (1990).</li>
+<li style="margin-left: 0.5in;">18.  Yannas, I.V., "Biologically Active Analogs of the Extracellular Matrix", Chapter 5 in <em>Materials Science and Technology</em>, D.F. Williams, editor, pp. 179-208 (1991).</li>
+<li style="margin-left: 0.5in;">19.  Yannas, I.V., Chang, A.S., Perutz, S., Krarup, C., Norregaard, T.V., and Zervas, N.T., "Requirement for a 1-µm Pore Channel Opening During Peripheral Nerve Regeneration Through a Biodegradable Chemical Analog of ECM." in <em>Biotechnology and Polymers</em>, C.G. Gebelein, ed., Plenum Press, NY, pp. 275-279 (1991).</li>
+<li style="margin-left: 0.5in;">20.  Chang, A.S. and Yannas, I.V., "Peripheral Nerve Regeneration", in <em>Neuroscience Year</em> (Supplement 2 to the <em>Encyclopedia of Neuroscience</em>), B. Smith and G. Adelman, eds., Birkhaüser Boston, pp. 125-126 (1992).</li>
+<li style="margin-left: 0.5in;">21.  Luise, R. and Yannas, I.V., "Mechanics of Strophons in Glassy Amorphous Polymers.  Unified view of Stiffness, Yielding and Crazing Behavior.", in <em>Computational Modeling of Polymers</em>, J. Bicerano, ed., Marcel Dekker, Inc., New York, NY pp. 191-218 (1992).</li>
+<li style="margin-left: 0.5in;">22.  Yannas, I.V. "Tissue Regeneration by Use of Collagen-Glycosaminoglycan Copolymers", in <em>Clinical Materials</em>, J.A. Werkmeister and J.A.M. Ramshaw, eds., Elsevier Science Publishers, 9:179-187 (1992).</li>
+<li style="margin-left: 0.5in;">23.  Yannas, I. V. (1996). Natural Materials, Chapter 2.7 in <em>Biomaterials Science: An Introduction to  Materials in Medicine</em>, B. Ratner, A. Hoffman, J. Lemons and F. Schoen, eds., Academic Press, NY, pp. 84-94.</li>
+<li style="margin-left: 0.5in;">24.  Yannas, I.V. "Materials for Skin and Nerve Regeneration; Biologically Active Analogs of the Extracellular Matrix", Chapter 5 in <em>Materials Science and Technology.  Medical and Dental Materials</em>, D.F. Williams, vol. ed., Vol 14. pp. 179-208 (1992).</li>
+<li style="margin-left: 0.5in;">25.  Yannas, I.V. "To Regenerate an Organ", <em>Chapter One</em> 6(3):30-33 (1992).</li>
+<li style="margin-left: 0.5in;">26.  Yannas, I.V. (1995). "Regeneration templates." Chapter 109, pp. 1619-1635, in <em>The Biomedical Engineering Handbook</em>, J.D. Bronzino, editor, CRC Press.</li>
+<li style="margin-left: 0.5in;">27.  Yannas, I.V. (1995). "Artificial skin and dermal equivalents." Chapter 134, pp. 2025-2038, in <em>The Biomedical Engineering Handbook</em>, J.D. Bronzino, ed., CRC Press.</li>
+<li style="margin-left: 0.5in;">28.  Yannas, I. V. (1996). Regeneration versus Wiederheistellung des verletzten Gewebes: Die biologische Spezifizität bestimmter Analoga der extrazellulären Matrix, in <em>Wundheilung und Wundauflagen,</em> K. M. Sedlarik, H. Lippert, eds., Wissenschaftliche Verlagsgesellschaft mBH, Stuttgart, pp. 194-202.</li>
+<li style="margin-left: 0.5in;">29.  Yannas, I.V. (1996). Natural Materials, Chapter 2.7 in <em>Biomaterials Science: An Introduction to Materials in Medicine, </em>B. Ratner, A. Hoffman, J. Lemons and F. Schoen, eds., Academic Press, NY, pp. 84-94.</li>
+<li style="margin-left: 0.5in;">30.  Ellis, D. L. and I. V. Yannas (1996). Tissue regeneration by use of analogs of extracellular matrix, Chapter 18 in <em>Human Biomaterials Applications</em>, D. L. Wise et al., eds., Humana Press, Totowa NJ.</li>
+<li style="margin-left: 0.5in;">31.  Yannas, I.V. (1997). "In vivo synthesis of tissues and organs." Chapter 13 in <em>Textbook of Tissue Engineering</em>, Lanza, R.P., R.S. Langer and W. L. Chick, eds., R.G. Landes/Academic Press, New York, pp. 169-178.</li>
+<li style="margin-left: 0.5in;">32.  Yannas, I.V. (1997). Models of organ regeneration processes induced by templates. In: Bioartificial Organs, A. Prokop, D. Hunkeler and A.D. Cherrington, eds., Ann. N.Y. Acad. Sci., 831:280-293.</li>
+<li style="margin-left: 0.5in;">33.  Louie, L., Yannas, I.V. and Spector, M. (1998). Tendon.  In: Frontiers of Tissue Engineering, ed. by C.W. Patrick Jr., A.G. Mikos and L.V. McIntire, Chap. III.4. Pergamon/Elsevier, New York.</li>
+<li style="margin-left: 0.5in;">34.  Chamberlain, L. J. and I. V. Yannas (1998).  Preparation of collagen-glycosaminoglycan copolymers for tissue regeneration. In J. R. Morgan and M. L. Yarmush, eds. <em>Methods of Molecular Medicine</em>, vol. 18: Tissue Engineering, Humana Press, Tolowa, NJ, Chap. 1, pp. 3-17.</li>
+<li style="margin-left: 0.5in;">35.  Landstrom, A. and I. V. Yannas (1999). Peripheral nerve regeneration. In G. Adelman and B. H. Smith, eds. Encyclopedia of Neuroscience, 2nd ed., Elsevier, New York, pp. 1611-1613.</li>
+<li style="margin-left: 0.5in;">36.  Yannas, I. V. (1999). In vivo synthesis of organs using collagen-GAG copolymers. In: Tissue Engineering of Vascular Prosthetic Grafts, P. Zilla and H. P. Greisler, Eds. Chap. 52, pp. 571-576. Eds. R. G. Landes, Austin, Texas.</li>
+<li style="margin-left: 0.5in;">37.  Yannas I. V. (2000). Facts and models of induced organ regeneration: Skin and peripheral nerve, In H. Garg and M. Longaker, eds. Scarless Healing. Marcel Dekker, New York, pp. 263-277.</li>
+<li style="margin-left: 0.5in;">38.  Yannas, I. V. (2000). In vivo synthesis of tissues and organs. In: Lanza, R. P., R. Langer and J. Vacanti, eds., Principles of Tissue Engineering (second edition). Chapter 15, pp. 167-178. Academic Press, New York.</li>
+<li style="margin-left: 0.5in;">39.  Yannas, I. V. (2000). Artificial skin and dermal equivalents. In: J. D. Bronzino, ed., The Biomedical Engineering Handbook. Chapter 138, pp.138-1 to 138-15. CRC Press, Boca Raton.</li>
+<li style="margin-left: 0.5in;">40.  Yannas, I. V. (2000). Regeneration templates. In: J. D. Bronzino, ed., The Biomedical Engineering Handbook. Chapter 113, pp.113-1 to 113-18. CRC Press, Boca Raton.</li>
+<li style="margin-left: 0.5in;">41.  Yannas, I. V. (2000). Natural materials. In: B. Ratner, ed., Second Edition. Biomaterials Science. Academic Press, New York, Boca Raton.</li>
+<li style="margin-left: 0.5in;">42.  Harley, B. and I. V. Yannas. 2003. Skin, Tissue Engineering. Chapter in Encyclopedia of Medical Devices, Second Edition, New York, John Wiley and Sons (In the press).</li>
+<li style="margin-left: 0.5in;">43.  Brau RR and Yannas IV (2004). Tissue Engineering of Skin. In <em>Encyclopedia of Biomaterials and Biomedical Engineering. </em>pp. 1652-1660. Marcel Dekker.</li>
+<li style="margin-left: 0.5in;">44.  Yannas, I. V. 2004. Biologically active scaffolds. In: <em>Scaffolds in Tissue Engineering</em>, ed. J. Elisseef. New York: Humana Press.</li>
+<li style="margin-left: 0.5in;">45. Yannas IV, Wu J and Spilker M. (2004). Peripheral Nerve Regeneration. In <em>Encyclopedia of Neuroscience. 3rd edition. </em>Eds.G. Adelman and B.H. Smith. Elsevier.</li>
+</ul><p> </p>
+<p><strong>Invited Lectures:  Available upon request </strong></p>
+<p><strong>Theses Supervised by IV Yannas:</strong></p>
+<p> </p>
+<p><strong><u>S.B. Theses:</u></strong></p>
+<ul><li style="margin-left: 0.5in;">S.A. Kornfeld, The Molecular Basis for Mechanical Deformation of Polyethylene Terephthalate, June 1968.</li>
+<li style="margin-left: 0.5in;">D.S. Rogut, A Collagen Engine:  Its Design, Construction and Evaluation, June 1968.</li>
+<li style="margin-left: 0.5in;">D.S. Mark, Optimizing Collagen Fibers for Use in a Collagen Engine, September 1969.</li>
+<li style="margin-left: 0.5in;">B.M. Kinney, Thromboresistivity and Stability of Collagen-Mucopolysaccharide Analogs of Vascular Tissue, May 1976.</li>
+<li style="margin-left: 0.5in;">G.D. Speer, Centrifugal Sedimentation Casting of Prosthetic Blood Vessels, May 1976.</li>
+<li style="margin-left: 0.5in;">D. Sieverding, Process for Manufacturing Three Dimensional Articles from Collagen, Collagen Mucopolysaccharide Composite, and Other Fibrous Proteins, June 1976.</li>
+<li style="margin-left: 0.5in;">R.S. Frank, Manufacture of Collagen and Collagen-Mucopolysaccharide Composite Vessels by Cross Flow Filtration, August 1977.</li>
+<li style="margin-left: 0.5in;">R.B. Dobbin, Effects of pH on the Small Angle Diffraction Pattern of Collagen, May 1979.</li>
+<li style="margin-left: 0.5in;">R.G. Ackerley, The Effect of Decreasing pH on the Transmission Electron Microscope Image of Collagen, May 1980.</li>
+<li style="margin-left: 0.5in;">M.F. Sylvester, Electrical Semiconduction in Collagen, June 1980.</li>
+<li style="margin-left: 0.5in;">L.E. Achenie, Electrical Conduction of Halogen Doped Bovine Hide Collagen, May 1981.</li>
+<li style="margin-left: 0.5in;">F.T. Thwaites, Manufacture of Collagen-Mucopolysaccharide Vascular Prostheses by Cross Flow Filtration, May 1981.</li>
+<li style="margin-left: 0.5in;">C.S. Kang, Siliconizing of an Artificial Skin:  Investigation of a Reverse Transfer (Drawdown) Method. June 1981.</li>
+<li style="margin-left: 0.5in;">A.M. Sircar, A Biodegradable Adhesive for Medical Applications, June 1982.</li>
+<li style="margin-left: 0.5in;">R.W. Wilson, The Effect of Strain and Glycosaminoglycan Content on the Degradation Rate of Collagen-Based Membranes by Bacterial Collagenase, February 1983.</li>
+<li style="margin-left: 0.5in;">S.D. Flynn, Effects of Glutaraldehyde Crosslinking and Chondroitin-6-Sulfate upon the Mechanical Properties and In Vivo Healing Response of an Artificial Skin, May 1983.</li>
+<li style="margin-left: 0.5in;">P. Kerlee, Mechanical Properties of Skin, May 1983.</li>
+<li style="margin-left: 0.5in;">J.F. Kirk, Study of Vapor Induced Crosslinking in Collagen/GAG Foams, May 1983.</li>
+<li style="margin-left: 0.5in;">M.L. Paget, A Preliminary Study Using Measurement of Shear Wave Propagation Velocity to Non-Invasively Measure Changes in the Shear Elasticity of Skin Grafts During Healing, January 1984.</li>
+<li style="margin-left: 0.5in;">M. Wong, Quantification of Pore Size in Collagen-GAG Artificial Skin, June 1985.</li>
+<li style="margin-left: 0.5in;">V.M. Ng, Replacement of Silastic Components of the Artificial Skin with Biodegradable Substitutes, June 1985.</li>
+<li style="margin-left: 0.5in;">H. Irving, Effects of Freeze Drying Temperature on the Average Pore Size in Collagen-GAG Artificial Skin, May 1986.</li>
+<li style="margin-left: 0.5in;">H.M. Richard III, Replacement of the Silicone Layer of the Artificial Skin with Biodegradable Substitutes, June 1986.</li>
+<li style="margin-left: 0.5in;">H. Pickford, Chromium Labeling of an Artificial Skin, June 1986.</li>
+<li style="margin-left: 0.5in;">D.A. Gebala, Separation of Epidermal Langerhans Cells, June 1989.</li>
+<li style="margin-left: 0.5in;">A. Duros, Development of an In Vitro Model to Study Regeneration of Nerve Cells, May 1991</li>
+<li style="margin-left: 0.5in;">C. Raman, C.K., Enzymatic Deletion of Chondroitin 6-Sulfate from Collagene-Glycosaminoglycan Matrices, June 1991.</li>
+<li style="margin-left: 0.5in;">N. Sharfman, Processing-Property Relations of Collagen-Glycosaminoglycan Copolymer Foams Freeze-Dried at Various Temperatures, January 1992.</li>
+<li style="margin-left: 0.5in;">A. Chong, Wound Healing in an Amphibian Model, 1993.</li>
+<li style="margin-left: 0.5in;">[List needs updating. Additional BS theses were completed since 1993.]</li>
+</ul><p> </p>
+<p><strong><u>S.M. Theses:</u></strong></p>
+<ul><li style="margin-left: 0.5in;">N.K. Jain, Annealing of Internal Stresses in Amorphous Polycarbonate, October 1968.</li>
+<li style="margin-left: 0.5in;">S. Arghyros, The Dehydration of Soluble Collagen, January 1969</li>
+<li style="margin-left: 0.5in;">J.N. Shah, The Heat Setting of Nylon 6.6, January 1969.</li>
+<li style="margin-left: 0.5in;">C. Huang, Solid State Properties of Collagen and Gelatin, January 1971.</li>
+<li style="margin-left: 0.5in;">B.L. Lee, Deformation and Recovery of Certain Polymers.  An Instrument for the Study of Compressive Creep and Recovery of Swollen Polymers, June 1973.</li>
+<li style="margin-left: 0.5in;">C.B. Brogna, Crosslinking Mucopolysaccharides with Divinyl Sulfone, September 1973.</li>
+<li style="margin-left: 0.5in;">F.H. Silver, Physicochemical Design and Characterization of Candidate Collagen-Mucopolysaccharide Nonthrombogenic Materials, January l975.</li>
+<li style="margin-left: 0.5in;">G.H. Wang, Collagen-Mucopolysaccharide Interaction, September 1975.</li>
+<li style="margin-left: 0.5in;">R.H. Rubenstein, Standardization of Collagen-Mucopolysaccharide Composite Materials, February 1977.</li>
+<li style="margin-left: 0.5in;">P.G.H. Fernandez, Mechanical Properties and Rate of Enzymatic Degradation of Collagen-Mucopolysaccharide Composite Materials, January 1979.</li>
+<li style="margin-left: 0.5in;">P.J. Stasikelis, Burn Dressings Based on Collagen:  Structural Parameters Affecting Performance, May 1979.</li>
+<li style="margin-left: 0.5in;">M.J. Forbes, Cross-Flow Filtration, Transmission Electron Micrographic Analysis and Blood Compatibility Testing of Collagen Composite Materials for Use as Vascular Prostheses, May 1980.</li>
+<li style="margin-left: 0.5in;">D.P. Orgill, Biodegradable Adhesives for Orthopedic Surgery, May 1980.</li>
+<li style="margin-left: 0.5in;">M.F. Sylvester, Thrombogenicity of Collagen, February 1982.</li>
+<li style="margin-left: 0.5in;">E. H-Y. Chen, The Effects of Porosity and Crosslinking of a Collagen Based Artificial Skin on Wound Healing, June 1982.</li>
+<li style="margin-left: 0.5in;">J.F. Kirk, Solid State Crosslinking Process for Collagen-Glycosaminoglycan Membranes, January 1986.</li>
+<li style="margin-left: 0.5in;">E. Lee, Effect of Crosslink Density of Collagen Grafts on Wound Contraction Kinetics, May 1986.</li>
+<li style="margin-left: 0.5in;">A. S-P. Chang, Electrophysiological Recovery of Peripheral Nerves Regenerated by Biodegradable Polymer Matrix, May 1988.    </li>
+<li style="margin-left: 0.5in;">H.M. Loree II, A Freeze-Drying Process for Fabrication of Polymeric Bridges for Peripheral Nerve Regeneration, May 1988.</li>
+<li style="margin-left: 0.5in;">L.S. Ritterbush, Use of an Extracellular Matrix Analog to Assess Immunogenicity of Epidermal Cell Allografts, February 1992.</li>
+<li style="margin-left: 0.5in;">A. Landstrom, Nerve Regeneration Induced by Collagen-GAG Matrix in Collagen Tubes, September 1994.</li>
+<li style="margin-left: 0.5in;">L. J. Chamberlain, Long Term Functional and Morphological Evaluation of Peripheral Nerves Regenerated Through Degradable Collagen Implants, September 1996.</li>
+<li style="margin-left: 0.5in;">M. Spilker, Studies of Axonal Elongation Across a Gap in the Spinal Cord, January 1997.</li>
+<li style="margin-left: 0.5in;">B. Harley. Critical biodegradation rate of tubulation device used in peripheral nerve regeneration. January, 2002.</li>
+<li style="margin-left: 0.5in;">R. Brau. Contractile stresses during peripheral nerve regeneration. January, 2002.</li>
+<li style="margin-left: 0.5in;">K. Corin. Cancellation of contractile stresses during peripheral nerve regeneration. In progress, 2005.</li>
+<li style="margin-left: 0.5in;">E. Soller. Methodology for study of contractile stresses during peripheral nerve regeneration. 2005.</li>
+<li style="margin-left: 0.5in;">M. Wong, Genomics of scaffold-induced nerve regeneration. 2006</li>
+<li style="margin-left: 0.5in;">A. Sarkar. Effect of upregulation of stem cell presence in skin wound healing. 2007.</li>
+<li style="margin-left: 0.5in;">K. Miu. Proteomics of scaffold-induced nerve regeneration. 2009.</li>
+<li style="margin-left: 0.5in;">Melissa C. Buydash. Mechanical Modeling of Tissue Response During Early Stage Entubulated Peripheral Nerve Regeneration, 2013.</li>
+</ul><p style="margin-left: 0.5in;"><strong><u>Doctoral Theses</u></strong></p>
+<ul><li style="margin-left: 0.5in;"><span style="font-size: 13.008px;">A.C. Lunn, The Molecular Basis of Homogeneous Deformation in Glassy Polycarbonate, June 1972.</span></li>
+<li style="margin-left: 0.5in;">N-H. Sung, Structure and Properties of Collagen and Gelatin in the Hydrated and Anhydrous Solid State, June 1972.</li>
+<li style="margin-left: 0.5in;">C. Huang, Physicochemical Studies of Collagen and Collagen-Mucopolysaccharide Composite Materials (Model Materials for Skin), February 1974.</li>
+<li style="margin-left: 0.5in;">K. Troxel, Mechanisms of Alteration of Skin Wound Contraction Kinetics by Porous Collagen-GAG Materials, December 1994.</li>
+<li style="margin-left: 0.5in;">L. Louie, Effect of a Porous Collagen-Glycosaminoglycan Copolymer on Early Tendon Healing in a Novel Animal Model, February 1997.</li>
+<li style="margin-left: 0.5in;">L. J. Chamberlain, Influence of Implant Parameters on the Mechanisms of  Peripheral Nerve Regeneration, June 1998.</li>
+<li style="margin-left: 0.5in;">M.H. Spilker, Peripheral Nerve Regeneration through Tubular Devices. June 2000.</li>
+<li style="margin-left: 0.5in;">E. Soller, PhD. Cell-mediated Contraction and Induced Regeneration of the Injured Peripheral Nerve. June 2011.</li>
+<li style="margin-left: 0.5in;">D. Tzeranis, PhD. Imaging Studies of Peripheral Nerve Regeneration Induced by Porous Collagen Biomaterials, June 2013.</li>
+</ul><p> </p>
+</div></div><div class='column small-12 profile-block'>
+              <div id='patents' class='profile-block-content'><h2>Patents</h2><p><u><strong>Patents and Patent Applications Pending:</strong></u></p>
+<ol><li><span style="font-size: 13.008px;">Yannas, J.F. Burke, P.L. Gordon, and C. Huang, "Multilayer Membrane Useful as Synthetic Skin", U.S. Pat. 4,060,081 (November 29, 1977).</span></li>
+<li><span style="font-size: 13.008px;">Yannas, P.L. Gordon, C. Huang, F.H. Silver, and J.F. Burke, "Crosslinked Collagen-Mucopolysaccharide Composite Materials", U.S. Pat. 4,280,954 (July 28, 1981).</span></li>
+<li><span style="font-size: 13.008px;">Yannas and D.L. Sieverding, "Cross Flow Filtration Molding Method", U.S. Pat. 4,252,759 (February 24, 1981).</span></li>
+<li><span style="font-size: 13.008px;">Yannas and M.J. Forbes, "Procedures for Preparing Composite Materials from Collagen and Glycosaminoglycan", U.S. Pat. 4,350,629 (September 21, 1982).</span></li>
+<li><span style="font-size: 13.008px;">Yannas, J.F. Burke, D.P. Orgill, and E.M. Skrabut, "Method of Promoting the Regeneration of Tissue at a Wound", U.S. Pat. 4,418,691 (December 6, 1983).</span></li>
+<li><span style="font-size: 13.008px;">Yannas and J.F. Kirk, "Method for the Preparation of Collagen-Glycosaminoglycan Composite Materials", U.S. Pat. 4,448,718 (May 15, 1984).</span></li>
+<li><span style="font-size: 13.008px;">Yannas and J.F. Burke, "Cell-Seeding Procedures Involving Fibrous Lattices", U.S. Pat. 4,458,678 (July 10, 1984).</span></li>
+<li><span style="font-size: 13.008px;">Yannas and J.F. Burke, "Method of Using a Fibrous Lattice", U.S. Pat. 4,505,266 (March 19, 1985).</span></li>
+<li><span style="font-size: 13.008px;">Yannas, J.F. Burke, and P.S. Stasikelis, "Method for Preserving Porosity in Porous Materials", U.S. Pat. 4,522,753 (June 11, 1985).</span></li>
+<li><span style="font-size: 13.008px;">Yannas, "Process for Forming Multilayer Bioreplaceable Blood Vessel Prosthesis", U.S. Pat. 4,787,900 (November 29, 1988).</span></li>
+<li><span style="font-size: 13.008px;">Yannas, "Multilayer Bioreplaceable Blood Vessel Prosthesis", U.S. Pat. 4,902,289 (February 20, 1990).</span></li>
+<li><span style="font-size: 13.008px;">Yannas, Elaine Lee, and Ariel Ferdman, "Biodegradable Templates for the Regeneration of Tissues", U.S. Pat. 4,947,840 (August 14, 1990).</span></li>
+<li><span style="font-size: 13.008px;">Yannas, D.P. Orgill, H.M. Loree II, J.F. Kirk, A. S.-P. Chang, B.B. Mikic, C. Krarup, T.V. Norregaard, and N.T. Zervas, "Prosthesis for Promotion of Nerve Regeneration", U.S. Pat. 4,955,893 (September 11, 1990).</span></li>
+<li><span style="font-size: 13.008px;">Orgill, D. P., C. E. Butler, M. Barlow, S. Ritterbush, I. V. Yannas and C. C. Compton. “Method of skin regeneration using a collagen-glycosaminoglycan matrix and cultured epithelial autograft.”, U.S. Patent 5,489,3041 (1996).</span></li>
+<li><span style="font-size: 13.008px;">Orgill D.P., C. E. Butler, M. Barlow, S. Ritterbush, I. V. Yannas, Carolyn C. Compton, “Method of skin regeneration using a collagen-glycosaminoglycan matrix and cultured epithelial autograft”. U.S.Patent 5,716,411 (Feb.10, 1998).</span></li>
+<li><span style="font-size: 13.008px;">Spector, M., Yannas, I. V. (and others). "Modification of collagen matrices for prolonged delivery of genes." MIT Case No. 9411. July 25, 2001.</span></li>
+<li><span style="font-size: 13.008px;">Gibson, L. J., Yannas, I. V. and others. "Scaffolds with uniform pore channels" (disclosure submitted to MIT). 2003.</span></li>
+<li><span style="font-size: 13.008px;">Sannino, A.,  Yannas I. V. and others. "Novel Technique to Fabricate Porous Tubes with Tube Walls Having Patterned Porosity". U.S. Serial No. 60/622,441. Filed 27 Oct. 2004.</span></li>
+<li><span style="font-size: 13.008px;">Yannas I. V., L. J. Gibson, F. J. O’Brien, B. Harley, R. R. Brau, S. Samouhos, M. Spector . “Gradient scaffolding and Methods for Producing the Same". Pub. No. US 2006/0121609 A1 (Patent Application published Jun. 8, 2006)</span></li>
+<li><span style="font-size: 13.008px;">Lynn AJ, Yannas IV, B. Harley, L. J. Gibson.  “Method for Producing Scaffolds Comprising Porous Layers of Collagen, Calcium Phosphate and GAG”. UK Patent Application No. 0504673.5. (Filed 7 March 2005.)    </span></li>
+<li><span style="font-size: 13.008px;">Harley BJ, Reddy HK, Yannas IV, Zagorski C. “Processing of angiogenic scaffolds for Large Organ Regeneration”. US Serial no. 60/730,880. Filed 28 Oct. 2005.</span></li>
+<li><span style="font-size: 13.008px;"> I.V Yannas, H.K. Reddy, C.J. Zagorski, and B.A. Harley, “Gradient Template for Angiogenesis during Large Organ Regeneration”.  Intl. application No. PCT/US2006/043424. Intl. Filing Date: Nov. 6, 2006.</span></li>
+<li><span style="font-size: 13.008px;">C.J. Zagorski, B.A. Harley, H.K. Reddy, I.V Yannas,. “Tissue Scaffolding Comprising Surface folds for Tissue Engineering”. Intl. Application No. PCT/US2006/14484. Intl. filing Date: April 17, 2006.</span></li>
+<li><span style="font-size: 13.008px;">Sannino A, Harley BA, Hastings AZ, Yannas IV; A novel technique to fabricate cylindrical and tubular structures with a patterned porosity. International (PCT) Patent Application patent PCT/US2005/039024. 2005 October 27, 2005.</span></li>
+<li><span style="font-size: 13.008px;">Lynn AK, Harley BA, Gibson LJ, Yannas IV, Bonfield W, inventors; Biomaterial. U.K. Patent Application GB05/04673.5. 2005 March 7, 2005.</span></li>
+<li><span style="font-size: 13.008px;">M.I.T. Case No. 13111, "Scaffolds for Control of the Fibrotic Healing Response of Liver Tissue", by Karen J. Ho, Seth J. Karp, Eric C. Soller and Ioannis V. Yannas.</span></li>
+<li><span style="font-size: 13.008px;">MIT Case No. 13391 Masking of Scaffold Surfaces. Tzeranis D, So P. and Yannas IV.</span></li>
+</ol><p> </p>
+</div></div></div></section>  </div>
+</div>
+  </div>
+        <div class="region region-footer">
+    <div id="block-block-2" class="block block-block">
+
+    
+  <div class="content">
+    <footer><div class="footer-inner mesh-bg light">
+        <div class="clearfix row full-width">
+            <div class="helpful-links clearfix large-6 medium-12 columns">
+                <ul class="link-group"><li class="top-link"><a href="#"><span class="heavy">at MechE</span></a></li>
+                    <li><a href="/sites/default/files/ME-Diversity-Statement.pdf">Diversity Statement</a></li>    
+                    <li><a href="/faculty-positions">Faculty Positions</a></li> 
+                    <li><a href="/contact">Contact</a></li>
+                    <li><a href="/how-apply">Apply</a></li>
+                    <li><a href="/sitemap.xml">Sitemap</a></li>
+                    <li><a href="/privacy">Privacy</a></li>
+                    <li><a href="https://accessibility.mit.edu/">Accessibility</a></li>
+                    <li><a href="/credits">Credits</a></li>
+                    <li><a class="toggle-contrast" href="#">Toggle High Contrast</a></li>
+                </ul><ul class="link-group"><li class="top-link"><a href="#"><span class="heavy">Student</span> <span class="light">Resources</span></a></li>
+                    <li><a href="https://meche-ad-portal.mit.edu/">MechE Academic Dashboard</a></li>
+                    <li><a href="https://meundergrad.mit.edu/">MechE Undergrad Portal</a></li>
+                    <li><a href="https://meche-res.mit.edu/resources/2A/">Online 2A Contract</a></li>
+                    <li><a href="https://meundergrad.mit.edu/sb-thesis-information">SB Thesis Information</a></li>
+                    <li><a href="https://meche-res.mit.edu/resources/grad/">Online Grad Card</a></li>
+                    <li><a href="http://odge.mit.edu/gpp/oversight/petitions/">ODGE Petition</a></li>
+                        <li><a href="/sites/default/files/ON-LINE_THESIS_SUBMISSION.pdf">On-Line Thesis Submission</a></li>
+                    <li><a href="/sites/default/files/Zoom%20Instructions%20for%20PhD%20Thesis%20Defenses.pdf">Zoom Instructions for Virtual Defenses</a></li>
+                    <li><a href="/sites/default/files/MechE_Grad_Guide.pdf">Guide to Graduate Study</a></li>
+                    <li><a href="http://handbook.mit.edu/">MIT's Mind &amp; Hand Book</a></li>
+                </ul><ul class="link-group"><li class="top-link"><a href="#"><span class="heavy">Staff</span> <span class="light">Resources</span></a></li>
+                    <li><a href="https://meche-reservations.mit.edu/Web/">Room Reservations</a></li>
+                   <li><a href="https://meche-res.mit.edu/resource_links/">MechE Resources</a></li>
+                   <li><a href="https://meche.mit.edu/Shibboleth.sso/Login?target=https://meche.mit.edu/handy-links">Edit My Profile <i class="fa fa-lock"></i></a></li>
+                </ul></div>
+            
+            <div class="social-links large-3 medium-12 columns">
+                <hr class="meche-dots thin pad-both" /><p>Follow our research.<br />Or, just follow us.</p>
+                <ul class="social-btns"><li><a href="http://facebook.com/mitmeche" target="_blank" class="social-btn"><i class="fa fa-facebook"></i><span>Facebook</span></a></li>
+                    <li><a href="http://twitter.com/mitmeche" target="_blank" class="social-btn"><i class="fa fa-twitter"></i><span>Twitter</span></a></li>
+                    <li><a href="http://www.youtube.com/mitmeche" target="_blank" class="social-btn"><i class="fa fa-youtube"></i><span>YouTube</span></a></li>
+                    <li><a href="http://instagram.com/mitmeche" target="_blank" class="social-btn"><i class="fa fa-instagram"></i><span>Instagram</span></a></li>
+                    <li><a href="https://www.linkedin.com/company/11244119/" target="_blank" class="social-btn"><i class="fa fa-linkedin"></i><span>Linkedin</span></a></li>
+                </ul><hr class="meche-dots thin pad-both" /><link href="//cdn-images.mailchimp.com/embedcode/slim-10_7.css" rel="stylesheet" type="text/css" /><style type="text/css">
+<!--/*--><![CDATA[/* ><!--*/
+
+                #mc_embed_signup{clear:left; font-family:"Rajdhani",Helvetica,sans-serif; margin-top: 20px; margin-left: 0px; padding-let: 0px;}
+                /* Add your own Mailchimp form style overrides in your site stylesheet or in this style block.
+                   We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+
+/*--><!]]>*/
+</style><div id="mc_embed_signup">
+<form action="https://mit.us17.list-manage.com/subscribe/post?u=6f5c7fd40df3024d6e08b1cbd&amp;id=917562481d" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate="">
+    <div id="mc_embed_signup_scroll">
+                <p><label for="mce-EMAIL" style="color: #02b2f4; font-weight: normal;">Sign up for our monthly newsletter</label></p>
+                <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required="" style="width: 70%;" /><!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups--><div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_6f5c7fd40df3024d6e08b1cbd_917562481d" tabindex="-1" value="" /></div>
+    <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button" /></div>
+    </div>
+</form>
+</div>
+ 
+<!--End mc_embed_signup-->
+
+
+
+            </div>
+
+            <div class="find-us medium-12 columns clearfix">
+                
+                <hr class="meche-dots thin pad-both" /><div class="address-group">
+                    <h3><span class="heavy">MechE</span> <span class="light">Analog</span></h3>
+                    <p>Massachusetts Institute of Technology</p>
+                    <p class="heavy">Department of Mechanical Engineering</p><br /><p>77 Massachusetts Avenue, Room 3-173</p>
+                    <p>Cambridge, Massachusetts 02139</p>
+                </div>
+                <div class="clearfix find-us-logos">
+                    <a class="pull-left logo-meche" href="http://meche.mit.edu"><img src="/sites/all/themes/mit_meche/img/logo-meche-footer@2x.png" alt="MIT Mechanical Engineering" /></a>
+                    <a class="pull-left logo-mit" href="http://www.mit.edu"><img src="/sites/all/themes/mit_meche/img/logo-mit-footer@2x.png" alt="MIT" /></a>
+                </div>
+            </div>
+            
+        </div>
+        
+    </div>
+</footer>  </div>
+</div>
+  </div>
+      
+    </div> <!-- close off-canvas inner-wrap -->
+  </div> <!-- close off-canvas wrap -->
+
+
+          <!-- JS Files -->
+
+        <!-- Loaded from CDN -->
+        
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+        <script>window.jQuery || document.write('<script src="/js/vendor/jquery.js"><\/script>')</script>
+        <!--
+            Load Concatenated and Minified Scripts ( plugins.js, foundation.js, scripts.js )
+        -->
+        <!-- jQuery Modal -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+
+        <script src="/sites/all/themes/mit_meche/js/scripts.all.min.js"></script>
+        <script type="text/javascript" src="/sites/all/themes/mit_meche/js/vendor/packery.pkgd.min.js"></script>
+        
+  <script>
+
+      $(document).ready(function(){
+
+          MecheController.init({});
+          
+          $(window).on("throttledresize", function( event ) {
+          
+              MecheController.resize();
+
+          }).trigger("throttledresize");
+      });
+
+  </script>
+
+
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"ab0374a39e","applicationID":"39297557","transactionName":"Z1QGZBZQVkNYU0YNWV4eJVMQWFdeFl1XB15VbgZcC1JTQ2ZAQAtQWV0BbxRQX1U=","queueTime":0,"applicationTime":193,"atts":"SxMFEl5KRU0=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

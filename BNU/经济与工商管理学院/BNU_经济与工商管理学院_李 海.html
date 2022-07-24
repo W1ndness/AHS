@@ -1,0 +1,495 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0">
+    <title>北京师范大学工商与经济管理学院</title>
+    <link rel="stylesheet" href="http://bs.bnu.edu.cn/new-ver-css/reset.css">
+    <link rel="stylesheet" href="http://bs.bnu.edu.cn/new-ver-css/index.css">
+	<link rel="stylesheet" href="http://bs.bnu.edu.cn/new-ver-css/xyslist.css">
+	<link rel="stylesheet" href="http://bs.bnu.edu.cn/new-ver-css/xys-tf.css">
+    <style>
+        .container{
+            width:100%;
+            height: auto;
+            overflow: hidden;
+        }
+        .header{
+            width:100%;
+            height:116px;
+            background:#EFF8FF;
+        }
+        .logo1{
+            width:1200px!important;
+            margin:0 auto;
+            position:relative;
+            float: none;
+			display:block;
+        }
+        .logo2{
+            float:right;
+        }
+        .logo1 p{
+            position:absolute;
+            top:5px;
+            right:5px;
+            font-size:13px;
+        }
+        .logo1 p:hover{
+            color:#112769;
+        }
+        .tu{
+            width:100%;
+            height:240px;
+            background:url('http://bs.bnu.edu.cn/newweb/grzy/images/tu.jpg') no-repeat top center;
+            background-size: 100%;
+        }
+        .lujing{
+            width:1200px;
+            height:58px;
+            margin:0 auto;
+            border-bottom:1px solid #aaa;
+            overflow:hidden;
+        }
+        .lujings{
+            margin:24px 0 0 0;
+            font-size:14px;
+        }
+        .content{
+            color:#333;
+            width:1200px;
+/*            height:2000px;*/
+            margin:0 auto;
+            margin-top:40px;
+/*            background:#c4c4c4;*/
+        }
+        
+        .xian{
+            width:100%;
+            height:8px;
+            background:#9A0812;
+        }
+        
+        .leftc{
+            float:left;
+        }
+        .rightc{
+            float:left;
+            margin-left:50px;
+/*            background:#666;*/
+            width:880px;
+/*            height:1000px;*/
+        }
+        .rheader{
+            width:880px;
+            height:210px;
+/*            background:yellow;*/
+        }
+        .xm{
+            font-size:30px;
+            height:40px;
+/*            border-bottom:4px solid #9A0812;*/
+            width:auto;
+            float:left;
+            line-height:40px;
+			margin-right:30px;
+        }
+        .zhiw{
+            font-size:18px;
+            height:40px;
+            line-height:50px;
+            margin-bottom:30px;
+        }
+        .tel{
+                font-size: 16px;
+                margin-top: 10px;
+                line-height: 20px;
+        }
+        .grjj{
+/*            height:300px;*/
+            width:880px;
+/*            background:yellow;*/
+            padding-bottom:40px;
+        }
+        .jjh{
+                font-size: 20px;
+                border-bottom: 1px solid #cecece;
+                height: 40px;
+                line-height: 40px;
+                padding-left: 30px;
+                background: url(http://bs.bnu.edu.cn/newweb/grzy/images/zw.png) no-repeat 0 16px;
+        }
+        
+        .jjc{
+            font-size:14px;
+            margin-top:30px;
+           
+            line-height:28px;
+            overflow:hidden;
+            text-align: justify;
+            text-justify:inter-ideograph;
+        }
+        .jjc1{
+            height:225px;
+            font-size:14px;
+            margin-top:30px;
+            
+            line-height:28px;
+            overflow:hidden;
+            text-align: justify;
+            text-justify:inter-ideograph;
+        }
+        
+        .dianji1{
+                background: url(http://bs.bnu.edu.cn/newweb/grzy/images/zw.png) no-repeat 0 -50px;
+                width: 13px;
+                height: 13px;
+                cursor: pointer;
+                display: block;
+            margin-top: 20px;
+            transition: all .2s linear;
+        }
+        .dianji1:hover{
+            background: url(http://bs.bnu.edu.cn/newweb/grzy/images/zw.png) no-repeat 0 -64px;
+        }
+        
+        .dianji{
+                background: url(http://bs.bnu.edu.cn/newweb/grzy/images/zw.png) no-repeat 0 -24px;
+                height: 13px;
+                cursor: pointer;
+                display: block;
+            margin-top: 20px;
+            transition: all .2s linear;
+        }
+        .dianji:hover{
+            background: url(http://bs.bnu.edu.cn/newweb/grzy/images/zw.png) no-repeat 0 -37px;
+        }
+        #jjc1{
+            text-indent:0em;
+        }
+        
+        .bks{
+            font-size:14px;
+            font-weight: 800;
+            margin-top:30px;
+            height:auto;
+            line-height:36px;
+        }
+        .bks1{
+            font-size:14px;
+            margin-top:30px;
+            height:auto;
+            line-height:36px;
+        }
+        .bksc{
+            height:36px;
+            line-height:36px;
+            font-size:14px;
+        }
+        
+        .yanzheng{
+            width:1200px;
+            height:100px;
+            margin:0 auto;
+        }
+        .yanzheng img{
+            display:block;
+            margin-top:26px;
+            float:left;
+        }
+		
+#appgame-leftside-share{width:42px; height:216px; position: fixed;bottom: 30px;right: 30px; z-index:9999;}
+.appgame-leftside-share{width:42px; height:259px;}
+#appgame-leftside-share a{display:block; width:42px; height:44px; background-color:#e6e6e6; z-index:1; position:absolute; left:0; box-sizing:border-box; -moz-box-sizing:border-box; border:1px #ddd solid; background-image:url(http://gh.bnu.edu.cn/images/share-icons.png); background-repeat:no-repeat; margin:0;  transition:0.4s; -webkit-transition:0.4s; -moz-transition:0.4s;}
+#appgame-leftside-share a:hover{background-color:#fff; border:1px #eee solid; z-index:2;}
+/*.appgame-leftside-weixin{top:0; background-position:-88px 0;}
+.appgame-leftside-weixin:hover{background-position:0px 0;}
+.appgame-leftside-qzone{top:43px; background-position:-88px -44px;}
+.appgame-leftside-qzone:hover{background-position:0px -44px;}*/
+.appgame-leftside-search{top:86px; background-position:-93px -89px;}
+.appgame-leftside-search:hover{background-position:-5px -86px;}
+.appgame-leftside-weixin{top:129px; background-position:-88px 0px;}
+.appgame-leftside-weixin:hover{background-position:0px 0px;}
+/*.appgame-leftside-fbook{top:172px; background-position:-88px -176px;}
+.appgame-leftside-fbook:hover{background-position:0px -176px;}
+.appgame-leftside-twi{top:215px; background-position:-88px -220px;}
+.appgame-leftside-twi:hover{background-position:0px -220px;}*/
+#appgame-leftside-share .appgame-leftside-top{background-image:url(http://gh.bnu.edu.cn/images/leftnav-off.png); background-position:-1px -395px; top:130px; cursor:pointer;}
+
+.rwt_share {
+/*	overflow:hidden;*/
+	float:left;
+	position:relative;
+}
+.rwt_share a {
+	display:inline-block;
+	margin-right:10px;
+	text-indent:-9999px;
+	margin-bottom:10px;
+	width:24px;
+	height:24px;
+	overflow:hidden;
+	cursor:pointer;
+	float:left;
+	font-size:12px;
+}
+.rwts_weixin {
+	background-position:0 -1612px;
+}
+.rwts_tsina {
+	background-position:0 -104px;
+}
+.rwts_tqq {
+	background-position:0 -260px;
+}
+.rwts_qzone {
+	background-position:0 -52px;
+}
+.rwts_sqq {
+	background-position:0 -2652px;
+}
+.rwts_tieba {
+	background-position:0 -728px;
+}
+.rwts_renren {
+	background-position:0 -208px;
+}
+.rwts_kaixin001 {
+	background-position:0 -312px;
+}
+.rwts_tqf {
+	background-position:0 -364px;
+}
+.rwts_douban {
+	background-position:0 -468px;
+}
+.rwts_twi {
+	background-position:0 -1404px;
+}
+.rwts_fbook {
+	background-position:0 -1352px;
+}
+.rwts_ty {
+	background-position:0 -1196px;
+}
+.rwts_mogujie {
+	background-position:0 -1768px;
+}
+.rwts_meilishuo {
+	background-position:0 -1716px;
+}
+.rwts_huaban {
+	background-position:0 -1872px;
+}
+.rwts_hi {
+	background-position:0 -416px;
+}
+.rwts_tsohu {
+	background-position:0 -520px;
+}
+.rwts_more {
+	background-position:0 0;
+}
+.rwt_share_wxShow_code>img {
+	width:100%;
+}
+.bks1 li{
+	list-style:disc;
+}
+@media screen and (max-width: 1200px){
+	.logo1{
+		width:100%!important;
+	}
+	.leftc img{
+		width:50%!important;
+		height:50%!important;
+	}
+	.logo2{display:none;}
+	.lujing{
+		width:90%;
+	}
+	.content{
+		width:90%;
+	}
+	.leftc{
+		float:none;
+		
+	}
+	.tu{display:none;}
+	
+	.rightc{
+		float:none;
+		width:100%;
+		margin-left:0px;
+	}
+	.footers{width:100%;}
+	.rheader{width:100%;}
+	.grjj{width:100%;}
+}
+@media screen and (max-width: 600px){
+.l3{width:95%;}
+.share{display:none;}
+.leftc img{
+		width:70%!important;
+		height:70%!important;
+	}
+}
+  
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo1">
+                <img src="http://bs.bnu.edu.cn/newweb/grzy/images/logo.png" alt="" class="l3" style="margin-top: 25px;float:left;">
+                <img src="http://bs.bnu.edu.cn/newweb/grzy/images/logo2.png" alt="" class="logo2">
+                <a href="http://bs.bnu.edu.cn/englishversion/facultyresearch/fulltimefaculty/azmsy/119700.html"><p>ENGLISH VERSION</p></a>
+            </div>
+        </div>
+        <div class="xian"></div>
+        <div class="tu"></div>
+        <div class="lujing">
+            <div class="lujings">
+                <a href="#">师资队伍</a>
+                 | 
+                <a href="#">人力资源管理系</a>
+            </div>
+        </div>
+        <div class="content">
+            <div class="leftc">
+                <img src="/Public/upload/touxiang/05148.jpg" alt="" width="270">
+            </div>
+            <div class="rightc">
+                <div class="rheader">
+                    <p class="xm">李 海</p>
+                    <p class="zhiw">教授</p>
+                    <p class="tel"><strong style="display:block;width:100px;float:left;">电话</strong>：0086-10-58808814</p> 
+                 <p class="tel"><strong style="display:block;width:100px;float:left;">E-mail</strong>：lihai@bnu.edu.cn</p>
+                 <p class="tel"><strong style="display:block;width:100px;float:left;">Office hour</strong>：周四下午3:00-5:00</p>
+                 <p class="tel"><strong style="display:block;width:100px;float:left;">系所中心</strong>：人力资源管理系</p>
+              </div>
+			  <div class="grjj">
+                    <p class="jjh">个人简历</p>
+                    <div class="bks1" id="jjc"><p style="font-family: " microsoft="" yahei="" font-size:16px="">教育背景</p><p style="font-family: " microsoft="" yahei="" font-size:16px=""></p><table style="border-collapse: collapse; border: 1px solid rgb(0, 0, 0); font-family: " microsoft="" yahei="" font-size:16px=""><tbody><tr class="firstRow"><td valign="top" style="border-top: 1px solid rgb(0, 0, 0); border-right: 1px solid rgb(0, 0, 0); border-left: 1px solid rgb(0, 0, 0); border-bottom-color: rgb(0, 0, 0); border-image: initial; padding: 2px 3px;"><p style="margin-top: 0px; margin-bottom: 0px;">2000.9-2003.7中国人民大学商学院</p></td><td valign="top" style="border-top: 1px solid rgb(0, 0, 0); border-right: 1px solid rgb(0, 0, 0); border-left: 1px solid rgb(0, 0, 0); border-bottom-color: rgb(0, 0, 0); border-image: initial; padding: 2px 3px;"><p style="margin-top: 0px; margin-bottom: 0px;">管理学博士</p></td></tr><tr><td valign="top" style="border-top: 1px solid rgb(0, 0, 0); border-right: 1px solid rgb(0, 0, 0); border-left: 1px solid rgb(0, 0, 0); border-bottom-color: rgb(0, 0, 0); border-image: initial; padding: 2px 3px;"><p style="margin-top: 0px; margin-bottom: 0px;">1997.9-2000.7 中国人民大学商学院</p></td><td valign="top" style="border-top: 1px solid rgb(0, 0, 0); border-right: 1px solid rgb(0, 0, 0); border-left: 1px solid rgb(0, 0, 0); border-bottom-color: rgb(0, 0, 0); border-image: initial; padding: 2px 3px;"><p style="margin-top: 0px; margin-bottom: 0px;">工商管理硕士</p></td></tr><tr><td valign="top" style="border-top: 1px solid rgb(0, 0, 0); border-right: 1px solid rgb(0, 0, 0); border-left: 1px solid rgb(0, 0, 0); border-bottom-color: rgb(0, 0, 0); border-image: initial; padding: 2px 3px;"><p style="margin-top: 0px; margin-bottom: 0px;">1988.9-1992.7 南开大学金融系</p></td><td valign="top" style="border-top: 1px solid rgb(0, 0, 0); border-right: 1px solid rgb(0, 0, 0); border-left: 1px solid rgb(0, 0, 0); border-bottom-color: rgb(0, 0, 0); border-image: initial; padding: 2px 3px;"><p style="margin-top: 0px; margin-bottom: 0px;">保险学本科</p></td></tr></tbody></table><p style="font-family: " microsoft="" yahei="" font-size:16px=""></p><p style="font-family: " microsoft="" yahei="" font-size:16px="">工作经历</p><div style="font-family: " microsoft="" yahei="" font-size:16px=""><table style="border-collapse: collapse; border: 1px solid rgb(0, 0, 0);"><tbody><tr class="firstRow"><td valign="top" style="border-top: 1px solid rgb(0, 0, 0); border-right: 1px solid rgb(0, 0, 0); border-left: 1px solid rgb(0, 0, 0); border-bottom-color: rgb(0, 0, 0); border-image: initial; padding: 2px 3px; word-break: break-all;"><p style="margin-top: 0px; margin-bottom: 0px;">2005.08-</p></td><td valign="top" style="border-top: 1px solid rgb(0, 0, 0); border-right: 1px solid rgb(0, 0, 0); border-left: 1px solid rgb(0, 0, 0); border-bottom-color: rgb(0, 0, 0); border-image: initial; padding: 2px 3px;"><p style="margin-top: 0px; margin-bottom: 0px;">北京师范大学经济与工商管理学院</p></td></tr><tr><td valign="top" style="border-top: 1px solid rgb(0, 0, 0); border-right: 1px solid rgb(0, 0, 0); border-left: 1px solid rgb(0, 0, 0); border-bottom-color: rgb(0, 0, 0); border-image: initial; padding: 2px 3px;"><p style="margin-top: 0px; margin-bottom: 0px;">2003.08-2005.07</p></td><td valign="top" style="border-top: 1px solid rgb(0, 0, 0); border-right: 1px solid rgb(0, 0, 0); border-left: 1px solid rgb(0, 0, 0); border-bottom-color: rgb(0, 0, 0); border-image: initial; padding: 2px 3px;"><p style="margin-top: 0px; margin-bottom: 0px;">清华大学经管学院 博士后</p></td></tr><tr><td valign="top" style="border-top: 1px solid rgb(0, 0, 0); border-right: 1px solid rgb(0, 0, 0); border-left: 1px solid rgb(0, 0, 0); border-bottom-color: rgb(0, 0, 0); border-image: initial; padding: 2px 3px;"><p style="margin-top: 0px; margin-bottom: 0px;">1996.04-1997.08</p></td><td valign="top" style="border-top: 1px solid rgb(0, 0, 0); border-right: 1px solid rgb(0, 0, 0); border-left: 1px solid rgb(0, 0, 0); border-bottom-color: rgb(0, 0, 0); border-image: initial; padding: 2px 3px;"><p style="margin-top: 0px; margin-bottom: 0px;">中国人寿保险公司</p></td></tr><tr><td valign="top" style="border-top: 1px solid rgb(0, 0, 0); border-right: 1px solid rgb(0, 0, 0); border-left: 1px solid rgb(0, 0, 0); border-bottom-color: rgb(0, 0, 0); border-image: initial; padding: 2px 3px;"><p style="margin-top: 0px; margin-bottom: 0px;">1992.07-1996.03</p></td><td valign="top" style="border-top: 1px solid rgb(0, 0, 0); border-right: 1px solid rgb(0, 0, 0); border-left: 1px solid rgb(0, 0, 0); border-bottom-color: rgb(0, 0, 0); border-image: initial; padding: 2px 3px;"><p style="margin-top: 0px; margin-bottom: 0px;">中国人民保险公司</p></td></tr></tbody></table></div><p style="font-family: " microsoft="" yahei="" font-size:16px="">奖项荣誉</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">1.案例《“合作总部”的不“合作”——合资企业的管理模式和文化整合》获2013年“全国百篇优秀管理案例”。</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">2.案例《诺尔城投公司的人力资源整合》在2009年中国管理案例共享中心举办的“第二届案例开发与案例教学大赛”中获二等奖。</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">3.论文《河套酒业的KRIF四要素绩效考核模式》在2005年亚太人力资源研究协会主办的“人力资源实战案例征集”活动中获中国人力资源实战案例金奖。</p></div>
+                    
+                </div>				<div class="grjj">
+                    <p class="jjh">研究领域</p>
+                    <div class="bks1">企业文化、绩效管理、工作家庭冲突、悖论管理、阴阳观、中国传统文化与管理</div>
+                </div>				<div class="grjj">
+                    <p class="jjh">研究成果</p>
+                    <div class="bks1" id="jjc1"><p style="font-family: " microsoft="" yahei="" font-size:16px="">· 主要期刊论文</p><p style="font-family: " microsoft="" yahei="" font-size:16px=""></p><p style="font-family: " microsoft="" yahei="" font-size:16px=""></p><p style="font-family: " microsoft="" yahei="" font-size:16px=""></p><p style="font-family: " microsoft="" yahei="" font-size:16px="">1.朱金强，李海. 辱虐管理对建言影响的曲线效应：价值观和性别的调节作用. 心理科学，2018，41(4)：942-948. （通讯作者）</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">2.Wei Hongguo, Zhu Jinqiang, Li Hai, Bilimoria Diana. A Cross-Level Study on Family Involvement and Job Satisfaction. Frontiers in Psychology, 2018(9): 1547-1557.</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">3.李海，姚蕾，张勉，朱金强. 工作_家庭冲突交叉效应的性别差异. 南开管理评论，2017, 20(4): 153-164.</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">4.李海，朱金强，孙楠. 基于销售过程的销售人员胜任特征模型：定性与定量方法的结合. 科技进步与对策，2017，34(12)：79-85.</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">5.李海，朱金强，张勉，孙琦，范思敏. 如何激励多样化的知识员工？——基于一个分类框架和差异激励模型. 科学学与科学技术管理，2016, 37(10): 164-180.</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">6.李海，熊娟，朱金强. 情绪对个体创造力的双向影响机制：基于阴阳观的视角. 经济管理，2016, 38(10): 100-113.</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">7.Jinqiang Zhu, Hai Li. The Development and Validation of an Acculturation Scale. South African Journal for Business Management, 2016, 47(1): 1-8. (SSCI, 通讯作者)</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">8.Hai Li, Jinqiang Zhu. Destructive Leadership, Employees’ Voice, and Organization. In Foo Check Teck (Ed.), Diversity of Managerial Perspectives from Inside China. Singapore: Springer, 2015: 205-221.</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">9.赵向阳，李海，孙川. 中国区域文化地图：“大一统”抑或“多元化”？. 管理世界，2015(2)：101-119. （通讯作者）</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">10.魏红果，李海. 保险销售人员胜任特征模型：一个定性元分析. 管理评论，2015，27 (7): 146-155. （通讯作者）</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">11.赵向阳，李海，余佳. 文化价值观、文化习俗与早期创业活动：基于“一分为三”思想的探索性研究. 管理学报，2014，11(11)：1569-1580. （通讯作者）</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">12.李海. 不要KPI？别逗了！中欧商业评论，2014(7)：39-43.</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">13.Mian Zhang, Hai Li, &amp; Sharon Foley. Prioritizing work for family: A Chinese indigenous perspective. Journal of Chinese Human Resource Management, Vol. 5 No. 1, 2014, pp. 14-31. (Scopus)</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">14.赵向阳，李海，孙川. 从个人价值观到创业意愿：创造力作为中介变量. 北京师范大学学报(社会科学版), 2014 (3)：115-130. （通讯作者）</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">15.朱金强，李海. 跨国并购中的文化整合理论的演变及其展望. 现代管理科学. 2014(1)：32-34.</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">16.李海. 齐鲁之变与管理之道：一分为三与波形收敛. 管理学家，2013(12)：98-103.</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">17.张宁，李海. 文化差异对并购绩效的影响：回顾与研究框架的提出. 商业研究，2013(9)：103-109. （CSSCI扩展）</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">18.熊娟，李海. 跨国并购中的人力资源角色：联想并购IBM PC的再思考. 管理现代化，2013（2）：83-85. （CSSCI）</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">19.李海. 适应而非整合的文化策略. 北大商业评论，2012(12)：74-79.</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">20.Xiangyang Zhao, Hai Li, &amp; Andreas Rauch. Cross-country Differences in Entrepreneurial Activity: The Role of Cultural Practice and National Wealth. Frontiers of Business Research in China. 2012, 6(4): 447-474. （通讯作者）</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">21.Wei Zheng, Mian Zhang, &amp; Hai Li. Performance appraisal process and organizational citizenship behavior. Journal of Managerial Psychology. 2012, 27(7): 732-752. (SSCI, 通讯作者)</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">22.李海. 一分为三说考核. 管理学家，2012(17)：31-35.</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">23.赵向阳，李海，Andreas Rauch. 创业活动的国家差异：文化与国家经济发展水平的交互作用. 管理世界. 2012(8)：78-90.</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">24.李海，张勉. 企业文化是核心竞争力吗？文化契合度对企业绩效的影响. 中国软科学，2012 (4)：125-134.</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">25.薛继东，李海. 团队文化和领导方式对团队创新的影响及其机制. 北京师范大学学报(社会科学版), 2012 (2)：102-113.</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">26.张勉，李海，魏钧，杨百寅. 交叉影响还是直接影响？工作－家庭冲突的影响机制. 心理学报，2011，43(5): 573-588. (通讯作者)</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">27.Hai Li and Mian Zhang. The development and validation of an organizational cohesion inventory. Frontiers of Business Research in China. 2010, 4(4): 653-684.</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">28.薛继东，李海. 团队文化视角下的工作团队创新模式：以青岛港与广东移动为例. 中国人力资源开发，2010（10）：52-56.</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">29.李海，张勉. 组织凝聚力量表开发与有效性检验. 南开管理评论，2010, 13(3): 136-149.</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">30.李海, 张勉, 杨百寅. 绩效评价对组织公民行为的影响：组织承诺的中介作用. 管理工程学报, 2010, 24(1): 146-151.</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">31.李海, 张勉, 李博. 组织凝聚力结构与影响因素：案例研究及理论构建. 北京师范大学学报(社会科学版), 2009 (6)：49–58.</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">32.李海. 诺尔城投公司的人力资源整合. 管理案例研究与评论，2009，2（5）：333-340.</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">33.李海，李飞. H公司车间工资管理及其优化. 中国人力资源开发，2009（1）：58-60.</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">34.李海，魏红果. 企业并购中的人力资源整合策略与实施要点：以YH并购案为例. 中国人力资源开发，2008（10）：58-61.</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">35.王建军，李海. 基于价值观的绩效考核及其在公共部门的应用. 中国行政管理， 2008（6）：43-45.</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">36.Zhang Mian, Li Hai, &amp; Wei Jun. Examining the relationship between organizational culture and performance: The perspective of consistency and balance. Frontiers of Business Research in China, 2008, 2(2): 256-276.</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">37.李海，张勉. 凝聚力的结构、形成和影响：一个研究述评. 经济管理，2008（7）：47-51.</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">38.张勉，李海，闫举刚. 组织文化度量模型的构建与实证研究. 科学学与科学技术管理，2007，28（12）：193-199.</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">39.张勉，李海. 企业文化、学习强度与企业绩效关系研究. 中国软科学，2007（6）：146-150.</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">40.张勉，李海，魏钧. 企业文化和企业绩效的关系研究：一致性和均衡性的观点. 科学学与科学技术管理，2007，28（8）：140-148.（人大书报资料中心《企业管理研究》2007年第10期全文转载）</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">41.李海，张德，刘玉凤. 创新KPI的设定技术：价值链与CPK分析的组合. 中国人力资源开发，2007（6）：51-53.</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">42.张勉，李海. 组织承诺的结构、形成和影响研究评述. 科学学与科学技术管理，2007，28（5）：122-127.</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">43.李海，张德，魏东. 基于BSC改进的KPI设定方法及案例. 管理现代化，2007（1）：25-27.</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">44.李海，张勉. 五字组合薪酬模式：一个综合性框架. 中国人力资源开发，2007（2）：52-54.</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">45.李海，张勉，余翔. KRIF绩效考核模式及其在公共部门的应用. 中国人力资源开发，2006（10）：56-58.</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">46.李海，张德. 构建完善的考核体系：KRIF四要素绩效考核模式的理念、方法与应用案例. 企业管理，2005（4）：76-79.</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">47.李海，张德. 组织文化与组织有效性研究综述. 外国经济与管理，2005（3）：2-11.</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">48.李海，张德. 双阶梯制度与中国制造. 企业管理，2004（8）：89-91.</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">49.李海. 论老子与组织变革. 武汉大学学报（社会科学版），2003，56（3-1）：20-23.</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">50.李海. 传承文化，永续经营. 企业文化，2003（2）：32-33.</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">51.李海. 如何挖掘企业文化的深层内涵：从天士力的实践谈起. 中外企业文化，2003（2）：48-49.</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">&nbsp; &nbsp;</p><p style="font-family: " microsoft="" yahei="" font-size:16px=""></p><p style="font-family: " microsoft="" yahei="" font-size:16px=""></p><p style="font-family: " microsoft="" yahei="" font-size:16px=""></p><p style="font-family: " microsoft="" yahei="" font-size:16px=""></p><p style="font-family: " microsoft="" yahei="" font-size:16px="">· 专著</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">1.李海，郭必恒，李博. 中国企业文化建设：传承与创新. 北京：企业管理出版社，2005.</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">2.苏建新，李海. 以能级为中心的人力资源管理. 北京：企业管理出版社，2004.</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">&nbsp;</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">· 会议论文/演讲</p><p style="font-family: " microsoft="" yahei="" font-size:16px=""></p><p style="font-family: " microsoft="" yahei="" font-size:16px="">1.Hongguo Wei, Jinqiang Zhu, Hai Li, Diana Bilimoria. More Family Involvement, Less Job Satisfaction?: A Cross-Level Examination. the 2016 Academy of Management, August 5-9 in Anaheim, California.</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">2.Liu, C., Li, H., Herst, D. E., &amp; Zhang, X. (2015). Stressor and stressor appraisals: The moderating effect of task efficacy. Paper to be presented at the 30th Annual Conference of the Society for Industrial and Organizational Psychology, Philadelphia, PA.</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">3.Mian Zhang, Hai Li, &amp; Wei Jun. 2011. Disaggregating Effects of Job Embeddedness on Turnover Intentions. The Annual Conference of Academy of Management. San Antonio, USA.</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">4.Mian Zhang, Wei Zheng, &amp; Hai Li. 2010. Effects of Performance Appraisal Process on Organizational Citizenship Behavior. The Annual Conference of Academy of Management. Montreal, CA.</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">5.Li Hai, Zhang Mian. The development and validation of organizational cohesion inventory. Proceedings of the 4th International Conference on Wireless Communications, Networking and Mobile Computing (WiCOM2008), Dalian, China. October, 12-17, 2008. (EI)</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">6.Zhang Mian, Wei Jun, &amp; Li Hai. Keep additive or not: Do moderating effects exist in Price-Mueller turnover model? Proceedings of the 4th International Conference on Wireless Communications, Networking and Mobile Computing (WiCOM2008), Dalian, China. October, 12-17, 2008. (EI)</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">7.Li Hai, Zhang Mian. The relationship between performance appraisal and organizational citizenship behavior: The mediating role of organizational commitment. Proceedings of 2007 International Conference on Wireless Communications, Networking and Mobile Computing, Shanghai, China. September, 21-25, 2007, Volume 1, 6489-6492.(EI)</p></div>
+                    
+                </div>				<div class="grjj">
+                    <p class="jjh">研究课题</p>
+                  
+                    <div class="bks1"><p style="font-family: " microsoft="" yahei="" font-size:16px="">&nbsp;会议论文/演讲</p><p style="font-family: " microsoft="" yahei="" font-size:16px=""></p><p style="font-family: " microsoft="" yahei="" font-size:16px="">1.Hongguo Wei, Jinqiang Zhu, Hai Li, Diana Bilimoria. More Family Involvement, Less Job Satisfaction?: A Cross-Level Examination. the 2016 Academy of Management, August 5-9 in Anaheim, California.</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">2.Liu, C., Li, H., Herst, D. E., &amp; Zhang, X. (2015). Stressor and stressor appraisals: The moderating effect of task efficacy. Paper to be presented at the 30th Annual Conference of the Society for Industrial and Organizational Psychology, Philadelphia, PA.</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">3.Mian Zhang, Hai Li, &amp; Wei Jun. 2011. Disaggregating Effects of Job Embeddedness on Turnover Intentions. The Annual Conference of Academy of Management. San Antonio, USA.</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">4.Mian Zhang, Wei Zheng, &amp; Hai Li. 2010. Effects of Performance Appraisal Process on Organizational Citizenship Behavior. The Annual Conference of Academy of Management. Montreal, CA.</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">5.Li Hai, Zhang Mian. The development and validation of organizational cohesion inventory. Proceedings of the 4th International Conference on Wireless Communications, Networking and Mobile Computing (WiCOM2008), Dalian, China. October, 12-17, 2008. (EI)</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">6.Zhang Mian, Wei Jun, &amp; Li Hai. Keep additive or not: Do moderating effects exist in Price-Mueller turnover model? Proceedings of the 4th International Conference on Wireless Communications, Networking and Mobile Computing (WiCOM2008), Dalian, China. October, 12-17, 2008. (EI)</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">7.Li Hai, Zhang Mian. The relationship between performance appraisal and organizational citizenship behavior: The mediating role of organizational commitment. Proceedings of 2007 International Conference on Wireless Communications, Networking and Mobile Computing, Shanghai, China. September, 21-25, 2007, Volume 1, 6489-6492.(EI)</p></div>
+                    
+                </div>				<div class="grjj">
+                    <p class="jjh">学生情况</p>
+                    <div class="bks1"><p style="font-family: " microsoft="" yahei="" font-size:16px="">1.2016.01－2019.12，主持北京市社会科学基金重点项目，一分为三的中国传统思维及其在管理学领域的应用研究，项目号：16GLA002。</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">2.2014.09－2016.08，主持北京师范大学自主科研基金重点项目，一分为三的中国传统思维及其在管理学领域的实证研究，项目号：SKZZB2014008。</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">3.2010.07—2013.06，主持国家社会科学基金项目，跨国并购中的文化和人力资源整合研究，项目号：10BGL020。</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">4.2009.01－2011.12，主持北京市哲学社会科学“十一五”规划项目，北京市保险业营销人员胜任特征的构建与应用研究，项目号：08BeJG223。</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">5.2007.01－2008.12，主持中国人力资源开发教学与实践研究会——佐佑科研基金项目，基于公平感和满意度标准的绩效评价有效性实证研究，项目号：07HR002。</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">6.2006.07－2008.06，主持国家社会科学基金项目，基于系统观点的组织文化有效性研究，项目号：06CJY024。</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">7.2003.09－2005.08，参加国家自然科学基金项目，组织文化测量模型的构建与应用，项目号：70272009。</p></div>
+                    
+                </div>				<div class="grjj">
+                    <p class="jjh">教授课程</p>
+                    <div class="bks1"><span style="font-family: " microsoft="" yahei="" font-size:16px="">管理学（本科生）、管理研究方法（研究生）、组织行为与跨文化管理（研究生）、管理案例分析（MBA）、企业文化（MBA）</span><br /></div>
+                    
+                </div>            </div>
+        </div>
+         <footer style="overflow: hidden;">
+            <div class="footers">
+                <div class="footersl">
+                    <img src="http://bs.bnu.edu.cn/newweb/images/ewm.jpg" alt="" class="imgewm">
+                    <div class="footerxx">
+                        <p>Copyright © 2020 北京师范大学经济与工商管理学院</p>
+                        <p><i class="fas fa-map-marker-alt"></i> 地址：北京市新街口外大街19号</p>
+                        <p><i class="fas fa-portrait"></i> 传真：010-58801867</p>
+                        <p><i class="fas fa-phone"></i> 电话：010-58801867</p>
+                        <p><i class="fas fa-envelope"></i> 邮编：100875</p>
+                    </div>
+                </div>
+                <img src="http://bs.bnu.edu.cn/newweb/images/db.png" alt="" width="140" class="dbimg">
+                <img src="http://bs.bnu.edu.cn/newweb/images/yx.png" alt="" class="yuanxun">
+            </div>
+        </footer>
+    </div>
+	<div class="share">
+		  <div id="appgame-leftside-share">
+	        <div class="appgame-leftside-share rwt_share" id="rwt_share">
+	         
+	        <!--<a class="appgame-leftside-search" data-cmd="search" title="search"  href="javascript:void(0);" onclick="opens('id')">search</a> --> <!--<div class="searchs" id="id">
+	         <form name="dataForm" action="/cms/search/searchResults.jsp" target="_blank" method="post" accept-Charset="utf-8"  onsubmit="document.charset='utf-8';">
+			        	<p>
+			        		<input name="siteID" size="4" value="127" type = "hidden">
+			        		<input type="text" name="query" id="search" class="searchInput" value="输入搜索词">
+			        		<button type="submit"></button>
+			        	</p>
+			        	</form>
+			        </div>-->
+			        <!-- <a class="appgame-leftside-weixin" data-cmd="weixin" title="">微信</a> -->
+                    
+			        <!-- <a class="appgame-leftside-qzone" data-cmd="qzone" title="">qq空间</a>
+			        
+			        <a class="appgame-leftside-tsina" data-cmd="tsina" title="">微博</a> -->			    </div>
+			        <a class="appgame-leftside-top" onclick="gotoTPoint()"></a>			</div>
+			        
+		</div>
+</body>
+<script src="http://gh.bnu.edu.cn/js/jquery-1.9.0.min.js"></script>
+<script src="http://gh.bnu.edu.cn/js/share.min.js"></script>
+<script>
+    var dj=document.getElementById('dianji');
+    var jjc=document.getElementById('jjc');
+    var dj1=document.getElementById('dianji1');
+    var jjc1=document.getElementById('jjc1');
+    var a=1;
+    function zhedie(m,n){
+        m.onclick=function(){
+            if(a==1){
+                n.className='jjc';
+                m.className='dianji1'
+                a=0;
+            }else{
+                n.className='jjc1';
+                m.className='dianji'
+                a=1;
+            }
+        }
+    }
+    zhedie(dj,jjc);
+    zhedie(dj1,jjc1);
+	
+	
+</script>
+<script>
+
+	
+	
+    
+
+    /*回到顶部*/
+	$(function(){
+	 	$(window).resize(function(){
+						var h = $(window).height();
+						$('.goTop').css('top',h-60);
+						$(window).scroll(function(){				
+							var scrollTop = $(document).scrollTop();					  
+							$('.goTop').stop().animate({
+								top: h + scrollTop-60
+							},300);
+						});
+		}).resize();
+		});
+	//gotop
+
+			$('.goTop').click(function(){
+
+				$('body,html').stop().animate({scrollTop:0});
+
+				return false;
+
+			});
+	
+	function gotoTPoint(){
+		$("html,body").animate({scrollTop:0},500);
+	}
+</script>
+</html>

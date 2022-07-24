@@ -1,0 +1,861 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>北京交通大学交通运输学院</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link href="/static/trans/css/bootstrap.css" rel="stylesheet">
+ 	<link href="/static/trans/css/custom.css" rel="stylesheet">
+ 	<link href="/static/trans/css/custom_list.css" rel="stylesheet">
+	<link rel="stylesheet" href="/static/ace1.3/css/jquery.dataTables.min.css" />
+	<style>
+	    .title_a{
+			margin-right:5px;
+			width:150px;
+			float:left;
+			}
+	    .title_a a{
+			line-height:30px;
+			}
+			
+		.zhiwei strong{margin-right:17px;}
+		.zhiwei a{margin-right:10px;display:inline;width:150px;float:left;margin-top:10px;}
+		#words a{line-height:25px;width:30px;height:25px;text-align:center;background:#e8f3fe;float:left;border:1px solid #c6dff7;margin-right:15px;margin-top:15px;}
+		#words a:hover{background:#11518f;color:#FF0;border:1px solid #11518f;}
+		.sub_con_tp{width:880px; margin:0 auto; padding:8px 0 2px}
+		.sub_con_tp h3{background:#fff url(/static/trans/img/h4_head.jpg) no-repeat left center;font-size:14px; font-weight:bold; color:#08509A; text-align:left; padding:14px 0 14px 40px; border-bottom:1px solid #AAAAAA; margin-bottom:12px}
+		.sub_con_tp p{line-height:24px; }
+		.sub_con_tp ul,li {margin:auto;}
+		
+		.sub_con_tp1{width:880px; margin:0 auto; padding:8px 0 2px}
+		.sub_con_tp1 h3{font-size:14px; font-weight:bold; color:#08509A; text-align:center; padding:14px 0; border-bottom:1px solid #AAAAAA; margin-bottom:12px}
+		.sub_con_tp1 p{line-height:24px; margin-bottom:8px; }								
+	</style> 
+    <script src="/static/ace1.3/js/jquery/1.11.0/jquery.min.js"></script>
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="/static/trans/js/html5shiv.js"></script>
+    <![endif]-->
+
+</head>
+<body>
+	<div class="boxbody">
+		<header>
+			<div class="container clearfix">
+				<div class="row-fluid">
+					<div class="span12">
+						<h1 class="brandlogo"><a href="http://trans.bjtu.edu.cn/cms/"><img src="/static/trans/img/logo.png" alt=""></a></h1>
+						<div class="topinfo">
+							<div class="list-soc">
+								<a href="http://trans1.bjtu.edu.cn/english/index.php">English</a>
+							</div>
+							<div class="infophone">
+								<div class="control-group">
+									<div class="controls">
+										<div class="input-prepend">
+                            				<form name="keyform" action="http://trans.bjtu.edu.cn/cms/item/" method="get">
+                              				<span class="add-on"><i class="icon-search"></i></span>
+                              				<input  id="inputIcon" type="text" class="input-medium"  name="keyword">
+                              				</form>
+                              			</div>
+                          			</div>
+                        		</div>
+							</div>
+			  			</div>
+						<div class="clearfix"></div>
+						<div class="row-nav navbar">
+							<div class="navbar-inner">
+								<ul id="nav" class="nav">
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+		<div class="text-center">
+			<img src="/static/trans/img/sha.png" class="slidershadow" alt="">
+		</div>
+		<div id="wrap">
+      		<div class="row-fluid container bggay">
+        		<div class="span4">
+          			<div class="leftbox_top">
+          				<div class="h4border">
+		                	<p>姜锐</p>
+		                	<div class="clearfix"></div>
+		                </div>
+						<div class="list_sidebar">
+              				<div class="categories">
+              					<ul>
+									<li><a href="#basic">基本情况</a></li>
+                                    
+                                    <li><a href="#jybj">教育背景</a></li>
+                                    
+                                    <li><a href="#gzjl">工作经历</a></li>
+                                    
+                                    <li><a href="#yjfx">研究方向</a></li>
+                                    
+                                    <li><a href="#zszy">招生专业</a></li>
+                                    
+                                    <li><a href="#kyxm">科研项目</a></li>
+                                    
+                                    <li><a href="#jxgz">教学工作</a></li>
+                                    
+                                    <li><a href="#lwqk">论文/期刊</a></li>
+                                    
+                                    <li><a href="#zzyz">专著/译著</a></li>
+                                    
+                                    <li><a href="#zl">专利</a></li>
+                                    
+                                    <li><a href="#rjzzq">软件著作权</a></li>
+                                    
+                                    <li><a href="#hjry">获奖与荣誉</a></li>
+                                    
+                                    <li><a href="#shjz">社会兼职</a></li>
+                                    
+              					</ul>
+              				</div>
+          				</div>
+          			</div>
+        		</div>
+        		<div class="span8">
+          			<div class="mainleft_box "> 
+						<h4 class="h4border">	            	
+				  		个人简介
+		        		</h4>
+                		<div class="main_nr">
+							<div style="padding:0px 10px;">
+				            	
+				            	<div class="sub_con_tp">
+				            		<h3 style="width:830px;float:right"><a name="basic">基本情况</a></h3>
+									<div style="padding:15px; line-height:25px;">
+										<div class="MsoNormal">
+											<table class="MsoNormalTable" border="0" cellspacing="0" cellpadding="0" width="840" align="center" height="1964" style="width: 840px; border-collapse: collapse; height: auto">
+												<tbody>
+													<tr style="height: 20pt">
+														<td width="80" style=" padding-bottom: 0cm; padding-left: 5.4pt; padding-right: 5.4pt; height: 20pt;  padding-top: 0cm">
+															<p style="text-align: left"><span >姓&nbsp;&nbsp;名：</span></p>
+														</td>
+														<td width="216" style=" border-left: medium none; padding-bottom: 0cm; padding-left: 5.4pt; width: 162pt; padding-right: 5.4pt; height: 20pt;  padding-top: 0cm">
+															<p style="text-align: left"><span >姜锐</span></p>
+														</td>
+														<td valign="top" rowspan="9" width="245" style=" border-left: medium none; padding-bottom: 0cm; padding-left: 5.4pt; width: 142.05pt; padding-right: 5.4pt; height: 20pt;  padding-top: 0cm">
+															
+															<img id="photo" src="/media/avatar/2015/12/18/20151218141539_84.JPG" width="216" height="252">
+														</td>
+													</tr>
+													<tr style="height: 20pt">
+														<td width="80" style=" padding-bottom: 0cm; padding-left: 5.4pt; padding-right: 5.4pt; height: 20pt; border-top: medium none;  padding-top: 0cm">
+														<p style="text-align: left"><span >职&nbsp;&nbsp;务：</span></p>
+														</td>
+														<td width="216" style=" border-left: medium none; padding-bottom: 0cm; padding-left: 5.4pt; width: 162pt; padding-right: 5.4pt; border-top: medium none;  padding-top: 0cm">
+														<p style="text-align: left"><span ></span></p>
+														</td>
+													</tr>
+													<tr style="height: 24pt">
+														<td width="80" style=" padding-bottom: 0cm; padding-left: 5.4pt; padding-right: 5.4pt; height: 24pt; border-top: medium none;  padding-top: 0cm">
+														<p style="text-align: left"><span >职&nbsp;&nbsp;称：</span></p>
+														</td>
+														<td width="216" style=" border-left: medium none; padding-bottom: 0cm; padding-left: 5.4pt; width: 162pt; padding-right: 5.4pt; height: 24pt; border-top: medium none;  padding-top: 0cm">
+														<p style="text-align: left"><span >教授</span></p>
+														</td>
+													</tr>
+													<tr style="height: 20pt">
+														<td width="80" style=" padding-bottom: 0cm; padding-left: 5.4pt; padding-right: 5.4pt; height: 20pt; border-top: medium none;  padding-top: 0cm">
+														<p style="text-align: left"><span >学&nbsp;&nbsp;历：</span></p>
+														</td>
+														<td width="216" style=" border-left: medium none; padding-bottom: 0cm; padding-left: 5.4pt; width: 162pt; padding-right: 5.4pt; height: 20pt; border-top: medium none;  padding-top: 0cm">
+														<p style="text-align: left"><span >博士研究生</span></p>
+														</td>
+													</tr>
+													<tr style="height: 20pt">
+														<td width="80" style=" padding-bottom: 0cm; padding-left: 5.4pt; padding-right: 5.4pt; height: 20pt; border-top: medium none;  padding-top: 0cm">
+														<p style="text-align: left"><span >学&nbsp;&nbsp;位：</span></p>
+														</td>
+														<td width="216" style=" border-left: medium none; padding-bottom: 0cm; padding-left: 5.4pt; width: 162pt; padding-right: 5.4pt; height: 20pt; border-top: medium none;  padding-top: 0cm">
+														<p style="text-align: left"><span >博士</span></p>
+														</td>
+													</tr>
+													<tr style="height: 24pt">
+														<td width="80" style=" padding-bottom: 0cm; padding-left: 5.4pt; padding-right: 5.4pt; height: 24pt; border-top: medium none;  padding-top: 0cm">
+														<p style="text-align: left"><span >通信地址：</span></p>
+														</td>
+														<td width="216" style=" border-left: medium none; padding-bottom: 0cm; padding-left: 5.4pt; width: 162pt; padding-right: 5.4pt; height: 24pt; border-top: medium none;  padding-top: 0cm">
+														<p style="text-align: left"><span >北京交通大学交通运输学院</span></p>
+														</td>
+													</tr>
+													<tr style="height: 20pt">
+														<td width="80" style=" padding-bottom: 0cm; padding-left: 5.4pt; padding-right: 5.4pt; height: 20pt; border-top: medium none;  padding-top: 0cm">
+														<p style="text-align: left"><span >邮&nbsp;&nbsp;编：</span></p>
+														</td>
+														<td width="216" style=" border-left: medium none; padding-bottom: 0cm; padding-left: 5.4pt; width: 162pt; padding-right: 5.4pt; height: 20pt; border-top: medium none;  padding-top: 0cm">
+														<p style="text-align: left"><span >100044</span></p>
+														</td>
+													</tr>
+													<tr style="height: 20pt">
+														<td width="80" style=" padding-bottom: 0cm; padding-left: 5.4pt; padding-right: 5.4pt; height: 20pt; border-top: medium none;  padding-top: 0cm">
+														<p style="text-align: left"><span >办公电话：</span></p>
+														</td>
+														<td width="216" style=" border-left: medium none; padding-bottom: 0cm; padding-left: 5.4pt; width: 162pt; padding-right: 5.4pt; height: 20pt; border-top: medium none;  padding-top: 0cm">
+														<p style="text-align: left"><span >010-51684240</span></p>
+														</td>
+													</tr>
+													<tr style="height: 24pt">
+														<td width="80" style=" padding-bottom: 0cm; padding-left: 5.4pt; padding-right: 5.4pt; height: 24pt; border-top: medium none;  padding-top: 0cm">
+														<p style="text-align: left"><span >电子邮箱：</span></p>
+														</td>
+														<td width="216" style=" border-left: medium none; padding-bottom: 0cm; padding-left: 5.4pt; width: 162pt; padding-right: 5.4pt; height: 24pt; border-top: medium none;  padding-top: 0cm">
+														<p style="text-align: left"><a href="mailto:jiangrui@bjtu.edu.cn"><span >jiangrui@bjtu.edu.cn</span></a></p>
+														</td>
+													</tr>
+				
+												</tbody>
+											</table>
+										</div>
+									</div>
+                                    
+                                    <h3 style="width:830px;float:right;"><a name = "jybj">教育背景</a></h3>
+									<div style="padding:15px; line-height:25px;">
+										<div class="MsoNormal">
+											<table class="MsoNormalTable" border="0" cellspacing="0" cellpadding="0" width="840" align="center" height="1964" style="width: 840px; border-collapse: collapse; height: auto">
+												<tbody>
+													<tr>
+														<td width="659" style=" padding-bottom: 0cm; padding-left: 5.4pt; padding-right: 5.4pt; height: 24pt;  padding-top: 0cm">
+															 <span> </span> 
+<p style="text-indent:30pt;">
+	<span style="font-size:12pt;"><span>1998/09 <span>&nbsp;</span>2003/07</span></span><span style="font-family:仿宋_GB2312;font-size:12pt;"><span>，中国科学技术大学，博士</span></span> 
+</p>
+<span> </span> 
+<p style="text-indent:30pt;">
+	<span style="font-size:12pt;"><span>1994/09 <span>&nbsp;</span>1998/07</span></span><span style="font-family:仿宋_GB2312;font-size:12pt;"><span>，中国科学技术大学，本科</span></span> 
+</p>
+<span> </span>
+
+														</td>
+													</tr>
+
+												</tbody>
+											</table>
+										</div>
+									</div>
+                                    
+                                    <h3 style="width:830px;float:right;"><a name = "gzjl">工作经历</a></h3>
+									<div style="padding:15px; line-height:25px;">
+										<div class="MsoNormal">
+											<table class="MsoNormalTable" border="0" cellspacing="0" cellpadding="0" width="840" align="center" height="1964" style="width: 840px; border-collapse: collapse; height: auto">
+												<tbody>
+													<tr>
+														<td width="659" style=" padding-bottom: 0cm; padding-left: 5.4pt; padding-right: 5.4pt; height: 24pt;  padding-top: 0cm">
+															 <span> </span> 
+<p style="text-indent:30pt;">
+	<span style="font-size:12pt;"><span>2015/10&nbsp; 至今&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 北京交通大学，教授</span></span> 
+</p>
+<p style="text-indent:30pt;">
+	<span style="font-size:12pt;"><span>2010/06&nbsp; 2015/10&nbsp;&nbsp; </span></span><span style="font-family:仿宋_GB2312;font-size:12pt;"><span>中国科学技术大学，教授</span></span> 
+</p>
+<span> </span> 
+<p style="text-indent:30pt;">
+	<span style="font-size:12pt;"><span>2006/04 <span>&nbsp;</span>2010/06</span></span><span style="font-family:仿宋_GB2312;font-size:12pt;"><span>，中国科学技术大学，副教授</span></span> 
+</p>
+<span> </span> 
+<p style="text-indent:30pt;">
+	<span style="font-size:12pt;"><span>2003/07 <span>&nbsp;</span>2006/04</span></span><span style="font-family:仿宋_GB2312;font-size:12pt;"><span>，中国科学技术大学，讲师</span></span> 
+</p>
+<span> </span> 
+<p style="text-indent:30pt;">
+	<span style="font-size:12pt;"><span>2008/09 <span>&nbsp;</span>2009/09</span></span><span style="font-family:仿宋_GB2312;font-size:12pt;"><span>，日本东京大学，日本学术振兴会特别</span></span><span style="font-family:仿宋_GB2312;font-size:12pt;"><span>研究员(JSPS postdoc fellowship)</span></span> 
+</p>
+<p style="text-indent:30pt;">
+	<span style="font-family:仿宋_GB2312;font-size:12pt;"><span>2008/06&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;澳大利亚Curtin University of Technology，访问学者</span></span> 
+</p>
+<p style="text-indent:30pt;">
+	<span style="font-family:仿宋_GB2312;font-size:12pt;"><span>2007/05&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;新西兰Massey University，访问学者</span></span>&nbsp;
+</p>
+<span> </span> 
+<p style="text-indent:30pt;">
+	<span style="font-size:12pt;"><span>2005/03 <span>&nbsp;</span>2006/04</span></span><span style="font-family:仿宋_GB2312;font-size:12pt;"><span>，德国</span></span><span style="font-size:12pt;"><span>Dresden
+University of Technology</span></span><span style="font-family:仿宋_GB2312;font-size:12pt;"><span>，洪堡研究员(Humboldt research fellow)</span></span> 
+</p>
+<span> </span> 
+<p style="text-indent:30pt;">
+	<span style="font-size:12pt;"><span>2004/10 <span>&nbsp;</span>2005/02</span></span><span style="font-family:仿宋_GB2312;font-size:12pt;"><span>，德国</span></span><span style="font-size:12pt;"><span>Dresden
+University of Technology</span></span><span style="font-family:仿宋_GB2312;font-size:12pt;"><span>，访问学者</span></span> 
+</p>
+<span> </span>
+														</td>
+													</tr>
+
+												</tbody>
+											</table>
+										</div>
+									</div>
+                                    
+                                    <h3 style="width:830px;float:right;"><a name = "yjfx">研究方向</a></h3>
+									<div style="padding:15px; line-height:25px;">
+										<div class="MsoNormal">
+											<table class="MsoNormalTable" border="0" cellspacing="0" cellpadding="0" width="840" align="center" height="1964" style="width: 840px; border-collapse: collapse; height: auto">
+												<tbody>
+													<tr>
+														<td width="659" style=" padding-bottom: 0cm; padding-left: 5.4pt; padding-right: 5.4pt; height: 24pt;  padding-top: 0cm">
+															 <ul>
+
+    <li>系统科学</li>
+
+    <li>交通运输规划与管理</li>
+
+    <li>交通运输系统分析与集成</li>
+
+</ul>
+														</td>
+													</tr>
+
+												</tbody>
+											</table>
+										</div>
+									</div>
+                                    
+                                    <h3 style="width:830px;float:right;"><a name = "zszy">招生专业</a></h3>
+									<div style="padding:15px; line-height:25px;">
+										<div class="MsoNormal">
+											<table class="MsoNormalTable" border="0" cellspacing="0" cellpadding="0" width="840" align="center" height="1964" style="width: 840px; border-collapse: collapse; height: auto">
+												<tbody>
+													<tr>
+														<td width="659" style=" padding-bottom: 0cm; padding-left: 5.4pt; padding-right: 5.4pt; height: 24pt;  padding-top: 0cm">
+															 <ul>
+
+    <li>系统科学硕士</li>
+
+    <li>交通运输规划与管理硕士</li>
+
+    <li>系统科学博士</li>
+
+</ul>
+														</td>
+													</tr>
+
+												</tbody>
+											</table>
+										</div>
+									</div>
+                                    
+                                    <h3 style="width:830px;float:right;"><a name = "kyxm">科研项目</a></h3>
+									<div style="padding:15px; line-height:25px;">
+										<div class="MsoNormal">
+											<table class="MsoNormalTable" border="0" cellspacing="0" cellpadding="0" width="840" align="center" height="1964" style="width: 840px; border-collapse: collapse; height: auto">
+												<tbody>
+													<tr>
+														<td width="659" style=" padding-bottom: 0cm; padding-left: 5.4pt; padding-right: 5.4pt; height: 24pt;  padding-top: 0cm">
+															 
+<p>
+	<span>&nbsp;项目负责人：</span> 
+</p>
+<p>
+	<br />
+</p>
+<p>
+	<span>国家自然科学基金优秀青年基金项目、交通流和相关复杂系统、2015/01-2017/12</span> 
+</p>
+<p>
+	<span>国家自然科学基金面上项目、考虑车辆排队和拥堵传播效应的交通网络可靠性研究、2014/01-2017/12 </span> 
+</p>
+<p>
+	<span>国家自然科学基金面上项目、同步交通流的机理研究、2009/01-2011/12 </span> 
+</p>
+<p>
+	<span>国家自然科学基金青年项目、交通流相变特性的机理研究、2005-2007 </span> 
+</p>
+<p>
+	<span>973项目、大城市综合交通系统的运行可靠性与应急策略分析、2012/01-2016/12、（子课题负责人）&nbsp;</span>
+</p>
+<p>
+	<span>教育部博士点基金、交通流稳定性的实验和理论研究、2013/01-2015/12&nbsp;<br />
+</span>
+</p>
+<p>
+	<span>中央高校基本科研业务费专项资金、排它过程的非平衡特性研究、2010/01-2011/12 </span> 
+</p>
+<p>
+	<span>高等学校全国优秀博士学位论文作者专项资金、交通流复杂动力学特性及相关交通管控策略研究、2007/01-2010/12&nbsp;<br />
+</span>
+</p>
+<p>
+	<span>教育部留学回国基金、混合交通流研究、2008/01-2010/12 </span> 
+</p>
+<p>
+	<span>中国科学院优秀博士学位论文获得者科研启动专项资金、基于三相交通理论的交通流动力学特性研究、2006/06-2008/12 </span> 
+</p>
+<p>
+	<span><br />
+参加：<br />
+&nbsp;<br />
+973项目、2006CB705502、道路交通流的非线性动力学特性、2006/09-2010/12<br />
+</span>
+</p>
+<p>
+	<span>国家自然科学基金重点项目、城市交通系统的非线性动力学特性研究、2006/01-2009/12 <br />
+&nbsp;</span> 
+</p>
+
+														</td>
+													</tr>
+
+												</tbody>
+											</table>
+										</div>
+									</div>
+                                    
+                                    <h3 style="width:830px;float:right;"><a name = "jxgz">教学工作</a></h3>
+									<div style="padding:15px; line-height:25px;">
+										<div class="MsoNormal">
+											<table class="MsoNormalTable" border="0" cellspacing="0" cellpadding="0" width="840" align="center" height="1964" style="width: 840px; border-collapse: collapse; height: auto">
+												<tbody>
+													<tr>
+														<td width="659" style=" padding-bottom: 0cm; padding-left: 5.4pt; padding-right: 5.4pt; height: 24pt;  padding-top: 0cm">
+															 
+
+														</td>
+													</tr>
+
+												</tbody>
+											</table>
+										</div>
+									</div>
+                                    
+                                    <h3 style="width:830px;float:right;"><a name = "lwqk">论文/期刊</a></h3>
+									<div style="padding:15px; line-height:25px;">
+										<div class="MsoNormal">
+											<table class="MsoNormalTable" border="0" cellspacing="0" cellpadding="0" width="840" align="center" height="1964" style="width: 840px; border-collapse: collapse; height: auto">
+												<tbody>
+													<tr>
+														<td width="659" style=" padding-bottom: 0cm; padding-left: 5.4pt; padding-right: 5.4pt; height: 24pt;  padding-top: 0cm">
+															 
+<p>
+	<span style="line-height:150%;font-size:12pt;"><span>主要论文：</span></span> 
+</p>
+<p>
+	<br />
+</p>
+<p>
+	<span style="line-height:150%;font-size:12pt;"><span>1. <b>Jiang R</b>, Hu MB, Zhang HM, Gao ZY, Jia B,
+Wu QS, On some experimental features of car-following behavior and how to model
+them. Transportation Research Part B 80, 338-354 (2015).</span></span> 
+</p>
+<span> </span> 
+<p>
+	<span style="line-height:150%;font-size:12pt;"><span>2. Jin CJ, Wang W, <b>Jiang R</b>, Zhang HM, Wang H,
+Hu MB, Understanding the structure of hyper-congested traffic from empirical
+and experimental evidences. Transportation Research Part C 60, 324-338 (2015)</span></span> 
+</p>
+<span> </span> 
+<p>
+	<span style="line-height:150%;font-size:12pt;"><span>3. Yan CY, <b>Jiang R</b>, Gao ZY, Shao Hu, Effect
+of speed limits in degradable transport networks. Transportation Research Part
+C 56, 94-119 (2015)</span></span> 
+</p>
+<span> </span> 
+<p>
+	<span style="line-height:150%;font-size:12pt;"><span>4. Wang YQ, <b>Jiang R</b>, Hu MB et al., Phase
+transition in a mesoscopic ring with multiple diffusive channels. Computer
+Physics Communications 185, 2823-2828 (2014).</span></span> 
+</p>
+<span> </span> 
+<p>
+	<span style="line-height:150%;font-size:12pt;"><span>5. Li QL, <b>Jiang R</b>, Min J et al., Phase
+diagrams of heterogeneous traffic flow at a single intersection in a
+deterministic Fukui-Ishibashi cellular automata traffic model. EPL 108, 28001 (2014).</span></span> 
+</p>
+<span> </span> 
+<p>
+	<span style="line-height:150%;font-size:12pt;"><span>6. Wang YQ, <b>Jiang R</b>, Kolomeisky AB et al., Bulk
+induced phase transition in driven diffusive systems. Scientific Reports 4, 5459
+(2014).</span></span> 
+</p>
+<span> </span> 
+<p>
+	<span style="line-height:150%;font-size:12pt;"><span>7. <b>Jiang R</b>, Hu MB, Jia B et al., A new
+mechanism for metastability of under-saturated traffic responsible for
+time-delayed traffic breakdown at the signal. Computer Physics Communications
+185, 1439-1442 (2014).</span></span> 
+</p>
+<span> </span> 
+<p>
+	<span style="line-height:150%;font-size:12pt;"><span>8. <b>Jiang R</b>, Hu MB, Zhang HM, et al., Traffic experiment
+reveals the nature of car-following. PLOS ONE 9, e94351 (2014).</span></span> 
+</p>
+<span> </span> 
+<p>
+	<span style="line-height:150%;font-size:12pt;"><span>9. Jin CJ, Wang W, <b>Jiang R</b> et al., An
+empirical study of phase transitions from synchronized flow to jams on a
+single-lane highway. Journal of Physic A 47, 125104 (2014).</span></span> 
+</p>
+<span> </span> 
+<p>
+	<span style="line-height:150%;font-size:12pt;"><span>10. Jin CJ, Wang W, <b>Jiang R</b>, Cellular
+automaton simulations of a T-shaped unsignalised intersection with refined
+configurations. Transportmetrica A 10, 273-283 (2014).</span></span> 
+</p>
+<span> </span> 
+<p>
+	<span style="line-height:150%;font-size:12pt;"><span>11. Ding ZJ, <b>Jiang R</b>, Gao ZY et al., Effect
+of overpasses in the Biham-Middleton-Levine traffic flow model with random and
+parallel update rule. Physical Review E 88, 022809 (2013).</span></span> 
+</p>
+<span> </span> 
+<p>
+	<span style="line-height:150%;font-size:12pt;"><span>12. Jin CJ, Wang W, <b>Jiang R</b> et al., Spontaneous
+phase transition from free flow to synchronized flow in traffic on a
+single-lane highway. Physical Review E 87, 012815 (2013).</span></span> 
+</p>
+<span> </span> 
+<p>
+	<span style="line-height:150%;font-size:12pt;"><span>13. Ding ZJ, <b>Jiang R</b>, Li M et al., Effect of
+violating the traffic light rule in the Biham-Middleton-Levine traffic flow
+model. EPL 99, 68002 (2012).</span></span> 
+</p>
+<span> </span> 
+<p>
+	<span style="line-height:150%;font-size:12pt;"><span>14. Li QL, <b>Jiang R</b>, Wang BH et al., Phase
+diagrams of traffic flow at an unsignalized intersection. EPL 99, 38004 (2012).</span></span> 
+</p>
+<span> </span> 
+<p>
+	<span style="line-height:150%;font-size:12pt;"><span>15. Sui QH, Ding ZJ, <b>Jiang R</b> et al., Slow-to-start
+effect in two-dimensional traffic flow. Computer Physics Communications 183, 547-551
+(2012).</span></span> 
+</p>
+<span> </span> 
+<p>
+	<span style="line-height:150%;font-size:12pt;"><span>16. Li M, Ding ZJ, <b>Jiang R</b> et al., Traffic
+flow in a Manhattan-like urban system. Journal of Statistical Mechanics P12001 (2011).</span></span> 
+</p>
+<span> </span> 
+<p>
+	<span style="line-height:150%;font-size:12pt;"><span>17. Hao QY, <b>Jiang R</b>, Hu MB et al., Pedestrian
+flow dynamics in a lattice gas model coupled with an evolutionary game.
+Physical Review E 84, 036107 (2011).</span></span> 
+</p>
+<span> </span> 
+<p>
+	<span style="line-height:150%;font-size:12pt;"><span>18. Ding ZJ, <b>Jiang R</b>, Wang BH, Traffic flow
+in the Biham-Middleton-Levine model with random update rule. Physical Review E
+83, 047101 (2011).</span></span> 
+</p>
+<span> </span> 
+<p>
+	<span style="line-height:150%;font-size:12pt;"><span>19. <b>Jiang R</b>, Huang W, Hu MB, et al., Comment
+on "Bulk-Driven Nonequilibrium Phase Transitions in a Mesoscopic
+Ring". Physical Review Letters 106, 079601 (2011).</span></span> 
+</p>
+<span> </span> 
+<p>
+	<span style="line-height:150%;font-size:12pt;"><span>20. Sun XY, <b>Jiang R</b>, Hao QY et al., Phase
+transition in random walks coupled with evolutionary game. EPL 92, 18003
+(2010).</span></span> 
+</p>
+<span> </span> 
+<p>
+	<span style="line-height:150%;font-size:12pt;"><span>21. Sun D, <b>Jiang R</b>, Wang BH, Timing of
+traffic lights and phase separation in two-dimensional traffic flow. Computer
+Physics Communications 181, 301-304 (2010).</span></span> 
+</p>
+<span> </span> 
+<p>
+	<span style="line-height:150%;font-size:12pt;"><span>22. Ling X, Hu MB, <b>Jiang R</b> et al., Global
+dynamic routing for scale-free networks. Physical Review E 81, 016113 (2010).</span></span> 
+</p>
+<span> </span> 
+<p>
+	<span style="line-height:150%;font-size:12pt;"><span>23. Ling X, Hu MB, <b>Jiang R</b> et al., Pheromone
+routing protocol on a scale-free network. Physical Review E 80, 066110 (2009).</span></span> 
+</p>
+<span> </span> 
+<p>
+	<span style="line-height:150%;font-size:12pt;"><span>24. <b>Jiang R</b>, Nishinari K, Hu MB et al., Phase
+separation in a bidirectional two-lane asymmetric exclusion process. Journal of
+Statistical Physics 136, 73-88 (2009).</span></span> 
+</p>
+<span> </span> 
+<p>
+	<span style="line-height:150%;font-size:12pt;"><span>25. <b>Jiang R</b>, Hu MB, Wu YH et al., Weak and
+strong coupling in a two-lane asymmetric exclusion process. Physical Review E
+77, 041128 (2008). </span></span> 
+</p>
+<span> </span> 
+<p>
+	<span style="line-height:150%;font-size:12pt;"><span>26. <b>Jiang R</b>, Hu MB, Jia B et al., Enhancing
+highway capacity by homogenizing traffic flow. Transportmetrica 4, 51-61 (2008)</span></span> 
+</p>
+<span> </span> 
+<p>
+	<span style="line-height:150%;font-size:12pt;"><span>27. Liu Z, Hu MB, <b>Jiang R</b> et al., Method to
+enhance traffic capacity for scale-free networks. Physical Review E 76, 037101 (2007)</span></span> 
+</p>
+<span> </span> 
+<p>
+	<span style="line-height:150%;font-size:12pt;"><span>28. <b>Jiang R</b>, Hu MB, Jia B et al., Spontaneous
+symmetry breaking and periodic structure in a multilane system. Physical Review
+E 76, 036116 (2007)</span></span> 
+</p>
+<span> </span> 
+<p>
+	<span style="line-height:150%;font-size:12pt;"><span>29. Gao K, <b>Jiang R</b>, Hu SX et al., Cellular-automaton
+model with velocity adaptation in the framework of Kerner's three-phase traffic
+theory. Physical Review E 76, 026105 (2007)</span></span> 
+</p>
+<span> </span> 
+<p>
+	<span style="line-height:150%;font-size:12pt;"><span>30. <b>Jiang R</b>, Helbing D, Shukla PK, Inefficient
+emergent oscillations in intersecting driven many-particle flows. Physica A 368,
+567-574 (2006)</span></span> 
+</p>
+<span> </span> 
+<p>
+	<span style="line-height:150%;font-size:12pt;"><span>31. <b>Jiang R</b>, Wu QS, Toward an improvement
+over Kerner-Klenov-Wolf three-phase cellular automaton model. Physical Review E
+72, 067103 (2005).</span></span> 
+</p>
+<span> </span> 
+<p>
+	<span style="line-height:150%;font-size:12pt;"><span>32. Helbing D, <b>Jiang R</b>, Treiber M, Analytical
+investigation of oscillations in intersecting flows of pedestrian and vehicle
+traffic. Physical Review E 72, 046130 (2005).</span></span> 
+</p>
+<span> </span> 
+<p>
+	<span style="line-height:150%;font-size:12pt;"><span>33. <b>Jiang R</b>, Wu QS, First order phase
+transition from free flow to synchronized flow in a cellular automata model.
+European Physical Journal B 46, 581-584 (2005).</span></span> 
+</p>
+<span> </span> 
+<p>
+	<span style="line-height:150%;font-size:12pt;"><span>34. <b>Jiang R</b>, Wu QS, Spatial-temporal patterns
+at an isolated on-ramp in a new cellular automata model based on three-phase
+traffic theory. Journal of Physics A 37, 8197-8213<span>&nbsp;&nbsp; </span>(2004)</span></span> 
+</p>
+<span> </span> 
+<p>
+	<span style="line-height:150%;font-size:12pt;"><span>35. Jia B, <b>Jiang R</b>, Wu QS, Traffic behavior
+near an off ramp in the cellular automaton traffic model. Physical Review E 69,
+056105 (2004).</span></span> 
+</p>
+<span> </span> 
+<p>
+	<span style="line-height:150%;font-size:12pt;"><span>36. <b>Jiang R</b>, Wu QS, Open boundaries in a cellular
+automata model for synchronized flow: Effects of nonmonotonicity. Physical
+Review E 68, 026135 (2003).</span></span> 
+</p>
+<span> </span> 
+<p>
+	<span style="line-height:150%;font-size:12pt;"><span>37. <b>Jiang R</b>, Wu QS, Cellular automata models
+for synchronized traffic flow. Journal of Physics A 36, 381-390 (2003)</span></span> 
+</p>
+<span> </span> 
+<p>
+	<span style="line-height:150%;font-size:12pt;"><span>38. <b>Jiang R</b>, Wu QS, Study on propagation
+speed of small disturbance from a car-following approach. Transportation
+Research Part B 37, 85-99 (2003)</span></span> 
+</p>
+<span> </span> 
+<p>
+	<span style="line-height:150%;font-size:12pt;"><span>39. <b>Jiang R</b>, Wu QS, Zhu ZJ, A new continuum
+model for traffic flow and numerical tests. Transportation Research Part B 36, 405-419
+(2002)</span></span> 
+</p>
+<span> </span> 
+<p>
+	<span style="line-height:150%;font-size:12pt;"><span>40. <b>Jiang R</b>, Wu QS, Wang BH, Cellular
+automata model simulating traffic interactions between on-ramp and main road.
+Physical Review E 66, 036104 (2002).</span></span> 
+</p>
+<span> </span> 
+<p>
+	<span style="line-height:150%;font-size:12pt;"><span>41. <b>Jiang R</b>, Wu QS, Zhu ZJ, Full velocity
+difference model for a car-following theory. Physical Review E 64, 017101
+(2001).</span></span> 
+</p>
+<span> </span> 
+<p>
+	<span style="line-height:150%;font-size:12pt;"><span>42. Li XB, Wu QS, <b>Jiang R</b>, Cellular automaton
+model considering the velocity effect of a car on the successive car. Physical
+Review E 64, 066128 (2001).</span></span> 
+</p>
+<p>
+	<span style="line-height:150%;font-size:12pt;"><span><br />
+</span></span> 
+</p>
+<p>
+	<span style="line-height:150%;font-size:12pt;"><span>full publication list：</span></span>&nbsp;<a href="http://www.researcherid.com/rid/P-8022-2015" target="_blank">http://www.researcherid.com/rid/P-8022-2015</a> 
+</p>
+<span><span> </span></span>
+
+														</td>
+													</tr>
+
+												</tbody>
+											</table>
+										</div>
+									</div>
+                                    
+                                    <h3 style="width:830px;float:right;"><a name = "zzyz">专著/译著</a></h3>
+									<div style="padding:15px; line-height:25px;">
+										<div class="MsoNormal">
+											<table class="MsoNormalTable" border="0" cellspacing="0" cellpadding="0" width="840" align="center" height="1964" style="width: 840px; border-collapse: collapse; height: auto">
+												<tbody>
+													<tr>
+														<td width="659" style=" padding-bottom: 0cm; padding-left: 5.4pt; padding-right: 5.4pt; height: 24pt;  padding-top: 0cm">
+															 
+<span style="font-family:仿宋_GB2312;font-size:12pt;"><span>李力，<b>姜锐</b>，贾斌，赵小梅，现代交通流理论及应用，清华大学出版社<span>, 2011</span></span></span>
+
+														</td>
+													</tr>
+
+												</tbody>
+											</table>
+										</div>
+									</div>
+                                    
+                                    <h3 style="width:830px;float:right;"><a name = "zl">专利</a></h3>
+									<div style="padding:15px; line-height:25px;">
+										<div class="MsoNormal">
+											<table class="MsoNormalTable" border="0" cellspacing="0" cellpadding="0" width="840" align="center" height="1964" style="width: 840px; border-collapse: collapse; height: auto">
+												<tbody>
+													<tr>
+														<td width="659" style=" padding-bottom: 0cm; padding-left: 5.4pt; padding-right: 5.4pt; height: 24pt;  padding-top: 0cm">
+															 
+
+														</td>
+													</tr>
+
+												</tbody>
+											</table>
+										</div>
+									</div>
+                                    
+                                    <h3 style="width:830px;float:right;"><a name = "rjzzq">软件著作权</a></h3>
+									<div style="padding:15px; line-height:25px;">
+										<div class="MsoNormal">
+											<table class="MsoNormalTable" border="0" cellspacing="0" cellpadding="0" width="840" align="center" height="1964" style="width: 840px; border-collapse: collapse; height: auto">
+												<tbody>
+													<tr>
+														<td width="659" style=" padding-bottom: 0cm; padding-left: 5.4pt; padding-right: 5.4pt; height: 24pt;  padding-top: 0cm">
+															 
+
+														</td>
+													</tr>
+
+												</tbody>
+											</table>
+										</div>
+									</div>
+                                    
+                                    <h3 style="width:830px;float:right;"><a name = "hjry">获奖与荣誉</a></h3>
+									<div style="padding:15px; line-height:25px;">
+										<div class="MsoNormal">
+											<table class="MsoNormalTable" border="0" cellspacing="0" cellpadding="0" width="840" align="center" height="1964" style="width: 840px; border-collapse: collapse; height: auto">
+												<tbody>
+													<tr>
+														<td width="659" style=" padding-bottom: 0cm; padding-left: 5.4pt; padding-right: 5.4pt; height: 24pt;  padding-top: 0cm">
+															 <p>
+	<span><span style="font-family:仿宋_GB2312;font-size:12pt;">2003</span><span style="font-family:仿宋_GB2312;font-size:12pt;">年获安徽省自然科学优秀论文一等奖（排名第一），</span></span> 
+</p>
+<p>
+	<span><span style="font-family:仿宋_GB2312;font-size:12pt;"><span>2003</span>年获中国科学技术大学校友基金会优秀青年教师奖，</span></span> 
+</p>
+<p>
+	<span><span style="font-family:仿宋_GB2312;font-size:12pt;">博士论文被评为<span>2004</span>年度中科院优秀博士论文及<span>2005</span>年度全国百篇优秀博士论文，<span> </span></span></span> 
+</p>
+<p>
+	<span><span style="font-family:仿宋_GB2312;font-size:12pt;"><span>2006</span>年入选教育部新世纪优秀人才支持计划，</span></span>
+</p>
+<p>
+	<span><span style="font-family:仿宋_GB2312;font-size:12pt;"><span>2</span></span></span><span><span style="font-family:仿宋_GB2312;font-size:12pt;"><span>011</span>年获安徽省科技奖二等奖（排名第一），</span></span> 
+</p>
+<p>
+	<span><span style="font-family:仿宋_GB2312;font-size:12pt;"><span>2015</span>年入选北京交通大学“卓越百人计划”。</span></span> 
+</p>
+
+														</td>
+													</tr>
+
+												</tbody>
+											</table>
+										</div>
+									</div>
+                                    
+                                    <h3 style="width:830px;float:right;"><a name = "shjz">社会兼职</a></h3>
+									<div style="padding:15px; line-height:25px;">
+										<div class="MsoNormal">
+											<table class="MsoNormalTable" border="0" cellspacing="0" cellpadding="0" width="840" align="center" height="1964" style="width: 840px; border-collapse: collapse; height: auto">
+												<tbody>
+													<tr>
+														<td width="659" style=" padding-bottom: 0cm; padding-left: 5.4pt; padding-right: 5.4pt; height: 24pt;  padding-top: 0cm">
+															 
+
+														</td>
+													</tr>
+
+												</tbody>
+											</table>
+										</div>
+									</div>
+                                    
+
+								</div>
+								<div class="clear"></div>
+								
+							</div>
+						</div>
+                  		<div class="clearfix"></div>
+              		</div>
+        		</div>
+       		</div>
+       		<div id="push"></div>
+    	</div>
+	    <div id="footer">
+       		<div class="copy">
+        		<p>版权所有©北京交通大学交通运输学院 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;BJTUICP备:14010705 &nbsp;&nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp;&nbsp;  学院信箱：saad@bjtu.edu.cn</p>
+      		</div>
+  		</div>
+	</div>
+
+		<script>
+		    $.ajax({
+		      dataType: 'JSONP',
+		      url:"http://trans.bjtu.edu.cn/ajax_menu/",
+		      success: function(data){
+		      	var arch_str = '<li class="first"><a href="http://trans.bjtu.edu.cn/cms/">首页</a></li>';
+		      	var left_Str = '';
+		        $.each(data, function(i, n)
+		        {
+		        	arch_str = arch_str + '<li class="divider-vertical"></li><li class="dropdown '
+		        	if (n.id == 16){arch_str = arch_str + 'active'}
+		        	arch_str = arch_str + '"><a href="http://trans.bjtu.edu.cn/cms/item/?cat=' + n.id +'">'+n.name+'</a></li>';
+
+		        	if (n.vcs)
+		        	{
+		        		$.each(n.vcs, function(i, m){
+		        			if (n.id == 16)
+		        			{
+		        				left_Str = left_Str + '<li><a target="_parent"  href="http://trans.bjtu.edu.cn/cms/item/?cat=' + m.id +'">' +m.name + '</a>';
+		        			
+		        				if (m.cvcs)
+		        				{
+		        					left_Str = left_Str + '<ul class="sec_li">';
+			        				$.each(m.cvcs, function(i, k){
+					        				left_Str = left_Str + '<li><a target="_parent"  href="http://trans.bjtu.edu.cn/cms/item/?cat=' + k.id +'">' +k.name + '</a></li>';
+					        		});
+					        		left_Str = left_Str + '</ul>';
+		        				}
+		        				left_Str = left_Str + '</li>';
+		        			}
+		        		});
+		        	}
+		        });
+		        $("#nav").html(arch_str);
+		      }
+		    });
+		</script>
+</body>
+</html>

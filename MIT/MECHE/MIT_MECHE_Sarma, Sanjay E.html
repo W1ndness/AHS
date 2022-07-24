@@ -1,0 +1,1072 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><script type="text/javascript">(window.NREUM||(NREUM={})).init={ajax:{deny_list:["bam.nr-data.net"]}};(window.NREUM||(NREUM={})).loader_config={licenseKey:"ab0374a39e",applicationID:"39297557"};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var i=e[n]={exports:{}};t[n][0].call(i.exports,function(e){var i=t[n][1][e];return r(i||e)},i,i.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(t,e,n){function r(){}function i(t,e,n,r){return function(){return s.recordSupportability("API/"+e+"/called"),o(t+e,[u.now()].concat(c(arguments)),n?null:this,r),n?void 0:this}}var o=t("handle"),a=t(9),c=t(10),f=t("ee").get("tracer"),u=t("loader"),s=t(4),d=NREUM;"undefined"==typeof window.newrelic&&(newrelic=d);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",v=l+"ixn-";a(p,function(t,e){d[e]=i(l,e,!0,"api")}),d.addPageAction=i(l,"addPageAction",!0),d.setCurrentRouteName=i(l,"routeName",!0),e.exports=newrelic,d.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(t,e){var n={},r=this,i="function"==typeof e;return o(v+"tracer",[u.now(),t,n],r),function(){if(f.emit((i?"":"no-")+"fn-start",[u.now(),r,i],n),i)try{return e.apply(this,arguments)}catch(t){throw f.emit("fn-err",[arguments,this,t],n),t}finally{f.emit("fn-end",[u.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){m[e]=i(v,e)}),newrelic.noticeError=function(t,e){"string"==typeof t&&(t=new Error(t)),s.recordSupportability("API/noticeError/called"),o("err",[t,u.now(),!1,e])}},{}],2:[function(t,e,n){function r(t){if(NREUM.init){for(var e=NREUM.init,n=t.split("."),r=0;r<n.length-1;r++)if(e=e[n[r]],"object"!=typeof e)return;return e=e[n[n.length-1]]}}e.exports={getConfiguration:r}},{}],3:[function(t,e,n){var r=!1;try{var i=Object.defineProperty({},"passive",{get:function(){r=!0}});window.addEventListener("testPassive",null,i),window.removeEventListener("testPassive",null,i)}catch(o){}e.exports=function(t){return r?{passive:!0,capture:!!t}:!!t}},{}],4:[function(t,e,n){function r(t,e){var n=[a,t,{name:t},e];return o("storeMetric",n,null,"api"),n}function i(t,e){var n=[c,t,{name:t},e];return o("storeEventMetrics",n,null,"api"),n}var o=t("handle"),a="sm",c="cm";e.exports={constants:{SUPPORTABILITY_METRIC:a,CUSTOM_METRIC:c},recordSupportability:r,recordCustom:i}},{}],5:[function(t,e,n){function r(){return c.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,c=t(11);e.exports=r,e.exports.offset=a,e.exports.getLastTimestamp=i},{}],6:[function(t,e,n){function r(t,e){var n=t.getEntries();n.forEach(function(t){"first-paint"===t.name?l("timing",["fp",Math.floor(t.startTime)]):"first-contentful-paint"===t.name&&l("timing",["fcp",Math.floor(t.startTime)])})}function i(t,e){var n=t.getEntries();if(n.length>0){var r=n[n.length-1];if(u&&u<r.startTime)return;var i=[r],o=a({});o&&i.push(o),l("lcp",i)}}function o(t){t.getEntries().forEach(function(t){t.hadRecentInput||l("cls",[t])})}function a(t){var e=navigator.connection||navigator.mozConnection||navigator.webkitConnection;if(e)return e.type&&(t["net-type"]=e.type),e.effectiveType&&(t["net-etype"]=e.effectiveType),e.rtt&&(t["net-rtt"]=e.rtt),e.downlink&&(t["net-dlink"]=e.downlink),t}function c(t){if(t instanceof y&&!w){var e=Math.round(t.timeStamp),n={type:t.type};a(n),e<=v.now()?n.fid=v.now()-e:e>v.offset&&e<=Date.now()?(e-=v.offset,n.fid=v.now()-e):e=v.now(),w=!0,l("timing",["fi",e,n])}}function f(t){"hidden"===t&&(u=v.now(),l("pageHide",[u]))}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var u,s,d,p,l=t("handle"),v=t("loader"),m=t(8),g=t(3),y=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){s=new PerformanceObserver(r);try{s.observe({entryTypes:["paint"]})}catch(h){}d=new PerformanceObserver(i);try{d.observe({entryTypes:["largest-contentful-paint"]})}catch(h){}p=new PerformanceObserver(o);try{p.observe({type:"layout-shift",buffered:!0})}catch(h){}}if("addEventListener"in document){var w=!1,b=["click","keydown","mousedown","pointerdown","touchstart"];b.forEach(function(t){document.addEventListener(t,c,g(!1))})}m(f)}},{}],7:[function(t,e,n){function r(t,e){if(!i)return!1;if(t!==i)return!1;if(!e)return!0;if(!o)return!1;for(var n=o.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var c=navigator.userAgent,f=c.match(a);f&&c.indexOf("Chrome")===-1&&c.indexOf("Chromium")===-1&&(i="Safari",o=f[1])}e.exports={agent:i,version:o,match:r}},{}],8:[function(t,e,n){function r(t){function e(){t(c&&document[c]?document[c]:document[o]?"hidden":"visible")}"addEventListener"in document&&a&&document.addEventListener(a,e,i(!1))}var i=t(3);e.exports=r;var o,a,c;"undefined"!=typeof document.hidden?(o="hidden",a="visibilitychange",c="visibilityState"):"undefined"!=typeof document.msHidden?(o="msHidden",a="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(o="webkitHidden",a="webkitvisibilitychange",c="webkitVisibilityState")},{}],9:[function(t,e,n){function r(t,e){var n=[],r="",o=0;for(r in t)i.call(t,r)&&(n[o]=e(r,t[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],10:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,i=n-e||0,o=Array(i<0?0:i);++r<i;)o[r]=t[e+r];return o}e.exports=r},{}],11:[function(t,e,n){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(t,e,n){function r(){}function i(t){function e(t){return t&&t instanceof r?t:t?u(t,f,a):a()}function n(n,r,i,o,a){if(a!==!1&&(a=!0),!l.aborted||o){t&&a&&t(n,r,i);for(var c=e(i),f=m(n),u=f.length,s=0;s<u;s++)f[s].apply(c,r);var p=d[w[n]];return p&&p.push([b,n,r,c]),c}}function o(t,e){h[t]=m(t).concat(e)}function v(t,e){var n=h[t];if(n)for(var r=0;r<n.length;r++)n[r]===e&&n.splice(r,1)}function m(t){return h[t]||[]}function g(t){return p[t]=p[t]||i(n)}function y(t,e){l.aborted||s(t,function(t,n){e=e||"feature",w[n]=e,e in d||(d[e]=[])})}var h={},w={},b={on:o,addEventListener:o,removeEventListener:v,emit:n,get:g,listeners:m,context:e,buffer:y,abort:c,aborted:!1};return b}function o(t){return u(t,f,a)}function a(){return new r}function c(){(d.api||d.feature)&&(l.aborted=!0,d=l.backlog={})}var f="nr@context",u=t("gos"),s=t(9),d={},p={},l=e.exports=i();e.exports.getOrSetContext=o,l.backlog=d},{}],gos:[function(t,e,n){function r(t,e,n){if(i.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return t[e]=r,r}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){i.buffer([t],r),i.emit(t,e,n)}var i=t("ee").get("handle");e.exports=r,r.ee=i},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,o,function(){return i++})}var i=1,o="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!M++){var t=T.info=NREUM.info,e=m.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&e))return u.abort();f(x,function(e,n){t[e]||(t[e]=n)});var n=a();c("mark",["onload",n+T.offset],null,"api"),c("timing",["load",n]);var r=m.createElement("script");0===t.agent.indexOf("http://")||0===t.agent.indexOf("https://")?r.src=t.agent:r.src=l+"://"+t.agent,e.parentNode.insertBefore(r,e)}}function i(){"complete"===m.readyState&&o()}function o(){c("mark",["domContent",a()+T.offset],null,"api")}var a=t(5),c=t("handle"),f=t(9),u=t("ee"),s=t(7),d=t(2),p=t(3),l=d.getConfiguration("ssl")===!1?"http":"https",v=window,m=v.document,g="addEventListener",y="attachEvent",h=v.XMLHttpRequest,w=h&&h.prototype,b=!1;NREUM.o={ST:setTimeout,SI:v.setImmediate,CT:clearTimeout,XHR:h,REQ:v.Request,EV:v.Event,PR:v.Promise,MO:v.MutationObserver};var E=""+location,x={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1216.min.js"},O=h&&w&&w[g]&&!/CriOS/.test(navigator.userAgent),T=e.exports={offset:a.getLastTimestamp(),now:a,origin:E,features:{},xhrWrappable:O,userAgent:s,disabled:b};if(!b){t(1),t(6),m[g]?(m[g]("DOMContentLoaded",o,p(!1)),v[g]("load",r,p(!1))):(m[y]("onreadystatechange",i),v[y]("onload",r)),c("mark",["firstbyte",a.getLastTimestamp()],null,"api");var M=0}},{}],"wrap-function":[function(t,e,n){function r(t,e){function n(e,n,r,f,u){function nrWrapper(){var o,a,s,p;try{a=this,o=d(arguments),s="function"==typeof r?r(o,a):r||{}}catch(l){i([l,"",[o,a,f],s],t)}c(n+"start",[o,a,f],s,u);try{return p=e.apply(a,o)}catch(v){throw c(n+"err",[o,a,v],s,u),v}finally{c(n+"end",[o,a,p],s,u)}}return a(e)?e:(n||(n=""),nrWrapper[p]=e,o(e,nrWrapper,t),nrWrapper)}function r(t,e,r,i,o){r||(r="");var c,f,u,s="-"===r.charAt(0);for(u=0;u<e.length;u++)f=e[u],c=t[f],a(c)||(t[f]=n(c,s?f+r:r,i,f,o))}function c(n,r,o,a){if(!v||e){var c=v;v=!0;try{t.emit(n,r,o,e,a)}catch(f){i([f,n,r,o],t)}v=c}}return t||(t=s),n.inPlace=r,n.flag=p,n}function i(t,e){e||(e=s);try{e.emit("internal-error",t)}catch(n){}}function o(t,e,n){if(Object.defineProperty&&Object.keys)try{var r=Object.keys(t);return r.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(o){i([o],n)}for(var a in t)l.call(t,a)&&(e[a]=t[a]);return e}function a(t){return!(t&&t instanceof Function&&t.apply&&!t[p])}function c(t,e){var n=e(t);return n[p]=t,o(t,n,s),n}function f(t,e,n){var r=t[e];t[e]=c(r,n)}function u(){for(var t=arguments.length,e=new Array(t),n=0;n<t;++n)e[n]=arguments[n];return e}var s=t("ee"),d=t(10),p="nr@original",l=Object.prototype.hasOwnProperty,v=!1;e.exports=r,e.exports.wrapFunction=c,e.exports.wrapInPlace=f,e.exports.argsToArray=u},{}]},{},["loader"]);</script>
+        <title>MECHE PEOPLE: Sanjay Sarma | MIT Department of Mechanical Engineering</title>
+        <meta name="description" content="MIT's Department of Mechanical Engineering (MechE) offers a world-class education that combines thorough analysis with hands-on discovery. One of the original six courses offered when MIT was founded in 1865, MechE's faculty and students conduct research that pushes boundaries and provides creative solutions for the world's problems.">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1">
+        <!--[if lt IE 9]>
+            <link href='http://fonts.googleapis.com/css?family=Rajdhani:300' rel='stylesheet' type='text/css' data-norem>
+            <link href='http://fonts.googleapis.com/css?family=Rajdhani:400' rel='stylesheet' type='text/css' data-norem>
+            <link href='http://fonts.googleapis.com/css?family=Rajdhani:500' rel='stylesheet' type='text/css' data-norem>
+            <link href='http://fonts.googleapis.com/css?family=Rajdhani:600' rel='stylesheet' type='text/css' data-norem>
+            <link href='http://fonts.googleapis.com/css?family=Rajdhani:700' rel='stylesheet' type='text/css' data-norem>
+            <link href='http://fonts.googleapis.com/css?family=Rajdhani:300' rel='stylesheet' type='text/css' data-norem>
+            <link href='http://fonts.googleapis.com/css?family=Rajdhani:300italic' rel='stylesheet' type='text/css' data-norem>
+            <link href='http://fonts.googleapis.com/css?family=Rajdhani:400' rel='stylesheet' type='text/css' data-norem>
+            <link href='http://fonts.googleapis.com/css?family=Rajdhani:400italic' rel='stylesheet' type='text/css' data-norem>
+            <link href='http://fonts.googleapis.com/css?family=Rajdhani:600' rel='stylesheet' type='text/css' data-norem>
+            <link href='http://fonts.googleapis.com/css?family=Rajdhani:600italic' rel='stylesheet' type='text/css' data-norem>
+            <link href='http://fonts.googleapis.com/css?family=Rajdhani:700' rel='stylesheet' type='text/css' data-norem>
+            <link href='http://fonts.googleapis.com/css?family=Rajdhani:700italic' rel='stylesheet' type='text/css' data-norem>
+        <![endif]-->
+
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="Generator" content="Drupal 7 (http://drupal.org)" />
+<meta name="format-detection" content="telephone=no"/><link rel="shortcut icon" href="http://meche.mit.edu/sites/all/themes/mit_meche/favicon.ico" type="image/vnd.microsoft.icon" />
+        <link type="text/css" rel="stylesheet" href="http://meche.mit.edu/sites/default/files/css/css_xE-rWrJf-fncB6ztZfd2huxqgxu4WO-qwma6Xer30m4.css" media="all" />
+<link type="text/css" rel="stylesheet" href="http://meche.mit.edu/sites/default/files/css/css_yqfEEn3F5mXOC0UUFM4YKvpmMs9qQxvb1Jy9f6FVT5Y.css" media="all" />
+<link type="text/css" rel="stylesheet" href="http://meche.mit.edu/sites/default/files/css/css_GckY0EjoR6WBLjIENeNuZVvw3ojQ1Mjn5COL87fZnj8.css" media="all" />
+        <script type="text/javascript" src="http://meche.mit.edu/sites/default/files/js/js_YD9ro0PAqY25gGWrTki6TjRUG8TdokmmxjfqpNNfzVU.js"></script>
+<script type="text/javascript" src="http://meche.mit.edu/sites/default/files/js/js_rsGiM5M1ffe6EhN-RnhM5f3pDyJ8ZAPFJNKpfjtepLk.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+(function(i,s,o,g,r,a,m){i["GoogleAnalyticsObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,"script","https://www.google-analytics.com/analytics.js","ga");ga("create", "UA-2242837-1", {"cookieDomain":"auto"});ga("set", "anonymizeIp", true);ga('create', 'UA-1592615-30',{'name':'mitsitewide'});ga("send", "pageview");ga('mitsitewide.send','pageview');
+//--><!]]>
+</script>
+<script type="text/javascript" src="http://meche.mit.edu/sites/default/files/js/js_uVZxTz_aN3L7bgFGkqfygEck8aPPFnm3VAGf9QBBomY.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings, {"basePath":"\/","pathPrefix":"","setHasJsCookie":0,"ajaxPageState":{"theme":"mit_meche","theme_token":"_MdLNHqzGqjiu8jp06nyI-62EzOLbUQXuc1PDF300Fg","js":{"misc\/jquery.js":1,"misc\/jquery-extend-3.4.0.js":1,"misc\/jquery-html-prefilter-3.5.0-backport.js":1,"misc\/jquery.once.js":1,"misc\/drupal.js":1,"sites\/all\/modules\/contrib\/google_analytics\/googleanalytics.js":1,"0":1,"sites\/all\/themes\/mit_meche\/js\/vendor\/video.js":1,"sites\/all\/themes\/mit_meche\/js\/vendor\/video.youtube.js":1,"sites\/all\/themes\/mit_meche\/js\/modernizr.prod.min.js":1},"css":{"modules\/system\/system.base.css":1,"modules\/system\/system.menus.css":1,"modules\/system\/system.messages.css":1,"modules\/system\/system.theme.css":1,"sites\/all\/modules\/contrib\/calendar\/css\/calendar_multiday.css":1,"modules\/comment\/comment.css":1,"sites\/all\/modules\/contrib\/date\/date_api\/date.css":1,"sites\/all\/modules\/contrib\/date\/date_popup\/themes\/datepicker.1.7.css":1,"modules\/field\/theme\/field.css":1,"modules\/node\/node.css":1,"modules\/user\/user.css":1,"sites\/all\/modules\/contrib\/views\/css\/views.css":1,"sites\/all\/modules\/contrib\/media\/modules\/media_wysiwyg\/css\/media_wysiwyg.base.css":1,"sites\/all\/modules\/contrib\/ctools\/css\/ctools.css":1,"sites\/all\/modules\/contrib\/shib_auth\/shib_auth.css":1,"modules\/search\/search.css":1,"sites\/all\/themes\/mit_meche\/css\/foundation.min.css":1,"sites\/all\/themes\/mit_meche\/css\/style.css":1,"sites\/all\/themes\/mit_meche\/css\/tablesaw.stackonly.css":1,"sites\/all\/themes\/mit_meche\/css\/video-js.css":1,"sites\/all\/themes\/mit_meche\/css\/vjs-sublime-skin.css":1,"https:\/\/cdnjs.cloudflare.com\/ajax\/libs\/jquery-modal\/0.9.1\/jquery.modal.min.css":1,"sites\/all\/themes\/mit_meche\/css\/extra.css":1}},"urlIsAjaxTrusted":{"\/people\/faculty\/sesarma@mit.edu":true},"googleanalytics":{"trackOutbound":1,"trackMailto":1,"trackDownload":1,"trackDownloadExtensions":"7z|aac|arc|arj|asf|asx|avi|bin|csv|doc(x|m)?|dot(x|m)?|exe|flv|gif|gz|gzip|hqx|jar|jpe?g|js|mp(2|3|4|e?g)|mov(ie)?|msi|msp|pdf|phps|png|ppt(x|m)?|pot(x|m)?|pps(x|m)?|ppam|sld(x|m)?|thmx|qtm?|ra(m|r)?|sea|sit|tar|tgz|torrent|txt|wav|wma|wmv|wpd|xls(x|m|b)?|xlt(x|m)|xlam|xml|z|zip"}});
+//--><!]]>
+</script>
+
+        <!-- Inlined Modernizr extensions to prevent delayed position jump ( Must be after Modernizr load ) -->
+        <script>
+            ;(function(Modernizr, window) {
+                Modernizr.addTest('positionfixed', function () {
+                    var test  = document.createElement('div'),
+                        control = test.cloneNode(false),
+                            fake = false,
+                            root = document.body || (function () {
+                            fake = true;
+                            return document.documentElement.appendChild(document.createElement('body'));
+                        }());
+
+                    var oldCssText = root.style.cssText;
+                    root.style.cssText = 'padding:0;margin:0';
+                    test.style.cssText = 'position:fixed;top:42px';
+                    root.appendChild(test);
+                    root.appendChild(control);
+               
+                    var ret = test.offsetTop !== control.offsetTop;
+               
+                    root.removeChild(test);
+                    root.removeChild(control);
+                    root.style.cssText = oldCssText;
+               
+                    if (fake) {
+                        document.documentElement.removeChild(root);
+                    }
+               
+                    return ret;
+                });
+                
+                Modernizr.addTest('iospositionfixed', function () {
+                    var test  = document.createElement('div'),
+                        ret,
+                        fake = false,
+                        root = document.body || (function () {
+                            fake = true;
+                            return document.documentElement.appendChild(document.createElement('body'));
+                        }());
+                    
+                    if (typeof document.body.scrollIntoViewIfNeeded === 'function') {
+                    
+                        var oldCssText = root.style.cssText,
+                            testScrollTop = 20,
+                            originalScrollTop = window.pageYOffset;
+
+                        root.appendChild(test);
+
+                        test.style.cssText = 'position:fixed;top:0px;height:10px;';
+
+                        root.style.height="3000px";
+                        
+                        /* avoided hoisting for clarity */
+                        var testScroll = function() {
+                            if (ret === undefined) {
+                                test.scrollIntoViewIfNeeded();
+                                if (window.pageYOffset === testScrollTop) {
+                                    ret = true;
+                                } else {
+                                    ret = false;
+                                }
+                            }
+                            window.removeEventListener('scroll', testScroll, false);
+                        }
+
+                        try {
+                        window.addEventListener('scroll', testScrollTop, false);
+                        }
+                        catch(err) {
+                        //      
+                        }
+                        
+                        window.setTimeout(testScroll, 20); // ios 4 does'nt publish the scroll event on scrollto
+                        window.scrollTo(0, testScrollTop);
+                        testScroll();
+
+                        root.removeChild(test);
+                        root.style.cssText = oldCssText;
+                        window.scrollTo(0, originalScrollTop);
+
+                    } else {
+                        ret = Modernizr.positionfixed; // firefox and IE doesnt have document.body.scrollIntoViewIfNeeded, so we test with the original modernizr test
+                    }
+                        
+                    if (fake) {
+                        document.documentElement.removeChild(root);
+                    }
+
+                    return ret;
+                });
+            })(Modernizr, window);
+        </script>
+
+        <!-- Inlined loading of web fonts to prevent FOUT -->
+        <script src="//ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont.js"></script>
+
+        <!-- New handler for font load so MecheController can be initialized once fonts are available -->
+        <script>
+            (function() {
+
+                var controllerUpdated = false;
+                var wait;
+
+                function updateControllerFonts() {
+                    
+                    if(typeof MecheController != "undefined") {
+                        clearInterval(wait);
+                        MecheController.initWithFonts();
+                        
+                    }
+                }
+
+                function onFontsLoaded() {
+                   
+                    if(typeof MecheController != "undefined") {
+                        MecheController.initWithFonts();
+                    } else {
+                        wait = setInterval(updateControllerFonts, 50);
+                    }
+                }
+                // load fonts
+                window.WebFontConfig
+                WebFont.load( {
+
+                        google: {
+                                families: ['Open Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700', 'Rajdhani:300,400,500,600,700']
+                        },
+                        active : onFontsLoaded,
+                        loading : function() {
+                                
+                        },
+                        timeout : 5000
+
+                });
+            })();
+            
+        </script>
+        
+
+        <title>MECHE PEOPLE: Sanjay Sarma | MIT Department of Mechanical Engineering</title>
+    </head>
+<body class="html not-front not-logged-in no-sidebars page-people page-people-faculty page-people-faculty-sesarmamitedu people faculty-plus mix-blend-mode mix-blend-mode" >
+      <div class="app-outer-wrap">
+      <div class="app-inner-wrap">
+      <a href="#" class="screen-btn exit-off-canvas">close menu</a>
+        <div class="region region-navigation">
+    <div id="block-block-1" class="block block-block">
+
+    
+  <div class="content">
+    <aside class="off-canvas-menu"><div class="nav-wrap">
+        <div class="main-nav-wrap nano-wrap">
+            <nav id="main-menu" class="main-nav nano-content overthrow" role="navigation" aria-label="main"><div class="main-nav-top">
+                      <a href="https://meche-res.mit.edu/resource_links/" class="resources-btn"><span class="fa fa-lock"></span><span>Find Resources</span><span class="fa fa-chevron-right"></span></a>
+                    <!-- NOTE | CHANGE on 10/08/15
+                         - - - - - - - - - - - - -
+                         Added <span class="visually-hidden">Close Menu</span> and aria-hidden="true" to the icon
+                    -->
+                    <a href="#exit-menu" class="close-btn exit-off-canvas" role="button" title="close side navigation">
+                        <span class="fa fa-close"></span>
+                        <span class="visually-hidden">Close Menu</span>
+                    </a>
+                </div>
+
+                <div class="main-nav-core">
+                    <div class="search-bar" role="search">
+                        <form class="search-form" action="/people/faculty/sesarma@mit.edu" method="post" id="search-form" accept-charset="UTF-8"><div><div class="container-inline form-wrapper" id="edit-basic"><div class="form-item form-type-textfield form-item-keys">
+  <input placeholder="Search" type="text" id="edit-keys" name="keys" value="" size="20" maxlength="255" class="form-text" /></div>
+<input type="submit" id="edit-submit" name="op" value="Search" class="form-submit" /><input type="hidden" name="get" value="[]" /><button type="submit"><i class="fa fa-search"></i></button></div><input type="hidden" name="form_build_id" value="form-xgoBuDmS-D99xdpnZg-itEdXeqPYAiR48M4R2MSPOX8" /><input type="hidden" name="form_id" value="apachesolr_search_custom_page_search_form_menu" /></div></form>                    </div>
+                    <hr class="meche-dots" /><!-- NOTE | CHANGE on 10/08/15
+                         - - - - - - - - - - - - -
+                         Added <span class="visually-hidden">...</span> to the icon button icons for
+                         each of the items that have a secondary navigation panel to support screen readers
+                    --><div role="region" aria-label="menu">
+                        <ul class="main-nav-items special"><li class="main-nav-item education" data-subnav="about">
+                                
+                                <h2 class="main-nav-item">
+                                    <a href="/about" class="main-nav-item-link">
+                                        <span class="main-nav-item-title">About</span>
+                                        <span class="main-nav-item-detail">Who we are</span>
+                                    </a>
+                                </h2>
+                                <a href="1" class="main-nav-item-more-btn" aria-haspopup="true" aria-owns="about-nav">
+                                    <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                                    <span class="visually-hidden">See About Menu</span>
+                                </a>
+                            </li>
+                            <li class="meche-dots" aria-hidden="true"></li>
+
+
+                            <li class="main-nav-item impact" data-subnav="impact">
+                                
+                                <h2 class="main-nav-item">
+                                    <a href="/impact" class="main-nav-item-link">
+                                        <span class="main-nav-item-title">Impact</span>
+                                        <span class="main-nav-item-detail">World-Changing Engineering</span>
+                                    </a>
+                                </h2>
+                                <a href="1" class="main-nav-item-more-btn" aria-haspopup="true" aria-owns="impact-nav">
+                                    <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                                    <span class="visually-hidden">See Impact Menu</span>
+                                </a>
+                            </li>
+                            <li class="meche-dots" aria-hidden="true"></li>
+                            <li class="main-nav-item research" data-subnav="research">
+                                <h2 class="main-nav-item">
+                                    <a class="main-nav-item-link" href="/research">
+                                        <span class="main-nav-item-title">Research</span>
+                                        <span class="main-nav-item-detail">Focus Areas and Labs</span>
+                                    </a>
+                                </h2>
+    
+                                <a href="2" class="main-nav-item-more-btn" aria-haspopup="true" aria-owns="research-nav">
+                                    <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                                    <span class="visually-hidden">See Research Menu</span>
+                                </a>
+                            </li>
+                            <li class="meche-dots" aria-hidden="true"></li>
+                            <li class="main-nav-item people" data-subnav="people">
+                                <h2 class="main-nav-item">
+                                    <a class="main-nav-item-link" href="/people">
+                                        <span class="main-nav-item-title">People</span>
+                                        <span class="main-nav-item-detail">Faculty and Staff</span>
+                                    </a>
+                                </h2>
+                                <a href="3" class="main-nav-item-more-btn" aria-haspopup="true" aria-owns="people-nav">
+                                    <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                                    <span class="visually-hidden">See People Submenu</span>
+                                </a>
+                            </li>
+                            <li class="meche-dots"></li>
+                            <li class="main-nav-item education" data-subnav="education">
+                                <h2 class="main-nav-item">
+                                    <a class="main-nav-item-link" href="/education">
+                                        <span class="main-nav-item-title">Education</span>
+                                        <span class="main-nav-item-detail">Degree Programs and Classes</span>
+                                    </a>
+                                </h2>
+                                
+                                <a href="4" class="main-nav-item-more-btn" aria-haspopup="true" aria-owns="education-nav">
+                                    <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                                    <span class="visually-hidden">See Education Menu</span>
+                                </a>
+                            </li>
+                            <li class="meche-dots"></li>
+                            <li class="main-nav-item news-and-media" data-subnav="news-media">
+                                <h2 class="main-nav-item">
+                                    <a class="main-nav-item-link" href="/news-media">
+                                        <span class="main-nav-item-title">News &amp; Video</span>
+                                        <span class="main-nav-item-detail">News, Press, Video and Photos</span>
+                                    </a>
+                                </h2>
+                                <a href="4" class="main-nav-item-more-btn" aria-haspopup="true" aria-owns="news-media-nav">
+                                    <i aria-hidden="true" class="fa fa-chevron-right"></i>
+                                    <span class="visually-hidden">See news and media menu</span>
+                                </a>
+                            </li>
+                        </ul></div>        
+                   <h2 class="support-meche-item"><a class="support-meche main-nav-item-app-link" href="/how-apply">Apply to MIT MechE</a></h2>
+                </div>
+            </nav></div>
+
+        
+        <div class="sub-nav-wrap nano-wrap">
+            <div class="nano-content overthrow"><!-- *** NEW NODE *** -->
+                <div class="sub-nav-top">
+                    <a href="#main-menu" class="btn-main-menu"><span class="fa fa-chevron-left"></span><span class="btn-label">Back</span></a>
+                    <a href="#close-menu" class="close-btn exit-off-canvas" role="button" title="close side navigation">
+                        <span class="fa fa-close"></span>
+                        <span class="visually-hidden">Close Menu</span>
+                    </a>
+                </div>
+                <div role="region" aria-label="submenu">
+
+                  <nav id="about-nav" class="sub-nav-group about" role="navigation" aria-label="about items"><div class="sub-nav-header">
+                            <a href="/about">
+                                <span>About</span>
+                            </a>
+                        </div>
+                        <!--<hr class="meche-dots" />-->
+                        <ul class="sub-nav-items"><li class="sub-nav-item"><a class="sub-nav-item-link" href="/meche-history-and-timeline">History</a></li>
+                            <li class="sub-nav-item"><a class="sub-nav-item-link" href="/people/diversity-equity-and-inclusion">Diversity Equity &amp; Inclusion</a></li>
+                            <li class="sub-nav-item"><a class="sub-nav-item-link" href="/ethics">Ethics and Integrity</a></li>
+                            <li class="sub-nav-item"><a class="sub-nav-item-link" href="/sites/default/files/2018-Strategic-Plan.pdf">Strategic Plan (PDF)</a></li>
+                            <li class="sub-nav-item"><a class="sub-nav-item-link" href="/faculty-positions">Faculty Openings</a></li>
+                            <li class="sub-nav-item"><a class="sub-nav-item-link" href="/alumni">Alumni</a></li>
+                            <li class="sub-nav-item"><a class="sub-nav-item-link" href="/alliance">MechE Alliance</a></li>
+                            <li class="sub-nav-item"><a class="sub-nav-item-link" href="https://giving.mit.edu/explore/schools/engineering/meche">Support MechE</a></li>
+                            <li class="sub-nav-item"><a class="sub-nav-item-link" href="/contact">Contact Us</a></li>
+                        </ul></nav><nav id="impact-nav" class="sub-nav-group impact" role="navigation" aria-label="impact items"><div class="sub-nav-header">
+                            <a href="/impact">
+                                <span>Impact</span>
+                            </a>
+                        </div>
+                        <!--<hr class="meche-dots" />-->
+                        <ul class="sub-nav-items"><li class="sub-nav-item"><a class="sub-nav-item-link" href="/impact/health">Health</a></li>
+                            <li class="sub-nav-item"><a class="sub-nav-item-link" href="/impact/environment">Environment</a></li>
+                            <li class="sub-nav-item"><a class="sub-nav-item-link" href="/impact/innovation">Innovation</a></li>
+                            <li class="sub-nav-item"><a class="sub-nav-item-link" href="/impact/energy">Energy</a></li>
+                            <li class="sub-nav-item"><a class="sub-nav-item-link" href="/impact/security">Security</a></li>
+                        </ul></nav><nav id="research-nav" class="sub-nav-group research" role="navigation" aria-label="research items"><div class="sub-nav-header">
+                            <a href="/research">
+                                <span>Research</span>
+                            </a>
+                        </div>
+                        <!--<hr class="meche-dots" />-->
+                        <ul class="sub-nav-items"><li class="sub-nav-item"><a class="sub-nav-item-link" href="/research/mechanics">Mechanics</a></li>
+                            <li class="sub-nav-item"><a class="sub-nav-item-link" href="/research/design">Design</a></li>
+                            <li class="sub-nav-item"><a class="sub-nav-item-link" href="/research/controls">Controls</a></li>
+                            <li class="sub-nav-item"><a class="sub-nav-item-link" href="/research/energy">Energy</a></li>
+                            <li class="sub-nav-item"><a class="sub-nav-item-link" href="/research/ocean">Ocean</a></li>
+                            <li class="sub-nav-item"><a class="sub-nav-item-link" href="/research/bioengineering">Bio</a></li>
+                            <li class="sub-nav-item"><a class="sub-nav-item-link" href="/research/nano">Micro + Nano</a></li>
+                        </ul></nav><nav id="people-nav" class="sub-nav-group people" role="navigation" aria-label="people"><div class="sub-nav-header">
+                            <a href="/people">
+                                <span>People</span>
+                            </a>
+                        </div>
+                        <!--<hr class="meche-dots" />-->
+                        <ul class="sub-nav-items"><li class="sub-nav-item"><a class="sub-nav-item-link" href="/people/diversity-equity-and-inclusion">Diversity, Equity, and Inclusion</a></li>
+                            <li class="sub-nav-item"><a class="sub-nav-item-link" href="/people?">Faculty</a></li>
+                            <li class="sub-nav-item"><a class="sub-nav-item-link" href="/people/emeritus">Faculty Emeritus</a></li>
+                            <li class="sub-nav-item"><a class="sub-nav-item-link" href="/people/staff-listing?field_staff_role_tid[]=46">Research Staff</a></li>
+                            <li class="sub-nav-item"><a class="sub-nav-item-link" href="/people/staff-listing?field_staff_role_tid[]=55">Post Docs</a></li>
+                            <li class="sub-nav-item"><a class="sub-nav-item-link" href="/people/staff-listing?field_staff_role_tid[]=47">Teaching Staff</a></li>
+                            <li class="sub-nav-item"><a class="sub-nav-item-link" href="/people/staff-listing?field_staff_role_tid[]=43">Admin Staff</a></li>
+                            <li class="sub-nav-item"><a class="sub-nav-item-link" href="/people/staff-listing?field_staff_role_tid[]=44">Support Staff</a></li>
+                            <li class="sub-nav-item"><a class="sub-nav-item-link" href="/people/all">Full Directory</a></li>
+                        </ul></nav><nav id="education-nav" class="sub-nav-group education" role="navigation" aria-label="education"><div class="sub-nav-header">
+                            <a href="/education">
+                                <span>Education</span>
+                            </a>
+                        </div>
+                        <!--<hr class="meche-dots" />-->
+                        <ul class="sub-nav-items"><li class="sub-nav-item"><a class="sub-nav-item-link" href="/featured-classes">Class Offerings</a></li>
+                            <li class="sub-nav-item"><a class="sub-nav-item-link" href="/education/prospective-students">Prospective Students</a></li>
+                            <li class="sub-nav-item"><a class="sub-nav-item-link" href="/education/undergraduate">Undergraduate</a></li>
+                            <li class="sub-nav-item"><a class="sub-nav-item-link" href="/education/graduate">Graduate</a></li>
+                            <li class="sub-nav-item"><a class="sub-nav-item-link" href="/education/post-doc">Post-Doc</a></li>
+                           <li class="sub-nav-item"><a class="sub-nav-item-link" href="/careers">Careers</a></li>
+                 <!-- removed 9/1/2000 per JF request
+                            <li class="sub-nav-item"><a class="sub-nav-item-link" href="/education/professional">Professional Education</a></li>
+                            <li class="sub-nav-item"><a class="sub-nav-item-link" href="/education/meche-summer-x">MechE Summer X</a></li>
+                 -->
+                        </ul></nav><nav id="culture-nav" class="sub-nav-group culture" role="navigation" aria-label="culture"><div class="sub-nav-header">
+                            <a href="/culture">
+                                <span>Culture</span>
+                            </a>
+                        </div>
+                        <hr class="meche-dots" /></nav><nav id="news-nav" class="sub-nav-group news-media" role="navigation" aria-label="news and media"><div class="sub-nav-header">
+                            <a href="/news-media">
+                                <span>News + Video</span>
+                            </a>
+                        </div>
+                        <!--<hr class="meche-dots" />-->
+                        <ul class="sub-nav-items"><li class="sub-nav-item"><a class="sub-nav-item-link" href="/news-media/news">Press</a></li>
+                            <li class="sub-nav-item"><a class="sub-nav-item-link" href="/news-media/video/">Video Galleries</a></li>
+                            <li class="sub-nav-item"><a class="sub-nav-item-link" href="/news-media/image-gallery/906">Photo Galleries</a></li>
+                            <li class="sub-nav-item"><a class="sub-nav-item-link" href="/meche-connects-newsletter">Newsletter</a></li>
+                            <li class="sub-nav-item"><a class="sub-nav-item-link" href="/international-colloquia-thermal-innovations">Colloquia</a></li>
+                        </ul></nav></div>
+            </div><!-- *** NEW NODE ( CLOSING TAG ) *** -->
+        </div>
+    </div>
+</aside>  </div>
+</div>
+  </div>
+
+      <div class="fluid">
+          <div class="hbar hbar-alert clearfix hide"><a href="#" class="small message"><i> ••• </i>Lorem ipsum dolor sit amet. Lorem ipsum.</a><a class="btn-close">Close Alert</a></div>
+      </div>
+      
+      <div class="hbar hbar-nav-main fixed" role="region" aria-label="navigation bar">
+          <a href="/" class="nav-bar-logo">MIT MechE</a>
+          <div id="vr-btn" class="btn-container">
+            <a class="btn btn-primary blue centered" style="margin-top:0px; background-color:#ef0166; padding-top: 0px; padding-bottom: 0px; min-width:0px; min-height: 0px; width: -moz-max-content; width: -webkit-max-content; width: max-content;" href="/meche-covid-19-resources">MechE Covid-19 Resources <i class="fa fa-arrow-circle-right"></i></a>
+          </div>
+          <nav class='breadcrumbs' role='menubar' aria-label='breadcrumbs'>
+    <li class='home' role='menuitem'><a href='/'><i class='fa fa-arrow-circle-o-left'></i>Home</a></li><li role='menuitem' ><a href='/people'>People</a></li><li role='menuitem' class='current'><a href='#'>Sarma, Sanjay E</a></li></nav>          <a href="#main-menu" class="btn-side-menu right-off-canvas-toggle" role="button" aria-expanded="false" aria-controls="main-nav-side-menu"><span>menu</span><i class="fa fa-2x fa-navicon"></i></a>
+      </div>
+        <div class="region region-rotator">
+    <div id="block-meche-blocks-profile-hero" class="block block-meche-blocks">
+
+    
+  <div class="content">
+    <!-- ****************  F S   B A C K G R O U N D   I M A G E  ****************-->       
+    <div class='fluid panel-container fs-hero no-cover'>
+        <div>
+    
+            <!-- FULLSCREEN BG IMAGE -->
+            <div class='bg-fluid-image'>
+                <div class='mesh-bg light'></div>
+                <img class='bg-img bg-width' src='http://meche.mit.edu/sites/default/files/styles/hero/public/Sanjay%20E.%20Sarma_1.jpg?itok=0v6NJ1xH' alt='Sanjay Sarma' />
+            </div>
+            <div class='bg-img-content vc-parent middle left' role='banner'>
+                <div class='vc-child faculty-plus-hero-content orange'>
+                    <hr class='meche-dots fat' />
+                    <div class='intro'>
+                        <h3 class='faculty-rank'>Vice President for Open Learning</h3>
+                        <h1 class='faculty-name'>Sanjay Sarma </h1>
+                        <p></p>
+                    </div>
+                    <div class='interests'>
+                        <hr class='meche-dots hairline' />
+                        <h3>Interests</h3>
+                        <ol class='numeric'>
+                            <li class='inverted'>RFID, Sensors, IOT</li><li class='inverted'>Design: Automotive, Developing World</li><li class='inverted'>Learning: Science, Digital, Universities, Schools</li>
+                        </ol>
+                    </div>
+                    <hr class='meche-dots thin' />
+                </div>
+            </div>
+            
+        </div>
+    </div>
+  <div class='row hbar-secondary-container'>
+    <div class='scroll-btn-container align-c hide-for-small-only'>
+        <a class='btn btn-jumper'>
+            <p class='jump-label'>More About Sanjay</p>
+            <i class='jump-icon fa fa-chevron-circle-down'></i>
+        </a>
+    </div>
+</div><section class='fluid layer'>
+    <div class='hbar hbar-faculty-details'>
+        <div class='top-details clearfix'>
+            <div class='info-header show-for-small-only'>
+                <h3>Contact Info</h3>
+            </div>
+            <div class='location-group clearfix'>
+                <div class='room-block vc-parent'>
+                    <div class='vc-child'>
+                        <span class='room-title'>room</span>
+                        <span class='room-number'><a href='http://whereis.mit.edu/?mapterms=35-206' class='room-number'>35-206<i class='fa fa-map-marker'></i></a></span>
+                    </div>
+                </div>
+                <div class='address-block vc-parent'>
+                    <div class='vc-child'>
+                        <p>Massachusetts Institute of Technology</p>
+                        <p>77 Massachusetts Avenue</p>
+                        <p>Cambridge, Massachusetts 02139</p>
+                    </div>
+                    
+                </div>
+            </div>
+            <div class='contact-group clearfix'>
+                <div class='contact-block digital vc-parent'>
+                    <div class='vc-child'>
+                        <ul>
+                            <li class='primary-contact-method email'><a href='mailto:SESARMA@MIT.EDU'><i class='fa fa-envelope'></i><span>email</span></a></li></ul>
+                    </div>
+                </div>
+                <div class='contact-block vc-parent'>
+                    <div class='vc-child'>
+                        <ul>
+                            <li><a class='tel' href='tel:+1617.253.1925'><i class='fa fa-phone'></i><span>617.253.1925</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class='personal-group'>
+                <div class='cv-block vc-parent'>
+                    <div class='vc-child'>
+                        <a href='http://meche.mit.edu/sites/default/files/cv/Resume2015-Website_0.pdf' class='btn btn-primary orange'>Download CV <i class='fa fa-arrow-circle-down'></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class='research-group'>
+                <div class='ra-block vc-parent'>
+                    <div class='vc-child'>
+                        <div class='ra-icon-bar'>
+                            <span class='title'>Associated Research Areas</span>
+                            <ul class='clearfix'>
+                            <li >
+        <a href='/research/mechanics' data-tooltip aria-haspopup='true' data-options='additional_inheritable_classes: ra-tip;' class='has-tip tip-top ra-tip' title='mechanics'>
+            <i class='ra-icon mechanics'><span class='visually-hidden'>mechanics</span></i>
+        </a>
+        </li><li class='active'>
+        <a href='/research/design' data-tooltip aria-haspopup='true' data-options='additional_inheritable_classes: ra-tip;' class='has-tip tip-top ra-tip' title='design'>
+            <i class='ra-icon design'><span class='visually-hidden'>design</span></i>
+        </a>
+        </li><li >
+        <a href='/research/controls' data-tooltip aria-haspopup='true' data-options='additional_inheritable_classes: ra-tip;' class='has-tip tip-top ra-tip' title='controls'>
+            <i class='ra-icon controls'><span class='visually-hidden'>controls</span></i>
+        </a>
+        </li><li >
+        <a href='/research/energy' data-tooltip aria-haspopup='true' data-options='additional_inheritable_classes: ra-tip;' class='has-tip tip-top ra-tip' title='energy'>
+            <i class='ra-icon energy'><span class='visually-hidden'>energy</span></i>
+        </a>
+        </li><li >
+        <a href='/research/ocean' data-tooltip aria-haspopup='true' data-options='additional_inheritable_classes: ra-tip;' class='has-tip tip-top ra-tip' title='ocean'>
+            <i class='ra-icon ocean'><span class='visually-hidden'>ocean</span></i>
+        </a>
+        </li><li >
+        <a href='/research/bioengineering' data-tooltip aria-haspopup='true' data-options='additional_inheritable_classes: ra-tip;' class='has-tip tip-top ra-tip' title='bioengineering'>
+            <i class='ra-icon bio'><span class='visually-hidden'>bioengineering</span></i>
+        </a>
+        </li><li >
+        <a href='/research/nano' data-tooltip aria-haspopup='true' data-options='additional_inheritable_classes: ra-tip;' class='has-tip tip-top ra-tip' title='nano'>
+            <i class='ra-icon nano'><span class='visually-hidden'>nano</span></i>
+        </a>
+        </li></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><div class='hbar hbar-admin-details'>
+             <!-- ADMIN CONTACT -->
+            <div class='bottom-details'>
+                <div class='admin-details clearfix'>
+                    <span class='arrow-box admin-detail label'>Administrative Contact</span>
+                    <a class='arrow-box admin-detail person' href='/people/staff/whitela@mit.edu'>White, Laura</a>
+                    <span class='admin-detail contact-detail room'><a href='http://whereis.mit.edu/?mapterms=35-208' class='room-number'><i class='fa fa-map-marker'></i>35-208</a></span>
+                    <span class='admin-detail contact-detail email'><a href='mailto:whitela@mit.edu'><i class='fa fa-envelope'></i>whitela@mit.edu</a></span>
+                    <span class='admin-detail contact-detail phone'><a class='tel' href='tel:+1617.324.7456'><i class='fa fa-phone'></i>617.324.7456</a></span>
+                </div>  
+            </div>
+        </div></section>  </div>
+</div>
+  </div>
+  <div class="region region-content">
+    <div id="block-meche-blocks-profile-highlights" class="block block-meche-blocks">
+
+    
+  <div class="content">
+    <!-- ****************  F E A T U R E D   B L O C K (s)  ****************-->
+      <section class='fluid panel-block default-featured-block layer gray-block'>   
+          <div class='row header-block'>
+              <div class='column small-12'>
+                  <h3 class='align-c xlarge'>Professor Sarma News + Media</h3>
+                  <hr class='meche-dots thin black' />
+              </div>
+          </div>
+          <div class='row' data-equalizer><div class='column large-4'>
+                    <div class='news-block clearfix'>
+                        <div class='img-container'>
+                            <img src='http://meche.mit.edu/sites/default/files/styles/faculty_highlight/public/highlights/sanjay_news1_460.jpg?itok=EbQKEXsv' alt='Low-cost “smart” diaper can notify caregiver when it’s wet' />
+                        </div>
+                        <div class='news-block-details'>
+                            <div data-equalizer-watch>
+                                <h3>Low-cost “smart” diaper can notify caregiver when it’s wet</h3>
+                                <hr class='meche-dots thin black' />
+                                <p>MIT researchers including Professor Sanjay Sarma have developed a “smart” diaper embedded with a moisture RFID sensor that can alert a caregiver when a diaper is wet.</p>
+                            </div>
+                            <div class='link-wrap'>
+                                <a class='link link-primary blue' href='http://meche.mit.edu/news-media/low-cost-“smart”-diaper-can-notify-caregiver-when-it’s-wet'>READ MORE</a>
+                            </div>
+                        </div>
+                    </div>
+                </div><div class='column large-4'>
+                    <div class='news-block clearfix'>
+                        <div class='img-container'>
+                            <img src='http://meche.mit.edu/sites/default/files/styles/faculty_highlight/public/highlights/sanjay_news2_460.jpg?itok=73sYAECG' alt='Photovoltaic-powered sensors for the “internet of things”' />
+                        </div>
+                        <div class='news-block-details'>
+                            <div data-equalizer-watch>
+                                <h3>Photovoltaic-powered sensors for the “internet of things”</h3>
+                                <hr class='meche-dots thin black' />
+                                <p>A team of researchers including Professor Tonio Buonassisi and Professor Sanjay E. Sarma have designed low-cost, photovoltaic-powered sensors on RFID tags that work in indoor and outdoor lighting conditions. </p>
+                            </div>
+                            <div class='link-wrap'>
+                                <a class='link link-primary blue' href='http://meche.mit.edu/news-media/photovoltaic-powered-sensors-“internet-things”'>READ MORE</a>
+                            </div>
+                        </div>
+                    </div>
+                </div><div class='column large-4'>
+                    <div class='news-block clearfix'>
+                        <div class='img-container'>
+                            <img src='http://meche.mit.edu/sites/default/files/styles/faculty_highlight/public/highlights/sanjay_news3_460.jpg?itok=_dabXD-k' alt='MIT engineers build smart power outlet' />
+                        </div>
+                        <div class='news-block-details'>
+                            <div data-equalizer-watch>
+                                <h3>MIT engineers build smart power outlet</h3>
+                                <hr class='meche-dots thin black' />
+                                <p>A smart power outlet designed by Joshua Siegel and Sanjay Sarma uses machine learning algorithms to identify plugged-in appliances and distinguish dangerous electrical spikes from benign ones.</p>
+                            </div>
+                            <div class='link-wrap'>
+                                <a class='link link-primary blue' href='http://meche.mit.edu/news-media/mit-engineers-build-smart-power-outlet'>READ MORE</a>
+                            </div>
+                        </div>
+                    </div>
+                </div></div></section>  </div>
+</div>
+<div id="block-meche-blocks-profile-education-plus" class="block block-meche-blocks">
+
+    
+  <div class="content">
+    <section class='fluid jumper-nav-block white-block panel-block layer'>
+        <div class='row'>
+            <div class='column small-12 show-for-medium-up align-c'>
+                <h3 class='jump-nav-label'>Faculty Details</h3>
+            </div>
+            <div class='column small-12 show-for-medium-up align-c'>   
+                <div class='hbar hbar-nav-jumper'>
+                    <ul>
+                        <li><a href='#education'>Education</a></li>
+                        <li class='divider' aria-hidden='true'></li>
+                        <li><a href='#research-interests'>Research Interests</a></li>
+                        <li class='divider' aria-hidden='true'></li>
+                        <li><a href='#other-details'>Bio</a></li>
+                        <li class='divider' aria-hidden='true'></li>
+                        <li><a href='#online-data'>Online Data</a></li>
+                        <li class='divider' aria-hidden='true'></li>
+                        <li><a href='#honors-and-awards '>Honors/Awards</a></li>
+                        <li class='divider' aria-hidden='true'></li>
+                        <li><a href='#related-experience'>Related Experience</a></li>
+                        <li class='divider' aria-hidden='true'></li>
+                        <li><a href='#memberships'>Memberships</a></li>
+                    </ul>
+                    <ul>
+                        <li><a href='#professional-service'>Professional Service</a></li>
+                        <li class='divider' aria-hidden='true'></li>
+                        <li><a href='#mit-service'>MIT Service</a></li>
+                        <li class='divider' aria-hidden='true'></li>
+                        <li><a href='#classes'>Teaching</a></li>
+                        <li class='divider' aria-hidden='true'></li>
+                        <li><a href='#publications '>Publications</a></li>
+                        <li class='divider' aria-hidden='true'></li>
+                        <li><a href='#patents'>Patents</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section><section class='fluid panel-block profile-details layer'>
+        <div class='row'>
+            <div class='column small-12 education-block clearfix'>
+                <div id='education' class='education-block-content'>
+                    <h2>Education</h2>
+                    <div class='degrees'>
+                    <ul class='clearfix'><li class='degree'>
+            <div>
+                <h3>1989</h3>
+                <p>INDIAN INSTITUTE OF TECHNOLOGY</p>
+                <span>B.</span>
+            </div>
+        </li><li class='degree'>
+            <div>
+                <h3>1992</h3>
+                <p>CARNEGIE MELLON UNIVERSITY</p>
+                <span>M.Eng.</span>
+            </div>
+        </li><li class='degree'>
+            <div>
+                <h3>1995</h3>
+                <p>UNIVERSITY OF CALIFORNIA-BERKELEY</p>
+                <span>Ph.D.</span>
+            </div>
+        </li></ul></div></div></div><div class='column small-12 profile-block'>
+              <div id='research-interests' class='profile-block-content'><h2>Research Interests</h2><p>RFID, Sensors, IoT</p>
+<p>Design, Manufacturing, CAD, CAM, Automation</p>
+<p>Automotive Technologies, Sports Technologies, Agriculture, Smart Cities</p>
+<p>Batteries, RF, Antennas, Novel Manufacturing Technologies</p>
+<p>Learning, Digital Learning,  University Design, PK12 Education, Maker Education</p>
+</div></div><div class='column small-12 profile-block'>
+              <div id='other-details' class='profile-block-content'><h2>Bio</h2><p>Sanjay Sarma is the Fred Fort Flowers (1941) and Daniel Fort Flowers (1941) Professor of Mechanical Engineering at MIT. He is the Vice President for Open Learning at MIT. He co-founded the Auto-ID Center at MIT and developed many of the key technologies behind the EPC suite of RFID standards now used worldwide. He was also the the founder and CTO of OATSystems, which was acquired by Checkpoint Systems (NYSE: CKP) in 2008. He serves on the boards of GS1US and Hochschild Mining and several startup companies including Top Flight Technologies. Dr. Sarma received his Bachelors from the Indian Institute of Technology, his Masters from Carnegie Mellon University and his PhD from the University of California at Berkeley. Sarma also worked at Schlumberger Oilfield Services in Aberdeen, UK, and at the Lawrence Berkeley Laboratories in Berkeley, California.  He has authored over 100 academic papers in computational geometry, sensing, RFID, automation and CAD, and is the recipient of numerous awards for teaching and research including the MacVicar Fellowship, the Business Week eBiz Award and Informationweek's Innovators and Influencers Award. He advises several national governments and global companies.</p>
+</div></div><div class='column small-12 profile-block'>
+              <div id='online-data' class='profile-block-content'><h2>Online Data</h2><p><a href="https://odl.mit.edu">Office of Digital Learning</a></p>
+<p><a href="http://autoidlabs.org">Auto-ID Labs</a></p>
+<p><a href="http://edx.org">edX</a></p>
+</div></div><div class='column small-12 profile-block'>
+              <div id='honors-and-awards' class='profile-block-content'><h2>Honors + Awards</h2><p style="margin-left: 40px;"><u>Academic Awards:</u></p>
+<p style="margin-left:.5in;">NSF Career Initiation Grant (1997)</p>
+<p style="margin-left:.5in;">Cecil and Ida Green Career Development Chair (1999)</p>
+<p style="margin-left:.5in;">Den Hartog Teaching Excellence Award (2001)</p>
+<p style="margin-left:.5in;">Joseph H. Keenan Award for Innovation in Undergraduate Education (2002)</p>
+<p style="margin-left:.5in;">MacVicar Fellowship  (2008)</p>
+<p style="margin-left:.5in;"><u>Industry Awards/Recognitions:</u></p>
+<p style="margin-left:.5in;">Information Week’s Innovators and Influencers (2003)</p>
+<p style="margin-left:.5in;">Business Week’s e.biz 25 Innovators (2003)</p>
+<p style="margin-left:.5in;">New England Business and Technology Award (2005)</p>
+<p style="margin-left:.5in;">MIT Global Indus Award (2005)</p>
+<p style="margin-left:.5in;">Fast Company Magazine’s “Fast 50” (2005)</p>
+<p style="margin-left:.5in;">Boston Magazine’s 40 under 40 (2006)</p>
+<p style="margin-left:.5in;">RFID Journal Special Achievement Award (2010)</p>
+</div></div><div class='column small-12 profile-block'>
+              <div id='related-experience' class='profile-block-content'><h2>Related Experience</h2><p>1989-1990: Schlumberger Oilfield Services, Aberdeen, UK</p>
+<p>2004-2006: CTO, Board Member, OAT Systems (Acquired 2008 by Checkpoint -- NYSE:CKP)</p>
+<p>Over the years I have served on several company boards including: ESSESS, Top Flight Technologies, Senaya, GS1US, EPCGlobal and edX.</p>
+</div></div><div class='column small-12 profile-block'>
+              <div id='professional-service' class='profile-block-content'><h2>Professional Service</h2><p><strong>Selected List:</strong></p>
+<p style="margin-left:.5in;">Chairman, Auto-ID Academic Alliance (2001-2003)<br />Congressional Testimony, Subcommittee on Commerce, Trade and Consumer Protection (July 2004)            <br />Advisory Board, IEEE Transactions on Automation Science and Engineering (2005-2009)                      <br />Guest Editor, Special Issue on RFID, IEEE T-ASE (2007-2008)<br />Editor, Conference Organizer, The Internet of Things, First International Conference, IOT 2008, Zurich, Switzerland  (March 2008)Permanent Guest of GS1 Management Board   (2009-Present)<br />Editor, IEEE Transactions on Automation Science and Engineering (2009-2016)<br />Designer, Advisor, Universal ID Project,  Government of India (2009-2011)<br />Member of the Board of edX (2013-present)</p>
+<p style="margin-left:.5in;"> </p>
+</div></div><div class='column small-12 profile-block'>
+              <div id='mit-service' class='profile-block-content'><h2>MIT Service</h2><p><strong>Recent Service:</strong></p>
+<p>Academic Council<br />Board Member of edX<br />Co-Chair of the Institute-wide Task Force on the Future of MIT Education<br />Lemelson Awards Committee<br />Co-Chair of the Online Education Policy Inititiative<br />Dean of Digital Learning<br />International Advisory Council<br />Co-Chair of the MITx Faculty Advisory Council<br />Member of the Advisory Board of the MIT Museum<br />Commissioner, Work of the Future Commission, MIT</p>
+<p> </p>
+</div></div><div class='column small-12 profile-block'>
+              <div id='classes' class='profile-block-content'><h2>Teaching</h2><p>Classes formerly taught:<br />2.001<br />2.003<br />2.007<br />2.008<br />2.670<br />2.31<br />2.998<br /> </p>
+</div></div><div class='column small-12 profile-block'>
+              <div id='publications' class='profile-block-content'><h2>Publications</h2><div>
+<p>Wang, Yue, Yongbin Sun, Ziwei Liu, Sanjay E. Sarma, Michael M. Bronstein, and Justin M. Solomon. "Dynamic graph cnn for learning on point clouds." <em>ACM Transactions on Graphics (TOG)</em> 38, no. 5 (2019): 146.</p>
+<p>Mathews, Ian, Sai Nithin Reddy Kantareddy, Shijing Sun, Mariya Layurova, Janak Thapa, Juan‐Pablo Correa‐Baena, Rahul Bhattacharyya, Tonio Buonassisi, Sanjay Sarma, and Ian Marius Peters. "Self‐Powered Sensors Enabled by Wide‐Bandgap Perovskite Indoor Photovoltaic Cells." <em>Advanced Functional Materials</em> 29, no. 42 (2019): 1904072.</p>
+<p>Kantareddy, Sai NR, Ian Mathews, Rahul Bhattacharyya, Ian Marius Peters, Tonio Buonassisi, and Sanjay E. Sarma. "Long Range Battery-Less PV-Powered RFID Tag Sensors." <em>IEEE Internet of Things Journal</em> (2019).</p>
+<p>Jain, Pranay, and Sanjay E. Sarma. "Measuring light transport properties using speckle patterns as structured illumination." <em>Scientific reports</em> 9, no. 1 (2019): 11157.</p>
+<p>Sun, Yongbin, Alexandre Armengol-Urpi, Sai Nithin Reddy Kantareddy, Joshua Siegel, and Sanjay Sarma. "MagicHand: Interact with IoT Devices in Augmented Reality Environment." In <em>2019 IEEE Conference on Virtual Reality and 3D User Interfaces (VR)</em>, pp. 1738-1743. IEEE, 2019.</p>
+<p>Kantareddy, Sai Nithin R., Ian Mathews, Shijing Sun, Mariya Layurova, Janak Thapa, Juan-Pablo Correa-Baena, Rahul Bhattacharyya Tonio Buonassisi, Sanjay E. Sarma, and Ian Marius Peters. "Perovskite PV-powered RFID: enabling lowcost self-powered IoT sensors." <em>IEEE Sensors Journal</em>(2019).</p>
+<p>Siegel, Joshua, and Sanjay Sarma. "A Cognitive Protection System for the Internet of Things." <em>IEEE Security &amp; Privacy</em>17, no. 3 (2019): 40-48.</p>
+<p>Siegel, Joshua Eric, and Sanjay Sarma. "Using Open Channels to Trigger the Invited, Unintended Consequences of the Internet of Things." <em>IEEE Security &amp; Privacy</em> 17, no. 3 (2019): 49-55.</p>
+<p>Sun, Yongbin, Sai Nithin R. Kantareddy, Rahul Bhattacharyya, and Sanjay E. Sarma. "X-Vision: An augmented vision tool with real-time sensing ability in tagged environments." In <em>2018 IEEE International Conference on RFID Technology &amp; Application (RFID-TA)</em>, pp. 1-6. IEEE, 2018.</p>
+<p>Suo, Dajiang, Joshua E. Siegel, and Sanjay E. Sarma. "Merging safety and cybersecurity analysis in product design." <em>IET Intelligent Transport Systems</em> 12, no. 9 (2018): 1103-1109.</p>
+<p>Sun, Yongbin, Yue Wang, Ziwei Liu, Joshua E. Siegel, and Sanjay E. Sarma. "Pointgrow: Autoregressively learned point cloud generation with self-attention." <em>arXiv preprint arXiv:1810.05591</em> (2018).</p>
+<p>Siegel, Josh, Dylan Erb, and Sanjay Sarma. "Algorithms and architectures: A case study in when, where and how to connect vehicles." <em>IEEE Intelligent Transportation Systems Magazine</em> 10, no. 1 (2018): 74-87.</p>
+<p>Siegel, Joshua E., Shane Pratt, Yongbin Sun, and Sanjay E. Sarma. "Real-time Deep Neural Networks for internet-enabled arc-fault detection." <em>Engineering Applications of Artificial Intelligence</em> 74 (2018): 35-42.</p>
+<p>Jain, Pranay, and Sanjay E. Sarma. "Speckle Patterns as Structured Illumination in Diffuse Optical Imaging." In <em>Optical Sensors</em>, pp. SeTh3E-3. Optical Society of America, 2018.</p>
+<p>Biradar, Anandrao, Paul DeBitetto, Long Phan, Luan Duang, and Sanjay Sarma. "Hybrid-electric powered aerospace systems and the battery energy density revolution." In <em>2018 IEEE Aerospace Conference</em>, pp. 1-6. IEEE, 2018.</p>
+<p>Armengol-Urpi, Alexandre, and Sanjay E. Sarma. "Sublime: a hands-free virtual reality menu navigation system using a high-frequency SSVEP-based brain-computer interface." In <em>Proceedings of the 24th ACM Symposium on Virtual Reality Software and Technology</em>, p. 1. ACM, 2018.</p>
+<p>Soley, Alexander M., Joshua E. Siegel, Dajiang Suo, and Sanjay E. Sarma. "Value in vehicles: economic assessment of automotive data." <em>Digital Policy, Regulation and Governance</em>, no. 6 (2018): 513-527.</p>
+</div>
+<div>Wang, Yue, Yongbin Sun, Ziwei Liu, Sanjay E. Sarma, Michael M. Bronstein, and Justin M. Solomon. "Dynamic graph cnn for learning on point clouds." arXiv preprint arXiv:1801.07829(2018).</div>
+<div> </div>
+<div>Sun, Yongbin, Ziwei Liu, Yue Wang, and Sanjay E. Sarma. "Im2avatar: Colorful 3d reconstruction from a single image." arXiv preprint arXiv:1804.06375 (2018).</div>
+<div> </div>
+<div>Siegel, Josh, Dylan Erb, and Sanjay Sarma. "Algorithms and architectures: A case study in when, where and how to connect vehicles." IEEE Intelligent Transportation Systems Magazine 10, no. 1 (2018): 74-87.</div>
+<div> </div>
+<div>Bonvillian, William B., and Sanjay E. Sarma. "The Quest for Quality Jobs." (2018): 28-30.</div>
+<div> </div>
+<div>Biradar, Anandrao, Paul DeBitetto, Long Phan, Luan Duang, and Sanjay Sarma. "Hybrid-electric powered aerospace systems and the battery energy density revolution." In 2018 IEEE Aerospace Conference, pp. 1-6. IEEE, 2018.</div>
+<div> </div>
+<div>Sarma, Sanjay E., and William B. Bonvillian. "Fixing an Imperfect Labor Market Information System." Issues in Science and Technology 35, no. 1 (2018): 56-61.</div>
+<div> </div>
+<div>Sarma, Sanjay. "Rethinking Learning in the 21st Century." Learning Engineering for Online Education: Theoretical Contexts and Design-Based Examples (2018).</div>
+<div> </div>
+<div>Armengol-Urpi, Alexandre, and Sanjay E. Sarma. "Sublime: a hands-free virtual reality menu navigation system using a high-frequency SSVEP-based brain-computer interface." In Proceedings of the 24th ACM Symposium on Virtual Reality Software and Technology, p. 1. ACM, 2018</div>
+<div> </div>
+<div>Suo, Dajiang, Joshua E. Siegel, and Sanjay E. Sarma. "Merging safety and cybersecurity analysis in product design." IET Intelligent Transport Systems 12, no. 9 (2018): 1103-1109.</div>
+<div> </div>
+<div>Jain, Pranay, and Sanjay E. Sarma. "Speckle Patterns as Structured Illumination in Diffuse Optical Imaging." In Optical Sensors, pp. SeTh3E-3. Optical Society of America, 2018.</div>
+<div> </div>
+<div>Soley, Alexander M., Joshua E. Siegel, Dajiang Suo, and Sanjay E. Sarma. "Value in vehicles: economic assessment of automotive data." Digital Policy, Regulation and Governance20, no. 6 (2018): 513-527.</div>
+<div> </div>
+<div>Siegel, Joshua E., Sumeet Kumar, and Sanjay E. Sarma. "The future internet of things: secure, efficient, and model-based." IEEE Internet of Things Journal 5, no. 4 (2018): 2386-2398.</div>
+<div> </div>
+<div>Siegel, Joshua E., Dylan C. Erb, and Sanjay E. Sarma. "A Survey of the Connected Vehicle Landscape—Architectures, Enabling Technologies, Applications, and Development Areas." IEEE Transactions on Intelligent Transportation Systems 19, no. 8 (2018): 2391-2406.</div>
+<div> </div>
+<div>Sun, Yongbin, Sai Nithin R. Kantareddy, Rahul Bhattacharyya, and Sanjay E. Sarma. "X-Vision: An augmented vision tool with real-time sensing ability in tagged environments." In 2018 IEEE International Conference on RFID Technology &amp; Application (RFID-TA), pp. 1-6. IEEE, 2018.</div>
+<p>Bernardi, Linda; Sarma, Sanjay; and Traub, Ken. <em>The Inversion Factor: How to Survive in the IoT Economy</em>, MIT Press. Published October 2017.</p>
+<p>J. Siegel, S. Kumar, S. Sarma, “The Future Internet of Things: Secure, Efficient, and Model-Based.” IEEE IoT Journal. Forthcoming.</p>
+<p>J. Siegel, R. Bhattacharyya, S. Kumar, S. Sarma, “Air Filter Particulate Loading Detection using Smartphone Audio and Optimized Ensemble Classification.” Engineering Applications of Artificial Intelligence. Volume 66. November 2017. Featured on MIT’s Homepage, 10/26/17.</p>
+<p>J. Siegel, D. Erb, S. Sarma, “A Survey of the Connected Vehicle Landscape – Architecture, Enabling Technologies, Applications, and Development Areas.” IEEE Transactions on Intelligent Transportation Systems Journal. Forthcoming.</p>
+<p>BT. Kumaravel, R. Bhattacharyya, J. Siegel, S. Sarma, N. Arunachalam. “Development of an Internet of Things enabled Manufacturing system for tool wear characterization.” Proceedings of the 2017 IEEE International Symposium on Robotics and Manufacturing Automation. 2017.</p>
+<p>BT. Kumaravel, R. Bhattacharyya, J. Siegel, S. Sarma, N. Arunachalam. “Development of an Internet of Things enabled Manufacturing system for tool wear characterization.” Proceedings of the 2017 IEEE International Symposium on Robotics and Manufacturing Automation. 2017.</p>
+<p>J. Siegel, S. Kumar, “Cloud, Context, and Cognition: Paving the Way for Efficient and Secure IoT Implementations” to appear in “Integration of Cloud Computing, Cyber Physical Systems and Internet of Things”, forthcoming.</p>
+<p>S. N. R. Kantareddy, R. Bhattacharyya and S. Sarma, "Towards low-cost object tracking: Embedded RFID in golf balls using 3D printed masks," 2017 IEEE International Conference on RFID (RFID), Phoenix, AZ, 2017, pp. 137-143.</p>
+<p>S. N. R. Kantareddy, R. Bhattacharyya and S. E. Sarma, "Low-cost, automated inventory control of sharps in operating theaters using passive RFID tag-sensors," 2017 IEEE International Conference on RFID Technology &amp; Application (RFID-TA), Warsaw, Poland, 2017, pp. 16-21.</p>
+<p>S. N. R. Kantareddy, R. Bhattacharyya and S. E. Sarma, "UHF RFID tag IC power mode switching for wireless sensing of resistive and electrochemical transduction modalities," accepted for presentation at 2018 IEEE International Conference on RFID, Orlando, FL, 2018.</p>
+<p>Stets, Jonathan Dyssel, Yongbin Sun, Wiley Corning, and Scott W. Greenwald. "Visualization and labeling of point clouds in virtual reality." In <em>SIGGRAPH Asia 2017 Posters</em>, p. 31. ACM, 2017</p>
+<p> </p>
+<p>Yongbin Sun*, Wang, Yue*, Ziwei Liu, Sanjay E. Sarma, Michael M. Bronstein, and Justin M. Solomon. "Dynamic Graph CNN for Learning on Point Clouds." <em>arXiv preprint arXiv:1801.07829</em>(2018)</p>
+<p>J. Siegel, R. Bhattacharyya, S. Kumar, S. Sarma, "Air Filter Particulate Loading Detection using Smartphone Audio and Optimized Ensemble Classification," Submitted to ACM TIST Special Issue on Urban Sensing, November 2016.</p>
+<p>S. Dey, R. Bhattacharyya, N. Karmakar and S. Sarma, “Electromagnetic Characterization of Soil Moisture and Salinity for UHF RFID Applications in Precision Agriculture," in Proceedings of the 2016 IEEE sponsored EuMW Conference, London, UK, October 3-7, 2016.</p>
+<p>J. Siegel, R. Bhattacharyya, A. Desphande, and S. Sarma, “Smartphone-based vehicular tire pressure and condition monitoring," in Proceedings of the 2016 IEEE sponsored SAI Intellisys Conference, London, UK, September 21-22, 2016.</p>
+<p>E. Md. Amin, R. Bhattacharyya, S. Sarma and N. Karmakar, “Microfluidic paper based Passive RF Sensor for Soil Salinity Measurement," in Proceedings of the 2016 IEEE MTT-S sponsored Australian Microwave Symposium, Adelaide, Australia, February 11-12, 2016.</p>
+<p>P. Bhattacharjee, M. Solanki, R. Bhattacharyya, I. Ehrenberg, and S. Sarma. "VacSeen: A Linked Data-Based Information Architecture to Track Vaccines Using Barcode Scan Authentication.",</p>
+<p>SWAT4LS, volume 1546 of CEUR Workshop Proceedings, page 39-48. <a href="http://ceur-ws.org/">CEUR-WS.org</a>, (2015)</p>
+<p>J. Siegel, D. Erb, I. Ehrenberg, P. Jain, S. Sarma, “Local Viscosity Control Printing for High Through-</p>
+<p>put Additive Manufacturing of Polymers.” In press in “3D Printing and Additive Manufacturing,” December 2016. </p>
+<p>J. Siegel, S. Kumar, I. Ehrenberg, S. Sarma, “Engine Misfire Detection With Pervasive Mobile Audio,” ECML KDD 2016. In LNCS, 2016.</p>
+<p> </p>
+<p>J. Si Siegel, R. Bhattacharyya, A. Deshpande, S. Sarma. “Smartphone-Based Vehicular Tire Pressure and Condition Monitoring.” Proceedings of SAI Intelligent Systems 2016. </p>
+<p>Ehrenberg, Isaac, et al. "Fabrication of an X-Band conformal antenna array on an additively manufactured substrate." <em>Antennas and Propagation &amp; USNC/URSI National Radio Science Meeting, 2015 IEEE International Symposium on</em>. IEEE, 2015.</p>
+<p>Wilhelm, Erik, et al. "Cloudthink: a scalable secure platform for mirroring transportation systems in the cloud." <em>Transport</em> 30.3 (2015): 320-329.</p>
+<p>Erb, Dylan C., et al. "Size matters: Why cell size is vital for minimizing cost of air-cooling in battery packs." <em>Transportation Electrification Conference and Expo (ITEC), 2015 IEEE</em>. IEEE, 2015.</p>
+<p>Erb, Dylan C., et al. "Effects of cell geometry on thermal management in air-cooled battery packs." <em>Transportation Electrification Conference and Expo (ITEC), 2015 IEEE</em>. IEEE, 2015.</p>
+<p>Jain, Pranay, and Sanjay E. Sarma. "Light scattering and transmission measurement using digital imaging for online analysis of constituents in milk." <em>SPIE Optical Metrology</em>. International Society for Optics and Photonics, 2015.</p>
+<p>Civera, Javier, et al. "Guest Editorial: Special Issue on Cloud Robotics and Automation." <em>Automation Science and Engineering, IEEE Transactions on</em> 12.2 (2015): 396-397.</p>
+<p>Ehrenberg, Isaac, et al. "Incorporation of active RF circuit elements into additively manufactured substrates." <em>Antennas and Propagation &amp; USNC/URSI National Radio Science Meeting, 2015 IEEE International Symposium on</em>. IEEE, 2015.</p>
+<p>Wang, Junyu, Christian Floerkemeier, and Sanjay E. Sarma. "Session-based security enhancement of RFID systems for emerging open-loop applications." <em>Personal and Ubiquitous Computing</em> 18.8 (2014): 1881-1891.</p>
+<p>Ehrenberg, Isaac M., Sanjay E. Sarma, and Bae-Ian Wu. "Advancement of 3D printed conformal FSS and active array." <em>Radio Science Meeting (Joint with AP-S Symposium), 2014 USNC-URSI</em>. IEEE, 2014.</p>
+<p>Amin, Emran Md, et al. "Towards low-cost resolution optimized passive UHF RFID light sensing." <em>IEEE 15th Annual Wireless and Microwave Technology Conference (WAMICON 2014)(Jay Pengelly and Jing Wang 6 June 2014)</em>. Institute of Electrical and Electronics Engineers, 2014.</p>
+<p>Fisher, Dara R., Aikaterini Bagiati, and Sanjay Sarma. "Fostering 21st Century Skills in Engineering Undergraduates through Co-Curricular Involvement." <em>American Society for Engineering Education</em>. 2014.</p>
+<p>Kong, Hui, Sanjay E. Sarma, and Feng Tang. "Generalizing Laplacian of Gaussian filters for vanishing-point detection." Intelligent Transportation Systems, IEEE Transactions on 14, no. 1 (2013): 408-418.</p>
+<p>Kalansuriya, Prasanna, Rahul Bhattacharyya, and Sanjay Sarma. "RFID Tag Antenna-Based Sensing for Pervasive Surface Crack Detection." (2013): 1-1.</p>
+<p>De Weck, Olivier, Darci Reed, Sanjay Sarma, and Martin Schmidt. "9 Trends in Advanced Manufacturing Technology Innovation." Production in the Innovation Economy (2014): 235.</p>
+<p>Deshpande, Ajay, et al. "Optimal coverage of an infrastructure network using sensors with distance-decaying sensing quality." Automatica 49.11 (2013): 3351-3358.</p>
+<p>Pardal, Miguel L., Mark Harrison, Sanjay Sarma, and José Alves Marques. "Expressive RFID data access policies for the Pharmaceuticals supply chain." In RFID (RFID), 2013 IEEE International Conference on, pp. 199-206. IEEE, 2013.</p>
+<p>Kong, Hui, Hatice Cinar Akakin, and Sanjay E. Sarma. "A Generalized Laplacian of Gaussian Filter for Blob Detection and Its Applications." (2013): 1-15.</p>
+<p>Sive, Hazel, and Sanjay Sarma. "Education: Online on-ramps." Nature 499.7458 (2013): 277-278.</p>
+<p>Kalansuriya, Prasanna, and Rahul Bhattacharyya. "A novel communication method for semi-passive RFID based sensors." Communications (ICC), 2014 IEEE International Conference on. IEEE, 2014.</p>
+<p>Kumar, Sumeet, Johannes Paefgen, Erik Wilhelm, and Sanjay E. Sarma. "Department of Mechanical Engineering, Massachusetts Institute of Technology, Cambridge, 02139 USA." In SICE Annual Conference (SICE), 2013 Proceedings of, pp. 2302-2308. IEEE, 2013.</p>
+<p>Hasan, Aftab, Rahul Bhattacharyya, and Sanjay Sarma. "A Monopole-Coupled RFID Sensor For Pervasive Soil Moisture Monitoring." Antennas and Propagation Society International Symposium (APSURSI), 2013 IEEE. IEEE, 2013.</p>
+<p>Pardal, Miguel L., Mark Harrison, Sanjay Sarma, and José Alves Marques. "Access Control Policies for Traceability Information Systems." International Journal of Computer Information Systems and Industrial Management Applications. ISSN 2150-7988 Volume 6 (2014) pp. 560–570</p>
+<p>Wang, Junyu, Christian Floerkemeier, and Sanjay E. Sarma. "Session-based security enhancement of RFID systems for emerging open-loop applications." <em>Personal and Ubiquitous Computing</em> 18.8 (2014): 1881-1891.</p>
+<p>Ehrenberg, Isaac M., Sanjay E. Sarma, and Bae-Ian Wu. "Lightweight negative GRIN lens fabrication via rapid prototyping for radio applications." In Radio Science Meeting (Joint with AP-S Symposium), 2013 USNC-URSI, pp. 124-124. IEEE, 2013.</p>
+<p>Gogoana, Radu, Matthew B. Pinson, Martin Z. Bazant, and Sanjay E. Sarma. "Internal resistance matching for parallel-connected lithium-ion cells and impacts on battery pack cycle life." Journal of Power Sources 252 (2014): 8-13.</p>
+<p>Kong, Hui, Sanjay E. Sarma, and Feng Tang. "Generalizing Laplacian of Gaussian filters for vanishing-point detection." <em>Intelligent Transportation Systems, IEEE Transactions on</em> 14.1 (2013): 408-418.</p>
+<p>Deshpande, Ajay, et al. "Optimal coverage of an infrastructure network using sensors with distance-decaying sensing quality." <em>Automatica</em> 49.11 (2013): 3351-3358.</p>
+<p>Kumar, Sudhakar, Vivek K. Goyal, and Sanjay E. Sarma. "Efficient Parametric Signal Estimation From Samples With Location Errors." <em>Signal Processing, IEEE Transactions on</em> 61.21 (2013): 5285-5297.</p>
+<p>Contribution to: Berger, Suzanne. "Making in America." (2013).</p>
+<p>Ehrenberg, Isaac M., Sanjay E. Sarma, and Bae-Ian Wu. "A three-dimensional self-supporting low loss microwave lens with a negative refractive index." <em>Journal of Applied Physics</em> 112.7 (2012): 073114.</p>
+<p>Ehrenberg, Isaac M., Sanjay E. Sarma, and Bae-Ian Wu. "Fully conformal FSS via rapid 3D prototyping." <em>Antennas and Propagation Society International Symposium (APSURSI), 2012 IEEE</em>. IEEE, 2012.</p>
+<p>Fisher, D., Aikaterini Bagiati, and Sanjay Sarma. "Student ambassadors: developing an older student cohort." <em>Proc. 40th SEFI Conf., Thessaloniki, Grece</em>. 2012.</p>
+<p>Kumar, Sudhakar, Ajay Deshpande, and Sanjay E. Sarma. "Stable arrangements of mobile sensors for sampling physical fields." <em>American Control Conference (ACC), 2012</em>. IEEE, 2012.</p>
+<p>Sarma, Sanjay. "How Inexpensive RFID Is Revolutionizing the Supply Chain:(Innovations Case Narrative: The Electronic Product Code)." <em>innovations</em> 7.3 (2012): 35-52.</p>
+<p>Pardal, Miguel L., Michael Harrison, Sanjay Sarma and J. A. Marques. "Enforcing RFID data visibility restrictions using XACML security policies." <em>RFID-Technologies and Applications (RFID-TA), 2012 IEEE International Conference on</em>. IEEE, 2012.</p>
+<p>Ehrenberg, Isaac M., Sanjay E. Sarma, and Bae-Ian Wu. "3D metamaterial for ultra-compact artificial magnetic conductor." <em>Microwaves, Communications, Antennas and Electronics Systems (COMCAS), 2011 IEEE International Conference on</em>. IEEE, 2011.</p>
+<p>Guinard, Dominique, Christian Floerkemeier, and Sanjay Sarma. "Cloud computing, REST and mashups to simplify RFID application development and deployment." <em>Proceedings of the Second International Workshop on Web of Things</em>. ACM, 2011.</p>
+<p>Bhattacharyya, Rahul, et al. "RFID tag antenna based temperature sensing in the frequency domain." <em>RFID (RFID), 2011 IEEE International Conference on</em>. IEEE, 2011.</p>
+<p>Floerkemeier, Christian, Rahul Bhattacharyya, and Sanjay Sarma. "Beyond the ID in RFID." <em>The Internet of Things</em>. Springer New York, 2010. 219-227.</p>
+<p>Kanakia, Hemant, Srikanth Nadhamuni, and Sanjay Sarma. "A UID numbering scheme." <em>White Paper, May</em> (2010).</p>
+<p>Son, S. K., Kim, T., Sarma, S. E. and Slocum, A., “A Hybrid 5-Axis CNC Milling Machine,” Journal of the American Society for Precision Engineering, 2008.*</p>
+<p>Chatzigeogiou, D., et al. "In-pipe Acoustic Characterization of Leak Signals in Plastic Water-filled Pipes." <em>AWWA Annual Conference and Exposition, ACE</em>. 2010.</p>
+<p>Hacker, Patrick, et al. "RFID diagnostics of promotion execution." <em>RFID, 2010 IEEE International Conference on</em>. IEEE, 2010.</p>
+<p>Floerkemeier, Christian, and Sanjay Sarma. "Integrating RFID Readers in Enterprise IT1." <em>RFID Systems: Research Trends and Challenges</em> (2010): 271.</p>
+<p>Floerkemeier, Christian, and Sanjay Sarma. "RFIDSim—a physical and logical layer simulation engine for passive RFID." <em>Automation Science and Engineering, IEEE Transactions on</em> 6.1 (2009): 33-43.</p>
+<p>Krishnan, S. and Sarma, E. “A Process of Manufacturing Very Thin PDMS Films,” in the Proceedings of the North American Manufacturing Research Conference, 2009.*</p>
+<p>Bhattacharyya, Rahul, Christian Floerkemeier, and Sanjay Sarma. "Towards tag antenna based sensing-An RFID displacement sensor." <em>RFID, 2009 IEEE International Conference on</em>. IEEE, 2009.</p>
+<p>Bhattacharyya, Rahul, Christian Floerkemeier, and Sanjay Sarma. "Low-cost, ubiquitous RFID-tag-antenna-based sensing." <em>Proceedings of the IEEE</em> 98.9 (2010): 1593-1600.</p>
+<p>Bhattacharyya, Rahul, Christian Floerkemeier, and Sanjay Sarma. "RFID tag antenna based temperature sensing." <em>RFID, 2010 IEEE International Conference on</em>. IEEE, 2010.</p>
+<p>Bhattacharyya, Rahul, et al. "RFID tag antenna based temperature sensing using shape memory polymer actuation." <em>Sensors, 2010 IEEE</em>. IEEE, 2010.</p>
+<p>Sarma, Sanjay E., et al. "Guest Editorial Special Section on RFID." <em>IEEE T. Automation Science and Engineering</em> 6.1 (2009): 1-3.</p>
+<p>Deshpande, Ajay, Sanjay E. Sarma, and Vivek K. Goyal. "Generalized regular sampling of trigonometric polynomials and optimal sensor arrangement." <em>Signal Processing Letters, IEEE</em> 17.4 (2010): 379-382.</p>
+<p>Fleisch, Elgar, Sanjay Sarma, and Frédéric Thiesse. "Preface to the focus theme section:‘Internet of things’." <em>Electronic Markets</em> 19.2-3 (2009): 99-102.</p>
+<p>Ho, S. and Sarma, S. “The Fragmented Warehouse: Multiple Picking,” The 2nd International Symposium on Logistics and Industrial Informatics (LINDI), September 2009.</p>
+<p>Ho, Stephen and Sarma, S.E. “The Fragmented Warehouse: Location Assignment for Unit-load Picking,” IEEE 2008 International Conference on Industrial Engineering and Engineering Management, Singapore.</p>
+<p>Floerkemeier, C and Sarma, S. E. “An Overview of RFID System Interfaces and Reader Protocols,” IEEE RFID 2008, April 16-17, Las Vegas, 2008.</p>
+<p>Deshpande, A. and Sarma, S. E. "Error Tolerant Distributions for Sampling", American Control Conference (ACC 2008), Seattle, WA, June 11-13, 2008.</p>
+<p>Lee, E. and Sarma, S., “Reference Free Part Encapsulation: Materials, Machines and Methods,” Journal of Manufacturing Systems, 2008.*</p>
+<p>Floerkemeier, C. and Sarma, S. “RFIDSim – A Physical and Logical Layer Simulation Engine for Passive RFID,” IEEE Transactions in Automated Science and Engineering, 2008.</p>
+<p>Sarma, S., “Foreword: A Large Scale Effort,” Chapter in <em>Global RFID: The Value of the EPCglobal Network for Supply Chain Management</em>, Schuster, E., Brock, D., and Allen, S. Springer, January 2007.</p>
+<p>Ehrenberg, I., Floerkemeier, C., and Sarma, S. “Inventory Management with an RFID-equipped Mobile Robot” in <u>Proceedings of CASE 2007, IEEE International Conference on Automation Science and Engineering</u>. 1020-1026. September 22-25, 2007.</p>
+<p>Krishnan, S. and Sarma, S. “Improving Reliability in Peeling Thin PDMS Films,” Transactions of the North American Manufacturing Research Institution of SME, 443-452, 2007.*</p>
+<p>Deshpande, A., Kim, T., Demaine, E. and Sarma, S., "A Pseudopolynomial Time O (log n)-Approximation Algorithm for Art Gallery Problems", in <u>Proceedings of the 10th Workshop on Algorithms and Data Structures (WADS 2007)</u>, Lecture Notes in Computer Science, volume 4619, Halifax, Nova Scotia, Canada, pages 163-174, August 15-17, 2007.</p>
+<p>Ho, J., Engels, D. and Sarma, S. “HiQ: A Hierarchical Q-Learning Algorithm to Solve the Reader Collision Problem” <u>IEEE Applications and the Internet Workshops</u>, 2006. SAINT Workshops 2006.</p>
+<p>Kim, T. and Sarma, S., “Machinability: Geometric reasoning for cutting,” DIMACS: Series in Discrete Mathematics and Theoretical Computer Science, ISSN: 1052-1798 (Published by the American Mathematical Society), 2005.</p>
+<p>Sarma, S., “A History of the Auto-ID Center.” Chapter in <em>RFID: Applications, Security, and Privacy</em> (Eds. Garfinkel, S. and Rosenberg, B.) Addison-Wesley Professional, July 6, 2005. ISBN: 0321290968.</p>
+<p>Kim, T. K., Son, S-K and Sarma, S. E. “On actuator reversal motions of machine tools” Mechanism and Machine Theory <u>39</u> (3), 299-322, March 2004.</p>
+<p>Sarma, S, “Integrating RFID,” ACM Queue Magazine, <u>2</u>(7). 2004.</p>
+<p>Engels, D. W., Rivest, R. L., Sarma, S. E. and Weis, S. A., “Security and Privacy Aspects of Low-Cost Radio Frequency Identification Systems,” <u>First International Conference on Security in Pervasive Computing (SPC 2003)</u>, March 12-14, 2003.</p>
+<p>Waldrop, J., Engels, D. W. and Sarma, S. E., “Colorwave: A MAC for RFID Reader Networks,” <u>Proceedings of the IEEE Wireless Communications and Networking Conference (WCNC)</u>, 2003.</p>
+<p>Waldrop, J., Engels, D. W. and Sarma, S. E., “Colorwave: An Anticollision Algorithm for the Reader Collision Problem,” <u>Proceedings of the IEEE International Conference on Communications (ICC03)</u>, 2003.</p>
+<p>Subirana, Brian, Eckes, Chad C., Herman, George, Sarma, Sanjay and Barrett, Michael Ian, "Measuring the Impact of Information Technology on Value and Productivity using a Process-Based Approach: The case for RFID Technologies" (December 2003). MIT Sloan Working Paper No. 4450-03.</p>
+<p>Adachi, Y., Ikemoto, A., Kumano, T., Krishnan, S. and Sarma, S.,  "Operation of a Non-convex Shape Object in a Haptic Virtual Environment", Journal of the Robotics Society of Japan, <u>21</u> (4), pp.409-419, 2003.</p>
+<p>McFarlane, D., Sarma, S. E., Chirn, J. L., Wong, C. Y. and Ashton, K., “Auto-ID Systems and Intelligent Manufacturing Controls,” Engineering Applications of Artificial Intelligence, <u>16</u> (4): 365-376, June 2003.</p>
+<p>Kim, T. and Sarma, S.E., “Optimal Sweeping Paths on a 2- Manifold.” IEEE Transactions on Robotics and Automation. v19 i4. 613-636. 2003.</p>
+<p>Sarma, S. and Engels, D. “On the Future of RFID Tags and Protocols,” Auto-ID Center White Paper MIT-AUTOID-WH018, 2003.</p>
+<p>Balasubramaniam, M., Sarma, S. E. and Marciniak, K., “Collision-Free Finishing Tool Paths from Visibility Data,” Computer-Aided Design <u>35,</u> 359-374, 2003.</p>
+<p>Adachi, Y., Ikemoto, A., Kumano, T., Sriram, K. and Sarma, S., “Development of an Advanced Digital Mockup System with Haptic Interface,” <u>Proceedings of the Virtual Reality Society of Japan Annual Conference</u>, 2002.\</p>
+<p>Balasubramaniam, M., Kim, T. and Sarma, S. E., “Some Theory and Algorithms Pertaining to Machinability and Visibility,” <u>Proceedings of IMECE 2002 ASME International Mechanical Engineering Congress and Exposition</u>, New Orleans, LA, November 17-22, 2002.</p>
+<p>Kim, T. and Sarma, S. E., “Toolpath generation along directions of maximum kinematic performance; a first cut at machine-optimal paths,” Computer Aided Design <u>34</u> (6), 453-468, May 2002.*</p>
+<p>Engels, D. W., Sarma, S. E., Putta, L. and Brock, D., “The Networked Physical World System,” <u>Proceedings of IADIS International Conference</u>, Lisbon, Portugal, November 2002.</p>
+<p>Engels, D. W. and Sarma, S. E., “The Reader Collision Problem,” <u>Proceedings of IEEE International Conference on Systems, Man and Cybernetics</u>, Hammamet, Tunisia, October 2002.</p>
+<p>Sarma, S. E., Weis, S. A. and Engels, D. W., “Low Cost RFID and the Electronic Product Code,” <u>Workshop on Cryptographic Hardware and Embedded Systems</u> (CHES 2002), San Francisco, CA, August 12-15, 2002.</p>
+<p>Mittal, R., Seshadri, V., Sarma, S. and Udyakumar, H. S., “Computational Modeling of Fluidic Micro-Handling Processes,” <u>The Fifth International Conference on Modeling and Simulation of Microsystems</u>, San Juan, Puerto Rico, 388-391, April 22-25, 2002.</p>
+<p>Lee, E., Valdivia, P., Fan, W. and Sarma, S. E., “The Process Window for Reference Free Part Encapsulation,” Transactions of the ASME Journal of Manufacturing Science and Engineering <u>124</u> (2), 358-368, May 2002.</p>
+<p>Sarma, S.E., Weis, Stephen, S.S., Engels, D. W. “RFID Systems and Security and Privacy Implication.”  <u>Lecture Notes in Computer Science</u>. Springer-Verlag: London, UK, 2002. 454 - 469.</p>
+<p>Adachi, Y., Ho, S., Sarma, S., Ikemoto, A. and Kumano, T., “Development of Haptic CAM System for 5-Axis Machining,” Journal of the Japan Society for Precision Engineering <u>68</u> (4), 591-596, 2002.</p>
+<p>Balasubramaniam, M., Ho, S., Sarma, S. E. and Adachi, Y., “Generation of collision-free 5-axis tool paths using a haptic surface,” Computer-Aided Design <u>34</u> (4), 267-279, 2002.*</p>
+<p>McFarlane, D., Sarma, S. E., Chirn, J. L., Wong, C. Y. and Ashton, K., “The Intelligent Product in Manufacturing Control and Management,” presented at the <u>IFAC World Congress 2002</u>, Barcelona, Spain, July 21-26, 2002.</p>
+<p>Engels, D., Foley, J., Waldrop, J., Sarma, S. and Brock, D., “The Networked Physical World: An Automated Identification Architecture” <u>Proceedings of the IEEE/ACM International Conference on Computer Aided Design </u>(ICCAD01), 76-77, 2001.</p>
+<p>Ho, S., Sarma, S. E. and Adachi, Y., “Real-time interference analysis between a tool and an environment,” Computer-Aided Design, 33 (13), 935-947. 2001.*</p>
+<p>Balasubramaniam, M., Joshi, Y., Engels, E., Sarma, S. and Shaikh, Z., “Tool selection in three-axis rough machining,” International Journal of Production Research <u>39</u> (18), 4215-4238, 2001.</p>
+<p>Sarma, S., “Towards the 5 cents tag,” Auto-ID Center White Paper MIT-AUTOID-WH-006, 2001.</p>
+<p>Balasubramaniam, M., Sarma, S., Joshi, Y. and Shaikh, Z., “An approach for tool sequence selection for three-axis rough machining,” Transactions of the North American Manufacturing Research Institution of SME, 359-366, May 2001.*</p>
+<p>Lee, E., Sarma, S., Valdivia, P. and Fan, W., “Simulations and Experiments in Encapsulation Fixturing,” Transactions of the North American Manufacturing Research Institution of SME, 607-614, May 2001.*</p>
+<p>Kim, T. and Sarma, S., “Velocity Performance of 5-Axis Machine Tools with Respect to a Surface,” Transactions of the North American Manufacturing Research Institution of SME, 443-452, May 2001.*</p>
+<p>Choi, D. S., Lee, S. H., Shin, B. S., Whang, K. H., Yoon, K. K. and Sarma, S. E., “A New Rapid Prototyping System Using Universal Automated Fixturing with Feature-Based CAD/CAM,” Journal of Materials Processing Technology <u>113</u> (1-3), 285-290, June 2001.</p>
+<p>Sarma, S., Brock, D. and Engels, D., “Radio Frequency Identification and the Electronic Product Code,” IEEE Micro <u>21</u> (6), 50-54, Nov/Dec 2001.</p>
+<p>Adachi, Y., Kumano, T., Ikemoto, A., Sarma, S. and Ho, S., “Development of Haptic CAM,” <u>Proceedings of the Spring Meeting of the Japan Society for Precision Engineering</u>, 137, 2000.</p>
+<p>Kim, T. and Sarma, S., “Time-optimal paths covering a surface,” <u>Proceedings of the 9th IMA Conference on the Mathematics of Surfaces</u>, University of Cambridge, UK, 126-143, September 2000.</p>
+<p>Sarma, S., “The Crossing Function and its Application to Zig-Zag Tool Paths,” Computer-Aided Design <u>31</u> (14), 881-890, 2000.</p>
+<p>Balasubramaniam, M., Putta, L., Shaikh, Z. and Sarma, S. E., “Generating 5-Axis NC Roughing Paths Directly from a Tessellated Representation,” Computer-Aided Design <u>32</u> (4), 261-277, 2000.</p>
+<p>Sarma, S., Brock, D. and Ashton, K., “The Networked Physical World - Proposals for engineering the next generation of computing, commerce, and automatic-identification,” Auto-ID Center White Paper MIT-AUTOID-WH001, 1999.</p>
+<p>Engels, D. W. and Sarma, S. E., “Toward an Open-Architecture Specification Language for Machine Control,” <u>Proceedings of Sensors and Controls for Intelligent Machining and Manufacturing Mechatronics</u> (SPIE), Boston, MA, <u>3832</u>, 17-25, September 1999.</p>
+<p>Balasubramaniam, M. and Sarma, S. E., “3-Axis Tool Selection,” <u>Proceedings of the First International Conference on CAD/CAM</u>, Bangalore, India, January 1999.</p>
+<p>Putta, L. and Sarma, S. E., “A Feature Free Approach to 5-Axis Path Generation,” <u>Proceedings of the ASME Design Engineering Technology Conference</u>, Sacramento, CA, DFM-4325, September 1997.</p>
+<p>Adachi, Y., Ikemoto, A., Kumano, T., Sarma, S. and Sriram, K., “Operation of the Object of Complicated Form in Virtual Environment,” <u>Proceedings of the 19<sup>th</sup> Annual Conference of the Robot Society of Japan</u>, 185-186, 2001.</p>
+<p>Sarma, S. E. and Wright, P. K., “Using Mechanical Hardware to Simplify Process Planning,” Computer Integrated Manufacturing Systems <u>11</u> (3), 147-155, July 1998.</p>
+<p>Putta, L. and Sarma, S. E., “A Direct CAD/CAM Technology for 3-Axis Machining,” <u>International Symposium on Automotive Technology and Automation</u>, Florence, Italy, <u>1</u>, 293-303, June 1997.*</p>
+<p>Balasubramaniam, M., Putta, L., Shaikh, Z. and Sarma, S. E., “A Feature Free Approach to Tool Selection and Path Planning in 3-Axis Rough Cutting,” <u>First International Conference of Responsive Manufacturing</u>, Nottingham, England, 47-60, September 1997.</p>
+<p>Sarma, S. E., Stori, J. A., MacFarlane, J. and Wright, P. K., “A Machining Marketplace: Planning with Multiple Networked Machine Tools,” Concurrent Design and Manufacturing, <u>Proceedings of the ASME Winter Annual Meeting</u>, San Francisco, CA, 189-199, November 1995.</p>
+<p>Lee, E. and Sarma. S., “The Machine Designs Behind Reference Free Part Encapsulation,” <u>ASME DETC 2001/DFM-21188</u>, Pittsburgh, PA, September 2001.</p>
+<p>Sarma, S. E. and Wright, P. K., “Decision Monotonicity in Incremental Design: A Case Study of Design for Manufacture,” Research In Engineering Design <u>9</u>, 235-245, 1997.</p>
+<p>Sarma, S. E. and Wright, P. K., “Reference Free Part Encapsulation: A New Universal Fixturing Concept,” Journal of Manufacturing Systems <u>16</u> (1), 35-47, 1997.</p>
+<p>Sarma, S. E., Schofield, S. M., Stori, J. A., MacFarlane, J. and Wright, P. K., “Rapid Product Realization from Detail Design,” Computer-Aided Design <u>28</u>, 383-392, 1996.</p>
+<p>Sarma, S. E. and Wright, P. K., “Algorithms for the Minimization of Setups and Tool Changes in Simply Fixturable Components in Milling,” Journal of Manufacturing Systems <u>15</u> (2), 95-112, 1996.</p>
+<p>Sarma, S. E., Gandhi, S. and Wright, P. K., “Reference Free Part Encapsulation: A New Universal Fixturing Technology,” Design for Manufacturability Symposium, <u>Proceedings of the ASME Winter Annual Meeting</u>, San Francisco, CA, 339-351, November 1995.</p>
+<p>Sarma, S. E., MacFarlane, J. and Wright, P. K., “Reducing Global Interactions: A New Paradigm for Simplifying Concurrent Process Planning,” <u>Proceedings of the ASME Winter Annual Meeting</u>, San Francisco, CA, <u>64</u>, 281-290, August 1993.</p>
+<p> </p>
+<p> </p>
+<p> </p>
+<p> </p>
+</div></div><div class='column small-12 profile-block'>
+              <div id='patents' class='profile-block-content'><h2>Patents</h2><p>Sarma, Sanjay E., Putta Laxmiprasad, and Mahadevan Balasubramaniam. "Tool path generator for computer aided manufacturing." U.S. Patent No. 6,311,100. 30 Oct. 2001.</p>
+<p>Ho, Stephen S., and Sanjay Sarma. "Haptic interface system for collision detection and applications therefore." U.S. Patent No. 7,084,867. 1 Aug. 2006.</p>
+<p>Sriram, Krishnan, and Sanjay E. Sarma. "Methods and apparatus for detecting and correcting penetration between objects." U.S. Patent No. 7,084,869. 1 Aug. 2006.</p>
+<p>Sarma, Sanjay, et al. "Method and apparatus for routing data in an automatic identification system." U.S. Patent No. 7,621,447. 24 Nov. 2009.</p>
+<p>Sarma, Sanjay, et al. "Object name system." U.S. Patent No. 7,765,253. 27 Jul. 2010.</p>
+<p>Sarma, Sanjay, and Brian Subirama. "Method and system for performing mobile RFID asset detection and tracking." U.S. Patent No. 8,477,013. 2 Jul. 2013.</p>
+<p>Foley, Joseph T., Sanjay Sarma, and Stephen A. Weis. "Enhanced security protocol for radio frequency systems." U.S. Patent 8,384,546, issued February 26, 2013.</p>
+<p>Traub, Kenneth R., and Emani Sanjay Sarma. "System and method for a central index for RFID data with data privilege indicia." U.S. Patent No. 8,527,539. 3 Sep. 2013.</p>
+<p>Sarma, Sanjay E., Stephen Sai-wung Ho, and Joshua E. Siegel. "System and method for providing road condition and congestion monitoring using smart messages." U.S. Patent 8,566,010, issued October 22, 2013.</p>
+<p>Traub, Kenneth R., and Emani Sanjay Sarma. "System and method for a central index for RFID data with data privilege indicia." U.S. Patent 8,527,539, issued September 3, 2013.</p>
+<p>Phan, Long N., Jonathan Lee Jesneck, and Sanjay Sarma. "3D radiometry." U.S. Patent No. 8,818,079. 26 Aug. 2014.</p>
+<p>Sarma, Sanjay E., et al. "Leak detection system." U.S. Patent No. 8,820,143. 2 Sep. 2014.</p>
+<p>Jesneck, Jonathan Lee, Long N. Phan, and Sanjay Sarma. "Kinetic super-resolution imaging." U.S. Patent No. 8,750,647. 10 Jun. 2014.</p>
+<p><span style="caret-color: rgb(34, 34, 34); color: rgb(34, 34, 34); font-family: Arial, sans-serif; font-size: 13px;">Phan, Long N., Sanjay Emani Sarma, Cody Miles Wojcik, Eli M. Davis, Benjamin Arthur Sena, and Julian Lemus. "Micro hybrid generator system drone." U.S. Patent 9,764,837, issued September 19, 2017.</span></p>
+<p><span style="caret-color: rgb(34, 34, 34); color: rgb(34, 34, 34); font-family: Arial, sans-serif; font-size: 13px;">Phan, Long N., Jonathan Lee Jesneck, and Sanjay Sarma. "Hyper-resolution imaging." U.S. Patent 9,251,565, issued February 2, 2016.</span></p>
+<p>Ehrenberg, Isaac M., Bae-Ian Wu, and Sanjay Emani Sarma. "Stencil masks for making conformable electromagnetic device structures." U.S. Patent 10,344,377, issued July 9, 2019.</p>
+</div></div></div></section>  </div>
+</div>
+  </div>
+        <div class="region region-footer">
+    <div id="block-block-2" class="block block-block">
+
+    
+  <div class="content">
+    <footer><div class="footer-inner mesh-bg light">
+        <div class="clearfix row full-width">
+            <div class="helpful-links clearfix large-6 medium-12 columns">
+                <ul class="link-group"><li class="top-link"><a href="#"><span class="heavy">at MechE</span></a></li>
+                    <li><a href="/sites/default/files/ME-Diversity-Statement.pdf">Diversity Statement</a></li>    
+                    <li><a href="/faculty-positions">Faculty Positions</a></li> 
+                    <li><a href="/contact">Contact</a></li>
+                    <li><a href="/how-apply">Apply</a></li>
+                    <li><a href="/sitemap.xml">Sitemap</a></li>
+                    <li><a href="/privacy">Privacy</a></li>
+                    <li><a href="https://accessibility.mit.edu/">Accessibility</a></li>
+                    <li><a href="/credits">Credits</a></li>
+                    <li><a class="toggle-contrast" href="#">Toggle High Contrast</a></li>
+                </ul><ul class="link-group"><li class="top-link"><a href="#"><span class="heavy">Student</span> <span class="light">Resources</span></a></li>
+                    <li><a href="https://meche-ad-portal.mit.edu/">MechE Academic Dashboard</a></li>
+                    <li><a href="https://meundergrad.mit.edu/">MechE Undergrad Portal</a></li>
+                    <li><a href="https://meche-res.mit.edu/resources/2A/">Online 2A Contract</a></li>
+                    <li><a href="https://meundergrad.mit.edu/sb-thesis-information">SB Thesis Information</a></li>
+                    <li><a href="https://meche-res.mit.edu/resources/grad/">Online Grad Card</a></li>
+                    <li><a href="http://odge.mit.edu/gpp/oversight/petitions/">ODGE Petition</a></li>
+                        <li><a href="/sites/default/files/ON-LINE_THESIS_SUBMISSION.pdf">On-Line Thesis Submission</a></li>
+                    <li><a href="/sites/default/files/Zoom%20Instructions%20for%20PhD%20Thesis%20Defenses.pdf">Zoom Instructions for Virtual Defenses</a></li>
+                    <li><a href="/sites/default/files/MechE_Grad_Guide.pdf">Guide to Graduate Study</a></li>
+                    <li><a href="http://handbook.mit.edu/">MIT's Mind &amp; Hand Book</a></li>
+                </ul><ul class="link-group"><li class="top-link"><a href="#"><span class="heavy">Staff</span> <span class="light">Resources</span></a></li>
+                    <li><a href="https://meche-reservations.mit.edu/Web/">Room Reservations</a></li>
+                   <li><a href="https://meche-res.mit.edu/resource_links/">MechE Resources</a></li>
+                   <li><a href="https://meche.mit.edu/Shibboleth.sso/Login?target=https://meche.mit.edu/handy-links">Edit My Profile <i class="fa fa-lock"></i></a></li>
+                </ul></div>
+            
+            <div class="social-links large-3 medium-12 columns">
+                <hr class="meche-dots thin pad-both" /><p>Follow our research.<br />Or, just follow us.</p>
+                <ul class="social-btns"><li><a href="http://facebook.com/mitmeche" target="_blank" class="social-btn"><i class="fa fa-facebook"></i><span>Facebook</span></a></li>
+                    <li><a href="http://twitter.com/mitmeche" target="_blank" class="social-btn"><i class="fa fa-twitter"></i><span>Twitter</span></a></li>
+                    <li><a href="http://www.youtube.com/mitmeche" target="_blank" class="social-btn"><i class="fa fa-youtube"></i><span>YouTube</span></a></li>
+                    <li><a href="http://instagram.com/mitmeche" target="_blank" class="social-btn"><i class="fa fa-instagram"></i><span>Instagram</span></a></li>
+                    <li><a href="https://www.linkedin.com/company/11244119/" target="_blank" class="social-btn"><i class="fa fa-linkedin"></i><span>Linkedin</span></a></li>
+                </ul><hr class="meche-dots thin pad-both" /><link href="//cdn-images.mailchimp.com/embedcode/slim-10_7.css" rel="stylesheet" type="text/css" /><style type="text/css">
+<!--/*--><![CDATA[/* ><!--*/
+
+                #mc_embed_signup{clear:left; font-family:"Rajdhani",Helvetica,sans-serif; margin-top: 20px; margin-left: 0px; padding-let: 0px;}
+                /* Add your own Mailchimp form style overrides in your site stylesheet or in this style block.
+                   We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+
+/*--><!]]>*/
+</style><div id="mc_embed_signup">
+<form action="https://mit.us17.list-manage.com/subscribe/post?u=6f5c7fd40df3024d6e08b1cbd&amp;id=917562481d" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate="">
+    <div id="mc_embed_signup_scroll">
+                <p><label for="mce-EMAIL" style="color: #02b2f4; font-weight: normal;">Sign up for our monthly newsletter</label></p>
+                <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required="" style="width: 70%;" /><!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups--><div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_6f5c7fd40df3024d6e08b1cbd_917562481d" tabindex="-1" value="" /></div>
+    <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button" /></div>
+    </div>
+</form>
+</div>
+ 
+<!--End mc_embed_signup-->
+
+
+
+            </div>
+
+            <div class="find-us medium-12 columns clearfix">
+                
+                <hr class="meche-dots thin pad-both" /><div class="address-group">
+                    <h3><span class="heavy">MechE</span> <span class="light">Analog</span></h3>
+                    <p>Massachusetts Institute of Technology</p>
+                    <p class="heavy">Department of Mechanical Engineering</p><br /><p>77 Massachusetts Avenue, Room 3-173</p>
+                    <p>Cambridge, Massachusetts 02139</p>
+                </div>
+                <div class="clearfix find-us-logos">
+                    <a class="pull-left logo-meche" href="http://meche.mit.edu"><img src="/sites/all/themes/mit_meche/img/logo-meche-footer@2x.png" alt="MIT Mechanical Engineering" /></a>
+                    <a class="pull-left logo-mit" href="http://www.mit.edu"><img src="/sites/all/themes/mit_meche/img/logo-mit-footer@2x.png" alt="MIT" /></a>
+                </div>
+            </div>
+            
+        </div>
+        
+    </div>
+</footer>  </div>
+</div>
+  </div>
+      
+    </div> <!-- close off-canvas inner-wrap -->
+  </div> <!-- close off-canvas wrap -->
+
+
+          <!-- JS Files -->
+
+        <!-- Loaded from CDN -->
+        
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+        <script>window.jQuery || document.write('<script src="/js/vendor/jquery.js"><\/script>')</script>
+        <!--
+            Load Concatenated and Minified Scripts ( plugins.js, foundation.js, scripts.js )
+        -->
+        <!-- jQuery Modal -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+
+        <script src="/sites/all/themes/mit_meche/js/scripts.all.min.js"></script>
+        <script type="text/javascript" src="/sites/all/themes/mit_meche/js/vendor/packery.pkgd.min.js"></script>
+        
+  <script>
+
+      $(document).ready(function(){
+
+          MecheController.init({});
+          
+          $(window).on("throttledresize", function( event ) {
+          
+              MecheController.resize();
+
+          }).trigger("throttledresize");
+      });
+
+  </script>
+
+
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"ab0374a39e","applicationID":"39297557","transactionName":"Z1QGZBZQVkNYU0YNWV4eJVMQWFdeFl1XB15VbgZcC1JTQ2ZAQAtQWV0BbxRQX1U=","queueTime":0,"applicationTime":199,"atts":"SxMFEl5KRU0=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

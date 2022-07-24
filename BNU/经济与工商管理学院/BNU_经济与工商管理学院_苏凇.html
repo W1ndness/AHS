@@ -1,0 +1,495 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0">
+    <title>北京师范大学工商与经济管理学院</title>
+    <link rel="stylesheet" href="http://bs.bnu.edu.cn/new-ver-css/reset.css">
+    <link rel="stylesheet" href="http://bs.bnu.edu.cn/new-ver-css/index.css">
+	<link rel="stylesheet" href="http://bs.bnu.edu.cn/new-ver-css/xyslist.css">
+	<link rel="stylesheet" href="http://bs.bnu.edu.cn/new-ver-css/xys-tf.css">
+    <style>
+        .container{
+            width:100%;
+            height: auto;
+            overflow: hidden;
+        }
+        .header{
+            width:100%;
+            height:116px;
+            background:#EFF8FF;
+        }
+        .logo1{
+            width:1200px!important;
+            margin:0 auto;
+            position:relative;
+            float: none;
+			display:block;
+        }
+        .logo2{
+            float:right;
+        }
+        .logo1 p{
+            position:absolute;
+            top:5px;
+            right:5px;
+            font-size:13px;
+        }
+        .logo1 p:hover{
+            color:#112769;
+        }
+        .tu{
+            width:100%;
+            height:240px;
+            background:url('http://bs.bnu.edu.cn/newweb/grzy/images/tu.jpg') no-repeat top center;
+            background-size: 100%;
+        }
+        .lujing{
+            width:1200px;
+            height:58px;
+            margin:0 auto;
+            border-bottom:1px solid #aaa;
+            overflow:hidden;
+        }
+        .lujings{
+            margin:24px 0 0 0;
+            font-size:14px;
+        }
+        .content{
+            color:#333;
+            width:1200px;
+/*            height:2000px;*/
+            margin:0 auto;
+            margin-top:40px;
+/*            background:#c4c4c4;*/
+        }
+        
+        .xian{
+            width:100%;
+            height:8px;
+            background:#9A0812;
+        }
+        
+        .leftc{
+            float:left;
+        }
+        .rightc{
+            float:left;
+            margin-left:50px;
+/*            background:#666;*/
+            width:880px;
+/*            height:1000px;*/
+        }
+        .rheader{
+            width:880px;
+            height:210px;
+/*            background:yellow;*/
+        }
+        .xm{
+            font-size:30px;
+            height:40px;
+/*            border-bottom:4px solid #9A0812;*/
+            width:auto;
+            float:left;
+            line-height:40px;
+			margin-right:30px;
+        }
+        .zhiw{
+            font-size:18px;
+            height:40px;
+            line-height:50px;
+            margin-bottom:30px;
+        }
+        .tel{
+                font-size: 16px;
+                margin-top: 10px;
+                line-height: 20px;
+        }
+        .grjj{
+/*            height:300px;*/
+            width:880px;
+/*            background:yellow;*/
+            padding-bottom:40px;
+        }
+        .jjh{
+                font-size: 20px;
+                border-bottom: 1px solid #cecece;
+                height: 40px;
+                line-height: 40px;
+                padding-left: 30px;
+                background: url(http://bs.bnu.edu.cn/newweb/grzy/images/zw.png) no-repeat 0 16px;
+        }
+        
+        .jjc{
+            font-size:14px;
+            margin-top:30px;
+           
+            line-height:28px;
+            overflow:hidden;
+            text-align: justify;
+            text-justify:inter-ideograph;
+        }
+        .jjc1{
+            height:225px;
+            font-size:14px;
+            margin-top:30px;
+            
+            line-height:28px;
+            overflow:hidden;
+            text-align: justify;
+            text-justify:inter-ideograph;
+        }
+        
+        .dianji1{
+                background: url(http://bs.bnu.edu.cn/newweb/grzy/images/zw.png) no-repeat 0 -50px;
+                width: 13px;
+                height: 13px;
+                cursor: pointer;
+                display: block;
+            margin-top: 20px;
+            transition: all .2s linear;
+        }
+        .dianji1:hover{
+            background: url(http://bs.bnu.edu.cn/newweb/grzy/images/zw.png) no-repeat 0 -64px;
+        }
+        
+        .dianji{
+                background: url(http://bs.bnu.edu.cn/newweb/grzy/images/zw.png) no-repeat 0 -24px;
+                height: 13px;
+                cursor: pointer;
+                display: block;
+            margin-top: 20px;
+            transition: all .2s linear;
+        }
+        .dianji:hover{
+            background: url(http://bs.bnu.edu.cn/newweb/grzy/images/zw.png) no-repeat 0 -37px;
+        }
+        #jjc1{
+            text-indent:0em;
+        }
+        
+        .bks{
+            font-size:14px;
+            font-weight: 800;
+            margin-top:30px;
+            height:auto;
+            line-height:36px;
+        }
+        .bks1{
+            font-size:14px;
+            margin-top:30px;
+            height:auto;
+            line-height:36px;
+        }
+        .bksc{
+            height:36px;
+            line-height:36px;
+            font-size:14px;
+        }
+        
+        .yanzheng{
+            width:1200px;
+            height:100px;
+            margin:0 auto;
+        }
+        .yanzheng img{
+            display:block;
+            margin-top:26px;
+            float:left;
+        }
+		
+#appgame-leftside-share{width:42px; height:216px; position: fixed;bottom: 30px;right: 30px; z-index:9999;}
+.appgame-leftside-share{width:42px; height:259px;}
+#appgame-leftside-share a{display:block; width:42px; height:44px; background-color:#e6e6e6; z-index:1; position:absolute; left:0; box-sizing:border-box; -moz-box-sizing:border-box; border:1px #ddd solid; background-image:url(http://gh.bnu.edu.cn/images/share-icons.png); background-repeat:no-repeat; margin:0;  transition:0.4s; -webkit-transition:0.4s; -moz-transition:0.4s;}
+#appgame-leftside-share a:hover{background-color:#fff; border:1px #eee solid; z-index:2;}
+/*.appgame-leftside-weixin{top:0; background-position:-88px 0;}
+.appgame-leftside-weixin:hover{background-position:0px 0;}
+.appgame-leftside-qzone{top:43px; background-position:-88px -44px;}
+.appgame-leftside-qzone:hover{background-position:0px -44px;}*/
+.appgame-leftside-search{top:86px; background-position:-93px -89px;}
+.appgame-leftside-search:hover{background-position:-5px -86px;}
+.appgame-leftside-weixin{top:129px; background-position:-88px 0px;}
+.appgame-leftside-weixin:hover{background-position:0px 0px;}
+/*.appgame-leftside-fbook{top:172px; background-position:-88px -176px;}
+.appgame-leftside-fbook:hover{background-position:0px -176px;}
+.appgame-leftside-twi{top:215px; background-position:-88px -220px;}
+.appgame-leftside-twi:hover{background-position:0px -220px;}*/
+#appgame-leftside-share .appgame-leftside-top{background-image:url(http://gh.bnu.edu.cn/images/leftnav-off.png); background-position:-1px -395px; top:130px; cursor:pointer;}
+
+.rwt_share {
+/*	overflow:hidden;*/
+	float:left;
+	position:relative;
+}
+.rwt_share a {
+	display:inline-block;
+	margin-right:10px;
+	text-indent:-9999px;
+	margin-bottom:10px;
+	width:24px;
+	height:24px;
+	overflow:hidden;
+	cursor:pointer;
+	float:left;
+	font-size:12px;
+}
+.rwts_weixin {
+	background-position:0 -1612px;
+}
+.rwts_tsina {
+	background-position:0 -104px;
+}
+.rwts_tqq {
+	background-position:0 -260px;
+}
+.rwts_qzone {
+	background-position:0 -52px;
+}
+.rwts_sqq {
+	background-position:0 -2652px;
+}
+.rwts_tieba {
+	background-position:0 -728px;
+}
+.rwts_renren {
+	background-position:0 -208px;
+}
+.rwts_kaixin001 {
+	background-position:0 -312px;
+}
+.rwts_tqf {
+	background-position:0 -364px;
+}
+.rwts_douban {
+	background-position:0 -468px;
+}
+.rwts_twi {
+	background-position:0 -1404px;
+}
+.rwts_fbook {
+	background-position:0 -1352px;
+}
+.rwts_ty {
+	background-position:0 -1196px;
+}
+.rwts_mogujie {
+	background-position:0 -1768px;
+}
+.rwts_meilishuo {
+	background-position:0 -1716px;
+}
+.rwts_huaban {
+	background-position:0 -1872px;
+}
+.rwts_hi {
+	background-position:0 -416px;
+}
+.rwts_tsohu {
+	background-position:0 -520px;
+}
+.rwts_more {
+	background-position:0 0;
+}
+.rwt_share_wxShow_code>img {
+	width:100%;
+}
+.bks1 li{
+	list-style:disc;
+}
+@media screen and (max-width: 1200px){
+	.logo1{
+		width:100%!important;
+	}
+	.leftc img{
+		width:50%!important;
+		height:50%!important;
+	}
+	.logo2{display:none;}
+	.lujing{
+		width:90%;
+	}
+	.content{
+		width:90%;
+	}
+	.leftc{
+		float:none;
+		
+	}
+	.tu{display:none;}
+	
+	.rightc{
+		float:none;
+		width:100%;
+		margin-left:0px;
+	}
+	.footers{width:100%;}
+	.rheader{width:100%;}
+	.grjj{width:100%;}
+}
+@media screen and (max-width: 600px){
+.l3{width:95%;}
+.share{display:none;}
+.leftc img{
+		width:70%!important;
+		height:70%!important;
+	}
+}
+  
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo1">
+                <img src="http://bs.bnu.edu.cn/newweb/grzy/images/logo.png" alt="" class="l3" style="margin-top: 25px;float:left;">
+                <img src="http://bs.bnu.edu.cn/newweb/grzy/images/logo2.png" alt="" class="logo2">
+                <a href="http://bs.bnu.edu.cn/englishversion/facultyresearch/fulltimefaculty/azmsy/119512.html"><p>ENGLISH VERSION</p></a>
+            </div>
+        </div>
+        <div class="xian"></div>
+        <div class="tu"></div>
+        <div class="lujing">
+            <div class="lujings">
+                <a href="#">师资队伍</a>
+                 | 
+                <a href="#">企业管理系</a>
+            </div>
+        </div>
+        <div class="content">
+            <div class="leftc">
+                <img src="/Public/upload/2020/12/02/5fc749dccde04.jpg" alt="" width="270">
+            </div>
+            <div class="rightc">
+                <div class="rheader">
+                    <p class="xm">苏凇</p>
+                    <p class="zhiw">教授、博士生导师</p>
+                    <p class="tel"><strong style="display:block;width:100px;float:left;">电话</strong>：010-58804113</p> 
+                 <p class="tel"><strong style="display:block;width:100px;float:left;">E-mail</strong>：sus@bnu.edu.cn</p>
+                 <p class="tel"><strong style="display:block;width:100px;float:left;">Office hour</strong>：周三14：00~16：00</p>
+                 <p class="tel"><strong style="display:block;width:100px;float:left;">系所中心</strong>：企业管理系</p>
+              </div>
+			  <div class="grjj">
+                    <p class="jjh">个人简历</p>
+                    <div class="bks1" id="jjc"><p style="text-indent: 32px;"><span style=""><span helvetica="" neue="" pingfang="" sc="" microsoft="" yahei="" source="" han="" sans="" noto="" cjk="" wenquanyi="" micro="" hei="" sans-serif="" font-size:="" 16px="" style=""><span style="font-size: 16px; font-family: SimSun;">北京师范大学经济与工商管理学院教授、博士生导师，清华大学管理学博士，</span><span style="font-size: 16px; color: rgb(68, 68, 68); background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><span style="font-family:SimSun;">麻省理工（</span><span lang="EN-US" style=""><span style="font-family:Times New Roman;">MIT</span></span><span style="font-family:SimSun;">）斯隆管理学院访问学者,</span></span><span style="font-size: 16px; font-family: SimSun;">北京师范大学财经素养教育研究中心主任，</span><span style="font-family: SimSun;"><span style="font-size: 16px;">中国高等院校市场学研究会常务理事，</span><span style="font-family: SimSun; text-indent: 32px;"><span style="font-size:16px;">中国管理科学与工程学会神经管理与神经工程分会理事，</span></span><span style="font-size: 16px;">国家自然科学基金项目通讯</span></span></span></span><span helvetica="" neue="" pingfang="" sc="" microsoft="" yahei="" source="" han="" sans="" noto="" cjk="" wenquanyi="" micro="" hei="" sans-serif="" font-size:="" 16px=""><span style="font-family: SimSun;"><span style="font-size: 16px;">评审专家</span></span><span style="font-size: 16px; font-family: SimSun;">。曾任北师大</span><span style="font-size: 16px;"><span style="font-family:Times New Roman;">MBA</span></span><span style="font-size: 16px; font-family: SimSun;">教育中心主任、市场营销系主任。主要研究领域包括消费者决策心理、感官营销、品牌管理、财务决策行为，财经素养教育、数字伦理等。先后在国际</span><span style="font-size: 16px;" times="" new="" roman=""><span style="font-family:Times New Roman;">SSCI</span></span><span style="font-size: 16px; font-family: SimSun;">期刊</span></span><span times="" new="" roman="" style="font-size: 16px;"><span style="font-family:Times New Roman;">Journal of Business Research, Journal of Interactive Marketing<span times="" new="" roman="" serif="">, Frontiers in Psychology,&nbsp;<span style="font-family: " times="" new="" roman="" font-size:="" 16px="" text-indent:="" 32px="">Cortex,&nbsp;</span><span style="font-family: " times="" new="" roman="" font-size:="" 16px="" text-indent:="" 32px="">Neuroscience,&nbsp;</span>NeuroImage,&nbsp;</span>Journal of Retailing and Consumer Services,&nbsp;Motivation and Emotion,&nbsp;</span><span times="" new="" roman="" serif=""><span style="font-family:Times New Roman;">Australian Journal of Management</span><span style="font-family:SimSun;">等</span></span></span><span helvetica="" neue="" pingfang="" sc="" microsoft="" yahei="" source="" han="" sans="" noto="" cjk="" wenquanyi="" micro="" hei="" sans-serif="" font-size:="" 16px="" style="font-size: 16px; font-family: SimSun;">，和国内权威学术期刊《管理世界》、《管理科学学报》、《南开管理评论》、《国际金融研究》、《北京师范大学学报（社会科学版）》、</span><span helvetica="" neue="" pingfang="" sc="" microsoft="" yahei="" source="" han="" sans="" noto="" cjk="" wenquanyi="" micro="" hei="" sans-serif="" font-size:="" 16px="" style="font-size: 16px; font-family: SimSun;">《营销科学学报》、</span><span helvetica="" neue="" pingfang="" sc="" microsoft="" yahei="" source="" han="" sans="" noto="" cjk="" wenquanyi="" micro="" hei="" sans-serif="" font-size:="" 16px="" style="font-size: 16px;"><span style="font-family: SimSun;">《经济学动态》、《管理评论》等发表学术论文三十余篇。主持多项国家自然科学基金面上项目和教育部人文社科基金项目。曾任国有大二型企业，及多家股份制企业董事、总经理，有丰富的企业管理经验和创业经历。</span><span style="color: rgb(68, 68, 68); background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><span style="font-family: SimSun;">作为中国财经素养教育开拓者之一，发起成立了中国首个专注于财经素养教育的学术研究机构，发起举办了多届中国财经素养教育高峰论坛，组织编写了中国学生财经素养系列教材</span><span lang="EN-US"><span style="font-family:Times New Roman;">10</span></span><span style="font-family: SimSun;">余套。组织开展了中国居民财经素养调查，发布了中国首份《中国居民财经素养白皮书》。</span></span></span></p><br /></div>
+                    
+                </div>				<div class="grjj">
+                    <p class="jjh">研究领域</p>
+                    <div class="bks1"><span style="font-size:16px;">消费者决策心理、感官营销、品牌管理、财务决策行为、财经素养教育、数字伦理</span></div>
+                </div>				<div class="grjj">
+                    <p class="jjh">研究成果</p>
+                    <div class="bks1" id="jjc1"><h6><span style="font-family:SimHei;font-size:16px;">代表性论文：</span></h6><p><span style="font-size:16px;"><span style="font-family: " times="" new="" roman="" serif=""><span style="font-size: 16px;"><span style="font-family:Times New Roman;"><span times="" new="" roman="" serif="" style="font-size: 16px;"><span style="font-family: 宋体; font-size: 16px;">·</span><span times="" new="" roman="">Tang, H., Li, L., Su, S.*(2022). Experiencing less leads to the use of more</span></span><span style="font-size: 16px;" times="" new="" roman=""><span times="" new="" roman="" serif="" style="">: The effect of a scarcity mindset on product usage,&nbsp;<em>Journal of Business Research</em>, 149, 139-148.</span></span></span><br /></span></span></span></p><p><span style="font-size:16px;"><span style="font-family: " times="" new="" roman="" serif=""><span style="font-size: 16px;"><span style=""><span style="font-size: 16px;" times="" new="" roman=""><span times="" new="" roman="" serif="" style=""><span style="font-family:Times New Roman;"><span style="font-size: 16px;"><span style="font-family: 宋体; font-size: 16px;">·</span>Zhu</span><span style="font-size: 16px;">, R., </span></span><span style="font-family: &quot;Times New Roman&quot;; font-size: 16px;">Xu, Z., Su, S., Feng, C., Luo, Y., Tang, H., Zhang, S., Wu, X., Mai, X., Liu, C.* (2021). Brain activation and adaptation of deception processing during dyadic face-to-face interaction,&nbsp;</span><span style="font-family: &quot;Times New Roman&quot;; font-size: 16px; "><em>NeuroImage</em></span><span style="font-family: &quot;Times New Roman&quot;; font-size: 16px;">, 245, 118730.</span><br /></span></span></span></span></span></span></p><p><span style="font-size:16px;"><span style="font-family: " times="" new="" roman="" serif=""><span style="font-family: 宋体; font-size: 16px;">·</span><span style="font-family:Times New Roman;">Zhao, J., Huang, J., Su, S.*(2019). The effects of trust on consumers</span></span><span style="font-family:Times New Roman;"><span style="font-family: " times="" new="" roman="">’</span><span style="font-family: " times="" new="" roman="" serif="">continuous purchase intentions in C2C social commerce: A trust transfer perspective, <em>Journal of Retailing and Consumer Services</em>, 50, 42-49.</span></span></span></p><p><span style="font-size:16px;"><span style="font-family:Times New Roman;"><span style="font-family: " times="" new="" roman="" serif=""><span style="font-family: 宋体; font-size: 16px;">·</span>Tang, H., Zhang, S., Jin, T., Wu, H., Su, S.*,Liu, C.* (2019). Brain activation and adaptation of deception processing during dyadic face-to-face interaction, <em>Cortex</em>, 120, 326-339.</span></span></span></p><p><span style="font-size:16px;"><span style="font-family:Times New Roman;"><span style="font-family: " times="" new="" roman="" serif=""><span style="font-family: 宋体; font-size: 16px;">·</span>Tang, H., Lu, X., Cui, Z., Feng, C., Lin, Q.,Cui, X., Su, S.*, Liu, C.* (2018). Resting-state functional connectivity and deception: Exploring individualized deceptive propensity by machine learning, <em>Neuroscience</em>,395, 101-112.</span></span></span></p><p><span style="font-size:16px;"><span style="font-family:Times New Roman;"><span style="font-family: " times="" new="" roman="" serif=""><span style="font-family: 宋体; font-size: 16px;">·</span>Tang, H., Wang, S., Liang, Z.,Sinnott-Armstrong, W., Su, S. *, &amp; Liu, C. * (2018). Are proselfs more deceptive and hypocritical? Social image concerns in appearing fair.&nbsp;<em>Frontiers in Psychology</em>,&nbsp;9, 2268.</span></span></span></p><p><span style="font-size:16px;"><span style="font-family:Times New Roman;"><span style="font-family: 宋体; font-size: 16px;">·</span><span style="font-family: " times="" new="" roman="" serif="">Tang, H., Ye, P., Wang, S., Zhu, R., Su, S. *,Tong, L., &amp; Liu, C. (2017). Stimulating the Right Temporoparietal Junction with tDCS Decreases Deception in Moral Hypocrisy and Unfairness.&nbsp;<em>Frontiers in Psychology</em>,&nbsp;8, 2033.</span></span></span></p><p><span style="font-size:16px;"><span style="font-family:Times New Roman;"><span style="font-family: " times="" new="" roman="" serif=""><span style="font-family: 宋体; font-size: 16px;">·</span>Chen, R., Su, S.*, &amp; He, F. (2014). Does cause congruence intervene on how different corporate associations influence consumer responses in cause-related marketing? <em>Australian Journal of Management</em>, 39(2), 191-206. </span></span></span></p><p><span style="font-size:16px;"><span style="font-family:Times New Roman;"><span style="font-family: " times="" new="" roman="" serif=""><span style="font-family: 宋体; font-size: 16px;">·</span>Huang, J., Su, S., Zhou, L., &amp; Liu, X. (2013). Attitude toward the viral Ad: Expanding traditional advertising models to interactive advertising. <em>Journal of Interactive Marketing</em>, 27(1), 36-46.</span></span></span></p><p><span style="font-size:16px;"><span style="font-family:Times New Roman;"><span style="font-family: " times="" new="" roman="" serif=""><span style="font-family: 宋体; font-size: 16px;">·</span>Sun, C., Su, S., &amp; Huang, J. (2013). Cultural value, perceived value, and consumer decision-making style in China: A comparison based on an urbanization dimension. <em>Nankai Business Review International</em>, 4(3), 248– 262.</span></span></span></p><p><span style="font-size:16px;"><span style="font-family:Times New Roman;"><span style="font-family: 宋体; font-size: 16px;">·</span><span style="font-family: " times="" new="" roman="" serif="">Su,S., Chen, R., &amp; Zhao, P. (2009). </span><span style="font-family: " times="" new="" roman="" serif="">Do the size of consideration set and </span><span style="font-family: " times="" new="" roman="" serif="">the source of the better competing option&nbsp;</span><span style="font-family: " times="" new="" roman="" serif="">influence</span> post-<span style="font-family: " times="" new="" roman="" serif="">choice regret? </span><em><span style="font-family: " times="" new="" roman="" serif="">Motivation and Emotion</span></em><span style="font-family: " times="" new="" roman="" serif="">, </span><span style="font-family: " times="" new="" roman="" serif="">33,219-228.</span></span></span></p><p><span style="font-size:16px;"><span style="font-family: 宋体; color: black;">·</span><span style="font-family: 宋体;">伍燕然</span>,<span style="font-family: 宋体;">苏凇</span>*,<span style="font-family: 宋体;">王凯</span>, <span style="font-family: 宋体;">李锐</span>, <span style="font-family: 宋体;">韩立岩</span>.<span style="font-family: " times="" new="" roman="" serif=""> <span style="font-family:Times New Roman;">(2019)</span>. </span><span style="font-family: 宋体;">有限理性对开放式基金“业绩</span>-<span style="font-family: 宋体;">流量关系”的影响</span>. <em><span style="font-family: 宋体;">管理科学学报</span></em>, <span style="font-family: " times="" new="" roman="" serif=""><span style="font-family:Times New Roman;">22(10), 101-126</span>.</span></span></p><p><span style="font-size:16px;"><span style="font-family: 宋体;">·</span><span style="font-family: 宋体;">苏凇</span><span style="font-family: Symbol;">, </span><span style="font-family: 宋体;">黄四林</span><span style="font-family: Symbol;">, </span><span style="font-family: 宋体;">张红川</span><span style="font-family: Symbol;">. (2019). </span><span style="font-family: 宋体;">论基于核心素养视角的财经素养教育</span><span style="font-family: Symbol;">. </span><em><span style="font-family: 宋体;">北京师范大学学报（社会科学版）,</span></em><span style="font-family: Symbol;">272, 73-78.</span></span></p><p><span style="font-size:16px;"><span style="font-family: 宋体;">·</span><span style="font-family: 宋体;">张红川</span><span style="font-family: Symbol;">, </span><span style="font-family: 宋体;">苏凇</span><span style="font-family: Symbol;">, </span><span style="font-family: 宋体;">吕杰妤</span><span style="font-family: Symbol;">, </span><span style="font-family: 宋体;">张梅</span><span style="font-family: Symbol;">, </span><span style="font-family: 宋体;">辛自强</span><span style="font-family: Symbol;">. (2018). </span><span style="font-family: 宋体;">基于理性决策的财经能力：概念、结构与测量</span>. <em><span style="font-family: 宋体;">心理技术与应用</span></em><span style="font-family: 宋体;">，</span><span style="font-family: " times="" new="" roman="" serif=""><span style="font-family:Times New Roman;">6(8),466-472</span>.</span></span></p><p><span style="font-size:16px;"><span style="font-family: 宋体;">·</span><span style="font-family: 宋体;">苏凇</span>, <span style="font-family: 宋体;">唐红红</span>. <span style="font-family: " times="" new="" roman="" serif=""><span style="font-family:Times New Roman;">(2017)</span></span>. <span style="font-family: 宋体;">认知神经科学在神经营销中的应用</span>, <em><span style="font-family: 宋体;">北京工商大学学报（社会科学版）</span></em><span style="font-family:Times New Roman;">, </span><span style="font-family: " times="" new="" roman="" serif=""><span style="font-family:Times New Roman;">32(4), 24-33</span>.</span></span></p><p><span style="font-size:16px;"><span style="font-family: 宋体;">·</span><span style="font-family: 宋体;">童璐琼</span><span style="font-family: Symbol;">, </span><span style="font-family: 宋体;">苏凇</span><span style="font-family: Symbol;">, </span><span style="font-family: 宋体;">锁梦晨</span><span style="font-family: Symbol;">.</span><span style="font-family:Times New Roman;"> </span><span style="font-family: " times="" new="" roman="" serif=""><span style="font-family:Times New Roman;">&nbsp;(2017)</span>. </span><span style="font-family: 宋体;">自然环境价值观对消费者产品选择的影响</span>.<em><span style="font-family: 宋体;">经济与管理研究</span></em><span style="font-family: " times="" new="" roman="" serif="">,<span style="font-family:Times New Roman;"> 3, 114-121.</span> </span><span style="font-family: Symbol;">&nbsp;</span><span style="font-family: " times="" new="" roman="" serif="">&nbsp;</span></span></p><p><span style="font-size:16px;"><span style="font-family: 宋体;">·</span><span style="font-family: 宋体;">伍燕然</span>, <span style="font-family: 宋体;">黄文婷</span>, <span style="font-family: 宋体;">苏凇</span>*, <span style="font-family: 宋体;">江捷</span>. <span style="font-family:Times New Roman;"><span style="font-family: " times="" new="" roman="" serif="">(2016)</span>.</span> <span style="font-family: 宋体;">基金投资者处置效应的个体差异</span>. <span style="font-family: 宋体;">国际金融研究</span>, <span style="font-family: " times="" new="" roman="" serif=""><span style="font-family:Times New Roman;">347(3), 84-96.</span></span></span></p><p><span style="font-size:16px;"><span style="font-family: 宋体;">·</span><span style="font-family: 宋体;">苏凇</span><span style="font-family: " times="" new="" roman="" serif="">.<span style="font-family:Times New Roman;"> (2015).</span> </span><span style="font-family: 宋体;">被忽略的预警</span><span style="font-family: " times="" new="" roman="" serif="">:</span><span style="font-family: 宋体;">股市恐慌指数</span><span style="font-family: " times="" new="" roman="" serif="">. </span><em><span style="font-family: 宋体;">中欧商业评论</span></em><span style="font-family: " times="" new="" roman="" serif="">, <span style="font-family:Times New Roman;">11, 95-98. </span></span></span></p><p><span style="font-size:16px;"><span style="font-family: 宋体;">·</span><span style="font-family: 宋体;">苏凇</span><span style="font-family: " times="" new="" roman="" serif="">.<span style="font-family:Times New Roman;"> (2014)</span>. </span><span style="font-family: 宋体;">减缓促销后遗症</span><span style="font-family: " times="" new="" roman="" serif="">.</span><em><span style="font-family: 宋体;">中欧商业评论</span></em><span style="font-family: " times="" new="" roman="" serif="">, <span style="font-family:Times New Roman;">3, 53-55. </span></span></span></p><p><span style="font-size:16px;"><span style="font-family: 宋体;">·</span><span style="font-family: 宋体;">苏凇</span><span style="font-family: " times="" new="" roman="" serif="">.<span style="font-family:Times New Roman;"> (2014).</span> </span><span style="font-family: 宋体;">中国</span><span style="font-family: " times="" new="" roman="" serif=""><span style="font-family:Times New Roman;">P2P</span></span><span style="font-family: 宋体;">平台的发展与冲突</span><span style="font-family: " times="" new="" roman="" serif="">. </span><em><span style="font-family: 宋体;">财经</span></em><span style="font-family: " times="" new="" roman="" serif="">, </span><span style="font-family: " times="" new="" roman="" serif=""><span style="font-family:Times New Roman;">36, 112-115.</span></span></span></p><p><span style="font-size:16px;"><span style="font-family: 宋体; color: black;">·</span><span style="font-family: 宋体;">苏凇</span><span style="font-family: " times="" new="" roman="" serif="">, </span><span style="font-family: 宋体;">黄劲松</span><span style="font-family: " times="" new="" roman="" serif="">. <span style="font-family:Times New Roman;">(2013).</span> </span><span style="font-family: 宋体;">关于逆营销的效果研究</span><span style="font-family: " times="" new="" roman="" serif="">: </span><span style="font-family: 宋体;">基于</span><span style="font-family: " times="" new="" roman="" serif=""><span style="font-family:Times New Roman;">CLT</span></span><span style="font-family: 宋体;">理论的视角</span><span style="font-family: " times="" new="" roman="" serif="">. </span><em><span style="font-family: 宋体;">管理世界</span></em><span style="font-family: " times="" new="" roman="" serif="">, <span style="font-family:Times New Roman;">11, 118-129.<span style="font-size:12pt;font-family:宋体;">（被</span><span style="font-size:12.0pt;font-family:宋体;">中国人民大学复印报刊资料《市场营销（理论版）》</span><span style="font-size:12pt;font-family:'Times New Roman', serif;">2014</span><span style="font-size:12pt;font-family:宋体;">年第</span><span style="font-size:12pt;font-family:'Times New Roman', serif;">2</span><span style="font-size:12pt;font-family:宋体;">期全文转载）</span><br /> </span></span></span></p><p><span style="font-size:16px;"><span style="font-family: 宋体;">·</span><span style="font-family: 宋体;">苏凇</span><span style="font-family: " times="" new="" roman="" serif="">, </span><span style="font-family: 宋体;">陈荣</span><span style="font-family: " times="" new="" roman="" serif="">, </span><span style="font-family: 宋体;">黄劲松</span><span style="font-family: " times="" new="" roman="" serif="">. <span style="font-family:Times New Roman;">(2013). </span></span><span style="font-family: 宋体; color: black;">不作为惰性的调节：基于“向前看”的多参照点视角</span><span style="font-family: " times="" new="" roman="" serif="">. </span><em><span style="font-family: 宋体;">心理学报</span></em><span style="font-family: " times="" new="" roman="" serif="">, <span style="font-family:Times New Roman;">45(12), 1393-1409.</span></span></span></p><p><span style="font-size:16px;"><span style="font-family: 宋体;">·</span><span style="font-family: 宋体;">陈荣</span><span style="font-family: " times="" new="" roman="" serif="">, </span><span style="font-family: 宋体;">苏凇</span><span style="font-family: " times="" new="" roman="" serif="">, </span><span style="font-family: 宋体;">窦文宇</span><span style="font-family: " times="" new="" roman="" serif="">. <span style="font-family:Times New Roman;">(2013).</span> </span><span style="font-family: 宋体;">对信息源的正向跟随倾向对决策效果的影响</span><span style="font-family: " times="" new="" roman="" serif="">.</span><em><span style="font-family: 宋体;">心理学报</span></em><span style="font-family: " times="" new="" roman="" serif="">, <span style="font-family:Times New Roman;">45(8), 887-898.</span></span></span></p><p><span style="font-size:16px;"><span style="font-family: 宋体; color: black;">·</span><span style="font-family: 宋体;">苏凇</span><span style="font-family: " times="" new="" roman="" serif="">, </span><span style="font-family: 宋体;">黄劲松</span><span style="font-family: " times="" new="" roman="" serif="">. <span style="font-family:Times New Roman;">(2013)</span>. </span><span style="font-family: 宋体;">参照价格理论研究新进展</span><span style="font-family: " times="" new="" roman="" serif="">. </span><em><span style="font-family: 宋体;">经济学动态</span></em><span style="font-family: " times="" new="" roman="" serif="">, <span style="font-family:Times New Roman;">3,148-157.</span></span></span></p><p><span style="font-size:16px;"><span style="font-family: 宋体;">·</span><span style="font-family: 宋体;">苏凇</span><span style="font-family: " times="" new="" roman="" serif="">, </span><span style="font-family: 宋体;">黄劲松</span><span style="font-family: " times="" new="" roman="" serif="">. <span style="font-family:Times New Roman;">(2013).</span></span><span style="font-family: 宋体;">品牌延伸还是子品牌</span><span style="font-family: " times="" new="" roman="" serif="">?</span><span style="font-family: 宋体;">——基于品牌态度、广告态度和购买意愿的比较</span><span style="font-family: " times="" new="" roman="" serif="">. </span><em><span style="font-family: 宋体;">管理评论</span></em><span style="font-family: " times="" new="" roman="" serif="">, <span style="font-family:Times New Roman;">2, 98-107. </span></span></span></p><p><span style="font-size:16px;"><span style="font-family: 宋体;">·</span><span style="font-family: 宋体;">苏凇</span><span style="font-family: " times="" new="" roman="" serif="">, </span><span style="font-family: 宋体;">孙川</span><span style="font-family: " times="" new="" roman="" serif="">, </span><span style="font-family: 宋体;">陈荣</span><span style="font-family: " times="" new="" roman="" serif="">. <span style="font-family:Times New Roman;">(2013)</span>. </span><span style="font-family: 宋体;">文化价值观、消费者感知价值和购买决策风格：基于中国城市化差异的比较研究</span><span style="font-family: " times="" new="" roman="" serif="">. </span><em><span style="font-family: 宋体;">南开管理评论</span></em><span style="font-family: " times="" new="" roman="" serif="">, <span style="font-family:Times New Roman;">16(1), 102-109. </span></span></span></p><span style="font-size:16px;"><span style="font-family: 宋体;">·</span><span style="font-family: 宋体;">陈荣</span><span style="font-family: " times="" new="" roman="" serif="">, </span><span style="font-family: 宋体;">苏凇</span><span style="font-family: " times="" new="" roman="" serif="">, </span><span style="font-family: 宋体;">黄劲松</span><span style="font-family: " times="" new="" roman="" serif="">. <span style="font-family:Times New Roman;">(2011)</span>. </span><span style="font-family: 宋体;">折衷效应和相似效应对消费者积分兑换奖品的偏好影响</span><span style="font-family: " times="" new="" roman="" serif="">. </span><em><span style="font-family: 宋体;">营销科学学报</span></em><span style="font-family: " times="" new="" roman="" serif="">,<span style="font-family:Times New Roman;">7(4), 59-71.&nbsp;</span></span></span><br /></div>
+                    
+                </div>				<div class="grjj">
+                    <p class="jjh">研究课题</p>
+                  
+                    <div class="bks1"><p><span style="font-family: SimHei;"><span style="font-size:16px;">1、国家自然科学基金面上项目：基于认知神经机制的消费者财务决策规避行为研究；</span></span></p><p><span style="font-family:SimHei;"><span style="font-size:16px;">2、国家自然科学基金面上项目：基于多重参照视角的消费者不作为惰性行为研究：理论框架及应用；<br /></span></span></p><p><span style="font-family:SimHei;"><span style="font-size:16px;">3、国家自然科学基金面上项目：关于逆营销对消费者购买决策和购后消费的影响研究：基于解释水平理论的视角；<br /></span></span></p><p><span style="font-family:SimHei;"><span style="font-size:16px;">4、教育部人文社会科学基金项目：广告时长信息对电视换台行为及广告效果的影响机制研究；<br /></span></span></p><p><span style="font-family: SimHei;"><span style="font-size:16px;">5、财经素养教育系列课题项目（包括教材编写、评价体系开发、社会调查等）。</span></span></p></div>
+                    
+                </div>				<div class="grjj">
+                    <p class="jjh">学生情况</p>
+                    <div class="bks1"><span style="font-size:16px;"><span style="color: rgb(51, 51, 51); line-height: 24px; text-indent: 32px; font-family: 楷体_GB2312;">指导博士后、博士研究生、学术型硕士研究生、专业学位研究生（</span><span style="color: rgb(51, 51, 51); line-height: 24px; text-indent: 32px; font-family: Cambria, serif;">MBA</span><span style="color: rgb(51, 51, 51); line-height: 24px; text-indent: 32px; font-family: 楷体_GB2312;">）。</span></span><br /></div>
+                    
+                </div>				<div class="grjj">
+                    <p class="jjh">教授课程</p>
+                    <div class="bks1"><p style="font-family: " microsoft="" yahei="" font-size:16px=""><span style="font-size:16px;">《市场营销》（MBA）</span></p><p style="font-family: " microsoft="" yahei="" font-size:16px=""><span style="font-size:16px;">《消费者行为研究》（研究生）</span></p><p style="font-family: " microsoft="" yahei="" font-size:16px=""><span style="font-size:16px;">《供应链管理》（本科生）</span></p><p style="font-family: " microsoft="" yahei="" font-size:16px=""><span style="font-size:16px;">《商业模式创新》（本科生）</span></p><p style="font-family: " microsoft="" yahei="" font-size:16px=""><span style="font-size:16px;">《财经素养教育》（本科生）</span></p></div>
+                    
+                </div>            </div>
+        </div>
+         <footer style="overflow: hidden;">
+            <div class="footers">
+                <div class="footersl">
+                    <img src="http://bs.bnu.edu.cn/newweb/images/ewm.jpg" alt="" class="imgewm">
+                    <div class="footerxx">
+                        <p>Copyright © 2020 北京师范大学经济与工商管理学院</p>
+                        <p><i class="fas fa-map-marker-alt"></i> 地址：北京市新街口外大街19号</p>
+                        <p><i class="fas fa-portrait"></i> 传真：010-58801867</p>
+                        <p><i class="fas fa-phone"></i> 电话：010-58801867</p>
+                        <p><i class="fas fa-envelope"></i> 邮编：100875</p>
+                    </div>
+                </div>
+                <img src="http://bs.bnu.edu.cn/newweb/images/db.png" alt="" width="140" class="dbimg">
+                <img src="http://bs.bnu.edu.cn/newweb/images/yx.png" alt="" class="yuanxun">
+            </div>
+        </footer>
+    </div>
+	<div class="share">
+		  <div id="appgame-leftside-share">
+	        <div class="appgame-leftside-share rwt_share" id="rwt_share">
+	         
+	        <!--<a class="appgame-leftside-search" data-cmd="search" title="search"  href="javascript:void(0);" onclick="opens('id')">search</a> --> <!--<div class="searchs" id="id">
+	         <form name="dataForm" action="/cms/search/searchResults.jsp" target="_blank" method="post" accept-Charset="utf-8"  onsubmit="document.charset='utf-8';">
+			        	<p>
+			        		<input name="siteID" size="4" value="127" type = "hidden">
+			        		<input type="text" name="query" id="search" class="searchInput" value="输入搜索词">
+			        		<button type="submit"></button>
+			        	</p>
+			        	</form>
+			        </div>-->
+			        <!-- <a class="appgame-leftside-weixin" data-cmd="weixin" title="">微信</a> -->
+                    
+			        <!-- <a class="appgame-leftside-qzone" data-cmd="qzone" title="">qq空间</a>
+			        
+			        <a class="appgame-leftside-tsina" data-cmd="tsina" title="">微博</a> -->			    </div>
+			        <a class="appgame-leftside-top" onclick="gotoTPoint()"></a>			</div>
+			        
+		</div>
+</body>
+<script src="http://gh.bnu.edu.cn/js/jquery-1.9.0.min.js"></script>
+<script src="http://gh.bnu.edu.cn/js/share.min.js"></script>
+<script>
+    var dj=document.getElementById('dianji');
+    var jjc=document.getElementById('jjc');
+    var dj1=document.getElementById('dianji1');
+    var jjc1=document.getElementById('jjc1');
+    var a=1;
+    function zhedie(m,n){
+        m.onclick=function(){
+            if(a==1){
+                n.className='jjc';
+                m.className='dianji1'
+                a=0;
+            }else{
+                n.className='jjc1';
+                m.className='dianji'
+                a=1;
+            }
+        }
+    }
+    zhedie(dj,jjc);
+    zhedie(dj1,jjc1);
+	
+	
+</script>
+<script>
+
+	
+	
+    
+
+    /*回到顶部*/
+	$(function(){
+	 	$(window).resize(function(){
+						var h = $(window).height();
+						$('.goTop').css('top',h-60);
+						$(window).scroll(function(){				
+							var scrollTop = $(document).scrollTop();					  
+							$('.goTop').stop().animate({
+								top: h + scrollTop-60
+							},300);
+						});
+		}).resize();
+		});
+	//gotop
+
+			$('.goTop').click(function(){
+
+				$('body,html').stop().animate({scrollTop:0});
+
+				return false;
+
+			});
+	
+	function gotoTPoint(){
+		$("html,body").animate({scrollTop:0},500);
+	}
+</script>
+</html>

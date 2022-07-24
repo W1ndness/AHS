@@ -1,0 +1,495 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0">
+    <title>北京师范大学工商与经济管理学院</title>
+    <link rel="stylesheet" href="http://bs.bnu.edu.cn/new-ver-css/reset.css">
+    <link rel="stylesheet" href="http://bs.bnu.edu.cn/new-ver-css/index.css">
+	<link rel="stylesheet" href="http://bs.bnu.edu.cn/new-ver-css/xyslist.css">
+	<link rel="stylesheet" href="http://bs.bnu.edu.cn/new-ver-css/xys-tf.css">
+    <style>
+        .container{
+            width:100%;
+            height: auto;
+            overflow: hidden;
+        }
+        .header{
+            width:100%;
+            height:116px;
+            background:#EFF8FF;
+        }
+        .logo1{
+            width:1200px!important;
+            margin:0 auto;
+            position:relative;
+            float: none;
+			display:block;
+        }
+        .logo2{
+            float:right;
+        }
+        .logo1 p{
+            position:absolute;
+            top:5px;
+            right:5px;
+            font-size:13px;
+        }
+        .logo1 p:hover{
+            color:#112769;
+        }
+        .tu{
+            width:100%;
+            height:240px;
+            background:url('http://bs.bnu.edu.cn/newweb/grzy/images/tu.jpg') no-repeat top center;
+            background-size: 100%;
+        }
+        .lujing{
+            width:1200px;
+            height:58px;
+            margin:0 auto;
+            border-bottom:1px solid #aaa;
+            overflow:hidden;
+        }
+        .lujings{
+            margin:24px 0 0 0;
+            font-size:14px;
+        }
+        .content{
+            color:#333;
+            width:1200px;
+/*            height:2000px;*/
+            margin:0 auto;
+            margin-top:40px;
+/*            background:#c4c4c4;*/
+        }
+        
+        .xian{
+            width:100%;
+            height:8px;
+            background:#9A0812;
+        }
+        
+        .leftc{
+            float:left;
+        }
+        .rightc{
+            float:left;
+            margin-left:50px;
+/*            background:#666;*/
+            width:880px;
+/*            height:1000px;*/
+        }
+        .rheader{
+            width:880px;
+            height:210px;
+/*            background:yellow;*/
+        }
+        .xm{
+            font-size:30px;
+            height:40px;
+/*            border-bottom:4px solid #9A0812;*/
+            width:auto;
+            float:left;
+            line-height:40px;
+			margin-right:30px;
+        }
+        .zhiw{
+            font-size:18px;
+            height:40px;
+            line-height:50px;
+            margin-bottom:30px;
+        }
+        .tel{
+                font-size: 16px;
+                margin-top: 10px;
+                line-height: 20px;
+        }
+        .grjj{
+/*            height:300px;*/
+            width:880px;
+/*            background:yellow;*/
+            padding-bottom:40px;
+        }
+        .jjh{
+                font-size: 20px;
+                border-bottom: 1px solid #cecece;
+                height: 40px;
+                line-height: 40px;
+                padding-left: 30px;
+                background: url(http://bs.bnu.edu.cn/newweb/grzy/images/zw.png) no-repeat 0 16px;
+        }
+        
+        .jjc{
+            font-size:14px;
+            margin-top:30px;
+           
+            line-height:28px;
+            overflow:hidden;
+            text-align: justify;
+            text-justify:inter-ideograph;
+        }
+        .jjc1{
+            height:225px;
+            font-size:14px;
+            margin-top:30px;
+            
+            line-height:28px;
+            overflow:hidden;
+            text-align: justify;
+            text-justify:inter-ideograph;
+        }
+        
+        .dianji1{
+                background: url(http://bs.bnu.edu.cn/newweb/grzy/images/zw.png) no-repeat 0 -50px;
+                width: 13px;
+                height: 13px;
+                cursor: pointer;
+                display: block;
+            margin-top: 20px;
+            transition: all .2s linear;
+        }
+        .dianji1:hover{
+            background: url(http://bs.bnu.edu.cn/newweb/grzy/images/zw.png) no-repeat 0 -64px;
+        }
+        
+        .dianji{
+                background: url(http://bs.bnu.edu.cn/newweb/grzy/images/zw.png) no-repeat 0 -24px;
+                height: 13px;
+                cursor: pointer;
+                display: block;
+            margin-top: 20px;
+            transition: all .2s linear;
+        }
+        .dianji:hover{
+            background: url(http://bs.bnu.edu.cn/newweb/grzy/images/zw.png) no-repeat 0 -37px;
+        }
+        #jjc1{
+            text-indent:0em;
+        }
+        
+        .bks{
+            font-size:14px;
+            font-weight: 800;
+            margin-top:30px;
+            height:auto;
+            line-height:36px;
+        }
+        .bks1{
+            font-size:14px;
+            margin-top:30px;
+            height:auto;
+            line-height:36px;
+        }
+        .bksc{
+            height:36px;
+            line-height:36px;
+            font-size:14px;
+        }
+        
+        .yanzheng{
+            width:1200px;
+            height:100px;
+            margin:0 auto;
+        }
+        .yanzheng img{
+            display:block;
+            margin-top:26px;
+            float:left;
+        }
+		
+#appgame-leftside-share{width:42px; height:216px; position: fixed;bottom: 30px;right: 30px; z-index:9999;}
+.appgame-leftside-share{width:42px; height:259px;}
+#appgame-leftside-share a{display:block; width:42px; height:44px; background-color:#e6e6e6; z-index:1; position:absolute; left:0; box-sizing:border-box; -moz-box-sizing:border-box; border:1px #ddd solid; background-image:url(http://gh.bnu.edu.cn/images/share-icons.png); background-repeat:no-repeat; margin:0;  transition:0.4s; -webkit-transition:0.4s; -moz-transition:0.4s;}
+#appgame-leftside-share a:hover{background-color:#fff; border:1px #eee solid; z-index:2;}
+/*.appgame-leftside-weixin{top:0; background-position:-88px 0;}
+.appgame-leftside-weixin:hover{background-position:0px 0;}
+.appgame-leftside-qzone{top:43px; background-position:-88px -44px;}
+.appgame-leftside-qzone:hover{background-position:0px -44px;}*/
+.appgame-leftside-search{top:86px; background-position:-93px -89px;}
+.appgame-leftside-search:hover{background-position:-5px -86px;}
+.appgame-leftside-weixin{top:129px; background-position:-88px 0px;}
+.appgame-leftside-weixin:hover{background-position:0px 0px;}
+/*.appgame-leftside-fbook{top:172px; background-position:-88px -176px;}
+.appgame-leftside-fbook:hover{background-position:0px -176px;}
+.appgame-leftside-twi{top:215px; background-position:-88px -220px;}
+.appgame-leftside-twi:hover{background-position:0px -220px;}*/
+#appgame-leftside-share .appgame-leftside-top{background-image:url(http://gh.bnu.edu.cn/images/leftnav-off.png); background-position:-1px -395px; top:130px; cursor:pointer;}
+
+.rwt_share {
+/*	overflow:hidden;*/
+	float:left;
+	position:relative;
+}
+.rwt_share a {
+	display:inline-block;
+	margin-right:10px;
+	text-indent:-9999px;
+	margin-bottom:10px;
+	width:24px;
+	height:24px;
+	overflow:hidden;
+	cursor:pointer;
+	float:left;
+	font-size:12px;
+}
+.rwts_weixin {
+	background-position:0 -1612px;
+}
+.rwts_tsina {
+	background-position:0 -104px;
+}
+.rwts_tqq {
+	background-position:0 -260px;
+}
+.rwts_qzone {
+	background-position:0 -52px;
+}
+.rwts_sqq {
+	background-position:0 -2652px;
+}
+.rwts_tieba {
+	background-position:0 -728px;
+}
+.rwts_renren {
+	background-position:0 -208px;
+}
+.rwts_kaixin001 {
+	background-position:0 -312px;
+}
+.rwts_tqf {
+	background-position:0 -364px;
+}
+.rwts_douban {
+	background-position:0 -468px;
+}
+.rwts_twi {
+	background-position:0 -1404px;
+}
+.rwts_fbook {
+	background-position:0 -1352px;
+}
+.rwts_ty {
+	background-position:0 -1196px;
+}
+.rwts_mogujie {
+	background-position:0 -1768px;
+}
+.rwts_meilishuo {
+	background-position:0 -1716px;
+}
+.rwts_huaban {
+	background-position:0 -1872px;
+}
+.rwts_hi {
+	background-position:0 -416px;
+}
+.rwts_tsohu {
+	background-position:0 -520px;
+}
+.rwts_more {
+	background-position:0 0;
+}
+.rwt_share_wxShow_code>img {
+	width:100%;
+}
+.bks1 li{
+	list-style:disc;
+}
+@media screen and (max-width: 1200px){
+	.logo1{
+		width:100%!important;
+	}
+	.leftc img{
+		width:50%!important;
+		height:50%!important;
+	}
+	.logo2{display:none;}
+	.lujing{
+		width:90%;
+	}
+	.content{
+		width:90%;
+	}
+	.leftc{
+		float:none;
+		
+	}
+	.tu{display:none;}
+	
+	.rightc{
+		float:none;
+		width:100%;
+		margin-left:0px;
+	}
+	.footers{width:100%;}
+	.rheader{width:100%;}
+	.grjj{width:100%;}
+}
+@media screen and (max-width: 600px){
+.l3{width:95%;}
+.share{display:none;}
+.leftc img{
+		width:70%!important;
+		height:70%!important;
+	}
+}
+  
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo1">
+                <img src="http://bs.bnu.edu.cn/newweb/grzy/images/logo.png" alt="" class="l3" style="margin-top: 25px;float:left;">
+                <img src="http://bs.bnu.edu.cn/newweb/grzy/images/logo2.png" alt="" class="logo2">
+                <a href=""><p>ENGLISH VERSION</p></a>
+            </div>
+        </div>
+        <div class="xian"></div>
+        <div class="tu"></div>
+        <div class="lujing">
+            <div class="lujings">
+                <a href="#">师资队伍</a>
+                 | 
+                <a href="#">战略管理系</a>
+            </div>
+        </div>
+        <div class="content">
+            <div class="leftc">
+                <img src="/Public/upload/2020/09/14/5f5f6c8a5aa3c.jpg" alt="" width="270">
+            </div>
+            <div class="rightc">
+                <div class="rheader">
+                    <p class="xm">戚聿东</p>
+                    <p class="zhiw">教授</p>
+                    <p class="tel"><strong style="display:block;width:100px;float:left;">电话</strong>：010-58808699</p> 
+                 <p class="tel"><strong style="display:block;width:100px;float:left;">E-mail</strong>：qiyudong@bnu.edu.cn</p>
+                 <p class="tel"><strong style="display:block;width:100px;float:left;">Office hour</strong>：邮件预约</p>
+                 <p class="tel"><strong style="display:block;width:100px;float:left;">系所中心</strong>：战略管理系</p>
+              </div>
+			  <div class="grjj">
+                    <p class="jjh">个人简历</p>
+                    <div class="bks1" id="jjc"><span style="font-family: " microsoft="" yahei="" font-size:16px="" text-align:="" justify=""></span><p><span style="font-family:等线;font-size:10.5000pt;"><span style="font-family:等线;"></span></span></p>戚聿东，男，1966年生，1998年毕业于中国社会科学院研究生院工业经济系，获经济学博士学位。现为北京师范大学经济与工商管理学院二级教授、博士生导师。主持国家社科基金重大项目2项、重点项目2项，出版10部学术著作，在《经济研究》《管理世界》《中国工业经济》等期刊发表论文160余篇，获教育部人文社科优秀成果二等奖、三等奖，两度获北京市哲学社科优秀成果一等奖，两度获蒋一苇企业改革与发展学术基金论文奖，研究成果曾获中央领导重要批示。入选国家百千万人才工程，被授予国家有突出贡献中青年专家、北京市先进工作者、北京市优秀青年知识分子等省部级以上荣誉称号，享受国务院政府特殊津贴。主要兼职：国务院反垄断委员会专家咨询组成员，商务部WTO新一轮多边谈判专家咨询组成员，中国工业经济学会副会长，中国企业管理研究会副会长，中国经济发展研究会常务理事，北京市社会科学界联合会常委，首都企业改革与发展研究会理事长，中国人文社会科学期刊评价管理学专家委员会主任委员、经济管理专家委员会主任委员，中国社会科学院国有经济研究智库学术委员会委员，中国社会科学院经济学部职称评审委员会委员，《经济学动态》《经济管理》《宏观经济管理》《经济与管理研究》等期刊编委。曾任华能国际、华夏银行等10家上市公司独立董事，曾挂职担任云南省财政厅党组成员、副厅长，2005-2007年被全国人大法工委和国务院法制办聘为专家委员会成员，全程参与《中华人民共和国反垄断法》起草修改工作。<br /></div>
+                    
+                </div>				<div class="grjj">
+                    <p class="jjh">研究领域</p>
+                    <div class="bks1">数字经济与管理 ;国企改革与公司治理 ;垄断行业改革与规制</div>
+                </div>				<div class="grjj">
+                    <p class="jjh">研究成果</p>
+                    <div class="bks1" id="jjc1"><p style="font-family: " microsoft="" yahei="" font-size:16px=""><strong></strong></p>（一）主要著作<br />1. 戚聿东著：《中国现代垄断经济研究》，经济科学出版社1999年版<br />2. 戚聿东等著：《国有经济战略调整与国有企业改制研究》，经济管理出版社2003年版<br />3. 戚聿东主笔：《中国经济运行中的垄断与竞争》，人民出版社2004年版<br />4. 戚聿东等著：《自然垄断产业改革：国际经验与中国实践》，中国社会科学出版社2009年版<br />5. 戚聿东主编：《垄断行业改革报告》，经济管理出版社2011年版<br />6. 戚聿东等著：《中国垄断行业市场化改革的模式与路径》，经济管理出版社2013年版<br />7. 黄群慧 戚聿东等著：《中国国有企业改革40年研究》，广东经济出版社2019年版<br />8. 戚聿东 肖旭等著：《深化国有企业改革的战略设计》，中国社会科学出版社2020年版<br /><p><br /></p><p>（二）主要论文（独立或一作）</p>1.资源优化配置的垄断机制—兼论我国反垄断立法的指向，《经济研究》1997年第2期<br />2.我国国有企业战略性改组的目标刍议，《中国工业经济》1997年第6期<br />3..中国产业集中度与经济绩效关系的实证分析，《管理世界》1998年第4期<br />4.我国自然垄断产业分拆式改革的误区分析及其改革出路，《管理世界》2002年第2期<br />5.我国自然垄断产业改革的总体指导思想，《经济学动态》2002年第8期<br />6.国有经济规模的合理区间探讨，《当代财经》2002年第8期<br />7.中国自然垄断产业改革的现状及政策建议，《经济学动态》2004年第6期<br />8.深化垄断行业改革的模式与路径：整体渐进改革观，《中国工业经济》2008年第6期<br />9.放松规制：中国垄断行业改革的方向，《中国工业经济》2009年第4期<br />10.委托代理条件下企业家的规模偏好及其矫正，《经济与管理研究》2009年第11期<br />11.“十二五”时期垄断行业改革的主攻方向：竞争化改造，《学术月刊》2011年第9期<br />12.第三次工业革命趋势下产业组织转型，《财经问题研究》2014年第1期<br />13.行业利润率平均化判别：垄断性行业与竞争性行业，《改革》2015年第1期<br />14.垄断行业放松规制的进程测度及其驱动因素分解，《管理世界》2016年第10期<br />15.国有企业合并重组提高了企业绩效吗，《经济管理》2016年第12期<br />16.海外产业政策实施效果研究述评，《经济学动态》2017年第5期<br />17.新经济与规制改革，《中国工业经济》2018年第3期<br />18.金融资产配置对企业价值影响的实证研究，《财贸经济》2018年第5期<br />19.新时代国有企业改革如何再出发，《管理世界》2019年第3期<br />20.数字化企业的性质:经济学解释，《财经问题研究》2019年第5期<br />21.数字期权的研究进展，《经济学动态》2019年第5期<br /><p>22.数字经济视阈下法定数字货币的经济效益与风险防范，《改革》2019年第11期</p><p>23.产业组织的数字化重构，《北京师范大学学报》（社会科学版）2020年第2期</p>24.数字经济时代的企业管理变革，《管理世界》2020年第6期<br /><br />（三）学术获奖（独立或一作）<br />1. 1994年，第三届北京市哲学社会科学中青年优秀成果奖<br />2. 2001年，第二届蒋一苇企业改革与发展学术基金论文奖<br />3. 2003年，第三届教育部人文社会科学研究优秀成果三等奖<br />4. 2011年，第四届蒋一苇企业改革与发展学术基金论文奖<br />5. 2012年，第十二届北京市哲学社会科学优秀成果一等奖<br />6. 2017年，第十四届北京市哲学社会科学优秀成果一等奖<p style="font-family: " microsoft="" yahei="" font-size:16px=""></p></div>
+                    
+                </div>				<div class="grjj">
+                    <p class="jjh">研究课题</p>
+                  
+                    <div class="bks1"><p style="font-family: " microsoft="" yahei="" font-size:16px=""></p>2001年，主持国家社科基金重点项目《经济运行中的垄断与竞争问题研究》（01AJY006）<br />2004年，主持国家社科基金一般项目《自然垄断产业改革模式的国际比较研究》（04BJL035)<br />2007年，主持国家社科基金重大项目《贯彻落实科学发展观与深化垄断行业改革研究》（07&amp;ZD016）<br />2013年，主持国家社科基金重点项目《深化国有企业改革问题研究》（13AJY012）<br />2019年，主持国家社科基金重大项目《技术标准与知识产权协同推进数字产业创新的机理与路径研究（19ZDA077）》<p style="font-family: " microsoft="" yahei="" font-size:16px=""></p></div>
+                    
+                </div>				<div class="grjj">
+                    <p class="jjh">学生情况</p>
+                    <div class="bks1"><span style="font-family: " microsoft="" yahei="" font-size:16px="">已指导博士后、博士生、硕士生140余人</span><br /></div>
+                    
+                </div>				<div class="grjj">
+                    <p class="jjh">教授课程</p>
+                    <div class="bks1"><span style="font-family: " microsoft="" yahei="" font-size:16px="">数字企业管理&nbsp; 财务管理与企业估值</span><br /></div>
+                    
+                </div>            </div>
+        </div>
+         <footer style="overflow: hidden;">
+            <div class="footers">
+                <div class="footersl">
+                    <img src="http://bs.bnu.edu.cn/newweb/images/ewm.jpg" alt="" class="imgewm">
+                    <div class="footerxx">
+                        <p>Copyright © 2020 北京师范大学经济与工商管理学院</p>
+                        <p><i class="fas fa-map-marker-alt"></i> 地址：北京市新街口外大街19号</p>
+                        <p><i class="fas fa-portrait"></i> 传真：010-58801867</p>
+                        <p><i class="fas fa-phone"></i> 电话：010-58801867</p>
+                        <p><i class="fas fa-envelope"></i> 邮编：100875</p>
+                    </div>
+                </div>
+                <img src="http://bs.bnu.edu.cn/newweb/images/db.png" alt="" width="140" class="dbimg">
+                <img src="http://bs.bnu.edu.cn/newweb/images/yx.png" alt="" class="yuanxun">
+            </div>
+        </footer>
+    </div>
+	<div class="share">
+		  <div id="appgame-leftside-share">
+	        <div class="appgame-leftside-share rwt_share" id="rwt_share">
+	         
+	        <!--<a class="appgame-leftside-search" data-cmd="search" title="search"  href="javascript:void(0);" onclick="opens('id')">search</a> --> <!--<div class="searchs" id="id">
+	         <form name="dataForm" action="/cms/search/searchResults.jsp" target="_blank" method="post" accept-Charset="utf-8"  onsubmit="document.charset='utf-8';">
+			        	<p>
+			        		<input name="siteID" size="4" value="127" type = "hidden">
+			        		<input type="text" name="query" id="search" class="searchInput" value="输入搜索词">
+			        		<button type="submit"></button>
+			        	</p>
+			        	</form>
+			        </div>-->
+			        <!-- <a class="appgame-leftside-weixin" data-cmd="weixin" title="">微信</a> -->
+                    
+			        <!-- <a class="appgame-leftside-qzone" data-cmd="qzone" title="">qq空间</a>
+			        
+			        <a class="appgame-leftside-tsina" data-cmd="tsina" title="">微博</a> -->			    </div>
+			        <a class="appgame-leftside-top" onclick="gotoTPoint()"></a>			</div>
+			        
+		</div>
+</body>
+<script src="http://gh.bnu.edu.cn/js/jquery-1.9.0.min.js"></script>
+<script src="http://gh.bnu.edu.cn/js/share.min.js"></script>
+<script>
+    var dj=document.getElementById('dianji');
+    var jjc=document.getElementById('jjc');
+    var dj1=document.getElementById('dianji1');
+    var jjc1=document.getElementById('jjc1');
+    var a=1;
+    function zhedie(m,n){
+        m.onclick=function(){
+            if(a==1){
+                n.className='jjc';
+                m.className='dianji1'
+                a=0;
+            }else{
+                n.className='jjc1';
+                m.className='dianji'
+                a=1;
+            }
+        }
+    }
+    zhedie(dj,jjc);
+    zhedie(dj1,jjc1);
+	
+	
+</script>
+<script>
+
+	
+	
+    
+
+    /*回到顶部*/
+	$(function(){
+	 	$(window).resize(function(){
+						var h = $(window).height();
+						$('.goTop').css('top',h-60);
+						$(window).scroll(function(){				
+							var scrollTop = $(document).scrollTop();					  
+							$('.goTop').stop().animate({
+								top: h + scrollTop-60
+							},300);
+						});
+		}).resize();
+		});
+	//gotop
+
+			$('.goTop').click(function(){
+
+				$('body,html').stop().animate({scrollTop:0});
+
+				return false;
+
+			});
+	
+	function gotoTPoint(){
+		$("html,body").animate({scrollTop:0},500);
+	}
+</script>
+</html>

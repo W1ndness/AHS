@@ -1,0 +1,765 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>北京交通大学交通运输学院</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link href="/static/trans/css/bootstrap.css" rel="stylesheet">
+ 	<link href="/static/trans/css/custom.css" rel="stylesheet">
+ 	<link href="/static/trans/css/custom_list.css" rel="stylesheet">
+	<link rel="stylesheet" href="/static/ace1.3/css/jquery.dataTables.min.css" />
+	<style>
+	    .title_a{
+			margin-right:5px;
+			width:150px;
+			float:left;
+			}
+	    .title_a a{
+			line-height:30px;
+			}
+			
+		.zhiwei strong{margin-right:17px;}
+		.zhiwei a{margin-right:10px;display:inline;width:150px;float:left;margin-top:10px;}
+		#words a{line-height:25px;width:30px;height:25px;text-align:center;background:#e8f3fe;float:left;border:1px solid #c6dff7;margin-right:15px;margin-top:15px;}
+		#words a:hover{background:#11518f;color:#FF0;border:1px solid #11518f;}
+		.sub_con_tp{width:880px; margin:0 auto; padding:8px 0 2px}
+		.sub_con_tp h3{background:#fff url(/static/trans/img/h4_head.jpg) no-repeat left center;font-size:14px; font-weight:bold; color:#08509A; text-align:left; padding:14px 0 14px 40px; border-bottom:1px solid #AAAAAA; margin-bottom:12px}
+		.sub_con_tp p{line-height:24px; }
+		.sub_con_tp ul,li {margin:auto;}
+		
+		.sub_con_tp1{width:880px; margin:0 auto; padding:8px 0 2px}
+		.sub_con_tp1 h3{font-size:14px; font-weight:bold; color:#08509A; text-align:center; padding:14px 0; border-bottom:1px solid #AAAAAA; margin-bottom:12px}
+		.sub_con_tp1 p{line-height:24px; margin-bottom:8px; }								
+	</style> 
+    <script src="/static/ace1.3/js/jquery/1.11.0/jquery.min.js"></script>
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="/static/trans/js/html5shiv.js"></script>
+    <![endif]-->
+
+</head>
+<body>
+	<div class="boxbody">
+		<header>
+			<div class="container clearfix">
+				<div class="row-fluid">
+					<div class="span12">
+						<h1 class="brandlogo"><a href="http://trans.bjtu.edu.cn/cms/"><img src="/static/trans/img/logo.png" alt=""></a></h1>
+						<div class="topinfo">
+							<div class="list-soc">
+								<a href="http://trans1.bjtu.edu.cn/english/index.php">English</a>
+							</div>
+							<div class="infophone">
+								<div class="control-group">
+									<div class="controls">
+										<div class="input-prepend">
+                            				<form name="keyform" action="http://trans.bjtu.edu.cn/cms/item/" method="get">
+                              				<span class="add-on"><i class="icon-search"></i></span>
+                              				<input  id="inputIcon" type="text" class="input-medium"  name="keyword">
+                              				</form>
+                              			</div>
+                          			</div>
+                        		</div>
+							</div>
+			  			</div>
+						<div class="clearfix"></div>
+						<div class="row-nav navbar">
+							<div class="navbar-inner">
+								<ul id="nav" class="nav">
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+		<div class="text-center">
+			<img src="/static/trans/img/sha.png" class="slidershadow" alt="">
+		</div>
+		<div id="wrap">
+      		<div class="row-fluid container bggay">
+        		<div class="span4">
+          			<div class="leftbox_top">
+          				<div class="h4border">
+		                	<p>赵晖</p>
+		                	<div class="clearfix"></div>
+		                </div>
+						<div class="list_sidebar">
+              				<div class="categories">
+              					<ul>
+									<li><a href="#basic">基本情况</a></li>
+                                    
+                                    <li><a href="#gzjl">工作经历</a></li>
+                                    
+                                    <li><a href="#yjfx">研究方向</a></li>
+                                    
+                                    <li><a href="#zszy">招生专业</a></li>
+                                    
+                                    <li><a href="#kyxm">科研项目</a></li>
+                                    
+                                    <li><a href="#jxgz">教学工作</a></li>
+                                    
+                                    <li><a href="#lwqk">论文/期刊</a></li>
+                                    
+                                    <li><a href="#zzyz">专著/译著</a></li>
+                                    
+                                    <li><a href="#zl">专利</a></li>
+                                    
+                                    <li><a href="#rjzzq">软件著作权</a></li>
+                                    
+                                    <li><a href="#hjry">获奖与荣誉</a></li>
+                                    
+                                    <li><a href="#shjz">社会兼职</a></li>
+                                    
+              					</ul>
+              				</div>
+          				</div>
+          			</div>
+        		</div>
+        		<div class="span8">
+          			<div class="mainleft_box "> 
+						<h4 class="h4border">	            	
+				  		个人简介
+		        		</h4>
+                		<div class="main_nr">
+							<div style="padding:0px 10px;">
+				            	
+				            	<div class="sub_con_tp">
+				            		<h3 style="width:830px;float:right"><a name="basic">基本情况</a></h3>
+									<div style="padding:15px; line-height:25px;">
+										<div class="MsoNormal">
+											<table class="MsoNormalTable" border="0" cellspacing="0" cellpadding="0" width="840" align="center" height="1964" style="width: 840px; border-collapse: collapse; height: auto">
+												<tbody>
+													<tr style="height: 20pt">
+														<td width="80" style=" padding-bottom: 0cm; padding-left: 5.4pt; padding-right: 5.4pt; height: 20pt;  padding-top: 0cm">
+															<p style="text-align: left"><span >姓&nbsp;&nbsp;名：</span></p>
+														</td>
+														<td width="216" style=" border-left: medium none; padding-bottom: 0cm; padding-left: 5.4pt; width: 162pt; padding-right: 5.4pt; height: 20pt;  padding-top: 0cm">
+															<p style="text-align: left"><span >赵晖</span></p>
+														</td>
+														<td valign="top" rowspan="9" width="245" style=" border-left: medium none; padding-bottom: 0cm; padding-left: 5.4pt; width: 142.05pt; padding-right: 5.4pt; height: 20pt;  padding-top: 0cm">
+															
+															<img id="photo" src="/media/avatar/2017/10/03/20171003090824_71.jpg" width="216" height="252">
+														</td>
+													</tr>
+													<tr style="height: 20pt">
+														<td width="80" style=" padding-bottom: 0cm; padding-left: 5.4pt; padding-right: 5.4pt; height: 20pt; border-top: medium none;  padding-top: 0cm">
+														<p style="text-align: left"><span >职&nbsp;&nbsp;务：</span></p>
+														</td>
+														<td width="216" style=" border-left: medium none; padding-bottom: 0cm; padding-left: 5.4pt; width: 162pt; padding-right: 5.4pt; border-top: medium none;  padding-top: 0cm">
+														<p style="text-align: left"><span ></span></p>
+														</td>
+													</tr>
+													<tr style="height: 24pt">
+														<td width="80" style=" padding-bottom: 0cm; padding-left: 5.4pt; padding-right: 5.4pt; height: 24pt; border-top: medium none;  padding-top: 0cm">
+														<p style="text-align: left"><span >职&nbsp;&nbsp;称：</span></p>
+														</td>
+														<td width="216" style=" border-left: medium none; padding-bottom: 0cm; padding-left: 5.4pt; width: 162pt; padding-right: 5.4pt; height: 24pt; border-top: medium none;  padding-top: 0cm">
+														<p style="text-align: left"><span >副教授</span></p>
+														</td>
+													</tr>
+													<tr style="height: 20pt">
+														<td width="80" style=" padding-bottom: 0cm; padding-left: 5.4pt; padding-right: 5.4pt; height: 20pt; border-top: medium none;  padding-top: 0cm">
+														<p style="text-align: left"><span >学&nbsp;&nbsp;历：</span></p>
+														</td>
+														<td width="216" style=" border-left: medium none; padding-bottom: 0cm; padding-left: 5.4pt; width: 162pt; padding-right: 5.4pt; height: 20pt; border-top: medium none;  padding-top: 0cm">
+														<p style="text-align: left"><span >研究生</span></p>
+														</td>
+													</tr>
+													<tr style="height: 20pt">
+														<td width="80" style=" padding-bottom: 0cm; padding-left: 5.4pt; padding-right: 5.4pt; height: 20pt; border-top: medium none;  padding-top: 0cm">
+														<p style="text-align: left"><span >学&nbsp;&nbsp;位：</span></p>
+														</td>
+														<td width="216" style=" border-left: medium none; padding-bottom: 0cm; padding-left: 5.4pt; width: 162pt; padding-right: 5.4pt; height: 20pt; border-top: medium none;  padding-top: 0cm">
+														<p style="text-align: left"><span >博士</span></p>
+														</td>
+													</tr>
+													<tr style="height: 24pt">
+														<td width="80" style=" padding-bottom: 0cm; padding-left: 5.4pt; padding-right: 5.4pt; height: 24pt; border-top: medium none;  padding-top: 0cm">
+														<p style="text-align: left"><span >通信地址：</span></p>
+														</td>
+														<td width="216" style=" border-left: medium none; padding-bottom: 0cm; padding-left: 5.4pt; width: 162pt; padding-right: 5.4pt; height: 24pt; border-top: medium none;  padding-top: 0cm">
+														<p style="text-align: left"><span >北京交通大学交通运输学院</span></p>
+														</td>
+													</tr>
+													<tr style="height: 20pt">
+														<td width="80" style=" padding-bottom: 0cm; padding-left: 5.4pt; padding-right: 5.4pt; height: 20pt; border-top: medium none;  padding-top: 0cm">
+														<p style="text-align: left"><span >邮&nbsp;&nbsp;编：</span></p>
+														</td>
+														<td width="216" style=" border-left: medium none; padding-bottom: 0cm; padding-left: 5.4pt; width: 162pt; padding-right: 5.4pt; height: 20pt; border-top: medium none;  padding-top: 0cm">
+														<p style="text-align: left"><span >100044</span></p>
+														</td>
+													</tr>
+													<tr style="height: 20pt">
+														<td width="80" style=" padding-bottom: 0cm; padding-left: 5.4pt; padding-right: 5.4pt; height: 20pt; border-top: medium none;  padding-top: 0cm">
+														<p style="text-align: left"><span >办公电话：</span></p>
+														</td>
+														<td width="216" style=" border-left: medium none; padding-bottom: 0cm; padding-left: 5.4pt; width: 162pt; padding-right: 5.4pt; height: 20pt; border-top: medium none;  padding-top: 0cm">
+														<p style="text-align: left"><span >51687376</span></p>
+														</td>
+													</tr>
+													<tr style="height: 24pt">
+														<td width="80" style=" padding-bottom: 0cm; padding-left: 5.4pt; padding-right: 5.4pt; height: 24pt; border-top: medium none;  padding-top: 0cm">
+														<p style="text-align: left"><span >电子邮箱：</span></p>
+														</td>
+														<td width="216" style=" border-left: medium none; padding-bottom: 0cm; padding-left: 5.4pt; width: 162pt; padding-right: 5.4pt; height: 24pt; border-top: medium none;  padding-top: 0cm">
+														<p style="text-align: left"><a href="mailto:zhaoh@bjtu.edu.cn"><span >zhaoh@bjtu.edu.cn</span></a></p>
+														</td>
+													</tr>
+				
+												</tbody>
+											</table>
+										</div>
+									</div>
+                                    
+                                    <h3 style="width:830px;float:right;"><a name = "gzjl">工作经历</a></h3>
+									<div style="padding:15px; line-height:25px;">
+										<div class="MsoNormal">
+											<table class="MsoNormalTable" border="0" cellspacing="0" cellpadding="0" width="840" align="center" height="1964" style="width: 840px; border-collapse: collapse; height: auto">
+												<tbody>
+													<tr>
+														<td width="659" style=" padding-bottom: 0cm; padding-left: 5.4pt; padding-right: 5.4pt; height: 24pt;  padding-top: 0cm">
+															 <ul>
+	<li>
+		<span style="line-height:2;">2013/11 - 今，北京交通大学，交通运输学院，副教授&nbsp;</span>
+	</li>
+	<li>
+		<span style="line-height:2;">2013/04 - 2014/03，美国佛罗里达大学，土木与航海工程系，访问学者</span>
+	</li>
+	<li>
+		<span style="line-height:2;">2008/01 - 2013/10，北京交通大学，交通运输学院，讲师</span>
+	</li>
+</ul>
+														</td>
+													</tr>
+
+												</tbody>
+											</table>
+										</div>
+									</div>
+                                    
+                                    <h3 style="width:830px;float:right;"><a name = "yjfx">研究方向</a></h3>
+									<div style="padding:15px; line-height:25px;">
+										<div class="MsoNormal">
+											<table class="MsoNormalTable" border="0" cellspacing="0" cellpadding="0" width="840" align="center" height="1964" style="width: 840px; border-collapse: collapse; height: auto">
+												<tbody>
+													<tr>
+														<td width="659" style=" padding-bottom: 0cm; padding-left: 5.4pt; padding-right: 5.4pt; height: 24pt;  padding-top: 0cm">
+															 <ul>
+
+    <li>交通运输规划与管理</li>
+
+    <li>系统科学</li>
+
+    <li>交通运输（专业学位）</li>
+
+</ul>
+														</td>
+													</tr>
+
+												</tbody>
+											</table>
+										</div>
+									</div>
+                                    
+                                    <h3 style="width:830px;float:right;"><a name = "zszy">招生专业</a></h3>
+									<div style="padding:15px; line-height:25px;">
+										<div class="MsoNormal">
+											<table class="MsoNormalTable" border="0" cellspacing="0" cellpadding="0" width="840" align="center" height="1964" style="width: 840px; border-collapse: collapse; height: auto">
+												<tbody>
+													<tr>
+														<td width="659" style=" padding-bottom: 0cm; padding-left: 5.4pt; padding-right: 5.4pt; height: 24pt;  padding-top: 0cm">
+															 <ul>
+
+    <li>交通运输规划与管理硕士</li>
+
+    <li>系统科学硕士</li>
+
+    <li>交通运输硕士</li>
+
+</ul>
+														</td>
+													</tr>
+
+												</tbody>
+											</table>
+										</div>
+									</div>
+                                    
+                                    <h3 style="width:830px;float:right;"><a name = "kyxm">科研项目</a></h3>
+									<div style="padding:15px; line-height:25px;">
+										<div class="MsoNormal">
+											<table class="MsoNormalTable" border="0" cellspacing="0" cellpadding="0" width="840" align="center" height="1964" style="width: 840px; border-collapse: collapse; height: auto">
+												<tbody>
+													<tr>
+														<td width="659" style=" padding-bottom: 0cm; padding-left: 5.4pt; padding-right: 5.4pt; height: 24pt;  padding-top: 0cm">
+															 
+
+    <ul>
+    
+        <li>研究生创新项目: 考虑停车空间约束的家庭早通勤问题研究, 2022-2024</li>
+    
+        <li>国家自然科学基金“重大”: 韧性城市交通枢纽安全风险防控与管理, 2021-2025</li>
+    
+        <li>国家自然科学基金“面上”: 移动充电车辆路径优化与运营管理, 2020-2023</li>
+    
+        <li>国家自然科学基金“面上”: 公交主导型大城市综合交通枢纽客流疏解优化, 2018-2021</li>
+    
+        <li>国家自然科学基金“创新群体”: 城市群综合交通协同组织与资源配置, 2017-2022</li>
+    
+        <li>自然科学横向项目: 人群运动相互作用数据分析 , 2015-2015</li>
+    
+        <li>基础研究项目: 基于可交易信用机制的城市停车需求管理策略研究, 2015-2017</li>
+    
+        <li>自然科学横向项目: 考虑计程票价影响的地铁网络客流分配模型及算法研究, 2014-2015</li>
+    
+        <li>科技部“973”: 多方式交通运行的协同组织与控制理论与方法, 2014-2016</li>
+    
+        <li>国家自然科学基金&quot;青年基金&quot;: 行人流运动中行为偏好形成规律理论的研究, 2014-2016</li>
+    
+        <li>国家自然科学基金&quot;优秀青年基金: 城市交通系统优化与管理, 2014-2016</li>
+    
+        <li>国家自然科学基金“面上”: 城市交通系统中停车换乘设施布局与运营优化研究, 2014-2017</li>
+    
+        <li>国家自然科学基金: 可交易的驾驶权：一种有效的维持出行畅通与可持续性发展的交通需, 2013-2016</li>
+    
+        <li>重大资助项目: 老年驾驶员驾驶行为与交通安全研究, 2013-2014</li>
+    
+        <li>基础研究项目: 用户有限理性条件下停车换乘设施选址与收费定价研究, 2013-2014</li>
+    
+        <li>国家自然科学基金“重大”: 突发事件下城市道路交通系统非常态演化机理及干预对策, 2013-2017</li>
+    
+        <li>国家自然科学基金“面上”: 动态不确定路径优化模型与算法及其在交通应急管理中的应用, 2013-2016</li>
+    
+        <li>科技部“973”: 大城市交通需求的引导理论与方法, 2012-2016</li>
+    
+        <li>国家自然科学基金“重点”: 基于出行行为的综合交通网络多方式选择与分配模型及算法研究, 2012-2016</li>
+    
+        <li>博士点基金: 基于驾驶模拟实验的车内预警信息发布方式研究, 2012-2014</li>
+    
+        <li>国家重点实验室: 地面交通需求分析与系统服务能力量化模型研究, 2012-2013</li>
+    
+        <li>科技部“863”: 微观驾驶行为分析与网络化诱导资源管理技术及系统研发, 2011-2013</li>
+    
+        <li>国家自然科学基金“面上”: 基于驾驶模拟实验的层级式行为安全模型研究, 2012-2015</li>
+    
+        <li>国家自然科学基金&quot;青年基金&quot;: 基于空间网络的城市交通出行引导策略研究, 2012-2014</li>
+    
+        <li>基础研究项目: 城市轨道交通网络突发事件下客流拥堵传播及控制方法建模研究, 2010-2012</li>
+    
+        <li>基础研究项目: 综合运输体系下的城市交通网络可靠性分析, 2011-2012</li>
+    
+        <li>博士点基金: 大型公共场所突发事件下密集人群逃生行为建模研究, 2011-2013</li>
+    
+        <li>科研专项: 客运专线成网条件下多检修基地动车组运用与检修计划优化方法, 2009-2012</li>
+    
+        <li>基础研究项目: 非常规突发事件中大规模人群的行人动力学研究, 2009-2012</li>
+    
+        <li>重大资助项目: 综合交通运输网络可靠性分析理论与方法, 2009-2011</li>
+    
+        <li>博士点基金: 基于复杂网络理论的城市交通系统结构与拥堵瓶颈协同演化特性分析, 2010-2012</li>
+    
+        <li>国家自然科学基金&quot;青年基金&quot;: 基于复杂网络理论的城市交通空间结构演化与道路选址方法研究, 2010-2012</li>
+    
+        <li>国家自然科学基金: 基于复杂网络的交通拥堵动力学特性分析, 2008-2011</li>
+    
+        <li>校科技基金: 复杂交通网络上的拥堵传播特性研究, 2008-2010</li>
+    
+    </ul>
+
+														</td>
+													</tr>
+
+												</tbody>
+											</table>
+										</div>
+									</div>
+                                    
+                                    <h3 style="width:830px;float:right;"><a name = "jxgz">教学工作</a></h3>
+									<div style="padding:15px; line-height:25px;">
+										<div class="MsoNormal">
+											<table class="MsoNormalTable" border="0" cellspacing="0" cellpadding="0" width="840" align="center" height="1964" style="width: 840px; border-collapse: collapse; height: auto">
+												<tbody>
+													<tr>
+														<td width="659" style=" padding-bottom: 0cm; padding-left: 5.4pt; padding-right: 5.4pt; height: 24pt;  padding-top: 0cm">
+															 <ul>
+	<li>
+		<span style="line-height:2;">本科课程：交通规划、建模方法及应用、交通工程学</span>
+	</li>
+	<li>
+		<span style="line-height:2;">研究生课程：数据分析及应用</span> 
+	</li>
+</ul>
+<p>
+	<span style="line-height:2;"></span> 
+</p>
+
+														</td>
+													</tr>
+
+												</tbody>
+											</table>
+										</div>
+									</div>
+                                    
+                                    <h3 style="width:830px;float:right;"><a name = "lwqk">论文/期刊</a></h3>
+									<div style="padding:15px; line-height:25px;">
+										<div class="MsoNormal">
+											<table class="MsoNormalTable" border="0" cellspacing="0" cellpadding="0" width="840" align="center" height="1964" style="width: 840px; border-collapse: collapse; height: auto">
+												<tbody>
+													<tr>
+														<td width="659" style=" padding-bottom: 0cm; padding-left: 5.4pt; padding-right: 5.4pt; height: 24pt;  padding-top: 0cm">
+															 
+<p class="MsoNormal">
+	<br />
+</p>
+<ul>
+	<li>
+		Yu Ruikang, Zhao Hui, et al. 2019. Analysis on risk taking
+behaviors of electric bicycle riders in response to pedestrian countdown signal
+devices. Traffic Injury Prevention 20(2), 182-188. (SCI)
+	</li>
+	<li>
+		Zhang, Wenwei, Zhao Hui, Jiang Rui. 2018. Impact of Capacity Drop
+on Commuting Systems under Uncertainty. Journal of Advanced Transportation 2018
+(2018), 6809304. (SCI)
+	</li>
+	<li>
+		Rong Bosheng, Zhao Hui, et al. 2018. Continuum dynamic traffic
+assignment model for autonomous vehicles in a polycentric urban city with
+environmental consideration. Mathematical Problems in Engineering (In Press).
+(SCI)
+	</li>
+	<li>
+		Cui Shaohua; Zhao Hui, et al. 2018. Multiple Types of Plug-In
+Charging Facilities' Location-Routing Problem with Time Windows for Mobile
+Charging Vehicles. Sustainability 10, no. 8: 2855. (SCI)
+	</li>
+	<li>
+		Cui Shaohua, Zhao Hui, et al. 2018. Locating Multiple Size and
+Multiple Type of Charging Station for Battery Electricity Vehicles.
+Sustainability 10, no. 9: 3267. (SCI)
+	</li>
+	<li>
+		Cui Shaohua; Zhao Hui, et al. 2018. &nbsp;Locating charging stations of
+various sizes with different numbers of chargers for battery electric vehicles.
+Energies<span>&nbsp;11, no. 11: 3056</span>. (SCI)
+	</li>
+	<li>
+		Cui Shaohua; Zhao Hui, et al. 2018. The Mobile Charging Vehicle
+Routing Problem with Time Windows and Recharging Services. Computational
+Intelligence and Neuroscience, 2018 5075916. (SCI)
+	</li>
+	<li>
+		于瑞康, 赵晖. 2017. 信号交叉口行人空间分布与人车冲突行为分析. 山东科学, 30(4) 80-85.
+	</li>
+	<li>
+		Gao, Ge, Sun Huijun, Wu Jianjun, Zhao Hui. 2016. Tradable credits
+scheme and transit investment optimization for a two‐mode traffic network.
+Journal of Advanced Transportation 50 1616-1629. (SCI)
+	</li>
+	<li>
+		Zhang Cuiping, Yan Xuedong, An Meiwu, Hui Zhao. 2015. Spatial
+Influence Analysis of Traffic Safety in Diverging Areas between Freeway
+Segments and Off Ramps, Discrete Dynamics in Nature and Society, 2015 357579.
+(SCI)
+	</li>
+	<li>
+		Wang Wei, Zhao Hui, Wang Guanxing, Zhou Huazhen, 2014. The study of
+the Beijing traffic noise pollution control countermeasures. Applied Mechanics
+&amp; Materials, 2014 641-642.
+	</li>
+	<li>
+		Zhao Hui, Yan Xuedong, Gao Ziyou. 2013. Transportation
+serviceability analysis for metropolitan commuting corridors based on modal
+choice modeling. Transportation Research Part A: Policy and Practice 49,
+270-284. (SCI)
+	</li>
+	<li>
+		Zhao Hui, Zhang Cuiping, Gao Ziyou, Si Bingfeng. 2013. Risk-based
+transit schedule design for a fixed route from the view of equity. Journal of
+Transportation Engineering, 139(11), 1086-1094. (SCI)
+	</li>
+	<li>
+		倪爽, 赵晖, 孙会君. 2013. 线性单中心城市停车换乘系统平衡问题建模. 交通运输系统工程与信息13(2), 124-129.(EI)
+	</li>
+	<li>
+		Yan Xuedong, Zhao Hui. 2013. Reliability and Vulnerability Analysis
+Methodology for Comprehensive Transportation Systems under Influence of
+Disasters. Disaster Advances, 6(2), 54-57. (SCI)
+	</li>
+	<li>
+		Zhao Hui, Yan Xuedong, Zhang Cuiping, An Meiwu. 2012.
+Serviceability based park and ride choice behaviors influenced by road toll
+policy for metropolitan commuting corridors. Applied Mechanics and Materials,
+178-181, 1891-1897. (EI)
+	</li>
+	<li>
+		Wang Ziyang, Ma Jian, Zhao Hui, Qin Yong, Jia Limin.2012. Effect of
+prediction on the self-organization of pedestrian counter flow, Journal of
+Physics A, 45(30), 305004. (SCI)
+	</li>
+	<li>
+		Wang Ziyang, Ma Jian, Zhao Hui, Qin Yong, Zhu Wei, Jia Limin.
+Effect of aspiration and mean gain on the emergence of cooperation in
+unidirectional pedestrian flow, Communication in theoretical physics, 2013,
+59(3), 379-383. (SCI)
+	</li>
+	<li>
+		Zhang Cuiping, Yan Xuedong, An Meiwu, Wang Bin, Zhao Hui. 2012.
+Safety Evaluation for Signalized Intersections using GIS Techniques and
+Statistic Analysis, Applied Mechanics and Materials 178-181, 2725-2730. (EI)
+	</li>
+	<li>
+		刘丹, 闫学东, 赵晖, 王江锋. 2011. 综合交通系统可靠性研究综述. 交通与运输, B12, 40-44.
+	</li>
+	<li>
+		Zhao Hui, Gao Ziyou. 2010. Reserve capacity and exit choosing in
+pedestrian evacuation dynamics. Journal of Physics A: Mathematical and
+Theoretical, 43: 105001. (SCI)
+	</li>
+	<li>
+		Sun Huijun, Wu Jianjun, Zhao Hui. 2008. A robust matching model of
+capacity to defense cascading failure on complex networks. Physica A:
+Statistical Mechanics and its Applications, 387 (1): 6431-6435. (SCI)
+	</li>
+	<li>
+		Zhao Hui, Gao Ziyou. 2007. Modular effects on epidemic dynamics in
+small-world networks. Europhysics Letters, 79: 38002. (SCI)
+	</li>
+	<li>
+		Zhao Hui, Gao Ziyou. 2007. Cascade defense via navigation in scale
+free networks. European Physics Journal B, 57: 95-101. (SCI)
+	</li>
+	<li>
+		Zhao Hui, Gao Ziyou. 2007. Organizations of rich nodes in complex
+networks. Physica A: Statistical Mechanics and its Applications, 381: 473-481.
+(SCI)
+	</li>
+	<li>
+		Zheng Jianfeng, Gao Ziyou, Zhao Hui. 2007. Properties of
+asymmetrical evolving networks. Physica A: Statistical Mechanics and its
+Applications, 376: 719-724. (SCI)
+	</li>
+	<li>
+		Zhao Hui, Gao Ziyou. 2007. Generalized shortest path and traffic
+equilibrium in complex transportation networks. Modern Physics Letters B, 21
+(20) :1343-1349. (SCI)
+	</li>
+	<li>
+		Zhao Hui, Gao Ziyou. 2007. Modular epidemic spreading in
+small-world networks. Chinese Physics Letters, 24 (4): 1114-1117. (SCI)
+	</li>
+	<li>
+		Zhao Hui, Gao Ziyou. 2007. Weighted networks model based on traffic
+dynamics with local perturbation. Communication in theoretical physics, 48 (5):
+953-956. (SCI)
+	</li>
+	<li>
+		Zhao Hui, Gao Ziyou. 2006. Local events and dynamics on weighted
+complex networks. Chinese Physics Letters, 23 (8): 2311-2314. (SCI)
+	</li>
+	<li>
+		Zhao Hui, Gao Ziyou. 2006. Self organization of topology and weight
+dynamics on networks from merging and regeneration. Chinese Physics Letters, 23
+(2): 275-278. (SCI)
+	</li>
+	<li>
+		赵晖, 高自友. 2006. 变分不等式的混沌搜索算法. 北京交通大学学报, 30(6), 85-88.
+	</li>
+	<li>
+		Zhao Hui, Gao Ziyou. 2005. Equilibrium algorithm with nonmonotone
+line search technique for solving the traffic assignment problems. Journal of
+System Science and Complexity, 18 (4): 543-555.
+	</li>
+	<li>
+		Zhao Hui, Gao Ziyou. 2005. Chaos search method for bilevel
+programming. Journal of Systems Science and Information, 3 (3): 553-560.
+	</li>
+</ul>
+<p>
+	<br />
+</p>
+<p>
+	<br />
+</p>
+
+														</td>
+													</tr>
+
+												</tbody>
+											</table>
+										</div>
+									</div>
+                                    
+                                    <h3 style="width:830px;float:right;"><a name = "zzyz">专著/译著</a></h3>
+									<div style="padding:15px; line-height:25px;">
+										<div class="MsoNormal">
+											<table class="MsoNormalTable" border="0" cellspacing="0" cellpadding="0" width="840" align="center" height="1964" style="width: 840px; border-collapse: collapse; height: auto">
+												<tbody>
+													<tr>
+														<td width="659" style=" padding-bottom: 0cm; padding-left: 5.4pt; padding-right: 5.4pt; height: 24pt;  padding-top: 0cm">
+															 
+<ol>
+	<li>
+		吴建军，高自友，孙会君，赵晖. 城市交通系统复杂性 —— 复杂网络方法及其应用. 科学出版社，2010
+	</li>
+</ol>
+
+														</td>
+													</tr>
+
+												</tbody>
+											</table>
+										</div>
+									</div>
+                                    
+                                    <h3 style="width:830px;float:right;"><a name = "zl">专利</a></h3>
+									<div style="padding:15px; line-height:25px;">
+										<div class="MsoNormal">
+											<table class="MsoNormalTable" border="0" cellspacing="0" cellpadding="0" width="840" align="center" height="1964" style="width: 840px; border-collapse: collapse; height: auto">
+												<tbody>
+													<tr>
+														<td width="659" style=" padding-bottom: 0cm; padding-left: 5.4pt; padding-right: 5.4pt; height: 24pt;  padding-top: 0cm">
+															 
+
+														</td>
+													</tr>
+
+												</tbody>
+											</table>
+										</div>
+									</div>
+                                    
+                                    <h3 style="width:830px;float:right;"><a name = "rjzzq">软件著作权</a></h3>
+									<div style="padding:15px; line-height:25px;">
+										<div class="MsoNormal">
+											<table class="MsoNormalTable" border="0" cellspacing="0" cellpadding="0" width="840" align="center" height="1964" style="width: 840px; border-collapse: collapse; height: auto">
+												<tbody>
+													<tr>
+														<td width="659" style=" padding-bottom: 0cm; padding-left: 5.4pt; padding-right: 5.4pt; height: 24pt;  padding-top: 0cm">
+															 
+
+														</td>
+													</tr>
+
+												</tbody>
+											</table>
+										</div>
+									</div>
+                                    
+                                    <h3 style="width:830px;float:right;"><a name = "hjry">获奖与荣誉</a></h3>
+									<div style="padding:15px; line-height:25px;">
+										<div class="MsoNormal">
+											<table class="MsoNormalTable" border="0" cellspacing="0" cellpadding="0" width="840" align="center" height="1964" style="width: 840px; border-collapse: collapse; height: auto">
+												<tbody>
+													<tr>
+														<td width="659" style=" padding-bottom: 0cm; padding-left: 5.4pt; padding-right: 5.4pt; height: 24pt;  padding-top: 0cm">
+															 教育部自然科学奖一等奖 “面向交通运输系统的复杂网络理论与方法” 排名第8名
+
+														</td>
+													</tr>
+
+												</tbody>
+											</table>
+										</div>
+									</div>
+                                    
+                                    <h3 style="width:830px;float:right;"><a name = "shjz">社会兼职</a></h3>
+									<div style="padding:15px; line-height:25px;">
+										<div class="MsoNormal">
+											<table class="MsoNormalTable" border="0" cellspacing="0" cellpadding="0" width="840" align="center" height="1964" style="width: 840px; border-collapse: collapse; height: auto">
+												<tbody>
+													<tr>
+														<td width="659" style=" padding-bottom: 0cm; padding-left: 5.4pt; padding-right: 5.4pt; height: 24pt;  padding-top: 0cm">
+															 <p class="MsoNormal" align="left">
+	<br />
+</p>
+<ol>
+	<li>
+		<span style="line-height:1.5;">Journal of
+Transportation Engineering期刊审稿人</span> 
+	</li>
+	<li>
+		<span style="line-height:1.5;">Journal of
+Transportation Safety &amp; Security期刊审稿人</span> 
+	</li>
+	<li>
+		<span style="line-height:1.5;">Transportation Research Board会议审稿人</span> 
+	</li>
+	<li>
+		<span style="line-height:1.5;">Chinese Physics Letters期刊审稿人</span> 
+	</li>
+</ol>
+<p>
+	<br />
+</p>
+
+														</td>
+													</tr>
+
+												</tbody>
+											</table>
+										</div>
+									</div>
+                                    
+
+								</div>
+								<div class="clear"></div>
+								
+							</div>
+						</div>
+                  		<div class="clearfix"></div>
+              		</div>
+        		</div>
+       		</div>
+       		<div id="push"></div>
+    	</div>
+	    <div id="footer">
+       		<div class="copy">
+        		<p>版权所有©北京交通大学交通运输学院 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;BJTUICP备:14010705 &nbsp;&nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp;&nbsp;  学院信箱：saad@bjtu.edu.cn</p>
+      		</div>
+  		</div>
+	</div>
+
+		<script>
+		    $.ajax({
+		      dataType: 'JSONP',
+		      url:"http://trans.bjtu.edu.cn/ajax_menu/",
+		      success: function(data){
+		      	var arch_str = '<li class="first"><a href="http://trans.bjtu.edu.cn/cms/">首页</a></li>';
+		      	var left_Str = '';
+		        $.each(data, function(i, n)
+		        {
+		        	arch_str = arch_str + '<li class="divider-vertical"></li><li class="dropdown '
+		        	if (n.id == 16){arch_str = arch_str + 'active'}
+		        	arch_str = arch_str + '"><a href="http://trans.bjtu.edu.cn/cms/item/?cat=' + n.id +'">'+n.name+'</a></li>';
+
+		        	if (n.vcs)
+		        	{
+		        		$.each(n.vcs, function(i, m){
+		        			if (n.id == 16)
+		        			{
+		        				left_Str = left_Str + '<li><a target="_parent"  href="http://trans.bjtu.edu.cn/cms/item/?cat=' + m.id +'">' +m.name + '</a>';
+		        			
+		        				if (m.cvcs)
+		        				{
+		        					left_Str = left_Str + '<ul class="sec_li">';
+			        				$.each(m.cvcs, function(i, k){
+					        				left_Str = left_Str + '<li><a target="_parent"  href="http://trans.bjtu.edu.cn/cms/item/?cat=' + k.id +'">' +k.name + '</a></li>';
+					        		});
+					        		left_Str = left_Str + '</ul>';
+		        				}
+		        				left_Str = left_Str + '</li>';
+		        			}
+		        		});
+		        	}
+		        });
+		        $("#nav").html(arch_str);
+		      }
+		    });
+		</script>
+</body>
+</html>

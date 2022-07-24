@@ -1,0 +1,491 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0">
+    <title>北京师范大学工商与经济管理学院</title>
+    <link rel="stylesheet" href="http://bs.bnu.edu.cn/new-ver-css/reset.css">
+    <link rel="stylesheet" href="http://bs.bnu.edu.cn/new-ver-css/index.css">
+	<link rel="stylesheet" href="http://bs.bnu.edu.cn/new-ver-css/xyslist.css">
+	<link rel="stylesheet" href="http://bs.bnu.edu.cn/new-ver-css/xys-tf.css">
+    <style>
+        .container{
+            width:100%;
+            height: auto;
+            overflow: hidden;
+        }
+        .header{
+            width:100%;
+            height:116px;
+            background:#EFF8FF;
+        }
+        .logo1{
+            width:1200px!important;
+            margin:0 auto;
+            position:relative;
+            float: none;
+			display:block;
+        }
+        .logo2{
+            float:right;
+        }
+        .logo1 p{
+            position:absolute;
+            top:5px;
+            right:5px;
+            font-size:13px;
+        }
+        .logo1 p:hover{
+            color:#112769;
+        }
+        .tu{
+            width:100%;
+            height:240px;
+            background:url('http://bs.bnu.edu.cn/newweb/grzy/images/tu.jpg') no-repeat top center;
+            background-size: 100%;
+        }
+        .lujing{
+            width:1200px;
+            height:58px;
+            margin:0 auto;
+            border-bottom:1px solid #aaa;
+            overflow:hidden;
+        }
+        .lujings{
+            margin:24px 0 0 0;
+            font-size:14px;
+        }
+        .content{
+            color:#333;
+            width:1200px;
+/*            height:2000px;*/
+            margin:0 auto;
+            margin-top:40px;
+/*            background:#c4c4c4;*/
+        }
+        
+        .xian{
+            width:100%;
+            height:8px;
+            background:#9A0812;
+        }
+        
+        .leftc{
+            float:left;
+        }
+        .rightc{
+            float:left;
+            margin-left:50px;
+/*            background:#666;*/
+            width:880px;
+/*            height:1000px;*/
+        }
+        .rheader{
+            width:880px;
+            height:210px;
+/*            background:yellow;*/
+        }
+        .xm{
+            font-size:30px;
+            height:40px;
+/*            border-bottom:4px solid #9A0812;*/
+            width:auto;
+            float:left;
+            line-height:40px;
+			margin-right:30px;
+        }
+        .zhiw{
+            font-size:18px;
+            height:40px;
+            line-height:50px;
+            margin-bottom:30px;
+        }
+        .tel{
+                font-size: 16px;
+                margin-top: 10px;
+                line-height: 20px;
+        }
+        .grjj{
+/*            height:300px;*/
+            width:880px;
+/*            background:yellow;*/
+            padding-bottom:40px;
+        }
+        .jjh{
+                font-size: 20px;
+                border-bottom: 1px solid #cecece;
+                height: 40px;
+                line-height: 40px;
+                padding-left: 30px;
+                background: url(http://bs.bnu.edu.cn/newweb/grzy/images/zw.png) no-repeat 0 16px;
+        }
+        
+        .jjc{
+            font-size:14px;
+            margin-top:30px;
+           
+            line-height:28px;
+            overflow:hidden;
+            text-align: justify;
+            text-justify:inter-ideograph;
+        }
+        .jjc1{
+            height:225px;
+            font-size:14px;
+            margin-top:30px;
+            
+            line-height:28px;
+            overflow:hidden;
+            text-align: justify;
+            text-justify:inter-ideograph;
+        }
+        
+        .dianji1{
+                background: url(http://bs.bnu.edu.cn/newweb/grzy/images/zw.png) no-repeat 0 -50px;
+                width: 13px;
+                height: 13px;
+                cursor: pointer;
+                display: block;
+            margin-top: 20px;
+            transition: all .2s linear;
+        }
+        .dianji1:hover{
+            background: url(http://bs.bnu.edu.cn/newweb/grzy/images/zw.png) no-repeat 0 -64px;
+        }
+        
+        .dianji{
+                background: url(http://bs.bnu.edu.cn/newweb/grzy/images/zw.png) no-repeat 0 -24px;
+                height: 13px;
+                cursor: pointer;
+                display: block;
+            margin-top: 20px;
+            transition: all .2s linear;
+        }
+        .dianji:hover{
+            background: url(http://bs.bnu.edu.cn/newweb/grzy/images/zw.png) no-repeat 0 -37px;
+        }
+        #jjc1{
+            text-indent:0em;
+        }
+        
+        .bks{
+            font-size:14px;
+            font-weight: 800;
+            margin-top:30px;
+            height:auto;
+            line-height:36px;
+        }
+        .bks1{
+            font-size:14px;
+            margin-top:30px;
+            height:auto;
+            line-height:36px;
+        }
+        .bksc{
+            height:36px;
+            line-height:36px;
+            font-size:14px;
+        }
+        
+        .yanzheng{
+            width:1200px;
+            height:100px;
+            margin:0 auto;
+        }
+        .yanzheng img{
+            display:block;
+            margin-top:26px;
+            float:left;
+        }
+		
+#appgame-leftside-share{width:42px; height:216px; position: fixed;bottom: 30px;right: 30px; z-index:9999;}
+.appgame-leftside-share{width:42px; height:259px;}
+#appgame-leftside-share a{display:block; width:42px; height:44px; background-color:#e6e6e6; z-index:1; position:absolute; left:0; box-sizing:border-box; -moz-box-sizing:border-box; border:1px #ddd solid; background-image:url(http://gh.bnu.edu.cn/images/share-icons.png); background-repeat:no-repeat; margin:0;  transition:0.4s; -webkit-transition:0.4s; -moz-transition:0.4s;}
+#appgame-leftside-share a:hover{background-color:#fff; border:1px #eee solid; z-index:2;}
+/*.appgame-leftside-weixin{top:0; background-position:-88px 0;}
+.appgame-leftside-weixin:hover{background-position:0px 0;}
+.appgame-leftside-qzone{top:43px; background-position:-88px -44px;}
+.appgame-leftside-qzone:hover{background-position:0px -44px;}*/
+.appgame-leftside-search{top:86px; background-position:-93px -89px;}
+.appgame-leftside-search:hover{background-position:-5px -86px;}
+.appgame-leftside-weixin{top:129px; background-position:-88px 0px;}
+.appgame-leftside-weixin:hover{background-position:0px 0px;}
+/*.appgame-leftside-fbook{top:172px; background-position:-88px -176px;}
+.appgame-leftside-fbook:hover{background-position:0px -176px;}
+.appgame-leftside-twi{top:215px; background-position:-88px -220px;}
+.appgame-leftside-twi:hover{background-position:0px -220px;}*/
+#appgame-leftside-share .appgame-leftside-top{background-image:url(http://gh.bnu.edu.cn/images/leftnav-off.png); background-position:-1px -395px; top:130px; cursor:pointer;}
+
+.rwt_share {
+/*	overflow:hidden;*/
+	float:left;
+	position:relative;
+}
+.rwt_share a {
+	display:inline-block;
+	margin-right:10px;
+	text-indent:-9999px;
+	margin-bottom:10px;
+	width:24px;
+	height:24px;
+	overflow:hidden;
+	cursor:pointer;
+	float:left;
+	font-size:12px;
+}
+.rwts_weixin {
+	background-position:0 -1612px;
+}
+.rwts_tsina {
+	background-position:0 -104px;
+}
+.rwts_tqq {
+	background-position:0 -260px;
+}
+.rwts_qzone {
+	background-position:0 -52px;
+}
+.rwts_sqq {
+	background-position:0 -2652px;
+}
+.rwts_tieba {
+	background-position:0 -728px;
+}
+.rwts_renren {
+	background-position:0 -208px;
+}
+.rwts_kaixin001 {
+	background-position:0 -312px;
+}
+.rwts_tqf {
+	background-position:0 -364px;
+}
+.rwts_douban {
+	background-position:0 -468px;
+}
+.rwts_twi {
+	background-position:0 -1404px;
+}
+.rwts_fbook {
+	background-position:0 -1352px;
+}
+.rwts_ty {
+	background-position:0 -1196px;
+}
+.rwts_mogujie {
+	background-position:0 -1768px;
+}
+.rwts_meilishuo {
+	background-position:0 -1716px;
+}
+.rwts_huaban {
+	background-position:0 -1872px;
+}
+.rwts_hi {
+	background-position:0 -416px;
+}
+.rwts_tsohu {
+	background-position:0 -520px;
+}
+.rwts_more {
+	background-position:0 0;
+}
+.rwt_share_wxShow_code>img {
+	width:100%;
+}
+.bks1 li{
+	list-style:disc;
+}
+@media screen and (max-width: 1200px){
+	.logo1{
+		width:100%!important;
+	}
+	.leftc img{
+		width:50%!important;
+		height:50%!important;
+	}
+	.logo2{display:none;}
+	.lujing{
+		width:90%;
+	}
+	.content{
+		width:90%;
+	}
+	.leftc{
+		float:none;
+		
+	}
+	.tu{display:none;}
+	
+	.rightc{
+		float:none;
+		width:100%;
+		margin-left:0px;
+	}
+	.footers{width:100%;}
+	.rheader{width:100%;}
+	.grjj{width:100%;}
+}
+@media screen and (max-width: 600px){
+.l3{width:95%;}
+.share{display:none;}
+.leftc img{
+		width:70%!important;
+		height:70%!important;
+	}
+}
+  
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo1">
+                <img src="http://bs.bnu.edu.cn/newweb/grzy/images/logo.png" alt="" class="l3" style="margin-top: 25px;float:left;">
+                <img src="http://bs.bnu.edu.cn/newweb/grzy/images/logo2.png" alt="" class="logo2">
+                <a href="http://bs.bnu.edu.cn/englishversion/facultyresearch/fulltimefaculty/azmsy/119706.html"><p>ENGLISH VERSION</p></a>
+            </div>
+        </div>
+        <div class="xian"></div>
+        <div class="tu"></div>
+        <div class="lujing">
+            <div class="lujings">
+                <a href="#">师资队伍</a>
+                 | 
+                <a href="#">金融系</a>
+            </div>
+        </div>
+        <div class="content">
+            <div class="leftc">
+                <img src="/Public/upload/touxiang/03005.jpg" alt="" width="270">
+            </div>
+            <div class="rightc">
+                <div class="rheader">
+                    <p class="xm">胡海峰</p>
+                    <p class="zhiw">教授</p>
+                    <p class="tel"><strong style="display:block;width:100px;float:left;">电话</strong>：010-58808804</p> 
+                 <p class="tel"><strong style="display:block;width:100px;float:left;">E-mail</strong>：bjhuhaifeng@126.com</p>
+                 <p class="tel"><strong style="display:block;width:100px;float:left;">Office hour</strong>：周五下午3点到5点</p>
+                 <p class="tel"><strong style="display:block;width:100px;float:left;">系所中心</strong>：金融系</p>
+              </div>
+			  <div class="grjj">
+                    <p class="jjh">个人简历</p>
+                    <div class="bks1" id="jjc"><div style="top: 0px;"><p></p><p style="text-align: left;"><span style="font-size: 11pt; font-family: 宋体;">&nbsp; &nbsp; 1965</span><span style="font-size: 11pt; font-family: 宋体;">年10月生，经济学博士，教授，博士生导师，北京师范大学经济与工商管理学院金融系主任，学院学术委员会、学位委员会和教学指导委员会委员。教育部金融学类专业教学指导委员会第一届、第二届委员（2013－2017年、2018-2022年），中国国际金融学会理事、世界经济学会理事、中华外国经济学说研究会常务理事、北京区域经济学会副会长，<span style="font-size:10.5pt;font-family:宋体;">国家社科基金重大招标项目首席专家，</span>国家社科基金、国家自然科学基金、中国博士后科学基金、教育部人文社科基金、北京市社科基金、北京市自然科学基金评审专家，教育部学位与研究生教育发展中心学位论文评审、学科建设和评估咨询评审专家，清华大学、北京大学、复旦大学、重庆大学、<span style="font-size:10.5pt;font-family:宋体;">兰州大学、</span>西南大学正高级职称校外评审专家，兰州财经大学甘肃省“飞天学者”特聘教授，河南大学讲座教授，河南大学金融发展与风险评估实验室学术委员会委员。</span></p><p><strong><span style="font-size:11.0pt;font-family:宋体;">教育经历：</span></strong></p><p><span style="font-size:11.0pt;font-family:宋体;">1983-1987</span><span style="font-size:11.0pt;font-family:宋体;">年，北方交通大学物资管理工程系，获工学学士；</span></p><p><span style="font-size:11.0pt;font-family:宋体;">1987-1990</span><span style="font-size:11.0pt;font-family:宋体;">年，南开大学经济研究所，获经济学硕士；</span></p><p><span style="font-size:11.0pt;font-family:宋体;">1999-2002</span><span style="font-size:11.0pt;font-family:宋体;">年，南开大学经济研究所，获经济学博士。</span></p><p><strong><span style="font-size:11.0pt;font-family:宋体;">工作经历：</span></strong></p><p><span style="font-size:11.0pt;font-family:宋体;">1990-1993</span><span style="font-size:11.0pt;font-family:宋体;">年，首钢研究与开发公司助理研究员；</span></p><p><span style="font-size:11.0pt;font-family:宋体;">1993</span><span style="font-size:11.0pt;font-family:宋体;">－2001年，中国光大集团、光大证券项目经理、高级经理、投行部副总经理；</span></p><p><span style="font-size:11.0pt;font-family:宋体;">2001</span><span style="font-size:11.0pt;font-family:宋体;">－2002年，国海证券副总裁。</span></p><p><span style="font-size:11.0pt;font-family:宋体;">2003</span><span style="font-size:11.0pt;font-family:宋体;">年1月至今，北京师范大学经济与工商管理学院副教授、教授，博士生导师。</span></p><p><span style="font-size:11.0pt;font-family:宋体;">近年来，曾主持国家社科基金重大、<span style="font-family: 宋体; font-size: 14.6667px;">重点、</span><span style="font-family: 宋体; font-size: 14.6667px;">一般</span>项目以及教育部教育部人文社科项目、北京市社科基金、财政部、国家发改委等国家级、省部级课题多项，在《管理世界》、《世界经济》、《统计研究》、《数量经济技术经济研究》、《国际金融研究》、《经济学动态》、《财贸经济》等学术期刊发表论文多篇，出版专著、教材多部。</span></p></div></div>
+                    
+                </div>				<div class="grjj">
+                    <p class="jjh">研究领域</p>
+                    <div class="bks1"><div style="top: 0px;">﻿﻿比较金融制度、公司融资理论与政策、资产定价与企业价值评估、创业投资与私人股权投资等</div></div>
+                </div>				<div class="grjj">
+                    <p class="jjh">研究成果</p>
+                    <div class="bks1" id="jjc1"><div style="top: 0px;">﻿﻿<p><strong><span style="font-size:11.0pt;font-family:宋体;">主要论著：</span></strong></p><p><span style="font-size:11.0pt;font-family:宋体;">代表性论文</span></p><p><strong><span style="font-size:11.0pt;font-family:宋体;"></span></strong></p><p><span style=" font-size: 14pt; font-family: 黑体;"><strong></strong></span></p><p><span style=" font-size: 14pt; font-family: 黑体;"><strong></strong></span></p><p><strong><span style="font-size:14.0pt;font-family:黑体;">2022</span><span style="font-size:14.0pt;font-family:黑体;">年</span></strong></p><p><span style="font-family:'Times New Roman',serif;">[1]</span><span style="font-family:宋体;">胡海峰</span>,<span style="font-family:宋体;">宋肖肖</span>,<span style="font-family:宋体;">窦斌</span>.<span style="font-family:宋体;">数字化在危机期间的价值—来自企业韧性的证据</span>[J].<span style="font-family:宋体;">财贸经济</span>,2022(07):134-148. </p><p><span style="font-family:'Times New Roman',serif;">[2]</span><span style="font-family:宋体;">胡吉亚</span>,<span style="font-family:宋体;">胡海峰</span>.<span style="font-family:宋体;">信贷配置、融资能力与制造业高端化</span>[J].<span style="font-family:宋体;">社会科学</span>,2022(05):132-144.</p><p><span style="font-family:'Times New Roman',serif;">[3]</span><span style="font-family:宋体;">胡海峰</span>,<span style="font-family:宋体;">郭松林</span>,<span style="font-family:宋体;">窦斌</span>,<span style="font-family:宋体;">王爱萍</span>.<span style="font-family:宋体;">连锁董事网络与中国上市公司违规</span>[J].<span style="font-family:宋体;">经济与管理研究</span>,2022(03):62-88.</p><p><span style="font-family:'Times New Roman',serif;">[4]</span><span style="font-family:宋体;">程惠霞</span>,<span style="font-family:宋体;">胡海峰</span>,<span style="font-family:宋体;">曾玉藤</span>.<span style="font-family:宋体;">普惠金融全面推进乡村振兴的动力机制与行动路径——基于日本经验的启示</span>[J].<span style="font-family:宋体;">改革与战略</span>,2022,38(03):77-89..</p><p><span style="font-family:'Times New Roman',serif;">[5]</span><span style="font-family:宋体;">王爱萍</span>,<span style="font-family:宋体;">窦斌</span>,<span style="font-family:宋体;">胡海峰</span>.<span style="font-family:宋体;">企业社会责任与上市公司违规</span>[J].<span style="font-family:宋体;">南开经济研究</span>,2022(02):138-156.</p><p><strong><span style="font-size:14.0pt;font-family:黑体;">2021</span><span style="font-size:14.0pt;font-family:黑体;">年</span></strong></p><p><span style="font-family:'Times New Roman',serif;">[6]</span><span style="font-family:宋体;">王爱萍</span>,<span style="font-family:宋体;">胡海峰</span>,<span style="font-family:宋体;">张昭</span>.<span style="font-family:宋体;">金融膨胀对经济增长的抑制效应及缓释机制检验</span>[J].<span style="font-family:宋体;">金融论坛</span>,2021,26(10):21-30.</p><p><span style="font-family:'Times New Roman',serif;">[7]</span><span style="font-family:宋体;">陈世金</span>,<span style="font-family:宋体;">王爱萍</span>,<span style="font-family:宋体;">胡海峰</span>.<span style="font-family:宋体;">金融开放与产业结构变化</span>:<span style="font-family:宋体;">国际经验比较</span>[J].<span style="font-family:宋体;">国际金融研究</span>,2021(07):46-55. </p><p><span style="font-family:'Times New Roman',serif;">[8]</span><span style="font-family:宋体;">胡海峰</span>,<span style="font-family:宋体;">宋肖肖</span>.<span style="font-family:宋体;">新冠疫情以来全球资本市场韧性的评价和比较</span>[J].<span style="font-family:宋体;">深圳社会科学</span>,2021,4(03):5-14+68.</p><p><span style="font-family:'Times New Roman',serif;">[9]</span><span style="font-family:宋体;">胡海峰</span>,<span style="font-family:宋体;">宋肖肖</span>,<span style="font-family:宋体;">张超</span>.<span style="font-family:宋体;">债务杠杆对企业全要素生产率的影响及作用机制——基于中介效应模型的分析</span>[J].<span style="font-family:宋体;">贵州财经大学学报</span>,2021(03):62-73.</p><p><span style="font-family:'Times New Roman',serif;">[10]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="font-family:宋体;">胡海峰</span>,<span style="font-family:宋体;">宋肖肖</span>,<span style="font-family:宋体;">窦斌</span>.<span style="font-family:宋体;">打造有韧性的中国资本市场</span>[J].<span style="font-family:宋体;">理论探索</span>,2021(02):74-83.<span style="font-family:宋体;">（人大复印报刊资料《投资与证券》</span>2021<span style="font-family:宋体;">年</span>06<span style="font-family:宋体;">期全文转载）</span></p><p><strong><span style="font-size:14.0pt;font-family:黑体;">2020</span><span style="font-size:14.0pt;font-family:黑体;">年</span></strong></p><p><span style="font-family:'Times New Roman',serif;">[11]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="font-family:宋体;">胡海峰</span>,<span style="font-family:宋体;">宋肖肖</span>,<span style="font-family:宋体;">郭兴方</span>.<span style="font-family:宋体;">投资者保护制度与企业韧性：影响及其作用机制</span>[J].<span style="font-family:宋体;">经济管理</span>,2020(11):23-39.</p><p><span style="font-family:'Times New Roman',serif;">[12]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="font-family:宋体;">胡海峰</span>,<span style="font-family:宋体;">窦斌</span>.<span style="font-family:宋体;">“一带一路”基础设施投融资规则的探索与设计</span>[J].<span style="font-family:宋体;">人文杂志</span>,2020(10):30-39.<span style="font-family:宋体;">（人大复印报刊资料《财政金融文摘》</span>2021<span style="font-family:宋体;">年</span>02<span style="font-family:宋体;">期全文转载）</span>.</p><p><span style="font-family:'Times New Roman',serif;">[13]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="font-family:宋体;">胡海峰</span>,<span style="font-family:宋体;">宋肖肖</span>,<span style="font-family:宋体;">窦斌</span>.<span style="font-family:宋体;">金融危机以来全球资本市场韧性的表现及特征</span>[J].<span style="font-family:宋体;">郑州大学学报</span>(<span style="font-family:宋体;">哲学社会科学版</span>),2020,53(05):52-57+127. </p><p><span style="font-family:'Times New Roman',serif;">[14]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="font-family:宋体;">倪淑慧</span>,<span style="font-family:宋体;">胡海峰</span>.<span style="font-family:宋体;">我国资本市场新战略目标的相关探讨</span>[J].<span style="font-family:宋体;">理论探索</span>,2020(05):122-128.</p><p><span style="font-family:'Times New Roman',serif;">[15]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="font-family:宋体;">王爱萍</span>,<span style="font-family:宋体;">胡海峰</span>,<span style="font-family:宋体;">张昭</span>.<span style="font-family:宋体;">金融发展对收入贫困的影响及作用机制再检验——基于中介效应模型的实证研究</span>[J].<span style="font-family:宋体;">农业技术经济</span>,2020(03):70-83. </p><p><span style="font-family:'Times New Roman',serif;">[16]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="font-family:宋体;">胡吉亚</span>,<span style="font-family:宋体;">胡海峰</span>.<span style="font-family:宋体;">对保障性住房建设融资问题的思考</span>[J].<span style="font-family:宋体;">理论探索</span>,2020(02):93-99.</p><p><span style="font-family:'Times New Roman',serif;">[17]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="font-family:宋体;">倪淑慧</span>,<span style="font-family:宋体;">胡海峰</span>.<span style="font-family:宋体;">美国大公司欺诈丑闻为何接连不断</span>[J].<span style="font-family:宋体;">投资研究</span>,2020,39(01):123-133. </p><p><span style="font-family:'Times New Roman',serif;">[18]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="font-family:宋体;">胡海峰</span>,<span style="font-family:宋体;">窦斌</span>,<span style="font-family:宋体;">王爱萍</span>.<span style="font-family:宋体;">企业金融化与生产效率</span>[J].<span style="font-family:宋体;">世界经济</span>,2020,43(01):70-96.</p><p><strong><span style="font-size:14.0pt;font-family:黑体;">2019</span><span style="font-size:14.0pt;font-family:黑体;">年</span></strong></p><p><span style="font-family:'Times New Roman',serif;">[19]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="font-family:宋体;">胡海峰、马奔、王爱萍：什么样的股权结构更容易导致公司欺诈？《北京师范大学学报（哲社版）》</span>2019<span style="font-family:宋体;">年第</span>5<span style="font-family:宋体;">期（《新华文摘》</span>2020<span style="font-family:宋体;">年第</span>1<span style="font-family:宋体;">期篇目辑览收录）；</span></p><p><span style="font-family:'Times New Roman',serif;">[20]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="font-family:宋体;">胡海峰、王禹丹：互联网金融发展困境的解决之道，《人民论坛》</span>2019<span style="font-family:宋体;">年第</span>20<span style="font-family:宋体;">期；</span></p><p><span style="font-family:'Times New Roman',serif;">[21]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="font-family:宋体;">胡海峰、窦斌、王禹丹：贸易开放能否破解技术升级难题</span>?<span style="font-family:宋体;">——基于企业生产效率视角的实证分析，《河北经贸大学学报》</span>2019<span style="font-family:宋体;">第</span>3<span style="font-family:宋体;">期；</span></p><p><span style="font-family:'Times New Roman',serif;">[22]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="font-family:宋体;">王爱萍、马奔、胡海峰：公司欺诈问题研究进展，《经济学动态》</span>2019<span style="font-family:宋体;">年第</span>2<span style="font-family:宋体;">期；</span></p><p><span style="font-family:'Times New Roman',serif;">[23]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="font-family:宋体;">胡海峰、刘尔卓、王爱萍：</span>QFII<span style="font-family:宋体;">与中国上市公司的投资现金流敏感性，《经济与管理评论》</span>2019<span style="font-family:宋体;">年第</span>1<span style="font-family:宋体;">期；</span></p><p><span style="font-family:'Times New Roman',serif;">[24]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="font-family:宋体;">胡海峰、陈世金、王爱萍：改革开放</span>40<span style="font-family:宋体;">年后基础设施投资还是稳增长的法宝吗，《人文杂志》</span>2018<span style="font-family:宋体;">年第</span>6<span style="font-family:宋体;">期；</span></p><p><span style="font-family:'Times New Roman',serif;">[25]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="font-family:宋体;">胡海峰、王爱萍：金融诅咒现象的表现、效应及对中国的启示，《教学与研究》</span>2018<span style="font-family:宋体;">年第</span>4<span style="font-family:宋体;">期；</span></p><p><span style="font-family:'Times New Roman',serif;">[26]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="font-family:宋体;">胡海峰、陈世金、王爱萍：资产证券化的宏观经济效应分析，《经济学动态》</span>2017<span style="font-family:宋体;">年第</span>10<span style="font-family:宋体;">期；</span></p><p><span style="font-family:'Times New Roman',serif;">[27]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="font-family:宋体;">胡海峰、王爱萍：中国参与全球金融治理体系改革的思路和策略，《天津社会科学》</span>2017<span style="font-family:宋体;">年第</span>3<span style="font-family:宋体;">期；</span></p><p><span style="font-family:'Times New Roman',serif;">[28]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="font-family:宋体;">胡海峰、王爱萍：主权信用评级调整的因素与效应分析，《社会科学辑刊》</span>2016<span style="font-family:宋体;">年第</span>5<span style="font-family:宋体;">期；</span></p><p><span style="font-family:'Times New Roman',serif;">[29]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="font-family:宋体;">胡海峰、王爱萍：金融发展与经济增长关系研究新进展，《经济学动态》</span>2016<span style="font-family:宋体;">年第</span>5<span style="font-family:宋体;">期（人大复印报刊资料《国民经济管理》</span>2016<span style="font-family:宋体;">年第</span>9<span style="font-family:宋体;">期全文转载）；</span></p><p><span style="font-family:'Times New Roman',serif;">[30]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="font-family:宋体;">胡海峰、陈明哲：关于我国优质企业境外上市的思考，《经济纵横》</span>2016<span style="font-family:宋体;">年第</span>3<span style="font-family:宋体;">期；</span></p><p><span style="font-family:'Times New Roman',serif;">[31]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="font-family:宋体;">胡海峰、武鹏：亚投行金融助力“一带一路”：战略关系、挑战与策略选择，《人文杂志》</span>2016<span style="font-family:宋体;">年第</span>1<span style="font-family:宋体;">期；</span></p><p><span style="font-family:'Times New Roman',serif;">[32]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="font-family:宋体;">胡海峰、武鹏：银行业效率究竟由什么因素决定——基于世界跨国经济数据的实证检验，《北京社会科学》</span>2016<span style="font-family:宋体;">年第</span>1<span style="font-family:宋体;">期；</span></p><p><span style="font-family:'Times New Roman',serif;">[33]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="font-family:宋体;">胡海峰、陈世金：以资产证券化为突破口盘活存量资产，《河北经贸大学学报》</span>2015<span style="font-family:宋体;">年第</span>4<span style="font-family:宋体;">期；</span></p><p><span style="font-family:'Times New Roman',serif;">[34]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="font-family:宋体;">胡海峰、武鹏：股票市场与债券市场的协调发展研究——基于联动效应的分析，《价格理论与实践》</span>2015<span style="font-family:宋体;">年第</span>10<span style="font-family:宋体;">期；</span></p><p><span style="font-family:'Times New Roman',serif;">[35]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="font-family:宋体;">倪淑慧、胡海峰：金融—增长视角下美国金融发展过度问题研究，《亚太经济》</span>2015<span style="font-family:宋体;">年第</span>4<span style="font-family:宋体;">期；</span></p><p><span style="font-family:'Times New Roman',serif;">[36]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="font-family:宋体;">胡海峰、倪淑慧：后危机时代美国霸权在全球金融治理体系中发展趋势展望，《教学与研究》</span>2015<span style="font-family:宋体;">年第</span>4<span style="font-family:宋体;">期（人大复印报刊资料《金融与保险》</span>2015<span style="font-family:宋体;">年第</span>5<span style="font-family:宋体;">期全文转载）；</span></p><p><span style="font-family:'Times New Roman',serif;">[37]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="font-family:宋体;">胡海峰、郎朗：利率市场化对我国商业银行公司治理机制影响，《人文杂志》</span>2015<span style="font-family:宋体;">年第</span>2<span style="font-family:宋体;">期；</span></p><p><span style="font-family:'Times New Roman',serif;">[38]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="font-family:宋体;">胡海峰：“世元”——国际货币制度改革的新构想与新方案，《学术评论》</span>2014<span style="font-family:宋体;">年第</span>6<span style="font-family:宋体;">期；</span></p><p><span style="font-family:'Times New Roman',serif;">[39]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="font-family:宋体;">胡海峰、倪淑慧：广义虚拟经济视角下美国金融部门扩张的效率及影响研究，《广义虚拟经济研究》</span>2014<span style="font-family:宋体;">年第</span>4<span style="font-family:宋体;">期；</span></p><p><span style="font-family:'Times New Roman',serif;">[40]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="font-family:宋体;">胡海峰、陈世金：创新融资模式化解中国新型城镇化融资困境，《经济学动态》</span>2014<span style="font-family:宋体;">年第</span>7<span style="font-family:宋体;">期；</span></p><p><span style="font-family:'Times New Roman',serif;">[41]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="font-family:宋体;">胡海峰、金允景：全面提升金融服务实体经济质量和水平的战略构建，《河北经贸大学学报》</span>2014<span style="font-family:宋体;">年第</span>5<span style="font-family:宋体;">期；</span></p><p><span style="font-family:'Times New Roman',serif;">[42]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="font-family:宋体;">胡海峰、罗惠良</span><span style="font-family:宋体;">：</span><span style="font-family:宋体;">海外交易所竞争我国上市资源：一个博弈模型，《经济与管理评论》</span>2014<span style="font-family:宋体;">年第</span>3<span style="font-family:宋体;">期；</span></p><p><span style="font-family:'Times New Roman',serif;">[43]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="font-family:宋体;">胡海峰、罗惠良：沪港证券交易所动态竞争分析：基于</span>Lotka-Volterra<span style="font-family:宋体;">模型，《金融市场研究》</span>2014<span style="font-family:宋体;">年第</span>3<span style="font-family:宋体;">期；</span></p><p><span style="font-family:'Times New Roman',serif;">[44]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="font-family:宋体;">胡海峰、罗惠良、孙丹：多层次资本市场中企业融资与转板决策研究，《中国经济问题》</span>2014<span style="font-family:宋体;">年第</span>1<span style="font-family:宋体;">期；</span></p><p><span style="font-family:'Times New Roman',serif;">[45]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="font-family:宋体;">胡海峰、陈世金：中国新一轮资产证券化的缘起、进展及前景分析，《人文杂志》</span>2014<span style="font-family:宋体;">年第</span>1<span style="font-family:宋体;">期；</span></p><p><span style="font-family:'Times New Roman',serif;">[46]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="font-family:宋体;">胡海峰、倪淑慧：金融发展过度：最新研究进展评述及对中国的启示，《经济学动态》</span>2013<span style="font-family:宋体;">年第</span>11<span style="font-family:宋体;">期；</span></p><p><span style="font-family:'Times New Roman',serif;">[47]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="font-family:宋体;">胡海峰、赵亚明：我国民生金融发展现状、问题与对策研究，《教学与研究》</span>2013<span style="font-family:宋体;">年第</span>7<span style="font-family:宋体;">期；</span></p><p><span style="font-family:'Times New Roman',serif;">[48]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="font-family:宋体;">胡海峰、李旭东：发达国家战略性新兴产业融资经验及借鉴，《经济研究参考》</span>2013<span style="font-family:宋体;">年第</span>22<span style="font-family:宋体;">期；</span></p><p><span style="font-family:'Times New Roman',serif;">[49]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="font-family:宋体;">胡海峰、赵亚明：关于发展民生金融的思考——基于经济利益和社会责任双重视角，《中国特色社会主义研究》</span>2013<span style="font-family:宋体;">年</span>1<span style="font-family:宋体;">期；</span></p><p><span style="font-family:'Times New Roman',serif;">[50]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="font-family:宋体;">胡海峰、郭卫东：全球系统重要性金融机构评定及其对中国的启示，《经济学动态》</span>2012<span style="font-family:宋体;">年第</span>12<span style="font-family:宋体;">期；</span></p><p><span style="font-family:'Times New Roman',serif;">[51]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="font-family:宋体;">胡海峰、张训然：资产注入、隧道转移与公司价值，《北京师范大学学报（哲社版）》</span>2012<span style="font-family:宋体;">年第</span>6<span style="font-family:宋体;">期；</span></p><p><span style="font-family:'Times New Roman',serif;">[52]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="font-family:宋体;">胡海峰、赵亚明：专业化中小银行与小微企业融资研究，《福建论坛</span>(<span style="font-family:宋体;">人文社会科学版</span>)<span style="font-family:宋体;">》</span>2012<span style="font-family:宋体;">年</span>8<span style="font-family:宋体;">期；</span></p><p><span style="font-family:'Times New Roman',serif;">[53]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="font-family:宋体;">胡海峰、代松：后金融危机时代系统性风险及其测度评述，《经济学动态》</span>2012<span style="font-family:宋体;">年第</span>4<span style="font-family:宋体;">期；</span></p><p><span style="font-family:'Times New Roman',serif;">[54]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="font-family:宋体;">胡海峰、胡吉亚：“十一五”期间北京市保障性住房体系总体评价和未来发展设想，《北京社会科学》</span>2012<span style="font-family:宋体;">年第</span>1<span style="font-family:宋体;">期；</span></p><p style="text-align:left;"><span style="font-family:'Times New Roman',serif;">[55]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="font-family:宋体;">胡海峰、胡吉亚：美日德战略性新兴产业融资机制比较分析及对中国的启示，《经济理论与经济管理》</span>2011<span style="font-family:宋体;">年第</span>8<span style="font-family:宋体;">期；</span></p><p style="text-align:left;"><span style="font-family:'Times New Roman',serif;">[56]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="font-family:宋体;">胡海峰、孙飞：</span><span style="font-family:宋体;">“十二五”期间北京市保障性住房资金平衡方案研究，</span><span style="font-family:宋体;">《北京社会科学》</span>2011<span style="font-family:宋体;">年第</span>4<span style="font-family:宋体;">期；</span></p><p style="text-align:left;"><span style="font-family:'Times New Roman',serif;">[57]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="font-family:宋体;">胡海峰、孙飞：</span><span style="font-family:宋体;">世界城市建设中的金融生态研究：国际经验与北京发展，</span><span style="font-family:宋体;">《北京金融评论》</span>2011<span style="font-family:宋体;">年第</span>1<span style="font-family:宋体;">辑；</span></p><p style="text-align:left;"><span style="font-family:'Times New Roman',serif;">[58]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="font-family:宋体;">胡海峰、罗惠良：我国多层次资本市场的生成机理与演化路径，</span><span style="font-family:宋体;">《</span><span style="font-family:宋体;">中国社会科学院生院学报》</span>2011<span style="font-family:宋体;">年第</span>5<span style="font-family:宋体;">期</span><span style="font-family:宋体;">；</span></p><p style="text-align:left;"><span style="font-family:'Times New Roman',serif;">[59]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="font-family:宋体;">胡海峰、贾宪军：中原经济区建设的金融支持政策研究，《中州学刊》</span>2011<span style="font-family:宋体;">年第</span>3<span style="font-family:宋体;">期</span><span style="font-family:宋体;">；</span></p><p style="text-align:left;"><span style="font-family:'Times New Roman',serif;">[60]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="font-family:宋体;">胡海峰、胡吉亚：区域技术创新评估文献综述，《理论学刊》</span>2011<span style="font-family:宋体;">年第</span>4<span style="font-family:宋体;">期；</span></p><p style="text-align:left;"><span style="font-family:'Times New Roman',serif;">[61]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="font-family:宋体;">胡海峰、孙飞：中国奇迹下的资本奇迹——对中国证券市场</span>20<span style="font-family:宋体;">年发展的解读，《教学与研究》</span>2011<span style="font-family:宋体;">年</span><span style="font-family:宋体;">第</span>1<span style="font-family:宋体;">期</span><span style="font-family:宋体;">；</span></p><p style="text-align:left;"><span style="font-family:'Times New Roman',serif;">[62]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="font-family:宋体;">胡海峰、孙飞：从资本大国迈向资本强国：中国资本市场未来发展前景展望，《经济学动态》</span>2011<span style="font-family:宋体;">年</span><span style="font-family:宋体;">第</span>1<span style="font-family:宋体;">期；</span></p><p style="text-align:left;"><span style="font-family:'Times New Roman',serif;">[63]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="font-family:宋体;">胡海峰、胡吉亚：对中国热钱规模的估算与分析，《</span><span style="font-family:宋体;">黑</span><span style="font-family:宋体;">龙江</span><span style="font-family:宋体;">社</span><span style="font-family:宋体;">会科</span><span style="font-family:宋体;">学》</span>2010<span style="font-family:宋体;">年第</span><span style="font-family:'Times New Roman',serif;">6</span><span style="font-family:宋体;">期；</span></p><p style="text-align:left;"><span style="font-family:'Times New Roman',serif;">[64]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="font-family:宋体;">胡海峰、孙飞：我国战略性新兴产业培育中的金融支持体系研究，</span><span style="font-family:宋体;">《</span><span style="font-family:宋体;">新视野</span><span style="font-family:宋体;">》</span>2010<span style="font-family:宋体;">年第</span><span style="font-family:'Times New Roman',serif;">6</span><span style="font-family:宋体;">期；</span></p><p><span style="font-family:'Times New Roman',serif;">[65]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="font-family:宋体;">胡海峰、宋李：我国证券投资基金羊群行为的实证研究，《北京师范大学学报（哲社版）》</span>2010<span style="font-family:宋体;">年第</span>5<span style="font-family:宋体;">期；</span></p><p><span style="font-family:'Times New Roman',serif;">[66]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="font-family:宋体;">胡海峰、宋李：证券投资基金是否稳定股价——基于中国股票市场的经验证据，《财贸经济》</span>2010<span style="font-family:宋体;">年第</span>8<span style="font-family:宋体;">期；</span></p><p><span style="font-family:'Times New Roman',serif;">[67]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="font-family:宋体;">胡海峰、张琦：中国证券市场的演进轨迹：</span>1990<span style="font-family:宋体;">～</span>2010<span style="font-family:宋体;">，《改革》</span>2010<span style="font-family:宋体;">年第７期；</span></p><p><span style="font-family:'Times New Roman',serif;">[68]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="font-family:宋体;">胡海峰、孙飞、胡松明：美国两次金融危机的成本比较及启示，《学术研究》</span>2010<span style="font-family:宋体;">年第</span>7<span style="font-family:宋体;">期；</span></p><p><span style="font-family:'Times New Roman',serif;">[69]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="font-family:宋体;">胡海峰、孙飞：论金融危机中财政救助的成本与收益，《经济理论与经济管理》</span>2010<span style="font-family:宋体;">年第</span>7<span style="font-family:宋体;">期（人大复印报刊资料《财政与税收》</span>2010<span style="font-family:宋体;">年第</span>11<span style="font-family:宋体;">期全文转载，《新华文摘》</span>2010<span style="font-family:宋体;">年第</span>20<span style="font-family:宋体;">期篇目辑览收录）；</span></p><p style="text-align:left;"><span style="font-family:'Times New Roman',serif;">[70]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="font-family:宋体;">胡海峰、罗惠良：我国现阶段多层次资本市场的竞争与协作机制研究，《经济学动态》</span>2010<span style="font-family:宋体;">年第</span>5<span style="font-family:宋体;">期；</span></p><p style="text-align:left;"><span style="font-family:'Times New Roman',serif;">[71]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="font-family:宋体;">胡海峰、孙飞：美国两次银行业危机的成本比较，《国际金融研究》</span>2010<span style="font-family:宋体;">年第</span>5<span style="font-family:宋体;">期</span><span style="font-family:宋体;">；</span></p><p><span style="font-family:'Times New Roman',serif;">[72]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="font-family:宋体;">胡海峰、李晓峰：京沪金融中心之争的演进路径，《河北经贸大学学报》</span>2010<span style="font-family:宋体;">年第</span>1<span style="font-family:宋体;">期；</span></p><p><span style="font-family:'Times New Roman',serif;">[73]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="font-family:宋体;">胡海峰、罗惠良：多层次资本市场建设的国际经验及启示，《中国社会科学院研究生院学报》</span>2010<span style="font-family:宋体;">年第</span>1<span style="font-family:宋体;">期；</span></p><p><span style="font-family:'Times New Roman',serif;">[74]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="font-family:宋体;">胡海峰、罗惠良、李晓峰：市价调整与美国次贷危机：一个理论评述，《经济理论与经济管理》</span>2009<span style="font-family:宋体;">年第</span>9<span style="font-family:宋体;">期；</span></p><p><span style="font-family:'Times New Roman',serif;">[75]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="font-family:宋体;">胡海峰、孙飞：扩大内需背景下我国商业银行创新研究，《新视野》</span>2009<span style="font-family:宋体;">年第</span>5<span style="font-family:宋体;">期；</span></p><p><span style="font-family:'Times New Roman',serif;">[76]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="font-family:宋体;">胡海峰、李忠：我国资本市场投资者利益保护与上市公司价值研究，《数量经济技术经济研究》</span>2009<span style="font-family:宋体;">年第</span>7<span style="font-family:宋体;">期；</span></p><p><span style="font-family:'Times New Roman',serif;">[77]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="font-family:宋体;">胡海峰、罗惠良：风险分担、信息不对称与资本市场层次演进，《经济学动态》</span>2009<span style="font-family:宋体;">年第</span>6<span style="font-family:宋体;">期；</span></p><p><span style="font-family:'Times New Roman',serif;">[78]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="font-family:宋体;">胡海峰、罗惠良：对金融创新经济效应的若干思考，《教学与研究》</span>2009<span style="font-family:宋体;">年第</span>6<span style="font-family:宋体;">期；</span></p><p><span style="font-family:'Times New Roman',serif;">[79]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="font-family:宋体;">胡海峰、方淑英：多层次资本市场与科技自主创新，《未来与发展》</span>2009<span style="font-family:宋体;">年第</span>2<span style="font-family:宋体;">期；</span></p><p><span style="font-family:'Times New Roman',serif;">[80]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="font-family:宋体;">胡海峰、罗惠良：自主创新国家战略中的多层次资本市场建设，《新视野》</span>2009<span style="font-family:宋体;">年第</span>1<span style="font-family:宋体;">期；</span></p><p><span style="font-family:'Times New Roman',serif;">[81]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="font-family:宋体;">胡海峰、罗惠良：美国次贷危机成因研究述评，《证券市场导报》</span>2008<span style="font-family:宋体;">年第</span>12<span style="font-family:宋体;">期；</span></p><p><span style="font-family:'Times New Roman',serif;">[82]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="font-family:宋体;">胡海峰、罗惠良：金融分工理论与我国多层次资本市场建设，《教学与研究》</span>2008<span style="font-family:宋体;">年第</span>9<span style="font-family:宋体;">期；</span></p><p><span style="font-family:'Times New Roman',serif;">[83]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="font-family:宋体;">胡海峰、刁硕：国有商业银行重组与政府公共成本付出，《改革》</span>2008<span style="font-family:宋体;">年第</span>11<span style="font-family:宋体;">期；</span></p><p><span style="font-family:'Times New Roman',serif;">[84]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="font-family:宋体;">胡海峰：中国国有商业银行重组的成本估算，《经济学动态》</span>2008<span style="font-family:宋体;">年第</span>9<span style="font-family:宋体;">期；</span></p><p><span style="font-family:'Times New Roman',serif;">[85]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="font-family:宋体;">胡海峰：专业化、机构化与美国的创业投资——</span>KPCB<span style="font-family:宋体;">的成功经验及对我国的启示，《财贸经济》</span>2008<span style="font-family:宋体;">年第</span>10<span style="font-family:宋体;">期；</span></p><p><span style="font-family:'Times New Roman',serif;">[86]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="font-family:宋体;">胡海峰：美国创业投资行业区域集聚特征与集聚效应，《中国社会科学院研究生院学报》</span>2008<span style="font-family:宋体;">年第</span>5<span style="font-family:宋体;">期；</span></p><p><span style="font-family:'Times New Roman',serif;">[87]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="font-family:宋体;">胡海峰、王佳：美国创业投资的若干经验分析，《管理世界》，</span>2005<span style="font-family:宋体;">年第</span>10<span style="font-family:宋体;">期；</span></p><p><span style="font-family:'Times New Roman',serif;">[88]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="font-family:宋体;">胡海峰、史文璟：试论毒丸计划对我国海外上市公司的影响，《未来与发展》</span>2005<span style="font-family:宋体;">年第</span>5<span style="font-family:宋体;">期；</span></p><p><span style="font-family:'Times New Roman',serif;">[89]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="font-family:宋体;">胡海峰：福特主义、后福特主义与资本主义积累方式，《马克思主义研究》</span>2005<span style="font-family:宋体;">年第</span>2<span style="font-family:宋体;">期（人大复印报刊资料《理论经济学》</span>2005<span style="font-family:宋体;">年</span>7<span style="font-family:宋体;">期全文转载）；</span></p><p><span style="font-family:'Times New Roman',serif;">[90]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="font-family:宋体;">胡海峰、曲和磊：试论拍卖机制在不良资产处置中的应用，《统计研究》</span>2005<span style="font-family:宋体;">年第</span>6<span style="font-family:宋体;">期；</span></p><p><span style="font-family:'Times New Roman',serif;">[91]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="font-family:宋体;">胡海峰：试论创业资本与经济增长的关系，《北京师范大学学报（哲社版）》</span>2005<span style="font-family:宋体;">年第</span>1<span style="font-family:宋体;">期；</span></p><p style="text-align:left;"><span style="font-family:'Times New Roman',serif;">[92]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="font-family:宋体;">胡海峰、高玉喜：美国创业资本市场的特征及宏观经济效应分析，《证券市场导报》</span>2005<span style="font-family:宋体;">年第</span>3<span style="font-family:宋体;">期人大复印报刊资料《投资与证券》</span>2005<span style="font-family:宋体;">年</span>6<span style="font-family:宋体;">期全文转载）；</span></p><p><span style="font-family:'Times New Roman',serif;">[93]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="font-family:宋体;">胡海峰：对法国调节学派及其理论的分析，《教学与研究》</span>2005<span style="font-family:宋体;">年第</span>3<span style="font-family:宋体;">期；</span></p><p><span style="font-family:'Times New Roman',serif;">[94]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="font-family:宋体;">胡海峰：美德两国创业资本市场差异比较分析，《欧洲研究》</span>2005<span style="font-family:宋体;">年第</span>2<span style="font-family:宋体;">期；</span></p><p><span style="font-family:'Times New Roman',serif;">[95]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="font-family:宋体;">胡海峰：对近几年来美国创业资本市场的统计分析，《统计研究》</span>2004<span style="font-family:宋体;">年第</span>8<span style="font-family:宋体;">期；</span></p><p><span style="font-family:'Times New Roman',serif;">[96]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="font-family:宋体;">胡海峰、黎江帆：试论创业资本在经济增长过程的作用——一种理论和实证分析，《证券市场导报》</span>2004<span style="font-family:宋体;">年第</span>7<span style="font-family:宋体;">期；</span></p><p style="text-align:left;"><span style="font-family:'Times New Roman',serif;">[97]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="font-family:宋体;">胡海峰：</span><span style="font-family:宋体;">美国创业资本市场近几年来的发展演变及未来趋势分析，</span><span style="font-family:宋体;">《未来与发展》</span>2004<span style="font-family:宋体;">年第</span>5<span style="font-family:宋体;">期；</span></p><p style="text-align:left;"><span style="font-family:'Times New Roman',serif;">[98]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="font-family:宋体;">胡海峰、李雯：</span>2000<span style="font-family:宋体;">～</span>2002<span style="font-family:宋体;">年美国创业资本市场分析</span><span style="font-family:宋体;">，《证券市场导报》</span>2003<span style="font-family:宋体;">年第</span>9<span style="font-family:宋体;">期；</span></p><p><span style="font-family:'Times New Roman',serif;">[99]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="font-family:宋体;">胡海峰、李雯：对制度变迁理论两种分析思路的互补性思考，《人文杂志》</span>2003<span style="font-family:宋体;">年第</span>4<span style="font-family:宋体;">期（人大复印报刊资料《理论经济学》</span>2003<span style="font-family:宋体;">年</span>10<span style="font-family:宋体;">期</span>&nbsp;<span style="font-family:宋体;">全文转载）；</span></p><p><span style="font-family:'Times New Roman',serif;">[100]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="font-family:宋体;">胡海峰：创业资本契约理论文献综述，《改革》</span>2002<span style="font-family:宋体;">年第</span>5<span style="font-family:宋体;">期；</span></p><p><span style="font-family:'Times New Roman',serif;">[101]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="font-family:宋体;">胡海峰、黎江帆：</span><span style="font-family:宋体;">中国发展</span>CDR<span style="font-family:宋体;">制度研究，《经济导刊》</span>2002<span style="font-family:宋体;">第</span>9<span style="font-family:宋体;">期。</span></p><p><span style="font-family:'Times New Roman',serif;">[102]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="font-family:宋体;">胡海峰、黎江帆：</span><span style="font-family:宋体;">美国德国创业资本市场比较研究，《证券市场导报》</span>2002<span style="font-family:宋体;">年第</span>9<span style="font-family:宋体;">期；</span></p><p><span style="font-family:'Times New Roman',serif;">[103]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="font-family:宋体;">胡海峰：</span><span style="font-family:宋体;">创业资本投资过程中的契约安排：理论回顾与展望，《南开经济研究》</span>2002<span style="font-family:宋体;">年第</span>3<span style="font-family:宋体;">期；</span></p><p><span style="font-family:'Times New Roman',serif;">[104]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="font-family:宋体;">胡海峰：</span><span style="font-family:宋体;">创业资本契约理论及其未来研究方向探讨，《经济学动态》</span>2001<span style="font-family:宋体;">年第</span>8<span style="font-family:宋体;">期；</span></p><p><span style="font-family:'Times New Roman',serif;">[105]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="font-family:宋体;">张树中、胡海峰：</span><span style="font-family:宋体;">论美国创业资本及其退出机制，《世界经济》</span>2000<span style="font-family:宋体;">年第</span>1<span style="font-family:宋体;">期；</span></p><br /><p><span style="font-family:宋体;"></span></p><p><span style="font-family:宋体;">&nbsp;</span></p><p><strong><span style="font-family:宋体;">著作</span></strong></p><p style="text-align:left;"><span style="font-family:'Times New Roman',serif;">[1]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="font-family:宋体;">《加快推进中国对外经济发展方式转变研究》（多人合著），北京师范大学出版社，</span>2017<span style="font-family:宋体;">年</span>9<span style="font-family:宋体;">月；</span></p><p style="text-align:left;"><span style="font-family:'Times New Roman',serif;">[2]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="font-family:宋体;">《金融发展过度的美国》（与倪淑慧合著），知识产权出版社，</span>2014<span style="font-family:宋体;">年</span>6<span style="font-family:宋体;">月；</span></p><p style="text-align:left;"><span style="font-family:'Times New Roman',serif;">[3]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="font-family:宋体;">《国有商业银行最优重组成本的理论与实证分析》（独著），知识产权出版社，</span>2014<span style="font-family:宋体;">年</span>4<span style="font-family:宋体;">月；</span></p><p style="text-align:left;"><span style="font-family:'Times New Roman',serif;">[4]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="font-family:宋体;">《多层次资本市场：从自发演进到政府制度设计》（独著），北京师范大学出版社，</span>2010<span style="font-family:宋体;">年</span>9<span style="font-family:宋体;">月；</span></p><p style="text-align:left;"><span style="font-family:'Times New Roman',serif;">[5]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="font-family:宋体;">《资本的奇迹——中国证券市场</span>20<span style="font-family:宋体;">年回顾与展望》（多人合著），经济科学出版社，</span>2010<span style="font-family:宋体;">年</span>5<span style="font-family:宋体;">月；</span></p><p style="text-align:left;"><span style="font-family:'Times New Roman',serif;">[6]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="font-family:宋体;">《创业资本循环：</span><span style="font-family:宋体;">信息不对称条件下的制度安排</span><span style="font-family:宋体;">》（独著），中国市场出版社，</span>2009<span style="font-family:宋体;">年</span>1<span style="font-family:宋体;">月；</span></p><p style="text-align:left;"><span style="font-family:'Times New Roman',serif;">[7]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="font-family:宋体;">《中国不良资产处置与金融资产管理公司发展研究》（与曲和磊合著），中国市场出版社，</span>2009<span style="font-family:宋体;">年</span>1<span style="font-family:宋体;">月；</span></p><p style="text-align:left;"><span style="font-family:'Times New Roman',serif;">[8]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="font-family:宋体;">《美国创业资本市场与制度研究》（独著），人民出版社，</span>2008<span style="font-family:宋体;">年</span>1<span style="font-family:宋体;">月；</span></p><p style="text-align:left;"><span style="font-family:'Times New Roman',serif;">[9]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="font-family:宋体;">《创业资本运营》（与陈闽合著），中信出版社，</span>1999<span style="font-family:宋体;">年</span>7<span style="font-family:宋体;">月；</span></p><p style="text-align:left;"><span style="font-family:'Times New Roman',serif;">[10]&nbsp;&nbsp;&nbsp; </span><span style="font-family:宋体;">《兼并与收购》（与舒志军合译），中信出版社，</span>1998<span style="font-family:宋体;">年</span>2<span style="font-family:宋体;">月；</span></p><p style="text-align:left;"><span style="font-family:'Times New Roman',serif;">[11]&nbsp;&nbsp;&nbsp; </span><span style="font-family:宋体;">《企业兼并》（与王韬光合著），上海人民出版社，</span>1995<span style="font-family:宋体;">年</span>9<span style="font-family:宋体;">月；</span></p><p style="text-align:left;"><span style="font-family:'Times New Roman',serif;">[12]&nbsp;&nbsp;&nbsp; </span><span style="font-family:宋体;">《投资基金操作技巧》（独著），中信出版社，</span>1994<span style="font-family:宋体;">年</span>10<span style="font-family:宋体;">月。</span></p><p style="text-align:left;">&nbsp;</p><p style="text-align:left;"><strong><span style="font-family:宋体;">教材</span></strong></p><p style="text-align:left;"><span style="font-family:'Times New Roman',serif;">[1]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="font-family:宋体;">《现代投资银行学》（胡海峰、胡吉亚著），北京师范大学出版社，</span>2014<span style="font-family:宋体;">年</span>9<span style="font-family:宋体;">月；</span>2017<span style="font-family:宋体;">年</span>9<span style="font-family:宋体;">月修订第二版；</span>2018<span style="font-family:宋体;">年</span>10<span style="font-family:宋体;">月第二版</span><span style="font-family:宋体;">；</span></p><p style="text-align:left;"><span style="font-family:'Times New Roman',serif;">[2]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="font-family:宋体;">《公司财务学》（胡海峰主编），北京师范大学出版社，</span>2011<span style="font-family:宋体;">年</span>9<span style="font-family:宋体;">月；</span>2017<span style="font-family:宋体;">年</span>3<span style="font-family:宋体;">月修订第二版；</span></p><p style="text-align:left;"><span style="font-family:'Times New Roman',serif;">[3]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="font-family:宋体;">《风险投资学》（胡海峰、胡松明主编），北京师范大学出版社，</span>2011<span style="font-family:宋体;">年</span>3<span style="font-family:宋体;">月；获得</span>2013<span style="font-family:宋体;">年北京市精品教材。</span>2016<span style="font-family:宋体;">年</span>9<span style="font-family:宋体;">月第二版；</span></p><p style="text-align:left;"><span style="font-family:'Times New Roman',serif;">[4]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="font-family:宋体;">《现代投资银行学》，首都经贸大学出版社，</span>2010<span style="font-family:宋体;">年</span>9<span style="font-family:宋体;">月；</span>2022<span style="font-family:宋体;">年</span>1<span style="font-family:宋体;">月，第二版；</span></p><p style="text-align:left;"><span style="font-family:'Times New Roman',serif;">[5]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="font-family:宋体;">《公司理财》，首都经贸大学出版社，</span>2008<span style="font-family:宋体;">年</span>11<span style="font-family:宋体;">月；</span>2022<span style="font-family:宋体;">年</span>1<span style="font-family:宋体;">月，第二版；</span></p><p style="text-align:left;"><span style="font-family:'Times New Roman',serif;">[6]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="font-family:宋体;">《公司并购理论与实务》，首都经贸大学出版社，</span>2007<span style="font-family:宋体;">年</span>9<span style="font-family:宋体;">月；</span>2010<span style="font-family:宋体;">年</span>9<span style="font-family:宋体;">月修订第二版；</span>2017<span style="font-family:宋体;">年</span>1<span style="font-family:宋体;">月修订第三版；</span>2019<span style="font-family:宋体;">年</span>9<span style="font-family:宋体;">月修订第四版；</span></p><p style="text-align:left;"><span style="font-family:'Times New Roman',serif;">[7]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="font-family:宋体;">《风险投资学》，首都经贸大学出版社，</span>2006<span style="font-family:宋体;">年</span>9<span style="font-family:宋体;">月；</span>2009<span style="font-family:宋体;">年</span>9<span style="font-family:宋体;">月修订第二版；</span>2013<span style="font-family:宋体;">年</span>3<span style="font-family:宋体;">月第</span>3<span style="font-family:宋体;">版；</span>2016<span style="font-family:宋体;">年</span>7<span style="font-family:宋体;">月修订第四版；</span>2019<span style="font-family:宋体;">年</span>7<span style="font-family:宋体;">月第五版；</span></p><p style="text-align:left;"><span style="font-family:'Times New Roman',serif;">[8]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="font-family:宋体;">《投资银行学教程》（与李雯合编），中国人民大学出版社，</span>2005<span style="font-family:宋体;">年</span>9<span style="font-family:宋体;">月；</span>2014<span style="font-family:宋体;">年</span>1<span style="font-family:宋体;">月第二版。</span></p><p><strong><span style="font-family:宋体;">&nbsp;</span></strong></p><p><strong><span style="font-family:宋体;">社会服务</span></strong></p><p>1.<span style="font-family:宋体;">咨询报告《中国经济发展新的阶段性特征及所带来的机遇与挑战》被国家发改委采纳（</span>2016<span style="font-family:宋体;">）；</span></p><p>2.<span style="font-family:宋体;">咨询报告《国际经贸格局调整下中国的应对及政策建议》被国家发改委采纳（</span>2016<span style="font-family:宋体;">）；</span></p><p>3.<span style="font-family:宋体;">咨询报告《关于我国开展产融结合的政策建议》被工业和信息化部采纳采纳（</span>2016<span style="font-family:宋体;">）；</span></p><p>4.<span style="font-family:宋体;">咨询报告《加快我国金融市场改革的若干政策建议》被国家信息中心采纳采纳（</span>2016<span style="font-family:宋体;">）</span></p><p>&nbsp;</p><p><strong><span style="font-family:宋体;">奖励</span></strong></p><p><strong><span style="font-family:宋体;">1.</span></strong><span style="font-family:宋体;">调研报告《符合首都实际的保障性住房体系和商品房体系研究》，荣获北京市第十一届优秀调查研究成果优秀奖。</span></p><p><strong><span style="font-family:宋体;">2.</span></strong><span style="font-family:宋体;">《加快推进中国对外经济发展方式转变研究》，荣获北京市第十五届哲学社会科学二等奖。</span></p><p>3.2011<span style="font-family:宋体;">年</span>8<span style="font-family:宋体;">月、</span>2014<span style="font-family:宋体;">年</span>4<span style="font-family:宋体;">月、</span>2015<span style="font-family:宋体;">年</span>12<span style="font-family:宋体;">月、</span>2018<span style="font-family:宋体;">年</span>3<span style="font-family:宋体;">月入选全国哲学社会科学规划办公室认真负责的国家社科基金项目鉴定专家名单。</span></p><p style="text-align:left;">4.<span style="font-family:宋体;">《风险投资学》获得</span>2013<span style="font-family:宋体;">年北京市精品教材。</span></p><p>5.<span style="font-family:宋体;">北京师范大学</span>2015-2016<span style="font-family:宋体;">学年优秀新生导师（优秀本科生导师）（</span>2016<span style="font-family:宋体;">）</span></p><p>6.<span style="font-family:宋体;">北京师范大学建党</span>100<span style="font-family:宋体;">周年优秀共产党员（</span>2021<span style="font-family:宋体;">）</span></p><p>&nbsp;</p><p style="text-align:center;"><strong><span style="font-family:宋体;">&nbsp;</span></strong></p><br /><br /></div><div id="qb-sougou-search" style="display: none; opacity: 0;"><p>搜索</p><p class="last-btn">复制</p><iframe src=""></iframe></div></div>
+                    
+                </div>				<div class="grjj">
+                    <p class="jjh">研究课题</p>
+                  
+                    <div class="bks1"><div style="top: 0px;"><p><strong><span style="font-size:11.0pt;font-family:宋体;">主持的项目：</span></strong></p><p style="text-align:left;"><span style="font-family:'Times New Roman','serif';"></span></p><p style="text-align:left;"><span style="font-family:'Times New Roman',serif;">[1]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="font-family:宋体;">国家社科基金重大项目《<span style="font-size:10.5pt;font-family:宋体;">新发展格局下提高直接融资比重优化金融结构与经济高质量发展研究</span>》（批准号：</span>21&amp;ZD111<span style="font-family:宋体;">）；</span></p><p style="text-align:left;"><span style="font-family:'Times New Roman',serif;">[2]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="font-family:宋体;">国家社科基金重点项目《中国资本市场韧性的影响因素、测度与提升路径研究》（批准号：</span>21AJL012<span style="font-family:宋体;">）；</span></p><p style="text-align:left;"><span style="font-family:'Times New Roman',serif;">[3]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>2021<span style="font-family:宋体;">年北京高等教育“本科教学改革创新项目”《新文科建设背景下金融学专业再造与重塑》</span></p><p style="text-align:left;"><span style="font-family:'Times New Roman',serif;">[4]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>2021<span style="font-family:宋体;">年度北京师范大学教学建设与改革项目《数字时代下金融科技专业建设探索》</span></p><p style="text-align:left;"><span style="font-family:'Times New Roman',serif;">[5]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="font-family:宋体;">国家发改委发展战略和规划司《近期国际金融市场风险演化趋势及我国应对举措研究》（已结项）；</span></p><p style="text-align:left;"><span style="font-family:'Times New Roman',serif;">[6]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="font-family:宋体;">国家发改委综合司《影响我国外贸形势的主要因素分析》（已结项）；</span></p><p style="text-align:left;"><span style="font-family:'Times New Roman',serif;">[7]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="font-family:宋体;">国家发改委综合司《国际经贸格局调整下中国的应对及政策建议》（已结项）；</span></p><p style="text-align:left;"><span style="font-family:'Times New Roman',serif;">[8]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="font-family:宋体;">国家发改委综合司《中国经济发展新的阶段性特征及所带来的机遇与挑战》（已结项）；</span></p><p style="text-align:left;"><span style="font-family:'Times New Roman',serif;">[9]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="font-family:宋体;">北京市“十三五”规划前期研究重大课题《“十三五”时期北京市住房保障体系与房地产市场健康发展研究》（批准号：</span>BJ135--SH07<span style="font-family:宋体;">）（已结项）；</span></p><p style="text-align:left;"><span style="font-family:'Times New Roman',serif;">[10]&nbsp;&nbsp;&nbsp; </span>2014<span style="font-family:宋体;">年度中央高校基本科研业务费专项资金资助项目《我国系统性金融风险度量及预警机制研究》（批准号：</span>SKZZB2014005<span style="font-family:宋体;">）（已结项）；</span></p><p style="text-align:left;"><span style="font-family:'Times New Roman',serif;">[11]&nbsp;&nbsp;&nbsp; </span><span style="font-family:宋体;">国家社科基金重点项目《推进我国资本市场的改革、规范和发展研究》（批准号：</span>14AZD035<span style="font-family:宋体;">）（已结项）；</span></p><p style="text-align:left;"><span style="font-family:'Times New Roman',serif;">[12]&nbsp;&nbsp;&nbsp; </span><span style="font-family:宋体;">广义虚拟经济研究专项资助项目《广义虚拟经济视角下金融服务实体经济研究》</span>[<span style="font-family:宋体;">批准号：</span>GX2013-1006(M)] <span style="font-family:宋体;">（已结项）；</span></p><p style="text-align:left;"><span style="font-family:'Times New Roman',serif;">[13]&nbsp;&nbsp;&nbsp; </span>2012<span style="font-family:宋体;">年度北京市哲学社会科学规划一般项目《金融集聚与总部金融发展——北京现代金融产业体系的构建与发展对策研究》（批准号：</span>12JGB059<span style="font-family:宋体;">）（已结项）；</span></p><p style="text-align:left;"><span style="font-family:'Times New Roman',serif;">[14]&nbsp;&nbsp;&nbsp; </span><span style="font-family:宋体;">教育部“</span>985<span style="font-family:宋体;">工程”二期建设项目《中国金融风险指数研究》（已结项）；</span></p><p style="text-align:left;"><span style="font-family:'Times New Roman',serif;">[15]&nbsp;&nbsp;&nbsp; </span><span style="font-family:宋体;">北京市社会科学界联合会</span>2011<span style="font-family:宋体;">年重点决策咨询课题《符合首都实际的保障性住房体系和商品房体系研究》（</span>2011.5-2011.10<span style="font-family:宋体;">）（已结项）；</span></p><p style="text-align:left;"><span style="font-family:'Times New Roman',serif;">[16]&nbsp;&nbsp;&nbsp; </span>2010<span style="font-family:宋体;">年度中央高校基本科研业务费专项资金资助项目《我国中小企业融资体系建设研究》（项目编号：</span>105566GK<span style="font-family:宋体;">）（</span>2010.12<span style="font-family:宋体;">－</span>2013.12<span style="font-family:宋体;">）（已结项）；</span></p><p style="text-align:left;"><span style="font-family:'Times New Roman',serif;">[17]&nbsp;&nbsp;&nbsp; </span>2010<span style="font-family:宋体;">年度北京师范大学教学建设与改革项目（学科基础课程建设与改革项目）：《投资银行学》（批准号：</span>10-02-29<span style="font-family:宋体;">）（</span>2011.1<span style="font-family:宋体;">－</span>2013.12<span style="font-family:宋体;">）（已结项）；</span></p><p style="text-align:left;"><span style="font-family:'Times New Roman',serif;">[18]&nbsp;&nbsp;&nbsp; </span><span style="font-family:宋体;">开发银行北京分行委托项目《开发性金融支持北京市保障性住房科学发展规划（</span>2010-2015<span style="font-family:宋体;">）》（已结项）；</span></p><p style="text-align:left;"><span style="font-family:'Times New Roman',serif;">[19]&nbsp;&nbsp;&nbsp; </span><span style="font-family:宋体;">开发银行北京分行委托项目《开发性金融支持北京市房山区科学发展规划（</span>2010-2015<span style="font-family:宋体;">）》（已结项）；</span></p><p style="text-align:left;"><span style="font-family:'Times New Roman',serif;">[20]&nbsp;&nbsp;&nbsp; </span><span style="font-family:宋体;">国家社科基金重大项目《加快推进对外经济发展方式转变研究》（批准号：</span>10ZD&amp;017<span style="font-family:宋体;">）子课题《以人民币国际化为中心的对外金融发展战略》（</span>2010.11<span style="font-family:宋体;">－</span>2013.12<span style="font-family:宋体;">）（已结项）；</span></p><p style="text-align:left;"><span style="font-family:'Times New Roman',serif;">[21]&nbsp;&nbsp;&nbsp; </span><span style="font-family:宋体;">国家社科基金重点项目《我国经济发展方式转型中的金融保障体系研究》（批准号：</span>10AJL005<span style="font-family:宋体;">）（</span>2010.07<span style="font-family:宋体;">－</span>2012.03<span style="font-family:宋体;">）（已结项）；</span></p><p style="text-align:left;"><span style="font-family:'Times New Roman',serif;">[22]&nbsp;&nbsp;&nbsp; </span><span style="font-family:宋体;">企业委托项目《中国证券市场</span>20<span style="font-family:宋体;">年回顾与展望》（已结项）；</span></p><p style="text-align:left;"><span style="font-family:'Times New Roman',serif;">[23]&nbsp;&nbsp;&nbsp; </span><span style="font-family:宋体;">教育部人文社会科学规划基金项目《国有商业银行最优重组成本：理论与实证分析》（批准号：</span>09YJA790018<span style="font-family:宋体;">）（已结项）；</span></p><p style="text-align:left;"><span style="font-family:'Times New Roman',serif;">[24]&nbsp;&nbsp;&nbsp; </span><span style="font-family:宋体;">北京市哲学社会科学“十一五”规划一般项目《北京市金融生态研究》（批准号：</span>06BaJG081<span style="font-family:宋体;">）（已结项）；</span></p><p style="text-align:left;"><span style="font-family:'Times New Roman',serif;">[25]&nbsp;&nbsp;&nbsp; </span><span style="font-family:宋体;">财政部中国资产评估协会项目《金融资产评估——带抵押权的不良资产》（批准号：</span>2006B011<span style="font-family:宋体;">）（已结项）；</span></p><p style="text-align:left;"><span style="font-family:'Times New Roman',serif;">[26]&nbsp;&nbsp;&nbsp; </span><span style="font-family:宋体;">国家社科基金一般项目《多层次资本市场建设和监管问题研究》（批准号：</span>05BJL026<span style="font-family:宋体;">）（已结项）。</span></p><br /><p style="text-align:left;"><span style="font-size:11.0pt;font-family:宋体;"></span></p><br /><br /></div></div>
+                    
+                </div>								<div class="grjj">
+                    <p class="jjh">教授课程</p>
+                    <div class="bks1"><p>本科生：《投资银行学》、《金融市场学》、《公司金融学》、《风险投资学》</p><p>研究生：《金融理论与政策》、《投资银行与私人股权投资》</p></div>
+                    
+                </div>            </div>
+        </div>
+         <footer style="overflow: hidden;">
+            <div class="footers">
+                <div class="footersl">
+                    <img src="http://bs.bnu.edu.cn/newweb/images/ewm.jpg" alt="" class="imgewm">
+                    <div class="footerxx">
+                        <p>Copyright © 2020 北京师范大学经济与工商管理学院</p>
+                        <p><i class="fas fa-map-marker-alt"></i> 地址：北京市新街口外大街19号</p>
+                        <p><i class="fas fa-portrait"></i> 传真：010-58801867</p>
+                        <p><i class="fas fa-phone"></i> 电话：010-58801867</p>
+                        <p><i class="fas fa-envelope"></i> 邮编：100875</p>
+                    </div>
+                </div>
+                <img src="http://bs.bnu.edu.cn/newweb/images/db.png" alt="" width="140" class="dbimg">
+                <img src="http://bs.bnu.edu.cn/newweb/images/yx.png" alt="" class="yuanxun">
+            </div>
+        </footer>
+    </div>
+	<div class="share">
+		  <div id="appgame-leftside-share">
+	        <div class="appgame-leftside-share rwt_share" id="rwt_share">
+	         
+	        <!--<a class="appgame-leftside-search" data-cmd="search" title="search"  href="javascript:void(0);" onclick="opens('id')">search</a> --> <!--<div class="searchs" id="id">
+	         <form name="dataForm" action="/cms/search/searchResults.jsp" target="_blank" method="post" accept-Charset="utf-8"  onsubmit="document.charset='utf-8';">
+			        	<p>
+			        		<input name="siteID" size="4" value="127" type = "hidden">
+			        		<input type="text" name="query" id="search" class="searchInput" value="输入搜索词">
+			        		<button type="submit"></button>
+			        	</p>
+			        	</form>
+			        </div>-->
+			        <!-- <a class="appgame-leftside-weixin" data-cmd="weixin" title="">微信</a> -->
+                    
+			        <!-- <a class="appgame-leftside-qzone" data-cmd="qzone" title="">qq空间</a>
+			        
+			        <a class="appgame-leftside-tsina" data-cmd="tsina" title="">微博</a> -->			    </div>
+			        <a class="appgame-leftside-top" onclick="gotoTPoint()"></a>			</div>
+			        
+		</div>
+</body>
+<script src="http://gh.bnu.edu.cn/js/jquery-1.9.0.min.js"></script>
+<script src="http://gh.bnu.edu.cn/js/share.min.js"></script>
+<script>
+    var dj=document.getElementById('dianji');
+    var jjc=document.getElementById('jjc');
+    var dj1=document.getElementById('dianji1');
+    var jjc1=document.getElementById('jjc1');
+    var a=1;
+    function zhedie(m,n){
+        m.onclick=function(){
+            if(a==1){
+                n.className='jjc';
+                m.className='dianji1'
+                a=0;
+            }else{
+                n.className='jjc1';
+                m.className='dianji'
+                a=1;
+            }
+        }
+    }
+    zhedie(dj,jjc);
+    zhedie(dj1,jjc1);
+	
+	
+</script>
+<script>
+
+	
+	
+    
+
+    /*回到顶部*/
+	$(function(){
+	 	$(window).resize(function(){
+						var h = $(window).height();
+						$('.goTop').css('top',h-60);
+						$(window).scroll(function(){				
+							var scrollTop = $(document).scrollTop();					  
+							$('.goTop').stop().animate({
+								top: h + scrollTop-60
+							},300);
+						});
+		}).resize();
+		});
+	//gotop
+
+			$('.goTop').click(function(){
+
+				$('body,html').stop().animate({scrollTop:0});
+
+				return false;
+
+			});
+	
+	function gotoTPoint(){
+		$("html,body").animate({scrollTop:0},500);
+	}
+</script>
+</html>

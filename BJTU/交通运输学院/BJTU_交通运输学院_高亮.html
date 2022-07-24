@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>北京交通大学交通运输学院</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link href="/static/trans/css/bootstrap.css" rel="stylesheet">
+ 	<link href="/static/trans/css/custom.css" rel="stylesheet">
+ 	<link href="/static/trans/css/custom_list.css" rel="stylesheet">
+	<link rel="stylesheet" href="/static/ace1.3/css/jquery.dataTables.min.css" />
+	<style>
+	    .title_a{
+			margin-right:5px;
+			width:150px;
+			float:left;
+			}
+	    .title_a a{
+			line-height:30px;
+			}
+			
+		.zhiwei strong{margin-right:17px;}
+		.zhiwei a{margin-right:10px;display:inline;width:150px;float:left;margin-top:10px;}
+		#words a{line-height:25px;width:30px;height:25px;text-align:center;background:#e8f3fe;float:left;border:1px solid #c6dff7;margin-right:15px;margin-top:15px;}
+		#words a:hover{background:#11518f;color:#FF0;border:1px solid #11518f;}
+		.sub_con_tp{width:880px; margin:0 auto; padding:8px 0 2px}
+		.sub_con_tp h3{background:#fff url(/static/trans/img/h4_head.jpg) no-repeat left center;font-size:14px; font-weight:bold; color:#08509A; text-align:left; padding:14px 0 14px 40px; border-bottom:1px solid #AAAAAA; margin-bottom:12px}
+		.sub_con_tp p{line-height:24px; }
+		.sub_con_tp ul,li {margin:auto;}
+		
+		.sub_con_tp1{width:880px; margin:0 auto; padding:8px 0 2px}
+		.sub_con_tp1 h3{font-size:14px; font-weight:bold; color:#08509A; text-align:center; padding:14px 0; border-bottom:1px solid #AAAAAA; margin-bottom:12px}
+		.sub_con_tp1 p{line-height:24px; margin-bottom:8px; }								
+	</style> 
+    <script src="/static/ace1.3/js/jquery/1.11.0/jquery.min.js"></script>
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="/static/trans/js/html5shiv.js"></script>
+    <![endif]-->
+
+</head>
+<body>
+	<div class="boxbody">
+		<header>
+			<div class="container clearfix">
+				<div class="row-fluid">
+					<div class="span12">
+						<h1 class="brandlogo"><a href="http://trans.bjtu.edu.cn/cms/"><img src="/static/trans/img/logo.png" alt=""></a></h1>
+						<div class="topinfo">
+							<div class="list-soc">
+								<a href="http://trans1.bjtu.edu.cn/english/index.php">English</a>
+							</div>
+							<div class="infophone">
+								<div class="control-group">
+									<div class="controls">
+										<div class="input-prepend">
+                            				<form name="keyform" action="http://trans.bjtu.edu.cn/cms/item/" method="get">
+                              				<span class="add-on"><i class="icon-search"></i></span>
+                              				<input  id="inputIcon" type="text" class="input-medium"  name="keyword">
+                              				</form>
+                              			</div>
+                          			</div>
+                        		</div>
+							</div>
+			  			</div>
+						<div class="clearfix"></div>
+						<div class="row-nav navbar">
+							<div class="navbar-inner">
+								<ul id="nav" class="nav">
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+		<div class="text-center">
+			<img src="/static/trans/img/sha.png" class="slidershadow" alt="">
+		</div>
+		<div id="wrap">
+      		<div class="row-fluid container bggay">
+        		<div class="span4">
+          			<div class="leftbox_top">
+          				<div class="h4border">
+		                	<p>高亮</p>
+		                	<div class="clearfix"></div>
+		                </div>
+						<div class="list_sidebar">
+              				<div class="categories">
+              					<ul>
+									<li><a href="#basic">基本情况</a></li>
+                                    
+                                    <li><a href="#jybj">教育背景</a></li>
+                                    
+                                    <li><a href="#gzjl">工作经历</a></li>
+                                    
+                                    <li><a href="#yjfx">研究方向</a></li>
+                                    
+                                    <li><a href="#zszy">招生专业</a></li>
+                                    
+                                    <li><a href="#kyxm">科研项目</a></li>
+                                    
+                                    <li><a href="#jxgz">教学工作</a></li>
+                                    
+                                    <li><a href="#lwqk">论文/期刊</a></li>
+                                    
+                                    <li><a href="#zzyz">专著/译著</a></li>
+                                    
+                                    <li><a href="#zl">专利</a></li>
+                                    
+                                    <li><a href="#rjzzq">软件著作权</a></li>
+                                    
+                                    <li><a href="#hjry">获奖与荣誉</a></li>
+                                    
+                                    <li><a href="#shjz">社会兼职</a></li>
+                                    
+              					</ul>
+              				</div>
+          				</div>
+          			</div>
+        		</div>
+        		<div class="span8">
+          			<div class="mainleft_box "> 
+						<h4 class="h4border">	            	
+				  		个人简介
+		        		</h4>
+                		<div class="main_nr">
+							<div style="padding:0px 10px;">
+				            	
+				            	<div class="sub_con_tp">
+				            		<h3 style="width:830px;float:right"><a name="basic">基本情况</a></h3>
+									<div style="padding:15px; line-height:25px;">
+										<div class="MsoNormal">
+											<table class="MsoNormalTable" border="0" cellspacing="0" cellpadding="0" width="840" align="center" height="1964" style="width: 840px; border-collapse: collapse; height: auto">
+												<tbody>
+													<tr style="height: 20pt">
+														<td width="80" style=" padding-bottom: 0cm; padding-left: 5.4pt; padding-right: 5.4pt; height: 20pt;  padding-top: 0cm">
+															<p style="text-align: left"><span >姓&nbsp;&nbsp;名：</span></p>
+														</td>
+														<td width="216" style=" border-left: medium none; padding-bottom: 0cm; padding-left: 5.4pt; width: 162pt; padding-right: 5.4pt; height: 20pt;  padding-top: 0cm">
+															<p style="text-align: left"><span >高亮</span></p>
+														</td>
+														<td valign="top" rowspan="9" width="245" style=" border-left: medium none; padding-bottom: 0cm; padding-left: 5.4pt; width: 142.05pt; padding-right: 5.4pt; height: 20pt;  padding-top: 0cm">
+															
+															<img id="photo" src="/media/avatar/2015/05/22/20150522123015_90.JPG" width="216" height="252">
+														</td>
+													</tr>
+													<tr style="height: 20pt">
+														<td width="80" style=" padding-bottom: 0cm; padding-left: 5.4pt; padding-right: 5.4pt; height: 20pt; border-top: medium none;  padding-top: 0cm">
+														<p style="text-align: left"><span >职&nbsp;&nbsp;务：</span></p>
+														</td>
+														<td width="216" style=" border-left: medium none; padding-bottom: 0cm; padding-left: 5.4pt; width: 162pt; padding-right: 5.4pt; border-top: medium none;  padding-top: 0cm">
+														<p style="text-align: left"><span >博导</span></p>
+														</td>
+													</tr>
+													<tr style="height: 24pt">
+														<td width="80" style=" padding-bottom: 0cm; padding-left: 5.4pt; padding-right: 5.4pt; height: 24pt; border-top: medium none;  padding-top: 0cm">
+														<p style="text-align: left"><span >职&nbsp;&nbsp;称：</span></p>
+														</td>
+														<td width="216" style=" border-left: medium none; padding-bottom: 0cm; padding-left: 5.4pt; width: 162pt; padding-right: 5.4pt; height: 24pt; border-top: medium none;  padding-top: 0cm">
+														<p style="text-align: left"><span >副教授</span></p>
+														</td>
+													</tr>
+													<tr style="height: 20pt">
+														<td width="80" style=" padding-bottom: 0cm; padding-left: 5.4pt; padding-right: 5.4pt; height: 20pt; border-top: medium none;  padding-top: 0cm">
+														<p style="text-align: left"><span >学&nbsp;&nbsp;历：</span></p>
+														</td>
+														<td width="216" style=" border-left: medium none; padding-bottom: 0cm; padding-left: 5.4pt; width: 162pt; padding-right: 5.4pt; height: 20pt; border-top: medium none;  padding-top: 0cm">
+														<p style="text-align: left"><span >研究生</span></p>
+														</td>
+													</tr>
+													<tr style="height: 20pt">
+														<td width="80" style=" padding-bottom: 0cm; padding-left: 5.4pt; padding-right: 5.4pt; height: 20pt; border-top: medium none;  padding-top: 0cm">
+														<p style="text-align: left"><span >学&nbsp;&nbsp;位：</span></p>
+														</td>
+														<td width="216" style=" border-left: medium none; padding-bottom: 0cm; padding-left: 5.4pt; width: 162pt; padding-right: 5.4pt; height: 20pt; border-top: medium none;  padding-top: 0cm">
+														<p style="text-align: left"><span >博士</span></p>
+														</td>
+													</tr>
+													<tr style="height: 24pt">
+														<td width="80" style=" padding-bottom: 0cm; padding-left: 5.4pt; padding-right: 5.4pt; height: 24pt; border-top: medium none;  padding-top: 0cm">
+														<p style="text-align: left"><span >通信地址：</span></p>
+														</td>
+														<td width="216" style=" border-left: medium none; padding-bottom: 0cm; padding-left: 5.4pt; width: 162pt; padding-right: 5.4pt; height: 24pt; border-top: medium none;  padding-top: 0cm">
+														<p style="text-align: left"><span >交大科技大厦T1115室，北京海淀区上园村3号</span></p>
+														</td>
+													</tr>
+													<tr style="height: 20pt">
+														<td width="80" style=" padding-bottom: 0cm; padding-left: 5.4pt; padding-right: 5.4pt; height: 20pt; border-top: medium none;  padding-top: 0cm">
+														<p style="text-align: left"><span >邮&nbsp;&nbsp;编：</span></p>
+														</td>
+														<td width="216" style=" border-left: medium none; padding-bottom: 0cm; padding-left: 5.4pt; width: 162pt; padding-right: 5.4pt; height: 20pt; border-top: medium none;  padding-top: 0cm">
+														<p style="text-align: left"><span >详细研究方向：muchong.com/t-1436</span></p>
+														</td>
+													</tr>
+													<tr style="height: 20pt">
+														<td width="80" style=" padding-bottom: 0cm; padding-left: 5.4pt; padding-right: 5.4pt; height: 20pt; border-top: medium none;  padding-top: 0cm">
+														<p style="text-align: left"><span >办公电话：</span></p>
+														</td>
+														<td width="216" style=" border-left: medium none; padding-bottom: 0cm; padding-left: 5.4pt; width: 162pt; padding-right: 5.4pt; height: 20pt; border-top: medium none;  padding-top: 0cm">
+														<p style="text-align: left"><span >010-51687143，13366201715</span></p>
+														</td>
+													</tr>
+													<tr style="height: 24pt">
+														<td width="80" style=" padding-bottom: 0cm; padding-left: 5.4pt; padding-right: 5.4pt; height: 24pt; border-top: medium none;  padding-top: 0cm">
+														<p style="text-align: left"><span >电子邮箱：</span></p>
+														</td>
+														<td width="216" style=" border-left: medium none; padding-bottom: 0cm; padding-left: 5.4pt; width: 162pt; padding-right: 5.4pt; height: 24pt; border-top: medium none;  padding-top: 0cm">
+														<p style="text-align: left"><a href="mailto:lianggao@bjtu.edu.cn"><span >lianggao@bjtu.edu.cn</span></a></p>
+														</td>
+													</tr>
+				
+												</tbody>
+											</table>
+										</div>
+									</div>
+                                    
+                                    <h3 style="width:830px;float:right;"><a name = "jybj">教育背景</a></h3>
+									<div style="padding:15px; line-height:25px;">
+										<div class="MsoNormal">
+											<table class="MsoNormalTable" border="0" cellspacing="0" cellpadding="0" width="840" align="center" height="1964" style="width: 840px; border-collapse: collapse; height: auto">
+												<tbody>
+													<tr>
+														<td width="659" style=" padding-bottom: 0cm; padding-left: 5.4pt; padding-right: 5.4pt; height: 24pt;  padding-top: 0cm">
+															 <ol>
+	<li>
+		2007年，北京交通大学，交通运输学院，工作至今；
+	</li>
+	<li>
+		2007年，北京师范大学系统科学系，系统理论专业，博士学位；
+	</li>
+	<li>
+		2002年，北京师范大学，系统科学系，系统工程专业，学士学位。
+	</li>
+</ol>
+<p>
+	<strong><span style="font-size:24px;">近期具体研究方向一：<span style="font-size:24px;"><strong>交通大数据分析与建模</strong></span></span></strong> 
+</p>
+<p>
+	<span style="font-size:18px;"><strong>1，研究交通过程的时空特性和演化规律。（1）城市内或更大的地理范围内的交通过程；（2）道路、公路、铁路、航空、海运等交通运输方式。</strong></span> 
+</p>
+<p>
+	<span style="font-size:16px;"><span style="font-size:18px;">例，借助车辆轨迹数据、停车数据、手机应用定位数据、电子地图数据、兴趣点数据</span><span style="font-size:18px;">等，研究城市交通拥堵的形成、扩散和消散规律，提出缓解交通拥堵的交通控制策略和交通管理方法。</span></span> 
+</p>
+<p>
+	<span style="font-size:16px;"><strong><span style="font-size:18px;">2，研究</span><span style="font-size:18px;">交通系统的运行效率和出行可靠性。（1）多方式（多模式）交通系统；（2）效率和可靠性的评估；（3）目标是提高效率，提升可靠性。</span></strong></span> 
+</p>
+<p>
+	<span style="font-size:16px;"><span style="font-size:16px;"><span style="font-size:18px;">例，“地铁-公交”交通系统，出行者视角，研究提高居民出行效率的方法；运营者视角，</span><span style="font-size:16px;"><span style="font-size:18px;">研究系统故障的恢复能力，发现影响系统恢复能力的关键因素。</span> </span></span></span>
+	<p>
+		<br />
+	</p>
+	<p>
+		<br />
+	</p>
+
+														</td>
+													</tr>
+
+												</tbody>
+											</table>
+										</div>
+									</div>
+                                    
+                                    <h3 style="width:830px;float:right;"><a name = "gzjl">工作经历</a></h3>
+									<div style="padding:15px; line-height:25px;">
+										<div class="MsoNormal">
+											<table class="MsoNormalTable" border="0" cellspacing="0" cellpadding="0" width="840" align="center" height="1964" style="width: 840px; border-collapse: collapse; height: auto">
+												<tbody>
+													<tr>
+														<td width="659" style=" padding-bottom: 0cm; padding-left: 5.4pt; padding-right: 5.4pt; height: 24pt;  padding-top: 0cm">
+															 <span> </span> 
+<p>
+	<span style="color:black;font-family:&quot;font-size:12pt;">2014年7月-至今，副教授，博士生导师；</span> 
+</p>
+<p>
+	<span style="color:black;font-family:&quot;font-size:12pt;">2011年3月-2012年3月，访问学者Department of
+Physics, Northeastern University, Boston, MA 02115, USA.</span><span> </span> 
+</p>
+<p>
+	<span style="color:black;font-family:&quot;font-size:12pt;">2007年7月-2014年7月，讲师，硕士生导师。</span> 
+</p>
+<p>
+	<strong><span style="font-size:24px;">近期具体研究方向二：<span style="font-size:24px;"><strong>交通网络结构与功能的分析与建模</strong></span></span></strong> 
+</p>
+<p>
+	<span style="font-size:18px;"><strong>1，交通网络动态/时变特性研究。（1）“路”网交通运输能力时变特性研究。（2）有效“路”网结构的时变特性。</strong></span> 
+</p>
+<p>
+	<span style="font-size:16px;"><span style="font-size:18px;">例，航班运行数据构建的时变航空网络，交通运输能力评估。铁路客运网络服务动态可靠性评价。</span></span> 
+</p>
+<p>
+	<span style="font-size:16px;"><strong><span style="font-size:18px;">2，复合</span><span style="font-size:18px;">交通网络结构与功能特征。（1）多交通方式间“联合”优化方法<span style="font-size:16px;"><span style="font-size:16px;"><span style="font-size:16px;"><span style="font-size:18px;">。（2）多方式复合“出行方案”规划方法。</span></span></span></span></span></strong></span> 
+</p>
+<p>
+	<span style="font-size:16px;"><span style="font-size:18px;"><span style="font-size:16px;"><span style="font-size:16px;"><span style="font-size:16px;"><span style="font-size:18px;">例，北京-广州的出行，铁路、公路、航空等交通方式（精确到分钟）如何组合出行最优。</span></span></span></span></span></span>
+</p>
+<p>
+	<span style="font-size:16px;"><strong><span style="font-size:18px;">3，影响</span><span style="font-size:18px;">交通系统服务能力的关键结构（路段，路口等）识别方法研究。</span></strong></span>
+</p>
+<p>
+	<span style="font-size:18px;">例，导致城市交通拥堵的关键交叉口和路段的识别。</span>
+</p>
+														</td>
+													</tr>
+
+												</tbody>
+											</table>
+										</div>
+									</div>
+                                    
+                                    <h3 style="width:830px;float:right;"><a name = "yjfx">研究方向</a></h3>
+									<div style="padding:15px; line-height:25px;">
+										<div class="MsoNormal">
+											<table class="MsoNormalTable" border="0" cellspacing="0" cellpadding="0" width="840" align="center" height="1964" style="width: 840px; border-collapse: collapse; height: auto">
+												<tbody>
+													<tr>
+														<td width="659" style=" padding-bottom: 0cm; padding-left: 5.4pt; padding-right: 5.4pt; height: 24pt;  padding-top: 0cm">
+															 <ul>
+
+    <li>系统科学</li>
+
+    <li>交通运输规划与管理</li>
+
+    <li>交通运输（专业学位）</li>
+
+</ul>
+														</td>
+													</tr>
+
+												</tbody>
+											</table>
+										</div>
+									</div>
+                                    
+                                    <h3 style="width:830px;float:right;"><a name = "zszy">招生专业</a></h3>
+									<div style="padding:15px; line-height:25px;">
+										<div class="MsoNormal">
+											<table class="MsoNormalTable" border="0" cellspacing="0" cellpadding="0" width="840" align="center" height="1964" style="width: 840px; border-collapse: collapse; height: auto">
+												<tbody>
+													<tr>
+														<td width="659" style=" padding-bottom: 0cm; padding-left: 5.4pt; padding-right: 5.4pt; height: 24pt;  padding-top: 0cm">
+															 <ul>
+
+    <li>系统科学硕士</li>
+
+    <li>交通运输规划与管理硕士</li>
+
+    <li>交通运输硕士</li>
+
+</ul>
+														</td>
+													</tr>
+
+												</tbody>
+											</table>
+										</div>
+									</div>
+                                    
+                                    <h3 style="width:830px;float:right;"><a name = "kyxm">科研项目</a></h3>
+									<div style="padding:15px; line-height:25px;">
+										<div class="MsoNormal">
+											<table class="MsoNormalTable" border="0" cellspacing="0" cellpadding="0" width="840" align="center" height="1964" style="width: 840px; border-collapse: collapse; height: auto">
+												<tbody>
+													<tr>
+														<td width="659" style=" padding-bottom: 0cm; padding-left: 5.4pt; padding-right: 5.4pt; height: 24pt;  padding-top: 0cm">
+															 
+<ol>
+	<li>
+		国家自然科学基金，重大研究计划-培育项目：基于多源大数据的城市交通微观-宏观行为规律研究，2017-01-01--2019-12-31，43万元，主持
+	</li>
+	<li>
+		国家自然科学基金，重大研究计划-重点支持项目：大数据驱动的城市群交通状态感知、态势推演与智慧决策，2018-01-01--2021-12-31，240万元，本人分担额度40万元，参加
+	</li>
+	<li>
+		国家自然科学基金，国际会议项目：2016年大数据驱动的管理与决策研究学术研讨会，2016-09-01--2016-12-31，5.1万元，主持
+	</li>
+	<li>
+		国家自然科学基金“面上”：基于数据分析的城市交通出行行为规律研究，2016-01-01--2019-12-31，59.16万元，主持
+	</li>
+	<li>
+		科技部“863”：位置服务应用开放支撑平台研制与示范应用，2015-01-01--2017-12-31，135.15万元，本人分担60万，参加
+	</li>
+	<li>
+		国家自然科学基金"青年基金"：不确定性条件下环境导向的城市交通出行结构优化及调控策略研究，2014-01-01--2016-12-31，22.0万元，参加
+	</li>
+	<li>
+		国家自然科学基金“面上”：城市交通系统中停车换乘设施布局与运营优化研究，2014-01-01--2017-12-31，56.0万元，参加
+	</li>
+	<li>
+		基本科研业务费：用户有限理性条件下停车换乘设施选址与收费定价研究，2013-01-01--2014-12-31，7.0万元，参加
+	</li>
+	<li>
+		基本科研业务费：电动自行车不安全行为的实证、建模与分析，2013-01-01--2014-12-31，7.0万元，参加
+	</li>
+	<li>
+		科技部“973”：大城市交通需求的引导理论与方法，2012-01-01--2016-08-31，320.0万元，参加
+	</li>
+	<li>
+		北京交通大学：公交供求关系主要经济因子的弹性分析，2012-05-21--2012-12-31，10.0万元，参加
+	</li>
+	<li>
+		基本科研业务费：基于手机通讯数据的城市交通需求计算方法与演化特性研究，2012-01-01--2013-12-31，8.0万元，主持
+	</li>
+	<li>
+		基本科研业务费：城市综合交通经济外部性分析及系统优化方法，2012-03-16--2013-12-31，8.0万元，参加
+	</li>
+	<li>
+		国家自然科学基金“重点”：基于出行行为的综合交通网络多方式选择与分配模型及算法研究，2012-01-01--2016-12-31，60.0万元，参加
+	</li>
+	<li>
+		国家自然科学基金"青年基金"：基于空间网络的城市交通出行引导策略研究，2012-01-01--2014-12-31，20.0万元，主持
+	</li>
+	<li>
+		国家重点实验室：城市轨道交通网络突发客流分布及其传播规律研究，2011-01-01--2012-12-31，15.0万元，参加
+	</li>
+	<li>
+		国家自然科学基金“面上”：基于超网络的城市多模式交通出行分布特性及优化研究，2011-01-01--2013-12-31，27.0万元，参加
+	</li>
+	<li>
+		基本科研业务费：考虑换乘的城市多模式组合交通出行分布及优化研究，2009-12-31--2012-12-31，5.0万元，参加
+	</li>
+	<li>
+		基本科研业务费：非常规突发事件中大规模人群的行人动力学研究，2009-12-01--2012-12-31，5.0万元，主持
+	</li>
+	<li>
+		北京交大创新科技中心：北京轨道交通网络流量分配模型与算法研究，2010-03-16--2010-06-20，11.0万元，参加
+	</li>
+	<li>
+		国家自然科学基金"青年基金"：基于复杂网络理论的城市交通空间结构演化与道路选址方法研究，2010-01-01--2012-12-31，18.5万元，参加
+	</li>
+	<li>
+		校科技基金：复杂网络背景下的城市交通系统研究，2007-11-01--2009-11-30，2.0万元，主持
+	</li>
+	<li>
+		国家自然科学基金“面上”：城市交通系统中停车换乘设施布局与运营优化研究，2014-01-01--2017-12-31，56.0万元，参加
+	</li>
+	<li>
+		<br />
+	</li>
+</ol>
+
+														</td>
+													</tr>
+
+												</tbody>
+											</table>
+										</div>
+									</div>
+                                    
+                                    <h3 style="width:830px;float:right;"><a name = "jxgz">教学工作</a></h3>
+									<div style="padding:15px; line-height:25px;">
+										<div class="MsoNormal">
+											<table class="MsoNormalTable" border="0" cellspacing="0" cellpadding="0" width="840" align="center" height="1964" style="width: 840px; border-collapse: collapse; height: auto">
+												<tbody>
+													<tr>
+														<td width="659" style=" padding-bottom: 0cm; padding-left: 5.4pt; padding-right: 5.4pt; height: 24pt;  padding-top: 0cm">
+															 <ol>
+	<li>
+		数据分析方法与应用，本科生必修课，171802、181901学期；
+	</li>
+	<li>
+		系统科学导论，研究生专业选修课，151601、161701学期；
+	</li>
+	<li>
+		大系统理论，研究生学位课，161701、171802、181902学期；
+	</li>
+	<li>
+		数值分析I（交通运输方向），研究生学位课，080901、011001、101101学期；
+	</li>
+	<li>
+		离散数学，本科生专业课，131401学期；
+	</li>
+	<li>
+		数字信号处理(A)，本科生必修课，121302学期；
+	</li>
+	<li>
+		经济物流分析，本科生全校任选课，070802、080902、091002学期；
+	</li>
+	<li>
+		时间序列分析，本科生限选课，080901学期；
+	</li>
+</ol>
+
+														</td>
+													</tr>
+
+												</tbody>
+											</table>
+										</div>
+									</div>
+                                    
+                                    <h3 style="width:830px;float:right;"><a name = "lwqk">论文/期刊</a></h3>
+									<div style="padding:15px; line-height:25px;">
+										<div class="MsoNormal">
+											<table class="MsoNormalTable" border="0" cellspacing="0" cellpadding="0" width="840" align="center" height="1964" style="width: 840px; border-collapse: collapse; height: auto">
+												<tbody>
+													<tr>
+														<td width="659" style=" padding-bottom: 0cm; padding-left: 5.4pt; padding-right: 5.4pt; height: 24pt;  padding-top: 0cm">
+															 
+<p>
+	40. 王灵丽,黄敏,高亮.基于聚类算法的交通网络节点重要性评价方法研究.交通信息与安全,2020,38(02):80-88. (doi: 10.3963/j.jssn.1674-4861.2020.02.010)<br />
+39. Liang Gao *, Senbin Yu, Menghui Li, Zhesi Shen, Ziyou Gao. Weighted h-index for identifying influential spreaders. Symmetry 2019, 11(10), 1263. (doi: 10.3390/sym11101263)<br />
+38. 高亮,徐伟.基于预测库存变化率的公共自行车动态调度方法[J].长安大学学报(自然科学版),2019,39(06):108-115.<br />
+37. Liang Gao*, Ge Gao, Dandan Ma, Lida Xu*. Coreness variation rule and fast updating algorithm for dynamic networks. Symmetry 2019, 11(4), 477.<br />
+36. Liang Gao*, Wei Xu, Yifeng Duan. Dynamic scheduling based on predicted inventory variation rate for public bicycle system. Sustainability 2019, 11, 1885. (doi: 10.3390/su11071885) <br />
+35. Senbin Yu, Liang Gao*, Yi-Fan Wang, Lida Xu, and Zi-You Gao. Identifying influential spreaders based on indirect spreading in neighborhood. Physica A 523 418-425(2019). (doi: 10.1016/j.physa.2019.02.010) <br />
+34. Guanwen Zeng, Daqing Li*, Shengmin Guo, Liang Gao, Ziyou Gao*, H. Eugene Stanley, and Shlomo Havlin*. Switch between critical percolation modes in city traffic dynamics. PNAS 116 23-28 (2019).<br />
+33. Liang Gao*, Xiaoya Shan, Yuhao Qin, Senbin Yu, Lida Xu, and Zi-You Gao. Scaling tunable network model to reproduce the density-driven superlinear relation. Chaos 28 033122 (2018).<br />
+32. Yu-Hao Qin, Zhi-Dan Zhao, Shi-Min Cai*, Liang Gao*, and H. Eugene Stanley. Dual-induced multifractality in online viewing activity. Chaos 28 013114 (2018). <br />
+31. Jingjing Song, Liang Gao*, Xiaoya Shan. Historical street network GIS datasets of Beijing within 5th ring-road. China Scientific Data, 2(1) 114 (2017). (doi: 10.11922/csdata.580.2016.0114) <br />
+30. Wanchen Gao, Liang Gao*, Lida Xu, Ziyou Gao. Assessment on road traffic noise in the Xizhimen overpass area, Beijing. Proceedings of CICTP 2015 (Efficient, Safe and Green Multimodal) 3290-3299 (2015).<br />
+29. Zhen-zhen Yang, Liang Gao*, Zi-you Gao, Sheng-min Guo. AR and ESE methods for traffic incident analysis on urban arterials. Proceedings of CICTP 2015 (Efficient, Safe and Green Multimodal) 352-362 (2015).<br />
+28. Wanchen Gao, Liang Gao, Zi-You Gao. Smartphone-based study on the spatio-temporal patterns of regional road traffic noise. Proceedings of System Engineering Society of China Conference 2014, A07, 417 (2014).<br />
+27. Hao Tang, Liang Gao, Zi-You Gao. Travel Time Reliability of Bus Network —Hangzhou as an Example. Proceedings of System Engineering Society of China Conference 2014, A07, 407 (2014).<br />
+26. Yanan Miao, Liang Gao, Zi-You Gao. Characteristics of the spatial evolution of Beijing road network system. Proceedings of System Engineering Society of China Conference 2014, A07, 395 (2014).<br />
+25. Liang Gao*, Yanan Miao, Yuhao Qin, Xiaomei Zhao, Zi-You Gao. Finding topological center of a geographic space via road network. Physica A, 419, 128-133 (2015).<br />
+24. Peng Zhang, Menghui Li?, Liang Gao, Ying Fan, Zengru Di. Characterizing and Modeling the Dynamics of Activity and Popularity. PLoS ONE, 9, e89192 (2014).<br />
+23. Liang Gao, Chaoming Song, Ziyou Gao, Albert-László Barabási, James P. Bagrow and Dashun Wang*. Quantifying Information Flow During Emergencies. Scientific Reports, 4, 3997 (2014).<br />
+22. Xiao-mei Zhao, Dong-fan Xie, Zi-you Gao and Liang Gao. Equilibrium of a two-route system with delayed information feedback strategies. Physics Letters A, 377(43), 3161–3169 (2013).&nbsp; <br />
+21. Jinbao Du, Hualing Ren, Liang Gao and Bingfeng Si. A strategies based transit pricing method in multi-way traffic condition. Shandong Science, 26(3), 95-100 (2013). (In Chinese). <br />
+20. Yanan Miao and Liang Gao. Study on the Price Elasticity of Demand of Beijing Subway. Journal of Traffic and Logistics Engineering, 1, 25 (2013). <br />
+19. Wei Shi-chao, Gao Liang, Sun Shi-zhao and Li Lin-can. An Application of ARIMA model in Study of Darwin's Mail Communication Pattern. Journal of Mathematics in Practice and Theory, 43(4), 185-192 (2013). (In Chinese). <br />
+18. Liang Gao, Yanan Miao, Daqing Li, Xiaobao Yang, Hualing Ren and Bingfeng Si. Agent-based Evaluate and Mitigate Habitat Fragmentation by Road Network. Proceedings of 2012 International Conference on Applied Informatics and Communication, (Dec. 4-5, Shenzhen, China). Pages 97-102 (2012). <br />
+17. Liang Gao, Yanan Miao, Xiaobao Yang and Bingfeng Si. Road Network Impacts On Wildlife Animals: A Simulation Study. Proceedings of 2012 IET International Conference on Information Science and Control Engineering (Dec. 7-9, Shenzhen, China), vol.2 pages 1091-1095 (2012).<br />
+16. Liang Gao, Bingfeng Si, Xiaobao Yang, Huijun Sun, and Ziyou Gao. A matrix method for finding last common nodes in an origin-based traffic assignment problem. Physica A 391, 285–290 (2012). <br />
+15. Si Bingfeng, Zhong Ming, Gao Liang, Gao Ziyou. Hierarchical Network Based Equilibrium Model and Algorithm for Mixed-Traffic Urban Transport System. Journal of Transportation Planning and Technology, 35(5), 545-559 (2012).<br />
+14. Xiaobao Yang, Mei Huan, Bingfeng Si, Liang Gao, and Hongwei Guo. Crossing at a Red Light: Behavior of Cyclists at Urban Intersections. Discrete Dynamics in Nature and Society 2012, 490810 (2012).<br />
+13. Xiaobao Yang, Mei Huan, Bingfeng Si and Liang Gao. Bicycle capacity of borrowed-priority merge at unsignalized intersections in China. Journal of Beijing Institute of Technology 21, 229 (2012).<br />
+12. Xiaobao Yang, Mei Huan, Hongwei Guo and Liang Gao. Car Travel Time Estimation near a Bus Stop with Non-motorized Vehicles. International Journal of Computational Intelligence Systems 4, 1350-1357 (2011).<br />
+11. X.B. Yang, Z.Y. Gao, B.F. Si, and Liang Gao. Car capacity near bus stops with mixed traffic derived by additive-conflict-flows procedure. Sci. China. Tech. Sci. 54, 733-740 (2011).<br />
+10. Liang Gao, Bingfeng Si, Xiaobao Yang, Huijun Sun, and Ziyou Gao. A Matrix Method for Finding Common Nodes in Network Traffic Assignment. TRB 2011, Washington, US. <br />
+9. Menghui Li, Liang Gao, Ying Fan, Dahui Wang, Jinshan Wu and Zengru Di. Emergence of global preferential attachment from local interaction. New Journal of Physics 12, 043029 (2010).<br />
+8. Bingfeng Si, Xiaobao Yang, Liang Gao, Ziyou Gao. Multi-mode urban traffic assignment model and algorithm based on travel demand (in Chinese). China Journal of Highway and Transport 23, 85-91 (2010).<br />
+7. Bingfeng Si, Liang Gao，Baohua Mao, Toll allocation model for urban railway traffic system under condition of seamless exchange (in Chinese). Journal of Management Science in China 12, 36-44 (2009).<br />
+6. Liang Gao, Yanqing Hu and Zengru Di. Accuracy of the ball-covering approach for fractal dimensions of complex networks and a rank-driven algorithm. Physical Review E 78, 046109 (2008).<br />
+5. Liang Gao, Jinshan Zhao, Zengru Di and Dahui Wang. Asymmetry Between Odd and Even Node Weight in Complex Networks. Physica A 376, 687-691 (2007).<br />
+4. Liang Gao, Menghui Li, Jinshan Wu and Zengru Di. Betweenness-based attack on nodes and edges of food webs. Dynamics of Continuous, Discrete and Impulse Systems B 13, 421-428 (2006).<br />
+3. Liang Gao, Menghui Li, Jinshan Wu and Zengru Di. The Robustness of Attacks on Vertices and Edges of Food Webs(In Chinese). Systems Engineering - Theory &amp; Practice 25, 1-8 (2005). <br />
+2. Menghui Li, Ying Fan, Jiawei Chen, Liang Gao, Zengru Di and Jinshan Wu. Weighted networks of scientific communication: the measurement and topological role of weight. Physica A 350, 643-656 (2005).<br />
+1. Ying Fan, Menghui Li, Jiawei Chen, Liang Gao, Zengru Di and Jinshan Wu. Network of Econophysicists: A Weighted Network To Investigate the Development of Econophysics.&nbsp;&nbsp; International Journal of Modern Physics B 18, 2505-2511 (2004).
+</p>
+
+														</td>
+													</tr>
+
+												</tbody>
+											</table>
+										</div>
+									</div>
+                                    
+                                    <h3 style="width:830px;float:right;"><a name = "zzyz">专著/译著</a></h3>
+									<div style="padding:15px; line-height:25px;">
+										<div class="MsoNormal">
+											<table class="MsoNormalTable" border="0" cellspacing="0" cellpadding="0" width="840" align="center" height="1964" style="width: 840px; border-collapse: collapse; height: auto">
+												<tbody>
+													<tr>
+														<td width="659" style=" padding-bottom: 0cm; padding-left: 5.4pt; padding-right: 5.4pt; height: 24pt;  padding-top: 0cm">
+															 
+
+
+														</td>
+													</tr>
+
+												</tbody>
+											</table>
+										</div>
+									</div>
+                                    
+                                    <h3 style="width:830px;float:right;"><a name = "zl">专利</a></h3>
+									<div style="padding:15px; line-height:25px;">
+										<div class="MsoNormal">
+											<table class="MsoNormalTable" border="0" cellspacing="0" cellpadding="0" width="840" align="center" height="1964" style="width: 840px; border-collapse: collapse; height: auto">
+												<tbody>
+													<tr>
+														<td width="659" style=" padding-bottom: 0cm; padding-left: 5.4pt; padding-right: 5.4pt; height: 24pt;  padding-top: 0cm">
+															 
+
+														</td>
+													</tr>
+
+												</tbody>
+											</table>
+										</div>
+									</div>
+                                    
+                                    <h3 style="width:830px;float:right;"><a name = "rjzzq">软件著作权</a></h3>
+									<div style="padding:15px; line-height:25px;">
+										<div class="MsoNormal">
+											<table class="MsoNormalTable" border="0" cellspacing="0" cellpadding="0" width="840" align="center" height="1964" style="width: 840px; border-collapse: collapse; height: auto">
+												<tbody>
+													<tr>
+														<td width="659" style=" padding-bottom: 0cm; padding-left: 5.4pt; padding-right: 5.4pt; height: 24pt;  padding-top: 0cm">
+															 
+
+														</td>
+													</tr>
+
+												</tbody>
+											</table>
+										</div>
+									</div>
+                                    
+                                    <h3 style="width:830px;float:right;"><a name = "hjry">获奖与荣誉</a></h3>
+									<div style="padding:15px; line-height:25px;">
+										<div class="MsoNormal">
+											<table class="MsoNormalTable" border="0" cellspacing="0" cellpadding="0" width="840" align="center" height="1964" style="width: 840px; border-collapse: collapse; height: auto">
+												<tbody>
+													<tr>
+														<td width="659" style=" padding-bottom: 0cm; padding-left: 5.4pt; padding-right: 5.4pt; height: 24pt;  padding-top: 0cm">
+															 <ol>
+	<li>
+		2009年，全国百篇优秀博士学位论文提名奖，<a href="http://www.chinadegrees.cn/xwyyjsjyxx/zlpj/yblwpm/yblwpxgs/tmlw/266386.shtml">http://www.chinadegrees.cn/xwyyjsjyxx/zlpj/yblwpm/yblwpxgs/tmlw/266386.shtml</a><span> <span style="color:black;font-family:宋体;font-size:12pt;"></span></span>
+	</li>
+	<li>
+		<span><span style="color:black;font-family:宋体;font-size:12pt;">张可</span><span style="color:black;font-family:&quot;Life BT&quot;,serif;font-size:12pt;"><span> </span></span><span style="color:black;font-family:宋体;font-size:12pt;">、高自友</span><span style="color:black;font-family:&quot;Life BT&quot;,serif;font-size:12pt;"><span> </span></span><span style="color:black;font-family:宋体;font-size:12pt;">等，特大城市综合交通运行复合感知与协同服务系统构建及应用，中国智能交通协会科学技术奖一等奖，</span><span style="color:black;font-family:&quot;Life BT&quot;,serif;font-size:12pt;">2019</span><span style="color:black;font-family:宋体;font-size:12pt;">。本人排序第</span><span style="color:black;font-family:&quot;Life BT&quot;,serif;font-size:12pt;">14</span><span style="color:black;font-family:宋体;font-size:12pt;">位</span><span style="color:black;font-family:&quot;Life BT&quot;,serif;font-size:12pt;">(</span><span style="color:black;font-family:宋体;font-size:12pt;">总</span><span style="color:black;font-family:&quot;Life BT&quot;,serif;font-size:12pt;">15</span><span style="color:black;font-family:宋体;font-size:12pt;">人</span><span style="color:black;font-family:&quot;Life BT&quot;,serif;font-size:12pt;">)</span><span style="color:black;font-family:宋体;font-size:12pt;">。</span><span style="color:black;font-family:&quot;Life BT&quot;,serif;font-size:12pt;">(ZZJX-J2019K002-14)</span></span><span> </span>
+	</li>
+	<li>
+		<span></span><span style="color:black;font-family:宋体;font-size:12pt;">张可</span><span style="color:black;font-family:&quot;Life BT&quot;,serif;font-size:12pt;"><span> </span></span><span style="color:black;font-family:宋体;font-size:12pt;">、高自友</span><span style="color:black;font-family:&quot;Life BT&quot;,serif;font-size:12pt;"><span> </span></span><span style="color:black;font-family:宋体;font-size:12pt;">等，基于超级网络和移动互联的综合交通运行监测体系重构技术及应用，北京市科学技术进步将二等奖，</span><span style="color:black;font-family:&quot;Life BT&quot;,serif;font-size:12pt;">2019</span><span style="color:black;font-family:宋体;font-size:12pt;">。本人排序第</span><span style="color:black;font-family:&quot;Life BT&quot;,serif;font-size:12pt;">12</span><span style="color:black;font-family:宋体;font-size:12pt;">位</span><span style="color:black;font-family:&quot;Life BT&quot;,serif;font-size:12pt;">(</span><span style="color:black;font-family:宋体;font-size:12pt;">总</span><span style="color:black;font-family:&quot;Life BT&quot;,serif;font-size:12pt;">15</span><span style="color:black;font-family:宋体;font-size:12pt;">人</span><span style="color:black;font-family:&quot;Life BT&quot;,serif;font-size:12pt;">)</span><span style="color:black;font-family:宋体;font-size:12pt;">。</span><span style="color:black;font-family:&quot;Life BT&quot;,serif;font-size:12pt;">(2019-J11-2-08)</span>
+	</li>
+</ol>
+
+														</td>
+													</tr>
+
+												</tbody>
+											</table>
+										</div>
+									</div>
+                                    
+                                    <h3 style="width:830px;float:right;"><a name = "shjz">社会兼职</a></h3>
+									<div style="padding:15px; line-height:25px;">
+										<div class="MsoNormal">
+											<table class="MsoNormalTable" border="0" cellspacing="0" cellpadding="0" width="840" align="center" height="1964" style="width: 840px; border-collapse: collapse; height: auto">
+												<tbody>
+													<tr>
+														<td width="659" style=" padding-bottom: 0cm; padding-left: 5.4pt; padding-right: 5.4pt; height: 24pt;  padding-top: 0cm">
+															 <ol>
+	<li>
+		<span style="color:black;font-family:&quot;font-size:12pt;font-size:16px;"><span style="font-size:16px;">审稿人（</span></span><span style="color:black;font-family:&quot;Life BT&quot;,serif;font-size:16px;">Reviewer） for Transportations Research Part B,
+IEEE Transactions on Intelligent Transportation Systems, PLoS ONE, Transactions
+in GIS, Physica A, International Journal of Modern Phyiscs C, Journal of Systems
+Science and Complexity, International Journal of Urban Sciences, Journal of
+Internet Technology, Sustainability, Energies, Information, Processes, International
+Journal of Environmental Research and Public Health</span>
+	</li>
+	<li>
+		<span style="color:black;font-family:&quot;Life BT&quot;,serif;font-size:16px;"><span style="color:black;font-family:宋体;font-size:12pt;">世界中医药学会联合会网络药理学专业委员会</span><span style="color:black;font-family:&quot;Life BT&quot;,serif;font-size:12pt;"><span> </span></span><span style="color:black;font-family:宋体;font-size:12pt;">理事</span></span>
+	</li>
+	<li>
+		<span style="color:black;font-family:&quot;Life BT&quot;,serif;font-size:16px;"><span style="color:black;font-family:宋体;font-size:12pt;"></span><span> </span><span style="color:black;font-family:宋体;font-size:12pt;">系统工程学会</span><span style="color:black;font-family:&quot;Life BT&quot;,serif;font-size:12pt;"><span> </span></span><span style="color:black;font-family:宋体;font-size:12pt;">会员</span></span>
+	</li>
+</ol>
+
+														</td>
+													</tr>
+
+												</tbody>
+											</table>
+										</div>
+									</div>
+                                    
+
+								</div>
+								<div class="clear"></div>
+								
+							</div>
+						</div>
+                  		<div class="clearfix"></div>
+              		</div>
+        		</div>
+       		</div>
+       		<div id="push"></div>
+    	</div>
+	    <div id="footer">
+       		<div class="copy">
+        		<p>版权所有©北京交通大学交通运输学院 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;BJTUICP备:14010705 &nbsp;&nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp;&nbsp;  学院信箱：saad@bjtu.edu.cn</p>
+      		</div>
+  		</div>
+	</div>
+
+		<script>
+		    $.ajax({
+		      dataType: 'JSONP',
+		      url:"http://trans.bjtu.edu.cn/ajax_menu/",
+		      success: function(data){
+		      	var arch_str = '<li class="first"><a href="http://trans.bjtu.edu.cn/cms/">首页</a></li>';
+		      	var left_Str = '';
+		        $.each(data, function(i, n)
+		        {
+		        	arch_str = arch_str + '<li class="divider-vertical"></li><li class="dropdown '
+		        	if (n.id == 16){arch_str = arch_str + 'active'}
+		        	arch_str = arch_str + '"><a href="http://trans.bjtu.edu.cn/cms/item/?cat=' + n.id +'">'+n.name+'</a></li>';
+
+		        	if (n.vcs)
+		        	{
+		        		$.each(n.vcs, function(i, m){
+		        			if (n.id == 16)
+		        			{
+		        				left_Str = left_Str + '<li><a target="_parent"  href="http://trans.bjtu.edu.cn/cms/item/?cat=' + m.id +'">' +m.name + '</a>';
+		        			
+		        				if (m.cvcs)
+		        				{
+		        					left_Str = left_Str + '<ul class="sec_li">';
+			        				$.each(m.cvcs, function(i, k){
+					        				left_Str = left_Str + '<li><a target="_parent"  href="http://trans.bjtu.edu.cn/cms/item/?cat=' + k.id +'">' +k.name + '</a></li>';
+					        		});
+					        		left_Str = left_Str + '</ul>';
+		        				}
+		        				left_Str = left_Str + '</li>';
+		        			}
+		        		});
+		        	}
+		        });
+		        $("#nav").html(arch_str);
+		      }
+		    });
+		</script>
+</body>
+</html>

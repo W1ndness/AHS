@@ -1,0 +1,495 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0">
+    <title>北京师范大学工商与经济管理学院</title>
+    <link rel="stylesheet" href="http://bs.bnu.edu.cn/new-ver-css/reset.css">
+    <link rel="stylesheet" href="http://bs.bnu.edu.cn/new-ver-css/index.css">
+	<link rel="stylesheet" href="http://bs.bnu.edu.cn/new-ver-css/xyslist.css">
+	<link rel="stylesheet" href="http://bs.bnu.edu.cn/new-ver-css/xys-tf.css">
+    <style>
+        .container{
+            width:100%;
+            height: auto;
+            overflow: hidden;
+        }
+        .header{
+            width:100%;
+            height:116px;
+            background:#EFF8FF;
+        }
+        .logo1{
+            width:1200px!important;
+            margin:0 auto;
+            position:relative;
+            float: none;
+			display:block;
+        }
+        .logo2{
+            float:right;
+        }
+        .logo1 p{
+            position:absolute;
+            top:5px;
+            right:5px;
+            font-size:13px;
+        }
+        .logo1 p:hover{
+            color:#112769;
+        }
+        .tu{
+            width:100%;
+            height:240px;
+            background:url('http://bs.bnu.edu.cn/newweb/grzy/images/tu.jpg') no-repeat top center;
+            background-size: 100%;
+        }
+        .lujing{
+            width:1200px;
+            height:58px;
+            margin:0 auto;
+            border-bottom:1px solid #aaa;
+            overflow:hidden;
+        }
+        .lujings{
+            margin:24px 0 0 0;
+            font-size:14px;
+        }
+        .content{
+            color:#333;
+            width:1200px;
+/*            height:2000px;*/
+            margin:0 auto;
+            margin-top:40px;
+/*            background:#c4c4c4;*/
+        }
+        
+        .xian{
+            width:100%;
+            height:8px;
+            background:#9A0812;
+        }
+        
+        .leftc{
+            float:left;
+        }
+        .rightc{
+            float:left;
+            margin-left:50px;
+/*            background:#666;*/
+            width:880px;
+/*            height:1000px;*/
+        }
+        .rheader{
+            width:880px;
+            height:210px;
+/*            background:yellow;*/
+        }
+        .xm{
+            font-size:30px;
+            height:40px;
+/*            border-bottom:4px solid #9A0812;*/
+            width:auto;
+            float:left;
+            line-height:40px;
+			margin-right:30px;
+        }
+        .zhiw{
+            font-size:18px;
+            height:40px;
+            line-height:50px;
+            margin-bottom:30px;
+        }
+        .tel{
+                font-size: 16px;
+                margin-top: 10px;
+                line-height: 20px;
+        }
+        .grjj{
+/*            height:300px;*/
+            width:880px;
+/*            background:yellow;*/
+            padding-bottom:40px;
+        }
+        .jjh{
+                font-size: 20px;
+                border-bottom: 1px solid #cecece;
+                height: 40px;
+                line-height: 40px;
+                padding-left: 30px;
+                background: url(http://bs.bnu.edu.cn/newweb/grzy/images/zw.png) no-repeat 0 16px;
+        }
+        
+        .jjc{
+            font-size:14px;
+            margin-top:30px;
+           
+            line-height:28px;
+            overflow:hidden;
+            text-align: justify;
+            text-justify:inter-ideograph;
+        }
+        .jjc1{
+            height:225px;
+            font-size:14px;
+            margin-top:30px;
+            
+            line-height:28px;
+            overflow:hidden;
+            text-align: justify;
+            text-justify:inter-ideograph;
+        }
+        
+        .dianji1{
+                background: url(http://bs.bnu.edu.cn/newweb/grzy/images/zw.png) no-repeat 0 -50px;
+                width: 13px;
+                height: 13px;
+                cursor: pointer;
+                display: block;
+            margin-top: 20px;
+            transition: all .2s linear;
+        }
+        .dianji1:hover{
+            background: url(http://bs.bnu.edu.cn/newweb/grzy/images/zw.png) no-repeat 0 -64px;
+        }
+        
+        .dianji{
+                background: url(http://bs.bnu.edu.cn/newweb/grzy/images/zw.png) no-repeat 0 -24px;
+                height: 13px;
+                cursor: pointer;
+                display: block;
+            margin-top: 20px;
+            transition: all .2s linear;
+        }
+        .dianji:hover{
+            background: url(http://bs.bnu.edu.cn/newweb/grzy/images/zw.png) no-repeat 0 -37px;
+        }
+        #jjc1{
+            text-indent:0em;
+        }
+        
+        .bks{
+            font-size:14px;
+            font-weight: 800;
+            margin-top:30px;
+            height:auto;
+            line-height:36px;
+        }
+        .bks1{
+            font-size:14px;
+            margin-top:30px;
+            height:auto;
+            line-height:36px;
+        }
+        .bksc{
+            height:36px;
+            line-height:36px;
+            font-size:14px;
+        }
+        
+        .yanzheng{
+            width:1200px;
+            height:100px;
+            margin:0 auto;
+        }
+        .yanzheng img{
+            display:block;
+            margin-top:26px;
+            float:left;
+        }
+		
+#appgame-leftside-share{width:42px; height:216px; position: fixed;bottom: 30px;right: 30px; z-index:9999;}
+.appgame-leftside-share{width:42px; height:259px;}
+#appgame-leftside-share a{display:block; width:42px; height:44px; background-color:#e6e6e6; z-index:1; position:absolute; left:0; box-sizing:border-box; -moz-box-sizing:border-box; border:1px #ddd solid; background-image:url(http://gh.bnu.edu.cn/images/share-icons.png); background-repeat:no-repeat; margin:0;  transition:0.4s; -webkit-transition:0.4s; -moz-transition:0.4s;}
+#appgame-leftside-share a:hover{background-color:#fff; border:1px #eee solid; z-index:2;}
+/*.appgame-leftside-weixin{top:0; background-position:-88px 0;}
+.appgame-leftside-weixin:hover{background-position:0px 0;}
+.appgame-leftside-qzone{top:43px; background-position:-88px -44px;}
+.appgame-leftside-qzone:hover{background-position:0px -44px;}*/
+.appgame-leftside-search{top:86px; background-position:-93px -89px;}
+.appgame-leftside-search:hover{background-position:-5px -86px;}
+.appgame-leftside-weixin{top:129px; background-position:-88px 0px;}
+.appgame-leftside-weixin:hover{background-position:0px 0px;}
+/*.appgame-leftside-fbook{top:172px; background-position:-88px -176px;}
+.appgame-leftside-fbook:hover{background-position:0px -176px;}
+.appgame-leftside-twi{top:215px; background-position:-88px -220px;}
+.appgame-leftside-twi:hover{background-position:0px -220px;}*/
+#appgame-leftside-share .appgame-leftside-top{background-image:url(http://gh.bnu.edu.cn/images/leftnav-off.png); background-position:-1px -395px; top:130px; cursor:pointer;}
+
+.rwt_share {
+/*	overflow:hidden;*/
+	float:left;
+	position:relative;
+}
+.rwt_share a {
+	display:inline-block;
+	margin-right:10px;
+	text-indent:-9999px;
+	margin-bottom:10px;
+	width:24px;
+	height:24px;
+	overflow:hidden;
+	cursor:pointer;
+	float:left;
+	font-size:12px;
+}
+.rwts_weixin {
+	background-position:0 -1612px;
+}
+.rwts_tsina {
+	background-position:0 -104px;
+}
+.rwts_tqq {
+	background-position:0 -260px;
+}
+.rwts_qzone {
+	background-position:0 -52px;
+}
+.rwts_sqq {
+	background-position:0 -2652px;
+}
+.rwts_tieba {
+	background-position:0 -728px;
+}
+.rwts_renren {
+	background-position:0 -208px;
+}
+.rwts_kaixin001 {
+	background-position:0 -312px;
+}
+.rwts_tqf {
+	background-position:0 -364px;
+}
+.rwts_douban {
+	background-position:0 -468px;
+}
+.rwts_twi {
+	background-position:0 -1404px;
+}
+.rwts_fbook {
+	background-position:0 -1352px;
+}
+.rwts_ty {
+	background-position:0 -1196px;
+}
+.rwts_mogujie {
+	background-position:0 -1768px;
+}
+.rwts_meilishuo {
+	background-position:0 -1716px;
+}
+.rwts_huaban {
+	background-position:0 -1872px;
+}
+.rwts_hi {
+	background-position:0 -416px;
+}
+.rwts_tsohu {
+	background-position:0 -520px;
+}
+.rwts_more {
+	background-position:0 0;
+}
+.rwt_share_wxShow_code>img {
+	width:100%;
+}
+.bks1 li{
+	list-style:disc;
+}
+@media screen and (max-width: 1200px){
+	.logo1{
+		width:100%!important;
+	}
+	.leftc img{
+		width:50%!important;
+		height:50%!important;
+	}
+	.logo2{display:none;}
+	.lujing{
+		width:90%;
+	}
+	.content{
+		width:90%;
+	}
+	.leftc{
+		float:none;
+		
+	}
+	.tu{display:none;}
+	
+	.rightc{
+		float:none;
+		width:100%;
+		margin-left:0px;
+	}
+	.footers{width:100%;}
+	.rheader{width:100%;}
+	.grjj{width:100%;}
+}
+@media screen and (max-width: 600px){
+.l3{width:95%;}
+.share{display:none;}
+.leftc img{
+		width:70%!important;
+		height:70%!important;
+	}
+}
+  
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo1">
+                <img src="http://bs.bnu.edu.cn/newweb/grzy/images/logo.png" alt="" class="l3" style="margin-top: 25px;float:left;">
+                <img src="http://bs.bnu.edu.cn/newweb/grzy/images/logo2.png" alt="" class="logo2">
+                <a href="http://bs.bnu.edu.cn/englishversion/facultyresearch/fulltimefaculty/azmsy/119509.html"><p>ENGLISH VERSION</p></a>
+            </div>
+        </div>
+        <div class="xian"></div>
+        <div class="tu"></div>
+        <div class="lujing">
+            <div class="lujings">
+                <a href="#">师资队伍</a>
+                 | 
+                <a href="#">金融学系、金融大数据研究中心、实验教学中心</a>
+            </div>
+        </div>
+        <div class="content">
+            <div class="leftc">
+                <img src="/Public/upload/touxiang/03058.jpg" alt="" width="270">
+            </div>
+            <div class="rightc">
+                <div class="rheader">
+                    <p class="xm">孙运传</p>
+                    <p class="zhiw">教授、博导</p>
+                    <p class="tel"><strong style="display:block;width:100px;float:left;">电话</strong>：010-58806092</p> 
+                 <p class="tel"><strong style="display:block;width:100px;float:left;">E-mail</strong>：yunch@bnu.edu.cn</p>
+                 <p class="tel"><strong style="display:block;width:100px;float:left;">Office hour</strong>：邮件预约</p>
+                 <p class="tel"><strong style="display:block;width:100px;float:left;">系所中心</strong>：金融学系、金融大数据研究中心、实验教学中心</p>
+              </div>
+			  <div class="grjj">
+                    <p class="jjh">个人简历</p>
+                    <div class="bks1" id="jjc"><p style="font-family: " microsoft="" yahei="" font-size:16px=""><span style="font-family: 宋体; font-size: 16px;">&nbsp;</span><span style="font-family:Times New Roman;"><span style="font-size: 16px;">现任北京师范大学经济与工商管理学院教授、金融大数据研究中心主任、实验教学中心主任。2012年入选</span><span style="font-size: 16px;">IEEE Senior Member</span><span style="font-size: 16px;">，现任中国现代金融学会常务理事、学术委员会委员，<span style="font-size:12.0pt;font-family:宋体;">国家科技专家库在库专家、</span><br /></span><span style="font-size: 16px;">CCF</span><span style="font-size: 16px;">大数据专委会委员，<span style="font-size:12.0pt;font-family:宋体;">北京物联网学会荣誉会员、山东区块链研究会常务理事、</span>山东省大数据研究会理事，</span><span style="font-size: 16px;">Personal and Ubiquitous Computing（SCI）</span><span style="font-size: 16px;">副主编，</span><span style="font-size: 16px;">&nbsp;Elsevier&nbsp;journal Internet of Things （SCI）顾问编辑, <em><span style="font-size:12.0pt;font-family:'Times New Roman',serif;">Frontiers in the Internet of Things</span></em><span style="font-size:12.0pt;font-family:'Times New Roman',serif;">&nbsp;</span><span style="font-size:12.0pt;font-family:宋体;">副主编，</span>Electrical Engineering and Computer Science（EI）&nbsp;</span><span style="font-size: 16px;">编委，欧美同学会企业家联谊会会员，曾任<span style="font-variant-numeric: normal; font-variant-east-asian: normal;">美国</span><span style="font-family: " times="" new="" roman="" font-variant-numeric:="" normal="" font-variant-east-asian:="">IEEE</span><span style="font-variant-numeric: normal; font-variant-east-asian: normal;">通信学会物联网专委会副主席、秘书长，</span><span style="font-family: " times="" new="" roman="" font-variant-numeric:="" normal="" font-variant-east-asian:="">IEEE&nbsp;</span><span style="font-variant-numeric: normal; font-variant-east-asian: normal;">计算智能学会智慧世界专委会常务主席等</span>。</span></span></p><p style="font-family: " microsoft="" yahei="" font-size:16px=""><span style="font-family:Times New Roman;"><span style="font-size: 16px;"></span></span></p><p style="font-family: " microsoft="" yahei="" font-size:16px=""><span style="font-family:Times New Roman;"><span style="font-size: 16px;"></span><span style="font-size: 16px;">&nbsp; &nbsp; 近年来，作为特邀编辑先后</span><span style="font-size: 16px;">20</span><span style="font-size: 16px;">余次在多个</span><span style="font-size: 16px;">SCI</span><span style="font-size: 16px;">期刊上组织主题专刊，主要期刊有</span><span style="font-size: 16px;">Computer Networks, Knowledge Based Systems, International Journal of Electronic Commerce, Electronic Commerce Research, Journal of Network and Computer Applications, IEEE Internet of Things, IEEE Access, Personal and Ubiquitous Computing, Sensors</span><span style="font-size: 16px;">等。作为科研骨干，参与国家</span><span style="font-size: 16px;">973</span><span style="font-size: 16px;">、</span><span style="font-size: 16px;">863</span><span style="font-size: 16px;">等项目，主持国家自然科学基金面上项目等多项科研项目。主要研究方向为<strong>智能会计、金融<strong>大数据、</strong>金融科技、数字经济、</strong></span><span style="font-size: 16px;">物联网、语义链网络</span><span style="font-size: 16px;">等。</span></span></p><p style="font-family: " microsoft="" yahei="" font-size:16px=""><span style="font-family:Times New Roman;"><span style="font-size: 16px;"></span><span style="font-size: 16px;">&nbsp; &nbsp; 作为主要发起人和共同主席，连续10年组织国际学术会议</span><span style="font-size: 16px;">IIKI2012-2021</span><span style="font-size: 16px;">。</span></span></p><p style="font-family: " microsoft="" yahei="" font-size:16px=""><span style="font-family:Times New Roman;"><span style="font-size: 16px;">&nbsp; &nbsp; 近年来，在国际期刊和学术会议上发表论文</span>100<span style="font-size: 16px;">余篇，其中</span>SCI/SSCI<span style="font-size: 16px;">检索的第一（通讯）作者4</span>0<span style="font-size: 16px;">多篇，</span>&nbsp;TOP<span style="font-size: 16px;">期刊多篇、</span><span style="font-size: 16px;">ESI</span><span style="font-size: 16px;">高被引2篇，一篇论文被评为“北京地区广受关注学术论文”</span><span style="font-size: 16px;">。主编与参编教材、著作</span>20余<span style="font-size: 16px;">部，其中主编英文著作</span>1<span style="font-size: 16px;">部。</span></span></p><p style="font-family: " microsoft="" yahei="" font-size:16px=""><span style="font-family:Times New Roman;"><span style="font-size: 16px;"></span></span></p><h1 style="font-family: " microsoft="" yahei="" margin-top:="" 0px="" margin-bottom:="" 10px="" padding-right:="" 4px="" padding-bottom:="" font-size:="" 32px="" border-bottom-width:="" 2px="" border-bottom-color:="" rgb="" 204=""><span style="line-height: 27.52px; font-size: 16px; text-decoration-line: underline;"><span style="font-family:Times New Roman;color:#ff6666;">教育经历</span></span></h1><p style="font-family: " microsoft="" yahei="" font-size:16px="" margin-top:="" 0px="" margin-bottom:="" margin-left:="" 9="" 46px="" line-height:="" 20px=""><span style="font-size:16px;"><span times="" new="" roman="" line-height:="" 20px="" font-size:="" 16px="">-</span><span times="" new="" roman="" line-height:="" 20px="" font-size:="" 16px="">2013/04-2013/10,&nbsp;</span><span times="" new="" roman="" line-height:="" 20px="" font-size:="" 16px="">美国</span><span times="" new="" roman="" line-height:="" 20px="" font-size:="" 16px="">George Washington University</span><span times="" new="" roman="" line-height:="" 20px="" font-size:="" 16px="">，</span><span times="" new="" roman="">&nbsp;</span><span times="" new="" roman="" line-height:="" 20px="" font-size:="" 16px="">访问学者</span></span><br /></p><p style="font-family: " microsoft="" yahei="" font-size:16px="" margin-top:="" 0px="" margin-bottom:="" margin-left:="" 9="" 46px="" line-height:="" 20px=""><span style="font-family:Times New Roman;"><span style="line-height: 20px; font-size: 16px;">-</span><span style="line-height: 20px; font-size: 16px;">2005/09</span><span style="line-height: 23.75px; font-size: 19px;">–</span><span style="line-height: 20px; font-size: 16px;">2009/07</span><span style="line-height: 20px; font-size: 16px;">，中国科学院，计算技术研究所，博士</span></span></p><p style="font-family: " microsoft="" yahei="" font-size:16px="" margin-top:="" 0px="" margin-bottom:="" margin-left:="" 9="" 46px="" line-height:="" 20px=""><span style="font-family:Times New Roman;"><span style="line-height: 20px; font-size: 16px;">-</span><span style="line-height: 20px; font-size: 16px;">2000/09</span><span style="line-height: 23.75px; font-size: 19px;">–</span><span style="line-height: 20px; font-size: 16px;">2003/07</span><span style="line-height: 20px; font-size: 16px;">，北京师范大学，信息学院，硕士</span></span></p><p style="font-family: " microsoft="" yahei="" font-size:16px="" margin-top:="" 0px="" margin-bottom:="" margin-left:="" 9="" 46px="" line-height:="" 20px=""><span style="font-family:Times New Roman;"><span style="line-height: 20px; font-size: 16px;">-</span><span style="line-height: 20px; font-size: 16px;">1990/09</span><span style="line-height: 23.75px; font-size: 19px;">–</span><span style="line-height: 20px; font-size: 16px;">1994/07</span><span style="line-height: 20px; font-size: 16px;">，山东师范大学，数学系，本科</span></span></p></div>
+                    
+                </div>				<div class="grjj">
+                    <p class="jjh">研究领域</p>
+                    <div class="bks1"><span style="font-family:SimHei;font-size:18px;">智能会计、金融大数据、金融科技、数字经济、公司治理</span></div>
+                </div>				<div class="grjj">
+                    <p class="jjh">研究成果</p>
+                    <div class="bks1" id="jjc1"><h1 style="font-family: " microsoft="" yahei="" margin-bottom:="" 10px="" padding-top:="" 0px="" padding-right:="" 4px="" padding-bottom:="" border-bottom-width:="" 2px="" border-bottom-color:="" rgb="" 204=""><span style="color: rgb(255, 102, 102);"><span style="font-size: 18px;"><span style="font-family:Times New Roman;">观点</span></span></span></h1><p style="font-family: " microsoft="" yahei="" font-size:16px=""><span microsoft="" yahei=""><span style="font-family:Times New Roman;">&nbsp; &nbsp;&nbsp;<span style="font-size: 16px;">[1]<a href="http://www.chinadaily.com.cn/a/201904/19/WS5cb90b6aa3104842260b70ac.html" style="">Stop cryptocurrency 'mining' for public good</a>, ChinaDaily, Friday, April 19, 2019. &nbsp;</span></span></span></p><p style="font-family: " microsoft="" yahei="" font-size:16px=""><span style="font-family: 微软雅黑, " microsoft="" yahei=""><span style="font-size: 16px;"><span style="font-family:Times New Roman;">&nbsp; &nbsp;[2]<a href="http://global.chinadaily.com.cn/a/201907/30/WS5d3fb951a310d83056401c14.html">Beware the designs of Libra</a>, ChinaDaily, Monday, July 29, 2019.</span></span></span></p><p style="font-family: " microsoft="" yahei="" font-size:16px=""><span style="font-size: 16px;"><span style="font-family:Times New Roman;"><span style="font-family: 微软雅黑, " microsoft="" yahei="">&nbsp; &nbsp;[3]</span><span style="font-family: 微软雅黑, " microsoft="" yahei=""></span><span style="font-family: 微软雅黑, " microsoft="" yahei=""><a href="http://global.chinadaily.com.cn/a/201908/28/WS5d65c743a310cf3e3556836a.html">Digital currency can help meet new financial challenges</a></span><span microsoft="" yahei="">, ChinaDaily,&nbsp;Wednesday,&nbsp;Aug&nbsp;28, 2019. （英国《每日电讯报》The Telegraph 全文转载，<a href="https://www.telegraph.co.uk/china-watch/business/digital-currency-can-help-meet-financial-challenges/" style="">查看</a>&nbsp;）&nbsp;</span></span></span></p><p style="font-family: " microsoft="" yahei="" font-size:16px=""><span style="font-family: 微软雅黑, " microsoft="" yahei=""><span style="font-size: 16px;"><span style="font-family:Times New Roman;">&nbsp; &nbsp;[4]<a href="http://www.chinadaily.com.cn/a/201912/16/WS5df6bf02a310cf3e3557e401.html">If 5G is here, can 6G be far behind?</a><span style="font-family: 微软雅黑, " microsoft="" yahei="">, ChinaDaily, Monday, December 16, 2019.</span></span></span></span></p><p style="font-family: " microsoft="" yahei="" font-size:16px=""><span style=""><span style="font-family: 微软雅黑, " microsoft="" yahei=""><span style="font-family: 微软雅黑, " microsoft="" yahei=""><span style="font-size: 16px;"><span style="font-family:Times New Roman;">&nbsp; &nbsp;[5]<a href="http://www.chinadaily.com.cn/a/202002/11/WS5e42495ea310128217276ad2.html">AI can make big difference in fighting virus</a><span style="font-family: 微软雅黑, " microsoft="" yahei="">, ChinaDaily, Monday, Feb 11, 2020.</span></span></span></span></span></span></p><p style="font-family: " microsoft="" yahei="" font-size:16px=""><span style=""><span style="font-family: 微软雅黑, " microsoft="" yahei=""><span style="font-family: 微软雅黑, " microsoft="" yahei=""><span style="font-size: 16px;"><span style="font-family:Times New Roman;">&nbsp; &nbsp;[6]<a href="http://opinion.people.com.cn/big5/n1/2020/0302/c1003-31611614.html">大数据时代经济学研究的创新与变革</a>（学术随笔）<span style="font-family: 微软雅黑, " microsoft="" yahei="">,&nbsp;人民日报,&nbsp; 2020年3月2日，第9版.</span></span></span></span></span></span></p><p style="font-family: " microsoft="" yahei="" font-size:16px=""><span style=""><span style="font-family: 微软雅黑, " microsoft="" yahei=""><span style="font-family: 微软雅黑, " microsoft="" yahei=""><span style="font-family: 微软雅黑, " microsoft="" yahei=""><span style="font-size: 16px;"><span style="font-family:Times New Roman;">&nbsp; &nbsp;[7]<a href="https://www.chinadaily.com.cn/a/202006/30/WS5efa740ea310834817255f44.html">Big data makes life easier but also poses risks</a>, ChinaDaily, June 30, 2020.&nbsp;</span></span></span></span></span></span></p><p style="font-family: " microsoft="" yahei="" font-size:16px=""><span style="font-size: 16px;"><span style="font-family:Times New Roman;"><span style="color: rgb(255, 102, 102);"><strong>专利</strong></span><br /></span></span></p><p style="font-family: " microsoft="" yahei="" font-size:16px=""></p><ol><li><span microsoft="" yahei=""><span style="font-size: 16px;"><span style="font-family:Times New Roman;"><span style="text-align: justify;">&nbsp; &nbsp;</span>一种基于股票论坛发帖文本分析的股市情绪报告生成方法，授权专利号201910209986.6</span></span></span></li><li><span microsoft="" yahei=""><span style="font-size: 16px;"><span style="font-family:Times New Roman;">&nbsp; &nbsp;一种可自动更新的用于金融文本分析的情感字典构建方法，授权专利号201910209985.1</span></span></span></li><li><span microsoft="" yahei=""><span style="font-size: 16px;"><span style="font-family:Times New Roman;">&nbsp; &nbsp;一种基于BLS签名的零知识数据存储验证方法、设备和存储介质，CN114021154704.0, G06F21/60，2022年02月08日<br /></span></span></span></li></ol><p></p><h1 style="font-family: " microsoft="" yahei="" margin-top:="" 0px="" margin-bottom:="" 10px="" padding-right:="" 4px="" padding-bottom:="" font-size:="" 32px="" border-bottom-width:="" 2px="" border-bottom-color:="" rgb="" 204=""><span style="font-size: 16px;"><span style="font-family:Times New Roman;"><span style="line-height: 27.52px;"><span style="color:#ff6666;">学术论文</span></span><br /></span></span></h1><p style="font-family: " microsoft="" yahei="" font-size:16px=""><span style="font-size: 16px;"><span style="font-family:Times New Roman;"><span style="line-height: 27.52px;"></span></span></span></p><p style="font-family: " microsoft="" yahei="" font-size:16px="" margin-top:="" 8px="" margin-bottom:="" 0px="" margin-left:="" 56px="" text-align:="" justify=""></p><h3><span style="font-family:Times New Roman;"><span style="font-size: 14pt;">期刊论文：</span></span></h3><p></p><p><strong><span style="font-family:Times New Roman;"><span style="font-size:12.0pt;">1</span><span style="font-size: 12pt;">）</span><span style="font-size:12.0pt;">SCI / SSCI&nbsp;</span><span style="font-size: 12pt;">检索的国际期刊论文</span></span></strong></p><p></p><ol><li><span style="font-family:Times New Roman;">Ming He, HaodiWang, <strong>Yunchuan Sun</strong>*, Rongfang Bie, Tian Lan, Qi Songx, Xi Zeng, Matevz Pustisek, Zhenyu Qiu. T2L: A traceable and trustable consortium blockchain for logistics，Digital Communications and Networks, 2022 (forthcoming)</span><br /></li><li><span style="font-family:Times New Roman;">Bin Teng, Sicong Wang, Yufeng Shi, <strong>Yunchuan Sun</strong>, Wei Wang, Wentao Hu, Chaojun Shi, Economic recovery forecasts under impacts of COVID-19, Economic Modelling, 2022, 105821, ISSN 0264-9993, https://doi.org/10.1016/j.econmod.2022.105821.<br /></span></li><li><span style="font-family:Times New Roman;"><strong>Yunchuan Sun</strong>, Xiaoping Zeng, Han Zhao, Betty Simkins, Xuegang Cui. The impact of COVID-19 on SMEs in China: Textual analysis and empirical evidence, Finance Research Letters, Volume 45, 2022, 102211, ISSN 1544-6123, https://doi.org/10.1016/j.frl.2021.102211.<br /></span></li><li><span style="font-family:Times New Roman;">Yunchuan Sun, Xiangyi Kong, Tongrui Chen, Hang Su, Xiaoping Zeng, Yan Shen. Measuring Investor Sentiment of Cryptocurrency Market --Using Textual Analytics on Chain Node, IIKI2020, Procedia Computer Science, accepted, 2021.<br /></span></li><li><span style="font-family:Times New Roman;">Yingjie Tian, Linrui Yang, Yunchuan Sun, Dalian. Liu, &quot;Cross-Domain End-To-End Aspect-Based Sentiment Analysis with Domain-Dependent Embeddings&quot;, Complexity, vol. 2021, Article ID 5529312, 11 pages, 2021. https://doi.org/10.1155/2021/5529312. (SCI)&nbsp;<br /></span></li><li><span style="font-family:Times New Roman;">Yunchuan SUN, Xiaoping ZENG, Siyu ZHOU, Han ZHAO, Peter Thomas, Haifeng HU. What investors say is what the market says: measuring China’s real investor sentiment. http://link.springer.com/article/10.1007/s00779-021-01542-3 (SCI/SSCI)<br /></span></li><li><span style="font-family:Times New Roman;">Yunchuan Sun, Xiaoping Zeng, Luyu Wang, Siyu Zhou, Xiaowu Liu, Are off-balance-sheet indicators useful to evaluate accounting information quality?,&nbsp; Personal and Ubiquitous Computing, DOI:10.1007/s00779-020-01499-9&nbsp;</span></li><li><span style="font-family:Times New Roman;"><strong>Yunchuan Sun,</strong> Mengyuan Wu, Xiaoping Zeng, Zihang Peng. The Impact of COVID-19 on the Chinese Stock Market: Sentimental or Substantial?, Finance Research Letters, Volume 38, January 2021, 101838, https://doi.org/10.1016/j.frl.2020.101838.(SSCI)</span></li><li><span style="font-family:Times New Roman;">Zaidi, SyedA. R.; Shakir, Muhammad Zeeshan; Song, Houbing; Jara, Antonio J.;<strong> Sun, Yunchuan</strong>; Chau, Sid Chi-Kin; Ail,Rohit，Design and Analysis of Communication Interfaces for Industry 4.0, IEEE JOURNAL ON SELECTED AREAS IN COMMUNICATIONS, 2020, Vol. 38, No. 5.(中科院1区TOP期刊)</span></li><li><span style="font-family:Times New Roman;">AshkanSamiee ; <strong>Yunchuan Sun</strong>; Ronald F.Demara ; Yoonsuk Choi ; Yu Bai. Energy Efficient Mobile Service Computing WithDifferential Spintronic-C-Elements: A Logic-in-Memory Asynchronous ComputingParadigm, IEEE Access, Volume: 7, pp. 55851–55860. May 2019. DOI:10.1109/ACCESS.2019.2911098</span></li><li><span style="font-family:Times New Roman;"><strong>Yunchuan Sun</strong>,Yufeng Shi,Zhengjun Zhang, Finance Big Data：Management, Analysis,and Applications.&nbsp; International Journalof Electronic Commerce, Article DOI: 10.1080/10864415.2018.1512270</span></li><li><span style="font-family:Times New Roman;"><strong>Sun,Yunchuan</strong>,Zeng, Xiaoping, Cui, Xuegang, Zhang, Guangzhi, Bie, Rongfang. &quot;An activeand dynamic credit reporting system for SMEs in China&quot;, Personal andUbiquitous Computing, 2019-09-04,&nbsp;https://doi.org/10.1007/s00779-019-01275-4. (SSCI)</span></li><li><span style="font-family:Times New Roman;"><strong>Sun,Yunchuan</strong>&amp; Cheng, Xiuzhen &amp; Bai, Yu &amp; Yu, Jiguo. (2019). Information,Knowledge, and Semantics for Interacting with Internet-of-Things. ComputerNetworks. DOI: 10.1016/j.comnet.2019.06.021. </span></li><li><span style="font-family:Times New Roman;"><strong>Yunchuan Sun</strong>，Mengting Fang, Xinyu Wang, A novel stock recommendation system using Guba sentiment analysis,Personal and Ubiquitous Computing (2018), DOI: 10.1007/s00779-018-1121-x</span></li><li><span style="font-family:Times New Roman;"><strong>Yunchuan Sun</strong>, Junsheng Zhang, Jiguo Yu, Rongfang Bie.Advancing researches on IoT systems and intelligent applications, Personal andUbiquitous Computing (2018), https://doi.org/10.1007/s00779-018-1159-9.</span></li><li><span style="font-family:Times New Roman;"><strong>Yunchuan Sun</strong>,&nbsp; Lei Wu, Shizhong Wu, Shoupeng Li, Tao Zhang,Li Zhang, Junfeng Xu, Yongping Xiong, Xuegang Cui. Attacks and Countermeasuresin the Internet of Vehicles, Annals of telecommunication, June 2017,&nbsp;Volume72,&nbsp;Issue&nbsp;5,&nbsp;pp 283–295. DOI: 10.1007/s12243-016 -0551-6.</span></li><li><span style="font-family:Times New Roman;"><strong>YunchuanSun,</strong>Rongfang Bie, Peter Thomas, Xiuzhen Cheng, “New Advances in Data,Information, and Knowledge in the Internet of Things”，Personaland Ubiquitous Computing, Vol 20, issue 5,pp. 653-655, 2016. DOI:10.1007/s00779-016-0955-3</span></li><li><span style="font-family:Times New Roman;"><strong>Sun,Yunchuan</strong>;Song, Houbing; Jara, Antonio J.; Bie, Rongfang, &nbsp;Internet of Things andBig Data Analytics for Smart and Connected Communities, IEEE Access,Volume: 4,Page(s): 766 - 773. http://dx.doi.org/10.1109/ACCESS.2016.2529723, 2016.(<strong><span style="color:#ff0000;">截止到2022年6月底，下载量达到41184次，WoS核心引用527次，谷歌引用789次，连续多年高被引</span></strong>)</span></li><li><span style="font-family:Times New Roman;"><strong>YunchuanSun</strong>,Xinpei Yu, Rongfang Bie and Houbing Song, Discovering Time-dependent ShortestPath on Traffic Graph for Drivers towards Green Driving, Journal of Network andComputer Applications(2017). Vol 83, no.1, pp.204-212. http://dx.doi.org/10.1016/j.jnca.2015.10.018</span></li><li><span style="font-family:Times New Roman;"><strong>YunchuanSun</strong>,Cheng Lu, Rongfang Bie, Junsheng Zhang.&nbsp;Semantic Relation Computing Theory and Its Application, Journal ofNetwork and Computer Applications, &nbsp; (2016), pp. 219-229, http://dx.doi.org/10.1016/j.jnca.2014.09.017</span></li><li><span style="font-family:Times New Roman;"><strong><em>Yunchuan Sun</em></strong>, Junsheng Zhang,Rongfang Bie, &quot;Measuring Semantic-based Structural Similarity inMulti-relational Networks&quot;, International Journal of Data Warehousing andMining. Volume 12,&nbsp; Issue 1,January-March 2016, pp. 20-33, DOI: 10.4018/IJDWM.2016010102, </span></li><li><span style="font-family:Times New Roman;"><strong><em>Yunchuan Sun</em></strong>, Rongfang Bie, PeterThomas, Xiuzhen Cheng, &quot;Theme issue on advances in the Internet of Things:identification, information, and knowledge&quot;, Personal and UbiquitousComputing, &nbsp;Volume 19, Issue 7 (2015),Page 985-987, &nbsp;DOI:10.1007/s00779-015-0883-7</span></li><li><span style="font-family:Times New Roman;"><strong><em><span style="font-size: 11pt;">Yunchuan</span></em></strong><span style="font-size: 11pt;"> <strong><em>Sun</em></strong>,Antonio Jara, &quot;An extensible and active semantic model of informationorganizing for the Internet of Things&quot;, &nbsp;Personal and UbiquitousComputing, Volume 18, Issue 8 (2014), Page 1821-1833, 2014,DOI:10.1007/s00779-014-0786-z,http://link.springer.com/article/10.1007/s00779-014-0786-z </span></span></li><li><span style="font-family:Times New Roman;"><strong><em><span style="font-size: 11pt;">Yunchuan</span></em></strong><span style="font-size: 11pt;"> <strong><em>Sun</em></strong>,Hongli Yan, et al. &quot;Constructing the web of events from raw data in theWeb of Things&quot;, Mobile Information Systems. Volume 10, No. 1, 2014, pp.105-125, DOI 10.3233/MIS-130173. </span></span></li><li><span style="font-family:Times New Roman;"><strong><em><span style="font-size: 11pt;">YunchuanSun</span></em></strong><span style="font-size: 11pt;">,New Exact Traveling Wave Solutions for Double Sine-Gordon Equation, AppliedMathematics and Computation, Volume 258, 1 May 2015, Pages 100–104, (2015),DOI: http://dx.doi.org/10.1016/ j.amc.2015.02.002, 2015. SCI IF:1.6&nbsp; (</span><span style="font-size: 11pt;">科学院</span><span style="font-size: 11pt;">2</span><span style="font-size: 11pt;">区</span><span style="font-size: 11pt;">TOP</span><span style="font-size: 11pt;">期刊</span><span style="font-size: 11pt;">)&nbsp; </span></span></li><li><span style="font-family:Times New Roman;"><strong><em><span style="font-size: 11pt;">Yunchuan</span></em></strong><span style="font-size: 11pt;"> <strong><em>Sun</em></strong>,Hongli Yan, Junsheng Zhang, et al., &quot;Organizing and Querying the BigSensing Data with Event-Linked Network in the Internet ofThings&quot;,&nbsp;International Journal of Distributed Sensor Networks, vol.2014, Article ID 218521, 11 pages, 2014. doi:10.1155/2014/218521.</span></span></li><li><span style="font-family:Times New Roman;"><strong><em><span style="font-size: 11pt;">YunchuanSun</span></em></strong><span style="font-size: 11pt;">,Junsheng Zhang, et al, &quot;Data Security and Privacy in CloudComputing&quot;,&nbsp;International Journal of Distributed Sensor Networks,vol. 2014, Article ID 190903, 9 pages, 2014. doi:10.1155/2014/190903 </span></span></li><li><span style="font-family:Times New Roman;"><strong><em><span style="font-size: 11pt;">Yunchuan</span></em></strong><span style="font-size: 11pt;"> <strong><em>Sun</em></strong>,&quot;New Travelling Wave Solutions for Sine-GordonEquation,&quot;&nbsp;Journal of Applied Mathematics, vol. 2014, Article ID841416, 4 pages, 2014. doi:10.1155/2014/ </span></span></li><li><span style="font-family:Times New Roman;"><strong><em><span style="font-size: 11pt;">Yunchuan</span></em></strong><span style="font-size: 11pt;"> <strong><em>Sun</em></strong>,Rongfang Bie, Peter Thomas, Xiuzhen Cheng, &quot;Advances on data, information,and knowledge in the Internet of Things&quot;, Personal and UbiquitousComputing, 2014, Volume 18, Issue 8 (2014), Page 1793-1795</span></span></li><li><span style="font-family:Times New Roman;"><strong><em><span style="font-size: 11pt;">Yunchuan</span></em></strong><span style="font-size: 11pt;"> <strong><em>Sun</em></strong>,Rongfang Bie, Xiaofeng Yu, Shenling Wang, &quot;Semantic Link Networks: Theory,Applications, and Future Trends&quot;</span><span style="font-size: 11pt;">，</span><span style="font-size: 11pt;">Journalof Internet Technology, Vol. 14 No. 3, P.365-378 (2013/5). </span></span></li><li><span style="font-family:Times New Roman;"><strong><em><span style="font-size: 11pt;">Yunchuan</span></em></strong><span style="font-size: 11pt;"> <strong><em>Sun</em></strong>,Xiuzhen Cheng, &quot;Theme issue on Identification, Information and Knowledgein the Internet of Things&quot;,&nbsp;Personal and Ubiquitous Computing, Volume 18, Issue 4 (2014), Page923-924,DOI 10.1007/s00779-014-0768-1</span></span></li><li><span style="font-family: " times="" new="" roman=""><strong><em><span style="font-size: 11pt;">Yunchuan</span></em></strong></span><span style="font-family: " times="" new="" roman="" font-size:="" 11pt=""> <strong><em>Sun</em></strong>,Zhangbing Zhou, &quot;Editoral for Special issue on Knowledge Acquisition andManagement in the Internet of Things&quot;, Automatika, vol. 54, no. 4, pp.384–387, 2013.</span></li><li><span style="font-family: " times="" new="" roman="" font-size:="" 11pt="" text-align:="" justify="">Yanhui Guo,&nbsp;Han Cao, Siming Han, Yunchuan Sun </span><span style="font-family: " times="" new="" roman="" font-size:="" 11pt="" text-align:="" justify="" color:="" rgb="" 112="" 48="" 160="">(corresponding)</span><span style="font-family: " times="" new="" roman="" font-size:="" 11pt="" text-align:="" justify="">,Yu Bai.&nbsp;Spectral–Spatial HyperspectralImage Classification With K-NearestNeighbor and Guided Filter, &nbsp;IEEE Access&nbsp;(&nbsp;Volume 6&nbsp;),Page(s):&nbsp;18582&nbsp;- 18591,Date of Publication:&nbsp;28 March 2018.DOI:&nbsp;10.1109/ACCESS.2018.2820043&nbsp;</span></li><li><span style="font-family: " times="" new="" roman="" text-align:="" justify="" font-size:="" 11pt="" color:="" rgb="" 112="" 48="" 160="">Shengling Wang, Qin Hu, <strong><em>Yunchuan Sun</em></strong> (corresponding),Jianhui Huang</span><span style="font-family: " times="" new="" roman="" text-align:="" justify="" font-size:="" 11pt="" color:="" rgb="" 112="" 48="" 160="">，</span><span style="font-family: " times="" new="" roman="" text-align:="" justify="" font-size:="" 11pt="" color:="" rgb="" 112="" 48="" 160="">&quot;Privacy Preservation in Location-based Services&quot; ,IEEE Communications Magazine, March 2018</span><span style="font-family: " times="" new="" roman="" text-align:="" justify="" font-size:="" 11pt="" color:="" rgb="" 112="" 48="" 160="">，</span><span style="font-family: " times="" new="" roman="" text-align:="" justify="" font-size:="" 11pt="" color:="" rgb="" 112="" 48="" 160="">https://doi.org/10.1109/MCOM.2018.1700288</span></li><li><span style="font-family: " times="" new="" roman="" text-align:="" justify="" font-size:="" 11pt="" color:="" rgb="" 112="" 48="" 160="">Rashid&nbsp;Mehmood, Saeed&nbsp;El-Ashram, Rongfang&nbsp;Bie, <strong><em>Yunchuan&nbsp;Sun</em></strong>(corresponding). Effective cancer subtyping by employing density peaksclustering by using gene expression microarray</span><span style="font-family: " times="" new="" roman="" text-align:="" justify="" font-size:="" 11pt="" color:="" rgb="" 112="" 48="" 160="">，</span><span style="font-family: " times="" new="" roman="" text-align:="" justify="" font-size:="" 11pt="" color:="" rgb="" 112="" 48="" 160="">Personal and UbiquitousComputing (2018), DOI: 10.1007/s00779-018-1112-y.</span></li><li><span style="font-family: " times="" new="" roman="" font-size:="" 11pt="" color:="" rgb="" 112="" 48="" 160="">Jie Liu, Xiaodong Fu, Jin Liu, <strong><em>Yunchuan Sun</em></strong> (corresponding),Analyzing and Assessing Reviews on Jd.com, Intelligent Automation &amp; SoftComputing. Jan 12&nbsp;2017.&nbsp;DOI:10.1080/10798587.2016.1267244.</span></li><li><span style="font-family: " times="" new="" roman="" font-size:="" 11pt="">Junqi Guo, Hongyang Zhang, <strong><em>Yunchuan Sun </em></strong>(corresponding).&quot;Square-root unscented Kalman filtering-based localization and tracking inthe Internet of Things&quot;, Personal and Ubiquitous Computing, VOL.18P.987–996, 2014. DOI:10.1007/s00779-013-0713-8.&nbsp;</span></li><li><span style="font-family: " times="" new="" roman="" font-size:="" 11pt="">Junsheng Zhang, <strong><em><span style="text-decoration-line: underline;">Yunchuan Sun(corresponding)</span></em></strong>, Yingying Li, Huilin Wang.Topic Maps-based Consumer Health Information Organization and Acquisition onMobile Devices, International Journal of Ad Hoc and Ubiquitous Computing. 2016,23(1-2): 46-59. http://dx.doi.org/10.1504/IJAHUC.2016.078476</span></li><li><span style="font-family: " times="" new="" roman="" font-size:="" 11pt="">Junsheng Zhang</span><span style="font-family: " times="" new="" roman="" font-size:="" 11pt="">, </span><span style="font-family: " times="" new="" roman=""><strong><em><span style="text-decoration-line: underline;"><span style="font-size: 11pt;">Yunchuan Sun(corresponding),</span></span></em></strong></span><span style="font-family: " times="" new="" roman="" font-size:="" 11pt="">Antonio J. JARA. &quot;TowardsSemantically Linked Multilingual Corpus&quot;, International Journal ofInformation Management. volume 35, issue 3, year 2015, pp. 387 - 395 .</span></li><li><span style="font-family: " times="" new="" roman="" font-size:="" 11pt="">Junsheng Zhang, <strong><em><span style="text-decoration-line: underline;">Yunchuan</span></em></strong><em><span style="text-decoration-line: underline;"> S<strong>un(corresponding),</strong></span></em> et al,&quot;A Synergetic Mechanism for Digital Library Service in Mobile and CloudComputing Environment&quot;, Personal and Ubiquitous Computing, Volume 18,Issue 8 (2014), Page 1845-1854, 2014, DOI: 10.1007/s00779-014-0798-8,</span></li><li><span style="font-family: " times="" new="" roman="" font-size:="" 11pt="">Guicheng Shen, <strong><em><span style="text-decoration-line: underline;">Yunchuan Sun(corresponding),</span></em></strong> Yongping Xiong, &quot;NewTravelling-Wave Solutions for Dodd-Bullough Equation&quot;, Journal of AppliedMathematics. Volume 2013 (2013), Article ID 364718, 5 pages,http://dx.doi.org/10.1155/2013/364718.</span></li><li><span style="font-family: " times="" new="" roman="">Junsheng Zhang, </span><span style="font-family: " times="" new="" roman=""><strong>Yunchuan Sun</strong></span><span style="font-family: " times="" new="" roman="">(corresponding), YingyingLi, Huilin Wang. Consumer health information organising and mobile acquiringbased on topic maps, International Journal of Ad Hoc And Ubiquitous Computing.2016, 23(1-2): 46- 59.&nbsp; http://dx.doi.org/10.1504/IJAHUC.2016.078476.</span></li><li><span style="font-family: " times="" new="" roman="">Muhammad Irfan, HaiderAbbas, </span><span style="font-family: " times="" new="" roman=""><strong>Yunchuan Sun</strong></span><span style="font-family: " times="" new="" roman="">(corresponding),Anam Sajid and Maruf Pasha. A Framework for Cloud Forensics Evidence Collectionand Analysis using Security Information and Event Management, Security andCommunication Networks, 2016, 9 : 3790–3807. http://dx.doi.org/10.1002/sec.1538</span></li><li><span style="font-family: " times="" new="" roman="">Rongfang Bie, RashidMehmood, Shanshan Ruan,</span><span style="font-family: " times="" new="" roman=""><strong> Yunchun Sun</strong></span><span style="font-family: " times="" new="" roman="">(corresponding),Hussain Dawood. &quot;Adaptive fuzzy clustering by fast search and find ofdensity peaks&quot;, Personal and Ubiquitous Computing, Vol 20,issue 5, pp.785-793, 2016.&nbsp; DOI:10.1007/s00779-016-0954-4.</span></li><li><span style="font-family: " times="" new="" roman="">Rongfang Bie, GuangzhiZhang, Yunchuan Sun (Corresponding), Zhuorong Li,&nbsp; Houbing Song. Smart Assisted Diagnosis withMulti-Sensor Holter System with manuscript number, Neurocomputing, 2017, Vol220, issue 1, pp.67-75. DOI: 10.1016/j.neucom.2016.06.074.</span></li><li><span style="font-family: " times="" new="" roman="">Junsheng Zhang,Changqing Yao, </span><span style="font-family: " times="" new="" roman=""><strong>Yunchuan Sun</strong></span><span style="font-family: " times="" new="" roman="">(Corresponding),Zengquan Fang, Building Text-Based Temporally Linked Event Network ForScientific Big Data Analytics, Personal and Ubiquitous Computing, Vol 20, issue5, pp. 743-755, 2016. Article DOI: 10.1007/s00779-016-0940-x.</span></li><li><span style="font-family: " times="" new="" roman="" font-size:="" 11pt="">Mario Collotta, <strong>Yunchuan Sun</strong>, Luca DiPersio, Emad Samuel Malki Ebeid, Riccardo Muradore. Smart Green Applications:From Renewable Energy Management to Intelligent Transportation Systems,Energies,&nbsp; 2018, Volume 11, 1317;doi:10.3390/en11051317</span></li><li><span style="font-family: " times="" new="" roman="" font-size:="" 11pt="">Bo Mei;&nbsp;Yinhao Xiao;&nbsp;Ruinian Li;&nbsp;Hong Li;&nbsp;Xiuzhen Cheng;&nbsp;<strong><em>YunchuanSun</em></strong>. Image and Attribute Based Convolutional Neural Network InferenceAttacks in Social Networks, &nbsp;IEEE Transactions on Network Science andEngineering(2018), DOI:10.1109/TNSE.2018.2797930.</span></li><li><span style="font-family: " times="" new="" roman="" font-size:="" 11pt="">S.Wang; X. Meng; J. Yu; R. Bie; <strong><em>Y. Sun</em></strong>; X. Cheng, &quot;$N$-in-One:A Novel Location-Based-Service,&quot; IEEE Transactions on VehicularTechnology, doi: 10.1109/TVT.2017.2737017</span></li><li><span style="font-family: " times="" new="" roman="" font-size:="" 11pt="">Junsheng Zhang, <strong><em>Yunchuan Sun</em></strong>, Changqing Yao, Semantically linking events formassive scientific literature research</span><span style="font-family: " times="" new="" roman="" font-size:="" 11pt="">，</span><span style="font-family: " times="" new="" roman="" font-size:="" 11pt="">The Electronic Library, Vol. 35 Issue: 4,pp.724-744,2017,&nbsp;</span><a href="https://doi.org/10.1108/EL-09-2016-0198" style="font-family: " times="" new="" roman=""><span style="font-size: 11pt;">https://doi.org/10.1108/EL-09-2016-0198</span></a></li><li><span style="font-family: " times="" new="" roman="" font-size:="" 11pt="">Ashkan Samiee ; Yunchuan Sun ; Ronald F. Demara ; Yoonsuk Choi ; Yu Bai. EnergyEfficient Mobile Service Computing With Differential Spintronic-C-Elements: ALogic-in-Memory Asynchronous Computing Paradigm, IEEE Access, Volume: 7, pp.55851 – 55860. May 2019. DOI: 10.1109/ACCESS.2019.2911098</span></li><li><span style="font-family: " times="" new="" roman="" font-size:="" 11pt="">He, Zaobo, Cai, Zhipeng, <strong><em>Sun, Yunchuan</em></strong>, et al. Customizedprivacy preserving for inherent data and latent data, Personal and UbiquitousComputing (2017).&nbsp; Vol 21, no. 1, pp.43-54. doi:10.1007/s00779-016-0972-2.</span></li><li><span style="font-family: " times="" new="" roman="">Junqi Guo, Xi Zhou,</span><span style="font-family: " times="" new="" roman=""><strong>Yunchuan Sun</strong></span><span style="font-family: " times="" new="" roman="">, Ping Gong, Guoxing Zhao,Zhuorong Li, &quot;Smartphone-Based Patients' Activity Recognition by Using aSelf-Learning Scheme for Medical Monitoring&quot;, Journal of Medical Systems,Vol(40), no. 6, pp:1--14, 2016.&nbsp; doi:&quot;10.1007/s10916-016-0497-2&quot;</span></li><li><span style="font-family: " times="" new="" roman="">J. Wang; </span><span style="font-family: " times="" new="" roman=""><strong>Y. Sun</strong></span><span style="font-family: " times="" new="" roman="">; W. Zhang; I. Thomas; S. Duan;Y. Shi, &quot;Large Scale Online Multi-Task Learning and Decision-Making forFlexible Manufacturing,&quot; IEEE Transactions on Industrial Informatics, 2016. doi: 10.1109/TII.2016.2549919</span></li><li><span style="font-family: " times="" new="" roman="">Chengming Qi, ZhangbingZhou, </span><span style="font-family: " times="" new="" roman=""><strong>Yunchuan Sun</strong></span><span style="font-family: " times="" new="" roman="">, Houbing Song,Qun Wang, Lishuan Hu. Feature Selection and Multiple Kernel Boosting FrameworkBased on PSO with Mutation Mechanism for Hyperspectral Classification,Neurocomputing. 2016. DOI: 10.1016/j.neucom.2016.05.103.</span></li><li><span style="font-family: " times="" new="" roman="">Zaobo He, Zhipeng Cai,Jiguo Yu, Xiaoming Wang, </span><span style="font-family: " times="" new="" roman=""><strong>Yunchuan Sun</strong></span><span style="font-family: " times="" new="" roman="">,Yingshu Li. Cost-efficient Strategies for Restraining Rumor Spreading in MobileSocial Networks,&quot; IEEE Transactions on Vehicular Technology, &nbsp;vol.66, no. 3, pp. 2789-2800, March 2017. doi: 10.1109/TVT.2016.2585591</span></li><li><span style="font-family: " times="" new="" roman="">ZhangBing Zhou, Deng Zhao, Gerhard Hancke, Lei Shu, </span><span style="font-family: " times="" new="" roman=""><strong>Yunchuan Sun</strong></span><span style="font-family: " times="" new="" roman="">, Cache-Aware QueryOptimization in Multi-Application Sharing Wireless Sensor Networks, IEEETransactions on Systems, Man, and Cybernetics: Systems (SMCA),&nbsp; Volume: 48,&nbsp;Issue: 3, pp. 401-417,March, 2018. DOI：10.1109/TSMC.2016.2598398.</span></li><li><span style="font-family: " times="" new="" roman="" font-size:="" 11pt="">Hai Zhuge, <strong><em><span style="text-decoration-line: underline;">Yunchuan Sun</span></em></strong>. Schema Theory for Semantic Link Network,Future Generation Computer Systems, Volume 26, Issue 3, March 2010, Pages 408-420.DOI:&nbsp;10.1016/j.future.2009.08.012.</span></li><li><span style="font-family: " times="" new="" roman="" font-size:="" 11pt="">Pei Li,<strong><em><span style="text-decoration-line: underline;">Yunchuan</span></em></strong><em><span style="text-decoration-line: underline;"> <strong>Sun</strong></span></em>,Yingwen Chen, Zhi Tian, &quot;ESTIMATING USER INFLUENCE IN ONLINE SOCIALNETWORKS SUBJECT TO INFORMATION OVERLOAD&quot;&nbsp;, International Journal ofModern Physics B, Vol. 28, No. 3 (2014) , pp. 1–17, &nbsp;DOI:10.1142/S0217979214500040</span></li><li><span style="font-family: " times="" new="" roman="" font-size:="" 11pt="">Pei Li,<strong><em><span style="text-decoration-line: underline;">Yunchuan</span></em></strong><em><span style="text-decoration-line: underline;"> <strong>Sun</strong></span></em>,et al. &quot;Modeling and Performance Analysis of Information Diffusion underInformation Overload in Facebook-like Social Networks&quot;, InternationalJournal of Communication Systems. DOI: 10.1002/dac.2774.</span></li><li><span style="font-family: " times="" new="" roman="" font-size:="" 11pt="">Zhang Guangzhi, <strong><em><span style="text-decoration-line: underline;">Sun Yunchuan</span></em></strong>, Xu Mengling, Bie Rongfang. &quot;Weiboclustering: A new approach utilizing users' reposting data in social networkingservices&quot;, Computer Science and Information Systems, 2014, Volume 11,Issue 3, Pages: 1157-1172. doi:10.2298/CSIS130927070Z.&nbsp;&nbsp;</span></li><li><span style="font-family: " times="" new="" roman="" font-size:="" 11pt="">JinL iu, Juan Li, Xiaoguang Niu, Xiaohui Cui, and <strong><em><span style="text-decoration-line: underline;">Yunchuan</span></em></strong><em><span style="text-decoration-line: underline;"> <strong>Sun</strong></span></em>,&quot;GreenOCR: An Energy-Efficient Optimal Clustering Routing Protocol&quot;,The Computer Journal, 2014, DOI: 10.1093/comjnl/bxu052.</span></li></ol><strong><span style="font-size:18px;">2) EI检索的国际期刊/会议论文</span></strong><br /><p></p><p style="text-align:justify;"></p><ol><li><span style="font-family:Times New Roman;"><strong><em><u><span style="font-size: 11pt;">YunchuanSun,</span></u></em></strong><span style="font-size: 11pt;"> Junsheng Zhang, Rongfang Bie, Huilin Wang, Managingrules in semantic web: redundancy elimination and consistency check,International Journal of Digital Content Technology and its Applications.Volume 5, Number 2, February 2011, Pages 191-200. </span></span></li><li><span style="font-family:Times New Roman;"><span style="font-size: 11pt;">Junsheng Zhang, <strong><em><u>Yunchuan Sun</u></em></strong><u>(corresponding)</u>, Huilin Wang, AGravitation-based Position Model for Visualizing and Clustering VectoredResources, Advances in Information Sciences and Service Sciences, Volume3,Number7, August 2011, Pages 118-129.</span></span></li><li><span style="font-family:Times New Roman;"><span style="font-size: 11pt;">Junsheng Zhang, <strong><em><u>Yunchuan Sun </u></em></strong>(corresponding), Huilin Wang, Yanqing He,Calculating Statistical Similarity between Sentences, &nbsp;Journal ofConvergence Information Technology, Volume 6, Number 2. February 2011, Pages22-34.</span></span></li><li><span style="font-family:Times New Roman;"><span style="font-size: 11pt;">Junsheng Zhang, <strong><em><u>Yunchuan Sun </u></em></strong>(corresponding). An Analogy reasoning modelfor Semantic Link Network, JDCTA: International Journal of Digital ContentTechnology and its Applications, Vol. 4, No. 7, pp. 128 ~ 139, 2010. </span></span></li><li><span style="font-family: " times="" new="" roman=""><strong><em><span style="font-size: 11pt;">Y. Sun</span></em></strong></span><span style="font-family: " times="" new="" roman="" font-size:="" 11pt="">, M.Fang, X. Wang and S. Diao, &quot;GubaLex: Guba-Oriented Sentiment Lexicon forBig Texts in Finance,&quot;&nbsp;2017 13th International Conference onSemantics, Knowledge and Grids (SKG), Beijing, 2017, pp. 25-32. doi:10.1109/SKG.2017.00013</span><br /></li><li><span style="font-family:Times New Roman;"><span style="font-size: 11pt;">Mei,B., Xiao, Y., Li, H., Cheng, X., &amp; <strong><em>Sun, Y.</em></strong> (2017, October). Inferenceattacks based on neural networks in social networks. In&nbsp;Proceedings of thefifth ACM/IEEE Workshop on Hot Topics in Web Systems and Technologies&nbsp;(p.10). ACM.</span></span></li><li><span style="font-family:Times New Roman;"><strong><em><span style="font-size: 11pt;">Yunchuan Sun.</span></em></strong><span style="font-size: 11pt;">,Junsheng Zhang, et al. (2014, October). Event-based organization model forsensing data. In&nbsp;Computing, Communications and IT Applications Conference(ComComAp), 2014 IEEE&nbsp;(pp. 239-242). IEEE.</span></span></li><li><span style="font-family:Times New Roman;"><strong><em><span style="font-size: 11pt;">Yunchuan Sun,</span></em></strong><span style="font-size: 11pt;">Ye Xia, Houbing Song, Rongfang Bie. Internet of Things Services for SmallTowns, Preceedings of 2014 International Conference on Identification,Information and Knowledge in the Internet of Things, Pages: 92-95.&nbsp; DOI 10.1109/IIKI.2014.27</span></span></li><li><span style="font-family:Times New Roman;"><strong><em><span style="font-size: 11pt;">Yunchuan Sun</span></em></strong><span style="font-size: 11pt;">,Cheng Lu, Hongli Yan, Rongfang Bie, Theory for Semantic Relation Computing andits Application in Semantic Link Network, Proceeding of InternationalConference on Semantics Knowledge and Grid (SKG2012), SKG 2012, Beijing. </span></span></li><li><span style="font-family:Times New Roman;"><span style="font-size: 11pt;">Bo Mei, Yinhao Xiao, Xiuzhen Cheng, Hong Li,and <strong>Yunchuan Sun</strong></span><span style="font-size: 11pt;">，</span><span style="font-size: 11pt;">Personal Information Inference in SocialNetworks. 2017 IEEE Symposium on Privacy-Aware Computing. </span><span style="font-size: 11pt;">1-4 Aug. 2017, Washington, DC, USA. DOI: <u><span style="color:blue;">10.1109/PAC.2017.18</span></u></span></span></li><li><span style="font-size: 11pt; font-family: " times="" new="" roman="">Zhang Y., Zhou&nbsp; Z., Zhao D., </span><span style="font-size: 11pt; font-family: " times="" new="" roman=""><strong>Sun Y</strong></span><span style="font-size: 11pt; font-family: " times="" new="" roman="">., Xue X.&nbsp; A Genetic Algorithm Based Mechanismfor Scheduling Mobile Sensors in Hybrid WSNs Applications. In: Ma L., KhreishahA., Zhang Y., Yan M. (eds) Wireless Algorithms, Systems, and Applications. WASA2017. Lecture Notes in Computer Science, vol 10251, pp 220-231. Springer, Cham.https://doi.org/10.1007/978-3-319-60033-8_20</span><br /></li><li><span style="font-family:Times New Roman;"><span style="font-size: 11pt;">Jiguo Yu, Xueli Ning, <strong>Yunchuan Sun</strong>,Shengling Wang , Yawei Wang. Constructing a Self-stabilizing CDS with BoundedDiameter in Wireless Networks under SINR</span><span style="font-size: 11pt;">，</span><span style="font-size: 11pt;">IEEE INFOCOM 2017 - IEEE Conference on ComputerCommunications. 1-4 May 2017, &nbsp;Atlanta, GA, USA. 10.1109/INFOCOM.2017.8057225</span></span></li><li><span style="font-family:Times New Roman;"><span style="font-size: 11pt;">Y. Zhang, T. Qiu, X. Liu, <strong>Y. Sun</strong>, A.Zhao and F. Xia, &quot;Mac-Time-Stamping-based High-accuracy TimeSynchronization for Wireless Sensor Networks,&quot; 2016 InternationalConference on Software Networking (ICSN), Jeju Island, South Korea, 2016, pp.1-4. doi: 10.1109/ICSN.2016.7501927.</span></span></li><li><span style="font-family:Times New Roman;"><span style="font-size: 11pt;">G. Zhang, R. Bie and <strong>Y. Sun</strong>,&quot;Bring Biomedical Ontologies to Personalized Healthcare: A Smart InquiryFramework,&quot;&nbsp;2016 IEEE First International Conference on ConnectedHealth: Applications, Systems and Engineering Technologies (CHASE), Washington,DC, USA, 2016, pp. 84-88. doi: 10.1109/CHASE.2016.32http://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&amp;arnumber=7545818&amp;isnumber=7545795</span></span></li><li><span style="font-family:Times New Roman;"><span style="font-size: 11pt;">Shenling Wang, <strong><em>Yunchuan Sun</em></strong> (corresponding), Hongyang Zhang, Xiaofeng Yu,Rongfang Bie, Advances of the Semantic Link Network, 2012 Eighth InternationalConference on Semantics, Knowledge and Grids, 120-127. </span></span></li><li><span style="font-family:Times New Roman;"><span style="font-size: 11pt;">Junqi Guo, Hongyang Zhang, <strong><em>Yunchuan Sun</em></strong> (corresponding),Rongfang Bie. Square-Root Unscented Kalman Filtering Based Localization andTracking in the Internet of Things, IEEE 11th International Conference onTrust, Security and Privacy in Computing and Communications (TrustCom),Liverpool, United Kingdom, 25-27 June, 2012, pp:1824-1829. </span></span></li><li><span style="font-family:Times New Roman;"><span style="font-size: 11pt;">Hongyang Zhang, Junqi Guo, Xiaobo Xie, <strong><em>Yunchuan Sun</em></strong> (corresponding),Rongfang Bie. “Structure Health Monitoring of Walls by Using HilbertTransformation and Principal Component Analysis in Wireless Sensor Networks”,Workshop on Identification, Information and Knowledge on the Internet of Things(IIKI-2012), Oct.24-26, 2012.</span></span></li><li><span style="font-family:Times New Roman;"><span style="font-size: 11pt;">W Liang, Z Li, H Zhang, <strong><em>Yunchuan Sun</em></strong>, R Bie. Vehicular AdHoc Networks: Architectures, Research Issues, Challenges and Trends</span><span style="font-size: 11pt;">，</span><span style="font-size: 11pt;">Wireless Algorithms, Systems, andApplications, 102-113.</span></span></li><li><span style="font-family:Times New Roman;"><span style="font-size: 11pt;">Xiaobo Xie, Junqi Guo, Rongfang Bie, <strong><em>Yunchuan Sun</em></strong>. &quot;Structural HealthMonitoring by Using a Sparse Coding Based Deep Learning Algorithm with WirelessSensor&quot;, International Workshop on Identification, Information, andKnowledge in the Internet of Things 2013, Oct. 18-20, 2013, Beijing, China.</span></span></li><li><span style="font-family:Times New Roman;"><span style="font-size: 11pt;">Xiaobo Xie, Junqi Guo, Hongyang Zhang, <strong><em>Yunchuan Sun</em></strong> (</span><span style="font-size: 11pt;">通讯作者</span><span style="font-size: 11pt;">), Rongfang Bie.“Environmental Effect Removal in Vibration-based Structrual Health Monitoringin Wireless Sensor Network”, Workshop on Identification, Information andKnowledge on the Internet of Things (IIKI-2012), Oct.24-26, 2012. </span></span></li><li><span style="font-family:Times New Roman;"><span style="font-size: 11pt;">Antonio J. Jara, <strong><em>Yunchuan Sun</em></strong>, Houbing Song, Rongfang Bie, Dominique Genoud, Yann Bocchi.Internet of Things for Cultural Heritage of Smart Cities and Smart Regions, The3-rd International Workshop on Pervasive Internet of Things and Smart Cities(PITSaC-2015), which will be held together with AINA-2015: The 29th IEEEInternational Conference on Advanced Information Networking and Applications(AINA-2015), Gwangju, March 24-27, 2015.</span></span></li></ol><p></p><h1 style="font-family: " microsoft="" yahei="" margin-top:="" 0px="" margin-bottom:="" 10px="" padding-right:="" 4px="" padding-bottom:="" border-bottom-width:="" 2px="" border-bottom-color:="" rgb="" 204=""><span style="font-size: 16px;"><span style="font-family:Times New Roman;"><span style="color:#ff6666;">论著、教材</span><span style="line-height: 20.64px;"></span></span></span></h1><p style="font-family: " microsoft="" yahei="" font-size:16px="" margin-top:="" 10px="" margin-bottom:="" 0px="" margin-left:="" 47px=""><span style="font-family:Times New Roman;"><span style="font-size: 16px;"></span></span></p><p class="MsoListParagraph" style="font-family: " microsoft="" yahei="" font-size:16px="" margin-top:="" 10px="" margin-bottom:="" 0px="" margin-left:="" 28px=""><span style="font-size: 16px;"><span style="font-family:Times New Roman;">[1]Yunchuan Sun, Houbing Song, Secure and Trustworthy Transportation Cyber-Physical Systems, Springer. 2017, ISBN: 978-981-10-3891-4.</span></span></p><p class="MsoListParagraph" style="font-family: " microsoft="" yahei="" font-size:16px="" margin-top:="" 10px="" margin-bottom:="" 0px="" margin-left:="" 28px=""><span style="font-size: 16px;"><span style="font-family:Times New Roman;">[2] 孙运传等主编，数据库应用技术实验教程，新世纪高等学校教材，北京师范大学出版集团，2011</span></span></p><p class="MsoListParagraph" style="font-family: " microsoft="" yahei="" font-size:16px="" margin-top:="" 10px="" margin-bottom:="" 0px="" margin-left:="" 28px=""><span style="font-size: 16px;"><span style="font-family:Times New Roman;">[3] 孙运传等主编，电子商务，21世纪高职教材，北京理工大学出版社，2007</span></span></p><p class="MsoListParagraph" style="font-family: " microsoft="" yahei="" font-size:16px="" margin-top:="" 10px="" margin-bottom:="" 0px="" margin-left:="" 28px=""><span style="font-size: 16px;"><span style="font-family:Times New Roman;">[4] 别荣芳，孙运传等，物联网架构：物联网技术与社会影响，科学出版社，2013年</span></span></p><p class="MsoListParagraph" style="font-family: " microsoft="" yahei="" font-size:16px="" margin-top:="" 10px="" margin-bottom:="" 0px="" margin-left:="" 28px=""><span style="font-size: 16px;"><span style="font-family:Times New Roman;">[5] 别荣芳、林定移、孙运传主编，数据库技术及应用，铁道出版社，2010年</span></span></p><p class="MsoListParagraph" style="font-family: " microsoft="" yahei="" font-size:16px="" margin-top:="" 10px="" margin-bottom:="" 0px="" margin-left:="" 28px=""><span style="font-size: 16px;"><span style="font-family:Times New Roman;">[6] 高明华、孙运传等，中国公司治理分类指数报告（2016），中国出版集团东方出版中心，2016年</span></span></p><p class="MsoListParagraph" style="font-family: " microsoft="" yahei="" font-size:16px="" margin-top:="" 10px="" margin-bottom:="" 0px="" margin-left:="" 28px=""><span style="font-size: 16px;"><span style="font-family:Times New Roman;">[7] 高明华、孙运传等，中国上市公司董事会治理指数报告(2015) 经济科学出版社，2015年11月</span></span></p><p class="MsoListParagraph" style="font-family: " microsoft="" yahei="" font-size:16px="" margin-top:="" 10px="" margin-bottom:="" 0px="" margin-left:="" 28px=""><span style="font-size: 16px;"><span style="font-family:Times New Roman;">[8] 高明华、孙运传等，中国上市公司财务治理指数报告(2015) 经济科学出版社，2015年12月</span></span></p><p class="MsoListParagraph" style="font-family: " microsoft="" yahei="" font-size:16px="" margin-top:="" 10px="" margin-bottom:="" 0px="" margin-left:="" 28px=""><span style="font-size: 16px;"><span style="font-family:Times New Roman;">[9] 高明华、孙运传等，中国上市公司中小投资者保护指数报告(2015)经济科学出版社，2015年12月</span></span></p><p class="MsoListParagraph" style="font-family: " microsoft="" yahei="" font-size:16px="" margin-top:="" 10px="" margin-bottom:="" 0px="" margin-left:="" 28px=""><span style="font-size: 16px;"><span style="font-family:Times New Roman;">[10] 高明华、孙运传等，中国上市公司信息披露指数报告(2014） 经济科学出版社，2014年12月</span></span></p><p class="MsoListParagraph" style="font-family: " microsoft="" yahei="" font-size:16px="" margin-top:="" 10px="" margin-bottom:="" 0px="" margin-left:="" 28px=""><span style="font-size: 16px;"><span style="font-family:Times New Roman;">[11] 高明华、孙运传等，中国上市公司企业家能力指数报告(2014) 经济科学出版社，2014年12月</span></span></p><p class="MsoListParagraph" style="font-family: " microsoft="" yahei="" font-size:16px="" margin-top:="" 10px="" margin-bottom:="" 0px="" margin-left:="" 28px=""><span style="font-size: 16px;"><span style="font-family:Times New Roman;">[12] 高明华、孙运传等，中国上市公司财务治理指数报告(2013)，经济科学出版社，2013年12月</span></span></p><p class="MsoListParagraph" style="font-family: " microsoft="" yahei="" font-size:16px="" margin-top:="" 10px="" margin-bottom:="" 0px="" margin-left:="" 28px=""><span style="font-size: 16px;"><span style="font-family:Times New Roman;">[13] 高明华、孙运传等，中国上市公司高管薪酬指数报告(2013)，经济科学出版社，2013年12月</span></span></p><p class="MsoListParagraph" style="font-family: " microsoft="" yahei="" font-size:16px="" margin-top:="" 10px="" margin-bottom:="" 0px="" margin-left:="" 28px=""><span style="font-size: 16px;"><span style="font-family:Times New Roman;">[14] 高明华、孙运传等，中国上市公司董事会治理指数报告(2013)，经济科学出版社，2013年12月</span></span></p><p class="MsoListParagraph" style="font-family: " microsoft="" yahei="" font-size:16px="" margin-top:="" 10px="" margin-bottom:="" 0px="" margin-left:="" 28px=""><span style="font-size: 16px;"><span style="font-family:Times New Roman;">[15] 高明华、孙运传等，中国上市公司信息披露指数报告(2012)，经济科学出版社，2012年12月</span></span></p><p class="MsoListParagraph" style="font-family: " microsoft="" yahei="" font-size:16px="" margin-top:="" 10px="" margin-bottom:="" 0px="" margin-left:="" 28px=""><span style="font-size: 16px;"><span style="font-family:Times New Roman;">[16] 高明华、孙运传等，中国上市公司企业家能力指数报告(2012)，经济科学出版社，2012年12月</span></span></p><p class="MsoListParagraph" style="font-family: " microsoft="" yahei="" font-size:16px="" margin-top:="" 10px="" margin-bottom:="" 0px="" margin-left:="" 28px=""><span style="font-size: 16px;"><span style="font-family:Times New Roman;">[17] 高明华、孙运传等，中国上市公司高管薪酬指数报告(2011)，经济科学出版社，2011年11月</span></span></p><p class="MsoListParagraph" style="font-family: " microsoft="" yahei="" font-size:16px="" margin-top:="" 10px="" margin-bottom:="" 0px="" margin-left:="" 28px=""><span style="font-size: 16px;"><span style="font-family:Times New Roman;">[18] 高明华、孙运传等，中国上市公司董事会治理指数报告(2011)，经济科学出版社，2011年11月</span></span></p><p class="MsoListParagraph" style="font-family: " microsoft="" yahei="" font-size:16px="" margin-top:="" 10px="" margin-bottom:="" 0px="" margin-left:="" 28px=""><span style="font-size: 16px;"><span style="font-family:Times New Roman;">[19] 高明华、孙运传等，中国上市公司信息披露指数报告(2010)，经济科学出版社，2010年12月</span></span></p><p class="MsoListParagraph" style="font-family: " microsoft="" yahei="" font-size:16px="" margin-top:="" 10px="" margin-bottom:="" 0px="" margin-left:="" 28px=""><span style="font-size: 16px;"><span style="font-family:Times New Roman;">[20]&nbsp;施毓,何青,孙运传,陈丹阳, 欧盟物联网研究战略路线图（译）, 2010年11月欧盟物联网研究中心（IERC）（IERC, Internet of Things Strategic Research Roadmap, 2009. ）发布在官方网站:<br /><a href="http://www.internet-of-things-research.eu/pdf/IoT_Cluster_SRA_English2Chinese_Translation.pdf">http://www.internet-of-things-research.eu/pdf/IoT_Cluster_SRA_English2Chinese_Translation.pdf</a>, 2010.</span></span></p><p class="MsoListParagraph" style="font-family: " microsoft="" yahei="" font-size:16px="" margin-top:="" 10px="" margin-bottom:="" 0px="" margin-left:="" 28px=""><span style="font-size: 16px;"><span style="font-family:Times New Roman;">[21] 沈复兴、陈磊、孙运传，数理逻辑，人民邮电出版社，2007</span></span></p></div>
+                    
+                </div>				<div class="grjj">
+                    <p class="jjh">研究课题</p>
+                  
+                    <div class="bks1"><h1 style="font-family: " microsoft="" yahei="" margin-bottom:="" 10px="" padding-top:="" 0px="" padding-right:="" 4px="" padding-bottom:="" font-size:="" 32px="" border-bottom-width:="" 2px="" border-bottom-color:="" rgb="" 204=""><span style="line-height: 27.52px;"><span style="color: rgb(255, 102, 102); font-weight: normal;"><span style="font-family:SimHei;font-size:16px;">主持参与科研项目</span></span></span></h1><p style="font-family: " microsoft="" yahei="" font-size:16px="" margin-top:="" 8px="" margin-bottom:="" 0px="" margin-left:="" 56="" 4px=""></p><ol><li><span style="font-family: SimSun; font-size: 16px;"></span><p><span style="font-size: 12pt; font-family: 宋体;">面向金融数据开放共享的隐私计算，</span><span style="font-size: 12pt;">2021</span><span style="font-size: 12pt; font-family: 宋体;">年</span><span style="font-size: 12pt;">-2022</span><span style="font-size: 12pt; font-family: 宋体;">年，教育部协同育人项目（蚂蚁智信集团），在研，主持</span></p></li><li><p><span style="font-size: 12pt; font-family: 宋体;">人工智能对我国数字经济的影响机制与治理对策研究，</span><span style="font-size: 12pt;">2021</span><span style="font-size: 12pt; font-family: 宋体;">年，中国科技信息研究所，结题，主持</span></p></li><li><p><span style="font-family:FangSong_GB2312;font-size:16px;">颠覆性技术早期识别研究，2019，中国科技信息研究所情报工程实验室开放基金，主持，4万</span></p></li><li><p><span style="font-family: SimSun; font-size: 16px;">世界科技前沿发展与创新动向研究，2018.5-2018.12，中国科技信息研究所委托项目，主持，15万</span></p></li><li><span style="font-family:SimSun;font-size:16px;">金融大数据实验课程建设项目，2017.09-2017.12，2017年中央高校教育教学改革专项拟立项建设项目（经济与工商管理实验教学示范中心培育），主持，25万</span></li><li><span style="font-family:SimSun;font-size:16px;">基于大数据领域研发项目的科技发展动向研究，2016-2017，中国科技信息研究所情报工程实验室开放基金，主持，3万</span></li><li><span style="font-family:SimSun;font-size:16px;">物联网环境下基于语义的主动性事件链接网络模型研究，2014-2017，自然科学基金面上项目，主持，80万</span></li><li><span style="font-family: SimSun; font-size: 16px;">物联网环境下基于语义链的知识表示与知识自动获取关键技术研究，2011-2013，北京师范大学自主基金项目，主要成员，负责语义链网络模型的构建、知识获取</span><br /></li><li><span style="font-family:SimSun;font-size:16px;">物联网标识、信息与知识国际会议&nbsp;(IIKI2014），2014，国家自然科学基金国际(地区)合作与交流项目，主持</span></li><li><span style="font-family: SimSun; font-size: 16px;">教育部直属高校网络监控分析系统，2010-2011，教育部，主持</span><br /></li><li><span style="font-family:SimSun;font-size:16px;">Real-time physical health monitoring for the adolescents by using novel wearable devices and secure Internet of Things architectures,&nbsp;中国-斯洛文尼亚双边合作项目，主要参与人</span></li><li><span style="font-family: SimSun; font-size: 16px;">适应性物联网软件需求获取方法和关键技术研究，2013-2014，武汉大学软件工程重点实验室开放课题，主持</span><br /></li><li><span style="font-family:SimSun;font-size:16px;">基于传感器系统的物体结构故障诊断方法研究，2013-2015，自然科学基金面上项目，主要成员，负责算法设计与开发</span></li><li><span style="font-family:SimSun;font-size:16px;">中国居民收入分配数据库，2012-2016，自然科学基金重点项目，参加</span></li><li><span style="font-family:SimSun;font-size:16px;">基于空间关系视角的区域信息化与经济增长研究，2011-2013，教育部社会科学基金，参与</span></li><li><span style="font-family:SimSun;font-size:16px;">中国公司治理分类指数系列，2011-2013，北京师范大学自主基金项目，主要成员，负责分类指数数据库设计开发</span></li><li><span style="font-family:SimSun;font-size:16px;">基于Trustie技术平台的电力生产管理系统高可靠性开发环境的研制及示范工程，2009-2010，国家863项目，主要参与，主持“面向电力生产管理系统的可信性保障体系”模块</span></li><li><span style="font-family:SimSun;font-size:16px;">收入分配制度改革与社会公平，2006-2009，国家社会科学基金重大项目，参与，负责数据处理</span></li></ol><p></p></div>
+                    
+                </div>				<div class="grjj">
+                    <p class="jjh">学生情况</p>
+                    <div class="bks1"><p><span style="font-size:16px;color:#ff6666;"><strong>部分指导学生情况</strong></span></p><p><span style="font-size:16px;">[1]&nbsp;于馨培，2009级计算机本科，在本实验室参与科研，发表1篇SCI论文，后就读于南加州大学，现在美国Google工作。</span></p><p><span style="font-size:16px;">[2]&nbsp;刘迪，2009级计算机本科，在本实验室参与科研，后就读于美国哥伦比亚大学，现在美国Facebook工作。<br /></span></p><p><span style="font-size:16px;">[3]&nbsp;武永夷，2009级计算机本科，在本实验室参与科研，后就读于加拿大Simon&nbsp;Fraser&nbsp;University，现在加拿大MindGeek工作。</span></p><p><span style="font-size:16px;">[4]&nbsp;方梦婷，2015级数科院本科，在本实验室参与投资者情绪研究，发表论文2篇，申请专利2项，现在美国宾夕法尼亚大学读博士。</span></p><p><span style="font-size:16px;">[5]&nbsp;<span style="font-size: 16px;">温泽之，2013级计算机本科，在本实验室参与科研，后就读于美国卡耐基梅龙大学，现在美国谷歌工作。</span><br /></span></p><p><span style="font-size:16px;">[6]&nbsp;</span><span style="font-size: 16px;">王欣宇，2015级数科院本科，在本实验室参与投资者情绪研究，发表论文2篇，申请专利2项，现就读于美国东北大学。</span><br /></p><p><span style="font-size: 16px;">[7] 李春蕾，2014级经管院本科，<span style="font-size: 16px;">在本实验室参与企业信用评级研究，发表论文1篇，后就读于北京大学光华管理学院，现在北京师范大学工作。</span><br /></span></p><p><span style="font-size: 16px;">[8] 刘汝晗, 2015级经管院本科，<span style="font-size: 16px;">在本实验室参与科研，现于北京大学光华管理学院读博士。</span><br /></span></p><p><span style="font-size: 16px;"><span style="font-size: 16px;">[9] 高雪姮，<span style="font-size: 16px;">2015级经管院本科，</span><span style="font-size: 16px;">在本实验室参与科研，现在北京大学教育学院读博士。</span><br /></span></span></p><p><span style="font-size: 16px;"><span style="font-size: 16px;"><span style="font-size: 16px;"><span style="font-size: 16px;">[10]&nbsp;吴书月，</span><span style="font-size: 16px;">2016级经管院本科，</span><span style="font-size: 16px;">在本实验室参与投资者情绪研究，现就读于北京大学光华管理学院。</span><br /><br /></span></span></span></p></div>
+                    
+                </div>				<div class="grjj">
+                    <p class="jjh">教授课程</p>
+                    <div class="bks1"><p style="font-family: " microsoft="" yahei="" font-size:16px=""><span style="font-size:18px;color:#ff0000;"><a name="信用评级"></a></span><span style="color: rgb(255, 0, 0); font-size: 18px;">《金融科技前沿》</span></p><p style="font-family: " microsoft="" yahei="" font-size:16px="" margin-top:="" 8px="" text-indent:="" 36px=""><span style="font-size: 16px;"><span style="color: rgb(51, 51, 51);">金融科技（</span><span style="font-family: " microsoft="" jhenghei="" sans-serif="" color:="" rgb="" 51="" background-image:="" initial="" background-position:="" background-size:="" background-repeat:="" background-attachment:="" background-origin:="" background-clip:="">Financial technology, FinTech</span><span style="color: rgb(51, 51, 51);">）是指采用先进的科技手段，尤其是先进的信息技术，促进金融创新，提升金融服务效率，促使金融行业变革，从而更好服务于社会经济发展和人民生活水平提高。近年来人工智能、大数据、云计算、区块链等一系列信息技术的快速发展，促成金融科技创新的蓬勃发展。当前，移动支付、数字货币、智能投资、大数据金融等科技手段在金融领域的发展和应用正在从不同的方向不断颠覆传统金融行业，引领金融产业的变革，衍生出一系列全新形态的金融应用。</span></span></p><p style="font-family: " microsoft="" yahei="" font-size:16px="" margin-top:="" 8px="" text-indent:="" 36px=""><span style="color: rgb(51, 51, 51); font-size: 16px;">《金融科技前沿讲座》主要讲授内容包括金融大数据、数字货币与区块链技术、量化交易、智能金融、移动支付等金融科技，及其发展现状与未来发展趋势。</span></p><p style="font-family: " microsoft="" yahei="" font-size:16px="" margin-top:="" 8px="" text-indent:="" 36px=""><span style="color: rgb(255, 0, 0);"><span style="font-size:18px;">《量化投资基础》</span></span></p><p style="font-family: " microsoft="" yahei="" font-size:16px="" margin-top:="" 8px="" text-indent:="" 36px=""><span style="color: rgb(51, 51, 51); font-size: 16px;"><br /></span></p><p style="font-family: " microsoft="" yahei="" font-size:16px=""><span style="font-size:16px;color:#ff6666;">数据库原理</span></p><p style="font-family: " microsoft="" yahei="" font-size:16px=""><span style="font-size:16px;color:#ff6666;">电子商务技术概论</span></p><p style="font-family: " microsoft="" yahei="" font-size:16px=""><span style="font-size:16px;color:#ff6666;">网站建设与制作</span></p><div><br /></div></div>
+                    
+                </div>            </div>
+        </div>
+         <footer style="overflow: hidden;">
+            <div class="footers">
+                <div class="footersl">
+                    <img src="http://bs.bnu.edu.cn/newweb/images/ewm.jpg" alt="" class="imgewm">
+                    <div class="footerxx">
+                        <p>Copyright © 2020 北京师范大学经济与工商管理学院</p>
+                        <p><i class="fas fa-map-marker-alt"></i> 地址：北京市新街口外大街19号</p>
+                        <p><i class="fas fa-portrait"></i> 传真：010-58801867</p>
+                        <p><i class="fas fa-phone"></i> 电话：010-58801867</p>
+                        <p><i class="fas fa-envelope"></i> 邮编：100875</p>
+                    </div>
+                </div>
+                <img src="http://bs.bnu.edu.cn/newweb/images/db.png" alt="" width="140" class="dbimg">
+                <img src="http://bs.bnu.edu.cn/newweb/images/yx.png" alt="" class="yuanxun">
+            </div>
+        </footer>
+    </div>
+	<div class="share">
+		  <div id="appgame-leftside-share">
+	        <div class="appgame-leftside-share rwt_share" id="rwt_share">
+	         
+	        <!--<a class="appgame-leftside-search" data-cmd="search" title="search"  href="javascript:void(0);" onclick="opens('id')">search</a> --> <!--<div class="searchs" id="id">
+	         <form name="dataForm" action="/cms/search/searchResults.jsp" target="_blank" method="post" accept-Charset="utf-8"  onsubmit="document.charset='utf-8';">
+			        	<p>
+			        		<input name="siteID" size="4" value="127" type = "hidden">
+			        		<input type="text" name="query" id="search" class="searchInput" value="输入搜索词">
+			        		<button type="submit"></button>
+			        	</p>
+			        	</form>
+			        </div>-->
+			        <!-- <a class="appgame-leftside-weixin" data-cmd="weixin" title="">微信</a> -->
+                    
+			        <!-- <a class="appgame-leftside-qzone" data-cmd="qzone" title="">qq空间</a>
+			        
+			        <a class="appgame-leftside-tsina" data-cmd="tsina" title="">微博</a> -->			    </div>
+			        <a class="appgame-leftside-top" onclick="gotoTPoint()"></a>			</div>
+			        
+		</div>
+</body>
+<script src="http://gh.bnu.edu.cn/js/jquery-1.9.0.min.js"></script>
+<script src="http://gh.bnu.edu.cn/js/share.min.js"></script>
+<script>
+    var dj=document.getElementById('dianji');
+    var jjc=document.getElementById('jjc');
+    var dj1=document.getElementById('dianji1');
+    var jjc1=document.getElementById('jjc1');
+    var a=1;
+    function zhedie(m,n){
+        m.onclick=function(){
+            if(a==1){
+                n.className='jjc';
+                m.className='dianji1'
+                a=0;
+            }else{
+                n.className='jjc1';
+                m.className='dianji'
+                a=1;
+            }
+        }
+    }
+    zhedie(dj,jjc);
+    zhedie(dj1,jjc1);
+	
+	
+</script>
+<script>
+
+	
+	
+    
+
+    /*回到顶部*/
+	$(function(){
+	 	$(window).resize(function(){
+						var h = $(window).height();
+						$('.goTop').css('top',h-60);
+						$(window).scroll(function(){				
+							var scrollTop = $(document).scrollTop();					  
+							$('.goTop').stop().animate({
+								top: h + scrollTop-60
+							},300);
+						});
+		}).resize();
+		});
+	//gotop
+
+			$('.goTop').click(function(){
+
+				$('body,html').stop().animate({scrollTop:0});
+
+				return false;
+
+			});
+	
+	function gotoTPoint(){
+		$("html,body").animate({scrollTop:0},500);
+	}
+</script>
+</html>

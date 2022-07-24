@@ -1,0 +1,491 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0">
+    <title>北京师范大学工商与经济管理学院</title>
+    <link rel="stylesheet" href="http://bs.bnu.edu.cn/new-ver-css/reset.css">
+    <link rel="stylesheet" href="http://bs.bnu.edu.cn/new-ver-css/index.css">
+	<link rel="stylesheet" href="http://bs.bnu.edu.cn/new-ver-css/xyslist.css">
+	<link rel="stylesheet" href="http://bs.bnu.edu.cn/new-ver-css/xys-tf.css">
+    <style>
+        .container{
+            width:100%;
+            height: auto;
+            overflow: hidden;
+        }
+        .header{
+            width:100%;
+            height:116px;
+            background:#EFF8FF;
+        }
+        .logo1{
+            width:1200px!important;
+            margin:0 auto;
+            position:relative;
+            float: none;
+			display:block;
+        }
+        .logo2{
+            float:right;
+        }
+        .logo1 p{
+            position:absolute;
+            top:5px;
+            right:5px;
+            font-size:13px;
+        }
+        .logo1 p:hover{
+            color:#112769;
+        }
+        .tu{
+            width:100%;
+            height:240px;
+            background:url('http://bs.bnu.edu.cn/newweb/grzy/images/tu.jpg') no-repeat top center;
+            background-size: 100%;
+        }
+        .lujing{
+            width:1200px;
+            height:58px;
+            margin:0 auto;
+            border-bottom:1px solid #aaa;
+            overflow:hidden;
+        }
+        .lujings{
+            margin:24px 0 0 0;
+            font-size:14px;
+        }
+        .content{
+            color:#333;
+            width:1200px;
+/*            height:2000px;*/
+            margin:0 auto;
+            margin-top:40px;
+/*            background:#c4c4c4;*/
+        }
+        
+        .xian{
+            width:100%;
+            height:8px;
+            background:#9A0812;
+        }
+        
+        .leftc{
+            float:left;
+        }
+        .rightc{
+            float:left;
+            margin-left:50px;
+/*            background:#666;*/
+            width:880px;
+/*            height:1000px;*/
+        }
+        .rheader{
+            width:880px;
+            height:210px;
+/*            background:yellow;*/
+        }
+        .xm{
+            font-size:30px;
+            height:40px;
+/*            border-bottom:4px solid #9A0812;*/
+            width:auto;
+            float:left;
+            line-height:40px;
+			margin-right:30px;
+        }
+        .zhiw{
+            font-size:18px;
+            height:40px;
+            line-height:50px;
+            margin-bottom:30px;
+        }
+        .tel{
+                font-size: 16px;
+                margin-top: 10px;
+                line-height: 20px;
+        }
+        .grjj{
+/*            height:300px;*/
+            width:880px;
+/*            background:yellow;*/
+            padding-bottom:40px;
+        }
+        .jjh{
+                font-size: 20px;
+                border-bottom: 1px solid #cecece;
+                height: 40px;
+                line-height: 40px;
+                padding-left: 30px;
+                background: url(http://bs.bnu.edu.cn/newweb/grzy/images/zw.png) no-repeat 0 16px;
+        }
+        
+        .jjc{
+            font-size:14px;
+            margin-top:30px;
+           
+            line-height:28px;
+            overflow:hidden;
+            text-align: justify;
+            text-justify:inter-ideograph;
+        }
+        .jjc1{
+            height:225px;
+            font-size:14px;
+            margin-top:30px;
+            
+            line-height:28px;
+            overflow:hidden;
+            text-align: justify;
+            text-justify:inter-ideograph;
+        }
+        
+        .dianji1{
+                background: url(http://bs.bnu.edu.cn/newweb/grzy/images/zw.png) no-repeat 0 -50px;
+                width: 13px;
+                height: 13px;
+                cursor: pointer;
+                display: block;
+            margin-top: 20px;
+            transition: all .2s linear;
+        }
+        .dianji1:hover{
+            background: url(http://bs.bnu.edu.cn/newweb/grzy/images/zw.png) no-repeat 0 -64px;
+        }
+        
+        .dianji{
+                background: url(http://bs.bnu.edu.cn/newweb/grzy/images/zw.png) no-repeat 0 -24px;
+                height: 13px;
+                cursor: pointer;
+                display: block;
+            margin-top: 20px;
+            transition: all .2s linear;
+        }
+        .dianji:hover{
+            background: url(http://bs.bnu.edu.cn/newweb/grzy/images/zw.png) no-repeat 0 -37px;
+        }
+        #jjc1{
+            text-indent:0em;
+        }
+        
+        .bks{
+            font-size:14px;
+            font-weight: 800;
+            margin-top:30px;
+            height:auto;
+            line-height:36px;
+        }
+        .bks1{
+            font-size:14px;
+            margin-top:30px;
+            height:auto;
+            line-height:36px;
+        }
+        .bksc{
+            height:36px;
+            line-height:36px;
+            font-size:14px;
+        }
+        
+        .yanzheng{
+            width:1200px;
+            height:100px;
+            margin:0 auto;
+        }
+        .yanzheng img{
+            display:block;
+            margin-top:26px;
+            float:left;
+        }
+		
+#appgame-leftside-share{width:42px; height:216px; position: fixed;bottom: 30px;right: 30px; z-index:9999;}
+.appgame-leftside-share{width:42px; height:259px;}
+#appgame-leftside-share a{display:block; width:42px; height:44px; background-color:#e6e6e6; z-index:1; position:absolute; left:0; box-sizing:border-box; -moz-box-sizing:border-box; border:1px #ddd solid; background-image:url(http://gh.bnu.edu.cn/images/share-icons.png); background-repeat:no-repeat; margin:0;  transition:0.4s; -webkit-transition:0.4s; -moz-transition:0.4s;}
+#appgame-leftside-share a:hover{background-color:#fff; border:1px #eee solid; z-index:2;}
+/*.appgame-leftside-weixin{top:0; background-position:-88px 0;}
+.appgame-leftside-weixin:hover{background-position:0px 0;}
+.appgame-leftside-qzone{top:43px; background-position:-88px -44px;}
+.appgame-leftside-qzone:hover{background-position:0px -44px;}*/
+.appgame-leftside-search{top:86px; background-position:-93px -89px;}
+.appgame-leftside-search:hover{background-position:-5px -86px;}
+.appgame-leftside-weixin{top:129px; background-position:-88px 0px;}
+.appgame-leftside-weixin:hover{background-position:0px 0px;}
+/*.appgame-leftside-fbook{top:172px; background-position:-88px -176px;}
+.appgame-leftside-fbook:hover{background-position:0px -176px;}
+.appgame-leftside-twi{top:215px; background-position:-88px -220px;}
+.appgame-leftside-twi:hover{background-position:0px -220px;}*/
+#appgame-leftside-share .appgame-leftside-top{background-image:url(http://gh.bnu.edu.cn/images/leftnav-off.png); background-position:-1px -395px; top:130px; cursor:pointer;}
+
+.rwt_share {
+/*	overflow:hidden;*/
+	float:left;
+	position:relative;
+}
+.rwt_share a {
+	display:inline-block;
+	margin-right:10px;
+	text-indent:-9999px;
+	margin-bottom:10px;
+	width:24px;
+	height:24px;
+	overflow:hidden;
+	cursor:pointer;
+	float:left;
+	font-size:12px;
+}
+.rwts_weixin {
+	background-position:0 -1612px;
+}
+.rwts_tsina {
+	background-position:0 -104px;
+}
+.rwts_tqq {
+	background-position:0 -260px;
+}
+.rwts_qzone {
+	background-position:0 -52px;
+}
+.rwts_sqq {
+	background-position:0 -2652px;
+}
+.rwts_tieba {
+	background-position:0 -728px;
+}
+.rwts_renren {
+	background-position:0 -208px;
+}
+.rwts_kaixin001 {
+	background-position:0 -312px;
+}
+.rwts_tqf {
+	background-position:0 -364px;
+}
+.rwts_douban {
+	background-position:0 -468px;
+}
+.rwts_twi {
+	background-position:0 -1404px;
+}
+.rwts_fbook {
+	background-position:0 -1352px;
+}
+.rwts_ty {
+	background-position:0 -1196px;
+}
+.rwts_mogujie {
+	background-position:0 -1768px;
+}
+.rwts_meilishuo {
+	background-position:0 -1716px;
+}
+.rwts_huaban {
+	background-position:0 -1872px;
+}
+.rwts_hi {
+	background-position:0 -416px;
+}
+.rwts_tsohu {
+	background-position:0 -520px;
+}
+.rwts_more {
+	background-position:0 0;
+}
+.rwt_share_wxShow_code>img {
+	width:100%;
+}
+.bks1 li{
+	list-style:disc;
+}
+@media screen and (max-width: 1200px){
+	.logo1{
+		width:100%!important;
+	}
+	.leftc img{
+		width:50%!important;
+		height:50%!important;
+	}
+	.logo2{display:none;}
+	.lujing{
+		width:90%;
+	}
+	.content{
+		width:90%;
+	}
+	.leftc{
+		float:none;
+		
+	}
+	.tu{display:none;}
+	
+	.rightc{
+		float:none;
+		width:100%;
+		margin-left:0px;
+	}
+	.footers{width:100%;}
+	.rheader{width:100%;}
+	.grjj{width:100%;}
+}
+@media screen and (max-width: 600px){
+.l3{width:95%;}
+.share{display:none;}
+.leftc img{
+		width:70%!important;
+		height:70%!important;
+	}
+}
+  
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo1">
+                <img src="http://bs.bnu.edu.cn/newweb/grzy/images/logo.png" alt="" class="l3" style="margin-top: 25px;float:left;">
+                <img src="http://bs.bnu.edu.cn/newweb/grzy/images/logo2.png" alt="" class="logo2">
+                <a href="http://bs.bnu.edu.cn/englishversion/facultyresearch/fulltimefaculty/azmsy/119689.html"><p>ENGLISH VERSION</p></a>
+            </div>
+        </div>
+        <div class="xian"></div>
+        <div class="tu"></div>
+        <div class="lujing">
+            <div class="lujings">
+                <a href="#">师资队伍</a>
+                 | 
+                <a href="#">会计系</a>
+            </div>
+        </div>
+        <div class="content">
+            <div class="leftc">
+                <img src="/Public/upload/touxiang/95046.jpg" alt="" width="270">
+            </div>
+            <div class="rightc">
+                <div class="rheader">
+                    <p class="xm">李欲晓</p>
+                    <p class="zhiw">副教授</p>
+                    <p class="tel"><strong style="display:block;width:100px;float:left;">电话</strong>：010-58801867</p> 
+                 <p class="tel"><strong style="display:block;width:100px;float:left;">E-mail</strong>：liyuxiao@bnu.edu.cn</p>
+                 <p class="tel"><strong style="display:block;width:100px;float:left;">Office hour</strong>：周四上午：10：00-12：00</p>
+                 <p class="tel"><strong style="display:block;width:100px;float:left;">系所中心</strong>：会计系</p>
+              </div>
+			  <div class="grjj">
+                    <p class="jjh">个人简历</p>
+                    <div class="bks1" id="jjc"><p style="font-family: " microsoft="" yahei="" font-size:16px="">1967年6月18日出生于北京，祖籍湖南湘潭。多年承担《管理会计》、《成本会计》、《企业管理决策模拟》、《商业伦理与企业社会责任》等教学工作，曾承担《会计学原理》、《财务会计》、《财务管理》、《战略管理》、《预算管理》等教学工作，主要研究领域为成本管理系统、战略绩效评价、预算控制等；曾承担组织战略管理、绩效评价体系等多项课题，为国航、国电等多家大中型企业提供战略制定、绩效管理、预算管理、内部控制等咨询或培训。现任经济与工商管理学院商业伦理研究中心主任，多次参与策划、编写并发布学院社会责任报告。</p><p style="font-family: " microsoft="" yahei="" font-size:16px=""><br /></p><p style="font-family: " microsoft="" yahei="" font-size:16px=""><strong>教育背景：</strong></p><p style="font-family: " microsoft="" yahei="" font-size:16px="">2007年7月：北京大学光华管理学院获管理学博士学位 （战略管理与国际经营方向）</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">1995年7月：北京师范大学经济与工商管理学院获经济学硕士学位 （经济思想史方向）</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">1990年7月：中国人民大学经济学院获经济学学士学位 （1997年1月－6月：荷兰蒂尔堡大学经济系访问学者）</p><p style="font-family: " microsoft="" yahei="" font-size:16px=""><br /></p><p style="font-family: " microsoft="" yahei="" font-size:16px=""><strong>工作经历：</strong></p><p style="font-family: " microsoft="" yahei="" font-size:16px="">1995－今：执教于北京师范大学经济与工商管理学院</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">1991年9月-1992年9月：国家知识产权局（原中国专利局）行政部任职</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">1991年3月-1991年9月：中国科协（《未来与发展》编辑部 （采编与项目策划）</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">1990年7月－1991年3月：北京祥云实业技术公司 （实习经理）</p></div>
+                    
+                </div>				<div class="grjj">
+                    <p class="jjh">研究领域</p>
+                    <div class="bks1">成本管理、绩效评价、战略管理与企业持续竞争力&nbsp; &nbsp;商业伦理与企业社会责任&nbsp; &nbsp;企业经营决策模拟</div>
+                </div>				<div class="grjj">
+                    <p class="jjh">研究成果</p>
+                    <div class="bks1" id="jjc1"><p style="font-family: " microsoft="" yahei="" font-size:16px=""><strong>1、主要期刊论文</strong></p><p style="font-family: " microsoft="" yahei="" font-size:16px="">（1）“虚假财务信息的成因与对策分析”，《聊城大学学报》（社会科学版），2003年第3期，P86-91。</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">（2）“中国家族企业的制度分析”，《北京师范大学学报》（哲学社会科学版），2003年第4期，P110-116。</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">（3）“中国家族企业的行为分析”，《经济评论》，2003年6-2期，P48-51。</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">（4）“富国论与富民论”，《中共中央党校学报》，2004年第2期，P78-82。</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">（5）“市场经济与利他主义、利己主义的界限”（文建东，本人为第二作者），《中国软科学》2004年第2期，P44-40（《新华文摘》2004年第10期，P39-41）。</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">（6）“从内外挤压到综合治理—―中国钢铁业演绎三大看点”，《时代经贸》，2005年5月，第4期，P44-50。</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">（7）“企业的遗传基因及其基本结构分析”，《经济评论》，2007年第2期，P128-134。</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">（8）“企业遗传基因的性质、结构与功能”，《首都经贸大学学报》，2007年第4期，P26-32。</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">（9）“基于商业生态视角的企业社会责任指标体系”，李欲晓，江若玫，洞识</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">教育学报（台湾），2010年12月。</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">（10）“基于社会责任的企业战略管理体系”，《WTO导刊》，2015年第3期，第60-62页。</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">（11）“我国MBA培养院校商业伦理课程教育现状、问题及对策”，《国家教育行政学院学报》，2015年6月，第48-51页。</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">（12）《商业银行内部信息安全战略管理体系的构建》，《农村金融研究》，2015</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">年7月，第57-62页。</p><p style="font-family: " microsoft="" yahei="" font-size:16px=""><br /></p><p style="font-family: " microsoft="" yahei="" font-size:16px=""><strong>2、主要教材与著作</strong></p><p style="font-family: " microsoft="" yahei="" font-size:16px="">（1）《管理会计案例》，［加］邵达伟编，李欲晓、胡曙光译，机械工业出版社，</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">1999年4月版。</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">（2）《企业家精神：全球化、创新与发展》，［美］伊丽莎白·切尔著，李欲晓、</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">赵琛徽译，中信出版社，2004年1月版。</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">（3）《资源型城市经济社会发展战略研究——以陕西榆林可持续发展为例》，张国有主编，经济科学出版社，2010年11月（参与者）。</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">（4）《中国上市公司财务行为报告》，与吴沁红等合著，经济科学出版社，2013年12月出版。</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">（5）《中国上市公司财务治理指数评价（2015）》，高明华等著，经济科学出版社，2015年12月版（参与者）。</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">（6）《财务管理》（教材），副主编，（申嫦娥主编），北京师范大学出版社，2014</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">年6月第一版，2019年2月第二版。</p></div>
+                    
+                </div>				<div class="grjj">
+                    <p class="jjh">研究课题</p>
+                  
+                    <div class="bks1"><p style="font-family: " microsoft="" yahei="" font-size:16px="">1、中国饭店业的发展及协调管理战略，国家旅游局，2001年12月（参与者，主持人：张国有）</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">2、地区供电企业经济效益分析与绩效评价系统，2005年1月－2007年12月（参与者，主持人：张国有）</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">3、榆林地区战略发展研究，2009年3月－3月2010年，（参与者，主持人：张国有）</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">4、中国上市公司信息披露指数研究（985课题），2010年（参与者，主持人：高明华）</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">5、商业伦理与企业社会责任课程开发研究（北京师范大学MBA质量提升计划课题），2011年，主持人及报告人。</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">6、促进科技进步的财政政策研究（国家社科课题），2012年（参与者，主持人：申嫦娥）</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">7、企业数据信息报告制度研究（国家工信部课题，与财政部合作），2013－2014年，（参与者，主持人：吴沁红）</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">8、企业管理综合实践教学课程体系研究（北师大校级教学建设与改革项目），2013-2015年，主持人及报告人。</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">9、应用型管理会计专业课程体系的构建（北师大校级教学建设与改革项目，师教通［2016］70号），2016-2018年，主持人及报告人。</p></div>
+                    
+                </div>								<div class="grjj">
+                    <p class="jjh">教授课程</p>
+                    <div class="bks1"><p style="font-family: " microsoft="" yahei="" font-size:16px="">管理会计</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">成本会计</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">管理会计专题研究</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">成本与管理会计</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">商业伦理与企业社会责任</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">企业经营决策模拟</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">MBA专业学位论文写作</p></div>
+                    
+                </div>            </div>
+        </div>
+         <footer style="overflow: hidden;">
+            <div class="footers">
+                <div class="footersl">
+                    <img src="http://bs.bnu.edu.cn/newweb/images/ewm.jpg" alt="" class="imgewm">
+                    <div class="footerxx">
+                        <p>Copyright © 2020 北京师范大学经济与工商管理学院</p>
+                        <p><i class="fas fa-map-marker-alt"></i> 地址：北京市新街口外大街19号</p>
+                        <p><i class="fas fa-portrait"></i> 传真：010-58801867</p>
+                        <p><i class="fas fa-phone"></i> 电话：010-58801867</p>
+                        <p><i class="fas fa-envelope"></i> 邮编：100875</p>
+                    </div>
+                </div>
+                <img src="http://bs.bnu.edu.cn/newweb/images/db.png" alt="" width="140" class="dbimg">
+                <img src="http://bs.bnu.edu.cn/newweb/images/yx.png" alt="" class="yuanxun">
+            </div>
+        </footer>
+    </div>
+	<div class="share">
+		  <div id="appgame-leftside-share">
+	        <div class="appgame-leftside-share rwt_share" id="rwt_share">
+	         
+	        <!--<a class="appgame-leftside-search" data-cmd="search" title="search"  href="javascript:void(0);" onclick="opens('id')">search</a> --> <!--<div class="searchs" id="id">
+	         <form name="dataForm" action="/cms/search/searchResults.jsp" target="_blank" method="post" accept-Charset="utf-8"  onsubmit="document.charset='utf-8';">
+			        	<p>
+			        		<input name="siteID" size="4" value="127" type = "hidden">
+			        		<input type="text" name="query" id="search" class="searchInput" value="输入搜索词">
+			        		<button type="submit"></button>
+			        	</p>
+			        	</form>
+			        </div>-->
+			        <!-- <a class="appgame-leftside-weixin" data-cmd="weixin" title="">微信</a> -->
+                    
+			        <!-- <a class="appgame-leftside-qzone" data-cmd="qzone" title="">qq空间</a>
+			        
+			        <a class="appgame-leftside-tsina" data-cmd="tsina" title="">微博</a> -->			    </div>
+			        <a class="appgame-leftside-top" onclick="gotoTPoint()"></a>			</div>
+			        
+		</div>
+</body>
+<script src="http://gh.bnu.edu.cn/js/jquery-1.9.0.min.js"></script>
+<script src="http://gh.bnu.edu.cn/js/share.min.js"></script>
+<script>
+    var dj=document.getElementById('dianji');
+    var jjc=document.getElementById('jjc');
+    var dj1=document.getElementById('dianji1');
+    var jjc1=document.getElementById('jjc1');
+    var a=1;
+    function zhedie(m,n){
+        m.onclick=function(){
+            if(a==1){
+                n.className='jjc';
+                m.className='dianji1'
+                a=0;
+            }else{
+                n.className='jjc1';
+                m.className='dianji'
+                a=1;
+            }
+        }
+    }
+    zhedie(dj,jjc);
+    zhedie(dj1,jjc1);
+	
+	
+</script>
+<script>
+
+	
+	
+    
+
+    /*回到顶部*/
+	$(function(){
+	 	$(window).resize(function(){
+						var h = $(window).height();
+						$('.goTop').css('top',h-60);
+						$(window).scroll(function(){				
+							var scrollTop = $(document).scrollTop();					  
+							$('.goTop').stop().animate({
+								top: h + scrollTop-60
+							},300);
+						});
+		}).resize();
+		});
+	//gotop
+
+			$('.goTop').click(function(){
+
+				$('body,html').stop().animate({scrollTop:0});
+
+				return false;
+
+			});
+	
+	function gotoTPoint(){
+		$("html,body").animate({scrollTop:0},500);
+	}
+</script>
+</html>

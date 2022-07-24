@@ -1,0 +1,495 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0">
+    <title>北京师范大学工商与经济管理学院</title>
+    <link rel="stylesheet" href="http://bs.bnu.edu.cn/new-ver-css/reset.css">
+    <link rel="stylesheet" href="http://bs.bnu.edu.cn/new-ver-css/index.css">
+	<link rel="stylesheet" href="http://bs.bnu.edu.cn/new-ver-css/xyslist.css">
+	<link rel="stylesheet" href="http://bs.bnu.edu.cn/new-ver-css/xys-tf.css">
+    <style>
+        .container{
+            width:100%;
+            height: auto;
+            overflow: hidden;
+        }
+        .header{
+            width:100%;
+            height:116px;
+            background:#EFF8FF;
+        }
+        .logo1{
+            width:1200px!important;
+            margin:0 auto;
+            position:relative;
+            float: none;
+			display:block;
+        }
+        .logo2{
+            float:right;
+        }
+        .logo1 p{
+            position:absolute;
+            top:5px;
+            right:5px;
+            font-size:13px;
+        }
+        .logo1 p:hover{
+            color:#112769;
+        }
+        .tu{
+            width:100%;
+            height:240px;
+            background:url('http://bs.bnu.edu.cn/newweb/grzy/images/tu.jpg') no-repeat top center;
+            background-size: 100%;
+        }
+        .lujing{
+            width:1200px;
+            height:58px;
+            margin:0 auto;
+            border-bottom:1px solid #aaa;
+            overflow:hidden;
+        }
+        .lujings{
+            margin:24px 0 0 0;
+            font-size:14px;
+        }
+        .content{
+            color:#333;
+            width:1200px;
+/*            height:2000px;*/
+            margin:0 auto;
+            margin-top:40px;
+/*            background:#c4c4c4;*/
+        }
+        
+        .xian{
+            width:100%;
+            height:8px;
+            background:#9A0812;
+        }
+        
+        .leftc{
+            float:left;
+        }
+        .rightc{
+            float:left;
+            margin-left:50px;
+/*            background:#666;*/
+            width:880px;
+/*            height:1000px;*/
+        }
+        .rheader{
+            width:880px;
+            height:210px;
+/*            background:yellow;*/
+        }
+        .xm{
+            font-size:30px;
+            height:40px;
+/*            border-bottom:4px solid #9A0812;*/
+            width:auto;
+            float:left;
+            line-height:40px;
+			margin-right:30px;
+        }
+        .zhiw{
+            font-size:18px;
+            height:40px;
+            line-height:50px;
+            margin-bottom:30px;
+        }
+        .tel{
+                font-size: 16px;
+                margin-top: 10px;
+                line-height: 20px;
+        }
+        .grjj{
+/*            height:300px;*/
+            width:880px;
+/*            background:yellow;*/
+            padding-bottom:40px;
+        }
+        .jjh{
+                font-size: 20px;
+                border-bottom: 1px solid #cecece;
+                height: 40px;
+                line-height: 40px;
+                padding-left: 30px;
+                background: url(http://bs.bnu.edu.cn/newweb/grzy/images/zw.png) no-repeat 0 16px;
+        }
+        
+        .jjc{
+            font-size:14px;
+            margin-top:30px;
+           
+            line-height:28px;
+            overflow:hidden;
+            text-align: justify;
+            text-justify:inter-ideograph;
+        }
+        .jjc1{
+            height:225px;
+            font-size:14px;
+            margin-top:30px;
+            
+            line-height:28px;
+            overflow:hidden;
+            text-align: justify;
+            text-justify:inter-ideograph;
+        }
+        
+        .dianji1{
+                background: url(http://bs.bnu.edu.cn/newweb/grzy/images/zw.png) no-repeat 0 -50px;
+                width: 13px;
+                height: 13px;
+                cursor: pointer;
+                display: block;
+            margin-top: 20px;
+            transition: all .2s linear;
+        }
+        .dianji1:hover{
+            background: url(http://bs.bnu.edu.cn/newweb/grzy/images/zw.png) no-repeat 0 -64px;
+        }
+        
+        .dianji{
+                background: url(http://bs.bnu.edu.cn/newweb/grzy/images/zw.png) no-repeat 0 -24px;
+                height: 13px;
+                cursor: pointer;
+                display: block;
+            margin-top: 20px;
+            transition: all .2s linear;
+        }
+        .dianji:hover{
+            background: url(http://bs.bnu.edu.cn/newweb/grzy/images/zw.png) no-repeat 0 -37px;
+        }
+        #jjc1{
+            text-indent:0em;
+        }
+        
+        .bks{
+            font-size:14px;
+            font-weight: 800;
+            margin-top:30px;
+            height:auto;
+            line-height:36px;
+        }
+        .bks1{
+            font-size:14px;
+            margin-top:30px;
+            height:auto;
+            line-height:36px;
+        }
+        .bksc{
+            height:36px;
+            line-height:36px;
+            font-size:14px;
+        }
+        
+        .yanzheng{
+            width:1200px;
+            height:100px;
+            margin:0 auto;
+        }
+        .yanzheng img{
+            display:block;
+            margin-top:26px;
+            float:left;
+        }
+		
+#appgame-leftside-share{width:42px; height:216px; position: fixed;bottom: 30px;right: 30px; z-index:9999;}
+.appgame-leftside-share{width:42px; height:259px;}
+#appgame-leftside-share a{display:block; width:42px; height:44px; background-color:#e6e6e6; z-index:1; position:absolute; left:0; box-sizing:border-box; -moz-box-sizing:border-box; border:1px #ddd solid; background-image:url(http://gh.bnu.edu.cn/images/share-icons.png); background-repeat:no-repeat; margin:0;  transition:0.4s; -webkit-transition:0.4s; -moz-transition:0.4s;}
+#appgame-leftside-share a:hover{background-color:#fff; border:1px #eee solid; z-index:2;}
+/*.appgame-leftside-weixin{top:0; background-position:-88px 0;}
+.appgame-leftside-weixin:hover{background-position:0px 0;}
+.appgame-leftside-qzone{top:43px; background-position:-88px -44px;}
+.appgame-leftside-qzone:hover{background-position:0px -44px;}*/
+.appgame-leftside-search{top:86px; background-position:-93px -89px;}
+.appgame-leftside-search:hover{background-position:-5px -86px;}
+.appgame-leftside-weixin{top:129px; background-position:-88px 0px;}
+.appgame-leftside-weixin:hover{background-position:0px 0px;}
+/*.appgame-leftside-fbook{top:172px; background-position:-88px -176px;}
+.appgame-leftside-fbook:hover{background-position:0px -176px;}
+.appgame-leftside-twi{top:215px; background-position:-88px -220px;}
+.appgame-leftside-twi:hover{background-position:0px -220px;}*/
+#appgame-leftside-share .appgame-leftside-top{background-image:url(http://gh.bnu.edu.cn/images/leftnav-off.png); background-position:-1px -395px; top:130px; cursor:pointer;}
+
+.rwt_share {
+/*	overflow:hidden;*/
+	float:left;
+	position:relative;
+}
+.rwt_share a {
+	display:inline-block;
+	margin-right:10px;
+	text-indent:-9999px;
+	margin-bottom:10px;
+	width:24px;
+	height:24px;
+	overflow:hidden;
+	cursor:pointer;
+	float:left;
+	font-size:12px;
+}
+.rwts_weixin {
+	background-position:0 -1612px;
+}
+.rwts_tsina {
+	background-position:0 -104px;
+}
+.rwts_tqq {
+	background-position:0 -260px;
+}
+.rwts_qzone {
+	background-position:0 -52px;
+}
+.rwts_sqq {
+	background-position:0 -2652px;
+}
+.rwts_tieba {
+	background-position:0 -728px;
+}
+.rwts_renren {
+	background-position:0 -208px;
+}
+.rwts_kaixin001 {
+	background-position:0 -312px;
+}
+.rwts_tqf {
+	background-position:0 -364px;
+}
+.rwts_douban {
+	background-position:0 -468px;
+}
+.rwts_twi {
+	background-position:0 -1404px;
+}
+.rwts_fbook {
+	background-position:0 -1352px;
+}
+.rwts_ty {
+	background-position:0 -1196px;
+}
+.rwts_mogujie {
+	background-position:0 -1768px;
+}
+.rwts_meilishuo {
+	background-position:0 -1716px;
+}
+.rwts_huaban {
+	background-position:0 -1872px;
+}
+.rwts_hi {
+	background-position:0 -416px;
+}
+.rwts_tsohu {
+	background-position:0 -520px;
+}
+.rwts_more {
+	background-position:0 0;
+}
+.rwt_share_wxShow_code>img {
+	width:100%;
+}
+.bks1 li{
+	list-style:disc;
+}
+@media screen and (max-width: 1200px){
+	.logo1{
+		width:100%!important;
+	}
+	.leftc img{
+		width:50%!important;
+		height:50%!important;
+	}
+	.logo2{display:none;}
+	.lujing{
+		width:90%;
+	}
+	.content{
+		width:90%;
+	}
+	.leftc{
+		float:none;
+		
+	}
+	.tu{display:none;}
+	
+	.rightc{
+		float:none;
+		width:100%;
+		margin-left:0px;
+	}
+	.footers{width:100%;}
+	.rheader{width:100%;}
+	.grjj{width:100%;}
+}
+@media screen and (max-width: 600px){
+.l3{width:95%;}
+.share{display:none;}
+.leftc img{
+		width:70%!important;
+		height:70%!important;
+	}
+}
+  
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo1">
+                <img src="http://bs.bnu.edu.cn/newweb/grzy/images/logo.png" alt="" class="l3" style="margin-top: 25px;float:left;">
+                <img src="http://bs.bnu.edu.cn/newweb/grzy/images/logo2.png" alt="" class="logo2">
+                <a href="http://bs.bnu.edu.cn/englishversion/facultyresearch/fulltimefaculty/azmsy/119449.html"><p>ENGLISH VERSION</p></a>
+            </div>
+        </div>
+        <div class="xian"></div>
+        <div class="tu"></div>
+        <div class="lujing">
+            <div class="lujings">
+                <a href="#">师资队伍</a>
+                 | 
+                <a href="#">国际经济与贸易系</a>
+            </div>
+        </div>
+        <div class="content">
+            <div class="leftc">
+                <img src="/Public/upload/2020/09/15/5f602bb561604.jpg" alt="" width="270">
+            </div>
+            <div class="rightc">
+                <div class="rheader">
+                    <p class="xm">赵春明</p>
+                    <p class="zhiw">教授、博士生导师</p>
+                    <p class="tel"><strong style="display:block;width:100px;float:left;">电话</strong>：58807847</p> 
+                 <p class="tel"><strong style="display:block;width:100px;float:left;">E-mail</strong>：cmzhao@bnu.edu.cn</p>
+                 <p class="tel"><strong style="display:block;width:100px;float:left;">Office hour</strong>：周三下午15：00</p>
+                 <p class="tel"><strong style="display:block;width:100px;float:left;">系所中心</strong>：国际经济与贸易系</p>
+              </div>
+			  <div class="grjj">
+                    <p class="jjh">个人简历</p>
+                    <div class="bks1" id="jjc"><p style="font-family: " microsoft="" yahei="" font-size:16px="">教育背景：</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">1981-1985年，北京师范大学，本科；1985-1988年，北京师范大学，硕士；1990-1994年，北京师范大学，博士；1998-1999年，美国加州大学伯克利分校，高级访问学者。</p><p style="font-family: " microsoft="" yahei="" font-size:16px=""></p><p style="font-family: " microsoft="" yahei="" font-size:16px="">工作经历：</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">1988年，留校任教；1991年，担任讲师；1994年，破格晋升为副教授；1995年，担任硕士生导师；1997年，破格晋升为教授；2000年，遴选为博士生导师；1999-2009年，担任国际经济系主任；2009年评定为二级教授；2009-2013年，担任学院副院长；2012年至今，担任校级教学指导委员会副主任；2013年，获批享受国务院政府特殊津贴。</p><p style="font-family: " microsoft="" yahei="" font-size:16px=""></p><p style="font-family: " microsoft="" yahei="" font-size:16px="">社会兼职：</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">教育部经济与贸易类专业教学指导委员会副主任委员、教育部全国国际商务专业学位研究生教育指导委员会委员、中国美国经济学会副会长、中国世界经济学会副秘书长、全国高校国际贸易学科协作组副秘书长、《国际贸易问题》编委等。</p></div>
+                    
+                </div>				<div class="grjj">
+                    <p class="jjh">研究领域</p>
+                    <div class="bks1">世界经济、国际贸易、国际投资、战略管理等</div>
+                </div>				<div class="grjj">
+                    <p class="jjh">研究成果</p>
+                    <div class="bks1" id="jjc1"><p style="font-family: " microsoft="" yahei="" font-size:16px=""><strong>学术著作</strong></p><p style="font-family: " microsoft="" yahei="" font-size:16px="">独立和合作出版学术著作16部，其中主要有：</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">1.《中国人力资本要素内涵式演进与国际经济竞争新优势培育研究》，人民出版社2017年1月版；</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">2.《低碳经济环境下中国对外贸易发展方式转变研究》，人民出版社2014年4月版；</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">3.《工序分工条件下中美贸易利益分配研究》，人民出版社2016年6月版；</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">4.《世界经济与中国》，经济科学出版社2016年5月版；</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">5.《非关税壁垒的应对及应用——“入世”后中国企业的策略选择》，人民出版社2001年12月版；</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">6.《亚太地区经济发展多元化研究》，北京师范大学出版社1995年9月版；</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">7.《从神话到现实——东亚崛起与现代化模式》，武汉出版社1998年3月版；</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">8.《世界经济新格局研究》，北京师范大学出版社2001年7月版；</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">9.《现代资本主义论》， 江苏人民出版社1996年6月版；</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">10.《国际教育服务贸易发展与人才跨国流动研究》，经济科学出版社2015年2月版；</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">11.《二十世纪中国的经济学》，党建读物出版社2000年11月版。</p><p style="font-family: " microsoft="" yahei="" font-size:16px=""><br /></p><p style="font-family: " microsoft="" yahei="" font-size:16px=""></p><p style="font-family: " microsoft="" yahei="" font-size:16px=""><strong>学术论文</strong></p><p style="font-family: " microsoft="" yahei="" font-size:16px="">发表学术论文200余篇（CSSCI/SSCI期刊论文近200篇），其中主要有（含合作）：</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">1.《贸易壁垒与全球价值链嵌入——以中国遭遇反倾销为例的经验研究》，《中国社会科学》2017年第1期；</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">2.《贸易壁垒如何影响了中国的出口边际？——以反倾销为例的经验研究》，《经济研究》2014年第11期；</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">3.《出口持续度与女性就业：基于企业数据的反事实分析》，《经济研究》2013年增刊；</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">4.《<a href="http://172.16.213.18/business/paper/paper.do?actionType=view&amp;bean.id=2c90559259012cd8015920b4e8db0879">出口内生型市场邻近、空间外部性与城镇工薪差距</a>》，《世界经济》2016年第12期；</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">5.《中国进口商品结构变化的估算：2000-2014年》，《世界经济》2016年第4期；</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">6.《户籍所在地“反向歧视之谜”：基于收入补偿的一个解释》，《世界经济》2017年第5期；</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">7.《出口开放、高等教育扩展与学历工资差距》，《世界经济》2014年第5期；</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">8.《“优先购买国货”的经济效应分析》，《世界经济》2011年第7期；</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">9.《任重而道远：中国对外直接投资的现状与发展前景》，《世界经济》2004年第3期；</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">10.《从国际经验看中国对外直接投资的产业和区位选择》，《世界经济》2002年第5期；</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">11.《重视东南亚金融危机对我国经济的影响》，《世界经济》1998年第10期；</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">12.《论亚洲“四小”经济发展对我国的启示》，《世界经济》1994年第11期；</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">13.《进口产品质量、来源国特征与性别工资差距》，《数量经济技术经济研究》2017年第5期；</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">14.《外资进入扩大了性别工资差距吗？》，《统计研究》2014年第6期；</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">15.《对外直接投资、产业关联与技能工资溢价——基于水平溢出与垂直溢出效应的实证研究》，《国际贸易问题》2019年第2期；</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">16.《构建全方位开放新格局背景下中国对外直接投资的发展趋势》，《国际贸易问题》2018年第1期；</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">17.《<a href="http://epub.cnki.net/kns/detail/detail.aspx?QueryID=7&amp;CurRec=6&amp;recid=&amp;FileName=GJMW201610012&amp;DbName=CJFDTEMP&amp;DbCode=CJFQ&amp;pr=" target="_blank">外资进入改善了我国服务业就业结构吗——基于微观企业数据的实证研究</a>》，《国际贸易问题》2016年第10期；</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">18.《进口竞争与企业内部工资差距》，《国际贸易问题》2016年第3期；</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">19.《出口开放、市场邻近与企业异质性工资差距》，《国际贸易问题》2015年第1期；</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">20.《贸易开放对中国人力资本积累的影响——动态面板数据模型的经验研究》，《国际贸易问题》2014年第3期；</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">21.《我国房价变动与进口贸易的关系》，《国际贸易问题》2011年第3期；</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">22.《大国政府间的汇率博弈——中美巨额贸易差额下的人民币汇率问题研究》，《国际贸易问题》2005年第1期；</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">23.《金融发展与比较优势关系研究述评》，《经济学动态》2010年第4期；</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">24.《服务进口与就业性别歧视——基于中国服务业企业数据的检验》，《经济管理》2014年第12期；</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">25.《中国对外贸易的环境效应实证分析——基于规模、技术和结构三种效应的考察》，《经济管理》2009年第5期；</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">26.《市场潜能促进了制造业女性就业吗？》，《财经研究》2014年第3期；</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">27.《进口贸易是否抑制了技术进步——状态空间模型的再检验》，《经济理论与经济管理》2012年第2期；</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">28.《技术不占优的国家设立技术壁垒是否有意义：一个开放两国模型》，《世界经济研究》2011年第7期；</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">29.《大陆与台湾“入世”对两岸经济关系的影响》，《世界经济研究》2002年第5期；</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">30.《论发展中国家在世界贸易组织中所处的不利地位》，《世界经济研究》2001年第5期；</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">31.《减弱入世冲击的国际经验及对中国的启示》，《世界经济研究》2000年第5期；</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">32.《性别工资不平等：演化路径与反事实证据》，《南开经济研究》2016年第5期；</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">33.《消费决策、进口需求与房价变动：理论模型与经验证据》，《南开经济研究》2011年第3期；</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">34.《论“中国—东盟自由贸易区”的前景与挑战》，《世界经济与政治》2002年第11期；</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">35.《东亚经济发展模式的历史命运与发展前景》，《世界经济与政治》2000年第12期；</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">36.《中美贸易利益分配探究——基于马克思主义的分析视角》，《国际贸易》2018年第11期；</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">37.《出口持续、外贸竞争与中国企业生产率优势》，《改革》2016年第7期；</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">38.《亚太经济合作组织的发展及展望》，《求是》2005年第24期；</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">39.《亚太经济合作 任重而道远》，《求是》2001年第1期；</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">40.“Continued export trade, screening-matching and gender discrimination in employment”，China Economic Review ,Feb.2017，Vol.42；</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">41.“The Structure ofChina’s Imports：A New Framework”，China &amp; World Economy ，No.5，2015；</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">42.“Export Tightening, Competition, and Firm Innovation: Evidence from the Renminbi Appreciation”，Review of Development Economics, Feb., 2018.</p><p style="font-family: " microsoft="" yahei="" font-size:16px=""><br /></p><p style="font-family: " microsoft="" yahei="" font-size:16px=""></p><p style="font-family: " microsoft="" yahei="" font-size:16px=""><strong>科研奖励</strong></p><p style="font-family: " microsoft="" yahei="" font-size:16px="">获省部级以上科研奖励和荣誉10余项，其中主要有：</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">1.国务院政府特殊津贴专家（2013）；</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">2.第2届教育部高校青年教师奖（2001）；</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">3.第10届中国图书奖（1996）；</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">4.第2届教育部人文社会科学研究优秀成果二等奖（2000）；</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">5.第7届北京市哲学社会科学优秀成果一等奖（2002）；</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">6.第4届北京市哲学社会科学优秀成果二等奖（1996）；</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">7.第14届北京市哲学社会科学优秀成果二等奖（2017）；</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">8.第17届江西省哲学社会科学优秀成果三等奖（2017）；</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">9.第18届安子介国际贸易研究优秀著作二等奖（2014，其中一等奖空缺）；</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">10.第19届安子介国际贸易研究优秀论文二等奖（2016）；</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">11.商务部全国商务发展研究优秀著作二等奖（2015）。</p><p style="font-family: " microsoft="" yahei="" font-size:16px=""><br /></p><p style="font-family: " microsoft="" yahei="" font-size:16px=""><strong>教学情况</strong></p><p style="font-family: " microsoft="" yahei="" font-size:16px="">先后主持10余项国家级和省部级教改项目，出版教材近20部，多部教材入选教育部全国研究生推荐教材、国家级精品教材、国家级规划教材和北京市精品教材；荣获50余项教学奖励和荣誉，其中主要有：<br /></p><p style="font-family: " microsoft="" yahei="" font-size:16px="">1.国家“万人计划”教学名师（2019）；</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">2.宝钢教育基金优秀教师特等奖（2016）；</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">3.国家级精品课程荣誉称号（2009）；</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">4.国家级精品资源共享课荣誉称号（2016）；</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">5.国家级精品视频公开课荣誉称号（2014）；</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">6.全国十八所师范院校“明德”教师奖（2014）；</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">7.北京市高等学校教学名师（2009）；</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">8.北京高校2010-2012创先争优优秀党员（2012）；</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">9.北京市教育教学成果一等奖（2013）；</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">10.北京市教育教学成果二等奖（2005，2009，2018）；</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">11.北京师范大学首届“四有”好老师金质奖章（2018）；</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">12.北京师范大学教书育人模范党员教师（2011）；</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">13.北京师范大学“十佳共产党员”（2013）；；</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">14.北京师范大学最受本科生欢迎的“十佳教师”（2008，2010）；</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">15.北京师范大学最受研究生欢迎的“十佳教师”（2017）。</p></div>
+                    
+                </div>				<div class="grjj">
+                    <p class="jjh">研究课题</p>
+                  
+                    <div class="bks1"><p style="font-family: " microsoft="" yahei="" font-size:16px="">先后主持国家级、省部级和国际合作研究项目20余项，其中主要有：</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">1.国家社会科学基金重大项目“加快劳动力要素自由流动的对外贸易战略转型研究”，2014-2018年；</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">2.国家社会科学基金重点项目“我国人力资本要素内涵式演进与国际经济竞争新优势培育研究”，2014-2016年；</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">3.国家社会科学基金重点项目“低碳经济环境下我国对外贸易发展方式转变研究”，2011-2014年；</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">4.国家社会科学基金一般项目“减弱入世冲击的国际经验比较及我国对策研究”，2000-2001年；</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">5.国家社会科学基金青年项目“我国进行对外直接投资的产业和区位选择问题研究”，2003-2005年；</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">6.教育部人文社会科学研究规划项目“全球生产分割条件下我国中间产品贸易发展对劳动力市场的影响研究”，2009-2012年；</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">7.教育部人文社会科学研究青年项目“国内市场扭曲与我国对外开放”，2001-2004年；</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">8.教育部高等学校优秀青年教师教学科研奖励资助计划项目“当代世界经济和国际贸易前沿问题研究”，2000-2005年；</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">9.教育部留学回国人员科研启动基金项目“经济全球化中的东亚经济发展研究”，2000-2002年；</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">10.北京市社会科学基金重点项目“发展高层次开放型经济和深度融入世界经济研究”，2016-2019年；</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">11.北京市哲学社会科学规划项目“贸易强国战略与‘中国梦’的实现”，2013-2015年；</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">12.欧盟玛丽·居里国际研究项目“Partnering Opportunities between Europe and China in the Renewable Energies and Environmental Industries”（分项目主持人），2012-2017年。</p></div>
+                    
+                </div>				<div class="grjj">
+                    <p class="jjh">学生情况</p>
+                    <div class="bks1"><span style="font-family: " microsoft="" yahei="" font-size:16px="">指导博士后研究人员6人，博士研究生40余人，硕士研究生100余人。不少研究生在读期间就取得了优秀成绩和有关奖励与荣誉，毕业后也大多在各自领域颇有建树。据不完全统计，共有40多人次获省部级以上奖励，其中包括教育部新世纪人才、教育部学术新人奖、全国最有影响力的政治理论教学“十大人物”、中国十大“优秀出版编辑”、北京市教学名师、北京市师德标兵等。</span><br /></div>
+                    
+                </div>				<div class="grjj">
+                    <p class="jjh">教授课程</p>
+                    <div class="bks1"><span style="font-family: " microsoft="" yahei="" font-size:16px="">国际贸易学、国际商务、经济全球化与当代中国经济、战略管理等。</span><br /></div>
+                    
+                </div>            </div>
+        </div>
+         <footer style="overflow: hidden;">
+            <div class="footers">
+                <div class="footersl">
+                    <img src="http://bs.bnu.edu.cn/newweb/images/ewm.jpg" alt="" class="imgewm">
+                    <div class="footerxx">
+                        <p>Copyright © 2020 北京师范大学经济与工商管理学院</p>
+                        <p><i class="fas fa-map-marker-alt"></i> 地址：北京市新街口外大街19号</p>
+                        <p><i class="fas fa-portrait"></i> 传真：010-58801867</p>
+                        <p><i class="fas fa-phone"></i> 电话：010-58801867</p>
+                        <p><i class="fas fa-envelope"></i> 邮编：100875</p>
+                    </div>
+                </div>
+                <img src="http://bs.bnu.edu.cn/newweb/images/db.png" alt="" width="140" class="dbimg">
+                <img src="http://bs.bnu.edu.cn/newweb/images/yx.png" alt="" class="yuanxun">
+            </div>
+        </footer>
+    </div>
+	<div class="share">
+		  <div id="appgame-leftside-share">
+	        <div class="appgame-leftside-share rwt_share" id="rwt_share">
+	         
+	        <!--<a class="appgame-leftside-search" data-cmd="search" title="search"  href="javascript:void(0);" onclick="opens('id')">search</a> --> <!--<div class="searchs" id="id">
+	         <form name="dataForm" action="/cms/search/searchResults.jsp" target="_blank" method="post" accept-Charset="utf-8"  onsubmit="document.charset='utf-8';">
+			        	<p>
+			        		<input name="siteID" size="4" value="127" type = "hidden">
+			        		<input type="text" name="query" id="search" class="searchInput" value="输入搜索词">
+			        		<button type="submit"></button>
+			        	</p>
+			        	</form>
+			        </div>-->
+			        <!-- <a class="appgame-leftside-weixin" data-cmd="weixin" title="">微信</a> -->
+                    
+			        <!-- <a class="appgame-leftside-qzone" data-cmd="qzone" title="">qq空间</a>
+			        
+			        <a class="appgame-leftside-tsina" data-cmd="tsina" title="">微博</a> -->			    </div>
+			        <a class="appgame-leftside-top" onclick="gotoTPoint()"></a>			</div>
+			        
+		</div>
+</body>
+<script src="http://gh.bnu.edu.cn/js/jquery-1.9.0.min.js"></script>
+<script src="http://gh.bnu.edu.cn/js/share.min.js"></script>
+<script>
+    var dj=document.getElementById('dianji');
+    var jjc=document.getElementById('jjc');
+    var dj1=document.getElementById('dianji1');
+    var jjc1=document.getElementById('jjc1');
+    var a=1;
+    function zhedie(m,n){
+        m.onclick=function(){
+            if(a==1){
+                n.className='jjc';
+                m.className='dianji1'
+                a=0;
+            }else{
+                n.className='jjc1';
+                m.className='dianji'
+                a=1;
+            }
+        }
+    }
+    zhedie(dj,jjc);
+    zhedie(dj1,jjc1);
+	
+	
+</script>
+<script>
+
+	
+	
+    
+
+    /*回到顶部*/
+	$(function(){
+	 	$(window).resize(function(){
+						var h = $(window).height();
+						$('.goTop').css('top',h-60);
+						$(window).scroll(function(){				
+							var scrollTop = $(document).scrollTop();					  
+							$('.goTop').stop().animate({
+								top: h + scrollTop-60
+							},300);
+						});
+		}).resize();
+		});
+	//gotop
+
+			$('.goTop').click(function(){
+
+				$('body,html').stop().animate({scrollTop:0});
+
+				return false;
+
+			});
+	
+	function gotoTPoint(){
+		$("html,body").animate({scrollTop:0},500);
+	}
+</script>
+</html>

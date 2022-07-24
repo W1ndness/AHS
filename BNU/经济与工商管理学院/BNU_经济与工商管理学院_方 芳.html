@@ -1,0 +1,495 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0">
+    <title>北京师范大学工商与经济管理学院</title>
+    <link rel="stylesheet" href="http://bs.bnu.edu.cn/new-ver-css/reset.css">
+    <link rel="stylesheet" href="http://bs.bnu.edu.cn/new-ver-css/index.css">
+	<link rel="stylesheet" href="http://bs.bnu.edu.cn/new-ver-css/xyslist.css">
+	<link rel="stylesheet" href="http://bs.bnu.edu.cn/new-ver-css/xys-tf.css">
+    <style>
+        .container{
+            width:100%;
+            height: auto;
+            overflow: hidden;
+        }
+        .header{
+            width:100%;
+            height:116px;
+            background:#EFF8FF;
+        }
+        .logo1{
+            width:1200px!important;
+            margin:0 auto;
+            position:relative;
+            float: none;
+			display:block;
+        }
+        .logo2{
+            float:right;
+        }
+        .logo1 p{
+            position:absolute;
+            top:5px;
+            right:5px;
+            font-size:13px;
+        }
+        .logo1 p:hover{
+            color:#112769;
+        }
+        .tu{
+            width:100%;
+            height:240px;
+            background:url('http://bs.bnu.edu.cn/newweb/grzy/images/tu.jpg') no-repeat top center;
+            background-size: 100%;
+        }
+        .lujing{
+            width:1200px;
+            height:58px;
+            margin:0 auto;
+            border-bottom:1px solid #aaa;
+            overflow:hidden;
+        }
+        .lujings{
+            margin:24px 0 0 0;
+            font-size:14px;
+        }
+        .content{
+            color:#333;
+            width:1200px;
+/*            height:2000px;*/
+            margin:0 auto;
+            margin-top:40px;
+/*            background:#c4c4c4;*/
+        }
+        
+        .xian{
+            width:100%;
+            height:8px;
+            background:#9A0812;
+        }
+        
+        .leftc{
+            float:left;
+        }
+        .rightc{
+            float:left;
+            margin-left:50px;
+/*            background:#666;*/
+            width:880px;
+/*            height:1000px;*/
+        }
+        .rheader{
+            width:880px;
+            height:210px;
+/*            background:yellow;*/
+        }
+        .xm{
+            font-size:30px;
+            height:40px;
+/*            border-bottom:4px solid #9A0812;*/
+            width:auto;
+            float:left;
+            line-height:40px;
+			margin-right:30px;
+        }
+        .zhiw{
+            font-size:18px;
+            height:40px;
+            line-height:50px;
+            margin-bottom:30px;
+        }
+        .tel{
+                font-size: 16px;
+                margin-top: 10px;
+                line-height: 20px;
+        }
+        .grjj{
+/*            height:300px;*/
+            width:880px;
+/*            background:yellow;*/
+            padding-bottom:40px;
+        }
+        .jjh{
+                font-size: 20px;
+                border-bottom: 1px solid #cecece;
+                height: 40px;
+                line-height: 40px;
+                padding-left: 30px;
+                background: url(http://bs.bnu.edu.cn/newweb/grzy/images/zw.png) no-repeat 0 16px;
+        }
+        
+        .jjc{
+            font-size:14px;
+            margin-top:30px;
+           
+            line-height:28px;
+            overflow:hidden;
+            text-align: justify;
+            text-justify:inter-ideograph;
+        }
+        .jjc1{
+            height:225px;
+            font-size:14px;
+            margin-top:30px;
+            
+            line-height:28px;
+            overflow:hidden;
+            text-align: justify;
+            text-justify:inter-ideograph;
+        }
+        
+        .dianji1{
+                background: url(http://bs.bnu.edu.cn/newweb/grzy/images/zw.png) no-repeat 0 -50px;
+                width: 13px;
+                height: 13px;
+                cursor: pointer;
+                display: block;
+            margin-top: 20px;
+            transition: all .2s linear;
+        }
+        .dianji1:hover{
+            background: url(http://bs.bnu.edu.cn/newweb/grzy/images/zw.png) no-repeat 0 -64px;
+        }
+        
+        .dianji{
+                background: url(http://bs.bnu.edu.cn/newweb/grzy/images/zw.png) no-repeat 0 -24px;
+                height: 13px;
+                cursor: pointer;
+                display: block;
+            margin-top: 20px;
+            transition: all .2s linear;
+        }
+        .dianji:hover{
+            background: url(http://bs.bnu.edu.cn/newweb/grzy/images/zw.png) no-repeat 0 -37px;
+        }
+        #jjc1{
+            text-indent:0em;
+        }
+        
+        .bks{
+            font-size:14px;
+            font-weight: 800;
+            margin-top:30px;
+            height:auto;
+            line-height:36px;
+        }
+        .bks1{
+            font-size:14px;
+            margin-top:30px;
+            height:auto;
+            line-height:36px;
+        }
+        .bksc{
+            height:36px;
+            line-height:36px;
+            font-size:14px;
+        }
+        
+        .yanzheng{
+            width:1200px;
+            height:100px;
+            margin:0 auto;
+        }
+        .yanzheng img{
+            display:block;
+            margin-top:26px;
+            float:left;
+        }
+		
+#appgame-leftside-share{width:42px; height:216px; position: fixed;bottom: 30px;right: 30px; z-index:9999;}
+.appgame-leftside-share{width:42px; height:259px;}
+#appgame-leftside-share a{display:block; width:42px; height:44px; background-color:#e6e6e6; z-index:1; position:absolute; left:0; box-sizing:border-box; -moz-box-sizing:border-box; border:1px #ddd solid; background-image:url(http://gh.bnu.edu.cn/images/share-icons.png); background-repeat:no-repeat; margin:0;  transition:0.4s; -webkit-transition:0.4s; -moz-transition:0.4s;}
+#appgame-leftside-share a:hover{background-color:#fff; border:1px #eee solid; z-index:2;}
+/*.appgame-leftside-weixin{top:0; background-position:-88px 0;}
+.appgame-leftside-weixin:hover{background-position:0px 0;}
+.appgame-leftside-qzone{top:43px; background-position:-88px -44px;}
+.appgame-leftside-qzone:hover{background-position:0px -44px;}*/
+.appgame-leftside-search{top:86px; background-position:-93px -89px;}
+.appgame-leftside-search:hover{background-position:-5px -86px;}
+.appgame-leftside-weixin{top:129px; background-position:-88px 0px;}
+.appgame-leftside-weixin:hover{background-position:0px 0px;}
+/*.appgame-leftside-fbook{top:172px; background-position:-88px -176px;}
+.appgame-leftside-fbook:hover{background-position:0px -176px;}
+.appgame-leftside-twi{top:215px; background-position:-88px -220px;}
+.appgame-leftside-twi:hover{background-position:0px -220px;}*/
+#appgame-leftside-share .appgame-leftside-top{background-image:url(http://gh.bnu.edu.cn/images/leftnav-off.png); background-position:-1px -395px; top:130px; cursor:pointer;}
+
+.rwt_share {
+/*	overflow:hidden;*/
+	float:left;
+	position:relative;
+}
+.rwt_share a {
+	display:inline-block;
+	margin-right:10px;
+	text-indent:-9999px;
+	margin-bottom:10px;
+	width:24px;
+	height:24px;
+	overflow:hidden;
+	cursor:pointer;
+	float:left;
+	font-size:12px;
+}
+.rwts_weixin {
+	background-position:0 -1612px;
+}
+.rwts_tsina {
+	background-position:0 -104px;
+}
+.rwts_tqq {
+	background-position:0 -260px;
+}
+.rwts_qzone {
+	background-position:0 -52px;
+}
+.rwts_sqq {
+	background-position:0 -2652px;
+}
+.rwts_tieba {
+	background-position:0 -728px;
+}
+.rwts_renren {
+	background-position:0 -208px;
+}
+.rwts_kaixin001 {
+	background-position:0 -312px;
+}
+.rwts_tqf {
+	background-position:0 -364px;
+}
+.rwts_douban {
+	background-position:0 -468px;
+}
+.rwts_twi {
+	background-position:0 -1404px;
+}
+.rwts_fbook {
+	background-position:0 -1352px;
+}
+.rwts_ty {
+	background-position:0 -1196px;
+}
+.rwts_mogujie {
+	background-position:0 -1768px;
+}
+.rwts_meilishuo {
+	background-position:0 -1716px;
+}
+.rwts_huaban {
+	background-position:0 -1872px;
+}
+.rwts_hi {
+	background-position:0 -416px;
+}
+.rwts_tsohu {
+	background-position:0 -520px;
+}
+.rwts_more {
+	background-position:0 0;
+}
+.rwt_share_wxShow_code>img {
+	width:100%;
+}
+.bks1 li{
+	list-style:disc;
+}
+@media screen and (max-width: 1200px){
+	.logo1{
+		width:100%!important;
+	}
+	.leftc img{
+		width:50%!important;
+		height:50%!important;
+	}
+	.logo2{display:none;}
+	.lujing{
+		width:90%;
+	}
+	.content{
+		width:90%;
+	}
+	.leftc{
+		float:none;
+		
+	}
+	.tu{display:none;}
+	
+	.rightc{
+		float:none;
+		width:100%;
+		margin-left:0px;
+	}
+	.footers{width:100%;}
+	.rheader{width:100%;}
+	.grjj{width:100%;}
+}
+@media screen and (max-width: 600px){
+.l3{width:95%;}
+.share{display:none;}
+.leftc img{
+		width:70%!important;
+		height:70%!important;
+	}
+}
+  
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo1">
+                <img src="http://bs.bnu.edu.cn/newweb/grzy/images/logo.png" alt="" class="l3" style="margin-top: 25px;float:left;">
+                <img src="http://bs.bnu.edu.cn/newweb/grzy/images/logo2.png" alt="" class="logo2">
+                <a href="http://bs.bnu.edu.cn/englishversion/facultyresearch/fulltimefaculty/azmsy/119713.html"><p>ENGLISH VERSION</p></a>
+            </div>
+        </div>
+        <div class="xian"></div>
+        <div class="tu"></div>
+        <div class="lujing">
+            <div class="lujings">
+                <a href="#">师资队伍</a>
+                 | 
+                <a href="#">会计系</a>
+            </div>
+        </div>
+        <div class="content">
+            <div class="leftc">
+                <img src="/Public/upload/2022/03/08/6226f61cb4e1d.jpg" alt="" width="270">
+            </div>
+            <div class="rightc">
+                <div class="rheader">
+                    <p class="xm">方 芳</p>
+                    <p class="zhiw">副教授、博士生导师</p>
+                    <p class="tel"><strong style="display:block;width:100px;float:left;">电话</strong>：010-58808196</p> 
+                 <p class="tel"><strong style="display:block;width:100px;float:left;">E-mail</strong>：ifang@bnu.edu.cn</p>
+                 <p class="tel"><strong style="display:block;width:100px;float:left;">Office hour</strong>：周三上午8:00-10:00</p>
+                 <p class="tel"><strong style="display:block;width:100px;float:left;">系所中心</strong>：会计系</p>
+              </div>
+			  <div class="grjj">
+                    <p class="jjh">个人简历</p>
+                    <div class="bks1" id="jjc"><p style="font-family: " microsoft="" yahei="" font-size:16px=""><span style="font-size:16px;">个人简介：</span></p><p style="font-family: " microsoft="" yahei="" font-size:16px=""><span style="font-size:16px;">方芳，北京师范大学经济与工商管理学院会计学副教授，博士生导师。日本名古屋大学会计学博士。入</span><span style="font-family:Arial;"><span style="font-size:16px;">选中国财政部国际化高</span></span><span style="font-size:16px;">端会计人才、北京社科基金青年学术带头人。担任《管理世界》、《金融研究》等高水平期刊审稿人。担任中国工业经济学会理事、首都企业改革与发展研究会理事、中国公司治理50人论坛青年委员会委员。</span><br /><br /><span style="font-size:16px;">研究方向为公司治理、资本市场、财务会计、会计准则等。在</span><span style="font-size: 16px;">《中国社会科学》、《管理世界》、<span style="font-size: 16px;">《</span><span style="font-size: 16px;">Emerging Markets Finance and Trade》</span>等</span><span style="font-size:16px;">国内外权威学术期刊发表学术论文20余篇，主持国家自然科学基金、北京社科重点项目等，并参与国家社会科学基金重大项目、重点项目等课题研究。</span></p></div>
+                    
+                </div>				<div class="grjj">
+                    <p class="jjh">研究领域</p>
+                    <div class="bks1"><span style="font-size:16px;">公司治理、资本市场、财务会计、会计准则</span></div>
+                </div>				<div class="grjj">
+                    <p class="jjh">研究成果</p>
+                    <div class="bks1" id="jjc1"><p style="font-family: " microsoft="" yahei="" font-size:16px=""><span style="font-size:16px;"></span></p><p><span style="font-family:Arial;"><span style="font-size:16px;"><span style="font-family: Arial; font-size: 16px;">[1] 方芳、曹宇莲、朱然，2022，校友关系能带来基金经理的信息溢价吗？——基于中国资本市场的实证研究，《管理评论》，Vol.34, No.4, p.3-33.</span></span></span></p><p><span style="font-family:Arial;"><span style="font-size:16px;">[2] Fang F., Tan P.and Xu P.X., 2021.What Influences the Supervisory Efficiency of Dissenting Independent Directors? The Inquiry into Industry and Economics, Vol.3, pp.55-83.</span></span></p><p><span style="font-family:Arial;"><span style="font-size:16px;"><span style="font-family: Arial; font-size: 16px;">[3]&nbsp;</span>方芳、夏立军、曹宇莲，2020，核准制下IPO从严审核的代价——最严发审委的发审效果研究，《当代会计评论》, Vol.13，No.4，p.1-24。</span></span></p><p><span style="font-family:Arial;"><span style="font-size:16px;"><span style="font-family: Arial; font-size: 16px;">[4]&nbsp;</span>Fang F., Duan T.B.and Gao M.H., 2021.CFO’s Relative Compensation and Stock Price Crash Risk. Journal of Business &amp; Management Sciences, Vol.3 March 2021, pp.11-29.</span></span></p><p><span style="font-family:Arial;"><span style="font-size:16px;"><span style="font-family: Arial; font-size: 16px;">[5]&nbsp;<span style="font-family: Arial; font-size: 16px;">Fang F., Semba Hu, Li J.C.，2020，Management Background Characteristics and Stock Price Crash Risk. Economic Science, Vol.68, No.1, July 2020, pp.1-18.&nbsp;</span><br /></span></span></span></p><p><span style="font-family:Arial;"><span style="font-size:16px;">[6]&nbsp;<span style="font-family: Arial; font-size: 16px;">Zhu X.L., Tan P., Fang F.*，2020，The Transformation and Challenge of&nbsp;</span><span style="font-family: Arial; font-size: 16px;">“</span><span style="font-family: Arial; font-size: 16px;">Zombie Firms</span><span style="font-family: Arial; font-size: 16px;">”&nbsp;</span><span style="font-family: Arial; font-size: 16px;">in China's Capital Market. The Inquiry into Industry and Economics, Vol.3, June 2020, pp.59-86.</span><br /></span></span></p><p style="font-family: " microsoft="" yahei="" font-size:16px=""><span style="font-size:16px;">[7] 万晓莉、严若予、方芳，2017，房价变化、房屋资产与中国居民消费——基于总体和调研数据的证据，《经济学（季刊）》，Vol.16，No.2，p.525-544。</span></p><p style="font-family: " microsoft="" yahei="" font-size:16px=""><span style="font-size:16px;">[8] 方芳、蔡卫星，2016，银行业竞争与企业成长：来自工业企业的经验证据，《管理世界》第7期，pp.63-75。</span></p><p style="font-family: " microsoft="" yahei="" font-size:16px=""><span style="font-size:16px;">[9] 董维佳、方芳、吕鑫，2016，短期利率与我国股市非对称影响研究，《经济与管理研究》第6期，pp.74-80。<br /></span></p><p style="font-family: " microsoft="" yahei="" font-size:16px=""><span style="font-size:16px;">[10] Fang F., Dong W. and Lv, X., 2016. Asymmetric Reactions of China's Stock Market to Short-term Interest Rates. International Journal of Economics and Finance, Vol.8, No.5.</span></p><p style="font-family: " microsoft="" yahei="" font-size:16px=""><span style="font-size:16px;">[11] 崔学刚、方芳、杨丹，2016，中国会计研究中的本土化意识和国际化质量，《中国会计评论》第3期，pp.127-140。</span></p><p style="font-family: " microsoft="" yahei="" font-size:16px=""><span style="font-size:16px;">[12] Fang Fang, Peng Tan, Minghua Gao, 2016. Can Minority Investor Protection Restrain　Earnings Management?--An empirical test of China's listed companies. International Review of Business,Vol.16(March), pp.33-47.</span></p><p style="font-family: " microsoft="" yahei="" font-size:16px=""><span style="font-size:16px;">[13] Fang Fang, Minghua Gao, Dan Hu, 2016. Executive Ability, Industry Competition and Executive Pay--An Empirical Analysis of Chinese Listed Companies. Economic Science, Vol.63(3), pp.19-28.</span></p><p style="font-family: " microsoft="" yahei="" font-size:16px=""><span style="font-size:16px;">[14] 方芳、李实，2015，中国企业高管薪酬差距研究，《中国社会科学》第8期<span style="font-size: 16px;">，pp.</span>47-67页。</span></p><p style="font-family: " microsoft="" yahei="" font-size:16px=""><span style="font-size:16px;">[15] Lv, X., Dong, W.J.and Fang, F., 2015.The Asymmetric Effects of Official Interest Rate Changes on China's Stock Market during Different Market Regimes. Emerging Markets Finance and Trade (SSCI), Vol.51, No.4, pp.826-841.</span></p><p style="font-family: " microsoft="" yahei="" font-size:16px=""><span style="font-size:16px;">[16] 朱梦冰、方芳，2014，关于发展中国家最低工资政策的调查与分析，《中国劳动保障报》，2014年11月5日。</span></p><p style="font-family: " microsoft="" yahei="" font-size:16px=""><span style="font-size:16px;">[17] 高明华、方芳，2014 ，董事会治理与财务治理的作用效应——基于应计与真实活动盈余管理的实证检验，《经济与管理研究》，2014年第8期: 108-119。</span></p><p style="font-family: " microsoft="" yahei="" font-size:16px=""><span style="font-size:16px;">[18] 翟华云、郑军、方芳，2014，社会责任表现、报告鉴定与审计定价，《证券市场导报》，2014年第6期<span style="font-size: 16px;">，pp.</span>32-37。</span></p><p style="font-family: " microsoft="" yahei="" font-size:16px=""><span style="font-size:16px;">[19] 翟华云，方芳，2014 ，区域科技金融发展、R&amp;D投入与企业成长性研究——基于战略性新兴产业上市公司的经验证据，《科技进步与对策》，2014年第5期<span style="font-size: 16px;">，pp.</span>34-38。</span></p><p style="font-family: " microsoft="" yahei="" font-size:16px=""><span style="font-size:16px;">[20] 高明华、杨丹、杜雯翠、焦豪、谭玥宁、苏然、方芳、黄晓丰，2014，国有企业分类改革与分类治理——基于七家国有企业的调研，《经济社会体制比较》，2014年第2期<span style="font-size: 16px;">，pp.</span>19-34。</span></p><p style="font-family: " microsoft="" yahei="" font-size:16px=""><span style="font-size:16px;">[21] 高明华、苏然、方芳，2014 ，中国上市公司董事会治理评价及有效性检验，《经济学动态》，2014年第2期<span style="font-size: 16px;">，pp.</span>24-35。</span></p><p style="font-family: " microsoft="" yahei="" font-size:16px=""><span style="font-size:16px;">[22] Fang, F., Gao, M., Dong, W., 2013. How does Corporate Governance Affect Earnings Management in China?: In the View of Financial Monitoring. Economic Science, Vol.61, No.3, pp.15-33.（日本杂志《経済科学》）</span></p><p style="font-family: " microsoft="" yahei="" font-size:16px=""><span style="font-size:16px;">[23] 方芳，翟华云，2013 ，企业生命周期、经理自主权与R&amp;D投入研究——来自于战略性新兴产业上市公司经验证据，《证券市场导报》，总第252期<span style="font-size: 16px;">，pp.</span>17-21。</span></p><p style="font-family: " microsoft="" yahei="" font-size:16px=""><span style="font-size:16px;">[24] Fang, F., 2011. Corporate Governance and Earnings Management-The Role of Committees System Adopted by Japanese Companies. The Journal of Business Analysis, Vol.27, pp.51-60. （日本杂志《経営分析研究》）</span></p></div>
+                    
+                </div>				<div class="grjj">
+                    <p class="jjh">研究课题</p>
+                  
+                    <div class="bks1"><p style="font-family: " microsoft="" yahei="" font-size:16px=""><span style="font-size:16px;">[1] 主持北京社科基金重点项目：数字经济时代会计变革与资本市场高质量发展（21DTR056）<span style="font-size:16px;">，2021/07-2024/07，15万元，在研。</span><br /></span></p><p style="font-family: " microsoft="" yahei="" font-size:16px=""><span style="font-size:16px;">[2] 主持国家自然科学基金一项：垄断与高管薪酬增长和差距（71603028），2017/01-2019/12，17万元，已结题，结项评议为优。</span></p><p style="font-family: " microsoft="" yahei="" font-size:16px=""><span style="font-size:16px;">[3] 主持纵向课题一项：高管薪酬决定机制实证研究——以我国上市公司为例，高校自主科研基金项目（310400086），2013/11-2015/11，10万元，已结题。（中央高校基本科研业务费专项资金项目）</span></p><p style="font-family: " microsoft="" yahei="" font-size:16px=""><span style="font-size:16px;">[4] 主持横向课题一项：大华会计师事务所（特殊普通合伙）横向课题“会计师事务所改制、风险管理与责任分担”（66400056），2013/8-2014/7,10万元，已结题。</span></p><p style="font-family: " microsoft="" yahei="" font-size:16px=""><span style="font-size:16px;">[5] 参与国家自然科学基金委应急项目：“科学基金机构定位与治理机制改革研究”（71843003），60万，2018.01-2020.12。</span></p><p style="font-family: " microsoft="" yahei="" font-size:16px=""><span style="font-size:16px;">[6] 参与国家自然科学基金面上项目：“基于认知特征与脑神经视角的企业薪酬激励机制优化研究”（71772015），2017-2019。</span></p><p style="font-family: " microsoft="" yahei="" font-size:16px=""><span style="font-size:16px;">[7] 参与国家自然科学基金青年项目：“贸易自由化如何影响居民收入与贫困：基于城镇与农村住户调查的研究”（71603027），2018-2019。</span></p><p style="font-family: " microsoft="" yahei="" font-size:16px=""><span style="font-size:16px;">[8] 参与国际社科基金重点项目“深入推进国有经济战略性调整研究”（12AZD059），2012-2015。</span></p><p style="font-family: " microsoft="" yahei="" font-size:16px=""><span style="font-size:16px;">[9] 参与英国SPF研究项目“基于公司治理视角的国有企业改革”（“The reform of China’s SOEs in view of corporate governance regulation ”），2012-2014。</span></p><p style="font-family: " microsoft="" yahei="" font-size:16px=""><span style="font-size:16px;">[10] 参与中央高校基本科研业务费专项“中国公司治理分类指数系列”研究，2012-2015。</span></p><p style="font-family: " microsoft="" yahei="" font-size:16px=""><span style="font-size:16px;">[11] 参与工业和信息化部课题“企业数据报告制度研究”，2013-2014。</span></p></div>
+                    
+                </div>				<div class="grjj">
+                    <p class="jjh">学生情况</p>
+                    <div class="bks1"><p><span style="font-family: Arial;"><span style="font-size: 16px;">指</span><span style="font-size: 16px;">导学术研究生5名；</span></span></p><p><span style="font-family:Arial;"><span style="font-size:16px;">近年指导的本科毕业论文三次</span><span style="font-size: 16px;">获评<span style="font-size: 16px;">“</span>校级优秀论文”</span></span><span style="font-family: Arial; font-size: 16px;">（2019年、2020年、2022年）</span><span style="font-size: 16px; font-family: Arial;">，因此获评“北京师范大学优秀论文指导教师”，其中两篇已在CSSCI发表，其中一篇被列为封面文章，并接受《第一财经》的采访与报道以及《经济观察报》的专题评论；</span></p><p><span style="font-size: 16px;"><span style="font-family:Arial;">指导本科生保研论文并合作发表4篇，本科合作者毕业去向：</span></span></p><p><span style="font-size: 16px;"><span style="font-family:Arial;">曹宇莲，保研北京大学；</span></span></p><p><span style="font-size: 16px;"><span style="font-family:Arial;">徐沛翔，保研北京大学；</span></span></p><p><span style="font-size: 16px;"><span style="font-family:Arial;">邓悦萌，保研复旦大学；</span></span></p><p><span style="font-size: 16px;"><span style="font-family:Arial;">徐瓘珺，保研上海交通大学。</span></span></p><p><span style="font-size: 16px;"><span style="font-family:Arial;"><span style="font-size: 16px;">近5年</span>指导本科生本基国创立项10项，年均2项：</span></span></p><p><span style="font-family:Arial;"><span style="font-size: 16px;"></span></span></p><table border="0" cellpadding="0" cellspacing="0" width="693"> <colgroup><col /> <col /> <col /> </colgroup><tbody><tr><td style="height:13.5pt;width:30pt;"><span style="font-family:Arial;">2016</span></td><td style="width:135pt;"><span style="font-family:Arial;">艾美彤等(2015级本科生)</span></td><td style="width:355pt;"><span style="font-family:Arial;">本科生创新项目（国家级）：国企负责人限薪方案实施进展调查与意义研究</span></td></tr><tr><td style="height:25.5pt;width:30pt;"><span style="font-family:Arial;">2017</span></td><td style="width:135pt;"><span style="font-family:Arial;">代玥等<span class="font7" style="">(2015</span><span class="font6" style="">级本科生</span><span class="font7" style="">)</span></span></td><td style="width:355pt;"><span style="font-family:Arial;">本科生创新项目（国家级）：“美貌溢价”是由歧视造成的吗？——实验经济学的研究</span></td></tr><tr><td style="height:25.5pt;width:30pt;"><span style="font-family:Arial;">2017</span></td><td style="width:135pt;"><span style="font-family:Arial;">杜思慧等<span class="font7" style="">(2015</span><span class="font6" style="">级本科生</span><span class="font7" style="">)</span></span></td><td style="width:355pt;"><span style="font-family:Arial;">本科生创新项目（国家级）：农业类众筹项目成功率的影响因素研究——基于投资者价值感知视角</span></td></tr><tr><td style="height:26.25pt;width:30pt;"><span style="font-family:Arial;">2019</span></td><td style="width:135pt;"><span style="font-family:Arial;">冯智莹等<span class="font7" style="">(2017</span><span class="font6" style="">级本科生</span><span class="font7" style="">)</span></span></td><td style="width:355pt;"><span style="font-family:Arial;">本科生创新项目（国家级）：吉林市老年人选择社区互助养老的意愿及其影响因素研究——基于<span class="font7" style="">Fishbein</span><span class="font6" style="">模型</span></span></td></tr><tr><td style="height:25.5pt;width:30pt;"><span style="font-family:Arial;">2019</span></td><td style="width:135pt;"><span style="font-family:Arial;">解焯然等<span class="font7" style="">(2017</span><span class="font6" style="">级本科生</span><span class="font7" style="">)</span></span></td><td style="width:355pt;"><span style="font-family:Arial;">本科生创新项目（校级）：学者独董是“知识型花瓶”吗？——以公司创新研发为视角的实证研究</span></td></tr><tr><td style="height:26.25pt;width:30pt;"><span style="font-family:Arial;">2020</span></td><td style="width:135pt;"><span style="font-family:Arial;">李寒蒙等<span class="font7" style="">(2018</span><span class="font6" style="">级本科生</span><span class="font7" style="">)</span></span></td><td style="width:355pt;"><span style="font-family:Arial;">本科生创新项目（校级）：从新冠疫情下网红经济的繁荣探究网红经济的发展——基于<span class="font7" style="">SCP</span><span class="font6" style="">和</span><span class="font7" style="">Fishbein</span><span class="font6" style="">模型</span></span></td></tr><tr><td style="height:13.5pt;width:30pt;"><span style="font-family:Arial;">2020</span></td><td style="width:135pt;"><span style="font-family:Arial;">刘若男等<span class="font7" style="">(2018</span><span class="font6" style="">级本科生</span><span class="font7" style="">)</span></span></td><td style="width:355pt;"><span style="font-family:Arial;">本科生创新项目（校级）：中青年遗嘱订立意愿影响机制研究</span></td></tr><tr><td style="height:26.25pt;width:30pt;"><span style="font-family:Arial;">2020</span></td><td style="width:135pt;"><span style="font-family:Arial;">王雯柯等<span class="font7" style="">(2018</span><span class="font6" style="">级本科生</span><span class="font7" style="">)</span></span></td><td style="width:355pt;"><span style="font-family:Arial;">本科生创新项目（校级）：面向<span class="font7" style="">BOP</span><span class="font6" style="">市场的破坏性创新对企业绩效的影响机制研究——以互联网电商企业为例</span></span></td></tr><tr><td style="height:13.5pt;width:30pt;"><span style="font-family:Arial;">2020</span></td><td style="width:135pt;"><span style="font-family:Arial;">白云舸等<span class="font7" style="">(2017</span><span class="font6" style="">级本科生</span><span class="font7" style="">)</span></span></td><td style="width:355pt;"><span style="font-family:Arial;">本科生创业项目（国家级）：奇喵汪想宠物智能设备创新公司</span></td></tr><tr><td style="height:26.25pt;width:30pt;"><span style="font-family:Arial;">2021</span></td><td style="width:135pt;"><span style="font-family:Arial;">旷祎诺等<span class="font7" style="">(2019</span><span class="font6" style="">级本科生</span><span class="font7" style="">)</span></span></td><td style="width:355pt;"><span style="font-family:Arial;">本科生创新项目（校级）：商誉减值的长短期市场效应分析——基于中国<span class="font7" style="">TMT</span><span class="font6" style="">行业上市公司面板数据</span></span></td></tr></tbody></table><br /><p></p></div>
+                    
+                </div>				<div class="grjj">
+                    <p class="jjh">教授课程</p>
+                    <div class="bks1"><span style="font-family: " microsoft="" yahei="" font-size:16px=""><span style="font-size:16px;">会计学原理（英文）、会计学，财务管理</span></span><br /></div>
+                    
+                </div>            </div>
+        </div>
+         <footer style="overflow: hidden;">
+            <div class="footers">
+                <div class="footersl">
+                    <img src="http://bs.bnu.edu.cn/newweb/images/ewm.jpg" alt="" class="imgewm">
+                    <div class="footerxx">
+                        <p>Copyright © 2020 北京师范大学经济与工商管理学院</p>
+                        <p><i class="fas fa-map-marker-alt"></i> 地址：北京市新街口外大街19号</p>
+                        <p><i class="fas fa-portrait"></i> 传真：010-58801867</p>
+                        <p><i class="fas fa-phone"></i> 电话：010-58801867</p>
+                        <p><i class="fas fa-envelope"></i> 邮编：100875</p>
+                    </div>
+                </div>
+                <img src="http://bs.bnu.edu.cn/newweb/images/db.png" alt="" width="140" class="dbimg">
+                <img src="http://bs.bnu.edu.cn/newweb/images/yx.png" alt="" class="yuanxun">
+            </div>
+        </footer>
+    </div>
+	<div class="share">
+		  <div id="appgame-leftside-share">
+	        <div class="appgame-leftside-share rwt_share" id="rwt_share">
+	         
+	        <!--<a class="appgame-leftside-search" data-cmd="search" title="search"  href="javascript:void(0);" onclick="opens('id')">search</a> --> <!--<div class="searchs" id="id">
+	         <form name="dataForm" action="/cms/search/searchResults.jsp" target="_blank" method="post" accept-Charset="utf-8"  onsubmit="document.charset='utf-8';">
+			        	<p>
+			        		<input name="siteID" size="4" value="127" type = "hidden">
+			        		<input type="text" name="query" id="search" class="searchInput" value="输入搜索词">
+			        		<button type="submit"></button>
+			        	</p>
+			        	</form>
+			        </div>-->
+			        <!-- <a class="appgame-leftside-weixin" data-cmd="weixin" title="">微信</a> -->
+                    
+			        <!-- <a class="appgame-leftside-qzone" data-cmd="qzone" title="">qq空间</a>
+			        
+			        <a class="appgame-leftside-tsina" data-cmd="tsina" title="">微博</a> -->			    </div>
+			        <a class="appgame-leftside-top" onclick="gotoTPoint()"></a>			</div>
+			        
+		</div>
+</body>
+<script src="http://gh.bnu.edu.cn/js/jquery-1.9.0.min.js"></script>
+<script src="http://gh.bnu.edu.cn/js/share.min.js"></script>
+<script>
+    var dj=document.getElementById('dianji');
+    var jjc=document.getElementById('jjc');
+    var dj1=document.getElementById('dianji1');
+    var jjc1=document.getElementById('jjc1');
+    var a=1;
+    function zhedie(m,n){
+        m.onclick=function(){
+            if(a==1){
+                n.className='jjc';
+                m.className='dianji1'
+                a=0;
+            }else{
+                n.className='jjc1';
+                m.className='dianji'
+                a=1;
+            }
+        }
+    }
+    zhedie(dj,jjc);
+    zhedie(dj1,jjc1);
+	
+	
+</script>
+<script>
+
+	
+	
+    
+
+    /*回到顶部*/
+	$(function(){
+	 	$(window).resize(function(){
+						var h = $(window).height();
+						$('.goTop').css('top',h-60);
+						$(window).scroll(function(){				
+							var scrollTop = $(document).scrollTop();					  
+							$('.goTop').stop().animate({
+								top: h + scrollTop-60
+							},300);
+						});
+		}).resize();
+		});
+	//gotop
+
+			$('.goTop').click(function(){
+
+				$('body,html').stop().animate({scrollTop:0});
+
+				return false;
+
+			});
+	
+	function gotoTPoint(){
+		$("html,body").animate({scrollTop:0},500);
+	}
+</script>
+</html>

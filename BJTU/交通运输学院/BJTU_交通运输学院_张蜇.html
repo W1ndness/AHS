@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>北京交通大学交通运输学院</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link href="/static/trans/css/bootstrap.css" rel="stylesheet">
+ 	<link href="/static/trans/css/custom.css" rel="stylesheet">
+ 	<link href="/static/trans/css/custom_list.css" rel="stylesheet">
+	<link rel="stylesheet" href="/static/ace1.3/css/jquery.dataTables.min.css" />
+	<style>
+	    .title_a{
+			margin-right:5px;
+			width:150px;
+			float:left;
+			}
+	    .title_a a{
+			line-height:30px;
+			}
+			
+		.zhiwei strong{margin-right:17px;}
+		.zhiwei a{margin-right:10px;display:inline;width:150px;float:left;margin-top:10px;}
+		#words a{line-height:25px;width:30px;height:25px;text-align:center;background:#e8f3fe;float:left;border:1px solid #c6dff7;margin-right:15px;margin-top:15px;}
+		#words a:hover{background:#11518f;color:#FF0;border:1px solid #11518f;}
+		.sub_con_tp{width:880px; margin:0 auto; padding:8px 0 2px}
+		.sub_con_tp h3{background:#fff url(/static/trans/img/h4_head.jpg) no-repeat left center;font-size:14px; font-weight:bold; color:#08509A; text-align:left; padding:14px 0 14px 40px; border-bottom:1px solid #AAAAAA; margin-bottom:12px}
+		.sub_con_tp p{line-height:24px; }
+		.sub_con_tp ul,li {margin:auto;}
+		
+		.sub_con_tp1{width:880px; margin:0 auto; padding:8px 0 2px}
+		.sub_con_tp1 h3{font-size:14px; font-weight:bold; color:#08509A; text-align:center; padding:14px 0; border-bottom:1px solid #AAAAAA; margin-bottom:12px}
+		.sub_con_tp1 p{line-height:24px; margin-bottom:8px; }								
+	</style> 
+    <script src="/static/ace1.3/js/jquery/1.11.0/jquery.min.js"></script>
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="/static/trans/js/html5shiv.js"></script>
+    <![endif]-->
+
+</head>
+<body>
+	<div class="boxbody">
+		<header>
+			<div class="container clearfix">
+				<div class="row-fluid">
+					<div class="span12">
+						<h1 class="brandlogo"><a href="http://trans.bjtu.edu.cn/cms/"><img src="/static/trans/img/logo.png" alt=""></a></h1>
+						<div class="topinfo">
+							<div class="list-soc">
+								<a href="http://trans1.bjtu.edu.cn/english/index.php">English</a>
+							</div>
+							<div class="infophone">
+								<div class="control-group">
+									<div class="controls">
+										<div class="input-prepend">
+                            				<form name="keyform" action="http://trans.bjtu.edu.cn/cms/item/" method="get">
+                              				<span class="add-on"><i class="icon-search"></i></span>
+                              				<input  id="inputIcon" type="text" class="input-medium"  name="keyword">
+                              				</form>
+                              			</div>
+                          			</div>
+                        		</div>
+							</div>
+			  			</div>
+						<div class="clearfix"></div>
+						<div class="row-nav navbar">
+							<div class="navbar-inner">
+								<ul id="nav" class="nav">
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+		<div class="text-center">
+			<img src="/static/trans/img/sha.png" class="slidershadow" alt="">
+		</div>
+		<div id="wrap">
+      		<div class="row-fluid container bggay">
+        		<div class="span4">
+          			<div class="leftbox_top">
+          				<div class="h4border">
+		                	<p>张蜇</p>
+		                	<div class="clearfix"></div>
+		                </div>
+						<div class="list_sidebar">
+              				<div class="categories">
+              					<ul>
+									<li><a href="#basic">基本情况</a></li>
+                                    
+                                    <li><a href="#jybj">教育背景</a></li>
+                                    
+                                    <li><a href="#gzjl">工作经历</a></li>
+                                    
+                                    <li><a href="#yjfx">研究方向</a></li>
+                                    
+                                    <li><a href="#zszy">招生专业</a></li>
+                                    
+                                    <li><a href="#kyxm">科研项目</a></li>
+                                    
+                                    <li><a href="#jxgz">教学工作</a></li>
+                                    
+                                    <li><a href="#lwqk">论文/期刊</a></li>
+                                    
+                                    <li><a href="#zzyz">专著/译著</a></li>
+                                    
+                                    <li><a href="#zl">专利</a></li>
+                                    
+                                    <li><a href="#rjzzq">软件著作权</a></li>
+                                    
+                                    <li><a href="#hjry">获奖与荣誉</a></li>
+                                    
+                                    <li><a href="#shjz">社会兼职</a></li>
+                                    
+              					</ul>
+              				</div>
+          				</div>
+          			</div>
+        		</div>
+        		<div class="span8">
+          			<div class="mainleft_box "> 
+						<h4 class="h4border">	            	
+				  		个人简介
+		        		</h4>
+                		<div class="main_nr">
+							<div style="padding:0px 10px;">
+				            	
+				            	<div class="sub_con_tp">
+				            		<h3 style="width:830px;float:right"><a name="basic">基本情况</a></h3>
+									<div style="padding:15px; line-height:25px;">
+										<div class="MsoNormal">
+											<table class="MsoNormalTable" border="0" cellspacing="0" cellpadding="0" width="840" align="center" height="1964" style="width: 840px; border-collapse: collapse; height: auto">
+												<tbody>
+													<tr style="height: 20pt">
+														<td width="80" style=" padding-bottom: 0cm; padding-left: 5.4pt; padding-right: 5.4pt; height: 20pt;  padding-top: 0cm">
+															<p style="text-align: left"><span >姓&nbsp;&nbsp;名：</span></p>
+														</td>
+														<td width="216" style=" border-left: medium none; padding-bottom: 0cm; padding-left: 5.4pt; width: 162pt; padding-right: 5.4pt; height: 20pt;  padding-top: 0cm">
+															<p style="text-align: left"><span >张蜇</span></p>
+														</td>
+														<td valign="top" rowspan="9" width="245" style=" border-left: medium none; padding-bottom: 0cm; padding-left: 5.4pt; width: 142.05pt; padding-right: 5.4pt; height: 20pt;  padding-top: 0cm">
+															
+															<img id="photo" src="/media/avatar/2021/12/03/20211203155617_60.jpg" width="216" height="252">
+														</td>
+													</tr>
+													<tr style="height: 20pt">
+														<td width="80" style=" padding-bottom: 0cm; padding-left: 5.4pt; padding-right: 5.4pt; height: 20pt; border-top: medium none;  padding-top: 0cm">
+														<p style="text-align: left"><span >职&nbsp;&nbsp;务：</span></p>
+														</td>
+														<td width="216" style=" border-left: medium none; padding-bottom: 0cm; padding-left: 5.4pt; width: 162pt; padding-right: 5.4pt; border-top: medium none;  padding-top: 0cm">
+														<p style="text-align: left"><span ></span></p>
+														</td>
+													</tr>
+													<tr style="height: 24pt">
+														<td width="80" style=" padding-bottom: 0cm; padding-left: 5.4pt; padding-right: 5.4pt; height: 24pt; border-top: medium none;  padding-top: 0cm">
+														<p style="text-align: left"><span >职&nbsp;&nbsp;称：</span></p>
+														</td>
+														<td width="216" style=" border-left: medium none; padding-bottom: 0cm; padding-left: 5.4pt; width: 162pt; padding-right: 5.4pt; height: 24pt; border-top: medium none;  padding-top: 0cm">
+														<p style="text-align: left"><span >副教授</span></p>
+														</td>
+													</tr>
+													<tr style="height: 20pt">
+														<td width="80" style=" padding-bottom: 0cm; padding-left: 5.4pt; padding-right: 5.4pt; height: 20pt; border-top: medium none;  padding-top: 0cm">
+														<p style="text-align: left"><span >学&nbsp;&nbsp;历：</span></p>
+														</td>
+														<td width="216" style=" border-left: medium none; padding-bottom: 0cm; padding-left: 5.4pt; width: 162pt; padding-right: 5.4pt; height: 20pt; border-top: medium none;  padding-top: 0cm">
+														<p style="text-align: left"><span ></span></p>
+														</td>
+													</tr>
+													<tr style="height: 20pt">
+														<td width="80" style=" padding-bottom: 0cm; padding-left: 5.4pt; padding-right: 5.4pt; height: 20pt; border-top: medium none;  padding-top: 0cm">
+														<p style="text-align: left"><span >学&nbsp;&nbsp;位：</span></p>
+														</td>
+														<td width="216" style=" border-left: medium none; padding-bottom: 0cm; padding-left: 5.4pt; width: 162pt; padding-right: 5.4pt; height: 20pt; border-top: medium none;  padding-top: 0cm">
+														<p style="text-align: left"><span >博士</span></p>
+														</td>
+													</tr>
+													<tr style="height: 24pt">
+														<td width="80" style=" padding-bottom: 0cm; padding-left: 5.4pt; padding-right: 5.4pt; height: 24pt; border-top: medium none;  padding-top: 0cm">
+														<p style="text-align: left"><span >通信地址：</span></p>
+														</td>
+														<td width="216" style=" border-left: medium none; padding-bottom: 0cm; padding-left: 5.4pt; width: 162pt; padding-right: 5.4pt; height: 24pt; border-top: medium none;  padding-top: 0cm">
+														<p style="text-align: left"><span >北京市海淀区上园村3号北京交通大学思源楼1111</span></p>
+														</td>
+													</tr>
+													<tr style="height: 20pt">
+														<td width="80" style=" padding-bottom: 0cm; padding-left: 5.4pt; padding-right: 5.4pt; height: 20pt; border-top: medium none;  padding-top: 0cm">
+														<p style="text-align: left"><span >邮&nbsp;&nbsp;编：</span></p>
+														</td>
+														<td width="216" style=" border-left: medium none; padding-bottom: 0cm; padding-left: 5.4pt; width: 162pt; padding-right: 5.4pt; height: 20pt; border-top: medium none;  padding-top: 0cm">
+														<p style="text-align: left"><span >100044</span></p>
+														</td>
+													</tr>
+													<tr style="height: 20pt">
+														<td width="80" style=" padding-bottom: 0cm; padding-left: 5.4pt; padding-right: 5.4pt; height: 20pt; border-top: medium none;  padding-top: 0cm">
+														<p style="text-align: left"><span >办公电话：</span></p>
+														</td>
+														<td width="216" style=" border-left: medium none; padding-bottom: 0cm; padding-left: 5.4pt; width: 162pt; padding-right: 5.4pt; height: 20pt; border-top: medium none;  padding-top: 0cm">
+														<p style="text-align: left"><span >18810321754</span></p>
+														</td>
+													</tr>
+													<tr style="height: 24pt">
+														<td width="80" style=" padding-bottom: 0cm; padding-left: 5.4pt; padding-right: 5.4pt; height: 24pt; border-top: medium none;  padding-top: 0cm">
+														<p style="text-align: left"><span >电子邮箱：</span></p>
+														</td>
+														<td width="216" style=" border-left: medium none; padding-bottom: 0cm; padding-left: 5.4pt; width: 162pt; padding-right: 5.4pt; height: 24pt; border-top: medium none;  padding-top: 0cm">
+														<p style="text-align: left"><a href="mailto:zhangzhe@bjtu.edu.cn"><span >zhangzhe@bjtu.edu.cn</span></a></p>
+														</td>
+													</tr>
+				
+												</tbody>
+											</table>
+										</div>
+									</div>
+                                    
+                                    <h3 style="width:830px;float:right;"><a name = "jybj">教育背景</a></h3>
+									<div style="padding:15px; line-height:25px;">
+										<div class="MsoNormal">
+											<table class="MsoNormalTable" border="0" cellspacing="0" cellpadding="0" width="840" align="center" height="1964" style="width: 840px; border-collapse: collapse; height: auto">
+												<tbody>
+													<tr>
+														<td width="659" style=" padding-bottom: 0cm; padding-left: 5.4pt; padding-right: 5.4pt; height: 24pt;  padding-top: 0cm">
+															 <p>
+	2011-2013， 北京交通大学，运输与物流，硕士；
+</p>
+<p>
+	<span>2013-2017， 北京交通大学，交通运输规划与管理，博士；</span> 
+</p>
+<p>
+	<span><br />
+</span> 
+</p>
+
+														</td>
+													</tr>
+
+												</tbody>
+											</table>
+										</div>
+									</div>
+                                    
+                                    <h3 style="width:830px;float:right;"><a name = "gzjl">工作经历</a></h3>
+									<div style="padding:15px; line-height:25px;">
+										<div class="MsoNormal">
+											<table class="MsoNormalTable" border="0" cellspacing="0" cellpadding="0" width="840" align="center" height="1964" style="width: 840px; border-collapse: collapse; height: auto">
+												<tbody>
+													<tr>
+														<td width="659" style=" padding-bottom: 0cm; padding-left: 5.4pt; padding-right: 5.4pt; height: 24pt;  padding-top: 0cm">
+															 <p>
+	2017-2019，北京交通大学，博士后
+</p>
+<p>
+	2019-至今，北京交通大学，讲师，副教授
+</p>
+														</td>
+													</tr>
+
+												</tbody>
+											</table>
+										</div>
+									</div>
+                                    
+                                    <h3 style="width:830px;float:right;"><a name = "yjfx">研究方向</a></h3>
+									<div style="padding:15px; line-height:25px;">
+										<div class="MsoNormal">
+											<table class="MsoNormalTable" border="0" cellspacing="0" cellpadding="0" width="840" align="center" height="1964" style="width: 840px; border-collapse: collapse; height: auto">
+												<tbody>
+													<tr>
+														<td width="659" style=" padding-bottom: 0cm; padding-left: 5.4pt; padding-right: 5.4pt; height: 24pt;  padding-top: 0cm">
+															 <ul>
+
+    <li>交通运输规划与管理</li>
+
+    <li>控制科学与工程</li>
+
+    <li>物流工程与管理（专业学位）</li>
+
+    <li>交通运输（专业学位）</li>
+
+</ul>
+														</td>
+													</tr>
+
+												</tbody>
+											</table>
+										</div>
+									</div>
+                                    
+                                    <h3 style="width:830px;float:right;"><a name = "zszy">招生专业</a></h3>
+									<div style="padding:15px; line-height:25px;">
+										<div class="MsoNormal">
+											<table class="MsoNormalTable" border="0" cellspacing="0" cellpadding="0" width="840" align="center" height="1964" style="width: 840px; border-collapse: collapse; height: auto">
+												<tbody>
+													<tr>
+														<td width="659" style=" padding-bottom: 0cm; padding-left: 5.4pt; padding-right: 5.4pt; height: 24pt;  padding-top: 0cm">
+															 <ul>
+
+    <li>交通运输规划与管理硕士</li>
+
+    <li>控制科学与工程硕士</li>
+
+    <li>物流工程与管理硕士</li>
+
+    <li>交通运输硕士</li>
+
+</ul>
+														</td>
+													</tr>
+
+												</tbody>
+											</table>
+										</div>
+									</div>
+                                    
+                                    <h3 style="width:830px;float:right;"><a name = "kyxm">科研项目</a></h3>
+									<div style="padding:15px; line-height:25px;">
+										<div class="MsoNormal">
+											<table class="MsoNormalTable" border="0" cellspacing="0" cellpadding="0" width="840" align="center" height="1964" style="width: 840px; border-collapse: collapse; height: auto">
+												<tbody>
+													<tr>
+														<td width="659" style=" padding-bottom: 0cm; padding-left: 5.4pt; padding-right: 5.4pt; height: 24pt;  padding-top: 0cm">
+															 
+<p style="color:#393939;font-family:&quot;font-size:13px;background-color:#FFFFFF;">
+	<span class="lbl"><span style="color:#393939;font-family:&quot;font-size:13px;background-color:#FFFFFF;">1.国家重点研发计划课题：面向绿色智能铁路的自洽多态能源系统规划设计，2021-2024，主持</span></span> 
+</p>
+<p style="color:#393939;font-family:&quot;font-size:13px;background-color:#FFFFFF;">
+	<span class="lbl"><span style="color:#393939;font-family:&quot;font-size:13px;background-color:#FFFFFF;">2.国家自然科学基金"青年基金": 综合客运枢纽动态导向服务决策研究, 2019-2021，主持</span></span> 
+</p>
+<p style="color:#393939;font-family:&quot;font-size:13px;background-color:#FFFFFF;">
+	<span class="lbl"><span style="color:#393939;font-family:&quot;font-size:13px;background-color:#FFFFFF;"><span style="color:#393939;font-family:&quot;font-size:13px;background-color:#FFFFFF;">3.国家重点实验室: 城市轨道交通车站客流集散网络优化重构, 2021-2023，主持</span></span></span> 
+</p>
+<p style="color:#393939;font-family:&quot;font-size:13px;background-color:#FFFFFF;">
+	<span class="lbl"><span style="color:#393939;font-family:&quot;font-size:13px;background-color:#FFFFFF;"><span style="color:#393939;font-family:&quot;font-size:13px;background-color:#FFFFFF;">4.国家重点实验室: 轨道交通枢纽客流差异化服务策略分析与建模, 2018-2020，主持</span><br />
+</span></span> 
+</p>
+<p style="color:#393939;font-family:&quot;font-size:13px;background-color:#FFFFFF;">
+	<span class="lbl"><span style="color:#393939;font-family:&quot;font-size:13px;background-color:#FFFFFF;">5.博士后科学基金面上项目: 综合客运枢纽动态引导服务策略研究, 2018-2019，主持</span></span> 
+</p>
+<p style="color:#393939;font-family:&quot;font-size:13px;background-color:#FFFFFF;">
+	<span class="lbl"><span style="color:#393939;font-family:&quot;font-size:13px;background-color:#FFFFFF;">6.基本科研业务费人才基金: 轨道交通车站客流序化控制方法研究, 2019-2023，主持</span></span> 
+</p>
+<p style="color:#393939;font-family:&quot;font-size:13px;background-color:#FFFFFF;">
+	7.国家重点研发计划: 城轨车站设备材料性能劣化机理、服役能力建模及车 站导向通行能力提升技术研究与示范, 2017-2020，子任务负责人
+</p>
+<p style="color:#393939;font-family:&quot;font-size:13px;background-color:#FFFFFF;">
+	8.北京市科委: 地铁智慧调度及低碳运营关键技术研究与示范应用, 2021-2023，参加
+</p>
+<p style="color:#393939;font-family:&quot;font-size:13px;background-color:#FFFFFF;">
+	9.基本科研业务费自由申报项目: 考虑设施失效风险的绿色快递物流网络优化, 2021-2023，参加
+</p>
+<p style="color:#393939;font-family:&quot;font-size:13px;background-color:#FFFFFF;">
+	10.其它: 中国交通与能源融合发展战略研究--轨道与道路交通与能源融合发展战略研究, 2021-2021，参加
+</p>
+<p style="color:#393939;font-family:&quot;font-size:13px;background-color:#FFFFFF;">
+	11.国家重点实验室: 城市轨道交通线路基础设施病害图像内容理解与状态评估技术研究, 2021-2023，参加
+</p>
+<p style="color:#393939;font-family:&quot;font-size:13px;background-color:#FFFFFF;">
+	12.国家重点实验室: 基于图像处理和深度学习的城市轨道交通基础设施安全检测 与维保策略研究, 2019-2022，参加
+</p>
+<p style="color:#393939;font-family:&quot;font-size:13px;background-color:#FFFFFF;">
+	13.国家重点研发计划: 路网图定能力动态评估及运维动态配置理论、面向开放市场的调度指挥与 运维协同优化技术, 2018-2022，参加
+</p>
+<p style="color:#393939;font-family:&quot;font-size:13px;background-color:#FFFFFF;">
+	14.国家铁路局: 《交通运输科技创新中长期发展纲要（2021-2035年）-铁路篇》编制研究, 2018-2019，参加
+</p>
+<p style="color:#393939;font-family:&quot;font-size:13px;background-color:#FFFFFF;">
+	15.北京交通大学: 广州地铁城市轨道交通系统安全与运维保障国家工程实验室建设项目客流组织与综合运维保障技术研究平台实验设备采购-04, 2017-2020，参加
+</p>
+
+														</td>
+													</tr>
+
+												</tbody>
+											</table>
+										</div>
+									</div>
+                                    
+                                    <h3 style="width:830px;float:right;"><a name = "jxgz">教学工作</a></h3>
+									<div style="padding:15px; line-height:25px;">
+										<div class="MsoNormal">
+											<table class="MsoNormalTable" border="0" cellspacing="0" cellpadding="0" width="840" align="center" height="1964" style="width: 840px; border-collapse: collapse; height: auto">
+												<tbody>
+													<tr>
+														<td width="659" style=" padding-bottom: 0cm; padding-left: 5.4pt; padding-right: 5.4pt; height: 24pt;  padding-top: 0cm">
+															 <p>
+	研究生课程：《机器学习》
+</p>
+<p>
+	本科生课程：《旅客心理学》
+</p>
+
+														</td>
+													</tr>
+
+												</tbody>
+											</table>
+										</div>
+									</div>
+                                    
+                                    <h3 style="width:830px;float:right;"><a name = "lwqk">论文/期刊</a></h3>
+									<div style="padding:15px; line-height:25px;">
+										<div class="MsoNormal">
+											<table class="MsoNormalTable" border="0" cellspacing="0" cellpadding="0" width="840" align="center" height="1964" style="width: 840px; border-collapse: collapse; height: auto">
+												<tbody>
+													<tr>
+														<td width="659" style=" padding-bottom: 0cm; padding-left: 5.4pt; padding-right: 5.4pt; height: 24pt;  padding-top: 0cm">
+															 
+<p>
+	<span style="font-size:16px;">1.张蜇，秦勇，贾利民. Discrete modeling approach for emergency guidance signage system design in underground spaces: A case study in transportation hubs[J]. Tunnelling and Underground Space Technology, 2022, 120: 104275.</span> 
+</p>
+<p>
+	<span style="font-size:14px;"><span style="font-size:16px;">2.</span><span style="font-size:16px;">张蜇,贾利民. Optimal feedback control of pedestrian counter flow in bidirectional corridors with multiple inflows[J]. Applied Mathematical Modelling, 2021, 90: 474-487.</span></span><br />
+<span style="font-size:16px;">3.张蜇,贾利民. Optimal guidance strategy for crowd evacuation with multiple exits: A hybrid multiscale modeling approach[J]. Applied Mathematical Modelling, 2021, 90: 488-504.</span><br />
+<span style="font-size:16px;">4.张蜇,贾利民,秦勇. Location-Allocation Model for the Design of Guidance Signage Systems for Pedestrian Wayfinding in Public Spaces[J]. IEEE Transactions on Intelligent Transportation Systems, 2020.</span><br />
+<span style="font-size:16px;">5.张蜇,贾利民.Direction-Decision Learning Based Pedestrian Flow Behavior Investigation.IEEE ACCESS,2020,None(8)</span><br />
+<span style="font-size:16px;">6.张蜇,贾利民,秦勇.Optimization-based feedback control of passenger flow in subway stations for improving level of service.TRANSPORTATION LETTERS-THE INTERNATIONAL JOURNAL OF TRANSPORTATION RESEARCH,2019,8(11)</span><br />
+<span style="font-size:16px;">7.李赛,魏秀琨,张蜇,贾利民,俞军燕.Subway Station Capacity Maintained by Optimizing a Maintenance Schedule of Key Equipment.APPLIED SCIENCES-BASEL,2019,7(9)</span><br />
+<span style="font-size:16px;">8.张蜇,贾利民,秦勇.Level-of-Service Based Hierarchical Feedback Control Method of Network-Wide Pedestrian Flow.MATHEMATICAL PROBLEMS IN ENGINEERING,2016,None(2016)</span><br />
+<span style="font-size:16px;">9.张蜇,秦勇,贾利民.Measuring Selection Diversity of Emergency Medical Service for Metro Stations: A Case Study in Beijing.ISPRS INTERNATIONAL JOURNAL OF GEO-INFORMATION,2018,7(7)</span><br />
+<span style="font-size:16px;">10.张蜇,秦勇,贾利民,陈欣安.Visibility Graph Feature Model of Vibration Signals: A Novel Bearing Fault Diagnosis Approach.materials,2018,11(11)</span><br />
+<span style="font-size:16px;">11.陈欣安,王志鹏,张蜇,贾利民,秦勇.A Semi-Supervised Approach to Bearing Fault Diagnosis under Variable Conditions towards Imbalanced Unlabeled Data.sensors,2018,18(7)</span><br />
+<span style="font-size:16px;">12.张蜇,贾利民,秦勇.Optimal number and location planning of evacuation signage in public space.Safety Science,2017,无(91)</span><br />
+<span style="font-size:16px;">13.张蜇,贾利民.Section based Approximation of Link Traffic Flow: A System Dynamics Approach.Advances in Transportation Studies: an international Journal,2017,无(41)</span>
+</p>
+<p>
+	<br />
+</p>
+
+														</td>
+													</tr>
+
+												</tbody>
+											</table>
+										</div>
+									</div>
+                                    
+                                    <h3 style="width:830px;float:right;"><a name = "zzyz">专著/译著</a></h3>
+									<div style="padding:15px; line-height:25px;">
+										<div class="MsoNormal">
+											<table class="MsoNormalTable" border="0" cellspacing="0" cellpadding="0" width="840" align="center" height="1964" style="width: 840px; border-collapse: collapse; height: auto">
+												<tbody>
+													<tr>
+														<td width="659" style=" padding-bottom: 0cm; padding-left: 5.4pt; padding-right: 5.4pt; height: 24pt;  padding-top: 0cm">
+															 
+<span style="color:#393939;font-family:&quot;font-size:14px;background-color:#FFFFFF;">张蜇，贾利民，城市轨道交通车站客流集散优化控制,2020,中国建筑工业出版社</span>
+
+														</td>
+													</tr>
+
+												</tbody>
+											</table>
+										</div>
+									</div>
+                                    
+                                    <h3 style="width:830px;float:right;"><a name = "zl">专利</a></h3>
+									<div style="padding:15px; line-height:25px;">
+										<div class="MsoNormal">
+											<table class="MsoNormalTable" border="0" cellspacing="0" cellpadding="0" width="840" align="center" height="1964" style="width: 840px; border-collapse: collapse; height: auto">
+												<tbody>
+													<tr>
+														<td width="659" style=" padding-bottom: 0cm; padding-left: 5.4pt; padding-right: 5.4pt; height: 24pt;  padding-top: 0cm">
+															 <p>
+	王志鹏，陈欣安（研）;贾利民;张蜇;秦勇;王宁（研）;耿毅轩（研），一种基于图论的轴承半监督故障诊断方法,
+</p>
+<p>
+	张蜇，贾利民，秦勇，&nbsp;车站导向标识的安装设计方法
+</p>
+
+														</td>
+													</tr>
+
+												</tbody>
+											</table>
+										</div>
+									</div>
+                                    
+                                    <h3 style="width:830px;float:right;"><a name = "rjzzq">软件著作权</a></h3>
+									<div style="padding:15px; line-height:25px;">
+										<div class="MsoNormal">
+											<table class="MsoNormalTable" border="0" cellspacing="0" cellpadding="0" width="840" align="center" height="1964" style="width: 840px; border-collapse: collapse; height: auto">
+												<tbody>
+													<tr>
+														<td width="659" style=" padding-bottom: 0cm; padding-left: 5.4pt; padding-right: 5.4pt; height: 24pt;  padding-top: 0cm">
+															 <p>
+	张蜇，贾利民，秦勇；复杂环境下车站导向标识优化系统, 登记号：2020SR0424834；
+</p>
+<p>
+	贾利民，秦勇，张蜇，魏秀琨；基于MATLAB的轨道交通车站客流控制仿真系统, 登记号：2018SR1003608
+</p>
+<p>
+	<br />
+</p>
+
+														</td>
+													</tr>
+
+												</tbody>
+											</table>
+										</div>
+									</div>
+                                    
+                                    <h3 style="width:830px;float:right;"><a name = "hjry">获奖与荣誉</a></h3>
+									<div style="padding:15px; line-height:25px;">
+										<div class="MsoNormal">
+											<table class="MsoNormalTable" border="0" cellspacing="0" cellpadding="0" width="840" align="center" height="1964" style="width: 840px; border-collapse: collapse; height: auto">
+												<tbody>
+													<tr>
+														<td width="659" style=" padding-bottom: 0cm; padding-left: 5.4pt; padding-right: 5.4pt; height: 24pt;  padding-top: 0cm">
+															 <p>
+	1.北京市大学生交通科技大赛三等奖，指导教师
+</p>
+<p>
+	2.“金士宣”创新能力竞赛二等奖，指导教师
+</p>
+
+														</td>
+													</tr>
+
+												</tbody>
+											</table>
+										</div>
+									</div>
+                                    
+                                    <h3 style="width:830px;float:right;"><a name = "shjz">社会兼职</a></h3>
+									<div style="padding:15px; line-height:25px;">
+										<div class="MsoNormal">
+											<table class="MsoNormalTable" border="0" cellspacing="0" cellpadding="0" width="840" align="center" height="1964" style="width: 840px; border-collapse: collapse; height: auto">
+												<tbody>
+													<tr>
+														<td width="659" style=" padding-bottom: 0cm; padding-left: 5.4pt; padding-right: 5.4pt; height: 24pt;  padding-top: 0cm">
+															 <p>
+	Transportation letters，IEEE ACCESS以及IEEE Transactions on Industrial Electronics 等国际期刊审稿人。
+</p>
+<p>
+	<span style="color:#333333;font-family:&quot;font-size:18px;font-weight:700;background-color:rgba(255, 255, 255, 0.9);">Sustainability&nbsp;</span><span style="color:#333333;font-family:&quot;font-size:18px;font-weight:700;background-color:rgba(255, 255, 255, 0.9);">Special Issue “Sustainable Transition in Transport Energy Consumption”客座编辑</span>
+</p>
+
+														</td>
+													</tr>
+
+												</tbody>
+											</table>
+										</div>
+									</div>
+                                    
+
+								</div>
+								<div class="clear"></div>
+								
+							</div>
+						</div>
+                  		<div class="clearfix"></div>
+              		</div>
+        		</div>
+       		</div>
+       		<div id="push"></div>
+    	</div>
+	    <div id="footer">
+       		<div class="copy">
+        		<p>版权所有©北京交通大学交通运输学院 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;BJTUICP备:14010705 &nbsp;&nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp;&nbsp;  学院信箱：saad@bjtu.edu.cn</p>
+      		</div>
+  		</div>
+	</div>
+
+		<script>
+		    $.ajax({
+		      dataType: 'JSONP',
+		      url:"http://trans.bjtu.edu.cn/ajax_menu/",
+		      success: function(data){
+		      	var arch_str = '<li class="first"><a href="http://trans.bjtu.edu.cn/cms/">首页</a></li>';
+		      	var left_Str = '';
+		        $.each(data, function(i, n)
+		        {
+		        	arch_str = arch_str + '<li class="divider-vertical"></li><li class="dropdown '
+		        	if (n.id == 16){arch_str = arch_str + 'active'}
+		        	arch_str = arch_str + '"><a href="http://trans.bjtu.edu.cn/cms/item/?cat=' + n.id +'">'+n.name+'</a></li>';
+
+		        	if (n.vcs)
+		        	{
+		        		$.each(n.vcs, function(i, m){
+		        			if (n.id == 16)
+		        			{
+		        				left_Str = left_Str + '<li><a target="_parent"  href="http://trans.bjtu.edu.cn/cms/item/?cat=' + m.id +'">' +m.name + '</a>';
+		        			
+		        				if (m.cvcs)
+		        				{
+		        					left_Str = left_Str + '<ul class="sec_li">';
+			        				$.each(m.cvcs, function(i, k){
+					        				left_Str = left_Str + '<li><a target="_parent"  href="http://trans.bjtu.edu.cn/cms/item/?cat=' + k.id +'">' +k.name + '</a></li>';
+					        		});
+					        		left_Str = left_Str + '</ul>';
+		        				}
+		        				left_Str = left_Str + '</li>';
+		        			}
+		        		});
+		        	}
+		        });
+		        $("#nav").html(arch_str);
+		      }
+		    });
+		</script>
+</body>
+</html>

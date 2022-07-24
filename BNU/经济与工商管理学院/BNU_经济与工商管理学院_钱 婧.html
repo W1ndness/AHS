@@ -1,0 +1,495 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0">
+    <title>北京师范大学工商与经济管理学院</title>
+    <link rel="stylesheet" href="http://bs.bnu.edu.cn/new-ver-css/reset.css">
+    <link rel="stylesheet" href="http://bs.bnu.edu.cn/new-ver-css/index.css">
+	<link rel="stylesheet" href="http://bs.bnu.edu.cn/new-ver-css/xyslist.css">
+	<link rel="stylesheet" href="http://bs.bnu.edu.cn/new-ver-css/xys-tf.css">
+    <style>
+        .container{
+            width:100%;
+            height: auto;
+            overflow: hidden;
+        }
+        .header{
+            width:100%;
+            height:116px;
+            background:#EFF8FF;
+        }
+        .logo1{
+            width:1200px!important;
+            margin:0 auto;
+            position:relative;
+            float: none;
+			display:block;
+        }
+        .logo2{
+            float:right;
+        }
+        .logo1 p{
+            position:absolute;
+            top:5px;
+            right:5px;
+            font-size:13px;
+        }
+        .logo1 p:hover{
+            color:#112769;
+        }
+        .tu{
+            width:100%;
+            height:240px;
+            background:url('http://bs.bnu.edu.cn/newweb/grzy/images/tu.jpg') no-repeat top center;
+            background-size: 100%;
+        }
+        .lujing{
+            width:1200px;
+            height:58px;
+            margin:0 auto;
+            border-bottom:1px solid #aaa;
+            overflow:hidden;
+        }
+        .lujings{
+            margin:24px 0 0 0;
+            font-size:14px;
+        }
+        .content{
+            color:#333;
+            width:1200px;
+/*            height:2000px;*/
+            margin:0 auto;
+            margin-top:40px;
+/*            background:#c4c4c4;*/
+        }
+        
+        .xian{
+            width:100%;
+            height:8px;
+            background:#9A0812;
+        }
+        
+        .leftc{
+            float:left;
+        }
+        .rightc{
+            float:left;
+            margin-left:50px;
+/*            background:#666;*/
+            width:880px;
+/*            height:1000px;*/
+        }
+        .rheader{
+            width:880px;
+            height:210px;
+/*            background:yellow;*/
+        }
+        .xm{
+            font-size:30px;
+            height:40px;
+/*            border-bottom:4px solid #9A0812;*/
+            width:auto;
+            float:left;
+            line-height:40px;
+			margin-right:30px;
+        }
+        .zhiw{
+            font-size:18px;
+            height:40px;
+            line-height:50px;
+            margin-bottom:30px;
+        }
+        .tel{
+                font-size: 16px;
+                margin-top: 10px;
+                line-height: 20px;
+        }
+        .grjj{
+/*            height:300px;*/
+            width:880px;
+/*            background:yellow;*/
+            padding-bottom:40px;
+        }
+        .jjh{
+                font-size: 20px;
+                border-bottom: 1px solid #cecece;
+                height: 40px;
+                line-height: 40px;
+                padding-left: 30px;
+                background: url(http://bs.bnu.edu.cn/newweb/grzy/images/zw.png) no-repeat 0 16px;
+        }
+        
+        .jjc{
+            font-size:14px;
+            margin-top:30px;
+           
+            line-height:28px;
+            overflow:hidden;
+            text-align: justify;
+            text-justify:inter-ideograph;
+        }
+        .jjc1{
+            height:225px;
+            font-size:14px;
+            margin-top:30px;
+            
+            line-height:28px;
+            overflow:hidden;
+            text-align: justify;
+            text-justify:inter-ideograph;
+        }
+        
+        .dianji1{
+                background: url(http://bs.bnu.edu.cn/newweb/grzy/images/zw.png) no-repeat 0 -50px;
+                width: 13px;
+                height: 13px;
+                cursor: pointer;
+                display: block;
+            margin-top: 20px;
+            transition: all .2s linear;
+        }
+        .dianji1:hover{
+            background: url(http://bs.bnu.edu.cn/newweb/grzy/images/zw.png) no-repeat 0 -64px;
+        }
+        
+        .dianji{
+                background: url(http://bs.bnu.edu.cn/newweb/grzy/images/zw.png) no-repeat 0 -24px;
+                height: 13px;
+                cursor: pointer;
+                display: block;
+            margin-top: 20px;
+            transition: all .2s linear;
+        }
+        .dianji:hover{
+            background: url(http://bs.bnu.edu.cn/newweb/grzy/images/zw.png) no-repeat 0 -37px;
+        }
+        #jjc1{
+            text-indent:0em;
+        }
+        
+        .bks{
+            font-size:14px;
+            font-weight: 800;
+            margin-top:30px;
+            height:auto;
+            line-height:36px;
+        }
+        .bks1{
+            font-size:14px;
+            margin-top:30px;
+            height:auto;
+            line-height:36px;
+        }
+        .bksc{
+            height:36px;
+            line-height:36px;
+            font-size:14px;
+        }
+        
+        .yanzheng{
+            width:1200px;
+            height:100px;
+            margin:0 auto;
+        }
+        .yanzheng img{
+            display:block;
+            margin-top:26px;
+            float:left;
+        }
+		
+#appgame-leftside-share{width:42px; height:216px; position: fixed;bottom: 30px;right: 30px; z-index:9999;}
+.appgame-leftside-share{width:42px; height:259px;}
+#appgame-leftside-share a{display:block; width:42px; height:44px; background-color:#e6e6e6; z-index:1; position:absolute; left:0; box-sizing:border-box; -moz-box-sizing:border-box; border:1px #ddd solid; background-image:url(http://gh.bnu.edu.cn/images/share-icons.png); background-repeat:no-repeat; margin:0;  transition:0.4s; -webkit-transition:0.4s; -moz-transition:0.4s;}
+#appgame-leftside-share a:hover{background-color:#fff; border:1px #eee solid; z-index:2;}
+/*.appgame-leftside-weixin{top:0; background-position:-88px 0;}
+.appgame-leftside-weixin:hover{background-position:0px 0;}
+.appgame-leftside-qzone{top:43px; background-position:-88px -44px;}
+.appgame-leftside-qzone:hover{background-position:0px -44px;}*/
+.appgame-leftside-search{top:86px; background-position:-93px -89px;}
+.appgame-leftside-search:hover{background-position:-5px -86px;}
+.appgame-leftside-weixin{top:129px; background-position:-88px 0px;}
+.appgame-leftside-weixin:hover{background-position:0px 0px;}
+/*.appgame-leftside-fbook{top:172px; background-position:-88px -176px;}
+.appgame-leftside-fbook:hover{background-position:0px -176px;}
+.appgame-leftside-twi{top:215px; background-position:-88px -220px;}
+.appgame-leftside-twi:hover{background-position:0px -220px;}*/
+#appgame-leftside-share .appgame-leftside-top{background-image:url(http://gh.bnu.edu.cn/images/leftnav-off.png); background-position:-1px -395px; top:130px; cursor:pointer;}
+
+.rwt_share {
+/*	overflow:hidden;*/
+	float:left;
+	position:relative;
+}
+.rwt_share a {
+	display:inline-block;
+	margin-right:10px;
+	text-indent:-9999px;
+	margin-bottom:10px;
+	width:24px;
+	height:24px;
+	overflow:hidden;
+	cursor:pointer;
+	float:left;
+	font-size:12px;
+}
+.rwts_weixin {
+	background-position:0 -1612px;
+}
+.rwts_tsina {
+	background-position:0 -104px;
+}
+.rwts_tqq {
+	background-position:0 -260px;
+}
+.rwts_qzone {
+	background-position:0 -52px;
+}
+.rwts_sqq {
+	background-position:0 -2652px;
+}
+.rwts_tieba {
+	background-position:0 -728px;
+}
+.rwts_renren {
+	background-position:0 -208px;
+}
+.rwts_kaixin001 {
+	background-position:0 -312px;
+}
+.rwts_tqf {
+	background-position:0 -364px;
+}
+.rwts_douban {
+	background-position:0 -468px;
+}
+.rwts_twi {
+	background-position:0 -1404px;
+}
+.rwts_fbook {
+	background-position:0 -1352px;
+}
+.rwts_ty {
+	background-position:0 -1196px;
+}
+.rwts_mogujie {
+	background-position:0 -1768px;
+}
+.rwts_meilishuo {
+	background-position:0 -1716px;
+}
+.rwts_huaban {
+	background-position:0 -1872px;
+}
+.rwts_hi {
+	background-position:0 -416px;
+}
+.rwts_tsohu {
+	background-position:0 -520px;
+}
+.rwts_more {
+	background-position:0 0;
+}
+.rwt_share_wxShow_code>img {
+	width:100%;
+}
+.bks1 li{
+	list-style:disc;
+}
+@media screen and (max-width: 1200px){
+	.logo1{
+		width:100%!important;
+	}
+	.leftc img{
+		width:50%!important;
+		height:50%!important;
+	}
+	.logo2{display:none;}
+	.lujing{
+		width:90%;
+	}
+	.content{
+		width:90%;
+	}
+	.leftc{
+		float:none;
+		
+	}
+	.tu{display:none;}
+	
+	.rightc{
+		float:none;
+		width:100%;
+		margin-left:0px;
+	}
+	.footers{width:100%;}
+	.rheader{width:100%;}
+	.grjj{width:100%;}
+}
+@media screen and (max-width: 600px){
+.l3{width:95%;}
+.share{display:none;}
+.leftc img{
+		width:70%!important;
+		height:70%!important;
+	}
+}
+  
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo1">
+                <img src="http://bs.bnu.edu.cn/newweb/grzy/images/logo.png" alt="" class="l3" style="margin-top: 25px;float:left;">
+                <img src="http://bs.bnu.edu.cn/newweb/grzy/images/logo2.png" alt="" class="logo2">
+                <a href="http://bs.bnu.edu.cn/englishversion/facultyresearch/fulltimefaculty/azmsy/119516.html"><p>ENGLISH VERSION</p></a>
+            </div>
+        </div>
+        <div class="xian"></div>
+        <div class="tu"></div>
+        <div class="lujing">
+            <div class="lujings">
+                <a href="#">师资队伍</a>
+                 | 
+                <a href="#">人力资源管理</a>
+            </div>
+        </div>
+        <div class="content">
+            <div class="leftc">
+                <img src="/Public/upload/touxiang/11112012112.jpg" alt="" width="270">
+            </div>
+            <div class="rightc">
+                <div class="rheader">
+                    <p class="xm">钱 婧</p>
+                    <p class="zhiw">副教授</p>
+                    <p class="tel"><strong style="display:block;width:100px;float:left;">电话</strong>：010-58801867</p> 
+                 <p class="tel"><strong style="display:block;width:100px;float:left;">E-mail</strong>：jingqian@bnu.edu.cn</p>
+                 <p class="tel"><strong style="display:block;width:100px;float:left;">Office hour</strong>：周五11点到12点半</p>
+                 <p class="tel"><strong style="display:block;width:100px;float:left;">系所中心</strong>：人力资源管理</p>
+              </div>
+			  <div class="grjj">
+                    <p class="jjh">个人简历</p>
+                    <div class="bks1" id="jjc"><p style="font-family: " microsoft="" yahei="" font-size:16px="" margin-top:="" auto="" margin-bottom:="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 钱婧，管理学博士，副教授。博士研究生导师。北京师范大学经济与工商管理学院管理与组织心理学研究中心主任，教育部学位与研究生教育发展中心首席案例专家、中国社会心理学会管理心理学专业委员会理事，中国管理科学与工程学会神经管理与神经工程分会委员会委员。主要研究领域为组织与管理心理学、脑认知与组织行为、商业创新与战略决策。在权威期刊Journal of Organizational Behavior、Human Resource management等发表SSCI论文40余篇。主持国家自然科学基金等6项基金项目。担任国家自然科学基金等机构的通讯评审专家。SSCI期刊Chinese Management Studies 副主编，Frontiers in Psychology 编委；全国百优案例评审专家、中国工商管理国际最佳案例奖评审专家<span style="font-family:" color:black="" font-size:12="" 0pt="" sans-serif="" lang="ZH-CN"></span>、北大管理案例研究中心的案例盲审专家团成员；美国管理学会年会（AOM）、澳大利亚与新西兰管理学会年会（ANZAM）、中国管理研究国际学会（IACMR）等国际学术组织评审专家。</p><p style="font-family: " microsoft="" yahei="" font-size:16px="" margin-top:="" auto="" margin-bottom:="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 带领团队长期关注本土企业发展，目前就蚂蚁金服、高德、方太、博赛矿业、氪空间、猎豹移动、住范儿等企业开发的案例发表于《中欧商业评论》，《清华管理评论》，《海航云端》等主流商业杂志及案例库。所著案例入选哈佛案例库、毅伟案例库、Sage案例库，多次荣获全国百优案例、中国工商管理案例中心 “卓越开发者”案例大奖，并获得“阿里活水学者”、“腾讯2020年度最受欢迎杰出教授”等荣誉。</p><div><br /></div></div>
+                    
+                </div>				<div class="grjj">
+                    <p class="jjh">研究领域</p>
+                    <div class="bks1"><ol class="custom_num para-list list-paddingleft-1"><li class="list-num-1-1 list-num-paddingleft-1"><div class="para">积极心理与行为<br /></div></li><li class="list-num-1-4 list-num-paddingleft-1"><div class="para">脑认知与组织行为</div></li><li class="list-num-1-4 list-num-paddingleft-1">组织中的正念<br /></li><li class="list-num-1-5 list-num-paddingleft-1"><div class="para">商业创新与战略决策</div></li><li class="list-num-1-6 list-num-paddingleft-1">共益及企业社会责任CSR</li><li class="list-num-1-6 list-num-paddingleft-1">老年人力资源</li><li class="list-num-1-6 list-num-paddingleft-1">孤独症康复机构管理<br /></li></ol></div>
+                </div>				<div class="grjj">
+                    <p class="jjh">研究成果</p>
+                    <div class="bks1" id="jjc1"><p style="text-align:left;"><span style="font-size:16px;"><strong><span style="font-family:宋体;font-size:11.0pt;">主要研究成果（期刊） <br /></span></strong></span></p><p style="text-align:left;"><span style="font-size:16px;"><span style="font-family:宋体;font-size:11.0pt;"><span style="font-family:'Times New Roman',serif;font-size:11.0pt;">Wang, B., Liao Y., Chen, M., Zhang, L., <strong>Qian, J.</strong> Online. Work and affective outcomes of social media at work: A daily survey study. <em>International Journal of Human Resource Management</em><span style="font-family:'Times New Roman',serif;font-size:11.0pt;"><strong> (ABS 3</strong></span><strong><span style="font-family:宋体;font-size:11.0pt;">星期刊</span><span style="font-family:'Times New Roman',serif;font-size:11.0pt;">)</span></strong>.</span><br /></span></span></p><p style="text-align:left;"><span style="font-size:16px;"><span style="font-family:宋体;font-size:11.0pt;"><span style="font-family:'Times New Roman',serif;font-size:11.0pt;">Song, B., Wang, B., <strong>Qian, J.</strong>, &amp; Zhang, Y. <span style="font-size:16px;"><span style="font-family:宋体;font-size:11.0pt;"><span style="font-family:'Times New Roman',serif;font-size:11.0pt;">Accepted</span></span></span>. Procrastinate at Work, Sleep Badly at Night: How Job Autonomy Matters. <em>Applied Psychology: An International Review </em></span><span style="font-size:16px;"><span style="font-family:宋体;font-size:11.0pt;"><span style="font-family:'Times New Roman',serif;font-size:11.0pt;"><span style="font-family:'Times New Roman',serif;font-size:11.0pt;"><strong>(ABS 3</strong></span><strong><span style="font-family:宋体;font-size:11.0pt;">星期刊</span><span style="font-family:'Times New Roman',serif;font-size:11.0pt;">)</span></strong></span></span></span>. <br /></span></span></p><p style="text-align:left;"><span style="font-size:16px;"><span style="font-family:宋体;font-size:11.0pt;">王琼<strong>，</strong>蔡子君，钱婧</span><span style="font-family:宋体;font-size:11.0pt;">. 主动性人格会影响组织越轨行为吗 — 基于社会交换理论的研究. 经济管理, 2021, (8): 124-140. </span><strong><span style="font-family:宋体;font-size:11.0pt;"><br /></span></strong></span></p><p style="text-align:left;"><span style="font-family:宋体;font-size:11.0pt;"></span></p><p style="text-align:left;"><span style="font-family:'Times New Roman',serif;font-size:11.0pt;">Zhang, F. F., Wang, B., <strong>Qian, J.</strong>, Parker, S. 2021. Job crafting towards strengths and job crafting towards interests in overqualified employees: Different outcomes and boundary effects.<em><strong> Journal of Organizational Behavior</strong></em> (<strong>ABS 4星期刊)</strong>, &nbsp;42(5): 587-603.</span></p><p style="text-align:left;"><span style="font-family:'Times New Roman',serif;font-size:11.0pt;">Wang, B., Liu, Y. K., <strong>Qian, J.</strong>, Parker, S. 2021. Achieving effective remote working during the COVID-19 pandemic: A work design perspective.<strong><em> Applied Psychology: an international review </em>(ABS 3</strong></span><strong><span style="font-family:宋体;font-size:11.0pt;">星期刊</span><span style="font-family:'Times New Roman',serif;font-size:11.0pt;">)，</span></strong><span style="font-family:'Times New Roman',serif;font-size:11.0pt;">70(1): 16-59.</span><strong><span style="font-family:'Times New Roman',serif;font-size:11.0pt;"><br /></span></strong></p><p style="text-align:left;"><span style="font-family:'Times New Roman',serif;font-size:11.0pt;">Zhang,X.Y., <strong>Qian, J.,</strong> Wang, B., &amp; Chen, M. 2020.The Role of Reward Omission in Empowering Leadership and Employee Outcomes: AModerated Mediation Model. <strong><em>Human Resource Management Journal</em> (ABS 4</strong></span><strong><span style="font-family:宋体;font-size:11.0pt;">*星期刊</span><span style="font-family:'Times New Roman',serif;font-size:11.0pt;">)</span><span style="font-family:宋体;font-size:11.0pt;">，</span></strong><span style="font-family:'Times New Roman',serif;font-size:11.0pt;">30:226–243.</span></p><strong><span style="font-family:宋体;font-size:11.0pt;"></span></strong><p style="text-align:left;"><span style="font-family:'Times New Roman',serif;font-size:11.0pt;">Xia, A., Wang, B., Song, B., Zhang, W., &amp;&nbsp;<strong>Qian,J.</strong>&nbsp;(2019). How and when workplace ostracism influence taskperformance: Through the lens of conservation of resource theory.&nbsp;<strong><em>Human Resource Management Journal&nbsp;</em>(ABS 4</strong></span><strong><span style="font-family:宋体;font-size:11.0pt;">*星期刊</span><span style="font-family:'Times New Roman',serif;font-size:11.0pt;">)</span></strong><span style="font-family:'Times New Roman',serif;font-size:11.0pt;">, 29(3), 353-370.</span></p><p style="text-align:left;"><strong><span style="font-family:'Times New Roman',serif;font-size:11.0pt;">Qian, J., Yang, F., Wang, B., Huang, C., &amp; Song,B. (2019). </span></strong><span style="font-family:'Times New Roman',serif;font-size:11.0pt;">When work ostracism leads to burnout: the roles of jobself-determination and future time orientation.</span><strong><span style="font-family:'Times New Roman',serif;font-size:11.0pt;">&nbsp;<em>International Journalof Human Resource Management </em>(ABS 3</span><span style="font-family:宋体;font-size:11.0pt;">星期刊</span><span style="font-family:'Times New Roman',serif;font-size:11.0pt;">),&nbsp;30(17), 2465-2481.</span></strong></p><p style="text-align:left;"><span style="font-family:'Times New Roman',serif;font-size:11.0pt;">Yang, F., Liu, J., Huang,X.,&nbsp;<strong>Qian, J.</strong>, Wang, T., Wang, Z., &amp; Yu, H. (2018). How supervisory support for career development relates to subordinate workengagement and career outcomes: The moderating role of task proficiency.&nbsp;<strong><em>Human Resource Management Journal</em> (ABS 4</strong></span><strong><span style="font-family:宋体;font-size:11.0pt;">* 星期刊</span><span style="font-family:'Times New Roman',serif;font-size:11.0pt;">)</span></strong><span style="font-family:'Times New Roman',serif;font-size:11.0pt;">,&nbsp;28(3), 496–509.</span></p><p style="text-align:left;"><strong><span style="font-family:'Times New Roman',serif;font-size:11.0pt;">Qian, J.</span></strong><span style="font-family:'Times New Roman',serif;font-size:11.0pt;">, Yang, F., Han, Z. R., Wang, H., &amp; Wang, J. (2018).The presence of a feedback-seeking role model in promoting employee feedbackseeking: a moderated mediation model.&nbsp;<strong><em>International Journal of Human Resource Management</em> (ABS 3</strong></span><strong><span style="font-family:宋体;font-size:11.0pt;">星期刊</span><span style="font-family:'Times New Roman',serif;font-size:11.0pt;">)</span></strong><span style="font-family:'Times New Roman',serif;font-size:11.0pt;">, 29(18), 2682–2700.</span></p><p style="text-align:left;"><span style="font-family:'Times New Roman',serif;font-size:11.0pt;">Lin, X. S., Chen, Z. X., Ashford,S. J., Lee, C.,&nbsp;<strong>Qian, J.&nbsp;</strong>(2018). A self-consistency motivationanalysis of employee reactions to job insecurity: The roles oforganization-based self-esteem and proactive personality.&nbsp;<strong><em>Journal of Business Research</em>&nbsp;</strong>(<strong>ABS 3</strong></span><strong><span style="font-family:宋体;font-size:11.0pt;">星期刊</span></strong><span style="font-family:'Times New Roman',serif;font-size:11.0pt;">),&nbsp;92, 168-178.</span></p><p style="text-align:left;"><span style="font-family:'Times New Roman',serif;font-size:11.0pt;">Yang, F.,&nbsp;<strong>Qian, J.</strong>,Liu, J., Huang, X., Chau, R., &amp; Wang, T. (2018). Bridging the Gap: HowSupervisors’ Perceptions of Guanxi HRM Practices Influence Subordinates’ Work Engagement. <strong><em>Applied Psychology: an international review </em>(ABS 3</strong></span><strong><span style="font-family:宋体;font-size:11.0pt;">星期刊</span><span style="font-family:'Times New Roman',serif;font-size:11.0pt;">)</span></strong><span style="font-family:'Times New Roman',serif;font-size:11.0pt;">,&nbsp;67(4), 589–616.</span></p><p style="text-align:left;"><span style="font-family:'Times New Roman',serif;font-size:11.0pt;">Lin, X. S.,&nbsp;<strong>Qian, J.</strong>,Li, M., &amp; Chen, Z. X. (2018). How does growth need strength influenceemployee outcomes? The roles of hope, leadership, and cultural value. <strong><em>International Journal of Human Resource Management </em>(ABS 3</strong></span><strong><span style="font-family:宋体;font-size:11.0pt;"> 星期刊</span><span style="font-family:'Times New Roman',serif;font-size:11.0pt;">)</span></strong><span style="font-family:'Times New Roman',serif;font-size:11.0pt;">,&nbsp;<em>29</em>(17),2524–2551.</span></p><p style="text-align:left;"><span style="font-family:'Times New Roman',serif;font-size:11.0pt;">Yang, F.,&nbsp;<strong>Qian, J.</strong>, &amp; Liu, J. (2018).Priming employees’ promotion focus: How and when servant leadership enhancescustomer service behaviors. <strong><em>Management Decision</em></strong>, 56(11),2308–2324.</span></p><p style="text-align:left;"><strong><span style="font-family:'Times New Roman',serif;font-size:11.0pt;">Qian, J.</span></strong><span style="font-family:'Times New Roman',serif;font-size:11.0pt;">, Li, X., Song, B., Wang, B.,Wang, M., Chang, S., &amp; Xiong, Y. (2018). Leaders’ Expressed Humility andFollowers’ Feedback Seeking: The Mediating Effects of Perceived Image Cost andModerating Effects of Power Distance Orientation. <strong><em>Frontiers in Psychology</em>(SSCI)</strong>,&nbsp;<em>9</em>(APR), 1–10.</span></p><p style="text-align:left;"><span style="font-family:'Times New Roman',serif;font-size:11.0pt;">Huang, C.,&nbsp;<strong>Qian, J.</strong>,Jin, Z., &amp; Wang, B. (2018). Unlocking the Mask: a Close Look at how ServantLeaders Influence People.<em>&nbsp;<strong>Current Psychology</strong></em>,&nbsp;<em>37</em>(4),958–965.</span></p><p style="text-align:left;"><strong><span style="font-family:'Times New Roman',serif;font-size:11.0pt;">Qian, J.</span></strong><span style="font-family:'Times New Roman',serif;font-size:11.0pt;">, Wang, B., Han, Z., &amp;Song, B. (2017). Ethical Leadership, Leader-Member Exchange and FeedbackSeeking: A Double-Moderated Mediation Model of Emotional Intelligence andWork-Unit Structure.&nbsp;<strong><em>Frontiers in Psychology</em></strong>, 8(JUL), 1–11.</span></p><p style="text-align:left;"><strong><span style="font-family:'Times New Roman',serif;font-size:11.0pt;">Qian, J.</span></strong><span style="font-family:'Times New Roman',serif;font-size:11.0pt;">, Han, Z. R., Guo, Z., Yang,F., Wang, H., &amp; Wang, Q. (2016). The relation of feedback-seeking motivesand emotion regulation strategies to front-line managers’ feedback sourceprofiles: A person-centered approach.&nbsp;<strong><em>Journal of Management &amp;Organization </em>(SSCI),</strong>&nbsp;22(01), 68–79.</span></p><p style="text-align:left;"><span style="font-family:'Times New Roman',serif;font-size:11.0pt;">Han, Z. R., Lei, X.,&nbsp;<strong>Qian,J.</strong>, Li, P., Wang, H., &amp; Zhang, X. (2016). Parent and childpsychopathological symptoms: the mediating role of parental emotiondysregulation.&nbsp;<strong><em>Child and Adolescent Mental Health</em></strong>, 21(3),161–168.</span></p><p style="text-align:left;"><span style="font-family:'Times New Roman',serif;font-size:11.0pt;">Yang, F.,&nbsp;<strong>Qian, J.</strong>,Tang, L., &amp; Zhang, L. (2016). No longer take a tree for the forest: Across-level learning-related perspective on individual innovativebehavior.&nbsp;<strong><em>Journal of Management and Organization</em></strong>, 22(3), 291–310.</span></p><p style="text-align:left;"><strong><span style="font-family:'Times New Roman',serif;font-size:11.0pt;">Qian, J.</span></strong><span style="font-family:'Times New Roman',serif;font-size:11.0pt;">, Lin, X., Han, Z. R., Tian,B., Chen, G. Z., &amp; Wang, H. (2015). The impact of future time orientationon employees’ feedback-seeking behavior from supervisors and co-workers: Themediating role of psychological ownership.&nbsp;<strong><em>Journal of Management&amp; Organization</em></strong>, 21(03), 336–349.</span></p><p style="text-align:left;"><span style="font-family:'Times New Roman',serif;font-size:11.0pt;">Han, Z. R.,&nbsp;<strong>Qian, J.</strong>,Gao, M., &amp; Dong, J. (2015). Emotion Socialization Mechanisms LinkingChinese Fathers’, Mothers’, and Children’s Emotion Regulation: A ModeratedMediation Model.<em> <strong>Journal of Child and Family Studies</strong></em>, 24(12),3570–3579.</span></p><p style="text-align:left;"><strong><span style="font-family:'Times New Roman',serif;font-size:11.0pt;">Qian, J.</span></strong><span style="font-family:'Times New Roman',serif;font-size:11.0pt;">, Han, Z., Wang, H., Li, X.,&amp; Wang, Q. (2014). Power distance and mentor-protégé relationship qualityas moderators of the relationship between informal mentoring and burnout:evidence from China. <strong><em>International Journal of Mental Health Systems</em></strong>,8(1), 51.</span></p><p style="text-align:left;"><strong><span style="font-family:'Times New Roman',serif;font-size:11.0pt;">Qian, J.</span></strong><span style="font-family:'Times New Roman',serif;font-size:11.0pt;">, Lin, X., Han, Z. R., Chen,Z. X., &amp; Hays, J. M. (2014). What matters in the relationship betweenmentoring and job-related stress? The moderating effects of protégés’traditionality and trust in mentor.&nbsp;<strong><em>Journal of Management &amp;Organization</em></strong>, 20(05), 608–623.</span></p><p style="text-align:left;"><strong><span style="font-family:'Times New Roman',serif;font-size:11.0pt;">Qian, J.</span></strong><span style="font-family:'Times New Roman',serif;font-size:11.0pt;">, Wang, H., Han, Z. R., Wang,J., &amp; Wang, H. (2015). Mental health risks among nurses under abusivesupervision: The moderating roles of job role ambiguity and patients’ lack ofreciprocity. <strong><em>International Journal of Mental Health Systems</em></strong>,9(1), 22.</span></p><p style="text-align:left;"><strong><span style="font-family:'Times New Roman',serif;font-size:11.0pt;">Qian, J.</span></strong><span style="font-family:'Times New Roman',serif;font-size:11.0pt;">, Lin, X., &amp; Chen, G.Z.-X. (2012). Authentic leadership and feedback-seeking behaviour: Anexamination of the cultural context of mediating processes in China.&nbsp;<strong><em>Journalof Management &amp; Organization</em></strong>, 18(3), 286–299.</span></p><p style="text-align:left;"><strong><span style="font-family:宋体;font-size:11.0pt;">主要研究成果（商业案例输出）<br /></span></strong></p><p style="text-align:left;"><span style="font-family:宋体;font-size:11.0pt;"></span></p><p style="text-align:left;"><span style="font-family:宋体;font-size:11.0pt;"></span></p><p style="text-align:left;"><strong><span style="font-family:宋体;font-size:11.0pt;">教学案例（共有</span><span style="font-family:'Times New Roman',serif;font-size:11.0pt;">40</span><span style="font-family:宋体;font-size:11.0pt;">余个案例收录核心案例库）</span></strong></p><p style="text-align:left;"><span style="font-family:宋体;font-size:11.0pt;"><span style="font-family:宋体;font-size:10.5pt;"><span style="font-family:宋体;font-size:11.0pt;"><span style="font-family:宋体;font-size:11.0pt;"><span style="font-family:宋体;font-size:11.0pt;"><span style="font-family:宋体;font-size:11.0pt;">钱婧，<span style="font-family:'Times New Roman',serif;">Yifan Xu</span></span><span style="font-family:'Times New Roman',serif;font-size:11.0pt;">, Yi Qu, Xiaohui Li, Zeng Wang. 2022. Bosai Minerals: A Journey of Going Global Guided by Neo-Confucianism. </span><span style="font-family:'Times New Roman',serif;">Ivey Publishing (毅伟案例库)。</span><br /></span></span></span></span></span></p><p style="text-align:left;"><span style="font-family:宋体;font-size:11.0pt;"><span style="font-family:宋体;font-size:10.5pt;"><span style="font-family:宋体;font-size:11.0pt;"><span style="font-family:宋体;font-size:11.0pt;"><span style="font-family:宋体;font-size:11.0pt;">钱婧，屈逸</span>，徐逸凡，孙宇彤</span></span>，王斌. 2021. 农产品的价值创新：快乐的蛋的产品价值传播之路。<span style="font-family:宋体;font-size:11.0pt;"><span style="font-family:宋体;font-size:10.5pt;"><span style="font-family:宋体;font-size:11.0pt;">入选第十二届“全国百篇优秀管理案例”。</span></span></span><span style="font-family:宋体;font-size:11.0pt;">中国管理案例共享中心案例库。</span><br /></span></span></p><p style="text-align:left;"><span style="font-family:宋体;font-size:11.0pt;"><span style="font-family:宋体;font-size:10.5pt;"><span style="font-family:宋体;font-size:11.0pt;">钱婧，<span style="font-family:宋体;font-size:11.0pt;"><span style="font-family:宋体;font-size:10.5pt;"><span style="font-family:宋体;font-size:11.0pt;"><span style="font-family:宋体;font-size:11.0pt;">孙宇彤</span></span></span></span>，闻艺，姚雨霏，徐逸凡，屈逸. 2021. 社会企业、价值创造：孤独症康复机构星星雨的可持续发展之路。<span style="font-family:宋体;font-size:11.0pt;">第四届卓越开发者案例大奖赛一等奖，中国工商管理案例库。</span></span><br /></span></span></p><p style="text-align:left;"><span style="font-family:宋体;font-size:11.0pt;"><span style="font-family:宋体;font-size:10.5pt;">钱婧，屈逸，孙宇彤，徐逸凡. 2021. 因地制宜，价值共创：后疫情时期的蚂蚁集团出海战略。<span style="font-family:宋体;font-size:11.0pt;"><span style="font-family:宋体;font-size:10.5pt;"><span style="font-family:宋体;font-size:11.0pt;"><span style="font-family:宋体;font-size:11.0pt;">第四届卓越开发者案例大奖赛二等奖，中国工商管理案例库。</span></span></span></span><br /></span></span></p><p style="text-align:left;"><span style="font-family:宋体;font-size:11.0pt;"><span style="font-family:宋体;font-size:10.5pt;">钱婧，屈逸，王为凤，李晓燕</span>. 2021. 全球视野，本地行动：前海像样如何“玩转”出海营销？第一届中国特色社会主义理论与中国管理实践相结合的案例评选三等奖。中山大学管理学院陈瑞球亚太案例开发与研究中心案例库。<br /></span></p><p style="text-align:left;"><span style="font-family:宋体;font-size:11.0pt;">钱婧，徐逸凡，王为凤，张伟. 2021. 福建天华：疫情下国企如何平衡企业发展与社会责任。<span style="font-family:宋体;font-size:11.0pt;"><span style="font-family:宋体;font-size:11.0pt;">中国管理案例共享中心案例库。</span></span><br /></span></p><p style="text-align:left;"><span style="font-family:宋体;font-size:11.0pt;">钱婧，屈逸，滕小菲，李晓燕. 2021. 科技战“疫”，化危为机——猎豹移动的战略性社会责任实践。<span style="font-family:宋体;font-size:11.0pt;">中国管理案例共享中心案例库。</span><br /></span></p><p style="text-align:left;"><span style="font-family:宋体;font-size:11.0pt;">钱婧，王为凤，刘露遥，陈凯毅，孙宇彤. 2021. 共创共享，成己达人：东华软件人才激励的困境与破局。中国工商管理国际案例库。<br /></span></p><p style="text-align:left;"><span style="font-family:宋体;font-size:11.0pt;">钱婧，孙浪，屈逸. 2020. 从创意到实现：琢磨琢磨的战略转型之路。<span style="font-family:宋体;font-size:11.0pt;">第三届卓越开发者案例大奖赛二等奖，中国工商管理案例库。</span><br /></span></p><p style="text-align:left;"><span style="font-family:宋体;font-size:11.0pt;"><span style="font-family:宋体;font-size:11.0pt;"><span style="font-family:宋体;font-size:11.0pt;">钱婧，屈逸</span>，孙宇彤，陈凯毅. 2020. 谋势而动，协同创新：东华软件的战略领先之道。<span style="font-family:宋体;font-size:11.0pt;"><span style="font-family:宋体;font-size:11.0pt;">第三届卓越开发者案例大奖赛三等奖，中国工商管理案例库。</span></span></span><br /></span></p><p style="text-align:left;"><span style="font-family:宋体;font-size:11.0pt;">钱婧，</span><span style="font-family:'Times New Roman',serif;font-size:11.0pt;">Hao Chen, Ziqian Zhao, Yi Qu.2019. Cheetah Mobile: Cross-Cultural Clashes Within a Technology Company BornGlobal. Harward Business Publishing (</span><span style="font-family:宋体;font-size:11.0pt;">哈佛案例库，年度高下载量案例</span><span style="font-family:'Times New Roman',serif;font-size:11.0pt;">).</span></p>钱婧，屈逸，夏爱静，杨茜茹<span style="font-family:'Times New Roman',serif;font-size:11.0pt;">. 2019. </span><span style="font-family:宋体;font-size:11.0pt;">高深智图：自动驾驶赛道的领航员</span><span style="font-family:'Times New Roman',serif;font-size:11.0pt;">. </span><span style="font-family:宋体;font-size:11.0pt;">第二届卓越开发者案例大奖赛三等奖，中国工商管理案例库。</span><p style="text-align:left;"><span style="font-family:宋体;font-size:11.0pt;">钱婧，孙宇彤，屈逸，滕小菲，曾庆</span><span style="font-family:'Times New Roman',serif;font-size:11.0pt;">. 2019. </span><span style="font-family:宋体;font-size:11.0pt;">惠泽智信：智</span><span style="font-family:'Times New Roman',serif;font-size:11.0pt;">“</span><span style="font-family:宋体;font-size:11.0pt;">惠</span><span style="font-family:'Times New Roman',serif;font-size:11.0pt;">”</span><span style="font-family:宋体;font-size:11.0pt;">医疗新时代的探路者</span><span style="font-family:'Times New Roman',serif;font-size:11.0pt;">. </span><span style="font-family:宋体;font-size:11.0pt;">第二届卓越开发者案例大奖赛三等奖，中国工商管理案例库。</span></p><p style="text-align:left;"><span style="font-family:宋体;font-size:11.0pt;">钱婧，徐逸凡，屈逸，王曾</span><span style="font-family:'Times New Roman',serif;font-size:11.0pt;">. 2019. </span><span style="font-family:宋体;font-size:11.0pt;">博赛矿业：新儒道企业的“出海”之旅</span><span style="font-family:'Times New Roman',serif;font-size:11.0pt;">. </span><span style="font-family:宋体;font-size:11.0pt;">第二届卓越开发者案例大奖赛二等奖，中国工商管理案例库。</span></p><p style="text-align:left;"><span style="font-family:宋体;font-size:11.0pt;">钱婧，杜佳忆，赵星，王曾，夏爱静</span><span style="font-family:宋体;font-size:11.0pt;">，徐逸凡，孙宇彤，张伟</span><span style="font-family:'Times New Roman',serif;font-size:11.0pt;">. 2019. </span><span style="font-family:宋体;font-size:11.0pt;">德源集团：下沉市场里的转型黑马</span><span style="font-family:'Times New Roman',serif;font-size:11.0pt;">. </span><span style="font-family:宋体;font-size:11.0pt;">中国管理案例共享中心案例库。</span></p><p style="text-align:left;"><span style="font-family:宋体;font-size:11.0pt;">钱婧，徐逸凡，屈逸，张伟，夏爱静，陈萌</span><span style="font-family:'Times New Roman',serif;font-size:11.0pt;">. 2019. </span><span style="font-family:宋体;font-size:11.0pt;">精于设计：游戏化管理如何</span><span style="font-family:'Times New Roman',serif;font-size:11.0pt;">“</span><span style="font-family:宋体;font-size:11.0pt;">打怪升级</span><span style="font-family:'Times New Roman',serif;font-size:11.0pt;">”. </span><span style="font-family:宋体;font-size:11.0pt;">中国管理案例共享中心案例库。</span></p><p style="text-align:left;"><span style="font-family:宋体;font-size:11.0pt;">钱婧，屈逸，张伟</span><span style="font-family:'Times New Roman',serif;font-size:11.0pt;">. 2018. </span><span style="font-family:宋体;font-size:11.0pt;">碰撞、融合和本地化：猎豹移动的跨文化管理实践</span><span style="font-family:'Times New Roman',serif;font-size:11.0pt;">. </span><span style="font-family:宋体;font-size:11.0pt;">第一届卓越开发者案例大奖赛二等奖，中国工商管理案例库。</span></p><p style="text-align:left;"><span style="font-family:宋体;font-size:11.0pt;">钱婧，孙宇彤，屈逸，徐沛翔，张惠茜，张伟，陈萌</span><span style="font-family:'Times New Roman',serif;font-size:11.0pt;">. 2018. </span><span style="font-family:宋体;font-size:11.0pt;">蜗牛睡眠：打开睡眠世界的创业之旅。第一届卓越开发者案例大奖赛三等奖，中国工商管理案例库。</span></p><p style="text-align:left;"><span style="font-family:宋体;font-size:11.0pt;">钱婧，屈逸，王斌，陈萌. 2018. 跳出思维盒子，颠覆英语课堂 ——盒子鱼的品牌定位之道.中国管理案例共享中心案例库。</span></p><p style="text-align:left;"><span style="font-family:宋体;font-size:11.0pt;">钱婧，屈逸，孙宇彤，徐逸凡，张伟，陈萌，杨付. 2018. 猿圈测评：基于效果的创业之路. 中国管理案例共享中心案例库。</span></p><p style="text-align:left;"><span style="font-family:宋体;font-size:11.0pt;">钱婧，王斌，宋百合，夏铭，王梦含，方一云. 2017. 回归本心，不畏浮云——高德地图的竞争战略。中国管理案例共享中心案例库。</span></p><p style="text-align:left;"><span style="font-family:宋体;font-size:11.0pt;">钱婧，宋百合，王斌，黄楚英，杨梓蔚. 2017. 大朴网——家居行业的破局者。中国管理案例共享中心案例库。</span></p><p style="text-align:left;"><span style="font-family:宋体;font-size:11.0pt;">钱婧，屈逸，王斌，肖可可. 2017. 切中痛点，无往不“氪”——企业服务平台氪空间的突围。中国管理案例共享中心案例库。 &nbsp;</span></p><p style="text-align:left;"><span style="font-family:宋体;font-size:11.0pt;">钱婧，王斌，方一云，金宇珂，宋百合. 2017. 住范儿：家装行业的突围者。中国工商管理国际案例库（The GlobalPlatform of China Cases）。</span></p><p style="text-align:left;"><span style="font-family:宋体;font-size:11.0pt;">钱婧，王梦含，宋百合，王斌. 2017. 起始于图，通达智略——捷泰的地理之道。中国管理案例共享中心案例库。</span></p><p style="text-align:left;"><span style="font-family:宋体;font-size:11.0pt;">钱婧，王斌，杨付，宋百合，欧芮利. 2016. “700Bike，一种生活”——700Bike社群营销策略。中国管理案例共享中心案例库。入选第七届“全国百篇优秀管理案例”。</span></p><p style="text-align:left;"><span style="font-family:宋体;font-size:11.0pt;">钱婧，王斌，高天茹，杨付. 2016. 挥手自兹去，三年创业情——锐派科技沉浮记。中国管理案例共享中心案例库。</span></p><p style="text-align:left;"><span style="font-family:宋体;font-size:11.0pt;">钱婧，王斌，高天茹. 2016. “多栖”IP养成记——《秦时明月》的得与失（编号:15041）.中国工商管理国际案例库（TheGlobal Platform of China Cases）。</span></p><p style="text-align:left;"><span style="font-family:宋体;font-size:11.0pt;">钱婧，王斌，高天茹，赵嘉辰. 2015. 跌落神坛的PM. 中国应用心理学案例中心案例库。</span></p><p style="text-align:left;"><span style="font-family:宋体;font-size:11.0pt;">韩卓，钱婧，王斌. 2015. 罗杰的故事. 中国应用心理学案例中心案例库。</span></p><p style="text-align:left;"><strong><span style="font-family:宋体;font-size:11.0pt;">商业期刊</span></strong></p><p style="text-align:left;"><span style="font-family:宋体;font-size:11.0pt;"></span></p><p style="text-align:left;"><span style="font-family:宋体;font-size:11.0pt;">钱婧，孙宇彤，屈逸，滕小菲，曾庆</span><span style="font-family:'Times New Roman',serif;font-size:11.0pt;">. 2020. </span><span style="font-family:宋体;font-size:11.0pt;">惠泽智信：智“惠”医疗新时代的探路者</span><span style="font-family:'Times New Roman',serif;font-size:11.0pt;">. </span><span style="font-family:宋体;font-size:11.0pt;">《清华管理评论》</span><span style="font-family:'Times New Roman',serif;font-size:11.0pt;">(Tsinghua Business Review)</span><span style="font-family:宋体;font-size:11.0pt;">，</span><span style="font-family:'Times New Roman',serif;font-size:11.0pt;">6, 122-130. </span></p><p style="text-align:left;"><span style="font-family:宋体;font-size:11.0pt;">钱婧，屈逸，夏爱静，杨茜茹</span><span style="font-family:'Times New Roman',serif;font-size:11.0pt;">. 2020. </span><span style="font-family:宋体;font-size:11.0pt;">高深智图：自动驾驶赛道的领航员</span><span style="font-family:'Times New Roman',serif;font-size:11.0pt;">. </span><span style="font-family:宋体;font-size:11.0pt;">《清华管理评论》</span><span style="font-family:'Times New Roman',serif;font-size:11.0pt;">(Tsinghua Business Review)</span><span style="font-family:宋体;font-size:11.0pt;">，</span><span style="font-family:'Times New Roman',serif;font-size:11.0pt;">3</span><span style="font-family:宋体;font-size:11.0pt;">，</span><span style="font-family:'Times New Roman',serif;font-size:11.0pt;">112-120.</span></p><p style="text-align:left;"><span style="font-family:宋体;font-size:11.0pt;">钱婧</span><span style="font-family:'Times New Roman',serif;font-size:11.0pt;">, </span><span style="font-family:宋体;font-size:11.0pt;">徐逸凡</span><span style="font-family:'Times New Roman',serif;font-size:11.0pt;">, </span><span style="font-family:宋体;font-size:11.0pt;">屈逸</span><span style="font-family:'Times New Roman',serif;font-size:11.0pt;">, </span><span style="font-family:宋体;font-size:11.0pt;">陈萌</span><span style="font-family:'Times New Roman',serif;font-size:11.0pt;">, </span><span style="font-family:宋体;font-size:11.0pt;">赵星</span><span style="font-family:'Times New Roman',serif;font-size:11.0pt;">. 2019. </span><span style="font-family:宋体;font-size:11.0pt;">精于</span><span style="font-family:'Times New Roman',serif;font-size:11.0pt;">: </span><span style="font-family:宋体;font-size:11.0pt;">游戏改变设计</span><span style="font-family:'Times New Roman',serif;font-size:11.0pt;">.</span><span style="font-family:宋体;font-size:11.0pt;">《中欧商业评论》</span><span style="font-family:'Times New Roman',serif;font-size:11.0pt;">(CEIBS Business Review), 2, 85-91.</span></p><p style="text-align:left;"><span style="font-family:宋体;font-size:11.0pt;">钱婧</span><span style="font-family:'Times New Roman',serif;font-size:11.0pt;">, </span><span style="font-family:宋体;font-size:11.0pt;">常书萌</span><span style="font-family:'Times New Roman',serif;font-size:11.0pt;">, </span><span style="font-family:宋体;font-size:11.0pt;">王斌</span><span style="font-family:'Times New Roman',serif;font-size:11.0pt;">, </span><span style="font-family:宋体;font-size:11.0pt;">屈逸</span><span style="font-family:'Times New Roman',serif;font-size:11.0pt;">. 2019. </span><span style="font-family:宋体;font-size:11.0pt;">氪空间：让办公更简单</span><span style="font-family:'Times New Roman',serif;font-size:11.0pt;">. </span><span style="font-family:宋体;font-size:11.0pt;">《清华管理评论》</span><span style="font-family:'Times New Roman',serif;font-size:11.0pt;">(Tsinghua Business Review), 1-2</span><span style="font-family:宋体;font-size:11.0pt;">合刊</span><span style="font-family:'Times New Roman',serif;font-size:11.0pt;">, 162-168.</span></p><p style="text-align:left;"><span style="font-family:宋体;font-size:11.0pt;">钱婧</span><span style="font-family:'Times New Roman',serif;font-size:11.0pt;">, </span><span style="font-family:宋体;font-size:11.0pt;">屈逸</span><span style="font-family:'Times New Roman',serif;font-size:11.0pt;">, </span><span style="font-family:宋体;font-size:11.0pt;">王斌</span><span style="font-family:'Times New Roman',serif;font-size:11.0pt;">. 2018. </span><span style="font-family:宋体;font-size:11.0pt;">盒子鱼：科技翻转英语课堂</span><span style="font-family:'Times New Roman',serif;font-size:11.0pt;">. </span><span style="font-family:宋体;font-size:11.0pt;">《清华管理评论》</span><span style="font-family:'Times New Roman',serif;font-size:11.0pt;">(Tsinghua Business Review), 5, 106-112.&nbsp;</span></p><p style="text-align:left;"><span style="font-family:宋体;font-size:11.0pt;">王斌</span><span style="font-family:'Times New Roman',serif;font-size:11.0pt;">, </span><span style="font-family:宋体;font-size:11.0pt;">钱婧</span><span style="font-family:'Times New Roman',serif;font-size:11.0pt;">. 2018. </span><span style="font-family:宋体;font-size:11.0pt;">方太</span><span style="font-family:'Times New Roman',serif;font-size:11.0pt;">, </span><span style="font-family:宋体;font-size:11.0pt;">何以因爱伟大</span><span style="font-family:'Times New Roman',serif;font-size:11.0pt;">. </span><span style="font-family:宋体;font-size:11.0pt;">《清华管理评论》</span><span style="font-family:'Times New Roman',serif;font-size:11.0pt;">(Tsinghua Business Review), 4, 96-102.</span></p><p style="text-align:left;"><span style="font-family:宋体;font-size:11.0pt;">钱婧</span><span style="font-family:'Times New Roman',serif;font-size:11.0pt;">, </span><span style="font-family:宋体;font-size:11.0pt;">王斌</span><span style="font-family:'Times New Roman',serif;font-size:11.0pt;">. 2017. </span><span style="font-family:宋体;font-size:11.0pt;">住范儿</span><span style="font-family:'Times New Roman',serif;font-size:11.0pt;">: </span><span style="font-family:宋体;font-size:11.0pt;">年轻的家装</span><span style="font-family:'Times New Roman',serif;font-size:11.0pt;">“</span><span style="font-family:宋体;font-size:11.0pt;">搅局者</span><span style="font-family:'Times New Roman',serif;font-size:11.0pt;">”. </span><span style="font-family:宋体;font-size:11.0pt;">《中欧商业评论》</span><span style="font-family:'Times New Roman',serif;font-size:11.0pt;">(CEIBS Business Review), 2, 97-103.</span></p><p style="text-align:left;"><span style="font-family:宋体;font-size:11.0pt;">钱婧</span><span style="font-family:'Times New Roman',serif;font-size:11.0pt;">, </span><span style="font-family:宋体;font-size:11.0pt;">王斌</span><span style="font-family:'Times New Roman',serif;font-size:11.0pt;">. 2017. </span><span style="font-family:宋体;font-size:11.0pt;">亲子猫</span><span style="font-family:'Times New Roman',serif;font-size:11.0pt;">: </span><span style="font-family:宋体;font-size:11.0pt;">徒步教育从心出发</span><span style="font-family:'Times New Roman',serif;font-size:11.0pt;">.</span><span style="font-family:宋体;font-size:11.0pt;">《清华管理评论》（</span><span style="font-family:'Times New Roman',serif;font-size:11.0pt;">Tsinghua Business Review), 3, 107-112.&nbsp;</span></p><p style="text-align:left;"><span style="font-family:宋体;font-size:11.0pt;">钱婧</span><span style="font-family:'Times New Roman',serif;font-size:11.0pt;">, </span><span style="font-family:宋体;font-size:11.0pt;">王斌</span><span style="font-family:'Times New Roman',serif;font-size:11.0pt;">. 2016. 700Bike: </span><span style="font-family:宋体;font-size:11.0pt;">撬动传统行业</span><span style="font-family:'Times New Roman',serif;font-size:11.0pt;">.</span><span style="font-family:宋体;font-size:11.0pt;">《清华管理评论》（</span><span style="font-family:'Times New Roman',serif;font-size:11.0pt;">Tsinghua Business Review</span><span style="font-family:宋体;font-size:11.0pt;">）</span><span style="font-family:'Times New Roman',serif;font-size:11.0pt;">, 5, 100-106.</span></p><p style="text-align:left;"><span style="font-family:宋体;font-size:11.0pt;">钱婧</span><span style="font-family:'Times New Roman',serif;font-size:11.0pt;">, </span><span style="font-family:宋体;font-size:11.0pt;">王斌</span><span style="font-family:'Times New Roman',serif;font-size:11.0pt;">. 2016. </span><span style="font-family:宋体;font-size:11.0pt;">垂衣</span><span style="font-family:'Times New Roman',serif;font-size:11.0pt;">: </span><span style="font-family:宋体;font-size:11.0pt;">掘金直男经济</span><span style="font-family:'Times New Roman',serif;font-size:11.0pt;">.</span><span style="font-family:宋体;font-size:11.0pt;">《清华管理评论》（</span><span style="font-family:'Times New Roman',serif;font-size:11.0pt;">Tsinghua Business Review</span><span style="font-family:宋体;font-size:11.0pt;">）</span><span style="font-family:'Times New Roman',serif;font-size:11.0pt;">,7-8,124-128.</span></p><span style="font-family:宋体;font-size:11.0pt;">钱婧</span><span style="font-family:'Times New Roman',serif;font-size:11.0pt;">,</span><span style="font-family:宋体;font-size:11.0pt;">王斌</span><span style="font-family:'Times New Roman',serif;font-size:11.0pt;">.2016. </span><span style="font-family:宋体;font-size:11.0pt;">智图</span><span style="font-family:'Times New Roman',serif;font-size:11.0pt;">GeoQ:“</span><span style="font-family:宋体;font-size:11.0pt;">看见</span><span style="font-family:'Times New Roman',serif;font-size:11.0pt;">”</span><span style="font-family:宋体;font-size:11.0pt;">商业的可能</span><span style="font-family:'Times New Roman',serif;font-size:11.0pt;">.</span><span style="font-family:宋体;font-size:11.0pt;">《清华管理评论》（</span><span style="font-family:'Times New Roman',serif;font-size:11.0pt;">Tsinghua Business Review</span><span style="font-family:宋体;font-size:11.0pt;">）</span><span style="font-family:'Times New Roman',serif;font-size:11.0pt;">,10,100-104.</span><strong><span style="font-family:宋体;font-size:11.0pt;"><br /></span></strong><span style="font-family:宋体;">&nbsp;</span><p style="text-align:left;"><strong><span style="font-family:宋体;font-size:11.0pt;">主要研究成果（国际会议）</span></strong></p><p style="text-align:left;"><span style="font-family:宋体;font-size:11.0pt;">Tseng, S. T., Zhang, X. Y., Levy, P. E., &amp;<strong>&nbsp;Qian, J.</strong>&nbsp;2020. Daily Impact of Supervisor Performance Management Behaviors on Employee NeedSatisfaction, Well-Being, and Job Attitudes: An experience samplingstudy.&nbsp;<strong><em>The Society for Industrial and Organizational Psychology's(SIOP) Annual Conference</em></strong>. Austin, Texas, USA, April 23-25.</span></p><p style="text-align:left;"><span style="font-family:宋体;font-size:11.0pt;">Zhang, X. Y., Levy, P. E., &amp;&nbsp;<strong>Qian, J.&nbsp;</strong>2020. Learning from Negative Feedback: Testing Feedback Intervention Theory.&nbsp;<strong><em>TheSociety for Industrial and Organizational Psychology's (SIOP) Annual Conference</em></strong>.&nbsp; Austin, Texas, USA, April 23-25.</span></p><p style="text-align:left;"><span style="font-family:宋体;font-size:11.0pt;">Liu, Y. K. Wang, B. Qian, J. &amp; Parker, S. 2020. Reflecting on Work Design for Improving Quality of Work: An Experiential Learning-Based Field Study. <em><strong>Academy of Management Annual Conference</strong></em>. Online, August 7-11, 2020.<br /></span></p><p style="text-align:left;"><span style="font-family:宋体;font-size:11.0pt;">Zhang, X. Y.,&nbsp;<strong>Qian, J.,&nbsp;</strong>&amp; Wang, B.,2018. Empowering Leadership and Employee Outcomes: Moderation and mediationeffects.&nbsp;<strong><em>The Society for Industrial and Organizational Psychology's(SIOP) Annual Conference</em></strong>. Chicago, USA, 19-21 April.</span></p><p style="text-align:left;"><strong><span style="font-family:宋体;font-size:11.0pt;">Qian, J</span></strong><span style="font-family:宋体;font-size:11.0pt;">., Song, B.H.,Wang, B. 2018. You ask, I may tell: Leaders’ feedback seeking as a mediator ofthe relationship between authentic leadership and employees’ voice behavior.International Association for Chinese Management Research (IACMR) Conference,Wuhan, China, 13-17 June.</span></p><p style="text-align:left;"><span style="font-family:宋体;font-size:11.0pt;">Chen, Z. J., &amp;<strong>Qian</strong>, J. 2017. How Does CoworkerPolitical Behavior Thwart Individual Taking Charge?&nbsp;<strong><em>Academy ofManagement Conference.&nbsp;</em></strong>Atlanta, USA, 4-7 August.</span></p><p style="text-align:left;"><strong><span style="font-family:宋体;font-size:11.0pt;">Qian, J</span></strong><span style="font-family:宋体;font-size:11.0pt;">., Jin, Z. Y.,Wang, B., &amp; Wang, H. W. 2016. When workplace ostracism leads to burnout:role of job self-determination and future time orientation.&nbsp;<strong><em>InternationalAssociation for Chinese Management Research Conference,&nbsp;</em></strong>Hangzhou,China, 15-19 June.</span></p><p style="text-align:left;"><span style="font-family:宋体;font-size:11.0pt;">Lin, X. S.,&nbsp;<strong>Qian, J.,&nbsp;</strong>&amp; Chen, Z. X.2014<strong>.</strong>Why will leaders choose transformational leadership to leadfollowers: an investigation from followers' perspective.&nbsp;<strong><em>InternationalAssociation for Chinese Management Research Conference,&nbsp;</em></strong>Beijing,China, 18-22 June.</span></p><p style="text-align:left;"><strong><span style="font-family:宋体;font-size:11.0pt;">Qian, J.,&nbsp;</span></strong><span style="font-family:宋体;font-size:11.0pt;">Lin, X. S., Chen, Z. X., Yuanyuan Yang, &amp; Bowen Tian. 2014. Whatmatters in the relationship between mentoring and job-related stress? Themoderating effects of protégés’ traditionality and trust in mentor.&nbsp;<strong><em>InternationalAssociation for Chinese Management Research Conference,&nbsp;</em></strong>Beijing,China, 18-22 June.</span></p><p style="text-align:left;"><strong><span style="font-family:宋体;font-size:11.0pt;">Qian, J.</span></strong><span style="font-family:宋体;font-size:11.0pt;">, Lin, X.S., &amp; Han, Z. R. 2013. The role of future time orientation in promotingemployees' feedback-seeking behavior.&nbsp;<strong><em>Academy of ManagementConference</em></strong>, Lake Buena Vista (Orlando), Florida, USA, 9-13 August.</span></p><p style="text-align:left;"><span style="font-family:宋体;font-size:11.0pt;">Lin, X. S., &amp;<strong>Qian, J.</strong>2013. Followers'influences on the emergence of transformational leadership: a dual-levelstudy.&nbsp;<strong><em>Academy of Management Conference</em></strong>, Lake Buena Vista(Orlando), Florida, USA, 9-13 August.</span></p><p style="text-align:left;"><span style="font-family:宋体;font-size:11.0pt;">Lin, X. S.,&nbsp;<strong>Qian, J.</strong>, Li, M. &amp; Chen, Z.X. 2011. How Does Growth Need Strength Influence Employee Outcomes? Roles ofHope, Leadership, and Culture.&nbsp;<strong><em>Academy of Management Conference</em></strong>,San Antonio, Texas, USA, 12-16 August.</span></p><p style="text-align:left;"><strong><span style="font-family:宋体;font-size:11.0pt;">Qian, J.</span></strong><span style="font-family:宋体;font-size:11.0pt;">, Lin, X.S., &amp; Chen, Z. X. 2010. Authentic Leadership and Feedback-Seeking Behavior:An examination of the cultural context of mediating processes in China.&nbsp;<strong><em>Australianand New Zealand Academy of Management Conference</em></strong>, Adelaide, Australia,7-10 December.</span></p><p style="text-align:left;"><strong><span style="font-family:宋体;font-size:11.0pt;">Qian, J.</span></strong><span style="font-family:宋体;font-size:11.0pt;">, Lin, X.S., &amp; Chen, Z. X. 2010. The Influencing Mechanisms of Authentic Leadershipon Feedback Seeking: A Cognitive/Emotive Model.&nbsp;<strong><em>Academy ofManagement Conference</em></strong>, Montreal, Canada, 6-10 August.</span></p><p style="text-align:left;"><span style="font-family:宋体;font-size:11.0pt;">Lin, X. S.,&nbsp;<strong>Qian, J.</strong>, Li, M., &amp; Chen, Z.X. 2010. Hopeful Followers Achieve More: The Role of Hope in Relationshipsbetween Transformational Leadership and Follower Outcomes.&nbsp;<strong><em>InternationalAssociation for Chinese Management Research Conference</em></strong>, Shanghai,China, 16-20 June.</span></p><p style="text-align:left;"><strong><span style="font-family:宋体;font-size:11.0pt;">Qian, J.</span></strong><span style="font-family:宋体;font-size:11.0pt;">, Hays, J., Chen, Z. X., &amp;Lin, X. S. 2009. Mentoring and Employee Job-induced Stress: An Examination ofthe Cultural Context on Mentoring Effects in China.&nbsp;<strong><em>Australian andNew Zealand Academy of Management Conference</em></strong>, Melbourne, Australia, 2-4December.</span></p><p style="text-align:left;"><strong><span style="font-family:宋体;font-size:11.0pt;">国内会议及研讨会</span></strong><span style="font-family:宋体;font-size:11.0pt;"><br />钱婧,&nbsp;屈逸，滕小菲，“老年的意义——百岁时代老年人的价值与赋能”，<strong>人的发展经济学研究中心2019年度课题中期研讨会</strong>，北京，2019年10月。</span></p><p style="text-align:left;"><span style="font-family:宋体;font-size:11.0pt;">钱婧，陈萌，“职场排斥对员工反馈寻求行为的影响机制——基于情感事件理论的视角”，<strong>第十三届中国管理学年会</strong>，杭州，2018年11月。</span></p><p style="text-align:left;"><span style="font-family:宋体;font-size:11.0pt;">钱婧，“案例写作与教学分享”，<strong>北京师范大学心理学部案例作者研讨会</strong>，北京，2017年5月。</span></p><p style="text-align:left;"><span style="font-family:宋体;font-size:11.0pt;">钱婧，“真我领导与中层领导寻求反馈行为：一个调节的中介模型”，<strong>第十届中国管理学年会</strong>，合肥，2015年11月。</span></p><p style="text-align:left;"><span style="font-family:宋体;font-size:11.0pt;">钱婧，王海湾，“领导的榜样作用对员工寻求反馈行为的促进——一个调节的中介模型”，<strong>北京师范大学宏观经济管理与企业行为研讨会</strong>，北京，2015年6月。</span></p><p style="text-align:left;"><span style="font-family:宋体;font-size:11.0pt;">钱婧，林晓松，陈镇雄，“畅想未来，脚踏实地——基于津巴多时间维度理论与实践性希望理论对90后员工的激励机制与绩效管理的研究”，<strong>中国劳动学会劳动科学教育分会年会</strong>，西安，2012年10月（该论文被评为会议优秀论文）。</span></p></div>
+                    
+                </div>				<div class="grjj">
+                    <p class="jjh">研究课题</p>
+                  
+                    <div class="bks1"><span style="font-size:16px;"><strong>主要研究项目</strong></span><ol class=" list-paddingleft-2" style="margin-top: 0px; margin-bottom: 0px; margin-left: 0px; width: 1520.94px; padding-left: 30px; font-family: " microsoft="" yahei="" font-size:16px=""><li style="clear: both;"><p><span microsoft="" yahei="" style="font-family:微软雅黑, ;font-size:16px;">2017-2020年：主持国家自然科学基金面上项目“反馈寻求行为对工作结果的影响：基于神经生理学视角的研究“。</span></p></li><li style="clear: both;"><span microsoft="" yahei="" style="font-family:微软雅黑, ;font-size:16px;">2021-2022年：主持中国残联课题残疾人辅助器具专项“数字化辅助技术对孤独症儿童干预效果的影响:基于家庭和机构双视⻆的研究”。<br /></span></li><li style="clear: both;"><p><span microsoft="" yahei="" style="font-family:微软雅黑, ;font-size:16px;">2014-2016年：主持国家自然科学基金青年项目“中层领导寻求反馈行为的发展及其影响：一项追踪研究”。</span></p></li><li style="clear: both;"><span microsoft="" yahei="" style="font-family:微软雅黑, ;font-size:16px;">2019-2021年：主持北京师范大学经济与工商管理学院拔尖人才支持计划。<br /></span></li><li style="clear: both;"><p><span microsoft="" yahei="" style="font-family:微软雅黑, ;font-size:16px;">2019年：主持人的发展经济学研究中心基金项目“老年人力资源的价值与赋能——基于发展心理学视角的研究”。</span></p></li><li style="clear: both;"><p><span microsoft="" yahei="" style="font-family:微软雅黑, ;font-size:16px;">2014-2015年：主持教育部留学回国人员科研启动基金项目“导师制对员工焦虑症状的影响”（第47批：教外司留[2013]1792号）。</span></p></li><li style="clear: both;"><p><span microsoft="" yahei="" style="font-family:微软雅黑, ;font-size:16px;">2014-2015年：主持北京师范大学自主科研基金项目“导师制对员工压力的影响：基于权变视角的实证研究”。</span></p></li><li style="clear: both;"><p><span microsoft="" yahei="" style="font-family:微软雅黑, ;font-size:16px;">2012-2014年：主持北京师范大学经济与工商管理学院青年教师前期资助项目“导师制效果的非线性研究”。</span></p></li><li style="clear: both;"><p><span microsoft="" yahei="" style="font-family:微软雅黑, ;font-size:16px;">2016-2018年：参与国家自然科学基金青年项目“探索儿童情绪调节在家庭因素影响焦虑症状过程中的中介效应”（第一参与人）。</span></p></li><li style="clear: both;"><p><span microsoft="" yahei="" style="font-family:微软雅黑, ;font-size:16px;">2014-2015年：参与北京市自然科学基金青年项目“家庭累计危机对初显期成年心理病症的影响：神经生理反应与情绪调节的中介效应”（第一参与人）。</span></p></li><li style="clear: both;"><p><span microsoft="" yahei="" style="font-family:微软雅黑, ;font-size:16px;">2014-2015年：参与北京师范大学自主科研基金项目“焦虑症状儿童情绪调节与家庭病因分析”（第一参与人）。</span></p></li><li style="clear: both;"><p><span microsoft="" yahei="" style="font-family:微软雅黑, ;font-size:16px;">2014-2015年：参与北京师范大学自主科研基金项目“企业绿色创新行为的影响因素与形成路径研究——从管理者环境态度与压力感知的视角”。</span></p></li></ol><p style="font-family: " microsoft="" yahei="" font-size:16px=""><span style="font-size:16px;"><strong>主要教学项目</strong></span></p><ol><li><span style="font-family:微软雅黑, ;font-size:16px;">2021-2022年：主持北京师范大学优质英文课程建设项目“瀚德实验班管理学课程建设”。</span></li><li><span style="font-family:微软雅黑, ;font-size:16px;">2016-2017年：主持北京师范大学教师发展基金项目“体验式教学法在瀚德实验班管理学课程中的运用”</span></li><li><span style="font-family:微软雅黑, ;font-size:16px;">2014-2015年：主持<span style="font-family:微软雅黑, ;font-size:16px;">北京师范大学教师发展基金项目“</span><span style="font-family:等线;font-size:10.5pt;"></span><span style="font-family:微软雅黑, ;font-size:16px;">体验式教学法在</span>学术型研究生课程中的应用“<br /></span></li></ol></div>
+                    
+                </div>				<div class="grjj">
+                    <p class="jjh">学生情况</p>
+                    <div class="bks1"><p><span style="font-size:16px;"><span microsoft="" yahei="" font-size:16px="" style="">招收学术研究生、MBA和博士研究生。欢迎对学术感兴趣、有想法、勤奋务实的同学联系报考。</span></span></p><p><span style="font-size:16px;"><span microsoft="" yahei="" font-size:16px="" style=""><br /></span></span></p></div>
+                    
+                </div>				<div class="grjj">
+                    <p class="jjh">教授课程</p>
+                    <div class="bks1"><br /><p style="font-family: " microsoft="" yahei="" font-size:16px=""><span style="font-size:16px;">应用心理学</span></p><p style="font-family: " microsoft="" yahei="" font-size:16px=""><span style="font-size:16px;"></span></p><p style="font-family: "><span style="font-size:16px;"><span style="font-size:16px;"><span style="font-size:16px;">人力资源管理</span></span><br /></span></p><p style="font-family: "><span style="font-size:16px;">组织行为学</span></p><p style="font-family: "><span style="font-size:16px;">管理学<br /></span></p><p style="font-family: " microsoft="" yahei="" font-size:16px=""><span style="font-size:16px;">心理测量</span><br /></p></div>
+                    
+                </div>            </div>
+        </div>
+         <footer style="overflow: hidden;">
+            <div class="footers">
+                <div class="footersl">
+                    <img src="http://bs.bnu.edu.cn/newweb/images/ewm.jpg" alt="" class="imgewm">
+                    <div class="footerxx">
+                        <p>Copyright © 2020 北京师范大学经济与工商管理学院</p>
+                        <p><i class="fas fa-map-marker-alt"></i> 地址：北京市新街口外大街19号</p>
+                        <p><i class="fas fa-portrait"></i> 传真：010-58801867</p>
+                        <p><i class="fas fa-phone"></i> 电话：010-58801867</p>
+                        <p><i class="fas fa-envelope"></i> 邮编：100875</p>
+                    </div>
+                </div>
+                <img src="http://bs.bnu.edu.cn/newweb/images/db.png" alt="" width="140" class="dbimg">
+                <img src="http://bs.bnu.edu.cn/newweb/images/yx.png" alt="" class="yuanxun">
+            </div>
+        </footer>
+    </div>
+	<div class="share">
+		  <div id="appgame-leftside-share">
+	        <div class="appgame-leftside-share rwt_share" id="rwt_share">
+	         
+	        <!--<a class="appgame-leftside-search" data-cmd="search" title="search"  href="javascript:void(0);" onclick="opens('id')">search</a> --> <!--<div class="searchs" id="id">
+	         <form name="dataForm" action="/cms/search/searchResults.jsp" target="_blank" method="post" accept-Charset="utf-8"  onsubmit="document.charset='utf-8';">
+			        	<p>
+			        		<input name="siteID" size="4" value="127" type = "hidden">
+			        		<input type="text" name="query" id="search" class="searchInput" value="输入搜索词">
+			        		<button type="submit"></button>
+			        	</p>
+			        	</form>
+			        </div>-->
+			        <!-- <a class="appgame-leftside-weixin" data-cmd="weixin" title="">微信</a> -->
+                    
+			        <!-- <a class="appgame-leftside-qzone" data-cmd="qzone" title="">qq空间</a>
+			        
+			        <a class="appgame-leftside-tsina" data-cmd="tsina" title="">微博</a> -->			    </div>
+			        <a class="appgame-leftside-top" onclick="gotoTPoint()"></a>			</div>
+			        
+		</div>
+</body>
+<script src="http://gh.bnu.edu.cn/js/jquery-1.9.0.min.js"></script>
+<script src="http://gh.bnu.edu.cn/js/share.min.js"></script>
+<script>
+    var dj=document.getElementById('dianji');
+    var jjc=document.getElementById('jjc');
+    var dj1=document.getElementById('dianji1');
+    var jjc1=document.getElementById('jjc1');
+    var a=1;
+    function zhedie(m,n){
+        m.onclick=function(){
+            if(a==1){
+                n.className='jjc';
+                m.className='dianji1'
+                a=0;
+            }else{
+                n.className='jjc1';
+                m.className='dianji'
+                a=1;
+            }
+        }
+    }
+    zhedie(dj,jjc);
+    zhedie(dj1,jjc1);
+	
+	
+</script>
+<script>
+
+	
+	
+    
+
+    /*回到顶部*/
+	$(function(){
+	 	$(window).resize(function(){
+						var h = $(window).height();
+						$('.goTop').css('top',h-60);
+						$(window).scroll(function(){				
+							var scrollTop = $(document).scrollTop();					  
+							$('.goTop').stop().animate({
+								top: h + scrollTop-60
+							},300);
+						});
+		}).resize();
+		});
+	//gotop
+
+			$('.goTop').click(function(){
+
+				$('body,html').stop().animate({scrollTop:0});
+
+				return false;
+
+			});
+	
+	function gotoTPoint(){
+		$("html,body").animate({scrollTop:0},500);
+	}
+</script>
+</html>

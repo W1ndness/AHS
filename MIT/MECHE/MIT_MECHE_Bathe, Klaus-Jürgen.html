@@ -1,0 +1,1087 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><script type="text/javascript">(window.NREUM||(NREUM={})).init={ajax:{deny_list:["bam.nr-data.net"]}};(window.NREUM||(NREUM={})).loader_config={licenseKey:"ab0374a39e",applicationID:"39297557"};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var i=e[n]={exports:{}};t[n][0].call(i.exports,function(e){var i=t[n][1][e];return r(i||e)},i,i.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(t,e,n){function r(){}function i(t,e,n,r){return function(){return s.recordSupportability("API/"+e+"/called"),o(t+e,[u.now()].concat(c(arguments)),n?null:this,r),n?void 0:this}}var o=t("handle"),a=t(9),c=t(10),f=t("ee").get("tracer"),u=t("loader"),s=t(4),d=NREUM;"undefined"==typeof window.newrelic&&(newrelic=d);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",v=l+"ixn-";a(p,function(t,e){d[e]=i(l,e,!0,"api")}),d.addPageAction=i(l,"addPageAction",!0),d.setCurrentRouteName=i(l,"routeName",!0),e.exports=newrelic,d.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(t,e){var n={},r=this,i="function"==typeof e;return o(v+"tracer",[u.now(),t,n],r),function(){if(f.emit((i?"":"no-")+"fn-start",[u.now(),r,i],n),i)try{return e.apply(this,arguments)}catch(t){throw f.emit("fn-err",[arguments,this,t],n),t}finally{f.emit("fn-end",[u.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){m[e]=i(v,e)}),newrelic.noticeError=function(t,e){"string"==typeof t&&(t=new Error(t)),s.recordSupportability("API/noticeError/called"),o("err",[t,u.now(),!1,e])}},{}],2:[function(t,e,n){function r(t){if(NREUM.init){for(var e=NREUM.init,n=t.split("."),r=0;r<n.length-1;r++)if(e=e[n[r]],"object"!=typeof e)return;return e=e[n[n.length-1]]}}e.exports={getConfiguration:r}},{}],3:[function(t,e,n){var r=!1;try{var i=Object.defineProperty({},"passive",{get:function(){r=!0}});window.addEventListener("testPassive",null,i),window.removeEventListener("testPassive",null,i)}catch(o){}e.exports=function(t){return r?{passive:!0,capture:!!t}:!!t}},{}],4:[function(t,e,n){function r(t,e){var n=[a,t,{name:t},e];return o("storeMetric",n,null,"api"),n}function i(t,e){var n=[c,t,{name:t},e];return o("storeEventMetrics",n,null,"api"),n}var o=t("handle"),a="sm",c="cm";e.exports={constants:{SUPPORTABILITY_METRIC:a,CUSTOM_METRIC:c},recordSupportability:r,recordCustom:i}},{}],5:[function(t,e,n){function r(){return c.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,c=t(11);e.exports=r,e.exports.offset=a,e.exports.getLastTimestamp=i},{}],6:[function(t,e,n){function r(t,e){var n=t.getEntries();n.forEach(function(t){"first-paint"===t.name?l("timing",["fp",Math.floor(t.startTime)]):"first-contentful-paint"===t.name&&l("timing",["fcp",Math.floor(t.startTime)])})}function i(t,e){var n=t.getEntries();if(n.length>0){var r=n[n.length-1];if(u&&u<r.startTime)return;var i=[r],o=a({});o&&i.push(o),l("lcp",i)}}function o(t){t.getEntries().forEach(function(t){t.hadRecentInput||l("cls",[t])})}function a(t){var e=navigator.connection||navigator.mozConnection||navigator.webkitConnection;if(e)return e.type&&(t["net-type"]=e.type),e.effectiveType&&(t["net-etype"]=e.effectiveType),e.rtt&&(t["net-rtt"]=e.rtt),e.downlink&&(t["net-dlink"]=e.downlink),t}function c(t){if(t instanceof y&&!w){var e=Math.round(t.timeStamp),n={type:t.type};a(n),e<=v.now()?n.fid=v.now()-e:e>v.offset&&e<=Date.now()?(e-=v.offset,n.fid=v.now()-e):e=v.now(),w=!0,l("timing",["fi",e,n])}}function f(t){"hidden"===t&&(u=v.now(),l("pageHide",[u]))}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var u,s,d,p,l=t("handle"),v=t("loader"),m=t(8),g=t(3),y=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){s=new PerformanceObserver(r);try{s.observe({entryTypes:["paint"]})}catch(h){}d=new PerformanceObserver(i);try{d.observe({entryTypes:["largest-contentful-paint"]})}catch(h){}p=new PerformanceObserver(o);try{p.observe({type:"layout-shift",buffered:!0})}catch(h){}}if("addEventListener"in document){var w=!1,b=["click","keydown","mousedown","pointerdown","touchstart"];b.forEach(function(t){document.addEventListener(t,c,g(!1))})}m(f)}},{}],7:[function(t,e,n){function r(t,e){if(!i)return!1;if(t!==i)return!1;if(!e)return!0;if(!o)return!1;for(var n=o.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var c=navigator.userAgent,f=c.match(a);f&&c.indexOf("Chrome")===-1&&c.indexOf("Chromium")===-1&&(i="Safari",o=f[1])}e.exports={agent:i,version:o,match:r}},{}],8:[function(t,e,n){function r(t){function e(){t(c&&document[c]?document[c]:document[o]?"hidden":"visible")}"addEventListener"in document&&a&&document.addEventListener(a,e,i(!1))}var i=t(3);e.exports=r;var o,a,c;"undefined"!=typeof document.hidden?(o="hidden",a="visibilitychange",c="visibilityState"):"undefined"!=typeof document.msHidden?(o="msHidden",a="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(o="webkitHidden",a="webkitvisibilitychange",c="webkitVisibilityState")},{}],9:[function(t,e,n){function r(t,e){var n=[],r="",o=0;for(r in t)i.call(t,r)&&(n[o]=e(r,t[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],10:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,i=n-e||0,o=Array(i<0?0:i);++r<i;)o[r]=t[e+r];return o}e.exports=r},{}],11:[function(t,e,n){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(t,e,n){function r(){}function i(t){function e(t){return t&&t instanceof r?t:t?u(t,f,a):a()}function n(n,r,i,o,a){if(a!==!1&&(a=!0),!l.aborted||o){t&&a&&t(n,r,i);for(var c=e(i),f=m(n),u=f.length,s=0;s<u;s++)f[s].apply(c,r);var p=d[w[n]];return p&&p.push([b,n,r,c]),c}}function o(t,e){h[t]=m(t).concat(e)}function v(t,e){var n=h[t];if(n)for(var r=0;r<n.length;r++)n[r]===e&&n.splice(r,1)}function m(t){return h[t]||[]}function g(t){return p[t]=p[t]||i(n)}function y(t,e){l.aborted||s(t,function(t,n){e=e||"feature",w[n]=e,e in d||(d[e]=[])})}var h={},w={},b={on:o,addEventListener:o,removeEventListener:v,emit:n,get:g,listeners:m,context:e,buffer:y,abort:c,aborted:!1};return b}function o(t){return u(t,f,a)}function a(){return new r}function c(){(d.api||d.feature)&&(l.aborted=!0,d=l.backlog={})}var f="nr@context",u=t("gos"),s=t(9),d={},p={},l=e.exports=i();e.exports.getOrSetContext=o,l.backlog=d},{}],gos:[function(t,e,n){function r(t,e,n){if(i.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return t[e]=r,r}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){i.buffer([t],r),i.emit(t,e,n)}var i=t("ee").get("handle");e.exports=r,r.ee=i},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,o,function(){return i++})}var i=1,o="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!M++){var t=T.info=NREUM.info,e=m.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&e))return u.abort();f(x,function(e,n){t[e]||(t[e]=n)});var n=a();c("mark",["onload",n+T.offset],null,"api"),c("timing",["load",n]);var r=m.createElement("script");0===t.agent.indexOf("http://")||0===t.agent.indexOf("https://")?r.src=t.agent:r.src=l+"://"+t.agent,e.parentNode.insertBefore(r,e)}}function i(){"complete"===m.readyState&&o()}function o(){c("mark",["domContent",a()+T.offset],null,"api")}var a=t(5),c=t("handle"),f=t(9),u=t("ee"),s=t(7),d=t(2),p=t(3),l=d.getConfiguration("ssl")===!1?"http":"https",v=window,m=v.document,g="addEventListener",y="attachEvent",h=v.XMLHttpRequest,w=h&&h.prototype,b=!1;NREUM.o={ST:setTimeout,SI:v.setImmediate,CT:clearTimeout,XHR:h,REQ:v.Request,EV:v.Event,PR:v.Promise,MO:v.MutationObserver};var E=""+location,x={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1216.min.js"},O=h&&w&&w[g]&&!/CriOS/.test(navigator.userAgent),T=e.exports={offset:a.getLastTimestamp(),now:a,origin:E,features:{},xhrWrappable:O,userAgent:s,disabled:b};if(!b){t(1),t(6),m[g]?(m[g]("DOMContentLoaded",o,p(!1)),v[g]("load",r,p(!1))):(m[y]("onreadystatechange",i),v[y]("onload",r)),c("mark",["firstbyte",a.getLastTimestamp()],null,"api");var M=0}},{}],"wrap-function":[function(t,e,n){function r(t,e){function n(e,n,r,f,u){function nrWrapper(){var o,a,s,p;try{a=this,o=d(arguments),s="function"==typeof r?r(o,a):r||{}}catch(l){i([l,"",[o,a,f],s],t)}c(n+"start",[o,a,f],s,u);try{return p=e.apply(a,o)}catch(v){throw c(n+"err",[o,a,v],s,u),v}finally{c(n+"end",[o,a,p],s,u)}}return a(e)?e:(n||(n=""),nrWrapper[p]=e,o(e,nrWrapper,t),nrWrapper)}function r(t,e,r,i,o){r||(r="");var c,f,u,s="-"===r.charAt(0);for(u=0;u<e.length;u++)f=e[u],c=t[f],a(c)||(t[f]=n(c,s?f+r:r,i,f,o))}function c(n,r,o,a){if(!v||e){var c=v;v=!0;try{t.emit(n,r,o,e,a)}catch(f){i([f,n,r,o],t)}v=c}}return t||(t=s),n.inPlace=r,n.flag=p,n}function i(t,e){e||(e=s);try{e.emit("internal-error",t)}catch(n){}}function o(t,e,n){if(Object.defineProperty&&Object.keys)try{var r=Object.keys(t);return r.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(o){i([o],n)}for(var a in t)l.call(t,a)&&(e[a]=t[a]);return e}function a(t){return!(t&&t instanceof Function&&t.apply&&!t[p])}function c(t,e){var n=e(t);return n[p]=t,o(t,n,s),n}function f(t,e,n){var r=t[e];t[e]=c(r,n)}function u(){for(var t=arguments.length,e=new Array(t),n=0;n<t;++n)e[n]=arguments[n];return e}var s=t("ee"),d=t(10),p="nr@original",l=Object.prototype.hasOwnProperty,v=!1;e.exports=r,e.exports.wrapFunction=c,e.exports.wrapInPlace=f,e.exports.argsToArray=u},{}]},{},["loader"]);</script>
+        <title>MECHE PEOPLE: Klaus-Jürgen Bathe | MIT Department of Mechanical Engineering</title>
+        <meta name="description" content="MIT's Department of Mechanical Engineering (MechE) offers a world-class education that combines thorough analysis with hands-on discovery. One of the original six courses offered when MIT was founded in 1865, MechE's faculty and students conduct research that pushes boundaries and provides creative solutions for the world's problems.">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1">
+        <!--[if lt IE 9]>
+            <link href='http://fonts.googleapis.com/css?family=Rajdhani:300' rel='stylesheet' type='text/css' data-norem>
+            <link href='http://fonts.googleapis.com/css?family=Rajdhani:400' rel='stylesheet' type='text/css' data-norem>
+            <link href='http://fonts.googleapis.com/css?family=Rajdhani:500' rel='stylesheet' type='text/css' data-norem>
+            <link href='http://fonts.googleapis.com/css?family=Rajdhani:600' rel='stylesheet' type='text/css' data-norem>
+            <link href='http://fonts.googleapis.com/css?family=Rajdhani:700' rel='stylesheet' type='text/css' data-norem>
+            <link href='http://fonts.googleapis.com/css?family=Rajdhani:300' rel='stylesheet' type='text/css' data-norem>
+            <link href='http://fonts.googleapis.com/css?family=Rajdhani:300italic' rel='stylesheet' type='text/css' data-norem>
+            <link href='http://fonts.googleapis.com/css?family=Rajdhani:400' rel='stylesheet' type='text/css' data-norem>
+            <link href='http://fonts.googleapis.com/css?family=Rajdhani:400italic' rel='stylesheet' type='text/css' data-norem>
+            <link href='http://fonts.googleapis.com/css?family=Rajdhani:600' rel='stylesheet' type='text/css' data-norem>
+            <link href='http://fonts.googleapis.com/css?family=Rajdhani:600italic' rel='stylesheet' type='text/css' data-norem>
+            <link href='http://fonts.googleapis.com/css?family=Rajdhani:700' rel='stylesheet' type='text/css' data-norem>
+            <link href='http://fonts.googleapis.com/css?family=Rajdhani:700italic' rel='stylesheet' type='text/css' data-norem>
+        <![endif]-->
+
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="Generator" content="Drupal 7 (http://drupal.org)" />
+<meta name="format-detection" content="telephone=no"/><link rel="shortcut icon" href="http://meche.mit.edu/sites/all/themes/mit_meche/favicon.ico" type="image/vnd.microsoft.icon" />
+        <link type="text/css" rel="stylesheet" href="http://meche.mit.edu/sites/default/files/css/css_xE-rWrJf-fncB6ztZfd2huxqgxu4WO-qwma6Xer30m4.css" media="all" />
+<link type="text/css" rel="stylesheet" href="http://meche.mit.edu/sites/default/files/css/css_yqfEEn3F5mXOC0UUFM4YKvpmMs9qQxvb1Jy9f6FVT5Y.css" media="all" />
+<link type="text/css" rel="stylesheet" href="http://meche.mit.edu/sites/default/files/css/css_GckY0EjoR6WBLjIENeNuZVvw3ojQ1Mjn5COL87fZnj8.css" media="all" />
+        <script type="text/javascript" src="http://meche.mit.edu/sites/default/files/js/js_YD9ro0PAqY25gGWrTki6TjRUG8TdokmmxjfqpNNfzVU.js"></script>
+<script type="text/javascript" src="http://meche.mit.edu/sites/default/files/js/js_rsGiM5M1ffe6EhN-RnhM5f3pDyJ8ZAPFJNKpfjtepLk.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+(function(i,s,o,g,r,a,m){i["GoogleAnalyticsObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,"script","https://www.google-analytics.com/analytics.js","ga");ga("create", "UA-2242837-1", {"cookieDomain":"auto"});ga("set", "anonymizeIp", true);ga('create', 'UA-1592615-30',{'name':'mitsitewide'});ga("send", "pageview");ga('mitsitewide.send','pageview');
+//--><!]]>
+</script>
+<script type="text/javascript" src="http://meche.mit.edu/sites/default/files/js/js_uVZxTz_aN3L7bgFGkqfygEck8aPPFnm3VAGf9QBBomY.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings, {"basePath":"\/","pathPrefix":"","setHasJsCookie":0,"ajaxPageState":{"theme":"mit_meche","theme_token":"IoO8gw7SnUDzUWNlSYvCAY_oCPx3WYLc8DUhvnMkDXY","js":{"misc\/jquery.js":1,"misc\/jquery-extend-3.4.0.js":1,"misc\/jquery-html-prefilter-3.5.0-backport.js":1,"misc\/jquery.once.js":1,"misc\/drupal.js":1,"sites\/all\/modules\/contrib\/google_analytics\/googleanalytics.js":1,"0":1,"sites\/all\/themes\/mit_meche\/js\/vendor\/video.js":1,"sites\/all\/themes\/mit_meche\/js\/vendor\/video.youtube.js":1,"sites\/all\/themes\/mit_meche\/js\/modernizr.prod.min.js":1},"css":{"modules\/system\/system.base.css":1,"modules\/system\/system.menus.css":1,"modules\/system\/system.messages.css":1,"modules\/system\/system.theme.css":1,"sites\/all\/modules\/contrib\/calendar\/css\/calendar_multiday.css":1,"modules\/comment\/comment.css":1,"sites\/all\/modules\/contrib\/date\/date_api\/date.css":1,"sites\/all\/modules\/contrib\/date\/date_popup\/themes\/datepicker.1.7.css":1,"modules\/field\/theme\/field.css":1,"modules\/node\/node.css":1,"modules\/user\/user.css":1,"sites\/all\/modules\/contrib\/views\/css\/views.css":1,"sites\/all\/modules\/contrib\/media\/modules\/media_wysiwyg\/css\/media_wysiwyg.base.css":1,"sites\/all\/modules\/contrib\/ctools\/css\/ctools.css":1,"sites\/all\/modules\/contrib\/shib_auth\/shib_auth.css":1,"modules\/search\/search.css":1,"sites\/all\/themes\/mit_meche\/css\/foundation.min.css":1,"sites\/all\/themes\/mit_meche\/css\/style.css":1,"sites\/all\/themes\/mit_meche\/css\/tablesaw.stackonly.css":1,"sites\/all\/themes\/mit_meche\/css\/video-js.css":1,"sites\/all\/themes\/mit_meche\/css\/vjs-sublime-skin.css":1,"https:\/\/cdnjs.cloudflare.com\/ajax\/libs\/jquery-modal\/0.9.1\/jquery.modal.min.css":1,"sites\/all\/themes\/mit_meche\/css\/extra.css":1}},"urlIsAjaxTrusted":{"\/people\/faculty\/kjb@mit.edu":true},"googleanalytics":{"trackOutbound":1,"trackMailto":1,"trackDownload":1,"trackDownloadExtensions":"7z|aac|arc|arj|asf|asx|avi|bin|csv|doc(x|m)?|dot(x|m)?|exe|flv|gif|gz|gzip|hqx|jar|jpe?g|js|mp(2|3|4|e?g)|mov(ie)?|msi|msp|pdf|phps|png|ppt(x|m)?|pot(x|m)?|pps(x|m)?|ppam|sld(x|m)?|thmx|qtm?|ra(m|r)?|sea|sit|tar|tgz|torrent|txt|wav|wma|wmv|wpd|xls(x|m|b)?|xlt(x|m)|xlam|xml|z|zip"}});
+//--><!]]>
+</script>
+
+        <!-- Inlined Modernizr extensions to prevent delayed position jump ( Must be after Modernizr load ) -->
+        <script>
+            ;(function(Modernizr, window) {
+                Modernizr.addTest('positionfixed', function () {
+                    var test  = document.createElement('div'),
+                        control = test.cloneNode(false),
+                            fake = false,
+                            root = document.body || (function () {
+                            fake = true;
+                            return document.documentElement.appendChild(document.createElement('body'));
+                        }());
+
+                    var oldCssText = root.style.cssText;
+                    root.style.cssText = 'padding:0;margin:0';
+                    test.style.cssText = 'position:fixed;top:42px';
+                    root.appendChild(test);
+                    root.appendChild(control);
+               
+                    var ret = test.offsetTop !== control.offsetTop;
+               
+                    root.removeChild(test);
+                    root.removeChild(control);
+                    root.style.cssText = oldCssText;
+               
+                    if (fake) {
+                        document.documentElement.removeChild(root);
+                    }
+               
+                    return ret;
+                });
+                
+                Modernizr.addTest('iospositionfixed', function () {
+                    var test  = document.createElement('div'),
+                        ret,
+                        fake = false,
+                        root = document.body || (function () {
+                            fake = true;
+                            return document.documentElement.appendChild(document.createElement('body'));
+                        }());
+                    
+                    if (typeof document.body.scrollIntoViewIfNeeded === 'function') {
+                    
+                        var oldCssText = root.style.cssText,
+                            testScrollTop = 20,
+                            originalScrollTop = window.pageYOffset;
+
+                        root.appendChild(test);
+
+                        test.style.cssText = 'position:fixed;top:0px;height:10px;';
+
+                        root.style.height="3000px";
+                        
+                        /* avoided hoisting for clarity */
+                        var testScroll = function() {
+                            if (ret === undefined) {
+                                test.scrollIntoViewIfNeeded();
+                                if (window.pageYOffset === testScrollTop) {
+                                    ret = true;
+                                } else {
+                                    ret = false;
+                                }
+                            }
+                            window.removeEventListener('scroll', testScroll, false);
+                        }
+
+                        try {
+                        window.addEventListener('scroll', testScrollTop, false);
+                        }
+                        catch(err) {
+                        //      
+                        }
+                        
+                        window.setTimeout(testScroll, 20); // ios 4 does'nt publish the scroll event on scrollto
+                        window.scrollTo(0, testScrollTop);
+                        testScroll();
+
+                        root.removeChild(test);
+                        root.style.cssText = oldCssText;
+                        window.scrollTo(0, originalScrollTop);
+
+                    } else {
+                        ret = Modernizr.positionfixed; // firefox and IE doesnt have document.body.scrollIntoViewIfNeeded, so we test with the original modernizr test
+                    }
+                        
+                    if (fake) {
+                        document.documentElement.removeChild(root);
+                    }
+
+                    return ret;
+                });
+            })(Modernizr, window);
+        </script>
+
+        <!-- Inlined loading of web fonts to prevent FOUT -->
+        <script src="//ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont.js"></script>
+
+        <!-- New handler for font load so MecheController can be initialized once fonts are available -->
+        <script>
+            (function() {
+
+                var controllerUpdated = false;
+                var wait;
+
+                function updateControllerFonts() {
+                    
+                    if(typeof MecheController != "undefined") {
+                        clearInterval(wait);
+                        MecheController.initWithFonts();
+                        
+                    }
+                }
+
+                function onFontsLoaded() {
+                   
+                    if(typeof MecheController != "undefined") {
+                        MecheController.initWithFonts();
+                    } else {
+                        wait = setInterval(updateControllerFonts, 50);
+                    }
+                }
+                // load fonts
+                window.WebFontConfig
+                WebFont.load( {
+
+                        google: {
+                                families: ['Open Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700', 'Rajdhani:300,400,500,600,700']
+                        },
+                        active : onFontsLoaded,
+                        loading : function() {
+                                
+                        },
+                        timeout : 5000
+
+                });
+            })();
+            
+        </script>
+        
+
+        <title>MECHE PEOPLE: Klaus-Jürgen Bathe | MIT Department of Mechanical Engineering</title>
+    </head>
+<body class="html not-front not-logged-in no-sidebars page-people page-people-faculty page-people-faculty-kjbmitedu people faculty-plus mix-blend-mode mix-blend-mode" >
+      <div class="app-outer-wrap">
+      <div class="app-inner-wrap">
+      <a href="#" class="screen-btn exit-off-canvas">close menu</a>
+        <div class="region region-navigation">
+    <div id="block-block-1" class="block block-block">
+
+    
+  <div class="content">
+    <aside class="off-canvas-menu"><div class="nav-wrap">
+        <div class="main-nav-wrap nano-wrap">
+            <nav id="main-menu" class="main-nav nano-content overthrow" role="navigation" aria-label="main"><div class="main-nav-top">
+                      <a href="https://meche-res.mit.edu/resource_links/" class="resources-btn"><span class="fa fa-lock"></span><span>Find Resources</span><span class="fa fa-chevron-right"></span></a>
+                    <!-- NOTE | CHANGE on 10/08/15
+                         - - - - - - - - - - - - -
+                         Added <span class="visually-hidden">Close Menu</span> and aria-hidden="true" to the icon
+                    -->
+                    <a href="#exit-menu" class="close-btn exit-off-canvas" role="button" title="close side navigation">
+                        <span class="fa fa-close"></span>
+                        <span class="visually-hidden">Close Menu</span>
+                    </a>
+                </div>
+
+                <div class="main-nav-core">
+                    <div class="search-bar" role="search">
+                        <form class="search-form" action="/people/faculty/kjb@mit.edu" method="post" id="search-form" accept-charset="UTF-8"><div><div class="container-inline form-wrapper" id="edit-basic"><div class="form-item form-type-textfield form-item-keys">
+  <input placeholder="Search" type="text" id="edit-keys" name="keys" value="" size="20" maxlength="255" class="form-text" /></div>
+<input type="submit" id="edit-submit" name="op" value="Search" class="form-submit" /><input type="hidden" name="get" value="[]" /><button type="submit"><i class="fa fa-search"></i></button></div><input type="hidden" name="form_build_id" value="form-5tne0ET2sz7fRT-HXuA7BQXKlVb7sKAf-yhZdD6Nftg" /><input type="hidden" name="form_id" value="apachesolr_search_custom_page_search_form_menu" /></div></form>                    </div>
+                    <hr class="meche-dots" /><!-- NOTE | CHANGE on 10/08/15
+                         - - - - - - - - - - - - -
+                         Added <span class="visually-hidden">...</span> to the icon button icons for
+                         each of the items that have a secondary navigation panel to support screen readers
+                    --><div role="region" aria-label="menu">
+                        <ul class="main-nav-items special"><li class="main-nav-item education" data-subnav="about">
+                                
+                                <h2 class="main-nav-item">
+                                    <a href="/about" class="main-nav-item-link">
+                                        <span class="main-nav-item-title">About</span>
+                                        <span class="main-nav-item-detail">Who we are</span>
+                                    </a>
+                                </h2>
+                                <a href="1" class="main-nav-item-more-btn" aria-haspopup="true" aria-owns="about-nav">
+                                    <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                                    <span class="visually-hidden">See About Menu</span>
+                                </a>
+                            </li>
+                            <li class="meche-dots" aria-hidden="true"></li>
+
+
+                            <li class="main-nav-item impact" data-subnav="impact">
+                                
+                                <h2 class="main-nav-item">
+                                    <a href="/impact" class="main-nav-item-link">
+                                        <span class="main-nav-item-title">Impact</span>
+                                        <span class="main-nav-item-detail">World-Changing Engineering</span>
+                                    </a>
+                                </h2>
+                                <a href="1" class="main-nav-item-more-btn" aria-haspopup="true" aria-owns="impact-nav">
+                                    <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                                    <span class="visually-hidden">See Impact Menu</span>
+                                </a>
+                            </li>
+                            <li class="meche-dots" aria-hidden="true"></li>
+                            <li class="main-nav-item research" data-subnav="research">
+                                <h2 class="main-nav-item">
+                                    <a class="main-nav-item-link" href="/research">
+                                        <span class="main-nav-item-title">Research</span>
+                                        <span class="main-nav-item-detail">Focus Areas and Labs</span>
+                                    </a>
+                                </h2>
+    
+                                <a href="2" class="main-nav-item-more-btn" aria-haspopup="true" aria-owns="research-nav">
+                                    <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                                    <span class="visually-hidden">See Research Menu</span>
+                                </a>
+                            </li>
+                            <li class="meche-dots" aria-hidden="true"></li>
+                            <li class="main-nav-item people" data-subnav="people">
+                                <h2 class="main-nav-item">
+                                    <a class="main-nav-item-link" href="/people">
+                                        <span class="main-nav-item-title">People</span>
+                                        <span class="main-nav-item-detail">Faculty and Staff</span>
+                                    </a>
+                                </h2>
+                                <a href="3" class="main-nav-item-more-btn" aria-haspopup="true" aria-owns="people-nav">
+                                    <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                                    <span class="visually-hidden">See People Submenu</span>
+                                </a>
+                            </li>
+                            <li class="meche-dots"></li>
+                            <li class="main-nav-item education" data-subnav="education">
+                                <h2 class="main-nav-item">
+                                    <a class="main-nav-item-link" href="/education">
+                                        <span class="main-nav-item-title">Education</span>
+                                        <span class="main-nav-item-detail">Degree Programs and Classes</span>
+                                    </a>
+                                </h2>
+                                
+                                <a href="4" class="main-nav-item-more-btn" aria-haspopup="true" aria-owns="education-nav">
+                                    <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                                    <span class="visually-hidden">See Education Menu</span>
+                                </a>
+                            </li>
+                            <li class="meche-dots"></li>
+                            <li class="main-nav-item news-and-media" data-subnav="news-media">
+                                <h2 class="main-nav-item">
+                                    <a class="main-nav-item-link" href="/news-media">
+                                        <span class="main-nav-item-title">News &amp; Video</span>
+                                        <span class="main-nav-item-detail">News, Press, Video and Photos</span>
+                                    </a>
+                                </h2>
+                                <a href="4" class="main-nav-item-more-btn" aria-haspopup="true" aria-owns="news-media-nav">
+                                    <i aria-hidden="true" class="fa fa-chevron-right"></i>
+                                    <span class="visually-hidden">See news and media menu</span>
+                                </a>
+                            </li>
+                        </ul></div>        
+                   <h2 class="support-meche-item"><a class="support-meche main-nav-item-app-link" href="/how-apply">Apply to MIT MechE</a></h2>
+                </div>
+            </nav></div>
+
+        
+        <div class="sub-nav-wrap nano-wrap">
+            <div class="nano-content overthrow"><!-- *** NEW NODE *** -->
+                <div class="sub-nav-top">
+                    <a href="#main-menu" class="btn-main-menu"><span class="fa fa-chevron-left"></span><span class="btn-label">Back</span></a>
+                    <a href="#close-menu" class="close-btn exit-off-canvas" role="button" title="close side navigation">
+                        <span class="fa fa-close"></span>
+                        <span class="visually-hidden">Close Menu</span>
+                    </a>
+                </div>
+                <div role="region" aria-label="submenu">
+
+                  <nav id="about-nav" class="sub-nav-group about" role="navigation" aria-label="about items"><div class="sub-nav-header">
+                            <a href="/about">
+                                <span>About</span>
+                            </a>
+                        </div>
+                        <!--<hr class="meche-dots" />-->
+                        <ul class="sub-nav-items"><li class="sub-nav-item"><a class="sub-nav-item-link" href="/meche-history-and-timeline">History</a></li>
+                            <li class="sub-nav-item"><a class="sub-nav-item-link" href="/people/diversity-equity-and-inclusion">Diversity Equity &amp; Inclusion</a></li>
+                            <li class="sub-nav-item"><a class="sub-nav-item-link" href="/ethics">Ethics and Integrity</a></li>
+                            <li class="sub-nav-item"><a class="sub-nav-item-link" href="/sites/default/files/2018-Strategic-Plan.pdf">Strategic Plan (PDF)</a></li>
+                            <li class="sub-nav-item"><a class="sub-nav-item-link" href="/faculty-positions">Faculty Openings</a></li>
+                            <li class="sub-nav-item"><a class="sub-nav-item-link" href="/alumni">Alumni</a></li>
+                            <li class="sub-nav-item"><a class="sub-nav-item-link" href="/alliance">MechE Alliance</a></li>
+                            <li class="sub-nav-item"><a class="sub-nav-item-link" href="https://giving.mit.edu/explore/schools/engineering/meche">Support MechE</a></li>
+                            <li class="sub-nav-item"><a class="sub-nav-item-link" href="/contact">Contact Us</a></li>
+                        </ul></nav><nav id="impact-nav" class="sub-nav-group impact" role="navigation" aria-label="impact items"><div class="sub-nav-header">
+                            <a href="/impact">
+                                <span>Impact</span>
+                            </a>
+                        </div>
+                        <!--<hr class="meche-dots" />-->
+                        <ul class="sub-nav-items"><li class="sub-nav-item"><a class="sub-nav-item-link" href="/impact/health">Health</a></li>
+                            <li class="sub-nav-item"><a class="sub-nav-item-link" href="/impact/environment">Environment</a></li>
+                            <li class="sub-nav-item"><a class="sub-nav-item-link" href="/impact/innovation">Innovation</a></li>
+                            <li class="sub-nav-item"><a class="sub-nav-item-link" href="/impact/energy">Energy</a></li>
+                            <li class="sub-nav-item"><a class="sub-nav-item-link" href="/impact/security">Security</a></li>
+                        </ul></nav><nav id="research-nav" class="sub-nav-group research" role="navigation" aria-label="research items"><div class="sub-nav-header">
+                            <a href="/research">
+                                <span>Research</span>
+                            </a>
+                        </div>
+                        <!--<hr class="meche-dots" />-->
+                        <ul class="sub-nav-items"><li class="sub-nav-item"><a class="sub-nav-item-link" href="/research/mechanics">Mechanics</a></li>
+                            <li class="sub-nav-item"><a class="sub-nav-item-link" href="/research/design">Design</a></li>
+                            <li class="sub-nav-item"><a class="sub-nav-item-link" href="/research/controls">Controls</a></li>
+                            <li class="sub-nav-item"><a class="sub-nav-item-link" href="/research/energy">Energy</a></li>
+                            <li class="sub-nav-item"><a class="sub-nav-item-link" href="/research/ocean">Ocean</a></li>
+                            <li class="sub-nav-item"><a class="sub-nav-item-link" href="/research/bioengineering">Bio</a></li>
+                            <li class="sub-nav-item"><a class="sub-nav-item-link" href="/research/nano">Micro + Nano</a></li>
+                        </ul></nav><nav id="people-nav" class="sub-nav-group people" role="navigation" aria-label="people"><div class="sub-nav-header">
+                            <a href="/people">
+                                <span>People</span>
+                            </a>
+                        </div>
+                        <!--<hr class="meche-dots" />-->
+                        <ul class="sub-nav-items"><li class="sub-nav-item"><a class="sub-nav-item-link" href="/people/diversity-equity-and-inclusion">Diversity, Equity, and Inclusion</a></li>
+                            <li class="sub-nav-item"><a class="sub-nav-item-link" href="/people?">Faculty</a></li>
+                            <li class="sub-nav-item"><a class="sub-nav-item-link" href="/people/emeritus">Faculty Emeritus</a></li>
+                            <li class="sub-nav-item"><a class="sub-nav-item-link" href="/people/staff-listing?field_staff_role_tid[]=46">Research Staff</a></li>
+                            <li class="sub-nav-item"><a class="sub-nav-item-link" href="/people/staff-listing?field_staff_role_tid[]=55">Post Docs</a></li>
+                            <li class="sub-nav-item"><a class="sub-nav-item-link" href="/people/staff-listing?field_staff_role_tid[]=47">Teaching Staff</a></li>
+                            <li class="sub-nav-item"><a class="sub-nav-item-link" href="/people/staff-listing?field_staff_role_tid[]=43">Admin Staff</a></li>
+                            <li class="sub-nav-item"><a class="sub-nav-item-link" href="/people/staff-listing?field_staff_role_tid[]=44">Support Staff</a></li>
+                            <li class="sub-nav-item"><a class="sub-nav-item-link" href="/people/all">Full Directory</a></li>
+                        </ul></nav><nav id="education-nav" class="sub-nav-group education" role="navigation" aria-label="education"><div class="sub-nav-header">
+                            <a href="/education">
+                                <span>Education</span>
+                            </a>
+                        </div>
+                        <!--<hr class="meche-dots" />-->
+                        <ul class="sub-nav-items"><li class="sub-nav-item"><a class="sub-nav-item-link" href="/featured-classes">Class Offerings</a></li>
+                            <li class="sub-nav-item"><a class="sub-nav-item-link" href="/education/prospective-students">Prospective Students</a></li>
+                            <li class="sub-nav-item"><a class="sub-nav-item-link" href="/education/undergraduate">Undergraduate</a></li>
+                            <li class="sub-nav-item"><a class="sub-nav-item-link" href="/education/graduate">Graduate</a></li>
+                            <li class="sub-nav-item"><a class="sub-nav-item-link" href="/education/post-doc">Post-Doc</a></li>
+                           <li class="sub-nav-item"><a class="sub-nav-item-link" href="/careers">Careers</a></li>
+                 <!-- removed 9/1/2000 per JF request
+                            <li class="sub-nav-item"><a class="sub-nav-item-link" href="/education/professional">Professional Education</a></li>
+                            <li class="sub-nav-item"><a class="sub-nav-item-link" href="/education/meche-summer-x">MechE Summer X</a></li>
+                 -->
+                        </ul></nav><nav id="culture-nav" class="sub-nav-group culture" role="navigation" aria-label="culture"><div class="sub-nav-header">
+                            <a href="/culture">
+                                <span>Culture</span>
+                            </a>
+                        </div>
+                        <hr class="meche-dots" /></nav><nav id="news-nav" class="sub-nav-group news-media" role="navigation" aria-label="news and media"><div class="sub-nav-header">
+                            <a href="/news-media">
+                                <span>News + Video</span>
+                            </a>
+                        </div>
+                        <!--<hr class="meche-dots" />-->
+                        <ul class="sub-nav-items"><li class="sub-nav-item"><a class="sub-nav-item-link" href="/news-media/news">Press</a></li>
+                            <li class="sub-nav-item"><a class="sub-nav-item-link" href="/news-media/video/">Video Galleries</a></li>
+                            <li class="sub-nav-item"><a class="sub-nav-item-link" href="/news-media/image-gallery/906">Photo Galleries</a></li>
+                            <li class="sub-nav-item"><a class="sub-nav-item-link" href="/meche-connects-newsletter">Newsletter</a></li>
+                            <li class="sub-nav-item"><a class="sub-nav-item-link" href="/international-colloquia-thermal-innovations">Colloquia</a></li>
+                        </ul></nav></div>
+            </div><!-- *** NEW NODE ( CLOSING TAG ) *** -->
+        </div>
+    </div>
+</aside>  </div>
+</div>
+  </div>
+
+      <div class="fluid">
+          <div class="hbar hbar-alert clearfix hide"><a href="#" class="small message"><i> ••• </i>Lorem ipsum dolor sit amet. Lorem ipsum.</a><a class="btn-close">Close Alert</a></div>
+      </div>
+      
+      <div class="hbar hbar-nav-main fixed" role="region" aria-label="navigation bar">
+          <a href="/" class="nav-bar-logo">MIT MechE</a>
+          <div id="vr-btn" class="btn-container">
+            <a class="btn btn-primary blue centered" style="margin-top:0px; background-color:#ef0166; padding-top: 0px; padding-bottom: 0px; min-width:0px; min-height: 0px; width: -moz-max-content; width: -webkit-max-content; width: max-content;" href="/meche-covid-19-resources">MechE Covid-19 Resources <i class="fa fa-arrow-circle-right"></i></a>
+          </div>
+          <nav class='breadcrumbs' role='menubar' aria-label='breadcrumbs'>
+    <li class='home' role='menuitem'><a href='/'><i class='fa fa-arrow-circle-o-left'></i>Home</a></li><li role='menuitem' ><a href='/people'>People</a></li><li role='menuitem' class='current'><a href='#'>Bathe, Klaus-Jürgen</a></li></nav>          <a href="#main-menu" class="btn-side-menu right-off-canvas-toggle" role="button" aria-expanded="false" aria-controls="main-nav-side-menu"><span>menu</span><i class="fa fa-2x fa-navicon"></i></a>
+      </div>
+        <div class="region region-rotator">
+    <div id="block-meche-blocks-profile-hero" class="block block-meche-blocks">
+
+    
+  <div class="content">
+    <!-- ****************  F S   B A C K G R O U N D   I M A G E  ****************-->       
+    <div class='fluid panel-container fs-hero no-cover'>
+        <div>
+    
+            <!-- FULLSCREEN BG IMAGE -->
+            <div class='bg-fluid-image'>
+                <div class='mesh-bg light'></div>
+                <img class='bg-img bg-width' src='http://meche.mit.edu/sites/default/files/styles/hero/public/Klaus-J%C3%BCrgen%20Bathe.jpg?itok=Lajz4M9m' alt='Klaus-Jürgen Bathe' />
+            </div>
+            <div class='bg-img-content vc-parent middle right' role='banner'>
+                <div class='vc-child faculty-plus-hero-content orange'>
+                    <hr class='meche-dots fat' />
+                    <div class='intro'>
+                        <h3 class='faculty-rank'>Professor</h3>
+                        <h1 class='faculty-name'>Klaus-Jürgen Bathe </h1>
+                        <p>Professor of Mechanical Engineering</p>
+                    </div>
+                    <div class='interests'>
+                        <hr class='meche-dots hairline' />
+                        <h3>Interests</h3>
+                        <ol class='numeric'>
+                            <li class='inverted'>Nonlinear analysis of structures and solids, heat transfer and fluids using modern computational techniques</li>
+                        </ol>
+                    </div>
+                    <hr class='meche-dots thin' />
+                </div>
+            </div>
+            
+        </div>
+    </div>
+  <div class='row hbar-secondary-container'>
+    <div class='scroll-btn-container align-c hide-for-small-only'>
+        <a class='btn btn-jumper'>
+            <p class='jump-label'>More About Klaus-Jürgen</p>
+            <i class='jump-icon fa fa-chevron-circle-down'></i>
+        </a>
+    </div>
+</div><section class='fluid layer'>
+    <div class='hbar hbar-faculty-details'>
+        <div class='top-details clearfix'>
+            <div class='info-header show-for-small-only'>
+                <h3>Contact Info</h3>
+            </div>
+            <div class='location-group clearfix'>
+                <div class='room-block vc-parent'>
+                    <div class='vc-child'>
+                        <span class='room-title'>room</span>
+                        <span class='room-number'><a href='http://whereis.mit.edu/?mapterms=3-356' class='room-number'>3-356<i class='fa fa-map-marker'></i></a></span>
+                    </div>
+                </div>
+                <div class='address-block vc-parent'>
+                    <div class='vc-child'>
+                        <p>Massachusetts Institute of Technology</p>
+                        <p>77 Massachusetts Avenue</p>
+                        <p>Cambridge, Massachusetts 02139</p>
+                    </div>
+                    
+                </div>
+            </div>
+            <div class='contact-group clearfix'>
+                <div class='contact-block digital vc-parent'>
+                    <div class='vc-child'>
+                        <ul>
+                            <li class='primary-contact-method email'><a href='mailto:kjb@mit.edu'><i class='fa fa-envelope'></i><span>email</span></a></li></ul>
+                    </div>
+                </div>
+                <div class='contact-block vc-parent'>
+                    <div class='vc-child'>
+                        <ul>
+                            <li><a class='tel' href='tel:+1339.545.6363'><i class='fa fa-phone'></i><span>339.545.6363</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class='personal-group'>
+                <div class='cv-block vc-parent'>
+                    <div class='vc-child'>
+                        <a href='' class='btn btn-primary orange'>Download CV <i class='fa fa-arrow-circle-down'></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class='research-group'>
+                <div class='ra-block vc-parent'>
+                    <div class='vc-child'>
+                        <div class='ra-icon-bar'>
+                            <span class='title'>Associated Research Areas</span>
+                            <ul class='clearfix'>
+                            <li class='active'>
+        <a href='/research/mechanics' data-tooltip aria-haspopup='true' data-options='additional_inheritable_classes: ra-tip;' class='has-tip tip-top ra-tip' title='mechanics'>
+            <i class='ra-icon mechanics'><span class='visually-hidden'>mechanics</span></i>
+        </a>
+        </li><li >
+        <a href='/research/design' data-tooltip aria-haspopup='true' data-options='additional_inheritable_classes: ra-tip;' class='has-tip tip-top ra-tip' title='design'>
+            <i class='ra-icon design'><span class='visually-hidden'>design</span></i>
+        </a>
+        </li><li >
+        <a href='/research/controls' data-tooltip aria-haspopup='true' data-options='additional_inheritable_classes: ra-tip;' class='has-tip tip-top ra-tip' title='controls'>
+            <i class='ra-icon controls'><span class='visually-hidden'>controls</span></i>
+        </a>
+        </li><li >
+        <a href='/research/energy' data-tooltip aria-haspopup='true' data-options='additional_inheritable_classes: ra-tip;' class='has-tip tip-top ra-tip' title='energy'>
+            <i class='ra-icon energy'><span class='visually-hidden'>energy</span></i>
+        </a>
+        </li><li >
+        <a href='/research/ocean' data-tooltip aria-haspopup='true' data-options='additional_inheritable_classes: ra-tip;' class='has-tip tip-top ra-tip' title='ocean'>
+            <i class='ra-icon ocean'><span class='visually-hidden'>ocean</span></i>
+        </a>
+        </li><li >
+        <a href='/research/bioengineering' data-tooltip aria-haspopup='true' data-options='additional_inheritable_classes: ra-tip;' class='has-tip tip-top ra-tip' title='bioengineering'>
+            <i class='ra-icon bio'><span class='visually-hidden'>bioengineering</span></i>
+        </a>
+        </li><li >
+        <a href='/research/nano' data-tooltip aria-haspopup='true' data-options='additional_inheritable_classes: ra-tip;' class='has-tip tip-top ra-tip' title='nano'>
+            <i class='ra-icon nano'><span class='visually-hidden'>nano</span></i>
+        </a>
+        </li></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div></section>  </div>
+</div>
+  </div>
+  <div class="region region-content">
+    <div id="block-meche-blocks-profile-education-plus" class="block block-meche-blocks">
+
+    
+  <div class="content">
+    <section class='fluid jumper-nav-block white-block panel-block layer'>
+        <div class='row'>
+            <div class='column small-12 show-for-medium-up align-c'>
+                <h3 class='jump-nav-label'>Faculty Details</h3>
+            </div>
+            <div class='column small-12 show-for-medium-up align-c'>   
+                <div class='hbar hbar-nav-jumper'>
+                    <ul>
+                        <li><a href='#education'>Education</a></li>
+                        <li class='divider' aria-hidden='true'></li>
+                        <li><a href='#research-interests'>Research Interests</a></li>
+                        <li class='divider' aria-hidden='true'></li>
+                        <li><a href='#other-details'>Bio</a></li>
+                        <li class='divider' aria-hidden='true'></li>
+                        <li><a href='#online-data'>Online Data</a></li>
+                        <li class='divider' aria-hidden='true'></li>
+                        <li><a href='#honors-and-awards '>Honors/Awards</a></li>
+                        <li class='divider' aria-hidden='true'></li>
+                        <li><a href='#related-experience'>Related Experience</a></li>
+                        <li class='divider' aria-hidden='true'></li>
+                        <li><a href='#memberships'>Memberships</a></li>
+                    </ul>
+                    <ul>
+                        <li><a href='#professional-service'>Professional Service</a></li>
+                        <li class='divider' aria-hidden='true'></li>
+                        <li><a href='#mit-service'>MIT Service</a></li>
+                        <li class='divider' aria-hidden='true'></li>
+                        <li><a href='#classes'>Teaching</a></li>
+                        <li class='divider' aria-hidden='true'></li>
+                        <li><a href='#publications '>Publications</a></li>
+                        <li class='divider' aria-hidden='true'></li>
+                        <li><a href='#patents'>Patents</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section><section class='fluid panel-block profile-details layer'>
+        <div class='row'>
+            <div class='column small-12 education-block clearfix'>
+                <div id='education' class='education-block-content'>
+                    <h2>Education</h2>
+                    <div class='degrees'>
+                    <ul class='clearfix'><li class='degree'>
+            <div>
+                <h3>1967</h3>
+                <p>UNIVERSITY OF CAPETOWN</p>
+                <span>B.Sc.</span>
+            </div>
+        </li><li class='degree'>
+            <div>
+                <h3>1969</h3>
+                <p>UNIVERSITY OF CALGARY</p>
+                <span>M.Sc.</span>
+            </div>
+        </li><li class='degree'>
+            <div>
+                <h3>1971</h3>
+                <p>UNIVERSITY OF CALIFORNIA-BERKELEY</p>
+                <span>Ph.D.</span>
+            </div>
+        </li></ul></div></div></div><div class='column small-12 profile-block'>
+              <div id='research-interests' class='profile-block-content'><h2>Research Interests</h2><ul><li>Nonlinear analysis</li>
+<li>Statics &amp; dynamics, solids &amp; shells</li>
+<li>Incompressible fluid flows</li>
+<li>Fluid-structure interactions</li>
+<li>Machine learning for simulations</li>
+<li>Overlapping finite elements, AMORE</li>
+<li>Large finite element systems</li>
+</ul></div></div><div class='column small-12 profile-block'>
+              <div id='online-data' class='profile-block-content'><h2>Online Data</h2><ul><li>Wikipedia: <a href="http://en.wikipedia.org/wiki/Klaus-J%C3%BCrgen_Bathe" target="_blank">Klaus-Jürgen Bathe</a></li>
+<li>J.W. Tedesco and J. Walczak, Preface in Celebration of the 60th Birthday of K.J. Bathe, Computers &amp; Structures, 81: 455-462, 2003 (<a class="pdf" href="http://web.mit.edu/kjb/www/Principal_Publications/Preface_in_Computers_&amp;_Structures.pdf" target="_blank">.pdf</a>)</li>
+<li>An interview: “Das Leben bereichern”, Interview with the magazine Audimax, Research and Development, Jan 2013 (in German) (<a class="pdf" href="http://web.mit.edu/kjb/www/Principal_Publications/Das_Leben_bereichern.pdf" target="_blank">.pdf</a>)</li>
+</ul></div></div><div class='column small-12 profile-block'>
+              <div id='honors-and-awards' class='profile-block-content'><h2>Honors + Awards</h2><ul><li>1967    Gold medalist, Best Final Year Civil Engineering Student, University of Cape Town, South Africa</li>
+<li>1981    American Society of Civil Engineers, Walter L. Huber Research Prize for “Contributions in Nonlinear Computational Mechanics”</li>
+<li>1981    Doctor of Science, D.Sc., University of Cape Town, South Africa</li>
+<li>1985    Gustus L. Larson American Society of Mechanical Engineers and Pi Tau Sigma award for outstanding achievements in Mechanical Engineering</li>
+<li>1986    Graduate Student Council Teaching Award, M.I.T.</li>
+<li>1995    U.S. National Academy of Engineering award for outstanding contributions to engineering education and research</li>
+<li>1999    M.I.T. School of Engineering Award for Distinguished Teaching</li>
+<li>2003    Dr.-Ing. E.h., Technical University of Darmstadt, Germany</li>
+<li>2003    Dr. h.c., Slovak Academy of Sciences, and Technical University of Zilina, Slovakia</li>
+<li>2003    Dr. h.c., Technical University of Rzeszow, Poland</li>
+<li>2003    Elected foreign member of Argentine National Academy of Physics, Natural and Exact Sciences</li>
+<li>2005    Dr. h.c., Technical University of Madrid (Universidad Politecnica de Madrid), Spain</li>
+<li>2005    Den Hartog Distinguished Educator Award, M.I.T.</li>
+<li>2006    Dr. h.c., University of Bucharest, Romania</li>
+<li>2010    Dr. h.c., University of Miskolc, Hungary</li>
+<li>2010    Dr. h.c., University of Buenos Aires, Argentina</li>
+<li>2013    D.Sc. h.c., University of Cape Town, South Africa</li>
+<li>2015    Dr. h.c., Sorbonne Universités -- Université de Technologie de Compiègne, France.<br /> </li>
+</ul></div></div><div class='column small-12 profile-block'>
+              <div id='memberships' class='profile-block-content'><h2>Memberships</h2><p>ASME, ASCE, SIAM</p>
+</div></div><div class='column small-12 profile-block'>
+              <div id='professional-service' class='profile-block-content'><h2>Professional Service</h2><dl><dt>Founder of ADINA R &amp; D, Inc.</dt>
+<dd>
+<ul><li><a href="http://www.adina.com" target="_blank">www.adina.com</a></li>
+</ul></dd>
+<dt>Editorial Activities</dt>
+<dd>
+<ul><li>Editor-in-Chief, Computers &amp; Structures (<a class="external" href="http://www.elsevier.com/wps/find/journaldescription.cws_home/359/description" target="_blank">link</a>)</li>
+</ul></dd>
+<dt>Editor of the Series</dt>
+<dd>
+<ul><li>Computational Fluid and Solid Mechanics, Springer Verlag (<a class="external" href="http://www.springer.com/series/4449" target="_blank">link</a>)</li>
+<li>Nonlinear Finite Element Analysis and ADINA, 12 volumes (<a class="external" href="http://www.amazon.com/Nonlinear-Finite-Element-Analysis-ADINA/dp/B002MHEQPO/ref=sr_1_4?ie=UTF8&amp;s=books&amp;qid=1275508250&amp;sr=1-4" target="_blank">link</a>)</li>
+<li>Computational Fluid and Solid Mechanics, Elsevier, 7 volumes (<a class="external" href="http://www.sciencedirect.com/science?_ob=PublicationURL&amp;_tockey=%23TOC%235696%232011%23999109988%233160736%23FLA%23&amp;_cdi=5696&amp;_pubType=J&amp;_auth=y&amp;_acct=C000022659&amp;_version=1&amp;_urlVersion=0&amp;_userid=501045&amp;md5=aaf6230a6ff295a86a309151b5a81981" target="_blank">link</a>)</li>
+</ul></dd>
+<dt>Klaus-Jürgen Bathe Leadership Program</dt>
+<dd>
+<ul><li>The goal of this Program is to produce graduates coming from any faculty of the University of Cape Town, South Africa, with outstanding leadership qualities (<a class="external" href="http://kjbatheleadership.uct.ac.za/" target="_blank">link</a>)</li>
+<li>K.J. Bathe, “A ‘Theory’ of Good Leadership Resting on Three Pillars”, Article summarizing a presentation to faculty and students of the University of Cape Town, Feb. 2015 (<a class="pdf" href="http://web.mit.edu/kjb/www/Principal_Publications/A_Theory_of_Good_Leadership.pdf" target="_blank">.pdf</a>)</li>
+</ul></dd>
+</dl></div></div><div class='column small-12 profile-block'>
+              <div id='classes' class='profile-block-content'><h2>Teaching</h2><ul><li>Finite Element Procedures for Solids and Structures (<a class="external" href="http://ocw.mit.edu/resources/res-2-002-finite-element-procedures-for-solids-and-structures-spring-2010/index.htm" target="_blank">link</a>)</li>
+<li>Finite Element Analysis of Solids and Fluids I (2.092/3 <a class="external" href="http://ocw.mit.edu/courses/mechanical-engineering/2-092-finite-element-analysis-of-solids-and-fluids-i-fall-2009/index.htm" target="_blank">link</a>)</li>
+<li>Finite Element Analysis of Solids and Fluids II (2.094 <a class="external" href="http://ocw.mit.edu/courses/mechanical-engineering/2-094-finite-element-analysis-of-solids-and-fluids-spring-2008/" target="_blank">link</a>)</li>
+</ul></div></div><div class='column small-12 profile-block'>
+              <div id='publications' class='profile-block-content'><h2>Publications</h2><dl><dt>Books</dt>
+<dd>
+<ol><li>K.J. Bathe and E.L. Wilson, "Numerical Methods in Finite Element Analysis", Prentice-Hall, 1976 (<a class="external" href="http://www.amazon.com/Numerical-analysis-Prentice-Hall-engineering-mechanics/dp/0136271901" target="_blank">link</a>)</li>
+<li>K.J. Bathe, "Finite Element Procedures in Engineering Analysis", Prentice-Hall, 1982 (<a class="external" href="http://www.amazon.com/Procedures-Engineering-Prentice-Hall-engineering-mechanics/dp/0133173054" target="_blank">link</a>)</li>
+<li>K.J. Bathe, "Finite Element Procedures", 1st Edition, Prentice-Hall, 1996; 2nd Edition, Watertown, MA: Klaus-Jürgen Bathe, 2014 (<a class="external" href="http://www.amazon.com/dp/0979004950" target="_blank">link</a>); translation of 2nd edition into Chinese (<a href="http://www.hepmall.com.cn/index.php/product-23331.html" target="_blank">link 1</a>, <a href="http://www.hepmall.com.cn/index.php/product-23332.html" target="_blank">link 2</a>)</li>
+<li>D. Chapelle and K.J. Bathe, "The Finite Element Analysis of Shells – Fundamentals", 1st Edition, Springer, 2003; 2nd Edition, Springer, 2011 (<a class="external" href="http://www.amazon.com/Finite-Element-Analysis-Shells-Computational/dp/3642164072/ref=sr_1_1?s=books&amp;ie=UTF8&amp;qid=1305813534&amp;sr=1-1" target="_blank">link</a>)</li>
+<li>M. Kojic and  K.J. Bathe, "Inelastic Analysis of Solids and Structures", Springer, 2005 (<a class="external" href="http://www.amazon.com/Inelastic-Analysis-Structures-Computational-Mechanics/dp/3642061575/ref=sr_1_1?s=books&amp;ie=UTF8&amp;qid=1305813473&amp;sr=1-1" target="_blank">link</a>)</li>
+<li>K.J. Bathe, "To Enrich Life", 2nd Edition, 2019,  Amazon.com (<a class="external" href="http://www.amazon.com/Enrich-Life-Klaus-J%C3%83%C2%BCrgen-Bathe/dp/0979004926/ref=sr_1_2?ie=UTF8&amp;s=books&amp;qid=1212674985&amp;sr=8-2" target="_blank">link</a>)</li>
+<li>M.L. Bucalem and K.J. Bathe, "The Mechanics of Solids and Structures – Hierarchical Modeling and the Finite Element Solution", Springer, 2011 (<a class="external" href="http://www.amazon.com/Mechanics-Solids-Structures-Hierarchical-Computational/dp/3540263314/ref=sr_1_fkmr0_1?ie=UTF8&amp;qid=1297296626&amp;sr=1-1-fkmr0" target="_blank">link</a>)</li>
+<li>K.J. Bathe, "How Lawyers Think, Work &amp; When Perhaps not Hire a Lawyer", 2021,  Amazon.com (<a class="external" href="https://www.amazon.com/lawyers-think-work-perhaps-lawyer/dp/0979004985/" target="_blank">link</a>)</li>
+</ol></dd>
+<dt>To Download -- Sample Pages of "To Enrich Life", 2nd Edition, 2019 (.<a href="http://web.mit.edu/kjb/www/Books/TEL_Binder.6-1-2019.pdf">pdf</a>)</dt>
+<dt> </dt>
+<dt>To Download -- Sample Pages of "How lawyers think, work &amp; when perhaps not hire a lawyer", 2021 (.<a href="http://web.mit.edu/kjb/www/Books/HLT_Binder.6-11-2021.a.pdf">pdf</a>)</dt>
+<dt> </dt>
+<dt>To Download for the Book "Finite Element Procedures" </dt>
+<dd>
+<ul><li>Sample pages, 2nd Edition, 7th printing (<a class="pdf" href="http://web.mit.edu/kjb/www/Principal_Publications/FEP_Binder.2nd_Edition_7th_Printing _1-2021.hybrid.pdf" target="_blank">.pdf</a>)</li>
+<li>Solutions to Exercises in the book "Finite Element Procedures", 2nd Edition, 2014 are given in this manual (<a class="pdf" href="http://web.mit.edu/kjb/www/Principal_Publications/FEP_solutions.pdf" target="_blank">.pdf</a>)</li>
+<li>Source code of the improved subspace iteration method, to replace the code given in Chapter 11 of the book "Finite Element Procedures" (<a href="http://web.mit.edu/kjb/www/Other/ESUBSPACE.zip">link</a>)</li>
+</ul></dd>
+<dt> </dt>
+<dt>Papers Referred to in the Book "Finite Element Procedures" ( and not given in the subsequent Sections below )</dt>
+<dd>
+<ol><li>A. Ghali and K.J. Bathe, "Analysis of Plates Subjected to In-Plane Forces Using Large Finite Elements", International Association for Bridge and Structural Engineering Bulletin, 30-I: 61–72, 1970 (<a href="http://web.mit.edu/kjb/www/Publications_Prior_to_1998/Analysis_of_Plates_Subjected_to_In-Plane_Forces_Using_Large_Finite_Elements.pdf" target="_blank">.pdf</a>)</li>
+<li>A. Ghali and K.J. Bathe, "Analysis of Plates in Bending Using Large Finite Elements", International Association for Bridge and Structural Engineering Bulletin, 30-II: 29–40, 1970 (<a href="http://web.mit.edu/kjb/www/Publications_Prior_to_1998/Analysis_of_Plates_in_Bending_Using_Large_Finite_Elements.pdf" target="_blank">.pdf</a>)</li>
+<li>E.L. Wilson, I. Farhoomand and K.J. Bathe, “Nonlinear Dynamic Analysis of Complex Structures”, Earthquake Engineering and Structural Dynamics, 1: 241–252, 1973 (<a href="http://web.mit.edu/kjb/www/Publications_Prior_to_1998/Nonlinear_Dynamic_Analysis_of_Complex_Structures.pdf" target="_blank">.pdf</a>)</li>
+<li>S.M. Ma and K.J. Bathe, “On the Finite Element Analysis of Pipe Whip Problems”, Nuclear Engineering and Design, 37: 413–430, 1976 (<a href="http://web.mit.edu/kjb/www/Publications_Prior_to_1998/On_the_Finite_Element_Analysis_of_Pipe_Whip_Problems.pdf" target="_blank">.pdf</a>)</li>
+<li>K.J. Bathe, “Convergence of Subspace Iteration”, in Formulations and Numerical Algorithms in Finite Element Analysis (K.J. Bathe, J.T. Oden and W. Wunderlich, eds.), M.I.T. Press: 575–598, 1977 (<a href="http://web.mit.edu/kjb/www/Publications_Prior_to_1998/Convergence_of_Subspace_Iteration.pdf" target="_blank">.pdf</a>)</li>
+<li>J.T. Oden and K.J. Bathe, “A Commentary on Computational Mechanics”, Applied Mechanics Reviews, 31: 1053–1058, 1978 (<a href="http://web.mit.edu/kjb/www/Publications_Prior_to_1998/A_Commentary_on_Computational_Mechanics.pdf" target="_blank">.pdf</a>)</li>
+<li>K.J. Bathe and A.B. Chaudhary, “On the Displacement Formulation of Torsion of Shafts with Rectangular Cross-sections”, International Journal for Numerical Methods in Engineering, 18: 1565–1580, 1982 (<a href="http://web.mit.edu/kjb/www/Publications_Prior_to_1998/On_the_Displacement_Formulation_of_Torsion_of_Shafts_with_Rectangular_Cross-sections.pdf" target="_blank">.pdf</a>)</li>
+<li>K.J. Bathe, A.B. Chaudhary, E.N. Dvorkin and M. Kojic, “On the Solution of Nonlinear Finite Element Equations”, in Proceedings, International Conference on Computer-Aided Analysis and Design of Concrete Structures I (F. Damjanić et al., eds.), 289–299, Pineridge Press, 1984 (<a href="http://web.mit.edu/kjb/www/Publications_Prior_to_1998/On_the_Solution_of_Nonlinear_Finite_Element_Equations.pdf" target="_blank">.pdf</a>)</li>
+<li>K.J. Bathe and F. Brezzi, “On the Convergence of a Four-Node Plate Bending Element Based on Mindlin/Reissner Plate Theory and a Mixed Interpolation”, in The Mathematics of Finite Elements and Applications V (J.R. Whiteman, ed.), Academic Press, 491–503, 1985 (<a href="http://web.mit.edu/kjb/www/Publications_Prior_to_1998/On_the_Convergence_of_a_Four-Node_Plate_Bending_Element_Based_on_MindlinReissner_Plate.pdf" target="_blank">.pdf</a>)</li>
+<li>K.J. Bathe, “Finite Elements in CAD and ADINA”, Nuclear Engineering and Design, 98: 57–67, 1986 (<a href="http://web.mit.edu/kjb/www/Publications_Prior_to_1998/Finite_Elements_in_CAD_and_ADINA.pdf" target="_blank">.pdf</a>)</li>
+<li>F. Brezzi and K.J. Bathe, “Studies of Finite Element Procedures—The Inf-Sup Condition, Equivalent Forms and Applications”, in Reliability of Methods for Engineering Analysis (K.J. Bathe and D.R.J. Owen, eds.), 197–219, Pineridge Press, 1986 (<a href="http://web.mit.edu/kjb/www/Publications_Prior_to_1998/Studies_of_Finite_Element_Procedures_The_Inf-Sup_Condition_Equivalent_Forms_and_Applications.pdf" target="_blank">.pdf</a>)</li>
+<li>P.G. Hodge, K.J. Bathe and E.N. Dvorkin, “Causes and Consequences of Nonuniqueness in an Elastic-Perfectly-Plastic Truss”, Journal of Applied Mechanics, 53: 235–241, 1986 (<a href="http://web.mit.edu/kjb/www/Publications_Prior_to_1998/Causes_and_Consequences_of_Nonuniqueness_in_an_Elastic-Perfectly-Plastic_Truss.pdf" target="_blank">.pdf</a>)</li>
+<li>K.J. Bathe and F. Brezzi, “A Simplified Analysis of Two Plate Bending Elements—The MITC4 and MITC9 Elements”, Proceedings, Numerical Methods in Engineering: Theory and Applications, University College, 1987 (<a href="http://web.mit.edu/kjb/www/Publications_Prior_to_1998/A_Simplified_Analysis_of_Two_Plate_Bending_Elements_The_MITC4_and_MITC9_Elements.pdf" target="_blank">.pdf</a>)</li>
+<li>A.L. Eterovic and K.J. Bathe, “On Large Strain Elasto-Plastic Analysis with Frictional Contact Conditions”, Proceedings, Conference on Numerical Methods in Applied Science and Industry, Politecnica di Torino, 81–93, 1990 (<a href="http://web.mit.edu/kjb/www/Publications_Prior_to_1998/On_Large_Strain_Elasto-Plastic_Analysis_with_Frictional_Contact_Conditions.pdf" target="_blank">.pdf</a>) <a.l. analysis="" and="" applied="" conference="" contact="" di="" elasto-plastic="" eterovic="" frictional="" in="" k.j.="" large="" li="" methods="" numerical="" on="" politecnica="" science="" strain="" with=""></a.l.></li>
+<li>K.J. Bathe, N.S. Lee and M.L. Bucalem, “On the Use of Hierarchical Models in Engineering Analysis”, Computer Methods in Applied Mechanics and Engineering, 82: 5–26, 1990 (<a href="http://web.mit.edu/kjb/www/Publications_Prior_to_1998/On_the_Use_of_Hierarchical_Models_in_Engineering_Analysis.pdf" target="_blank">.pdf</a>)</li>
+<li>K.J. Bathe, “Remarks on the Development of Finite Element Methods and Software”, International Journal of Computer Applications in Technology, 7: 101–107, 1994 (<a href="http://web.mit.edu/kjb/www/Publications_Prior_to_1998/Remarks_on_the_Development_of_Finite_Element_Methods_and_Software.pdf" target="_blank">.pdf</a>)</li>
+</ol></dd>
+<dt>Paper Written as an Undergraduate Student at the University of Cape Town</dt>
+<dd>
+<ul><li>K.J. Bathe, "The use of the electronic computer in structural analysis", Impact J. of UCT Engineering Society, 57-61, 1967 (<a class="pdf" href="http://web.mit.edu/kjb/www/Publications_Prior_to_1998/The_use_of_the_electronic_computer_in_structural_analysis.pdf" target="_blank">.pdf</a>)</li>
+</ul></dd>
+<dt> </dt>
+<dt>Much Referred to Publications Published Prior 1998</dt>
+<dd>
+<ol><li>K.J. Bathe and E.L. Wilson, “Large Eigenvalue Problems in Dynamic Analysis”, ASCE, Journal of the Engineering Mechanics Division, 98 (6), 1471-1485, 1972 (<a class="pdf" href="http://web.mit.edu/kjb/www/Publications_Prior_to_1998/Large_Eigenvalue_Problems_in_Dynamic_Analysis.pdf" target="_blank">.pdf</a>)</li>
+<li>K.J. Bathe and E.L. Wilson, “Solution Methods for Eigenvalue Problems in Structural Mechanics”, Int. J. for Numerical Methods in Engineering, 6, 213–266, 1973 (<a class="pdf" href="http://web.mit.edu/kjb/www/Publications_Prior_to_1998/Solution_Methods_for_Eigenvalue_Problems_in_Structural_Mechanics.pdf" target="_blank">.pdf</a>)</li>
+<li>K.J. Bathe and E.L. Wilson, “Stability and Accuracy Analysis of Direct Integration Methods”, International Journal of Earthquake Engineering and Structural Dynamics, 1, 283–291, 1973 (<a class="pdf" href="http://web.mit.edu/kjb/www/Publications_Prior_to_1998/Stability_and_Accuracy_Analysis_of_Direct_Integration_Methods.pdf" target="_blank">.pdf</a>)</li>
+<li>K.J. Bathe and E.L. Wilson, “NONSAP––A Nonlinear Structural Analysis Program”, J. Nuclear Engineering and Design, 29, 266–293, 1974 (<a class="pdf" href="http://web.mit.edu/kjb/www/Publications_Prior_to_1998/NONSAP%96%96A_Nonlinear_Structural_Analysis_Program.pdf" target="_blank">.pdf</a>)</li>
+<li>K.J. Bathe, E. Ramm and E.L. Wilson, “Finite Element Formulations for Large Deformation Dynamic Analysis”, Int. J. for Numerical Methods in Engineering, 9, 353–386, 1975 (<a class="pdf" href="http://web.mit.edu/kjb/www/Publications_Prior_to_1998/Finite_Element_Formulations_for_Large_Deformation_Dynamic_Analysis.pdf" target="_blank">.pdf</a>)</li>
+<li>S.M. Ma and K.J. Bathe, “On Finite Element Analysis of Pipe Whip Problems”, J. Nuclear Engineering and Design, 37, 413–430, 1976 (<a class="pdf" href="http://web.mit.edu/kjb/www/Publications_Prior_to_1998/On_Finite_Element_Analysis_of_Pipe_Whip_Problems.pdf" target="_blank">.pdf</a>)</li>
+<li>K.J. Bathe and H. Ozdemir, “Elastic–Plastic Large Deformation Static and Dynamic Analysis”, Computers &amp; Structures, 6 (2), 81–92, 1976 (<a class="pdf" href="http://web.mit.edu/kjb/www/Publications_Prior_to_1998/Elastic%96Plastic_Large_Deformation_Static_and_Dynamic_Analysis.pdf" target="_blank">.pdf</a>)</li>
+<li>K.J. Bathe, S. Bolourchi, S. Ramaswamy and M.D. Snyder, “Some Computational Capabilities for Nonlinear Finite Element Analysis”, J. Nuclear Engineering and Design, 46, 429–455, 1978 (<a class="pdf" href="http://web.mit.edu/kjb/www/Publications_Prior_to_1998/Some_Computational_Capabilities_for_Nonlinear_Finite_Element_Analysis.pdf" target="_blank">.pdf</a>)</li>
+<li>K.J. Bathe and S. Bolourchi, “Large Displacement Analysis of Three-Dimensional Beam Structures”, Int. J. for Numerical Methods in Engineering, 14, 961– 986, 1979 (<a class="pdf" href="http://web.mit.edu/kjb/www/Publications_Prior_to_1998/Large_Displacement_Analysis_of_Three-Dimensional_Beam_Structures.pdf" target="_blank">.pdf</a>)</li>
+<li>K.J. Bathe and S. Ramaswamy, “On Three-Dimensional Nonlinear Analysis of Concrete Structures”, J. Nuclear Engineering and Design, 52, 385–409, 1979 (<a class="pdf" href="http://web.mit.edu/kjb/www/Publications_Prior_to_1998/On_Three-Dimensional_Nonlinear_Analysis_of_Concrete_Structures.pdf" target="_blank">.pdf</a>)</li>
+<li>K.J. Bathe and M. Khoshgoftaar, “Finite Element Formulation and Solution of Nonlinear Heat Transfer”, J. Nuclear Engineering and Design, 51, 389–401, 1979 (<a class="pdf" href="http://web.mit.edu/kjb/www/Publications_Prior_to_1998/Finite_Element_Formulation_and_Solution_of_Nonlinear_Heat_Transfer.pdf" target="_blank">.pdf</a>)</li>
+<li>R.O. Ritchie and K.J. Bathe, “On the Calibration of the Electrical Potential Technique for Monitoring Crack Growth Using Finite Element Methods”, J. of Fracture, 15, 47–55, 1979 (<a class="pdf" href="http://web.mit.edu/kjb/www/Publications_Prior_to_1998/On_the_Calibration_of_the_Electrical_Potential_Technique_for_Monitoring_Crack_Growth_Using_Finite_Element_Methods.pdf" target="_blank">.pdf</a>)</li>
+<li>K.J. Bathe, M.R. Khoshgoftaar, “Finite Element Free Surface Seepage Analysis without Mesh Iteration”, Int. J. for Num. and Anal. Meth. in Geomechanics, 3,13-22, 1979 (<a class="pdf" href="http://web.mit.edu/kjb/www/Publications_Prior_to_1998/Finite_Element_Free_Surface_Seepage_Analysis_without_Mesh_Iteration.pdf" target="_blank">.pdf</a>)</li>
+<li>K.J. Bathe and W.F. Hahn, “On Transient Analysis of Fluid-Structure Systems”, Computers &amp; Structures, 10, 383-391, 1979 (<a class="pdf" href="http://web.mit.edu/kjb/www/Publications_Prior_to_1998/On_Transient_Analysis_of_Fluid-Structure_Systems.pdf" target="_blank">.pdf</a>)</li>
+<li>K.J. Bathe and S. Ramaswamy, “An Accelerated Subspace Iteration Method”, J. Comp. Meth. in Appl. Mech. and Eng., 23, 313–331, 1980 (<a class="pdf" href="http://web.mit.edu/kjb/www/Publications_Prior_to_1998/An_Accelerated_Subspace_Iteration_Method.pdf" target="_blank">.pdf</a>)</li>
+<li>K.J. Bathe and V. Sonnad, “On Effective Implicit Time Integration in Analysis of Fluid-Structure Problems”, Int. J. Numerical Methods in Eng., 15, 943–948, 1980 (<a class="pdf" href="http://web.mit.edu/kjb/www/Publications_Prior_to_1998/On_Effective_Implicit_Time_Integration_in_Analysis_of_Fluid-Structure_Problems.pdf" target="_blank">.pdf</a>)</li>
+<li>J.L. Batoz, K.J. Bathe, L. W. Ho, “A Study of Three-Node Triangular Plate Bending Elements”, Int. J. Numerical Methods in Eng., 15, 1771-1812, 1980 (<a class="pdf" href="http://web.mit.edu/kjb/www/Publications_Prior_to_1998/A_Study_of_Three-Node_Triangular_Plate_Bending_Elements.pdf" target="_blank">.pdf</a>)</li>
+<li>K.J. Bathe and A.P. Cimento, “Some Practical Procedures for the Solution of Nonlinear Finite Element Equations”, J. Computer Meth. in Applied Mech. And Eng., 22, 59–85, 1980 (<a class="pdf" href="http://web.mit.edu/kjb/www/Publications_Prior_to_1998/Some_Practical_Procedures_for_the_Solution_of_Nonlinear_Finite_Element_Equations.pdf" target="_blank">.pdf</a>)</li>
+<li>K.J. Bathe and S. Bolourchi, “A Geometric and Material Nonlinear Plate and Shell Element”, Computers &amp; Structures, 11, 23-48, 1980 (<a class="pdf" href="http://web.mit.edu/kjb/www/Publications_Prior_to_1998/A_Geometric_and_Material_Nonlinear_Plate_and_Shell_Element.pdf" target="_blank">.pdf</a>)</li>
+<li>K.J. Bathe and C.A. Almeida, "A Simple and Effective Pipe Elbow Element - Linear Analysis", J. Appl. Mech., Transactions of the ASME, 47, 93-100, 1980 (<a class="pdf" href="http://web.mit.edu/kjb/www/Publications_Prior_to_1998/A_Simple_and_Effective_Pipe_Elbow_Element_Linear_Analysis.pdf" target="_blank">.pdf</a>)</li>
+<li>M. S. Engelman, G. Strang, K. J. Bathe, “The Application of Quasi-Newton Methods in Fluid Mechanics”, Int. J. Numerical Methods in Eng., 17, 707-718, 1981 (<a class="pdf" href="http://web.mit.edu/kjb/www/Publications_Prior_to_1998/The_Application_of_Quasi-Newton_Methods_in_Fluid_Mechanics.pdf" target="_blank">.pdf</a>)</li>
+<li>K.J. Bathe and S. Gracewski, “On Nonlinear Dynamic Analysis using Substructuring and Mode Superposition”, Computers &amp; Structures, 13, 699–707, 1981 (<a class="pdf" href="http://web.mit.edu/kjb/www/Publications_Prior_to_1998/On_Nonlinear_Dynamic_Analysis_using_Substructuring_and_Mode_Superposition.pdf" target="_blank">.pdf</a>)</li>
+<li>M.D. Snyder and K.J. Bathe, “A Solution Procedure for Thermo-Elastic-Plastic and Creep Problems”, J. Nuclear Engineering and Design, 64, 49–80, 1981 (<a class="pdf" href="http://web.mit.edu/kjb/www/Publications_Prior_to_1998/A_Solution_Procedure_for_Thermo-Elastic-Plastic_and_Creep_Problems.pdf" target="_blank">.pdf</a>)</li>
+<li>K.J. Bathe and L.W. Ho, “A Simple and Effective Element for Analysis of General Shell Structures”, Computers &amp; Structures, Vol.13, 673-681, 1981 (<a class="pdf" href="http://web.mit.edu/kjb/www/Publications_Prior_to_1998/A_Simple_and_Effective_Element_for_Analysis_of_General_Shell_Structures.pdf" target="_blank">.pdf</a>)</li>
+<li>K.J. Bathe and C.A. Almeida, “A Simple and Effective Pipe Elbow Element - Interaction Effects”, J. Appl. Mech., 49, 165–171, 1982 (<a class="pdf" href="http://web.mit.edu/kjb/www/Publications_Prior_to_1998/A_Simple_and_Effective_Pipe_Elbow_Element_Interaction_Effects.pdf" target="_blank">.pdf</a>)</li>
+<li>W.D. Rolph III and K.J. Bathe, “An Efficient Algorithm for Nonlinear Heat Transfer with Phase Changes”, Int. J. for Numerical Methods in Engineering, 18, 119–134, 1982 (<a class="pdf" href="http://web.mit.edu/kjb/www/Publications_Prior_to_1998/An_Efficient_Algorithm_for_Nonlinear_Heat_Transfer_with_Phase_Changes.pdf" target="_blank">.pdf</a>)</li>
+<li>K.J. Bathe and C.A. Almeida, "A Simple and Effective Pipe Elbow Element - Pressure Stiffening Effects", J. Appl. Mech., Transaction of the ASME, 49, 914-916, 1982 (<a class="pdf" href="http://web.mit.edu/kjb/www/Publications_Prior_to_1998/A_Simple_and_Effective_Pipe_Elbow_Element_Pressure_Stiffening_Effects.pdf" target="_blank">.pdf</a>)</li>
+<li>K.J. Bathe and E.N. Dvorkin, “On the Automatic Solution of Nonlinear Finite Element Equations”, Computers &amp; Structures, 17, 871–879, 1983 (<a class="pdf" href="http://web.mit.edu/kjb/www/Publications_Prior_to_1998/On_the_Automatic_Solution_of_Nonlinear_Finite_Element_Equations.pdf" target="_blank">.pdf</a>)</li>
+<li>K.J. Bathe, E. Dvorkin, and L. W. Ho, “Our Discrete-Kirchhoff and Isoparametric Shell Elements for Nonlinear Analysis An Assessment”, Computers &amp; Structures, 16 (1-4), 89-98, 1983 (<a class="pdf" href="http://web.mit.edu/kjb/www/Publications_Prior_to_1998/Our_Discrete-Kirchhoff_and_Isoparametric_Shell_Elements_for_Nonlinear_Analysis_An_Assessment.pdf" target="_blank">.pdf</a>)</li>
+<li>L.G. Olson, and K.J. Bathe, “A study of displacement-based fluid finite elements for calculating frequencies of fluid and fluid-structure systems”, Nuclear Engineering and Design, 76, 137-151, 1983 (<a class="pdf" href="http://web.mit.edu/kjb/www/Publications_Prior_to_1998/A_study_of_displacement_based_fluid_finite_elements_for_calculating_frequencies.pdf" target="_blank">.pdf</a>)</li>
+<li>K.J. Bathe, C.A. Almeida, and L.W. Ho, "A Simple and Effective Pipe Elbow Element - Some Nonlinear Capabilities", Computers &amp; Structures, 17, 659-669, 1983 (<a class="pdf" href="http://web.mit.edu/kjb/www/Publications_Prior_to_1998/A_Simple_and_Effective_Pipe_Elbow_Element_Some_nonlinear_capabilities.pdf" target="_blank">.pdf</a>)</li>
+<li>E.N. Dvorkin and K.J. Bathe, “A Continuum Mechanics Based Four-Node Shell Element for General Nonlinear Analysis”, Engineering Computations, 1, 77–88, 1984 (<a class="pdf" href="http://web.mit.edu/kjb/www/Publications_Prior_to_1998/A_Continuum_Mechanics_Based_Four-Node_Shell_Element_for_General_Nonlinear_Analysis.pdf" target="_blank">.pdf</a>)</li>
+<li>K.J. Bathe and E.N. Dvorkin, “A Four-Node Plate Bending Element Based on Mindlin Reissner Plate Theory and a Mixed Interpolation”, Int. J. for Numerical Methods in Engineering, 21, 367–383, 1985 (<a class="pdf" href="http://web.mit.edu/kjb/www/Publications_Prior_to_1998/A_Four-Node_Plate_Bending_Element_Based_on_Mindlin_Reissner_Plate_Theory_and_a_Mixed_Interpolation.pdf" target="_blank">.pdf</a>)</li>
+<li>L.G. Olson and K.J. Bathe, “Analysis of Fluid-Structure Interactions––A Direct Symmetric Coupled Formulation Based on a Fluid Velocity Potential”, Computers &amp; Structures, 21, 21–32, 1985 (<a class="pdf" href="http://web.mit.edu/kjb/www/Publications_Prior_to_1998/Analysis_of_Fluid-Structure%20Interactions%96%96A_Direct_Symmetric_Coupled_Formulation_Based_on_a_Fluid_Velocity_Potential.pdf" target="_blank">.pdf</a>)</li>
+<li>L.G. Olson and K.J. Bathe, “An Infinite Element for Analysis of Transient Fluid-Structure Interactions”, J. Engineering Computations 2, 319–329, 1985 (<a class="pdf" href="http://web.mit.edu/kjb/www/Publications_Prior_to_1998/An_Infinite_Element_for_Analysis_of_Transient_Fluid-Structure_Interactions.pdf" target="_blank">.pdf</a>)</li>
+<li>T. Sussman and K.J. Bathe, “The Gradient of the Finite Element Variational Indicator with Respect to Nodal and Applications in Fracture Mechanics and Mesh Optimization”, Int. J. for Numerical Methods in Engineering, 21, 763-774, 1985 (<a class="pdf" href="http://web.mit.edu/kjb/www/Publications_Prior_to_1998/The_Gradient_of_the_Finite_Element_Variational_Indicator_with_Respect_to_Nodal_and_Applications_in_Fracture_Mechanics_and_Mesh_Optimization.pdf" target="_blank">.pdf</a>)</li>
+<li>K.J. Bathe and A.B. Chaudhary, “A Solution Method for Planar and Axisymmetric Contact Problems”, Int. J. for Numerical Methods in Engineering, 21, 65–88, 1985 (<a class="pdf" href="http://web.mit.edu/kjb/www/Publications_Prior_to_1998/A_Solution_Method_for_Planar_and_Axisymmetric_Contact_Problems.pdf" target="_blank">.pdf</a>)</li>
+<li>A.B. Chaudhary and K.J. Bathe, “A Solution Method for Static and Dynamic Analysis of Three-Dimensional Contact Problems with Friction”, Computers &amp; Structures, 24 (6), 855–873, 1986 (<a class="pdf" href="http://web.mit.edu/kjb/www/Publications_Prior_to_1998/A_Solution_Method_for_Static_and_Dynamic_Analysis_of_Three-Dimensional_Contact_Problems_with_Friction.pdf" target="_blank">.pdf</a>)</li>
+<li>T. Sussman and K.J. Bathe, “Studies of Finite Element Procedures Stress Band Plots and the Evaluation of Finite Element Meshes”, Engineering Computations, 3, 178–191, 1986 (<a class="pdf" href="http://web.mit.edu/kjb/www/Publications_Prior_to_1998/Studies_of_Finite_Element_Procedures_Stress_Band_Plots_and_the_Evaluation_of_Finite_Element_Meshes.pdf" target="_blank">.pdf</a>)</li>
+<li>K.J. Bathe and E.N. Dvorkin, “A Formulation of General Shell Elements––The Use of Mixed Interpolation of Tensorial Components”, Int. J. for Numerical Methods in Engineering, 22, 697–722, 1986 (<a class="pdf" href="http://web.mit.edu/kjb/www/Publications_Prior_to_1998/A_Formulation_of_General_Shell_Elements%96%96The_Use_of_Mixed_Interpolation_of_Tensorial_Components.pdf" target="_blank">.pdf</a>)</li>
+<li>T. Sussman and K.J. Bathe, “A Finite Element Formulation for Nonlinear Incompressible Elastic and Inelastic Analysis”, Computers &amp; Structures, 26, 357–409, 1987 (<a class="pdf" href="http://web.mit.edu/kjb/www/Publications_Prior_to_1998/A_Finite_Element_Formulation_for_Nonlinear_Incompressible_Elastic_and_Inelastic_Analysis.pdf" target="_blank">.pdf</a>)</li>
+<li>M. Kojic and K.J. Bathe, “The Effective-Stress-Function Algorithm for Thermo-Elasto-Plasticity and Creep”, Int. J. for Numerical Methods in Engineering, 24, 1509–1532, 1987 (<a class="pdf" href="http://web.mit.edu/kjb/www/Publications_Prior_to_1998/The_Effective-Stress-Function_Algorithm_for_Thermo-Elasto-Plasticity_and_Creep.pdf" target="_blank">.pdf</a>)</li>
+<li>M. Kojic and K.J. Bathe, “Studies of Finite Element Procedures Stress Solution of a Closed Elastic Strain Path with Stretching and Shearing using the Updated Lagrangian Jaumann Formulation”, Computers &amp; Structures, 26 (l/2), 175-179, 1987 (<a class="pdf" href="http://web.mit.edu/kjb/www/Publications_Prior_to_1998/Studies_of_Finite_Element_Procedures_Stress_Solution_of_a_Closed_Elastic_Strain_Path_with_Stretching_and_Shearing_using_the_Updated_Lagrangian_Jaumann_Formulation.pdf" target="_blank">.pdf</a>)</li>
+<li>T. Sussman and K. J. Bathe, “Some advances in the analysis of semideformable media”, Computers &amp; Structures, 30 (112), 105-112, 1988 (<a class="pdf" href="http://web.mit.edu/kjb/www/Publications_Prior_to_1998/Some_advances_in_the_analysis_of_semideformable_media.pdf" target="_blank">.pdf</a>)</li>
+<li>K.J. Bathe, F. Brezzi and S.W. Cho, “The MITC7 and MITC9 Plate Bending Elements”, Computers &amp; Structures, 32 (3/4), 797–814, 1989 (<a class="pdf" href="http://web.mit.edu/kjb/www/Publications_Prior_to_1998/The_MITC7_and_MITC9_Plate_Bending_Elements.pdf" target="_blank">.pdf</a>)</li>
+<li>F. Brezzi, K.J. Bathe and M. Fortin, “Mixed-Interpolated Elements for Reissner Mindlin Plates”, Int. J. for Numerical Methods in Engineering, 28, 1787–1801, 1989 (<a class="pdf" href="http://web.mit.edu/kjb/www/Publications_Prior_to_1998/Mixed-Interpolated_Elements_for_Reissner_Mindlin_Plates.pdf" target="_blank">.pdf</a>)</li>
+<li>K.J. Bathe, J. Walczak, A. Welch and N. Mistry, “Nonlinear Analysis of Concrete Structures”, Computers &amp; Structures, 32 (3/4), 563–590, 1989 (<a class="pdf" href="http://web.mit.edu/kjb/www/Publications_Prior_to_1998/Nonlinear_Analysis_of_Concrete_Structures.pdf" target="_blank">.pdf</a>)</li>
+<li>S.W. Chae and K.J. Bathe, “On Automatic Mesh Construction and Mesh Refinement in Finite Element Analysis”, Computers &amp; Structures, 32, 911–936, 1989 (<a class="pdf" href="http://web.mit.edu/kjb/www/Publications_Prior_to_1998/On_Automatic_Mesh_Construction_and_Mesh_Refinement_in_Finite_Element_Analysis.pdf" target="_blank">.pdf</a>)</li>
+<li>B. Haggblad, K. J. Bathe, “Specifications of Boundary-Conditions for Reissner Mindlin Plate Bending Finite-Elements”, Int. J. for Numerical Methods in Engineering, 30, 981-1011, 1990 (<a class="pdf" href="http://web.mit.edu/kjb/www/Publications_Prior_to_1998/Specifications_of_Boundary-Conditions_for_Reissner_Mindlin_Plate_Bending_Finite-Elements.pdf" target="_blank">.pdf</a>)</li>
+<li>A.L. Eterovic and K.J. Bathe, “A Hyperelastic-Based Large Strain Elasto-Plastic Constitutive Formulation with Combined Isotropic-Kinematic Hardening using the Logarithmic Stress and Strain Measures”, Int. J. Numerical Methods in Engineering, 30, 1099–1114, 1990 (<a class="pdf" href="http://web.mit.edu/kjb/www/Publications_Prior_to_1998/A_Hyperelastic-Based_Large_Strain_Elasto-Plastic_Constitutive_Formulation_with_Combined_Isotropic-Kinematic_Hardening_using_the_Logarithmic_Stress_and_Strain_Measures.pdf" target="_blank">.pdf</a>)</li>
+<li>F. Brezzi and K.J. Bathe, “A Discourse on the Stability Conditions for Mixed Finite Element Formulations”, J. Computer Methods in Applied Mechanics and Engineering, 82, 27–57, 1990 (<a class="pdf" href="http://web.mit.edu/kjb/www/Publications_Prior_to_1998/A_Discourse_on_the_Stability_Conditions_for_Mixed_Finite_Element_Formulations.pdf" target="_blank">.pdf</a>)</li>
+<li>K.J. Bathe, M. Bucalem and F. Brezzi, “Displacement and Stress Convergence of the MITC Plate Bending Elements”, J. Eng. Computations, 7 (4), 291–302, 1990 (<a class="pdf" href="http://web.mit.edu/kjb/www/Publications_Prior_to_1998/Displacement_and_Stress_Convergence_of_the_MITC_Plate_Bending_Elements.pdf" target="_blank">.pdf</a>)</li>
+<li>A.L. Eterovic and K.J. Bathe, “On the Treatment of Inequality Constraints Arising from Contact Conditions in Finite Element Analysis”, Computers &amp; Structures, 40, 203–209, 1991 (<a class="pdf" href="http://web.mit.edu/kjb/www/Publications_Prior_to_1998/On_the_Treatment_of_Inequality_Constraints_Arising_from_Contact_Conditions_in_Finite_Element_Analysis.pdf" target="_blank">.pdf</a>)</li>
+<li>N.S. Lee and K.J. Bathe, “Effects of Element Distortions on the Performance of Isoparametric Elements”, Int. J. for Numerical Methods in Engineering, 36, 3553– 3576, 1993 (<a class="pdf" href="http://web.mit.edu/kjb/www/Publications_Prior_to_1998/Effects_of_Element_Distortions_on_the_Performance_of_Isoparametric_Elements.pdf" target="_blank">.pdf</a>)</li>
+<li>D. Chapelle and K.J. Bathe, “The Inf-Sup Test”, Computers &amp; Structures, 47 (4/5), 537–545, 1993 (<a class="pdf" href="http://web.mit.edu/kjb/www/Publications_Prior_to_1998/The_Inf-Sup_Test.pdf" target="_blank">.pdf</a>)</li>
+<li>M. Bucalem and K.J. Bathe, “Higher-Order MITC General Shell Elements”, Int. J. for Numerical Methods in Engineering, 36, 3729–3754, 1993 (<a class="pdf" href="http://web.mit.edu/kjb/www/Publications_Prior_to_1998/Higher-Order_MITC_General_Shell_Elements.pdf" target="_blank">.pdf</a>)</li>
+<li>K. Kato, N.S. Lee and K.J. Bathe, “Adaptive Finite Element Analysis of Large Strain Elastic Response”, Computers &amp; Structures, 42, 829–855, 1993 (<a class="pdf" href="http://web.mit.edu/kjb/www/Publications_Prior_to_1998/Adaptive_Finite_Element_Analysis_of_Large_Strain_Elastic_Response.pdf" target="_blank">.pdf</a>)</li>
+<li>C. Nitikitpaiboon and K.J. Bathe, “An Arbitrary Lagrangian–Eulerian Velocity Potential Formulation for Fluid–Structure Interaction”, Computers &amp; Structures, 47, 871–891, 1993 (<a class="pdf" href="http://web.mit.edu/kjb/www/Publications_Prior_to_1998/An_Arbitrary_Lagrangian%96Eulerian_Velocity_Potential_Formulation_for_Fluid%96Structure_Interaction.pdf" target="_blank">.pdf</a>)</li>
+<li>K.J. Bathe, J. Walczak and H. Zhang, “Some recent advances for practical finite element analysis”, Computers &amp; Structures, 47, 511-521, 1993 (<a class="pdf" href="http://web.mit.edu/kjb/www/Publications_Prior_to_1998/Some_recent_advances_for_practical_finite_element_analysis.pdf" target="_blank">.pdf</a>)</li>
+<li>N.S. Lee and K.J. Bathe, “Error Indicators and Adaptive Remeshing in Large Deformation Finite Element Analysis”, Finite Elements in Analysis and Design, 16, 99–139, 1994 (<a class="pdf" href="http://web.mit.edu/kjb/www/Publications_Prior_to_1998/Error_Indicators_and_Adaptive_Remeshing_in_Large_Deformation_Finite_Element_Analysis.pdf" target="_blank">.pdf</a>)</li>
+<li>G. Gabriel and K.J. Bathe, “Some Computational Issues in Large Strain Elasto-Plastic Analysis”, Computers &amp; Structures, 56 (2/3), pp. 249–267, 1995 (<a class="pdf" href="http://web.mit.edu/kjb/www/Publications_Prior_to_1998/Some_Computational_Issues_in_Large_Strain_Elasto-Plastic_Analysis.pdf" target="_blank">.pdf</a>)</li>
+<li>D. Pantuso and K.J. Bathe, “A Four-Node Quadrilateral Mixed-Interpolated Element for Solids and Fluids”, Mathematical Models &amp; Methods in Applied Sciences, 5 (8), 1113–1128, 1995 (<a class="pdf" href="http://web.mit.edu/kjb/www/Publications_Prior_to_1998/A_Four-Node_Quadrilateral_Mixed-Interpolated_Element_for_Solids_and_Fluids.pdf" target="_blank">.pdf</a>)</li>
+<li>K.J. Bathe, H. Zhang and M.H. Wang, “Finite Element Analysis of Incompressible and Compressible Fluid Flows with Free Surfaces and Structural Interactions”, Computers &amp; Structures, 56 (2/3), 193–213, 1995 (<a class="pdf" href="http://web.mit.edu/kjb/www/Publications_Prior_to_1998/Finite_Element_Analysis_of_Incompressible_and_Compressible_Fluid_Flows_with_Free_Surfaces_and_Structural_Interactions.pdf" target="_blank">.pdf</a>)</li>
+<li>P. Gaudenzi and K.J. Bathe, “An Iterative Finite Element Procedure for the Analysis of Piezoelectric Continua”, J. of Intelligent Material Systems and Structures, 6 (2), 266–273, 1995 (<a class="pdf" href="http://web.mit.edu/kjb/www/Publications_Prior_to_1998/An_Iterative_Finite_Element_Procedure_for_the_Analysis_of_Piezoelectric_Continua.pdf" target="_blank">.pdf</a>)</li>
+<li>K.J. Bathe, C. Nitikitpaiboon and X. Wang, “A Mixed Displacement-Based Finite Element Formulation for Acoustic Fluid–Structure Interaction”, Computers &amp; Structures, 56, 225–237, 1995 (<a class="pdf" href="http://web.mit.edu/kjb/www/Publications_Prior_to_1998/A_Mixed_Displacement_Based_Finite_Element_Formulation_for_Acoustic_Fluid%96Structure_Interaction.pdf" target="_blank">.pdf</a>)</li>
+<li>K.J. Bathe, “Simulation of Structural and Fluid Flow Response in Engineering Practice”, Computer Modeling and Simulation in Engineering, 1, 47–77, 1996 (<a class="pdf" href="http://web.mit.edu/kjb/www/Publications_Prior_to_1998/Simulation_of_Structural_and_Fluid_Flow_Response_in_Engineering_Practice.pdf" target="_blank">.pdf</a>)</li>
+<li>X. Wang and K.J. Bathe, “Displacement Pressure Based Mixed Finite Element Formulations for Acoustic Fluid–Structure Interaction Problems”, Int. J. for Numerical Methods in Engineering, 40, 2001–2017, 1997 (<a class="pdf" href="http://web.mit.edu/kjb/www/Publications_Prior_to_1998/Displacement_Pressure_Based_Mixed_Finite_Element_Formulations_for_Acoustic_Fluid%96Structure_Interaction_Problems.pdf" target="_blank">.pdf</a>)</li>
+<li>A. Iosilevich, K.J. Bathe and F. Brezzi, “On Evaluating the Inf-Sup Condition for Plate Bending Elements”, Int. J. for Numerical Methods in Engineering, 40, 3639– 3663, 1997 (<a class="pdf" href="http://web.mit.edu/kjb/www/Publications_Prior_to_1998/On_Evaluating_the_Inf-Sup_Condition_for_Plate_Bending_Elements.pdf" target="_blank">.pdf</a>)</li>
+<li>D. Pantuso and K.J. Bathe, “On the Stability of Mixed Finite Elements in Large Strain Analysis of Incompressible Solids”, Finite Elements in Analysis and Design, 28, 83–104, 1997 (<a class="pdf" href="http://web.mit.edu/kjb/www/Publications_Prior_to_1998/On_the_Stability_of_Mixed_Finite_Elements_in_Large_Strain_Analysis_of_Incompressible_Solids.pdf" target="_blank">.pdf</a>)</li>
+<li>K.J. Bathe, O. Guillermin, J. Walczak and H. Chen, “Advances in Nonlinear Finite Element Analysis of Automobiles”, Computers &amp; Structures, 64,881–891,1997 (<a class="pdf" href="http://web.mit.edu/kjb/www/Publications_Prior_to_1998/Advances_in_Nonlinear_Finite_Element_Analysis_of_Automobiles.pdf" target="_blank">.pdf</a>)</li>
+<li>X. Wang and K.J. Bathe, “On Mixed Elements for Acoustic Fluid Structure Interactions”, Mathematical Models &amp; Methods in Applied Sciences, 7 (3), 329–343, 1997 (<a class="pdf" href="http://web.mit.edu/kjb/www/Publications_Prior_to_1998/On_Mixed_Elements_for_Acoustic_Fluid_Structure_Interactions.pdf" target="_blank">.pdf</a>)</li>
+<li>K.J. Bathe and P.A. Bouzinov, “On the Constraint Function Method for Contact Problems”, Computers &amp; Structures”, 64 (5/6), 1069–1085, 1997 (<a class="pdf" href="http://web.mit.edu/kjb/www/Publications_Prior_to_1998/On_the_Constraint_Function_Method_for_Contact_Problems.pdf" target="_blank">.pdf</a>)</li>
+<li>M.L. Bucalem and K. J. Bathe, “Finite Element Analysis of Shell Structures”, Archives of Computational Methods in Engineering, 4 (1), 3-61, 1997 (<a class="pdf" href="http://web.mit.edu/kjb/www/Publications_Prior_to_1998/Finite_Element_Analysis_of_Shell_Structures.pdf" target="_blank">.pdf</a>)</li>
+<li>K.J. Bathe, H. Zhang and X. Zhang, “Some Advances in the Analysis of Fluid Flows”, Computers &amp; Structures, 64 (5/6), 909-930, 1997 (<a class="pdf" href="http://web.mit.edu/kjb/www/Publications_Prior_to_1998/Some_advances_in_the_analysis_of_fluid_flows.pdf" target="_blank">.pdf</a>)</li>
+</ol></dd>
+<dt>Principal Publications, Since 1998</dt>
+<dd>
+<ol><li>D. Chapelle and K.J. Bathe, "Fundamental Considerations for the Finite Element Analysis of Shell Structures", Computers &amp; Structures, 66 (1), 19-36, 1998 (<a class="pdf" href="http://web.mit.edu/kjb/www/Principal_Publications/Fundamental_Considerations_for_the_Finite_Element_Analysis_of_Shell_Structures.pdf" target="_blank">.pdf</a>)</li>
+<li>K.J. Bathe, Five articles published in ASME Mechanical Engineering Magazine: "How Automatic is Automatic Meshing?", March 1998 (<a class="pdf" href="http://web.mit.edu/kjb/www/Principal_Publications/How_Automatic_is_Automatic_Meshing.pdf" target="_blank">.pdf</a>); "Fluid-Structure Interactions", April 1998 (<a class="pdf" href="http://web.mit.edu/kjb/www/Principal_Publications/Fluid-Structure_Interactions.pdf" target="_blank">.pdf</a>); "What Can Go Wrong in FEA?", May 1998 (<a class="pdf" href="http://web.mit.edu/kjb/www/Principal_Publications/What_Can_Go_Wrong_in_FEA.pdf" target="_blank">.pdf</a>); "Current Directions in Meshing", July 1998 (<a class="pdf" href="http://web.mit.edu/kjb/www/Principal_Publications/Current_Directions_in_Meshing.pdf" target="_blank">.pdf</a>); "Crush Simulations of Cars with FEA", November 1998 (<a class="pdf" href="http://web.mit.edu/kjb/www/Principal_Publications/Crush_Simulations_of_Cars_with_FEA.pdf" target="_blank">.pdf</a>)</li>
+<li>K.J. Bathe, J. Walczak, O. Guillermin, P.A. Bouzinov and H. Chen, "Advances in Crush Analysis", Computers &amp; Structures, 72 (1-3), 31-47, 1999 (<a class="pdf" href="http://web.mit.edu/kjb/www/Principal_Publications/Advances_in_Crush_Analysis.pdf" target="_blank">.pdf</a>)</li>
+<li>K.J. Bathe, H. Zhang and S. Ji, "Finite Element Analysis of Fluid Flows Fully Coupled with Structural Interactions", Computers &amp; Structures, 72 (1-3), 1-16, 1999 (<a class="pdf" href="http://web.mit.edu/kjb/www/Principal_Publications/Finite_Element_Analysis_of_Fluid_Flows_Fully_Coupled_with_Structural_Interactions.pdf" target="_blank">.pdf</a>)</li>
+<li>K.J. Bathe, S. Rugonyi and S. De, "On the Current State of Finite Element Methods – Solids and Structures with Full Coupling to Fluid Flows", in Plenary Lectures of Fourth International Congress on Industrial and Applied Mathematics (J.M. Ball and J.C.R. Hunt, eds.), Oxford University Press, 2000 (<a class="pdf" href="http://web.mit.edu/kjb/www/Principal_Publications/On_the_Current_State_of_Finite_Element_Methods_Solids_and_Structures_with_Full_Coupling_to_Fluid_Flows.pdf" target="_blank">.pdf</a>)</li>
+<li>K.J. Bathe, D. Hendriana, F. Brezzi and G. Sangalli, "Inf-Sup Testing of Upwind Methods", International Journal for Numerical Methods in Engineering, 48, 745-760, 2000 (<a class="pdf" href="http://web.mit.edu/kjb/www/Principal_Publications/Inf-Sup_Testing_of_Upwind_Methods.pdf" target="_blank">.pdf</a>)</li>
+<li>K.J. Bathe, A. Iosilevich and D. Chapelle, "An Evaluation of the MITC Shell Elements", Computers &amp; Structures, 75 (1), 1-30, 2000 (<a class="pdf" href="http://web.mit.edu/kjb/www/Principal_Publications/An_Evaluation_of_the_MITC_Shell_Elements.pdf" target="_blank">.pdf</a>)</li>
+<li>K.J. Bathe, A. Iosilevich and D. Chapelle, "An Inf-Sup Test for Shell Finite Elements", Computers &amp; Structures, 75 (5), 439-456, 2000 (<a class="pdf" href="http://web.mit.edu/kjb/www/Principal_Publications/An_Inf-Sup_Test_for_Shell_Finite_Elements.pdf" target="_blank">.pdf</a>)</li>
+<li>D. Hendriana and K.J. Bathe, "On Upwind Methods for Parabolic Finite Elements in Incompressible Flows", International Journal for Numerical Methods in Engineering, 47 (1-3), 317-340, 2000 (<a class="pdf" href="http://web.mit.edu/kjb/www/Principal_Publications/On_Upwind_Methods_for_Parabolic_Finite_Elements_in_Incompressible_Flows.pdf" target="_blank">.pdf</a>)</li>
+<li>D. Chapelle and K.J. Bathe, "The Mathematical Model Underlying General Shell Elements", International Journal for Numerical Methods in Engineering, 48 (2), 289-313, 2000 (<a class="pdf" href="http://web.mit.edu/kjb/www/Principal_Publications/The_Mathematical_Model_Underlying_General_Shell_Elements.pdf" target="_blank">.pdf</a>)</li>
+<li>D. Pantuso, K.J. Bathe and P.A. Bouzinov, "A Finite Element Procedure for the Analysis of Thermo-Mechanical Solids in Contact", Computers &amp; Structures, 75 (6), 551-573, 2000 (<a class="pdf" href="http://web.mit.edu/kjb/www/Principal_Publications/A_Finite_Element_Procedure_for_the_Analysis_of_Thermo-Mechanical_Solids_in_Contact.pdf" target="_blank">.pdf</a>)</li>
+<li>S. Rugonyi and K.J. Bathe, "On the Analysis of Fully-Coupled Fluid Flows with Structural Interactions – a Coupling and Condensation Procedure", International Journal for Computational Civil and Structural Engineering, 1, 29-41, 2000</li>
+<li>S. De and K.J. Bathe, "The Method of Finite Spheres", Computational Mechanics, 25, 329-345, 2000 (<a class="pdf" href="http://web.mit.edu/kjb/www/Principal_Publications/The_Method_of_Finite_Spheres.pdf" target="_blank">.pdf</a>)</li>
+<li>J.F. Hiller, S. De and K.J. Bathe, "On the State-of-the-Art of Finite Element Procedures and a Meshless Technique", in Computational Mechanics for the Twenty-First Century (B.H.V. Topping, ed.), Saxe-Coburg Publications, 2000</li>
+<li>D. Hendriana and K.J. Bathe, "On a Parabolic Quadrilateral Element for Compressible Flows", Computer Methods in Applied Mechanics and Engineering, 186, 1-22, 2000 (<a class="pdf" href="http://web.mit.edu/kjb/www/Principal_Publications/On_a_Parabolic_Quadrilateral_Element_for_Compressible_Flows.pdf" target="_blank">.pdf</a>)</li>
+<li>S. De and K.J. Bathe, "The Method of Finite Spheres: Some Advances in Efficiency and Incompressible Analysis", Proceedings, Advances in Computational Engineering &amp; Sciences, 2, 1499-1504, 2000</li>
+<li>S. De and K.J. Bathe, "Displacement/Pressure Mixed Interpolation in the Method of Finite Spheres", International Journal for Numerical Methods in Engineering, 51, 275-292, 2001 (<a class="pdf" href="http://web.mit.edu/kjb/www/Principal_Publications/Displacement_Pressure_Mixed_Interpolation_in_the_Method_of_Finite_Spheres.pdf" target="_blank">.pdf</a>)</li>
+<li>S. De and K.J. Bathe, "Towards an Efficient Meshless Computational Technique: The Method of Finite Spheres", Engineering Computations, 18, 170-192, 2001 (<a class="pdf" href="http://web.mit.edu/kjb/www/Principal_Publications/Towards_an_Efficient_Meshless_Computational_Technique_-_The_Method_of_Finite_Spheres.pdf" target="_blank">.pdf</a>)</li>
+<li>S. De and K.J. Bathe, "The Method of Finite Spheres: A Summary of Recent Developments", in Computational Fluid and Solid Mechanics (K.J. Bathe, ed.), Elsevier, 2001 (<a class="pdf" href="http://web.mit.edu/kjb/www/Principal_Publications/The_Method_of_Finite_Spheres_A_Summary_of_Recent_Developments.pdf" target="_blank">.pdf</a>)</li>
+<li>K.J. Bathe, "The Inf-Sup Condition and its Evaluation for Mixed Finite Element Methods", Computers &amp; Structures, 79, 243-252, 2001 (<a class="pdf" href="http://web.mit.edu/kjb/www/Principal_Publications/The_Inf-Sup_Condition_and_its_Evaluation_for_Mixed_Finite_Element_Methods.pdf" target="_blank">.pdf</a>)</li>
+<li>W. Bao, X. Wang and K.J. Bathe, "On the Inf-Sup Condition of Mixed Finite Element Formulations for Acoustic Fluids", Mathematical Models &amp; Methods in Applied Sciences, 11 (5), 883-901, 2001 (<a class="pdf" href="http://web.mit.edu/kjb/www/Principal_Publications/On_the_Inf-Sup_Condition_of_Mixed_Finite_Element_Formulations_for_Acoustic_Fluids.pdf" target="_blank">.pdf</a>)</li>
+<li>S. Rugonyi and K.J. Bathe, "On the Finite Element Analysis of Fluid Flows Fully Coupled with Structural Interactions", Computer Modeling in Engineering &amp; Sciences, 2, 195-212, 2001 (<a class="pdf" href="http://web.mit.edu/kjb/www/Principal_Publications/On_the_Finite_Element_Analysis_of_Fluid_Flows_Fully_Coupled_with_Structural_Interactions.pdf" target="_blank">.pdf</a>)</li>
+<li>S. Rugonyi and K.J. Bathe, "Lyapunov Characteristic Exponent Calculation for Finite Element Discretized Models", in Computational Fluid and Solid Mechanics (K.J. Bathe, ed.), Elsevier, 2001 (<a class="pdf" href="http://web.mit.edu/kjb/www/Principal_Publications/Lyapunov_Characteristic_Exponent_Calculation_for_Finite_Element_Discretized_Models.pdf" target="_blank">.pdf</a>)</li>
+<li>J.F. Hiller and K.J. Bathe, "On Higher-Order-Accuracy Points in Isoparametric Finite Element Analysis and Application to Error Assessment", Computers &amp; Structures, 79, 1275-1285, 2001 (<a class="pdf" href="http://web.mit.edu/kjb/www/Principal_Publications/On_Higher-Order-Accuracy_Points_in_Isoparametric_Finite_Element_Analysis_and_Application_to_Error_Assessment.pdf" target="_blank">.pdf</a>)</li>
+<li>N. El-Abbasi and K.J. Bathe, "Stability and Patch Test Performance of Contact Discretizations and a New Solution Algorithm", Computers &amp; Structures, 79, 1473-1486, 2001 (<a class="pdf" href="http://web.mit.edu/kjb/www/Principal_Publications/Stability_and_Patch_Test_Performance_of_Contact_Discretizations_and_a_New_Solution_Algorithm.pdf" target="_blank">.pdf</a>)</li>
+<li>N. El-Abbasi and K.J. Bathe, "On a New Segment-to-Segment Contact Algorithm", in Computational Fluid and Solid Mechanics (K.J. Bathe, ed.), Elsevier, 2001 (<a class="pdf" href="http://web.mit.edu/kjb/www/Principal_Publications/On_a_New_Segment-to-Segment_Contact_Algorithm.pdf" target="_blank">.pdf</a>)</li>
+<li>X. Wang, K.J. Bathe and J. Walczak, "A Stress Integration Algorithm for J3-Dependent Elasto-Plasticity Models", in Computational Fluid and Solid Mechanics (K.J. Bathe, ed.), Elsevier, 2001(<a class="pdf" href="http://web.mit.edu/kjb/www/Principal_Publications/A_Stress_Integration_Algorithm_for_J3-Dependent_Elasto-Plasticity_Models.pdf" target="_blank">.pdf</a>)</li>
+<li>H. Zhang and K.J. Bathe, "Direct and Iterative Computing of Fluid Flows Fully Coupled with Structures", in Computational Fluid and Solid Mechanics (K.J. Bathe, ed.), Elsevier, 2001 (<a class="pdf" href="http://web.mit.edu/kjb/www/Principal_Publications/Direct_and_Iterative_Computing_of_Fluid_Flows_Fully_Coupled_with_Structures.pdf" target="_blank">.pdf</a>)</li>
+<li>M. Kawka and K.J. Bathe, "Implicit Integration for the Solution of Metal Forming Processes", in Computational Fluid and Solid Mechanics (K.J. Bathe, ed.), Elsevier, 2001 (<a class="pdf" href="http://web.mit.edu/kjb/www/Principal_Publications/Implicit_Integration_for_the_Solution_of_Metal_Forming_Processes.pdf" target="_blank">.pdf</a>)</li>
+<li>D. Chapelle and K.J. Bathe, "Optimal Consistency Errors for General Shell Elements", C.R. Acad. Sci. Paris, t. 332, Série I, 771-776, 2001 (<a class="pdf" href="http://web.mit.edu/kjb/www/Principal_Publications/Optimal_Consistency_Errors_for_General_Shell_Elements.pdf" target="_blank">.pdf</a>)</li>
+<li>K.J. Bathe and F. Brezzi, "Stability of Finite Element Mixed Interpolations for Contact Problems", Atti della Accademia Nazionale dei Lincei, s. 9, 12, 159-166, 2001 (<a class="pdf" href="http://web.mit.edu/kjb/www/Principal_Publications/Stability_of_Finite_Element_Mixed_Interpolations_for_Contact_Problems.pdf" target="_blank">.pdf</a>)</li>
+<li>S. De and K.J. Bathe, "The Method of Finite Spheres with Improved Numerical Integration", Computers &amp; Structures, 79, 2183-2196, 2001 (<a class="pdf" href="http://web.mit.edu/kjb/www/Principal_Publications/The_Method_of_Finite_Spheres_with_Improved_Numerical_Integration.pdf" target="_blank">.pdf</a>)</li>
+<li>K.J. Bathe and J.P. Pontaza, "A Flow-Condition-Based Interpolation Mixed Finite Element Procedure for Higher Reynolds Number Fluid Flows", Mathematical Models &amp; Methods in Applied Sciences, 12 (4), 525-539, 2002 (<a class="pdf" href="http://web.mit.edu/kjb/www/Principal_Publications/A_Flow-Condition-Based_Interpolation_Mixed_Finite_Element_Procedure_for_Higher_Reynolds_Number_Fluid_Flows.pdf" target="_blank">.pdf</a>)</li>
+<li>S. Rugonyi and K.J. Bathe, "An Evaluation of the Lyapunov Characteristic Exponent of Chaotic Continuous Systems", International Journal for Numerical Methods in Engineering, 56, 145-163, 2003 (<a class="pdf" href="http://web.mit.edu/kjb/www/Principal_Publications/An_Evaluation_of_the_Lyapunov_Characteristic_Exponent_of_Chaotic_Continuous_Systems.pdf" target="_blank">.pdf</a>)</li>
+<li>Y. Guo and K.J. Bathe, " A Numerical Study of a Natural Convection Flow in a Cavity", International Journal for Numerical Methods in Fluids, 40, 1045-1057, 2002 (<a class="pdf" href="http://web.mit.edu/kjb/www/Principal_Publications/A_Numerical_Study_of_a_Natural_Convection_Flow_in_a_Cavity.pdf" target="_blank">.pdf</a>)</li>
+<li>P.S. Lee and K.J. Bathe, "On the Asymptotic Behavior of Shell Structures and the Evaluation in Finite Element Solutions", Computers &amp; Structures, 80, 235-255, 2002 (<a class="pdf" href="http://web.mit.edu/kjb/www/Principal_Publications/On_the_Asymptotic_Behavior_of_Shell_Structures_and_the_Evaluation_in_Finite_Element_Solutions.pdf" target="_blank">.pdf</a>)</li>
+<li>K.J. Bathe and H. Zhang, "A Flow-Condition-Based Interpolation Finite Element Procedure for Incompressible Fluid Flows", Computers &amp; Structures, 80, 1267-1277, 2002 (<a class="pdf" href="http://web.mit.edu/kjb/www/Principal_Publications/A_Flow-Condition-Based_Interpolation_Finite_Element_Procedure_for_Incompressible_Fluid_Flows.pdf" target="_blank">.pdf</a>)</li>
+<li>K.J. Bathe, J.F. Hiller and H. Zhang, "On the Finite Element Analysis of Shells and their Full Interaction with Navier-Stokes Fluid Flows", (B.H.V. Topping and Z. Bittnar, eds.), Computational Structures Technology, Civil-Comp Press, 2002; also special publication of the Croatian Academy of the Arts and Sciences, Zagreb, Sept. 2002 (<a class="pdf" href="http://web.mit.edu/kjb/www/Principal_Publications/On_the_Finite_Element_Analysis_of_Shells_and_their_Full_Interaction_with_Navier_Stokes_Fluid_Flows.pdf" target="_blank">.pdf</a>)</li>
+<li>K.J. Bathe, D. Chapelle and P.S. Lee, "A Shell Problem 'Highly-Sensitive' to Thickness Changes", International Journal for Numerical Methods in Engineering, 57, 1039-1052, 2003 (<a class="pdf" href="http://web.mit.edu/kjb/www/Principal_Publications/A_Shell_Problem_%27Highly-Sensitive%27_to_Thickness_Changes.pdf" target="_blank">.pdf</a>)</li>
+<li>J.F. Hiller and K.J. Bathe, "Measuring Convergence of Mixed Finite Element Discretizations: An Application to Shell Structures", Computers &amp; Structures, 81, 639-654, 2003 (<a class="pdf" href="http://web.mit.edu/kjb/www/Principal_Publications/Measuring_Convergence_of_Mixed_Finite_Element_Discretizations_-_An_Application_to_Shell_Structures.pdf" target="_blank">.pdf</a>)</li>
+<li>K.J. Bathe, P.S. Lee and J.F. Hiller, "Towards Improving the MITC9 Shell Element", Computers &amp; Structures, 81, 477-489, 2003 (<a class="pdf" href="http://web.mit.edu/kjb/www/Principal_Publications/Towards_Improving_the_MITC9_Shell_Element.pdf" target="_blank">.pdf</a>)</li>
+<li>S. De, J.W. Hong and K.J. Bathe, "On the Method of Finite Spheres in Applications: Towards the Use with ADINA and in a Surgical Simulator", Computational Mechanics, 31, 27-37, 2003 (<a class="pdf" href="http://web.mit.edu/kjb/www/Principal_Publications/On_the_Method_of_Finite_Spheres_in_Applications_Towards_the_Use_with_ADINA_and_in_a_Surgical_Simulator.pdf" target="_blank">.pdf</a>)</li>
+<li>J.W. Hong and K.J. Bathe, "On Analytical Transformations for Efficiency Improvements in the Method of Finite Spheres", in Computational Fluid and Solid Mechanics 2003 (K.J. Bathe, ed.), Elsevier, 2003 (<a class="pdf" href="http://web.mit.edu/kjb/www/Principal_Publications/On_Analytical_Transformations_for_Efficiency_Improvements_in_the_Method_of_Finite_Spheres.pdf" target="_blank">.pdf</a>)</li>
+<li>N. Elabbasi and K.J. Bathe, "Some Advances in Modeling Multiphysics-Biomedical Applications", in Computational Fluid and Solid Mechanics 2003 (K.J. Bathe, ed.), Elsevier, 2003 (<a class="pdf" href="http://web.mit.edu/kjb/www/Principal_Publications/Some_Advances_in_Modeling_Multiphysics-Biomedical_Applications.pdf" target="_blank">.pdf</a>)</li>
+<li>F.J. Montans and K.J. Bathe, "On the Stress Integration in Large Strain Elasto-Plasticity", in Computational Fluid and Solid Mechanics 2003 (K.J. Bathe, ed.), Elsevier, 2003 (<a class="pdf" href="http://web.mit.edu/kjb/www/Principal_Publications/On_the_Stress_Integration_in_Large_Strain_Elasto-Plasticity.pdf" target="_blank">.pdf</a>)</li>
+<li>K.J. Bathe, "On the Development of Finite Element Methods and Software", Proceedings, Conference on Numerical Methods in Continuum Mechanics, Zilina, Slovakia, September 2003</li>
+<li>K.J. Bathe, "The Key Challenges in Computational Mechanics”, iacm expressions, No.14, October 2003 (<a class="pdf" href="http://web.mit.edu/kjb/www/Principal_Publications/The_Key_Challenges_in_Computational_Mechanics.pdf" target="_blank">.pdf</a>)</li>
+<li>K.J. Bathe and H. Zhang, "Finite Element Developments for General Fluid Flows with Structural Interactions", International Journal for Numerical Methods in Engineering, 60: 213-232, 2004 (<a class="pdf" href="http://web.mit.edu/kjb/www/Principal_Publications/Finite_Element_Developments_for_General_Fluid_Flows_with_Structural_Interactions.pdf" target="_blank">.pdf</a>)</li>
+<li>K.J. Bathe and F.J. Montans, "On Modeling Mixed Hardening in Computational Plasticity", Computers &amp; Structures, 82, 535-539, 2004 (<a class="pdf" href="http://web.mit.edu/kjb/www/Principal_Publications/On_Modeling_Mixed_Hardening_in_Computational_Plasticity.pdf" target="_blank">.pdf</a>)</li>
+<li>F.J. Montans and K.J. Bathe, "Computational Issues in Large Strain Elasto-Plasticity: An Algorithm for Mixed Hardening and Plastic Spin", International Journal for Numerical Methods in Engineering, 63, 159-196, 2005 (<a class="pdf" href="http://web.mit.edu/kjb/www/Principal_Publications/Computational_Issues_in_Large_Strain_Elasto-Plasticity_An_Algorithm_for_Mixed_Hardening_and_Plastic_Spin.pdf" target="_blank">.pdf</a>)</li>
+<li>D. Chapelle, A. Ferent and K.J. Bathe, "3D-Shell Elements and Their Underlying Mathematical Model", Mathematical Models &amp; Methods in Applied Sciences, 14, 105-142, 2004 (<a class="pdf" href="http://web.mit.edu/kjb/www/Principal_Publications/3D-Shell_Elements_and_Their_Underlying_Mathematical_Model.pdf" target="_blank">.pdf</a>)</li>
+<li>P.S. Lee and K.J. Bathe, "Development of MITC Isotropic Triangular Shell Finite Elements", Computers &amp; Structures, 82: 945-962, 2004 (<a class="pdf" href="http://web.mit.edu/kjb/www/Principal_Publications/Development_of_MITC_Isotropic_Triangular_Shell_Finite_Elements.pdf" target="_blank">.pdf</a>)</li>
+<li>N. Elabbasi, J.W. Hong and K.J. Bathe, "The Reliable Solution of Contact Problems in Engineering Design", International Journal of Mechanics and Materials in Design, 1, 3-16, 2004 (<a class="pdf" href="http://web.mit.edu/kjb/www/Principal_Publications/The_Reliable_Solution_of_Contact_Problems_in_Engineering_Design.pdf" target="_blank">.pdf</a>)</li>
+<li>K.J. Bathe, "On the State of Finite Element Procedures for Forming Processes", Proceedings of the International Conference on Numerical Methods in Industrial Forming Processes, NUMIFORM, Ohio State University, USA, June 2004 (<a class="pdf" href="http://web.mit.edu/kjb/www/Principal_Publications/On_the_State_of_Finite_Element_Procedures_for_Forming_Processes.pdf" target="_blank">.pdf</a>)</li>
+<li>P.S. Lee and K.J. Bathe, "Insight into Finite Element Shell Discretizations by Use of the Basic Shell Mathematical Model", Computers &amp; Structures, 83: 69-90, 2005 (<a class="pdf" href="http://web.mit.edu/kjb/www/Principal_Publications/Insight_into_Finite_Element_Shell_Discretizations_by_Use_of_the_Basic_Shell_Mathematical_Model.pdf" target="_blank">.pdf</a>)</li>
+<li>T. Grätsch and K.J. Bathe, Entwicklung von Finite-Elemente-Modellen - Stand und Tendenzen, Plenary Lecture, Proceedings, Baustatik und Baupraxis 9, TU Dresden 2005 (<a class="pdf" href="http://web.mit.edu/kjb/www/Principal_Publications/Entwicklung_von_Finite-Elemente-Modellen_-_Stand_und_Tendenzen.pdf" target="_blank">.pdf</a>)</li>
+<li>J.W. Hong and K.J. Bathe, "Coupling and Enrichment Schemes for Finite Element and Finite Sphere Discretizations", Computers &amp; Structures, 83, 1386-1395, 2005 (<a class="pdf" href="http://web.mit.edu/kjb/www/Principal_Publications/Coupling_and_Enrichment_Schemes_for_Finite_Element_and_Finite_Sphere_Discretizations.pdf" target="_blank">.pdf</a>)</li>
+<li>H. Kohno and K.J. Bathe, "Insight into the Flow-Condition-Based Interpolation Finite Element Approach: Solution of Steady-State Advection-Diffusion Problems, International Journal for Numerical Methods in Engineering, 63, 197-217, 2005 (<a class="pdf" href="http://web.mit.edu/kjb/www/Principal_Publications/Insight_into_the_Flow-Condition-Based_Interpolation_Finite_Element_Approach_Solution_of_Steady-State_Advection-Diffusion_Problems.pdf" target="_blank">.pdf</a>)</li>
+<li>T. Grätsch and K.J. Bathe, "A posteriori Error Estimation Techniques in Practical Finite Element Analysis", Computers &amp; Structures, 83, 235-265, 2005 (<a class="pdf" href="http://web.mit.edu/kjb/www/Principal_Publications/A_posteriori_Error_Estimation_Techniques_in_Practical_Finite_Element_Analysis.pdf" target="_blank">.pdf</a>)</li>
+<li>T. Grätsch and K.J. Bathe, "Influence Functions and Goal-Oriented Error Estimation for Finite Element Analysis of Shell Structures", International Journal for Numerical Methods in Engineering, 63, 709-736, 2005 (<a class="pdf" href="http://web.mit.edu/kjb/www/Principal_Publications/Influence_Functions_and_Goal-Oriented_Error_Estimation_for_Finite_Element_Analysis_of_Shell_Structures.pdf" target="_blank">.pdf</a>)</li>
+<li>F.J. Montans and K.J. Bathe, "Large Strain Anisotropic Plasticity Including Effects of Plastic Spin", in Computational Fluid and Solid Mechanics 2005 (K.J. Bathe, ed.), Elsevier, 377-381, 2005 (<a class="pdf" href="http://web.mit.edu/kjb/www/Principal_Publications/Large_Strain_Anisotropic_Plasticity_Including_Effects_of_Plastic_Spin.pdf" target="_blank">.pdf</a>)</li>
+<li>M.M.I. Baig and K.J. Bathe, "On Direct Time Integration in Large Deformation Dynamic Analysis", in Computational Fluid and Solid Mechanics 2005 (K.J. Bathe, ed.), Elsevier, 2005 (<a href="http://web.mit.edu/kjb/www/Principal_Publications/On_Direct_Time_Integration_in_Large_Deformation_Dynamic_Analysis.pdf" target="_blank">.pdf</a>)</li>
+<li>H. Kohno and K.J. Bathe, "On the Flow-Condition-Based Interpolation Approach for Incompressible Fluids", in Computational Fluid and Solid Mechanics 2005 (K.J. Bathe, ed.), Elsevier, 2005 (<a class="pdf" href="http://web.mit.edu/kjb/www/Principal_Publications/On_the_Flow-Condition-Based_Interpolation_Approach_for_Incompressible_Fluids.pdf" target="_blank">.pdf</a>)</li>
+<li>T. Grätsch and K.J. Bathe, "Goal-oriented Error Estimation in the Analysis of Fluid Flows with Structural Interactions", Comp. Meth. in Applied Mech. and Eng., 195, 5673-5684, 2006 (<a class="pdf" href="http://web.mit.edu/kjb/www/Principal_Publications/Goal-oriented_Error_Estimation_in_the_Analysis_of_Fluid_Flows_with_Structural_Interactions.pdf" target="_blank">.pdf</a>)</li>
+<li>H. Kohno and K.J. Bathe, "A Flow-Condition-Based Interpolation Finite Element Procedure for Triangular Grids", Int. J. Num. Meth. in Fluids, 51, 673-699, 2006 (<a class="pdf" href="http://web.mit.edu/kjb/www/Principal_Publications/A_Flow-Condition-Based_Interpolation_Finite_Element_Procedure_for_Triangular_Grids.pdf" target="_blank">.pdf</a>)</li>
+<li>K. J. Bathe and M. M. I. Baig, "On a Composite Implicit Time Integration Procedure for Nonlinear Dynamics", Computers &amp; Structures , 83, 2513 -2534, 2005 (<a class="pdf" href="http://web.mit.edu/kjb/www/Principal_Publications/On_a_Composite_Implicit_Time_Integration_Procedure_for_Nonlinear_Dynamics.pdf" target="_blank">.pdf</a>)</li>
+<li>F.J. Montans and K.J. Bathe, "On a Theoretical and Computational Framework for Large Strain Anisotropic Plasticity", Computational Plasticity, Proceedings 8th Int. Conference on Computational Plasticity, D.R.J. Owen and E. Onate, eds., Barcelona, 2005 (<a class="pdf" href="http://web.mit.edu/kjb/www/Principal_Publications/On_a_Theoretical_and_Computational_Framework_for_Large_Strain_Anisotropic_Plasticity.pdf" target="_blank">.pdf</a>)</li>
+<li>H. Kohno and K.J. Bathe, "A 9-node Quadrilateral FCBI Element for Incompressible Navier-Stokes Flows", Comm. in Num. Methods in Eng., 22, 917-931, 2006 (<a class="pdf" href="http://web.mit.edu/kjb/www/Principal_Publications/A_nine-node_Quadrilateral_FCBI_Element_for_Incompressible_Navier-Stokes_Flows.pdf" target="_blank">.pdf</a>)</li>
+<li>B. Banijamali and K.J. Bathe, "The CIP Method Embedded in Finite Element Discretizations of Incompressible Flows", Int. J. for Numerical Methods in Eng., 71, 66-80, 2007 (<a class="pdf" href="http://web.mit.edu/kjb/www/Principal_Publications/The_CIP_Method_Embedded_in_Finite_Element_Discretizations_of_Incompressible_Flows.pdf" target="_blank">.pdf</a>)</li>
+<li>P.S. Lee, H.C. Noh and K.J. Bathe, "Insight into 3-node Triangular Shell Finite Elements: the Effects of Element Isotropy and Mesh Patterns", Computers &amp; Structures, 85, 404-418, 2007 (<a class="pdf" href="http://web.mit.edu/kjb/www/Principal_Publications/Insight_into_3-node_Triangular_Shell_Finite_Elements_the_Effects_of_Element_Isotropy_and_Mesh_Patterns.pdf" target="_blank">.pdf</a>)</li>
+<li>F.J. Montans and K.J. Bathe, "Towards a Model for Large Strain Anisotropic Elasto-Plasticity", Chapter in Computational Plasticity, E. Onate and R. Owen, eds. , Springer-Verlag, 13-36, 2007</li>
+<li>K.J. Bathe, "On Reliable Finite Element Methods for Extreme Loading Conditions", Chapter in Extreme Man-made and Natural Hazards in Dynamics of Structures, A. Ibrahimbegovic and I. Kozar, eds., Springer-Verlag, 2007 (<a class="pdf" href="http://web.mit.edu/kjb/www/Principal_Publications/On_Reliable_Finite_Element_Methods_for_Extreme_Loading_Conditions.pdf" target="_blank">.pdf</a>)</li>
+<li>K. J. Bathe, “Conserving Energy and Momentum in Nonlinear Dynamics: A Simple Implicit Time Integration Scheme”, Computers &amp; Structures, 85, 437-445, 2007 (<a class="pdf" href="http://web.mit.edu/kjb/www/Principal_Publications/Conserving_Energy_and_Momentum_in_Nonlinear_Dynamics_A_Simple_Implicit_Time_Integration_Scheme.pdf" target="_blank">.pdf</a>)</li>
+<li>K.J. Bathe and G.A. Ledezma, “Benchmark Problems for Incompressible Fluid Flows with Structural Interactions”, Computers &amp; Structures, 85, 628-644, 2007 (<a class="pdf" href="http://web.mit.edu/kjb/www/Principal_Publications/Benchmark_Problems_for_Incompressible_Fluid_Flows_with_Structural_Interactions.pdf" target="_blank">.pdf</a>)</li>
+<li>T. Sussman and K.J. Bathe, “A Model of Incompressible Isotropic Hyperelastic Material Behavior using Spline Interpolations of Tension-Compression Test Data", Communications in Numerical Methods in Engineering, 25, 53-63, 2009 (<a class="pdf" href="http://web.mit.edu/kjb/www/Principal_Publications/A_Model_of_Incompressible_Isotropic_Hyperelastic_Material_Behavior_using_Spline_Interpolations_of_Tension-Compression_Test_Data.pdf" target="_blank">.pdf</a>)</li>
+<li>D.-N. Kim and K.J. Bathe, “A 4-node 3D-Shell Element to Model Shell Surface Tractions and Incompressible Behavior”, Computers &amp; Structures, 86, 2027-2041, 2008 (<a class="pdf" href="http://web.mit.edu/kjb/www/Principal_Publications/A_4-node_3D-Shell_Element_to_Model_Shell_Surface_Tractions_and_Incompressible_Behavior.pdf" target="_blank">.pdf</a>)</li>
+<li>K. J. Bathe, “On Finite Element Methods for Nonlinear Dynamic Response”, Proceedings EURODYN 2008, Southampton, U.K., July 2008 (<a class="pdf" href="http://web.mit.edu/kjb/www/Principal_Publications/On_Finite_Element_Methods_for_Nonlinear_Dynamic_Response.pdf" target="_blank">.pdf</a>)</li>
+<li>R. S. Sedeh, M. Bathe, and K.J. Bathe, “The Subspace Iteration Method in Protein Normal Mode Analysis”, J. Computational Chemistry, DOI 10.1002/jcc, 2009 (<a class="pdf" href="http://web.mit.edu/kjb/www/Principal_Publications/The_Subspace_Iteration_Method_in_Protein_Normal_Mode_Analysis.pdf" target="_blank">.pdf</a>)</li>
+<li>C. Deilmann and K.J. Bathe, “A Holistic Method to Design an Optimized Energy Scenario and Quantitatively Evaluate Promising Technologies for Implementation”, International Journal of Green Energy, 6,1-21, 2009 (<a class="pdf" href="http://web.mit.edu/kjb/www/Principal_Publications/A_Holistic_Method_to_Design_an_Optimized_Energy_Scenario_and_Quantitatively_Evaluate_Promising_Technologies_for_Implementation.pdf" target="_blank">.pdf</a>)</li>
+<li>D.-N. Kim and K.J. Bathe, “A Triangular Six-Node Shell Element”, Computers &amp; Structures, 87, 1451-1460, 2009 (<a class="pdf" href="http://web.mit.edu/kjb/www/Principal_Publications/A_Triangular_Six-Node_Shell_Element.pdf" target="_blank">.pdf</a>)</li>
+<li>K.J. Bathe, “The Finite Element Method”, in Encyclopedia of Computer Science and Engineering, B. Wah (ed.), J. Wiley and Sons, 1253-1264, 2009 (<a class="pdf" href="http://web.mit.edu/kjb/www/Principal_Publications/The_Finite_Element_Method.pdf" target="_blank">.pdf</a>)</li>
+<li>D.-N. Kim, F. Montans, K.J. Bathe, “Insight into a Model for Large Strain Anisotropic Plasticity”, Computational Mechanics, 44, 651-668, 2009 (<a class="pdf" href="http://web.mit.edu/kjb/www/Principal_Publications/Insight_into_a_Model_for_Large_Strain_Anisotropic_Elasto-Plasticity.pdf" target="_blank">.pdf</a>)</li>
+<li>K.J. Bathe, “Advances in Finite Element Procedures for Nonlinear Dynamic Response”, Proceedings European Conference on Computational Mechanics -- SEECM 2009, Rhodes, Greece, June 2009 (<a class="pdf" href="http://web.mit.edu/kjb/www/Principal_Publications/Advances_in_Finite_Element_Procedures_for_Nonlinear_Dynamic_Response.pdf" target="_blank">.pdf</a>)</li>
+<li>K.J. Bathe and H. Zhang, "A Mesh Adaptivity Procedure for CFD &amp; Fluid-Structure Interactions", Computers &amp; Structures, 87, 604-617, 2009 (<a class="pdf" href="http://web.mit.edu/kjb/www/Principal_Publications/A_Mesh_Adaptivity_Procedure_for_CFD_&amp;_Fluid-Structure_Interactions.pdf" target="_blank">.pdf</a>)</li>
+<li>J. Degroote, K.J. Bathe and J. Vierendeels, “Performance of a New Partitioned Procedure versus a Monolithic Procedure in Fluid-Structure Interaction”, Computers &amp; Structures, 87, 793-801, 2009 (<a class="pdf" href="http://web.mit.edu/kjb/www/Principal_Publications/Performance_of_a_New_Partitioned_Procedure_versus_a_Monolithic_Procedure_in_Fluid_Structure_Interaction.pdf" target="_blank">.pdf</a>)</li>
+<li>H. Kohno, K.J. Bathe and J.C. Wright, “A Finite Element Procedure for Multiscale Wave Equations with Application to Plasma Waves”, Computers &amp; Structures, 88, 87-94, 2010 (<a class="pdf" href="http://web.mit.edu/kjb/www/Principal_Publications/A_finite_element_procedure_for_multiscale_wave_equations_with_application_to_plasma_waves.pdf" target="_blank">.pdf</a>)</li>
+<li>P.S. Lee and K.J. Bathe, “The Quadratic MITC Plate and MITC Shell Elements in Plate Bending”, Advances in Engineering Software, 41, 712-728, 2010 (<a class="pdf" href="http://web.mit.edu/kjb/www/Principal_Publications/The_Quadratic_MITC_Plate_and_MITC_Shell_Elements_in_Plate_Bending.pdf" target="_blank">.pdf</a>)</li>
+<li>D. Chapelle and K.J. Bathe, “On the Ellipticity Condition for Model-Parameter Dependent Mixed Formulations”, Computers &amp; Structures, 88, 581–587, 2010 (<a class="pdf" href="http://web.mit.edu/kjb/www/Principal_Publications/On_the_Ellipticity_Condition_for_Model_Parameter_Dependent_Mixed_Formulations.pdf" target="_blank">.pdf</a>)</li>
+<li>K.J. Bathe, “Challenges and Advances in the Analysis of Structures”, Proceedings Fourth International Conference on Structural Engineering, Mechanics and Computation -- SEMC 2010, Cape Town, South Africa  (A. Zingoni, ed.), 2010 (<a class="pdf" href="http://web.mit.edu/kjb/www/Principal_Publications/Challenges_and_Advances_in_the_Analysis_of_Structures.pdf" target="_blank">.pdf</a>)</li>
+<li>K.J. Bathe and P.S. Lee, “Measuring the Convergence Behavior of Shell Analysis Schemes”, Computers &amp; Structures, 89, 285-301, 2011 (<a class="pdf" href="http://web.mit.edu/kjb/www/Principal_Publications/Measuring_the_convergence_behavior_of_shell_analysis_schemes.pdf" target="_blank">.pdf</a>)</li>
+<li>D.J. Payen and K.J. Bathe, “The use of nodal point forces to improve element stresses”, Computers &amp; Structures, 89, 485-495, 2011 (<a class="pdf" href="http://web.mit.edu/kjb/www/Principal_Publications/The_use_of_nodal_point_forces_to_improve_element_stresses.pdf" target="_blank">.pdf</a>)</li>
+<li>K.J. Bathe, F. Brezzi and L.D. Marini, “The MITC9 shell element in plate bending: mathematical analysis of a simplified case”, Computational Mechanics, 47, 617-626, 2011 (<a class="pdf" href="http://web.mit.edu/kjb/www/Principal_Publications/The_MITC9_shell_element_in_plate_bending_mathematical_analysis_of_a_simplified_case.pdf" target="_blank"><span class="pdf"><span class="pdf">.pdf</span></span></a>)</li>
+<li>M.A. Caminero, F.J. Montans, and K.J. Bathe, “Modeling Large Strain Anisotropic Elasto-plasticity with Logarithmic Strain and Stress Measures”, Computers &amp; Structures, 89, 826-843, 2011 (<a class="pdf" href="http://web.mit.edu/kjb/www/Principal_Publications/Modeling_large_strain_anisotropic_elasto-plasticity_with_logarithmic_strain_and_stress_measures.pdf" target="_blank">.pdf</a>)</li>
+<li>D.J. Payen and K.J. Bathe, “Improved stresses for the 4-node tetrahedral element”, Computers &amp; Structures, 89, 1265-1273, 2011 (<a class="pdf" href="http://web.mit.edu/kjb/www/Principal_Publications/Improved_stresses_for_the_4_node_tetrahedral_element.pdf" target="_blank">.pdf</a>)</li>
+<li>S. Ham and K.J. Bathe, “A finite element method enriched for wave propagation problems”, Computers &amp; Structures, 94-95, 1-12, 2012 (<a class="pdf" href="http://web.mit.edu/kjb/www/Principal_Publications/A_finite_element_method_enriched_for_wave_propagation_problems_PUBLISHED.pdf" target="_blank"><span class="pdf">.pdf</span></a>)</li>
+<li>Z. Kazanc<span lang="EN-US" xml:lang="EN-US">ı</span> and K.J. Bathe, “Crushing and crashing of tubes with implicit time integration”, Int. J. of Impact Engineering, 42, 80-88, 2012 (<a class="pdf" href="http://web.mit.edu/kjb/www/Principal_Publications/Crushing_and_crashing_of_tubes_with_implicit_time_integration.pdf" target="_blank">.pdf</a>)</li>
+<li>K.J. Bathe and G. Noh, “Insight into an implicit time integration scheme for structural dynamics”, Computers &amp; Structures, 98-99, 1-6, 2012 (<a class="pdf" href="http://web.mit.edu/kjb/www/Principal_Publications/To use Insight_into_an_implicit_time_integration_scheme_for_structural_dynamics.pdf" target="_blank">.pdf</a>)</li>
+<li>K.J. Bathe, “Advances in the multiphysics analysis of structures”, <span lang="EN-GB" xml:lang="EN-GB">Chapter 1 in Computational Methods for Engineering Science, B.H.V. Topping (ed), Saxe-Coburg Publications, Stirlingshire, U.K., </span>2012 (<a class="pdf" href="http://web.mit.edu/kjb/www/Principal_Publications/Advances_in_the_Multiphysics_Analysis_of_Structures.pdf" target="_blank">.pdf</a>)</li>
+<li>K.J. Bathe, “The subspace iteration method – Revisited”, Computers &amp; Structures, 2012 (<a class="pdf" href="http://web.mit.edu/kjb/www/Principal_Publications/The_subspace_iteration_method_Revisited.pdf" target="_blank">.pdf</a>)</li>
+<li>D.J. Payen and K.J. Bathe, “A stress improvement procedure”, Computers &amp; Structures, 112-113, 311-326, 2012 (<a class="pdf" href="http://web.mit.edu/kjb/www/Principal_Publications/A_stress_improvement_procedure.pdf" target="_blank">.pdf</a>)</li>
+<li>J. Kim and K.J. Bathe, "The finite element method enriched by interpolation covers", Computers &amp; Structures, 116, 35-49, 2013 (<a class="pdf" href="http://web.mit.edu/kjb/www/Principal_Publications/The_finite_element_method_enriched_by_interpolation_covers.pdf" target="_blank">.pdf</a>)</li>
+<li>T. Sussman and K.J. Bathe, "3D-shell elements for structures in large strains", Computers &amp; Structures, 122, 2-12, 2013 (<a class="pdf" href="http://web.mit.edu/kjb/www/Principal_Publications/3D_shell_elements_for_structures_in_large_strains.pdf" target="_blank">.pdf</a>)</li>
+<li>K.J. Bathe, "Insights and advances in the analysis of structures", Proceedings Fifth International Conference on Structural Engineering, Mechanics and Computation -- SEMC 2013, Cape Town, South Africa (A. Zingoni, ed.), 2013(<a class="pdf" href="http://web.mit.edu/kjb/www/Principal_Publications/Insights_and_advances_in_the_analysis_of_structures.pdf" target="_blank">.pdf</a>)</li>
+<li>G. Noh, S. Ham, and K.J. Bathe, "Performance of an implicit time integration scheme in the analysis of wave propagations", Computers &amp; Structures, 123, 93-105, 2013 (<a class="pdf" href="http://web.mit.edu/kjb/www/Principal_Publications/Performance_of_an_implicit_time_integration_scheme_in_the_analysis_of_wave_propagations.pdf" target="_blank">.pdf</a>)</li>
+<li>G. Noh and K.J. Bathe, "An explicit time integration scheme for the analysis of wave propagations", Computers &amp; Structures, 129, 178-193, 2013 (<a class="pdf" href="http://web.mit.edu/kjb/www/Principal_Publications/An_explicit_time_integration_scheme_for_the_analysis_of_wave_propagations.pdf" target="_blank">.pdf</a>)</li>
+<li>J. Kim and K.J. Bathe, “Towards a procedure to automatically improve finite element solutions by interpolation covers”, Computers &amp; Structures, 131, 81-97, 2014 (<a class="pdf" href="http://web.mit.edu/kjb/www/Principal_Publications/Towards_a_procedure_to_automatically_improve_finite_element_solutions_by_interpolation_covers.pdf" target="_blank">.pdf</a>)</li>
+<li>K.J. Bathe, H. Zhang, and Y. Yan, "The solution of Maxwell's equations in multiphysics", Computers &amp; Structures, 132, 99-112, 2014 (<a class="pdf" href="http://web.mit.edu/kjb/www/Principal_Publications/The_solution_of_Maxwells_equations_in_multiphysics.pdf" target="_blank">.pdf</a>)</li>
+<li>H.M. Jeon, P.S. Lee, and K.J. Bathe, "The MITC3 shell finite element enriched by interpolation covers", Computers &amp; Structures, 134, 128-142, 2014 (<a class="pdf" href="http://web.mit.edu/kjb/www/Principal_Publications/The_MITC3_shell_finite_element_enriched_by_interpolation_covers.pdf" target="_blank">.pdf</a>)</li>
+<li>Y. Lee, P.S. Lee, and K.J. Bathe, "The MITC3+ shell element and its performance", Computers &amp; Structures, 138, 12-23, 2014 (<a class="pdf" href="http://web.mit.edu/kjb/www/Principal_Publications/The_MITC3+_shell_element_and_its_performance.pdf" target="_blank">.pdf</a>)</li>
+<li lang="EN-GB" xml:lang="EN-GB">K.J. Bathe, “Frontiers in finite element procedures &amp; applications”, <span lang="EN-GB" xml:lang="EN-GB">Chapter 1 in Computational Methods for Engineering Technology, B.H.V. Topping and P. Iványi (eds), Saxe-Coburg Publications, Stirlingshire, U.K., </span>2014 (<a class="pdf" href="http://web.mit.edu/kjb/www/Principal_Publications/Frontiers_in_Finite_Element_Procedures_&amp;_Applications.pdf" target="_blank">.pdf</a>)</li>
+<li>K.J. Bathe and J. Dong, “Component mode synthesis with subspace iterations for controlled accuracy of frequency and mode shape solutions”, Computers &amp; Structures, 139, 28-32, 2014 (<a class="pdf" href="http://web.mit.edu/kjb/www/Principal_Publications/Component_mode_synthesis_with_subspace_iterations_for_controlled_accuracy_of_frequency_and_mode_shape_solutions.pdf" target="_blank">.pdf</a>)</li>
+<li>T. Sussman and K.J. Bathe, "Spurious modes in geometrically nonlinear small displacement finite elements with incompatible modes", Computers &amp; Structures, 140, 14-22, 2014 (<a class="pdf" href="http://web.mit.edu/kjb/www/Principal_Publications/Spurious_modes_in_geometrically_nonlinear_small_displacement_finite_elements_with_incompatible_modes.pdf" target="_blank">.pdf</a>)</li>
+<li>S. Ham, B. Lai, and K.J. Bathe, “The method of finite spheres for wave propagation problems”, Computers &amp; Structures, 142, 1-14, 2014 (<a class="pdf" href="http://web.mit.edu/kjb/www/Principal_Publications/The_method_of_finite_spheres_for_wave_propagation_problems.pdf" target="_blank">.pdf</a>)</li>
+<li>H.M Jeon, Y. Lee, P.S. Lee, and K.J. Bathe, “The MITC3+ shell element in geometric nonlinear analysis", Computers &amp; Structures, 146, 91-104, 2015 (<a class="pdf" href="http://web.mit.edu/kjb/www/Principal_Publications/The_MITC3+_shell_element_in_geometric_nonlinear_analysis.pdf" target="_blank">.pdf</a>)</li>
+<li>Y. Lee, H.M Jeon, P.S. Lee, and K.J. Bathe, “The modal behavior of the MITC3+ triangular shell element”, Computers &amp; Structures, 153, 148-164, 2015 (<a class="pdf" href="http://web.mit.edu/kjb/www/Principal_Publications/The_modal_behavior_of_the_MITC3_plus_triangular_shell_element.pdf" target="_blank">.pdf</a>)</li>
+<li>S. You and K.J. Bathe, “Transient solution of 3D free surface flows using large time steps”, Computers &amp; Structures, 158, 346-354, 2015 (<a class="pdf" href="http://web.mit.edu/kjb/www/Principal_Publications/Transient_solution_of_3D_free_surface_flows_using_large_time_steps.pdf" target="_blank">.pdf</a>)</li>
+<li>R. Kroyer, K. Nilsson, and K.J. Bathe, “Advances in direct time integration schemes for dynamic analysis”, automotive CAECompanion 2016/2017, 32-35, 2016 (<a href="http://web.mit.edu/kjb/www/Principal_Publications/Advances_in_Direct_Time_Integration_Schemes_for_Dynamic_Analysis.pdf" target="_blank">.pdf</a>)</li>
+<li>Y. Ko, P.S. Lee, and K.J. Bathe, "The MITC4+ shell element and its performance", Computers &amp; Structures, 169, 57–68, 2016 (<a href="http://web.mit.edu/kjb/www/Principal_Publications/The_MITC4_plus_shell_element_and_its_performance.pdf" target="_blank">.pdf</a>)</li>
+<li>K.J. Bathe, "The finite element method with 'overlapping finite elements'", Proceedings Sixth International Conference on Structural Engineering, Mechanics and Computation -- SEMC 2016, Cape Town, South Africa (A. Zingoni, ed.), 2016 (<a href="http://web.mit.edu/kjb/www/Principal_Publications/The_finite_element_method_with_overlapping_finite_elements.pdf" target="_blank">.pdf</a>)</li>
+<li>K.T. Kim and K.J. Bathe, "Transient implicit wave propagation dynamics with the method of finite spheres", Computers &amp; Structures,<span style="line-height: 20px; font-size: 13px;"> </span>173, 50–60, 2016 (<a href="http://web.mit.edu/kjb/www/Principal_Publications/Transient_implicit_wave_propagation_dynamics_with_the_method_of_finite_spheres.pdf" target="_blank">.pdf</a>)</li>
+<li>B. Lai and K.J. Bathe, "The method of finite spheres in three-dimensional linear static analysis", Computers &amp; Structures, 173, 161–173, 2016 (<a href="http://web.mit.edu/kjb/www/Principal_Publications/The method of finite spheres in three-dimensional linear static analysis - 1.pdf" target="_blank">.pdf</a>)</li>
+<li>Y. Ko, P.S. Lee and K.J. Bathe, "A new MITC4+ shell element", Computers &amp; Structures, 182, 404-418, 2017 (<a href="http://web.mit.edu/kjb/www/Principal_Publications/A_new_MITC4+_shell_element.pdf" target="_blank">.pdf</a>)</li>
+<li>K.J. Bathe and L. Zhang, "The finite element method with overlapping elements – A new paradigm for CAD driven simulations", Computers &amp; Structures, 182, 526-539, 2017 (<a href="http://web.mit.edu/kjb/www/Principal_Publications/The_finite_element_method_with_overlapping_elements_a_new_paradigm_for_CAD_driven_simulations.pdf" target="_blank">.pdf</a>)</li>
+<li>W.L. Nicomedes, K.J. Bathe, F.J.S. Moreira and R.C. Mesquita, “Meshfree analysis of electromagnetic wave scattering from conducting targets: Formulation and computations”, Computers &amp; Structures, 184, 36-52, 2017 (<a href="http://web.mit.edu/kjb/www/Principal_Publications/Meshfree_analysis_of_electromagnetic_wave_scattering_from_conducting_targets.pdf" target="_blank">.pdf</a>)</li>
+<li>Y. Ko, P.S. Lee and K.J. Bathe, “The MITC4+ shell element in geometric nonlinear analysis”, Computers &amp; Structures, 185, 1-14, 2017 (<a href="http://web.mit.edu/kjb/www/Principal_Publications/The_MITC4+_shell_element_in_geometric_nonlinear_analysis.pdf" target="_blank">.pdf</a>)</li>
+<li>K.T. Kim and K.J. Bathe, “The Bathe subspace iteration method enriched by turning vectors”, Computers &amp; Structures, 186, 11-21, 2017 (<a href="http://web.mit.edu/kjb/www/Principal_Publications/The_Bathe%20subspace_iteration_method_enriched_by_turning_vectors.pdf" target="_blank">.pdf</a>)<br />Source code of the improved subspace iteration method, as described in the paper (<a href="http://web.mit.edu/kjb/www/Other/ESUBSPACE.zip">link</a>)</li>
+<li>L. Zhang and K.J. Bathe, “Overlapping finite elements for a new paradigm of solution”, Computers &amp; Structures, 187, 64-76, 2017 (<a href="http://web.mit.edu/kjb/www/Principal_Publications/Overlapping_finite_elements_for_a_new_paradigm_of_solution.pdf" target="_blank">.pdf</a>)</li>
+<li>Y. Ko, P.S. Lee and K.J. Bathe, A new 4-node MITC element for analysis of two-dimensional solids and its formulation in a shell element, Computers &amp; Structures, 192, 34-49, 2017 (<a href="http://web.mit.edu/kjb/www/Principal_Publications/A_new_4_node_MITC_element_for_analysis_of_2D_solids_and_its_formulation_in_a_shell_element.pdf" target="_blank">.pdf</a>)</li>
+<li>Y. Ko, Y. Lee, P.S. Lee and K.J. Bathe, "Performance of the MITC3+ and MITC4+ shell elements in widely-used benchmark problems", Computers &amp; Structures, 193, 187-206, 2017 (<a href="http://web.mit.edu/kjb/www/Principal_Publications/Performance_of_the_MITC3+_and_MITC4+_shell_elements_in_widely_used_benchmark_problems.pdf" target="_blank">.pdf</a>)</li>
+<li>R.S. Sedeh, G. Yun, J.Y. Lee, K.J. Bathe and D.N. Kim, "A framework of finite element procedures for the analysis of proteins", Computers &amp; Structures, 196, 24-35, 2018 (<a href="http://web.mit.edu/kjb/www/Principal_Publications/A_framework_of_finite_element_procedures_for_the_analysis_of_proteins.pdf" target="_blank">.pdf</a>)</li>
+<li>L. Zhang, K.T. Kim and K.J. Bathe, "The new paradigm of finite element solutions with overlapping elements in CAD – Computational efficiency of the procedure", Computers &amp; Structures, 199, 1-17, 2018 (<a href="http://web.mit.edu/kjb/www/Principal_Publications/The_new_paradigm_of_finite_element_solutions_with_overlapping_elements.pdf" target="_blank">.pdf</a>)</li>
+<li>K.T. Kim, L. Zhang and K.J. Bathe, "Transient implicit wave propagation dynamics with overlapping finite elements", Computers &amp; Structures, 199, 18-33, 2018 (<a href="http://web.mit.edu/kjb/www/Principal_Publications/Transient_implicit_wave_propagation_dynamics_with_overlapping_finite_elements.pdf" target="_blank">.pdf</a>)</li>
+<li>G. Noh and K.J. Bathe, "Further insights into an implicit time integration scheme for structural dynamics", Computers &amp; Structures, 202, 15-24, 2018 (<a href="http://web.mit.edu/kjb/www/Principal_Publications/Further_insights_into_an_implicit_time_integration_scheme_for_structural_dynamics.pdf" target="_blank">.pdf</a>)</li>
+<li>Y. Ko and K.J. Bathe, "A new 8-node element for analysis of three-dimensional solids", Computers &amp; Structures, 202, 85-104, 2018 (<a href="http://web.mit.edu/kjb/www/Principal_Publications/A_new_8-node_element_for_analysis_of_three-dimensional_solids.pdf" target="_blank">.pdf</a>)</li>
+<li>H. Jun, K. Yoon, P.S. Lee and K.J. Bathe, "The MITC3+ shell element enriched in membrane displacements by interpolation covers", Computer Methods in Applied Mechanics and Engineering, 337, 458-480, 2018 (<a href="http://web.mit.edu/kjb/www/Principal_Publications/The_MITC3+_shell_element_enriched_in_membrane_displacements_by_interpolation_covers.pdf" target="_blank">.pdf</a>)</li>
+<li>Y. Ko and K.J. Bathe, "Inf-sup testing of some three-dimensional low-order finite elements for the analysis of solids", Computers &amp; Structures, 209, 1-13, 2018 (<a href="http://web.mit.edu/kjb/www/Principal_Publications/Inf_sup_testing_of_some_three_dimensional_low_order_finite_elements_for_the_analysis_of_solids.pdf">.pdf</a>)</li>
+<li>M.M. Malakiyeh, S. Shojaee and K.J. Bathe, "The Bathe time integration method revisited for prescribing desired numerical dissipation", Computers &amp; Structures, 212, 289-298, 2019 (<a href="http://web.mit.edu/kjb/www/Principal_Publications/The_Bathe_time_integration_method_revisited_for_prescribing_desired_numerical_dissipation.pdf">.pdf</a>)</li>
+<li>G. Noh and K.J. Bathe, "The Bathe time integration method with controllable spectral radius: The ρ<sub>∞</sub>-Bathe method", Computers &amp; Structures, 212, 299-310, 2019 (<a href="http://web.mit.edu/kjb/www/Principal_Publications/The_Bathe_time_integration_method_with_controllable_spectral_radius.pdf">.pdf</a>)</li>
+<li>K.J. Bathe, "The AMORE paradigm for finite element analysis", Advances in Engineering Software, 130, 1-13, 2019 (<a href="http://web.mit.edu/kjb/www/Principal_Publications/03  31 2019 AMORE paper 14 March 2019.pdf">.pdf</a>)</li>
+<li>K.J. Bathe, "Advancing frontiers in finite element procedures", Proceedings Seventh International Conference on Structural Engineering, Mechanics and Computation -- SEMS 2019, Cape Town, South Africa (A. Zingoni, ed.), 2019 (<a href="http://web.mit.edu/kjb/www/Principal_Publications/to upload UCT SEMC 2019 Advancing Frontiers.pdf">.pdf</a>)</li>
+<li>J. Huang and K.J. Bathe, "Quadrilateral elements and their use in the AMORE paradigm", Computers &amp; Structures, 222, 25-35, 2019 (.<a href="http://web.mit.edu/kjb/www/Principal_Publications/JH KJB Quad OFE.pdf">pdf</a>)</li>
+<li>G. Noh and K.J. Bathe, "For direct time integrations: A comparison of the Newmark and rho-infinity Bathe schemes", Computers &amp; Structures, 225, 2019 (.<a href="http://web.mit.edu/kjb/www/Principal_Publications/For my MIT web site NM  BM published.pdf">pdf</a>)</li>
+<li>S.B. Kwon, K.J. Bathe and G. Noh,"An analysis of implicit time integration schemes for wave propagations", Computers &amp; Structures, 230, 2020 (.<a href="http://web.mit.edu/kjb/www/Principal_Publications/Wave prop paper published.pdf">pdf)</a></li>
+<li>Y. Chai and K.J. Bathe, “Transient wave propagation in inhomogeneous media with enriched overlapping triangular elements” Computers &amp; Structures, 237, 2020 (.<a href="http://web.mit.edu/kjb/www/Principal_Publications/Y Chai KJB.pdf">pdf</a>)</li>
+<li>J. Huang and K.J. Bathe , “Overlapping finite element meshes in AMORE”, Advances in Engineering Software, 144, 2020 (.<a href="http://web.mit.edu/kjb/www/Principal_Publications/Overlapping finite element meshes in AMORE.pdf">pdf</a>)</li>
+<li>W.L. Nicomedes, K.J. Bathe, F.J.S. Moreira, and R. C. Mesquita, “The Method of Finite Spheres in acoustic wave propagation through nonhomogeneous media: Inf-sup stability conditions”.  Vietnam Journal of Mechanics, VAST, 42, No. 3, 209 – 237, 2020 (.<a href="http://web.mit.edu/kjb/www/Principal_Publications/WN KJB et al  VJMech VOL42N3_2020.pdf">pdf</a>)</li>
+<li>J. Huang and K.J. Bathe, “On the convergence of overlapping elements and overlapping meshes", Computers &amp; Structures, 244, 2021 (.<a href="http://web.mit.edu/kjb/www/Principal_Publications/JH KJB   On the convergence ... CAS 106429.pdf">pdf</a>) </li>
+<li>M.M.  Malakiyeh, S. Shojaee,  S. Hamzehei-Javaran, and K.J.  Bathe, "New insights into the beta-1/2 Bathe time integration scheme when L-stable”, Computers &amp; Structures, 245, 2021 (.<a href="http://web.mit.edu/kjb/www/Principal_Publications/MM ... KJB time integration.pdf">pdf</a>)</li>
+<li>K.T. Kim and K.J. Bathe, “Accurate solution of wave propagation problems in elasticity”, Computers &amp; Structures, 249, 2021 (.<a href="http://web.mit.edu/kjb/www/Principal_Publications/KT Kim and KJB paper.pdf">pdf</a>)</li>
+<li>W.L. Nicomedes, K.J. Bathe, F.J.S. Moreira, and R. C. Mesquita, "Acoustic scattering in nonhomogeneous media and the problem of discontinuous gradients: Analysis and inf-sup stability in the method of finite spheres", International Journal for Numerical Methods in Engineering, DOI: 10.1002/nme.6647 (.<a href="http://web.mit.edu/kjb/www/Principal_Publications/nme.6647_pages.pdf">pdf</a>)</li>
+<li>S.-B. Kwon, K.J. Bathe and G. Noh, "Selecting the load at the intermediate time point of the rho-infinity Bathe time integration scheme", Computers &amp; Structures, 254, 2021 (.<a href="http://web.mit.edu/kjb/www/Principal_Publications/Kwon Bathe Noh CAS --- load paper.pdf">pdf</a>)</li>
+<li>P. Zakian and K.J. Bathe, "Transient wave propagations with the Noh-Bathe scheme and the spectral element method", Computers &amp; Structures, 254, 2021 (.<a href="http://web.mit.edu/kjb/www/Principal_Publications/CAS 106531 Final version.pdf">pdf</a>)</li>
+<li>S. Lee and K.J. Bathe, "An enhancement of overlapping finite elements", Computers &amp; Structures, 260, 2022 (.<a href="http://web.mit.edu/kjb/www/Principal_Publications/enhancement corrected final paper.pdf">pdf</a>)</li>
+</ol></dd>
+</dl><p>Presentation: K.J. Bathe, "Frontiers &amp; Challenges in CAE Simulations", Opening Plenary Presentation at the Conferences  Computational Structures Technology and Computational Engineering Technology, Sitges / Barcelona, Spain, September 2018 (<a href="http://web.mit.edu/kjb/www/Principal_Publications/03 31 2019   FINAL to present  Short Sitges Barcelona conference.pdf">.pdf</a>)</p>
+<p>For further publications, see J.W. Tedesco and J. Walczak, Preface in Celebration of the 60th Birthday of K.J. Bathe, Computers &amp; Structures, 81: 455-462, 2003 (<a class="pdf" href="http://web.mit.edu/kjb/www/Principal_Publications/Preface_in_Computers_&amp;_Structures.pdf" target="_blank">.pdf</a>)</p>
+</div></div></div></section>  </div>
+</div>
+  </div>
+        <div class="region region-footer">
+    <div id="block-block-2" class="block block-block">
+
+    
+  <div class="content">
+    <footer><div class="footer-inner mesh-bg light">
+        <div class="clearfix row full-width">
+            <div class="helpful-links clearfix large-6 medium-12 columns">
+                <ul class="link-group"><li class="top-link"><a href="#"><span class="heavy">at MechE</span></a></li>
+                    <li><a href="/sites/default/files/ME-Diversity-Statement.pdf">Diversity Statement</a></li>    
+                    <li><a href="/faculty-positions">Faculty Positions</a></li> 
+                    <li><a href="/contact">Contact</a></li>
+                    <li><a href="/how-apply">Apply</a></li>
+                    <li><a href="/sitemap.xml">Sitemap</a></li>
+                    <li><a href="/privacy">Privacy</a></li>
+                    <li><a href="https://accessibility.mit.edu/">Accessibility</a></li>
+                    <li><a href="/credits">Credits</a></li>
+                    <li><a class="toggle-contrast" href="#">Toggle High Contrast</a></li>
+                </ul><ul class="link-group"><li class="top-link"><a href="#"><span class="heavy">Student</span> <span class="light">Resources</span></a></li>
+                    <li><a href="https://meche-ad-portal.mit.edu/">MechE Academic Dashboard</a></li>
+                    <li><a href="https://meundergrad.mit.edu/">MechE Undergrad Portal</a></li>
+                    <li><a href="https://meche-res.mit.edu/resources/2A/">Online 2A Contract</a></li>
+                    <li><a href="https://meundergrad.mit.edu/sb-thesis-information">SB Thesis Information</a></li>
+                    <li><a href="https://meche-res.mit.edu/resources/grad/">Online Grad Card</a></li>
+                    <li><a href="http://odge.mit.edu/gpp/oversight/petitions/">ODGE Petition</a></li>
+                        <li><a href="/sites/default/files/ON-LINE_THESIS_SUBMISSION.pdf">On-Line Thesis Submission</a></li>
+                    <li><a href="/sites/default/files/Zoom%20Instructions%20for%20PhD%20Thesis%20Defenses.pdf">Zoom Instructions for Virtual Defenses</a></li>
+                    <li><a href="/sites/default/files/MechE_Grad_Guide.pdf">Guide to Graduate Study</a></li>
+                    <li><a href="http://handbook.mit.edu/">MIT's Mind &amp; Hand Book</a></li>
+                </ul><ul class="link-group"><li class="top-link"><a href="#"><span class="heavy">Staff</span> <span class="light">Resources</span></a></li>
+                    <li><a href="https://meche-reservations.mit.edu/Web/">Room Reservations</a></li>
+                   <li><a href="https://meche-res.mit.edu/resource_links/">MechE Resources</a></li>
+                   <li><a href="https://meche.mit.edu/Shibboleth.sso/Login?target=https://meche.mit.edu/handy-links">Edit My Profile <i class="fa fa-lock"></i></a></li>
+                </ul></div>
+            
+            <div class="social-links large-3 medium-12 columns">
+                <hr class="meche-dots thin pad-both" /><p>Follow our research.<br />Or, just follow us.</p>
+                <ul class="social-btns"><li><a href="http://facebook.com/mitmeche" target="_blank" class="social-btn"><i class="fa fa-facebook"></i><span>Facebook</span></a></li>
+                    <li><a href="http://twitter.com/mitmeche" target="_blank" class="social-btn"><i class="fa fa-twitter"></i><span>Twitter</span></a></li>
+                    <li><a href="http://www.youtube.com/mitmeche" target="_blank" class="social-btn"><i class="fa fa-youtube"></i><span>YouTube</span></a></li>
+                    <li><a href="http://instagram.com/mitmeche" target="_blank" class="social-btn"><i class="fa fa-instagram"></i><span>Instagram</span></a></li>
+                    <li><a href="https://www.linkedin.com/company/11244119/" target="_blank" class="social-btn"><i class="fa fa-linkedin"></i><span>Linkedin</span></a></li>
+                </ul><hr class="meche-dots thin pad-both" /><link href="//cdn-images.mailchimp.com/embedcode/slim-10_7.css" rel="stylesheet" type="text/css" /><style type="text/css">
+<!--/*--><![CDATA[/* ><!--*/
+
+                #mc_embed_signup{clear:left; font-family:"Rajdhani",Helvetica,sans-serif; margin-top: 20px; margin-left: 0px; padding-let: 0px;}
+                /* Add your own Mailchimp form style overrides in your site stylesheet or in this style block.
+                   We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+
+/*--><!]]>*/
+</style><div id="mc_embed_signup">
+<form action="https://mit.us17.list-manage.com/subscribe/post?u=6f5c7fd40df3024d6e08b1cbd&amp;id=917562481d" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate="">
+    <div id="mc_embed_signup_scroll">
+                <p><label for="mce-EMAIL" style="color: #02b2f4; font-weight: normal;">Sign up for our monthly newsletter</label></p>
+                <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required="" style="width: 70%;" /><!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups--><div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_6f5c7fd40df3024d6e08b1cbd_917562481d" tabindex="-1" value="" /></div>
+    <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button" /></div>
+    </div>
+</form>
+</div>
+ 
+<!--End mc_embed_signup-->
+
+
+
+            </div>
+
+            <div class="find-us medium-12 columns clearfix">
+                
+                <hr class="meche-dots thin pad-both" /><div class="address-group">
+                    <h3><span class="heavy">MechE</span> <span class="light">Analog</span></h3>
+                    <p>Massachusetts Institute of Technology</p>
+                    <p class="heavy">Department of Mechanical Engineering</p><br /><p>77 Massachusetts Avenue, Room 3-173</p>
+                    <p>Cambridge, Massachusetts 02139</p>
+                </div>
+                <div class="clearfix find-us-logos">
+                    <a class="pull-left logo-meche" href="http://meche.mit.edu"><img src="/sites/all/themes/mit_meche/img/logo-meche-footer@2x.png" alt="MIT Mechanical Engineering" /></a>
+                    <a class="pull-left logo-mit" href="http://www.mit.edu"><img src="/sites/all/themes/mit_meche/img/logo-mit-footer@2x.png" alt="MIT" /></a>
+                </div>
+            </div>
+            
+        </div>
+        
+    </div>
+</footer>  </div>
+</div>
+  </div>
+      
+    </div> <!-- close off-canvas inner-wrap -->
+  </div> <!-- close off-canvas wrap -->
+
+
+          <!-- JS Files -->
+
+        <!-- Loaded from CDN -->
+        
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+        <script>window.jQuery || document.write('<script src="/js/vendor/jquery.js"><\/script>')</script>
+        <!--
+            Load Concatenated and Minified Scripts ( plugins.js, foundation.js, scripts.js )
+        -->
+        <!-- jQuery Modal -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+
+        <script src="/sites/all/themes/mit_meche/js/scripts.all.min.js"></script>
+        <script type="text/javascript" src="/sites/all/themes/mit_meche/js/vendor/packery.pkgd.min.js"></script>
+        
+  <script>
+
+      $(document).ready(function(){
+
+          MecheController.init({});
+          
+          $(window).on("throttledresize", function( event ) {
+          
+              MecheController.resize();
+
+          }).trigger("throttledresize");
+      });
+
+  </script>
+
+
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"ab0374a39e","applicationID":"39297557","transactionName":"Z1QGZBZQVkNYU0YNWV4eJVMQWFdeFl1XB15VbgZcC1JTQ2ZAQAtQWV0BbxRQX1U=","queueTime":0,"applicationTime":172,"atts":"SxMFEl5KRU0=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

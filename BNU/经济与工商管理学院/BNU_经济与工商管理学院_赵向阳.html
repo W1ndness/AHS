@@ -1,0 +1,495 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0">
+    <title>北京师范大学工商与经济管理学院</title>
+    <link rel="stylesheet" href="http://bs.bnu.edu.cn/new-ver-css/reset.css">
+    <link rel="stylesheet" href="http://bs.bnu.edu.cn/new-ver-css/index.css">
+	<link rel="stylesheet" href="http://bs.bnu.edu.cn/new-ver-css/xyslist.css">
+	<link rel="stylesheet" href="http://bs.bnu.edu.cn/new-ver-css/xys-tf.css">
+    <style>
+        .container{
+            width:100%;
+            height: auto;
+            overflow: hidden;
+        }
+        .header{
+            width:100%;
+            height:116px;
+            background:#EFF8FF;
+        }
+        .logo1{
+            width:1200px!important;
+            margin:0 auto;
+            position:relative;
+            float: none;
+			display:block;
+        }
+        .logo2{
+            float:right;
+        }
+        .logo1 p{
+            position:absolute;
+            top:5px;
+            right:5px;
+            font-size:13px;
+        }
+        .logo1 p:hover{
+            color:#112769;
+        }
+        .tu{
+            width:100%;
+            height:240px;
+            background:url('http://bs.bnu.edu.cn/newweb/grzy/images/tu.jpg') no-repeat top center;
+            background-size: 100%;
+        }
+        .lujing{
+            width:1200px;
+            height:58px;
+            margin:0 auto;
+            border-bottom:1px solid #aaa;
+            overflow:hidden;
+        }
+        .lujings{
+            margin:24px 0 0 0;
+            font-size:14px;
+        }
+        .content{
+            color:#333;
+            width:1200px;
+/*            height:2000px;*/
+            margin:0 auto;
+            margin-top:40px;
+/*            background:#c4c4c4;*/
+        }
+        
+        .xian{
+            width:100%;
+            height:8px;
+            background:#9A0812;
+        }
+        
+        .leftc{
+            float:left;
+        }
+        .rightc{
+            float:left;
+            margin-left:50px;
+/*            background:#666;*/
+            width:880px;
+/*            height:1000px;*/
+        }
+        .rheader{
+            width:880px;
+            height:210px;
+/*            background:yellow;*/
+        }
+        .xm{
+            font-size:30px;
+            height:40px;
+/*            border-bottom:4px solid #9A0812;*/
+            width:auto;
+            float:left;
+            line-height:40px;
+			margin-right:30px;
+        }
+        .zhiw{
+            font-size:18px;
+            height:40px;
+            line-height:50px;
+            margin-bottom:30px;
+        }
+        .tel{
+                font-size: 16px;
+                margin-top: 10px;
+                line-height: 20px;
+        }
+        .grjj{
+/*            height:300px;*/
+            width:880px;
+/*            background:yellow;*/
+            padding-bottom:40px;
+        }
+        .jjh{
+                font-size: 20px;
+                border-bottom: 1px solid #cecece;
+                height: 40px;
+                line-height: 40px;
+                padding-left: 30px;
+                background: url(http://bs.bnu.edu.cn/newweb/grzy/images/zw.png) no-repeat 0 16px;
+        }
+        
+        .jjc{
+            font-size:14px;
+            margin-top:30px;
+           
+            line-height:28px;
+            overflow:hidden;
+            text-align: justify;
+            text-justify:inter-ideograph;
+        }
+        .jjc1{
+            height:225px;
+            font-size:14px;
+            margin-top:30px;
+            
+            line-height:28px;
+            overflow:hidden;
+            text-align: justify;
+            text-justify:inter-ideograph;
+        }
+        
+        .dianji1{
+                background: url(http://bs.bnu.edu.cn/newweb/grzy/images/zw.png) no-repeat 0 -50px;
+                width: 13px;
+                height: 13px;
+                cursor: pointer;
+                display: block;
+            margin-top: 20px;
+            transition: all .2s linear;
+        }
+        .dianji1:hover{
+            background: url(http://bs.bnu.edu.cn/newweb/grzy/images/zw.png) no-repeat 0 -64px;
+        }
+        
+        .dianji{
+                background: url(http://bs.bnu.edu.cn/newweb/grzy/images/zw.png) no-repeat 0 -24px;
+                height: 13px;
+                cursor: pointer;
+                display: block;
+            margin-top: 20px;
+            transition: all .2s linear;
+        }
+        .dianji:hover{
+            background: url(http://bs.bnu.edu.cn/newweb/grzy/images/zw.png) no-repeat 0 -37px;
+        }
+        #jjc1{
+            text-indent:0em;
+        }
+        
+        .bks{
+            font-size:14px;
+            font-weight: 800;
+            margin-top:30px;
+            height:auto;
+            line-height:36px;
+        }
+        .bks1{
+            font-size:14px;
+            margin-top:30px;
+            height:auto;
+            line-height:36px;
+        }
+        .bksc{
+            height:36px;
+            line-height:36px;
+            font-size:14px;
+        }
+        
+        .yanzheng{
+            width:1200px;
+            height:100px;
+            margin:0 auto;
+        }
+        .yanzheng img{
+            display:block;
+            margin-top:26px;
+            float:left;
+        }
+		
+#appgame-leftside-share{width:42px; height:216px; position: fixed;bottom: 30px;right: 30px; z-index:9999;}
+.appgame-leftside-share{width:42px; height:259px;}
+#appgame-leftside-share a{display:block; width:42px; height:44px; background-color:#e6e6e6; z-index:1; position:absolute; left:0; box-sizing:border-box; -moz-box-sizing:border-box; border:1px #ddd solid; background-image:url(http://gh.bnu.edu.cn/images/share-icons.png); background-repeat:no-repeat; margin:0;  transition:0.4s; -webkit-transition:0.4s; -moz-transition:0.4s;}
+#appgame-leftside-share a:hover{background-color:#fff; border:1px #eee solid; z-index:2;}
+/*.appgame-leftside-weixin{top:0; background-position:-88px 0;}
+.appgame-leftside-weixin:hover{background-position:0px 0;}
+.appgame-leftside-qzone{top:43px; background-position:-88px -44px;}
+.appgame-leftside-qzone:hover{background-position:0px -44px;}*/
+.appgame-leftside-search{top:86px; background-position:-93px -89px;}
+.appgame-leftside-search:hover{background-position:-5px -86px;}
+.appgame-leftside-weixin{top:129px; background-position:-88px 0px;}
+.appgame-leftside-weixin:hover{background-position:0px 0px;}
+/*.appgame-leftside-fbook{top:172px; background-position:-88px -176px;}
+.appgame-leftside-fbook:hover{background-position:0px -176px;}
+.appgame-leftside-twi{top:215px; background-position:-88px -220px;}
+.appgame-leftside-twi:hover{background-position:0px -220px;}*/
+#appgame-leftside-share .appgame-leftside-top{background-image:url(http://gh.bnu.edu.cn/images/leftnav-off.png); background-position:-1px -395px; top:130px; cursor:pointer;}
+
+.rwt_share {
+/*	overflow:hidden;*/
+	float:left;
+	position:relative;
+}
+.rwt_share a {
+	display:inline-block;
+	margin-right:10px;
+	text-indent:-9999px;
+	margin-bottom:10px;
+	width:24px;
+	height:24px;
+	overflow:hidden;
+	cursor:pointer;
+	float:left;
+	font-size:12px;
+}
+.rwts_weixin {
+	background-position:0 -1612px;
+}
+.rwts_tsina {
+	background-position:0 -104px;
+}
+.rwts_tqq {
+	background-position:0 -260px;
+}
+.rwts_qzone {
+	background-position:0 -52px;
+}
+.rwts_sqq {
+	background-position:0 -2652px;
+}
+.rwts_tieba {
+	background-position:0 -728px;
+}
+.rwts_renren {
+	background-position:0 -208px;
+}
+.rwts_kaixin001 {
+	background-position:0 -312px;
+}
+.rwts_tqf {
+	background-position:0 -364px;
+}
+.rwts_douban {
+	background-position:0 -468px;
+}
+.rwts_twi {
+	background-position:0 -1404px;
+}
+.rwts_fbook {
+	background-position:0 -1352px;
+}
+.rwts_ty {
+	background-position:0 -1196px;
+}
+.rwts_mogujie {
+	background-position:0 -1768px;
+}
+.rwts_meilishuo {
+	background-position:0 -1716px;
+}
+.rwts_huaban {
+	background-position:0 -1872px;
+}
+.rwts_hi {
+	background-position:0 -416px;
+}
+.rwts_tsohu {
+	background-position:0 -520px;
+}
+.rwts_more {
+	background-position:0 0;
+}
+.rwt_share_wxShow_code>img {
+	width:100%;
+}
+.bks1 li{
+	list-style:disc;
+}
+@media screen and (max-width: 1200px){
+	.logo1{
+		width:100%!important;
+	}
+	.leftc img{
+		width:50%!important;
+		height:50%!important;
+	}
+	.logo2{display:none;}
+	.lujing{
+		width:90%;
+	}
+	.content{
+		width:90%;
+	}
+	.leftc{
+		float:none;
+		
+	}
+	.tu{display:none;}
+	
+	.rightc{
+		float:none;
+		width:100%;
+		margin-left:0px;
+	}
+	.footers{width:100%;}
+	.rheader{width:100%;}
+	.grjj{width:100%;}
+}
+@media screen and (max-width: 600px){
+.l3{width:95%;}
+.share{display:none;}
+.leftc img{
+		width:70%!important;
+		height:70%!important;
+	}
+}
+  
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo1">
+                <img src="http://bs.bnu.edu.cn/newweb/grzy/images/logo.png" alt="" class="l3" style="margin-top: 25px;float:left;">
+                <img src="http://bs.bnu.edu.cn/newweb/grzy/images/logo2.png" alt="" class="logo2">
+                <a href="http://bs.bnu.edu.cn/englishversion/facultyresearch/fulltimefaculty/azmsy/119296.html"><p>ENGLISH VERSION</p></a>
+            </div>
+        </div>
+        <div class="xian"></div>
+        <div class="tu"></div>
+        <div class="lujing">
+            <div class="lujings">
+                <a href="#">师资队伍</a>
+                 | 
+                <a href="#">市场营销系</a>
+            </div>
+        </div>
+        <div class="content">
+            <div class="leftc">
+                <img src="/Public/upload/2020/09/15/5f602e21d4277.jpg" alt="" width="270">
+            </div>
+            <div class="rightc">
+                <div class="rheader">
+                    <p class="xm">赵向阳</p>
+                    <p class="zhiw">副教授</p>
+                    <p class="tel"><strong style="display:block;width:100px;float:left;">电话</strong>：010-58801867</p> 
+                 <p class="tel"><strong style="display:block;width:100px;float:left;">E-mail</strong>：xiangyang.zhao@bnu.edu.cn</p>
+                 <p class="tel"><strong style="display:block;width:100px;float:left;">Office hour</strong>：周二下午2:00-5:00</p>
+                 <p class="tel"><strong style="display:block;width:100px;float:left;">系所中心</strong>：市场营销系</p>
+              </div>
+			  <div class="grjj">
+                    <p class="jjh">个人简历</p>
+                    <div class="bks1" id="jjc"><p style="font-family: " microsoft="" yahei="" font-size:16px=""><strong>教育经历</strong></p><p style="font-family: " microsoft="" yahei="" font-size:16px="">2002/8---2005/6：德国吉森（Giessen）大学心理系，博士。研究方向：创业学、组织行为学，导师：Prof. Michael Frese，应用心理学国际联合会（International Association of Applied Psychology, IAAP）主席。</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">1998/9---2001/7：北京大学心理系，硕士。研究方向：网络心理学、实验心理学。导师：朱滢教授</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">1989/9---1993/7：陕西师范大学物理系，理论物理专业，学士</p><p style="font-family: " microsoft="" yahei="" font-size:16px=""><br /></p><p style="font-family: " microsoft="" yahei="" font-size:16px=""><strong>工作经历</strong></p><p style="font-family: " microsoft="" yahei="" font-size:16px="">2006/11-迄今: 北京师范大学经济与工商管理学院历任讲师、副教授。曾经担任创业教育与研究中心主任、案例研究中心主任、MBA教育中心副主任等职位。</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">2015/10-2018/10：北京夸父资产管理有限责任公司，创始人，董事长</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">2005/12-2006/10：浙江大学管理学院博士后，合作导师王重鸣教授。</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">2005/07-2005/11：加拿大Simon Fraser University商学院访问学者，合作导师Prof. Rosalie Tung，美国管理学会（Academy of Management）前任主席。</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">1999/09-2002/05：北京梦想时代信息咨询有限责任公司，创始人，董事长</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">1996/10-1998/07：北京市京源中学，物理教师</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">1996/07-1996/10：SAMSUNG电子（中国）有限公司销售部，主管。</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">1994/12-1996/07：SONY（香港）有限公司北京办事处市场部，经理助理。</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">1993/07-1994/11：北京市第九中学，物理教师</p></div>
+                    
+                </div>				<div class="grjj">
+                    <p class="jjh">研究领域</p>
+                    <div class="bks1">创业管理、跨文化管理、管理案例教学与开发、全球商务、管理哲学等</div>
+                </div>				<div class="grjj">
+                    <p class="jjh">研究成果</p>
+                    <div class="bks1" id="jjc1"><p style="font-family: " microsoft="" yahei="" font-size:16px=""><strong>专业学术论文</strong></p><p style="font-family: " microsoft="" yahei="" font-size:16px="">1． 赵向阳，朱滢,互联网：一种新的心理学研究工具，《心理学发展与动态》，2002/3.（中文核心期刊）</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">2． 赵向阳，德鲁克《创新与企业家精神》的思想根源，专著章节（《德鲁克管理思想解读》，赵曙明、杜鹏程 主编），机械工业出版社，2009</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">3． 赵向阳，重新塑造创业学中的一些基本问题，专著章节（《创业研究经典文献述评》，张玉利 主编），南开大学出版社，2010</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">4． 赵向阳，创业者的思维和决策特点，专著章节（《创业研究经典文献述评》，张玉利 主编），南开大学出版社，2010</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">5． Zhao, X. Y., Frese, M., Giardini, A., Business Owners’ Network Size and Business Growth in China: the role of comprehensive social competency, Entrepreneurship and Regional Development, 2010, vol. 7-8, 675-705 （SSCI期刊）。该论文被SAGE publication出版的“Asian Entrepreneurship”全文收录（主编Leo Paul Dana,2015，4）</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">6． 赵向阳，基于跨文化视角下的案例法在中国工商管理教育中的应用，《管理案例研究与评论》，2011</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">7． 赵向阳，李海，Andreas Rauch，创业活动的国家差异：文化与国家经济发展水平的交互作用，《管理世界》，2012。</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">8． Zhao, X.Y., Li, H., Rauch, A., Cross-country difference in entrepreneurial activities: the role of cultural practice and national wealth, Frontiers of Business Research in China, 2012</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">9． 赵向阳，李海，孙川，从个人价值观到创业意愿：创造力作为中介变量，《北京师范大学学报》（中文核心期刊），2014/06</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">10． 赵向阳，李海，余佳，国家文化与早期创业活动：基于“阴阳”和“一分为三”辩证思想的探索性研究，《管理学报》（中文核心期刊），2014/11</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">11． 赵向阳，李海，孙川，中国区域文化地图：“大一统”抑或“多元化”？，《管理世界》，2015/02。</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">12． 赵向阳，如何让中国传统文化走进当下的管理学经验研究？《管理学报》，2017，01</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">13． 韩巍，赵向阳，“非科学性”让管理学变得更好：“蔡玉麟质疑”继续中，2017,02</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">14． 赵向阳，为何管理者不待见管理学者，《管理学报》，2017,03</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">15． Yang, Xiaomiao, SUN, Li, Zhao,Xiangyang, Search and execution: examing the entrepreneurial cognitions behind lean start-up model,Small Business Economics, 2018, 01</p><p style="font-family: " microsoft="" yahei="" font-size:16px=""><br /></p><p style="font-family: " microsoft="" yahei="" font-size:16px=""></p><p style="font-family: " microsoft="" yahei="" font-size:16px=""></p><p style="font-family: " microsoft="" yahei="" font-size:16px=""><strong>教学型案例</strong></p><p style="font-family: " microsoft="" yahei="" font-size:16px="">1． 赵向阳，持续进行的纳米创业，《管理案例研究与评论》，2009，第1期，53-66页，获得MBA教育指导委员会组织的全国案例比赛“优秀奖”</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">2． 赵向阳，华夏科创：机遇识别与开发，《管理案例研究与评论》，2009，第2期，34-42页。</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">3． 赵向阳，葛玉良，从渔民之子到鱼岛的主人：肖秋利创业人生，《管理案例研究与评论》，2009，第9期，398-406页</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">4． Gruenschloss, C., Zhao, X.Y., Supporting the development of more efficient transport in China: the case of Masamotors, 中国管理案例共享中心, 2012</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">5． 赵向阳，童欢，国福家庭保险销售服务公司：商业计划，中国管理共享中心，2012</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">6． 苏凇，赵向阳，翁志明，鹏程航空：常旅客计划，中国管理案例共享中心， 2012，获得“全国百优管理案例”</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">7． 赵向阳，孙舒平，浪潮国际：如何走出业绩下滑的低谷，中国管理案例共享中心，2013，获得“全国百优管理案例”</p><p style="font-family: " microsoft="" yahei="" font-size:16px=""><br /></p><p style="font-family: " microsoft="" yahei="" font-size:16px=""></p><p style="font-family: " microsoft="" yahei="" font-size:16px=""><strong>译著与编著</strong></p><p style="font-family: " microsoft="" yahei="" font-size:16px="">1. 赵向阳，黄磊 译，《毅伟商学院案例写作》（Case Writing, Leenders, M., Leenders, L., Erskine, J. Ivey Publishing.），北京师范大学出版社，2011。</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">2. 赵向阳，黄磊 译，《毅伟商学院案例学习》（Case Learning, Leenders, L., Leenders, M., Erskine, J. Ivey Publishing），北京师范大学出版社，2011。</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">3. 黄磊,赵向阳 译，《毅伟商学院案例教学》（Case Teaching, Erskine, J, Leenders, M., Leenders, L. Ivey Publishing），北京师范大学出版社，2011。</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">4. 赵向阳等，《卓有成效的创业》（Effectual Entrepreneurship, Nick Dew, Saras Sarasvathy et al），北京师范大学出版社，2015/08。</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">5. 赵向阳，孙舒平 主编，《北师大MBA管理案例精选》（第一辑），北京师范大学，2015/10。</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">6. 赵向阳，孙舒平 主编，《北师大MBA管理案例精选》（第二辑），北京师范大学，2015/10。</p><p style="font-family: " microsoft="" yahei="" font-size:16px=""></p><p style="font-family: " microsoft="" yahei="" font-size:16px="">商业类期刊文章</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">1． 赵向阳，德鲁克管理思想的根源，《IT经理人世界》，2009,08</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">2． 赵向阳，不要毫无原则地鼓励创业，《创业家》，2011</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">3． 赵向阳，成功创业者怎么想？《清华管理评论》，2013，08</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">4． 赵向阳，微信时代的时间管理：由道及术，《清华管理评论》，2014，05</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">5． 孙黎，赵向阳，内部创业的“反脆弱”原则，《中欧商业评论》，2014，07</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">6． 赵向阳，黄芳，探秘“创业国度”以色列，《中欧商业评论》，2014，08</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">7． 赵向阳，旷世敏，谁勒住了游学业务的脖子，《商业评论》，2014，09</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">8． 赵向阳，中国商学院学术环境调查，《管理学家》，2015,08</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">9． 赵向阳，孙黎，从剪花娘子到夸父阳光：一个不断演化中的社会创业，《北大商业评论》，2015,09</p><p style="font-family: " microsoft="" yahei="" font-size:16px=""><br /></p><p style="font-family: " microsoft="" yahei="" font-size:16px=""></p><p style="font-family: " microsoft="" yahei="" font-size:16px=""><strong>电影</strong></p><p style="font-family: " microsoft="" yahei="" font-size:16px="">纪录片《一个人的战斗》</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">制片人：赵向阳，导演：李太沿子</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">主演：赵向阳，李福越；2015，10</p></div>
+                    
+                </div>				<div class="grjj">
+                    <p class="jjh">研究课题</p>
+                  
+                    <div class="bks1"><p style="font-family: " microsoft="" yahei="" font-size:16px=""><strong>研究课题</strong></p><p style="font-family: " microsoft="" yahei="" font-size:16px="">李海，赵向阳：中国企业海外并购中的人力资源和文化整合，2010年，国家社科基金</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">孙川，赵向阳，李海：中国管理文化地图，2010-2014年，北京师范大学985课题</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">赵向阳：跨文化沟通与管理（双语课），2012年，北京师范大学校级教改项目</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">赵向阳，李海：北京春雪人力资源管理咨询合同，2011年，横向课题</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">赵向阳，《北师大MBA管理案例精选》（第一辑，第二辑）专向基金，2013，北京师范大学985课题</p></div>
+                    
+                </div>				<div class="grjj">
+                    <p class="jjh">学生情况</p>
+                    <div class="bks1"><span style="font-family: " microsoft="" yahei="" font-size:16px="">曾经指导3名学术型硕士研究生，以及50+MBA学生论文</span><br /></div>
+                    
+                </div>				<div class="grjj">
+                    <p class="jjh">教授课程</p>
+                    <div class="bks1"><p style="font-family: " microsoft="" yahei="" font-size:16px="">《创业管理》（本科，MBA）</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">《跨文化管理》（本科，MBA）和《跨文化沟通》（全校公选课）</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">《国际管理》（或《全球商务》，本科）</p><p style="font-family: " microsoft="" yahei="" font-size:16px="">《管理案例分析》（MBA）</p></div>
+                    
+                </div>            </div>
+        </div>
+         <footer style="overflow: hidden;">
+            <div class="footers">
+                <div class="footersl">
+                    <img src="http://bs.bnu.edu.cn/newweb/images/ewm.jpg" alt="" class="imgewm">
+                    <div class="footerxx">
+                        <p>Copyright © 2020 北京师范大学经济与工商管理学院</p>
+                        <p><i class="fas fa-map-marker-alt"></i> 地址：北京市新街口外大街19号</p>
+                        <p><i class="fas fa-portrait"></i> 传真：010-58801867</p>
+                        <p><i class="fas fa-phone"></i> 电话：010-58801867</p>
+                        <p><i class="fas fa-envelope"></i> 邮编：100875</p>
+                    </div>
+                </div>
+                <img src="http://bs.bnu.edu.cn/newweb/images/db.png" alt="" width="140" class="dbimg">
+                <img src="http://bs.bnu.edu.cn/newweb/images/yx.png" alt="" class="yuanxun">
+            </div>
+        </footer>
+    </div>
+	<div class="share">
+		  <div id="appgame-leftside-share">
+	        <div class="appgame-leftside-share rwt_share" id="rwt_share">
+	         
+	        <!--<a class="appgame-leftside-search" data-cmd="search" title="search"  href="javascript:void(0);" onclick="opens('id')">search</a> --> <!--<div class="searchs" id="id">
+	         <form name="dataForm" action="/cms/search/searchResults.jsp" target="_blank" method="post" accept-Charset="utf-8"  onsubmit="document.charset='utf-8';">
+			        	<p>
+			        		<input name="siteID" size="4" value="127" type = "hidden">
+			        		<input type="text" name="query" id="search" class="searchInput" value="输入搜索词">
+			        		<button type="submit"></button>
+			        	</p>
+			        	</form>
+			        </div>-->
+			        <!-- <a class="appgame-leftside-weixin" data-cmd="weixin" title="">微信</a> -->
+                    
+			        <!-- <a class="appgame-leftside-qzone" data-cmd="qzone" title="">qq空间</a>
+			        
+			        <a class="appgame-leftside-tsina" data-cmd="tsina" title="">微博</a> -->			    </div>
+			        <a class="appgame-leftside-top" onclick="gotoTPoint()"></a>			</div>
+			        
+		</div>
+</body>
+<script src="http://gh.bnu.edu.cn/js/jquery-1.9.0.min.js"></script>
+<script src="http://gh.bnu.edu.cn/js/share.min.js"></script>
+<script>
+    var dj=document.getElementById('dianji');
+    var jjc=document.getElementById('jjc');
+    var dj1=document.getElementById('dianji1');
+    var jjc1=document.getElementById('jjc1');
+    var a=1;
+    function zhedie(m,n){
+        m.onclick=function(){
+            if(a==1){
+                n.className='jjc';
+                m.className='dianji1'
+                a=0;
+            }else{
+                n.className='jjc1';
+                m.className='dianji'
+                a=1;
+            }
+        }
+    }
+    zhedie(dj,jjc);
+    zhedie(dj1,jjc1);
+	
+	
+</script>
+<script>
+
+	
+	
+    
+
+    /*回到顶部*/
+	$(function(){
+	 	$(window).resize(function(){
+						var h = $(window).height();
+						$('.goTop').css('top',h-60);
+						$(window).scroll(function(){				
+							var scrollTop = $(document).scrollTop();					  
+							$('.goTop').stop().animate({
+								top: h + scrollTop-60
+							},300);
+						});
+		}).resize();
+		});
+	//gotop
+
+			$('.goTop').click(function(){
+
+				$('body,html').stop().animate({scrollTop:0});
+
+				return false;
+
+			});
+	
+	function gotoTPoint(){
+		$("html,body").animate({scrollTop:0},500);
+	}
+</script>
+</html>

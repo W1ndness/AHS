@@ -1,0 +1,495 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0">
+    <title>北京师范大学工商与经济管理学院</title>
+    <link rel="stylesheet" href="http://bs.bnu.edu.cn/new-ver-css/reset.css">
+    <link rel="stylesheet" href="http://bs.bnu.edu.cn/new-ver-css/index.css">
+	<link rel="stylesheet" href="http://bs.bnu.edu.cn/new-ver-css/xyslist.css">
+	<link rel="stylesheet" href="http://bs.bnu.edu.cn/new-ver-css/xys-tf.css">
+    <style>
+        .container{
+            width:100%;
+            height: auto;
+            overflow: hidden;
+        }
+        .header{
+            width:100%;
+            height:116px;
+            background:#EFF8FF;
+        }
+        .logo1{
+            width:1200px!important;
+            margin:0 auto;
+            position:relative;
+            float: none;
+			display:block;
+        }
+        .logo2{
+            float:right;
+        }
+        .logo1 p{
+            position:absolute;
+            top:5px;
+            right:5px;
+            font-size:13px;
+        }
+        .logo1 p:hover{
+            color:#112769;
+        }
+        .tu{
+            width:100%;
+            height:240px;
+            background:url('http://bs.bnu.edu.cn/newweb/grzy/images/tu.jpg') no-repeat top center;
+            background-size: 100%;
+        }
+        .lujing{
+            width:1200px;
+            height:58px;
+            margin:0 auto;
+            border-bottom:1px solid #aaa;
+            overflow:hidden;
+        }
+        .lujings{
+            margin:24px 0 0 0;
+            font-size:14px;
+        }
+        .content{
+            color:#333;
+            width:1200px;
+/*            height:2000px;*/
+            margin:0 auto;
+            margin-top:40px;
+/*            background:#c4c4c4;*/
+        }
+        
+        .xian{
+            width:100%;
+            height:8px;
+            background:#9A0812;
+        }
+        
+        .leftc{
+            float:left;
+        }
+        .rightc{
+            float:left;
+            margin-left:50px;
+/*            background:#666;*/
+            width:880px;
+/*            height:1000px;*/
+        }
+        .rheader{
+            width:880px;
+            height:210px;
+/*            background:yellow;*/
+        }
+        .xm{
+            font-size:30px;
+            height:40px;
+/*            border-bottom:4px solid #9A0812;*/
+            width:auto;
+            float:left;
+            line-height:40px;
+			margin-right:30px;
+        }
+        .zhiw{
+            font-size:18px;
+            height:40px;
+            line-height:50px;
+            margin-bottom:30px;
+        }
+        .tel{
+                font-size: 16px;
+                margin-top: 10px;
+                line-height: 20px;
+        }
+        .grjj{
+/*            height:300px;*/
+            width:880px;
+/*            background:yellow;*/
+            padding-bottom:40px;
+        }
+        .jjh{
+                font-size: 20px;
+                border-bottom: 1px solid #cecece;
+                height: 40px;
+                line-height: 40px;
+                padding-left: 30px;
+                background: url(http://bs.bnu.edu.cn/newweb/grzy/images/zw.png) no-repeat 0 16px;
+        }
+        
+        .jjc{
+            font-size:14px;
+            margin-top:30px;
+           
+            line-height:28px;
+            overflow:hidden;
+            text-align: justify;
+            text-justify:inter-ideograph;
+        }
+        .jjc1{
+            height:225px;
+            font-size:14px;
+            margin-top:30px;
+            
+            line-height:28px;
+            overflow:hidden;
+            text-align: justify;
+            text-justify:inter-ideograph;
+        }
+        
+        .dianji1{
+                background: url(http://bs.bnu.edu.cn/newweb/grzy/images/zw.png) no-repeat 0 -50px;
+                width: 13px;
+                height: 13px;
+                cursor: pointer;
+                display: block;
+            margin-top: 20px;
+            transition: all .2s linear;
+        }
+        .dianji1:hover{
+            background: url(http://bs.bnu.edu.cn/newweb/grzy/images/zw.png) no-repeat 0 -64px;
+        }
+        
+        .dianji{
+                background: url(http://bs.bnu.edu.cn/newweb/grzy/images/zw.png) no-repeat 0 -24px;
+                height: 13px;
+                cursor: pointer;
+                display: block;
+            margin-top: 20px;
+            transition: all .2s linear;
+        }
+        .dianji:hover{
+            background: url(http://bs.bnu.edu.cn/newweb/grzy/images/zw.png) no-repeat 0 -37px;
+        }
+        #jjc1{
+            text-indent:0em;
+        }
+        
+        .bks{
+            font-size:14px;
+            font-weight: 800;
+            margin-top:30px;
+            height:auto;
+            line-height:36px;
+        }
+        .bks1{
+            font-size:14px;
+            margin-top:30px;
+            height:auto;
+            line-height:36px;
+        }
+        .bksc{
+            height:36px;
+            line-height:36px;
+            font-size:14px;
+        }
+        
+        .yanzheng{
+            width:1200px;
+            height:100px;
+            margin:0 auto;
+        }
+        .yanzheng img{
+            display:block;
+            margin-top:26px;
+            float:left;
+        }
+		
+#appgame-leftside-share{width:42px; height:216px; position: fixed;bottom: 30px;right: 30px; z-index:9999;}
+.appgame-leftside-share{width:42px; height:259px;}
+#appgame-leftside-share a{display:block; width:42px; height:44px; background-color:#e6e6e6; z-index:1; position:absolute; left:0; box-sizing:border-box; -moz-box-sizing:border-box; border:1px #ddd solid; background-image:url(http://gh.bnu.edu.cn/images/share-icons.png); background-repeat:no-repeat; margin:0;  transition:0.4s; -webkit-transition:0.4s; -moz-transition:0.4s;}
+#appgame-leftside-share a:hover{background-color:#fff; border:1px #eee solid; z-index:2;}
+/*.appgame-leftside-weixin{top:0; background-position:-88px 0;}
+.appgame-leftside-weixin:hover{background-position:0px 0;}
+.appgame-leftside-qzone{top:43px; background-position:-88px -44px;}
+.appgame-leftside-qzone:hover{background-position:0px -44px;}*/
+.appgame-leftside-search{top:86px; background-position:-93px -89px;}
+.appgame-leftside-search:hover{background-position:-5px -86px;}
+.appgame-leftside-weixin{top:129px; background-position:-88px 0px;}
+.appgame-leftside-weixin:hover{background-position:0px 0px;}
+/*.appgame-leftside-fbook{top:172px; background-position:-88px -176px;}
+.appgame-leftside-fbook:hover{background-position:0px -176px;}
+.appgame-leftside-twi{top:215px; background-position:-88px -220px;}
+.appgame-leftside-twi:hover{background-position:0px -220px;}*/
+#appgame-leftside-share .appgame-leftside-top{background-image:url(http://gh.bnu.edu.cn/images/leftnav-off.png); background-position:-1px -395px; top:130px; cursor:pointer;}
+
+.rwt_share {
+/*	overflow:hidden;*/
+	float:left;
+	position:relative;
+}
+.rwt_share a {
+	display:inline-block;
+	margin-right:10px;
+	text-indent:-9999px;
+	margin-bottom:10px;
+	width:24px;
+	height:24px;
+	overflow:hidden;
+	cursor:pointer;
+	float:left;
+	font-size:12px;
+}
+.rwts_weixin {
+	background-position:0 -1612px;
+}
+.rwts_tsina {
+	background-position:0 -104px;
+}
+.rwts_tqq {
+	background-position:0 -260px;
+}
+.rwts_qzone {
+	background-position:0 -52px;
+}
+.rwts_sqq {
+	background-position:0 -2652px;
+}
+.rwts_tieba {
+	background-position:0 -728px;
+}
+.rwts_renren {
+	background-position:0 -208px;
+}
+.rwts_kaixin001 {
+	background-position:0 -312px;
+}
+.rwts_tqf {
+	background-position:0 -364px;
+}
+.rwts_douban {
+	background-position:0 -468px;
+}
+.rwts_twi {
+	background-position:0 -1404px;
+}
+.rwts_fbook {
+	background-position:0 -1352px;
+}
+.rwts_ty {
+	background-position:0 -1196px;
+}
+.rwts_mogujie {
+	background-position:0 -1768px;
+}
+.rwts_meilishuo {
+	background-position:0 -1716px;
+}
+.rwts_huaban {
+	background-position:0 -1872px;
+}
+.rwts_hi {
+	background-position:0 -416px;
+}
+.rwts_tsohu {
+	background-position:0 -520px;
+}
+.rwts_more {
+	background-position:0 0;
+}
+.rwt_share_wxShow_code>img {
+	width:100%;
+}
+.bks1 li{
+	list-style:disc;
+}
+@media screen and (max-width: 1200px){
+	.logo1{
+		width:100%!important;
+	}
+	.leftc img{
+		width:50%!important;
+		height:50%!important;
+	}
+	.logo2{display:none;}
+	.lujing{
+		width:90%;
+	}
+	.content{
+		width:90%;
+	}
+	.leftc{
+		float:none;
+		
+	}
+	.tu{display:none;}
+	
+	.rightc{
+		float:none;
+		width:100%;
+		margin-left:0px;
+	}
+	.footers{width:100%;}
+	.rheader{width:100%;}
+	.grjj{width:100%;}
+}
+@media screen and (max-width: 600px){
+.l3{width:95%;}
+.share{display:none;}
+.leftc img{
+		width:70%!important;
+		height:70%!important;
+	}
+}
+  
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo1">
+                <img src="http://bs.bnu.edu.cn/newweb/grzy/images/logo.png" alt="" class="l3" style="margin-top: 25px;float:left;">
+                <img src="http://bs.bnu.edu.cn/newweb/grzy/images/logo2.png" alt="" class="logo2">
+                <a href=""><p>ENGLISH VERSION</p></a>
+            </div>
+        </div>
+        <div class="xian"></div>
+        <div class="tu"></div>
+        <div class="lujing">
+            <div class="lujings">
+                <a href="#">师资队伍</a>
+                 | 
+                <a href="#">金融系</a>
+            </div>
+        </div>
+        <div class="content">
+            <div class="leftc">
+                <img src="/Public/upload/2020/11/24/5fbc8f107ee7d.jpg" alt="" width="270">
+            </div>
+            <div class="rightc">
+                <div class="rheader">
+                    <p class="xm">江 婕</p>
+                    <p class="zhiw">副教授</p>
+                    <p class="tel"><strong style="display:block;width:100px;float:left;">电话</strong>：58801867</p> 
+                 <p class="tel"><strong style="display:block;width:100px;float:left;">E-mail</strong>：jiangjie@bnu.edu.cn</p>
+                 <p class="tel"><strong style="display:block;width:100px;float:left;">Office hour</strong>：周四上午8-10点</p>
+                 <p class="tel"><strong style="display:block;width:100px;float:left;">系所中心</strong>：金融系</p>
+              </div>
+			  <div class="grjj">
+                    <p class="jjh">个人简历</p>
+                    <div class="bks1" id="jjc"><div style="top: 0px;"><p></p><p><span style="font-size:16px;"><span style="font-family:宋体;color:black;background:white;"></span></span></p><p><span style="font-size:16px;"><span style="font-family:宋体;color:black;background:white;"></span></span></p><p style="text-align:left;"></p><p style="text-align:left;"><span style="font-size:12.0pt;font-family:宋体;color:black;background:white;"></span></p><p style="text-align:left;"><span style="font-size:12.0pt;font-family:宋体;color:black;background:white;">江婕，经济学博士，副教授，硕士生导师，北京师范大学经济与工商管理学院金融科技项目主任。</span><span style="font-size:12.0pt;font-family:'Times New Roman',serif;color:black;background:white;">2000</span><span style="font-size:12.0pt;font-family:宋体;color:black;background:white;">年获得清华大学经济学学士（金融学方向），</span><span style="font-size:12.0pt;font-family:'Times New Roman',serif;color:black;background:white;">2006</span><span style="font-size:12.0pt;font-family:宋体;color:black;background:white;">年获得清华大学数量经济学博士（金融学方向）。在</span><span style="font-size:12.0pt;font-family:'Times New Roman',serif;color:black;background:white;">Financial &nbsp;Review</span><span style="font-size:12.0pt;font-family:宋体;color:black;background:white;">、《经济研究》、《金融研究》、《世界经济》、《国际金融研究》等高水平期刊发表多篇论文，著有专著《信息披露、内部人交易与股价崩盘风险》，并主持教育部人文社科青年基金项目等多项课题。</span></p><br /></div></div>
+                    
+                </div>				<div class="grjj">
+                    <p class="jjh">研究领域</p>
+                    <div class="bks1"><div style="top: 0px;"><span style="font-family:SimSun;font-size:16px;"></span><p style="text-align:left;"><span style="font-size:12.0pt;font-family:宋体;color:black;background:white;">资本市场、资产定价和风险管理</span></p><br /></div></div>
+                </div>				<div class="grjj">
+                    <p class="jjh">研究成果</p>
+                    <div class="bks1" id="jjc1"><div style="top: 0px;">﻿﻿<span style="font-family: 宋体; font-size: 12pt; "><strong>专著</strong></span><p style="text-align:left;"><span style="font-size:12.0pt;font-family:宋体;color:black;">江婕，《信息披露、内部人交易与股价崩盘风险》，经济科学出版社，</span><span style="font-size:12.0pt;font-family:'Times New Roman',serif;color:black;">2019</span><span style="font-size:12.0pt;font-family:宋体;color:black;">年</span><span style="font-size:12.0pt;font-family:'Times New Roman',serif;color:black;">5</span><span style="font-size:12.0pt;font-family:宋体;color:black;">月</span></p><p style="text-align:left;"><span style="font-size:12.0pt;font-family:'微软雅黑',sans-serif;color:black;">&nbsp;</span></p><p style="text-align:left;"><strong><span style="font-size:12.0pt;font-family:宋体;color:black;">主要期刊论文</span></strong></p><p style="text-align:left;"></p><p><span style="font-size:18px;"><span style="font-family:'Times New Roman',serif;color:black;">Jiang J, Shrider DG, Ting H, Wu Y. Are Mutual FundInvestors Loss Averse?&nbsp;Evidence from China.[J]. Financial Review</span><span style="color:black;">（</span><span style="font-family:'Times New Roman',serif;color:black;">ABS 3</span><span style="color:black;">星）</span><span style="font-family:'Times New Roman',serif;color:black;">.2021; 56:231-250.&nbsp;<span style="color:black;"><a href="https://doi.org/10.1111/fire.12252">https://doi.org/10.1111/fire.12252</a></span></span></span></p><p><span style="font-size:18px;"><span style="color: black;"></span></span></p><p style="font-family: " times="" new="" roman="" serif=""><span style="font-family:SimSun;"><span style="font-size: 13.5pt;"></span></span></p><p><span style="font-family: 宋体; font-size: 16px;">江婕、王正位、龚新宇，信息透明度与股价崩盘风险的多维实证研究，《经济与管理研究》，2021年第2期</span></p><p><span style="font-family: 宋体; font-size: 16px;">江婕、高尚、王正位，金融消费者保护对家庭股票投资参与的影响研究，《新金融》，2020年第5期</span></p><p><span style="font-family: 宋体; font-size: 16px;">江婕、邱佳成、朱然、胡海峰，投资者关注与股价崩盘风险：抑制还是加剧？《证券市场导报》，2020年第3期</span></p><p><span style="font-family: 宋体; font-size: 16px;">江婕、李颖、伍燕然，套利限制会加剧A-H股定价偏差吗？《金融论坛》，2020年第3期</span></p><p><span style="font-family: 宋体; font-size: 16px;">江婕、伍燕然、胡松明，影子银行的国际监测：框架、变化及启示，《农村金融研究》，2020年第2期</span></p><p><span style="font-family: 宋体; font-size: 16px;">张烨宇、邹谷阳、高峰、江婕，地方官员更替、制度环境与股价崩盘风险，《投资研究》，2020年第1期</span></p><p><span style="font-family: 宋体; font-size: 16px;">江婕、张柏龄、郑飞虎，我国境外主权债券发行历程、意义及展望，《债券》，2019年第12期</span></p><p><span style="font-family: 宋体; font-size: 16px;">胡松明、邓衢、江婕、郑飞虎，股价崩盘风险与企业资本成本，《金融论坛》，2019年第9期</span></p><p><span style="font-family: 宋体; font-size: 16px;">江婕、伍燕然、胡松明，我国商业银行系统重要性的实证评估，《时代金融》，2016年第8期</span></p><p><span style="font-family: 宋体; font-size: 16px;">伍燕然、黄文婷、苏淞、江婕，基金投资者处置效应的个体差异，《国际金融研究》，2016年第3期</span></p><p><span style="font-family: 宋体; font-size: 16px;">江婕、程帆，中国城市居民家庭风险态度及其负债行为研究——来自CCFR的调查，《时代金融》，2016年第3期</span></p><p><span style="font-family: 宋体; font-size: 16px;">伍燕然、江婕、谢楠、王凯，投资者情绪能影响行业分析师盈利预测偏差吗？——基于公司治理与信息披露的角度，《世界经济》，2016年第2期</span></p><p><span style="font-family: 宋体; font-size: 16px;">江婕、王正位，系统性市场风险度量指标的测算与评价，《中山大学学报（社会科学版）》，2015年第6期</span></p><p><span style="font-family: 宋体; font-size: 16px;">伍燕然、潘可、胡松明、江婕，行业分析师盈利预测偏差的新解释，《经济研究》，2012年第4期</span></p><p><span style="font-family: 宋体; font-size: 16px;">JIANG Jie，Study of Regime Switching in Chinese Stock Market，Journal of Systems Science and Information,2006. Vol. 4 No.1 pp.59-65</span></p><p><span style="font-family:宋体;"><span style="font-size: 16px;">宋逢明、江婕，波动率度量模型研究的回顾及展望，《财经论丛》，2005年第6期</span></span></p><p><span style="font-family:宋体;"><span style="font-size: 16px;">宋逢明、江婕，中国股票市场波动性特性的实证研究，《金融研究》，2003年第4期</span></span></p><p><span style="font-family:宋体;"><span style="font-size: 16px;">宋逢明、江婕，从超级基金到交易所交易基金，《经济导刊》，2003年第1期</span></span></p><p><span style="font-family:宋体;"><span style="font-size: 16px;">宋逢明、江婕，投资组合保险：原理及应用，《经济导刊》，2002年第12期</span></span></p><p><span style="font-family: &quot;Times New Roman&quot;, serif;">&nbsp;</span><span style="font-size: 13.5pt; font-family: &quot;Times New Roman&quot;, serif;">&nbsp;</span><span times="" new="" roman="" serif="" style="font-size: 13.5pt;">&nbsp;</span><span times="" new="" roman="" serif="" font-size:="" 9pt="">&nbsp;</span><br /></p><p style="text-align:left;"><strong><span style="font-size:12.0pt;font-family:宋体;color:black;">案例开发</span></strong></p><p style="text-align:left;"><span style="font-size:12.0pt;font-family:宋体;color:black;">江婕、吴润萌，《</span><span style="font-size:12.0pt;font-family:'Times New Roman',serif;color:black;">ZEP</span><span style="font-size:12.0pt;font-family:宋体;color:black;">电力公司：日元互换》，</span><span style="font-size:12.0pt;font-family:'Times New Roman',serif;color:black;">2013</span><span style="font-size:12.0pt;font-family:宋体;color:black;">，入选中国管理案例共享中心案例库</span></p><p style="text-align:left;"><span style="font-size:12.0pt;font-family:宋体;color:black;">江婕、王志伟，《</span><span style="font-size:12.0pt;font-family:'Times New Roman',serif;color:black;">Airline</span><span style="font-size:12.0pt;font-family:宋体;color:black;">航空公司：燃油套期保值》，</span><span style="font-size:12.0pt;font-family:'Times New Roman',serif;color:black;">2012</span><span style="font-size:12.0pt;font-family:宋体;color:black;">，入选第三届全国百篇优秀管理案例（全国</span><span style="font-size:12.0pt;font-family:'Times New Roman',serif;color:black;">MBA</span><span style="font-size:12.0pt;font-family:宋体;color:black;">教育指导委员会举办）</span></p><br /></div></div>
+                    
+                </div>				<div class="grjj">
+                    <p class="jjh">研究课题</p>
+                  
+                    <div class="bks1"><p></p><p><span style="font-family:SimSun;font-size:16px;"><span style="color:black;">主持教育部人文社会科学青年基金项目</span><span style="color: black;">“</span><span style="color:black;">信息透明度与股价崩盘风险研究：公司治理与制度环境视角</span><span style="color: black;">”</span><span style="color:black;">；</span></span></p><p style="text-align:start;"><span style="font-family:SimSun;font-size:16px;"><span style="color:black;">主持中央高校基本科研业务费专项资金资助项目</span><span style="color: black;">“</span><span style="color:black;">外部冲击与内部传染：我国金融系统性风险研究</span><span style="color: black;">”</span><span style="color:black;">；</span></span></p><p style="text-align:start;"><span style="font-family:SimSun;font-size:16px;"><span style="color:black;">主持金创黄金（上海）有限公司委托研究课题</span><span style="color: black;">“</span><span style="color:black;">量化价差套利</span><span style="color: black;">”</span><span style="color:black;">；</span></span></p><p style="text-align:start;"><span style="font-family:SimSun;font-size:16px;"><span style="color:black;">主持北京凤凰财富投资管理有限公司委托研究课题</span><span style="color: black;">“</span><span style="color:black;">场外衍生品市场的风险评估与管理</span><span style="color: black;">”</span><span style="color:black;">；</span></span></p><p style="text-align:start;"><span style="font-family:SimSun;font-size:16px;"><span style="color:black;">主持北京师范大学青年教师人文社科研究基金项目</span><span style="color: black;">“</span><span style="color:black;">中国资本市场异像的研究</span><span style="color: black;">”</span><span style="color:black;">；</span></span></p><p style="text-align:start;"><span style="font-family:SimSun;font-size:16px;"><span style="color:black;">参与中国人民银行课题</span><span style="color: black;">“</span><span style="color:black;">红筹股</span><span style="color: black;">CDR</span><span style="color:black;">和价值型投资组合分析</span><span style="color: black;">”</span><span style="color:black;">；</span></span></p><p style="text-align:start;"><span style="font-family:SimSun;font-size:16px;"><span style="color:black;">参与新加坡发展银行课题</span><span style="color: black;">“</span><span style="color:black;">香港股票市场技术分析</span><span style="color: black;">”</span><span style="color:black;">；</span></span></p><p style="text-align:start;"><span style="font-family:SimSun;font-size:16px;"><span style="color:black;">参与深圳证券交易所研究所课题</span><span style="color: black;">“</span><span style="color:black;">深圳股票市场的稳定性研究</span><span style="color: black;">”</span><span style="color:black;">；</span></span></p><p style="text-align:start;"><span style="font-family:SimSun;font-size:16px;"><span style="color:black;">参与中国证券监督管理委员会课题</span><span style="color: black;">“</span><span style="color:black;">中国股票市场的扣减率和统一指数研究</span><span style="color: black;">”</span><span style="color:black;">。</span></span></p></div>
+                    
+                </div>				<div class="grjj">
+                    <p class="jjh">学生情况</p>
+                    <div class="bks1"><div style="top: 0px;"><span style="color: rgb(51, 51, 51); font-family: arial, helvetica, sans-serif;"><span style="font-family: 宋体, SimSun;"><span style="font-size:16px;"><span style="color: rgb(51, 51, 51); font-family: 宋体, SimSun;"></span></span></span></span></div><p style="text-align:left;"><span style="font-size:12.0pt;font-family:宋体;color:black;">本科生励弘计划指导教师</span></p><p style="text-align:left;"><span style="font-size:12.0pt;font-family:宋体;color:black;">本科生新生导师（</span><span style="font-size:12.0pt;font-family:'Times New Roman',serif;color:black;">2018</span><span style="font-size:12.0pt;font-family:宋体;color:black;">年</span><span style="font-size:12.0pt;font-family:'Times New Roman',serif;color:black;">,</span><span style="font-size:12.0pt;font-family:宋体;color:black;">获北京师范大学优秀新生导师）</span></p><p style="text-align:left;"><span style="font-size:12.0pt;font-family:宋体;color:black;">本科毕业论文指导教师（</span><span style="font-size:12.0pt;font-family:'Times New Roman',serif;color:black;">2016-2020</span><span style="font-size:12.0pt;font-family:宋体;color:black;">连续</span><span style="font-size:12.0pt;font-family:'Times New Roman',serif;color:black;">5</span><span style="font-size:12.0pt;font-family:宋体;color:black;">年</span><span style="font-size:12.0pt;font-family:'Times New Roman',serif;color:black;">,</span><span style="font-size:12.0pt;font-family:宋体;color:black;">获北京师范大学优秀本科毕业论文指导教师）</span></p><p style="text-align:left;"><span style="font-size:12.0pt;font-family:宋体;color:black;">指导学生的毕业去向：清华大学、北京大学、中国人民大学、复旦大学、上海交通大学、厦门大学、对外经济贸易大学、中央财经大学等。</span></p><p style="text-align:left;"><span style="font-size:9.0pt;font-family:'Times New Roman',serif;color:black;">&nbsp;</span></p><p style="text-align:left;"><span style="font-size:12.0pt;font-family:宋体;color:black;">指导学术硕士研究生和</span><span style="font-size:12.0pt;font-family:'Times New Roman',serif;color:black;">MBA</span><span style="font-size:12.0pt;font-family:宋体;color:black;">。</span></p><p style="text-align:left;"><span style="font-size:12.0pt;font-family:宋体;color:black;">指导学术硕士的就业去向：光大银行、华泰证券、华夏银行、顺义金融办、重庆工商大学等。</span></p></div>
+                    
+                </div>				<div class="grjj">
+                    <p class="jjh">教授课程</p>
+                    <div class="bks1"><div style="top: 0px;"><p style="text-align:left;"><span style="font-size:12.0pt;font-family:宋体;color:black;">本科生：投资学、金融工程；</span></p><p style="text-align:left;"><span style="font-size:12.0pt;font-family:宋体;color:black;">研究生：高级投资学；</span></p><p style="text-align:left;"><span style="font-size:12.0pt;font-family:'Times New Roman',serif;color:black;">MBA</span><span style="font-size:12.0pt;font-family:宋体;color:black;">：期货期权与其他衍生工具。</span></p></div><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei';font-size:16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;"><span style="font-family: 宋体, SimSun; font-size: 16px;"></span></p></div>
+                    
+                </div>            </div>
+        </div>
+         <footer style="overflow: hidden;">
+            <div class="footers">
+                <div class="footersl">
+                    <img src="http://bs.bnu.edu.cn/newweb/images/ewm.jpg" alt="" class="imgewm">
+                    <div class="footerxx">
+                        <p>Copyright © 2020 北京师范大学经济与工商管理学院</p>
+                        <p><i class="fas fa-map-marker-alt"></i> 地址：北京市新街口外大街19号</p>
+                        <p><i class="fas fa-portrait"></i> 传真：010-58801867</p>
+                        <p><i class="fas fa-phone"></i> 电话：010-58801867</p>
+                        <p><i class="fas fa-envelope"></i> 邮编：100875</p>
+                    </div>
+                </div>
+                <img src="http://bs.bnu.edu.cn/newweb/images/db.png" alt="" width="140" class="dbimg">
+                <img src="http://bs.bnu.edu.cn/newweb/images/yx.png" alt="" class="yuanxun">
+            </div>
+        </footer>
+    </div>
+	<div class="share">
+		  <div id="appgame-leftside-share">
+	        <div class="appgame-leftside-share rwt_share" id="rwt_share">
+	         
+	        <!--<a class="appgame-leftside-search" data-cmd="search" title="search"  href="javascript:void(0);" onclick="opens('id')">search</a> --> <!--<div class="searchs" id="id">
+	         <form name="dataForm" action="/cms/search/searchResults.jsp" target="_blank" method="post" accept-Charset="utf-8"  onsubmit="document.charset='utf-8';">
+			        	<p>
+			        		<input name="siteID" size="4" value="127" type = "hidden">
+			        		<input type="text" name="query" id="search" class="searchInput" value="输入搜索词">
+			        		<button type="submit"></button>
+			        	</p>
+			        	</form>
+			        </div>-->
+			        <!-- <a class="appgame-leftside-weixin" data-cmd="weixin" title="">微信</a> -->
+                    
+			        <!-- <a class="appgame-leftside-qzone" data-cmd="qzone" title="">qq空间</a>
+			        
+			        <a class="appgame-leftside-tsina" data-cmd="tsina" title="">微博</a> -->			    </div>
+			        <a class="appgame-leftside-top" onclick="gotoTPoint()"></a>			</div>
+			        
+		</div>
+</body>
+<script src="http://gh.bnu.edu.cn/js/jquery-1.9.0.min.js"></script>
+<script src="http://gh.bnu.edu.cn/js/share.min.js"></script>
+<script>
+    var dj=document.getElementById('dianji');
+    var jjc=document.getElementById('jjc');
+    var dj1=document.getElementById('dianji1');
+    var jjc1=document.getElementById('jjc1');
+    var a=1;
+    function zhedie(m,n){
+        m.onclick=function(){
+            if(a==1){
+                n.className='jjc';
+                m.className='dianji1'
+                a=0;
+            }else{
+                n.className='jjc1';
+                m.className='dianji'
+                a=1;
+            }
+        }
+    }
+    zhedie(dj,jjc);
+    zhedie(dj1,jjc1);
+	
+	
+</script>
+<script>
+
+	
+	
+    
+
+    /*回到顶部*/
+	$(function(){
+	 	$(window).resize(function(){
+						var h = $(window).height();
+						$('.goTop').css('top',h-60);
+						$(window).scroll(function(){				
+							var scrollTop = $(document).scrollTop();					  
+							$('.goTop').stop().animate({
+								top: h + scrollTop-60
+							},300);
+						});
+		}).resize();
+		});
+	//gotop
+
+			$('.goTop').click(function(){
+
+				$('body,html').stop().animate({scrollTop:0});
+
+				return false;
+
+			});
+	
+	function gotoTPoint(){
+		$("html,body").animate({scrollTop:0},500);
+	}
+</script>
+</html>

@@ -1,0 +1,491 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0">
+    <title>北京师范大学工商与经济管理学院</title>
+    <link rel="stylesheet" href="http://bs.bnu.edu.cn/new-ver-css/reset.css">
+    <link rel="stylesheet" href="http://bs.bnu.edu.cn/new-ver-css/index.css">
+	<link rel="stylesheet" href="http://bs.bnu.edu.cn/new-ver-css/xyslist.css">
+	<link rel="stylesheet" href="http://bs.bnu.edu.cn/new-ver-css/xys-tf.css">
+    <style>
+        .container{
+            width:100%;
+            height: auto;
+            overflow: hidden;
+        }
+        .header{
+            width:100%;
+            height:116px;
+            background:#EFF8FF;
+        }
+        .logo1{
+            width:1200px!important;
+            margin:0 auto;
+            position:relative;
+            float: none;
+			display:block;
+        }
+        .logo2{
+            float:right;
+        }
+        .logo1 p{
+            position:absolute;
+            top:5px;
+            right:5px;
+            font-size:13px;
+        }
+        .logo1 p:hover{
+            color:#112769;
+        }
+        .tu{
+            width:100%;
+            height:240px;
+            background:url('http://bs.bnu.edu.cn/newweb/grzy/images/tu.jpg') no-repeat top center;
+            background-size: 100%;
+        }
+        .lujing{
+            width:1200px;
+            height:58px;
+            margin:0 auto;
+            border-bottom:1px solid #aaa;
+            overflow:hidden;
+        }
+        .lujings{
+            margin:24px 0 0 0;
+            font-size:14px;
+        }
+        .content{
+            color:#333;
+            width:1200px;
+/*            height:2000px;*/
+            margin:0 auto;
+            margin-top:40px;
+/*            background:#c4c4c4;*/
+        }
+        
+        .xian{
+            width:100%;
+            height:8px;
+            background:#9A0812;
+        }
+        
+        .leftc{
+            float:left;
+        }
+        .rightc{
+            float:left;
+            margin-left:50px;
+/*            background:#666;*/
+            width:880px;
+/*            height:1000px;*/
+        }
+        .rheader{
+            width:880px;
+            height:210px;
+/*            background:yellow;*/
+        }
+        .xm{
+            font-size:30px;
+            height:40px;
+/*            border-bottom:4px solid #9A0812;*/
+            width:auto;
+            float:left;
+            line-height:40px;
+			margin-right:30px;
+        }
+        .zhiw{
+            font-size:18px;
+            height:40px;
+            line-height:50px;
+            margin-bottom:30px;
+        }
+        .tel{
+                font-size: 16px;
+                margin-top: 10px;
+                line-height: 20px;
+        }
+        .grjj{
+/*            height:300px;*/
+            width:880px;
+/*            background:yellow;*/
+            padding-bottom:40px;
+        }
+        .jjh{
+                font-size: 20px;
+                border-bottom: 1px solid #cecece;
+                height: 40px;
+                line-height: 40px;
+                padding-left: 30px;
+                background: url(http://bs.bnu.edu.cn/newweb/grzy/images/zw.png) no-repeat 0 16px;
+        }
+        
+        .jjc{
+            font-size:14px;
+            margin-top:30px;
+           
+            line-height:28px;
+            overflow:hidden;
+            text-align: justify;
+            text-justify:inter-ideograph;
+        }
+        .jjc1{
+            height:225px;
+            font-size:14px;
+            margin-top:30px;
+            
+            line-height:28px;
+            overflow:hidden;
+            text-align: justify;
+            text-justify:inter-ideograph;
+        }
+        
+        .dianji1{
+                background: url(http://bs.bnu.edu.cn/newweb/grzy/images/zw.png) no-repeat 0 -50px;
+                width: 13px;
+                height: 13px;
+                cursor: pointer;
+                display: block;
+            margin-top: 20px;
+            transition: all .2s linear;
+        }
+        .dianji1:hover{
+            background: url(http://bs.bnu.edu.cn/newweb/grzy/images/zw.png) no-repeat 0 -64px;
+        }
+        
+        .dianji{
+                background: url(http://bs.bnu.edu.cn/newweb/grzy/images/zw.png) no-repeat 0 -24px;
+                height: 13px;
+                cursor: pointer;
+                display: block;
+            margin-top: 20px;
+            transition: all .2s linear;
+        }
+        .dianji:hover{
+            background: url(http://bs.bnu.edu.cn/newweb/grzy/images/zw.png) no-repeat 0 -37px;
+        }
+        #jjc1{
+            text-indent:0em;
+        }
+        
+        .bks{
+            font-size:14px;
+            font-weight: 800;
+            margin-top:30px;
+            height:auto;
+            line-height:36px;
+        }
+        .bks1{
+            font-size:14px;
+            margin-top:30px;
+            height:auto;
+            line-height:36px;
+        }
+        .bksc{
+            height:36px;
+            line-height:36px;
+            font-size:14px;
+        }
+        
+        .yanzheng{
+            width:1200px;
+            height:100px;
+            margin:0 auto;
+        }
+        .yanzheng img{
+            display:block;
+            margin-top:26px;
+            float:left;
+        }
+		
+#appgame-leftside-share{width:42px; height:216px; position: fixed;bottom: 30px;right: 30px; z-index:9999;}
+.appgame-leftside-share{width:42px; height:259px;}
+#appgame-leftside-share a{display:block; width:42px; height:44px; background-color:#e6e6e6; z-index:1; position:absolute; left:0; box-sizing:border-box; -moz-box-sizing:border-box; border:1px #ddd solid; background-image:url(http://gh.bnu.edu.cn/images/share-icons.png); background-repeat:no-repeat; margin:0;  transition:0.4s; -webkit-transition:0.4s; -moz-transition:0.4s;}
+#appgame-leftside-share a:hover{background-color:#fff; border:1px #eee solid; z-index:2;}
+/*.appgame-leftside-weixin{top:0; background-position:-88px 0;}
+.appgame-leftside-weixin:hover{background-position:0px 0;}
+.appgame-leftside-qzone{top:43px; background-position:-88px -44px;}
+.appgame-leftside-qzone:hover{background-position:0px -44px;}*/
+.appgame-leftside-search{top:86px; background-position:-93px -89px;}
+.appgame-leftside-search:hover{background-position:-5px -86px;}
+.appgame-leftside-weixin{top:129px; background-position:-88px 0px;}
+.appgame-leftside-weixin:hover{background-position:0px 0px;}
+/*.appgame-leftside-fbook{top:172px; background-position:-88px -176px;}
+.appgame-leftside-fbook:hover{background-position:0px -176px;}
+.appgame-leftside-twi{top:215px; background-position:-88px -220px;}
+.appgame-leftside-twi:hover{background-position:0px -220px;}*/
+#appgame-leftside-share .appgame-leftside-top{background-image:url(http://gh.bnu.edu.cn/images/leftnav-off.png); background-position:-1px -395px; top:130px; cursor:pointer;}
+
+.rwt_share {
+/*	overflow:hidden;*/
+	float:left;
+	position:relative;
+}
+.rwt_share a {
+	display:inline-block;
+	margin-right:10px;
+	text-indent:-9999px;
+	margin-bottom:10px;
+	width:24px;
+	height:24px;
+	overflow:hidden;
+	cursor:pointer;
+	float:left;
+	font-size:12px;
+}
+.rwts_weixin {
+	background-position:0 -1612px;
+}
+.rwts_tsina {
+	background-position:0 -104px;
+}
+.rwts_tqq {
+	background-position:0 -260px;
+}
+.rwts_qzone {
+	background-position:0 -52px;
+}
+.rwts_sqq {
+	background-position:0 -2652px;
+}
+.rwts_tieba {
+	background-position:0 -728px;
+}
+.rwts_renren {
+	background-position:0 -208px;
+}
+.rwts_kaixin001 {
+	background-position:0 -312px;
+}
+.rwts_tqf {
+	background-position:0 -364px;
+}
+.rwts_douban {
+	background-position:0 -468px;
+}
+.rwts_twi {
+	background-position:0 -1404px;
+}
+.rwts_fbook {
+	background-position:0 -1352px;
+}
+.rwts_ty {
+	background-position:0 -1196px;
+}
+.rwts_mogujie {
+	background-position:0 -1768px;
+}
+.rwts_meilishuo {
+	background-position:0 -1716px;
+}
+.rwts_huaban {
+	background-position:0 -1872px;
+}
+.rwts_hi {
+	background-position:0 -416px;
+}
+.rwts_tsohu {
+	background-position:0 -520px;
+}
+.rwts_more {
+	background-position:0 0;
+}
+.rwt_share_wxShow_code>img {
+	width:100%;
+}
+.bks1 li{
+	list-style:disc;
+}
+@media screen and (max-width: 1200px){
+	.logo1{
+		width:100%!important;
+	}
+	.leftc img{
+		width:50%!important;
+		height:50%!important;
+	}
+	.logo2{display:none;}
+	.lujing{
+		width:90%;
+	}
+	.content{
+		width:90%;
+	}
+	.leftc{
+		float:none;
+		
+	}
+	.tu{display:none;}
+	
+	.rightc{
+		float:none;
+		width:100%;
+		margin-left:0px;
+	}
+	.footers{width:100%;}
+	.rheader{width:100%;}
+	.grjj{width:100%;}
+}
+@media screen and (max-width: 600px){
+.l3{width:95%;}
+.share{display:none;}
+.leftc img{
+		width:70%!important;
+		height:70%!important;
+	}
+}
+  
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo1">
+                <img src="http://bs.bnu.edu.cn/newweb/grzy/images/logo.png" alt="" class="l3" style="margin-top: 25px;float:left;">
+                <img src="http://bs.bnu.edu.cn/newweb/grzy/images/logo2.png" alt="" class="logo2">
+                <a href="http://bs.bnu.edu.cn/englishversion/facultyresearch/fulltimefaculty/azmsy/119290.html"><p>ENGLISH VERSION</p></a>
+            </div>
+        </div>
+        <div class="xian"></div>
+        <div class="tu"></div>
+        <div class="lujing">
+            <div class="lujings">
+                <a href="#">师资队伍</a>
+                 | 
+                <a href="#">市场营销系</a>
+            </div>
+        </div>
+        <div class="content">
+            <div class="leftc">
+                <img src="/Public/upload/2020/09/15/5f602e47bf07c.png" alt="" width="270">
+            </div>
+            <div class="rightc">
+                <div class="rheader">
+                    <p class="xm">朱艳春</p>
+                    <p class="zhiw">副教授</p>
+                    <p class="tel"><strong style="display:block;width:100px;float:left;">电话</strong>：010-58801867</p> 
+                 <p class="tel"><strong style="display:block;width:100px;float:left;">E-mail</strong>：zhuyanchun@bnu.edu.cn</p>
+                 <p class="tel"><strong style="display:block;width:100px;float:left;">Office hour</strong>：周一上午8:00-10:00</p>
+                 <p class="tel"><strong style="display:block;width:100px;float:left;">系所中心</strong>：市场营销系</p>
+              </div>
+			  <div class="grjj">
+                    <p class="jjh">个人简历</p>
+                    <div class="bks1" id="jjc"><p style="font-family: " microsoft="" yahei="" font-size:16px=""><span style="font-family: 宋体;">教育背景：</span></p><p style="font-family: " microsoft="" yahei="" font-size:16px="" text-indent:="" 28px="">1998<span style="font-family: 宋体;">年</span>9<span style="font-family: 宋体;">月－</span>2002<span style="font-family: 宋体;">年</span>7<span style="font-family: 宋体;">月</span>&nbsp;<span style="font-family: 宋体;">本科：北京航空航天大学</span>&nbsp;<span style="font-family: 宋体;">经济管理学院</span>&nbsp;<span style="font-family: 宋体;">管理信息系统</span></p><p style="font-family: " microsoft="" yahei="" font-size:16px="" text-indent:="" 28px="">2002<span style="font-family: 宋体;">年</span>9<span style="font-family: 宋体;">月－</span>2007<span style="font-family: 宋体;">年</span>7<span style="font-family: 宋体;">月</span>&nbsp;<span style="font-family: 宋体;">博士：北京航空航天大学</span>&nbsp;<span style="font-family: 宋体;">经济管理学院</span>&nbsp;<span style="font-family: 宋体;">管理科学与工程</span></p><p style="font-family: " microsoft="" yahei="" font-size:16px="" text-indent:="" 28px="">2007<span style="font-family: 宋体;">年</span>8<span style="font-family: 宋体;">月－至今</span>&nbsp;<span style="font-family: 宋体;">北京师范大学经济与工商管理学院</span></p></div>
+                    
+                </div>				<div class="grjj">
+                    <p class="jjh">研究领域</p>
+                    <div class="bks1">电子商务、环境管理</div>
+                </div>				<div class="grjj">
+                    <p class="jjh">研究成果</p>
+                    <div class="bks1" id="jjc1"><p style="font-family: " microsoft="" yahei="" font-size:16px="" line-height:="" normal="" margin-top:="" 5px="" margin-bottom:=""><span style="font-size: 14px;">张夏羿,朱艳春.环境经济政策对环保上市公司绩效的影响[J].大连理工大学学报(社会科学版),2017,38(04):19-25.</span></p><p style="font-family: " microsoft="" yahei="" font-size:16px=""></p><p style="font-family: " microsoft="" yahei="" font-size:16px="" line-height:="" normal="" margin-top:="" 5px="" margin-bottom:=""><span style="font-size: 14px;">朱艳春,张志晴,张巍.服务失败会影响网络卖家信誉吗?——基于露天拍卖网的实证研究[J].北京工商大学学报(社会科学版),2017,32(02):28-39</span></p><p style="font-family: " microsoft="" yahei="" font-size:16px="" line-height:="" normal="" margin-top:="" 5px="" margin-bottom:=""><span style="font-size: 14px;">Zhang W, Zhu Y, Zhao Y. Fuzzy Cognitive Map Approach for Trust-Based Partner Selection in Virtual Enterprise[J]. Journal of Computational and Theoretical Nanoscience, 2016, 13(1): 349-360.</span></p><p style="font-family: " microsoft="" yahei="" font-size:16px="" line-height:="" normal="" margin-top:="" 5px="" margin-bottom:=""><span style="font-size: 14px;">Zhang W, Zhu Y C, Wen J B, et al. Growth and Firm Size Distribution: An Empirical Study of Listed E-Commerce Companies in China[J]. Journal of Electronic Commerce in Organizations (JECO), 2016, 14(2): 61-73.</span></p><p style="font-family: " microsoft="" yahei="" font-size:16px="" line-height:="" normal="" margin-top:="" 5px="" margin-bottom:=""><span style="font-size: 14px;">Zhang W, Zhu Y C, Wu L H. Exploring Price Level and Pricing Adjustment Mode in China's Online Retail Market: the Cases of JD Mall, Amazon and DangDang[J]. International Journal of Database Theory and Application, 2016, 9(3): 95-106.</span></p><p style="font-family: " microsoft="" yahei="" font-size:16px="" line-height:="" normal="" margin-top:="" 5px="" margin-bottom:=""><span style="font-size: 14px;">Zhang W, Wen J, Zhu Y. Minimal spanning tree analysis of topological structures: the case of Hang Seng index[J]. RISTI, 2016 (E7): 145-155.</span></p><p style="font-family: " microsoft="" yahei="" font-size:16px="" line-height:="" normal="" margin-top:="" 5px="" margin-bottom:=""><span style="font-size: 14px;">Zhang W, Zhu Y, Bo W. Empirical Analysis on the Factors Influencing China's Sulfur Dioxide Emissions Based on IPAT [J]. 2016.</span></p><p style="font-family: " microsoft="" yahei="" font-size:16px="" line-height:="" normal="" margin-top:="" 5px="" margin-bottom:=""><span style="font-size: 14px;">张巍, 朱艳春, 孙宝文, 等. 基于模糊认知图和证据理论的 FCM-DS 信任模型[J]. 小型微型计算机系统, 2016, 37(6): 1259-1262.</span></p><p style="font-family: " microsoft="" yahei="" font-size:16px="" line-height:="" normal="" margin-top:="" 5px="" margin-bottom:=""><span style="font-size: 14px;">Zhang W, Zhu Y C, Wu L H. Empirical Analysis on Price Level changes and Price Adjustment Policy Selection: Evidence from B2C E-commerce Market[J]. International Journal of u-and e-Service, Science and Technology, 2016, 9(4): 69-76.</span></p><p style="font-family: " microsoft="" yahei="" font-size:16px="" line-height:="" normal="" margin-top:="" 5px="" margin-bottom:=""><span style="font-family: " times="" new="" roman="" font-size:="" 14px="">Structural decomposition analysis and evaluation of the Chinese emission reduction policy: changes in SO2 emission from 2001 to 2010，Journal of applied science 14(6): 573-579,2014.</span></p><p style="font-family: " microsoft="" yahei="" font-size:16px="" line-height:="" normal="" margin-top:="" 5px="" margin-bottom:=""><span style="font-family: " times="" new="" roman="" font-size:="" 14px="">互联网企业规模与成长是否遵循Gibrat定律——基于2008-2012年上市公司数据的实证检验，中央财经大学学报，2013/06&nbsp;</span></p><p style="font-family: " microsoft="" yahei="" font-size:16px="" line-height:="" normal="" margin-top:="" 5px="" margin-bottom:=""><span style="font-family: " times="" new="" roman="" font-size:="" 14px="">互联网企业成长影响因素实证分析，现代管理科学，2013/09</span></p><p style="font-family: " microsoft="" yahei="" font-size:16px="" line-height:="" normal="" margin-top:="" 5px="" margin-bottom:=""><span style="font-family: " times="" new="" roman="" font-size:="" 14px="">面向协作的虚拟企业过程建模研究与进展评述，现代管理科学 2013/01&nbsp;</span></p><p style="font-family: " microsoft="" yahei="" font-size:16px="" line-height:="" normal="" margin-top:="" 5px="" margin-bottom:=""><span style="font-family: " times="" new="" roman="" font-size:="" 14px="">Research on Evaluation and Design Trust Model for E-Commerce Systems, Journal of Convergence Information Technology,Volume8, Number4,F<span style="font-family: " microsoft="" yahei="">eb 2013</span></span></p><p style="font-family: " microsoft="" yahei="" font-size:16px="" line-height:="" normal="" margin-top:="" 5px="" margin-bottom:=""><span style="font-family: " times="" new="" roman="" font-size:="" 14px="">Examining and Improving the Effectiveness of Trust Model for Online Reputation System, Advances in Information Sciences and Service Sciences，2013，Vol. 5, No. 7</span></p><p style="font-family: " microsoft="" yahei="" font-size:16px="" line-height:="" normal="" margin-top:="" 5px="" margin-bottom:=""><span style="font-family: " times="" new="" roman="" font-size:="" 14px="">Zhu, Yanchun, Zhang, Wei, Yu, Changhai, “Detection of feedback reputation fraud in Taobao using social network theory”, IJCSS 2011, Taibei, 2011/06.</span></p><p style="font-family: " microsoft="" yahei="" font-size:16px="" line-height:="" normal="" margin-top:="" 5px="" margin-bottom:=""><span style="font-family: " times="" new="" roman="" font-size:="" 14px="">治污减排对经济发展影响的最新研究进展及启示. 管理评论, 2011(07).</span></p><p style="font-family: " microsoft="" yahei="" font-size:16px="" line-height:="" normal="" margin-top:="" 5px="" margin-bottom:=""><span style="font-family: " times="" new="" roman="" font-size:="" 14px="">加快推进“三个转变”积极探索中国环保新道<span style="font-family: " microsoft="" yahei="">路. 环境保护, 2011,(10).</span></span></p><p style="font-family: " microsoft="" yahei="" font-size:16px="" line-height:="" normal="" margin-top:="" 5px="" margin-bottom:=""><span style="font-family: " times="" new="" roman="" font-size:="" 14px="">“Study on the Economic development of the industry impact of Electricity and heat production and supply industry pollution abatement”. New Energy Techniques and Applications, 2011/06.</span></p><p style="font-family: " microsoft="" yahei="" font-size:16px="" line-height:="" normal="" margin-top:="" 5px="" margin-bottom:=""><span style="font-family: " times="" new="" roman="" font-size:="" 14px="">Zhu yanchun, Zhang wei, “Design of Inference Model based on Activation for Fuzzy Cognitive Map”, 2009 ISA, Wuhan, 2009/05.</span></p><p style="font-family: " microsoft="" yahei="" font-size:16px="" line-height:="" normal="" margin-top:="" 5px="" margin-bottom:=""><span style="font-family: " times="" new="" roman="" font-size:="" 14px="">Zhu yanchun, Liu songbai, Li jiangyu, “A framework for modeling and evaluating E-business trust using Fuzzy Cognitive Maps”, 2008 International Conference of Service Science, Beijing, 2008/04.</span></p><p style="font-family: " microsoft="" yahei="" font-size:16px="" line-height:="" normal="" margin-top:="" 5px="" margin-bottom:=""><span style="font-family: " times="" new="" roman="" font-size:="" 14px="">&nbsp;Zhu yanchun, Zhang wei, “Trust model regarding QoS using FCMs and D-S evidence theory”, IEEE International Conference on Service Operations and Logistics, and Informatics, Beijing, 2008/10.</span></p><p style="font-family: " microsoft="" yahei="" font-size:16px="" line-height:="" normal="" margin-top:="" 5px="" margin-bottom:=""><span style="font-family: " times="" new="" roman="" font-size:="" 14px="">Zhu yanchun, Zhang wei, “The cognitive model of interfirm trust dynamics: how trust is evolved”, International Conference on Engineering Management and Service Sciences, Dalian, 2008/10.</span></p><p style="font-family: " microsoft="" yahei="" font-size:16px="" line-height:="" normal="" margin-top:="" 5px="" margin-bottom:=""><span style="font-family: " times="" new="" roman="" font-size:="" 14px="">Zhu yanchun, Zhang wei, “An integrated two-Level framework for learning fuzzy cognitive maps using RCGA algorithm and NHL algorithm”, WICOM2008, Dalian, 2008/10.</span></p><p style="font-family: " microsoft="" yahei="" font-size:16px="" line-height:="" normal="" margin-top:="" 5px="" margin-bottom:=""><span style="font-family: " times="" new="" roman="" font-size:="" 14px="">Zhu yanchun, Zhang wei, Liu lu“Using fuzzy cognitive time maps for modeling and evaluating trust relationships in the virtual enterprises”, Expert Systems With Applications, Maryland, USA, 11(4), 2008/11.</span></p><p style="font-family: " microsoft="" yahei="" font-size:16px="" line-height:="" normal="" margin-top:="" 5px="" margin-bottom:=""><span style="font-family: " times="" new="" roman="" font-size:="" 14px="">Zhu yanchun, Zhang wei, “A Novel Trust Model based on D-S Evidence Reasoning and Fuzzy Cognitive Time Map”, IEEE International Symposium on IT in Medicine and Education, Xiamen, Vol.2, 2008/12.</span></p><p style="font-family: " microsoft="" yahei="" font-size:16px="" line-height:="" normal="" margin-top:="" 5px="" margin-bottom:=""><span style="font-family: " times="" new="" roman="" font-size:="" 14px="">朱艳春, 刘鲁. 在线信誉系统的信任模型构建研究, 控制与决策. 2007.10.</span></p><p style="font-family: " microsoft="" yahei="" font-size:16px="" line-height:="" normal="" margin-top:="" 5px="" margin-bottom:=""><span style="font-family: " times="" new="" roman="" font-size:="" 14px="">朱艳春, 刘鲁. 基于评分用户可信度的信任模型分析与构建, 管理工程学报. 2007, (4).</span></p><p style="font-family: " microsoft="" yahei="" font-size:16px="" line-height:="" normal="" margin-top:="" 5px="" margin-bottom:=""><span style="font-family: " times="" new="" roman="" font-size:="" 14px=""><span style="font-family: " microsoft="" yahei="">刘鲁, 张巍, 朱艳春. 基于多影响因素的信任模型构建</span>,&nbsp;<span style="font-family: " microsoft="" yahei="">清华大学学报</span>. 2007.7.</span></p><p style="font-family: " microsoft="" yahei="" font-size:16px="" line-height:="" normal="" margin-top:="" 5px="" margin-bottom:=""><span style="font-family: " times="" new="" roman="" font-size:="" 14px="">&nbsp;Zhang wei, Zhu yanchun, “A Trust-Based Model Using Learning FCM for Partner Selection in the Virtual Enterprises”,&nbsp;<em>Proc. of 3rd International Conference Intelligent Computing</em>, Wuhan, 2007/8.</span></p><p style="font-family: " microsoft="" yahei="" font-size:16px="" line-height:="" normal="" margin-top:="" 5px="" margin-bottom:=""><span style="font-family: " times="" new="" roman="" font-size:="" 14px="">Zhang wei, Zhu yanchun, “Research on computational trust model for virtual enterprises”,&nbsp;<em>Proc. of The IFIP TC8 International Conference on Research and Practical Issues of Enterprise Information Systems,</em>&nbsp;Wuhan, 2007/10.</span></p></div>
+                    
+                </div>				<div class="grjj">
+                    <p class="jjh">研究课题</p>
+                  
+                    <div class="bks1"><span style="font-family: " microsoft="" yahei="" font-size:16px="">主持并参与多个国家级、省部级项目</span><br /></div>
+                    
+                </div>								<div class="grjj">
+                    <p class="jjh">教授课程</p>
+                    <div class="bks1"><span style="font-family: " microsoft="" yahei="" font-size:16px="">服务管理、运营管理、商业伦理、管理信息系统</span><br /></div>
+                    
+                </div>            </div>
+        </div>
+         <footer style="overflow: hidden;">
+            <div class="footers">
+                <div class="footersl">
+                    <img src="http://bs.bnu.edu.cn/newweb/images/ewm.jpg" alt="" class="imgewm">
+                    <div class="footerxx">
+                        <p>Copyright © 2020 北京师范大学经济与工商管理学院</p>
+                        <p><i class="fas fa-map-marker-alt"></i> 地址：北京市新街口外大街19号</p>
+                        <p><i class="fas fa-portrait"></i> 传真：010-58801867</p>
+                        <p><i class="fas fa-phone"></i> 电话：010-58801867</p>
+                        <p><i class="fas fa-envelope"></i> 邮编：100875</p>
+                    </div>
+                </div>
+                <img src="http://bs.bnu.edu.cn/newweb/images/db.png" alt="" width="140" class="dbimg">
+                <img src="http://bs.bnu.edu.cn/newweb/images/yx.png" alt="" class="yuanxun">
+            </div>
+        </footer>
+    </div>
+	<div class="share">
+		  <div id="appgame-leftside-share">
+	        <div class="appgame-leftside-share rwt_share" id="rwt_share">
+	         
+	        <!--<a class="appgame-leftside-search" data-cmd="search" title="search"  href="javascript:void(0);" onclick="opens('id')">search</a> --> <!--<div class="searchs" id="id">
+	         <form name="dataForm" action="/cms/search/searchResults.jsp" target="_blank" method="post" accept-Charset="utf-8"  onsubmit="document.charset='utf-8';">
+			        	<p>
+			        		<input name="siteID" size="4" value="127" type = "hidden">
+			        		<input type="text" name="query" id="search" class="searchInput" value="输入搜索词">
+			        		<button type="submit"></button>
+			        	</p>
+			        	</form>
+			        </div>-->
+			        <!-- <a class="appgame-leftside-weixin" data-cmd="weixin" title="">微信</a> -->
+                    
+			        <!-- <a class="appgame-leftside-qzone" data-cmd="qzone" title="">qq空间</a>
+			        
+			        <a class="appgame-leftside-tsina" data-cmd="tsina" title="">微博</a> -->			    </div>
+			        <a class="appgame-leftside-top" onclick="gotoTPoint()"></a>			</div>
+			        
+		</div>
+</body>
+<script src="http://gh.bnu.edu.cn/js/jquery-1.9.0.min.js"></script>
+<script src="http://gh.bnu.edu.cn/js/share.min.js"></script>
+<script>
+    var dj=document.getElementById('dianji');
+    var jjc=document.getElementById('jjc');
+    var dj1=document.getElementById('dianji1');
+    var jjc1=document.getElementById('jjc1');
+    var a=1;
+    function zhedie(m,n){
+        m.onclick=function(){
+            if(a==1){
+                n.className='jjc';
+                m.className='dianji1'
+                a=0;
+            }else{
+                n.className='jjc1';
+                m.className='dianji'
+                a=1;
+            }
+        }
+    }
+    zhedie(dj,jjc);
+    zhedie(dj1,jjc1);
+	
+	
+</script>
+<script>
+
+	
+	
+    
+
+    /*回到顶部*/
+	$(function(){
+	 	$(window).resize(function(){
+						var h = $(window).height();
+						$('.goTop').css('top',h-60);
+						$(window).scroll(function(){				
+							var scrollTop = $(document).scrollTop();					  
+							$('.goTop').stop().animate({
+								top: h + scrollTop-60
+							},300);
+						});
+		}).resize();
+		});
+	//gotop
+
+			$('.goTop').click(function(){
+
+				$('body,html').stop().animate({scrollTop:0});
+
+				return false;
+
+			});
+	
+	function gotoTPoint(){
+		$("html,body").animate({scrollTop:0},500);
+	}
+</script>
+</html>

@@ -1,0 +1,1064 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><script type="text/javascript">(window.NREUM||(NREUM={})).init={ajax:{deny_list:["bam.nr-data.net"]}};(window.NREUM||(NREUM={})).loader_config={licenseKey:"ab0374a39e",applicationID:"39297557"};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var i=e[n]={exports:{}};t[n][0].call(i.exports,function(e){var i=t[n][1][e];return r(i||e)},i,i.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(t,e,n){function r(){}function i(t,e,n,r){return function(){return s.recordSupportability("API/"+e+"/called"),o(t+e,[u.now()].concat(c(arguments)),n?null:this,r),n?void 0:this}}var o=t("handle"),a=t(9),c=t(10),f=t("ee").get("tracer"),u=t("loader"),s=t(4),d=NREUM;"undefined"==typeof window.newrelic&&(newrelic=d);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",v=l+"ixn-";a(p,function(t,e){d[e]=i(l,e,!0,"api")}),d.addPageAction=i(l,"addPageAction",!0),d.setCurrentRouteName=i(l,"routeName",!0),e.exports=newrelic,d.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(t,e){var n={},r=this,i="function"==typeof e;return o(v+"tracer",[u.now(),t,n],r),function(){if(f.emit((i?"":"no-")+"fn-start",[u.now(),r,i],n),i)try{return e.apply(this,arguments)}catch(t){throw f.emit("fn-err",[arguments,this,t],n),t}finally{f.emit("fn-end",[u.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){m[e]=i(v,e)}),newrelic.noticeError=function(t,e){"string"==typeof t&&(t=new Error(t)),s.recordSupportability("API/noticeError/called"),o("err",[t,u.now(),!1,e])}},{}],2:[function(t,e,n){function r(t){if(NREUM.init){for(var e=NREUM.init,n=t.split("."),r=0;r<n.length-1;r++)if(e=e[n[r]],"object"!=typeof e)return;return e=e[n[n.length-1]]}}e.exports={getConfiguration:r}},{}],3:[function(t,e,n){var r=!1;try{var i=Object.defineProperty({},"passive",{get:function(){r=!0}});window.addEventListener("testPassive",null,i),window.removeEventListener("testPassive",null,i)}catch(o){}e.exports=function(t){return r?{passive:!0,capture:!!t}:!!t}},{}],4:[function(t,e,n){function r(t,e){var n=[a,t,{name:t},e];return o("storeMetric",n,null,"api"),n}function i(t,e){var n=[c,t,{name:t},e];return o("storeEventMetrics",n,null,"api"),n}var o=t("handle"),a="sm",c="cm";e.exports={constants:{SUPPORTABILITY_METRIC:a,CUSTOM_METRIC:c},recordSupportability:r,recordCustom:i}},{}],5:[function(t,e,n){function r(){return c.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,c=t(11);e.exports=r,e.exports.offset=a,e.exports.getLastTimestamp=i},{}],6:[function(t,e,n){function r(t,e){var n=t.getEntries();n.forEach(function(t){"first-paint"===t.name?l("timing",["fp",Math.floor(t.startTime)]):"first-contentful-paint"===t.name&&l("timing",["fcp",Math.floor(t.startTime)])})}function i(t,e){var n=t.getEntries();if(n.length>0){var r=n[n.length-1];if(u&&u<r.startTime)return;var i=[r],o=a({});o&&i.push(o),l("lcp",i)}}function o(t){t.getEntries().forEach(function(t){t.hadRecentInput||l("cls",[t])})}function a(t){var e=navigator.connection||navigator.mozConnection||navigator.webkitConnection;if(e)return e.type&&(t["net-type"]=e.type),e.effectiveType&&(t["net-etype"]=e.effectiveType),e.rtt&&(t["net-rtt"]=e.rtt),e.downlink&&(t["net-dlink"]=e.downlink),t}function c(t){if(t instanceof y&&!w){var e=Math.round(t.timeStamp),n={type:t.type};a(n),e<=v.now()?n.fid=v.now()-e:e>v.offset&&e<=Date.now()?(e-=v.offset,n.fid=v.now()-e):e=v.now(),w=!0,l("timing",["fi",e,n])}}function f(t){"hidden"===t&&(u=v.now(),l("pageHide",[u]))}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var u,s,d,p,l=t("handle"),v=t("loader"),m=t(8),g=t(3),y=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){s=new PerformanceObserver(r);try{s.observe({entryTypes:["paint"]})}catch(h){}d=new PerformanceObserver(i);try{d.observe({entryTypes:["largest-contentful-paint"]})}catch(h){}p=new PerformanceObserver(o);try{p.observe({type:"layout-shift",buffered:!0})}catch(h){}}if("addEventListener"in document){var w=!1,b=["click","keydown","mousedown","pointerdown","touchstart"];b.forEach(function(t){document.addEventListener(t,c,g(!1))})}m(f)}},{}],7:[function(t,e,n){function r(t,e){if(!i)return!1;if(t!==i)return!1;if(!e)return!0;if(!o)return!1;for(var n=o.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var c=navigator.userAgent,f=c.match(a);f&&c.indexOf("Chrome")===-1&&c.indexOf("Chromium")===-1&&(i="Safari",o=f[1])}e.exports={agent:i,version:o,match:r}},{}],8:[function(t,e,n){function r(t){function e(){t(c&&document[c]?document[c]:document[o]?"hidden":"visible")}"addEventListener"in document&&a&&document.addEventListener(a,e,i(!1))}var i=t(3);e.exports=r;var o,a,c;"undefined"!=typeof document.hidden?(o="hidden",a="visibilitychange",c="visibilityState"):"undefined"!=typeof document.msHidden?(o="msHidden",a="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(o="webkitHidden",a="webkitvisibilitychange",c="webkitVisibilityState")},{}],9:[function(t,e,n){function r(t,e){var n=[],r="",o=0;for(r in t)i.call(t,r)&&(n[o]=e(r,t[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],10:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,i=n-e||0,o=Array(i<0?0:i);++r<i;)o[r]=t[e+r];return o}e.exports=r},{}],11:[function(t,e,n){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(t,e,n){function r(){}function i(t){function e(t){return t&&t instanceof r?t:t?u(t,f,a):a()}function n(n,r,i,o,a){if(a!==!1&&(a=!0),!l.aborted||o){t&&a&&t(n,r,i);for(var c=e(i),f=m(n),u=f.length,s=0;s<u;s++)f[s].apply(c,r);var p=d[w[n]];return p&&p.push([b,n,r,c]),c}}function o(t,e){h[t]=m(t).concat(e)}function v(t,e){var n=h[t];if(n)for(var r=0;r<n.length;r++)n[r]===e&&n.splice(r,1)}function m(t){return h[t]||[]}function g(t){return p[t]=p[t]||i(n)}function y(t,e){l.aborted||s(t,function(t,n){e=e||"feature",w[n]=e,e in d||(d[e]=[])})}var h={},w={},b={on:o,addEventListener:o,removeEventListener:v,emit:n,get:g,listeners:m,context:e,buffer:y,abort:c,aborted:!1};return b}function o(t){return u(t,f,a)}function a(){return new r}function c(){(d.api||d.feature)&&(l.aborted=!0,d=l.backlog={})}var f="nr@context",u=t("gos"),s=t(9),d={},p={},l=e.exports=i();e.exports.getOrSetContext=o,l.backlog=d},{}],gos:[function(t,e,n){function r(t,e,n){if(i.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return t[e]=r,r}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){i.buffer([t],r),i.emit(t,e,n)}var i=t("ee").get("handle");e.exports=r,r.ee=i},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,o,function(){return i++})}var i=1,o="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!M++){var t=T.info=NREUM.info,e=m.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&e))return u.abort();f(x,function(e,n){t[e]||(t[e]=n)});var n=a();c("mark",["onload",n+T.offset],null,"api"),c("timing",["load",n]);var r=m.createElement("script");0===t.agent.indexOf("http://")||0===t.agent.indexOf("https://")?r.src=t.agent:r.src=l+"://"+t.agent,e.parentNode.insertBefore(r,e)}}function i(){"complete"===m.readyState&&o()}function o(){c("mark",["domContent",a()+T.offset],null,"api")}var a=t(5),c=t("handle"),f=t(9),u=t("ee"),s=t(7),d=t(2),p=t(3),l=d.getConfiguration("ssl")===!1?"http":"https",v=window,m=v.document,g="addEventListener",y="attachEvent",h=v.XMLHttpRequest,w=h&&h.prototype,b=!1;NREUM.o={ST:setTimeout,SI:v.setImmediate,CT:clearTimeout,XHR:h,REQ:v.Request,EV:v.Event,PR:v.Promise,MO:v.MutationObserver};var E=""+location,x={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1216.min.js"},O=h&&w&&w[g]&&!/CriOS/.test(navigator.userAgent),T=e.exports={offset:a.getLastTimestamp(),now:a,origin:E,features:{},xhrWrappable:O,userAgent:s,disabled:b};if(!b){t(1),t(6),m[g]?(m[g]("DOMContentLoaded",o,p(!1)),v[g]("load",r,p(!1))):(m[y]("onreadystatechange",i),v[y]("onload",r)),c("mark",["firstbyte",a.getLastTimestamp()],null,"api");var M=0}},{}],"wrap-function":[function(t,e,n){function r(t,e){function n(e,n,r,f,u){function nrWrapper(){var o,a,s,p;try{a=this,o=d(arguments),s="function"==typeof r?r(o,a):r||{}}catch(l){i([l,"",[o,a,f],s],t)}c(n+"start",[o,a,f],s,u);try{return p=e.apply(a,o)}catch(v){throw c(n+"err",[o,a,v],s,u),v}finally{c(n+"end",[o,a,p],s,u)}}return a(e)?e:(n||(n=""),nrWrapper[p]=e,o(e,nrWrapper,t),nrWrapper)}function r(t,e,r,i,o){r||(r="");var c,f,u,s="-"===r.charAt(0);for(u=0;u<e.length;u++)f=e[u],c=t[f],a(c)||(t[f]=n(c,s?f+r:r,i,f,o))}function c(n,r,o,a){if(!v||e){var c=v;v=!0;try{t.emit(n,r,o,e,a)}catch(f){i([f,n,r,o],t)}v=c}}return t||(t=s),n.inPlace=r,n.flag=p,n}function i(t,e){e||(e=s);try{e.emit("internal-error",t)}catch(n){}}function o(t,e,n){if(Object.defineProperty&&Object.keys)try{var r=Object.keys(t);return r.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(o){i([o],n)}for(var a in t)l.call(t,a)&&(e[a]=t[a]);return e}function a(t){return!(t&&t instanceof Function&&t.apply&&!t[p])}function c(t,e){var n=e(t);return n[p]=t,o(t,n,s),n}function f(t,e,n){var r=t[e];t[e]=c(r,n)}function u(){for(var t=arguments.length,e=new Array(t),n=0;n<t;++n)e[n]=arguments[n];return e}var s=t("ee"),d=t(10),p="nr@original",l=Object.prototype.hasOwnProperty,v=!1;e.exports=r,e.exports.wrapFunction=c,e.exports.wrapInPlace=f,e.exports.argsToArray=u},{}]},{},["loader"]);</script>
+        <title>MECHE PEOPLE: Harry Asada | MIT Department of Mechanical Engineering</title>
+        <meta name="description" content="MIT's Department of Mechanical Engineering (MechE) offers a world-class education that combines thorough analysis with hands-on discovery. One of the original six courses offered when MIT was founded in 1865, MechE's faculty and students conduct research that pushes boundaries and provides creative solutions for the world's problems.">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1">
+        <!--[if lt IE 9]>
+            <link href='http://fonts.googleapis.com/css?family=Rajdhani:300' rel='stylesheet' type='text/css' data-norem>
+            <link href='http://fonts.googleapis.com/css?family=Rajdhani:400' rel='stylesheet' type='text/css' data-norem>
+            <link href='http://fonts.googleapis.com/css?family=Rajdhani:500' rel='stylesheet' type='text/css' data-norem>
+            <link href='http://fonts.googleapis.com/css?family=Rajdhani:600' rel='stylesheet' type='text/css' data-norem>
+            <link href='http://fonts.googleapis.com/css?family=Rajdhani:700' rel='stylesheet' type='text/css' data-norem>
+            <link href='http://fonts.googleapis.com/css?family=Rajdhani:300' rel='stylesheet' type='text/css' data-norem>
+            <link href='http://fonts.googleapis.com/css?family=Rajdhani:300italic' rel='stylesheet' type='text/css' data-norem>
+            <link href='http://fonts.googleapis.com/css?family=Rajdhani:400' rel='stylesheet' type='text/css' data-norem>
+            <link href='http://fonts.googleapis.com/css?family=Rajdhani:400italic' rel='stylesheet' type='text/css' data-norem>
+            <link href='http://fonts.googleapis.com/css?family=Rajdhani:600' rel='stylesheet' type='text/css' data-norem>
+            <link href='http://fonts.googleapis.com/css?family=Rajdhani:600italic' rel='stylesheet' type='text/css' data-norem>
+            <link href='http://fonts.googleapis.com/css?family=Rajdhani:700' rel='stylesheet' type='text/css' data-norem>
+            <link href='http://fonts.googleapis.com/css?family=Rajdhani:700italic' rel='stylesheet' type='text/css' data-norem>
+        <![endif]-->
+
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="Generator" content="Drupal 7 (http://drupal.org)" />
+<meta name="format-detection" content="telephone=no"/><link rel="shortcut icon" href="http://meche.mit.edu/sites/all/themes/mit_meche/favicon.ico" type="image/vnd.microsoft.icon" />
+        <link type="text/css" rel="stylesheet" href="http://meche.mit.edu/sites/default/files/css/css_xE-rWrJf-fncB6ztZfd2huxqgxu4WO-qwma6Xer30m4.css" media="all" />
+<link type="text/css" rel="stylesheet" href="http://meche.mit.edu/sites/default/files/css/css_yqfEEn3F5mXOC0UUFM4YKvpmMs9qQxvb1Jy9f6FVT5Y.css" media="all" />
+<link type="text/css" rel="stylesheet" href="http://meche.mit.edu/sites/default/files/css/css_GckY0EjoR6WBLjIENeNuZVvw3ojQ1Mjn5COL87fZnj8.css" media="all" />
+        <script type="text/javascript" src="http://meche.mit.edu/sites/default/files/js/js_YD9ro0PAqY25gGWrTki6TjRUG8TdokmmxjfqpNNfzVU.js"></script>
+<script type="text/javascript" src="http://meche.mit.edu/sites/default/files/js/js_rsGiM5M1ffe6EhN-RnhM5f3pDyJ8ZAPFJNKpfjtepLk.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+(function(i,s,o,g,r,a,m){i["GoogleAnalyticsObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,"script","https://www.google-analytics.com/analytics.js","ga");ga("create", "UA-2242837-1", {"cookieDomain":"auto"});ga("set", "anonymizeIp", true);ga('create', 'UA-1592615-30',{'name':'mitsitewide'});ga("send", "pageview");ga('mitsitewide.send','pageview');
+//--><!]]>
+</script>
+<script type="text/javascript" src="http://meche.mit.edu/sites/default/files/js/js_uVZxTz_aN3L7bgFGkqfygEck8aPPFnm3VAGf9QBBomY.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings, {"basePath":"\/","pathPrefix":"","setHasJsCookie":0,"ajaxPageState":{"theme":"mit_meche","theme_token":"E7qkWJK18Z3kwPG8lPkmslo_6AiTOd2Wyu5KiX_o-zY","js":{"misc\/jquery.js":1,"misc\/jquery-extend-3.4.0.js":1,"misc\/jquery-html-prefilter-3.5.0-backport.js":1,"misc\/jquery.once.js":1,"misc\/drupal.js":1,"sites\/all\/modules\/contrib\/google_analytics\/googleanalytics.js":1,"0":1,"sites\/all\/themes\/mit_meche\/js\/vendor\/video.js":1,"sites\/all\/themes\/mit_meche\/js\/vendor\/video.youtube.js":1,"sites\/all\/themes\/mit_meche\/js\/modernizr.prod.min.js":1},"css":{"modules\/system\/system.base.css":1,"modules\/system\/system.menus.css":1,"modules\/system\/system.messages.css":1,"modules\/system\/system.theme.css":1,"sites\/all\/modules\/contrib\/calendar\/css\/calendar_multiday.css":1,"modules\/comment\/comment.css":1,"sites\/all\/modules\/contrib\/date\/date_api\/date.css":1,"sites\/all\/modules\/contrib\/date\/date_popup\/themes\/datepicker.1.7.css":1,"modules\/field\/theme\/field.css":1,"modules\/node\/node.css":1,"modules\/user\/user.css":1,"sites\/all\/modules\/contrib\/views\/css\/views.css":1,"sites\/all\/modules\/contrib\/media\/modules\/media_wysiwyg\/css\/media_wysiwyg.base.css":1,"sites\/all\/modules\/contrib\/ctools\/css\/ctools.css":1,"sites\/all\/modules\/contrib\/shib_auth\/shib_auth.css":1,"modules\/search\/search.css":1,"sites\/all\/themes\/mit_meche\/css\/foundation.min.css":1,"sites\/all\/themes\/mit_meche\/css\/style.css":1,"sites\/all\/themes\/mit_meche\/css\/tablesaw.stackonly.css":1,"sites\/all\/themes\/mit_meche\/css\/video-js.css":1,"sites\/all\/themes\/mit_meche\/css\/vjs-sublime-skin.css":1,"https:\/\/cdnjs.cloudflare.com\/ajax\/libs\/jquery-modal\/0.9.1\/jquery.modal.min.css":1,"sites\/all\/themes\/mit_meche\/css\/extra.css":1}},"urlIsAjaxTrusted":{"\/people\/faculty\/asada@mit.edu":true},"googleanalytics":{"trackOutbound":1,"trackMailto":1,"trackDownload":1,"trackDownloadExtensions":"7z|aac|arc|arj|asf|asx|avi|bin|csv|doc(x|m)?|dot(x|m)?|exe|flv|gif|gz|gzip|hqx|jar|jpe?g|js|mp(2|3|4|e?g)|mov(ie)?|msi|msp|pdf|phps|png|ppt(x|m)?|pot(x|m)?|pps(x|m)?|ppam|sld(x|m)?|thmx|qtm?|ra(m|r)?|sea|sit|tar|tgz|torrent|txt|wav|wma|wmv|wpd|xls(x|m|b)?|xlt(x|m)|xlam|xml|z|zip"}});
+//--><!]]>
+</script>
+
+        <!-- Inlined Modernizr extensions to prevent delayed position jump ( Must be after Modernizr load ) -->
+        <script>
+            ;(function(Modernizr, window) {
+                Modernizr.addTest('positionfixed', function () {
+                    var test  = document.createElement('div'),
+                        control = test.cloneNode(false),
+                            fake = false,
+                            root = document.body || (function () {
+                            fake = true;
+                            return document.documentElement.appendChild(document.createElement('body'));
+                        }());
+
+                    var oldCssText = root.style.cssText;
+                    root.style.cssText = 'padding:0;margin:0';
+                    test.style.cssText = 'position:fixed;top:42px';
+                    root.appendChild(test);
+                    root.appendChild(control);
+               
+                    var ret = test.offsetTop !== control.offsetTop;
+               
+                    root.removeChild(test);
+                    root.removeChild(control);
+                    root.style.cssText = oldCssText;
+               
+                    if (fake) {
+                        document.documentElement.removeChild(root);
+                    }
+               
+                    return ret;
+                });
+                
+                Modernizr.addTest('iospositionfixed', function () {
+                    var test  = document.createElement('div'),
+                        ret,
+                        fake = false,
+                        root = document.body || (function () {
+                            fake = true;
+                            return document.documentElement.appendChild(document.createElement('body'));
+                        }());
+                    
+                    if (typeof document.body.scrollIntoViewIfNeeded === 'function') {
+                    
+                        var oldCssText = root.style.cssText,
+                            testScrollTop = 20,
+                            originalScrollTop = window.pageYOffset;
+
+                        root.appendChild(test);
+
+                        test.style.cssText = 'position:fixed;top:0px;height:10px;';
+
+                        root.style.height="3000px";
+                        
+                        /* avoided hoisting for clarity */
+                        var testScroll = function() {
+                            if (ret === undefined) {
+                                test.scrollIntoViewIfNeeded();
+                                if (window.pageYOffset === testScrollTop) {
+                                    ret = true;
+                                } else {
+                                    ret = false;
+                                }
+                            }
+                            window.removeEventListener('scroll', testScroll, false);
+                        }
+
+                        try {
+                        window.addEventListener('scroll', testScrollTop, false);
+                        }
+                        catch(err) {
+                        //      
+                        }
+                        
+                        window.setTimeout(testScroll, 20); // ios 4 does'nt publish the scroll event on scrollto
+                        window.scrollTo(0, testScrollTop);
+                        testScroll();
+
+                        root.removeChild(test);
+                        root.style.cssText = oldCssText;
+                        window.scrollTo(0, originalScrollTop);
+
+                    } else {
+                        ret = Modernizr.positionfixed; // firefox and IE doesnt have document.body.scrollIntoViewIfNeeded, so we test with the original modernizr test
+                    }
+                        
+                    if (fake) {
+                        document.documentElement.removeChild(root);
+                    }
+
+                    return ret;
+                });
+            })(Modernizr, window);
+        </script>
+
+        <!-- Inlined loading of web fonts to prevent FOUT -->
+        <script src="//ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont.js"></script>
+
+        <!-- New handler for font load so MecheController can be initialized once fonts are available -->
+        <script>
+            (function() {
+
+                var controllerUpdated = false;
+                var wait;
+
+                function updateControllerFonts() {
+                    
+                    if(typeof MecheController != "undefined") {
+                        clearInterval(wait);
+                        MecheController.initWithFonts();
+                        
+                    }
+                }
+
+                function onFontsLoaded() {
+                   
+                    if(typeof MecheController != "undefined") {
+                        MecheController.initWithFonts();
+                    } else {
+                        wait = setInterval(updateControllerFonts, 50);
+                    }
+                }
+                // load fonts
+                window.WebFontConfig
+                WebFont.load( {
+
+                        google: {
+                                families: ['Open Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700', 'Rajdhani:300,400,500,600,700']
+                        },
+                        active : onFontsLoaded,
+                        loading : function() {
+                                
+                        },
+                        timeout : 5000
+
+                });
+            })();
+            
+        </script>
+        
+
+        <title>MECHE PEOPLE: Harry Asada | MIT Department of Mechanical Engineering</title>
+    </head>
+<body class="html not-front not-logged-in no-sidebars page-people page-people-faculty page-people-faculty-asadamitedu people faculty-plus mix-blend-mode mix-blend-mode" >
+      <div class="app-outer-wrap">
+      <div class="app-inner-wrap">
+      <a href="#" class="screen-btn exit-off-canvas">close menu</a>
+        <div class="region region-navigation">
+    <div id="block-block-1" class="block block-block">
+
+    
+  <div class="content">
+    <aside class="off-canvas-menu"><div class="nav-wrap">
+        <div class="main-nav-wrap nano-wrap">
+            <nav id="main-menu" class="main-nav nano-content overthrow" role="navigation" aria-label="main"><div class="main-nav-top">
+                      <a href="https://meche-res.mit.edu/resource_links/" class="resources-btn"><span class="fa fa-lock"></span><span>Find Resources</span><span class="fa fa-chevron-right"></span></a>
+                    <!-- NOTE | CHANGE on 10/08/15
+                         - - - - - - - - - - - - -
+                         Added <span class="visually-hidden">Close Menu</span> and aria-hidden="true" to the icon
+                    -->
+                    <a href="#exit-menu" class="close-btn exit-off-canvas" role="button" title="close side navigation">
+                        <span class="fa fa-close"></span>
+                        <span class="visually-hidden">Close Menu</span>
+                    </a>
+                </div>
+
+                <div class="main-nav-core">
+                    <div class="search-bar" role="search">
+                        <form class="search-form" action="/people/faculty/asada@mit.edu" method="post" id="search-form" accept-charset="UTF-8"><div><div class="container-inline form-wrapper" id="edit-basic"><div class="form-item form-type-textfield form-item-keys">
+  <input placeholder="Search" type="text" id="edit-keys" name="keys" value="" size="20" maxlength="255" class="form-text" /></div>
+<input type="submit" id="edit-submit" name="op" value="Search" class="form-submit" /><input type="hidden" name="get" value="[]" /><button type="submit"><i class="fa fa-search"></i></button></div><input type="hidden" name="form_build_id" value="form-c4EbfSyLSTkXGqZ3JUEK4wjtgWtOwQnYctgdsP27mbg" /><input type="hidden" name="form_id" value="apachesolr_search_custom_page_search_form_menu" /></div></form>                    </div>
+                    <hr class="meche-dots" /><!-- NOTE | CHANGE on 10/08/15
+                         - - - - - - - - - - - - -
+                         Added <span class="visually-hidden">...</span> to the icon button icons for
+                         each of the items that have a secondary navigation panel to support screen readers
+                    --><div role="region" aria-label="menu">
+                        <ul class="main-nav-items special"><li class="main-nav-item education" data-subnav="about">
+                                
+                                <h2 class="main-nav-item">
+                                    <a href="/about" class="main-nav-item-link">
+                                        <span class="main-nav-item-title">About</span>
+                                        <span class="main-nav-item-detail">Who we are</span>
+                                    </a>
+                                </h2>
+                                <a href="1" class="main-nav-item-more-btn" aria-haspopup="true" aria-owns="about-nav">
+                                    <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                                    <span class="visually-hidden">See About Menu</span>
+                                </a>
+                            </li>
+                            <li class="meche-dots" aria-hidden="true"></li>
+
+
+                            <li class="main-nav-item impact" data-subnav="impact">
+                                
+                                <h2 class="main-nav-item">
+                                    <a href="/impact" class="main-nav-item-link">
+                                        <span class="main-nav-item-title">Impact</span>
+                                        <span class="main-nav-item-detail">World-Changing Engineering</span>
+                                    </a>
+                                </h2>
+                                <a href="1" class="main-nav-item-more-btn" aria-haspopup="true" aria-owns="impact-nav">
+                                    <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                                    <span class="visually-hidden">See Impact Menu</span>
+                                </a>
+                            </li>
+                            <li class="meche-dots" aria-hidden="true"></li>
+                            <li class="main-nav-item research" data-subnav="research">
+                                <h2 class="main-nav-item">
+                                    <a class="main-nav-item-link" href="/research">
+                                        <span class="main-nav-item-title">Research</span>
+                                        <span class="main-nav-item-detail">Focus Areas and Labs</span>
+                                    </a>
+                                </h2>
+    
+                                <a href="2" class="main-nav-item-more-btn" aria-haspopup="true" aria-owns="research-nav">
+                                    <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                                    <span class="visually-hidden">See Research Menu</span>
+                                </a>
+                            </li>
+                            <li class="meche-dots" aria-hidden="true"></li>
+                            <li class="main-nav-item people" data-subnav="people">
+                                <h2 class="main-nav-item">
+                                    <a class="main-nav-item-link" href="/people">
+                                        <span class="main-nav-item-title">People</span>
+                                        <span class="main-nav-item-detail">Faculty and Staff</span>
+                                    </a>
+                                </h2>
+                                <a href="3" class="main-nav-item-more-btn" aria-haspopup="true" aria-owns="people-nav">
+                                    <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                                    <span class="visually-hidden">See People Submenu</span>
+                                </a>
+                            </li>
+                            <li class="meche-dots"></li>
+                            <li class="main-nav-item education" data-subnav="education">
+                                <h2 class="main-nav-item">
+                                    <a class="main-nav-item-link" href="/education">
+                                        <span class="main-nav-item-title">Education</span>
+                                        <span class="main-nav-item-detail">Degree Programs and Classes</span>
+                                    </a>
+                                </h2>
+                                
+                                <a href="4" class="main-nav-item-more-btn" aria-haspopup="true" aria-owns="education-nav">
+                                    <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                                    <span class="visually-hidden">See Education Menu</span>
+                                </a>
+                            </li>
+                            <li class="meche-dots"></li>
+                            <li class="main-nav-item news-and-media" data-subnav="news-media">
+                                <h2 class="main-nav-item">
+                                    <a class="main-nav-item-link" href="/news-media">
+                                        <span class="main-nav-item-title">News &amp; Video</span>
+                                        <span class="main-nav-item-detail">News, Press, Video and Photos</span>
+                                    </a>
+                                </h2>
+                                <a href="4" class="main-nav-item-more-btn" aria-haspopup="true" aria-owns="news-media-nav">
+                                    <i aria-hidden="true" class="fa fa-chevron-right"></i>
+                                    <span class="visually-hidden">See news and media menu</span>
+                                </a>
+                            </li>
+                        </ul></div>        
+                   <h2 class="support-meche-item"><a class="support-meche main-nav-item-app-link" href="/how-apply">Apply to MIT MechE</a></h2>
+                </div>
+            </nav></div>
+
+        
+        <div class="sub-nav-wrap nano-wrap">
+            <div class="nano-content overthrow"><!-- *** NEW NODE *** -->
+                <div class="sub-nav-top">
+                    <a href="#main-menu" class="btn-main-menu"><span class="fa fa-chevron-left"></span><span class="btn-label">Back</span></a>
+                    <a href="#close-menu" class="close-btn exit-off-canvas" role="button" title="close side navigation">
+                        <span class="fa fa-close"></span>
+                        <span class="visually-hidden">Close Menu</span>
+                    </a>
+                </div>
+                <div role="region" aria-label="submenu">
+
+                  <nav id="about-nav" class="sub-nav-group about" role="navigation" aria-label="about items"><div class="sub-nav-header">
+                            <a href="/about">
+                                <span>About</span>
+                            </a>
+                        </div>
+                        <!--<hr class="meche-dots" />-->
+                        <ul class="sub-nav-items"><li class="sub-nav-item"><a class="sub-nav-item-link" href="/meche-history-and-timeline">History</a></li>
+                            <li class="sub-nav-item"><a class="sub-nav-item-link" href="/people/diversity-equity-and-inclusion">Diversity Equity &amp; Inclusion</a></li>
+                            <li class="sub-nav-item"><a class="sub-nav-item-link" href="/ethics">Ethics and Integrity</a></li>
+                            <li class="sub-nav-item"><a class="sub-nav-item-link" href="/sites/default/files/2018-Strategic-Plan.pdf">Strategic Plan (PDF)</a></li>
+                            <li class="sub-nav-item"><a class="sub-nav-item-link" href="/faculty-positions">Faculty Openings</a></li>
+                            <li class="sub-nav-item"><a class="sub-nav-item-link" href="/alumni">Alumni</a></li>
+                            <li class="sub-nav-item"><a class="sub-nav-item-link" href="/alliance">MechE Alliance</a></li>
+                            <li class="sub-nav-item"><a class="sub-nav-item-link" href="https://giving.mit.edu/explore/schools/engineering/meche">Support MechE</a></li>
+                            <li class="sub-nav-item"><a class="sub-nav-item-link" href="/contact">Contact Us</a></li>
+                        </ul></nav><nav id="impact-nav" class="sub-nav-group impact" role="navigation" aria-label="impact items"><div class="sub-nav-header">
+                            <a href="/impact">
+                                <span>Impact</span>
+                            </a>
+                        </div>
+                        <!--<hr class="meche-dots" />-->
+                        <ul class="sub-nav-items"><li class="sub-nav-item"><a class="sub-nav-item-link" href="/impact/health">Health</a></li>
+                            <li class="sub-nav-item"><a class="sub-nav-item-link" href="/impact/environment">Environment</a></li>
+                            <li class="sub-nav-item"><a class="sub-nav-item-link" href="/impact/innovation">Innovation</a></li>
+                            <li class="sub-nav-item"><a class="sub-nav-item-link" href="/impact/energy">Energy</a></li>
+                            <li class="sub-nav-item"><a class="sub-nav-item-link" href="/impact/security">Security</a></li>
+                        </ul></nav><nav id="research-nav" class="sub-nav-group research" role="navigation" aria-label="research items"><div class="sub-nav-header">
+                            <a href="/research">
+                                <span>Research</span>
+                            </a>
+                        </div>
+                        <!--<hr class="meche-dots" />-->
+                        <ul class="sub-nav-items"><li class="sub-nav-item"><a class="sub-nav-item-link" href="/research/mechanics">Mechanics</a></li>
+                            <li class="sub-nav-item"><a class="sub-nav-item-link" href="/research/design">Design</a></li>
+                            <li class="sub-nav-item"><a class="sub-nav-item-link" href="/research/controls">Controls</a></li>
+                            <li class="sub-nav-item"><a class="sub-nav-item-link" href="/research/energy">Energy</a></li>
+                            <li class="sub-nav-item"><a class="sub-nav-item-link" href="/research/ocean">Ocean</a></li>
+                            <li class="sub-nav-item"><a class="sub-nav-item-link" href="/research/bioengineering">Bio</a></li>
+                            <li class="sub-nav-item"><a class="sub-nav-item-link" href="/research/nano">Micro + Nano</a></li>
+                        </ul></nav><nav id="people-nav" class="sub-nav-group people" role="navigation" aria-label="people"><div class="sub-nav-header">
+                            <a href="/people">
+                                <span>People</span>
+                            </a>
+                        </div>
+                        <!--<hr class="meche-dots" />-->
+                        <ul class="sub-nav-items"><li class="sub-nav-item"><a class="sub-nav-item-link" href="/people/diversity-equity-and-inclusion">Diversity, Equity, and Inclusion</a></li>
+                            <li class="sub-nav-item"><a class="sub-nav-item-link" href="/people?">Faculty</a></li>
+                            <li class="sub-nav-item"><a class="sub-nav-item-link" href="/people/emeritus">Faculty Emeritus</a></li>
+                            <li class="sub-nav-item"><a class="sub-nav-item-link" href="/people/staff-listing?field_staff_role_tid[]=46">Research Staff</a></li>
+                            <li class="sub-nav-item"><a class="sub-nav-item-link" href="/people/staff-listing?field_staff_role_tid[]=55">Post Docs</a></li>
+                            <li class="sub-nav-item"><a class="sub-nav-item-link" href="/people/staff-listing?field_staff_role_tid[]=47">Teaching Staff</a></li>
+                            <li class="sub-nav-item"><a class="sub-nav-item-link" href="/people/staff-listing?field_staff_role_tid[]=43">Admin Staff</a></li>
+                            <li class="sub-nav-item"><a class="sub-nav-item-link" href="/people/staff-listing?field_staff_role_tid[]=44">Support Staff</a></li>
+                            <li class="sub-nav-item"><a class="sub-nav-item-link" href="/people/all">Full Directory</a></li>
+                        </ul></nav><nav id="education-nav" class="sub-nav-group education" role="navigation" aria-label="education"><div class="sub-nav-header">
+                            <a href="/education">
+                                <span>Education</span>
+                            </a>
+                        </div>
+                        <!--<hr class="meche-dots" />-->
+                        <ul class="sub-nav-items"><li class="sub-nav-item"><a class="sub-nav-item-link" href="/featured-classes">Class Offerings</a></li>
+                            <li class="sub-nav-item"><a class="sub-nav-item-link" href="/education/prospective-students">Prospective Students</a></li>
+                            <li class="sub-nav-item"><a class="sub-nav-item-link" href="/education/undergraduate">Undergraduate</a></li>
+                            <li class="sub-nav-item"><a class="sub-nav-item-link" href="/education/graduate">Graduate</a></li>
+                            <li class="sub-nav-item"><a class="sub-nav-item-link" href="/education/post-doc">Post-Doc</a></li>
+                           <li class="sub-nav-item"><a class="sub-nav-item-link" href="/careers">Careers</a></li>
+                 <!-- removed 9/1/2000 per JF request
+                            <li class="sub-nav-item"><a class="sub-nav-item-link" href="/education/professional">Professional Education</a></li>
+                            <li class="sub-nav-item"><a class="sub-nav-item-link" href="/education/meche-summer-x">MechE Summer X</a></li>
+                 -->
+                        </ul></nav><nav id="culture-nav" class="sub-nav-group culture" role="navigation" aria-label="culture"><div class="sub-nav-header">
+                            <a href="/culture">
+                                <span>Culture</span>
+                            </a>
+                        </div>
+                        <hr class="meche-dots" /></nav><nav id="news-nav" class="sub-nav-group news-media" role="navigation" aria-label="news and media"><div class="sub-nav-header">
+                            <a href="/news-media">
+                                <span>News + Video</span>
+                            </a>
+                        </div>
+                        <!--<hr class="meche-dots" />-->
+                        <ul class="sub-nav-items"><li class="sub-nav-item"><a class="sub-nav-item-link" href="/news-media/news">Press</a></li>
+                            <li class="sub-nav-item"><a class="sub-nav-item-link" href="/news-media/video/">Video Galleries</a></li>
+                            <li class="sub-nav-item"><a class="sub-nav-item-link" href="/news-media/image-gallery/906">Photo Galleries</a></li>
+                            <li class="sub-nav-item"><a class="sub-nav-item-link" href="/meche-connects-newsletter">Newsletter</a></li>
+                            <li class="sub-nav-item"><a class="sub-nav-item-link" href="/international-colloquia-thermal-innovations">Colloquia</a></li>
+                        </ul></nav></div>
+            </div><!-- *** NEW NODE ( CLOSING TAG ) *** -->
+        </div>
+    </div>
+</aside>  </div>
+</div>
+  </div>
+
+      <div class="fluid">
+          <div class="hbar hbar-alert clearfix hide"><a href="#" class="small message"><i> ••• </i>Lorem ipsum dolor sit amet. Lorem ipsum.</a><a class="btn-close">Close Alert</a></div>
+      </div>
+      
+      <div class="hbar hbar-nav-main fixed" role="region" aria-label="navigation bar">
+          <a href="/" class="nav-bar-logo">MIT MechE</a>
+          <div id="vr-btn" class="btn-container">
+            <a class="btn btn-primary blue centered" style="margin-top:0px; background-color:#ef0166; padding-top: 0px; padding-bottom: 0px; min-width:0px; min-height: 0px; width: -moz-max-content; width: -webkit-max-content; width: max-content;" href="/meche-covid-19-resources">MechE Covid-19 Resources <i class="fa fa-arrow-circle-right"></i></a>
+          </div>
+          <nav class='breadcrumbs' role='menubar' aria-label='breadcrumbs'>
+    <li class='home' role='menuitem'><a href='/'><i class='fa fa-arrow-circle-o-left'></i>Home</a></li><li role='menuitem' ><a href='/people'>People</a></li><li role='menuitem' class='current'><a href='#'>Asada, Harry</a></li></nav>          <a href="#main-menu" class="btn-side-menu right-off-canvas-toggle" role="button" aria-expanded="false" aria-controls="main-nav-side-menu"><span>menu</span><i class="fa fa-2x fa-navicon"></i></a>
+      </div>
+        <div class="region region-rotator">
+    <div id="block-meche-blocks-profile-hero" class="block block-meche-blocks">
+
+    
+  <div class="content">
+    <!-- ****************  F S   B A C K G R O U N D   I M A G E  ****************-->       
+    <div class='fluid panel-container fs-hero no-cover'>
+        <div>
+    
+            <!-- FULLSCREEN BG IMAGE -->
+            <div class='bg-fluid-image'>
+                <div class='mesh-bg light'></div>
+                <img class='bg-img bg-width' src='http://meche.mit.edu/sites/default/files/styles/hero/public/H.%20Harry%20Asada.jpg?itok=lhehjKQa' alt='Harry Asada' />
+            </div>
+            <div class='bg-img-content vc-parent middle left' role='banner'>
+                <div class='vc-child faculty-plus-hero-content orange'>
+                    <hr class='meche-dots fat' />
+                    <div class='intro'>
+                        <h3 class='faculty-rank'>Professor</h3>
+                        <h1 class='faculty-name'>Harry Asada </h1>
+                        <p>Ford Professor of Engineering; Director, d'Arbeloff Laboratory for Information Systems and Technology; Head, Control, Instrumentation, and Robotics</p>
+                    </div>
+                    <div class='interests'>
+                        <hr class='meche-dots hairline' />
+                        <h3>Interests</h3>
+                        <ol class='numeric'>
+                            <li class='inverted'>Augmenting human capabilities with wearable robots.</li><li class='inverted'>Modeling and understanding cell interactions through numerical simulations. </li><li class='inverted'>Building and controlling a harmonic actuator based on piezo-electric units. </li>
+                        </ol>
+                    </div>
+                    <hr class='meche-dots thin' />
+                </div>
+            </div>
+            
+        </div>
+    </div>
+  <div class='row hbar-secondary-container'>
+    <div class='scroll-btn-container align-c hide-for-small-only'>
+        <a class='btn btn-jumper'>
+            <p class='jump-label'>More About Harry</p>
+            <i class='jump-icon fa fa-chevron-circle-down'></i>
+        </a>
+    </div>
+</div><section class='fluid layer'>
+    <div class='hbar hbar-faculty-details'>
+        <div class='top-details clearfix'>
+            <div class='info-header show-for-small-only'>
+                <h3>Contact Info</h3>
+            </div>
+            <div class='location-group clearfix'>
+                <div class='room-block vc-parent'>
+                    <div class='vc-child'>
+                        <span class='room-title'>room</span>
+                        <span class='room-number'><a href='http://whereis.mit.edu/?mapterms=3-346' class='room-number'>3-346<i class='fa fa-map-marker'></i></a></span>
+                    </div>
+                </div>
+                <div class='address-block vc-parent'>
+                    <div class='vc-child'>
+                        <p>Massachusetts Institute of Technology</p>
+                        <p>77 Massachusetts Avenue</p>
+                        <p>Cambridge, Massachusetts 02139</p>
+                    </div>
+                    
+                </div>
+            </div>
+            <div class='contact-group clearfix'>
+                <div class='contact-block digital vc-parent'>
+                    <div class='vc-child'>
+                        <ul>
+                            <li class='primary-contact-method email'><a href='mailto:asada@mit.edu'><i class='fa fa-envelope'></i><span>email</span></a></li><li class='primary-contact-method website'>
+                          <a href='http://DARBELOFFLAB.MIT.EDU/'><i class='fa fa-link'></i><span>website</span></a></li></ul>
+                    </div>
+                </div>
+                <div class='contact-block vc-parent'>
+                    <div class='vc-child'>
+                        <ul>
+                            <li><a class='tel' href='tel:+1617.253.6257'><i class='fa fa-phone'></i><span>617.253.6257</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class='personal-group'>
+                <div class='cv-block vc-parent'>
+                    <div class='vc-child'>
+                        <a href='http://meche.mit.edu/sites/default/files/cv/asada_CV.pdf' class='btn btn-primary orange'>Download CV <i class='fa fa-arrow-circle-down'></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class='research-group'>
+                <div class='ra-block vc-parent'>
+                    <div class='vc-child'>
+                        <div class='ra-icon-bar'>
+                            <span class='title'>Associated Research Areas</span>
+                            <ul class='clearfix'>
+                            <li >
+        <a href='/research/mechanics' data-tooltip aria-haspopup='true' data-options='additional_inheritable_classes: ra-tip;' class='has-tip tip-top ra-tip' title='mechanics'>
+            <i class='ra-icon mechanics'><span class='visually-hidden'>mechanics</span></i>
+        </a>
+        </li><li >
+        <a href='/research/design' data-tooltip aria-haspopup='true' data-options='additional_inheritable_classes: ra-tip;' class='has-tip tip-top ra-tip' title='design'>
+            <i class='ra-icon design'><span class='visually-hidden'>design</span></i>
+        </a>
+        </li><li class='active'>
+        <a href='/research/controls' data-tooltip aria-haspopup='true' data-options='additional_inheritable_classes: ra-tip;' class='has-tip tip-top ra-tip' title='controls'>
+            <i class='ra-icon controls'><span class='visually-hidden'>controls</span></i>
+        </a>
+        </li><li >
+        <a href='/research/energy' data-tooltip aria-haspopup='true' data-options='additional_inheritable_classes: ra-tip;' class='has-tip tip-top ra-tip' title='energy'>
+            <i class='ra-icon energy'><span class='visually-hidden'>energy</span></i>
+        </a>
+        </li><li >
+        <a href='/research/ocean' data-tooltip aria-haspopup='true' data-options='additional_inheritable_classes: ra-tip;' class='has-tip tip-top ra-tip' title='ocean'>
+            <i class='ra-icon ocean'><span class='visually-hidden'>ocean</span></i>
+        </a>
+        </li><li >
+        <a href='/research/bioengineering' data-tooltip aria-haspopup='true' data-options='additional_inheritable_classes: ra-tip;' class='has-tip tip-top ra-tip' title='bioengineering'>
+            <i class='ra-icon bio'><span class='visually-hidden'>bioengineering</span></i>
+        </a>
+        </li><li >
+        <a href='/research/nano' data-tooltip aria-haspopup='true' data-options='additional_inheritable_classes: ra-tip;' class='has-tip tip-top ra-tip' title='nano'>
+            <i class='ra-icon nano'><span class='visually-hidden'>nano</span></i>
+        </a>
+        </li></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><div class='hbar hbar-admin-details'>
+             <!-- ADMIN CONTACT -->
+            <div class='bottom-details'>
+                <div class='admin-details clearfix'>
+                    <span class='arrow-box admin-detail label'>Administrative Contact</span>
+                    <a class='arrow-box admin-detail person' href='/people/staff/yvettel@mit.edu'>Lai, Yvette</a>
+                    <span class='admin-detail contact-detail room'><a href='http://whereis.mit.edu/?mapterms=3-349' class='room-number'><i class='fa fa-map-marker'></i>3-349</a></span>
+                    <span class='admin-detail contact-detail email'><a href='mailto:YVETTEL@MIT.EDU'><i class='fa fa-envelope'></i>YVETTEL@MIT.EDU</a></span>
+                    <span class='admin-detail contact-detail phone'><a class='tel' href='tel:+1617.253.2204'><i class='fa fa-phone'></i>617.253.2204</a></span>
+                </div>  
+            </div>
+        </div></section>  </div>
+</div>
+  </div>
+  <div class="region region-content">
+    <div id="block-meche-blocks-profile-highlights" class="block block-meche-blocks">
+
+    
+  <div class="content">
+    <!-- ****************  F E A T U R E D   B L O C K (s)  ****************-->
+      <section class='fluid panel-block default-featured-block layer gray-block'>   
+          <div class='row header-block'>
+              <div class='column small-12'>
+                  <h3 class='align-c xlarge'>Professor Asada News + Media</h3>
+                  <hr class='meche-dots thin black' />
+              </div>
+          </div>
+          <div class='row' data-equalizer><div class='column large-4'>
+                    <div class='news-block clearfix'>
+                        <div class='img-container'>
+                            <img src='http://meche.mit.edu/sites/default/files/styles/faculty_highlight/public/highlights/2.12%20tease_460.jpg?itok=rYoiiu6d' alt='2.12: Introduction to Robotics at MIT ' />
+                        </div>
+                        <div class='news-block-details'>
+                            <div data-equalizer-watch>
+                                <h3>2.12: Introduction to Robotics at MIT </h3>
+                                <hr class='meche-dots thin black' />
+                                <p>Professor Harry Asada co-teaches 2.12: Introduction to Robotics, where undergraduate students join forces to build a robot that can emulate complex human movement in a soccer-themed final competition.</p>
+                            </div>
+                            <div class='link-wrap'>
+                                <a class='link link-primary blue' href='http://meche.mit.edu/news-media/video/0/955'>WATCH VIDEO</a>
+                            </div>
+                        </div>
+                    </div>
+                </div><div class='column large-4'>
+                    <div class='news-block clearfix'>
+                        <div class='img-container'>
+                            <img src='http://meche.mit.edu/sites/default/files/styles/faculty_highlight/public/highlights/Harry_asada_news1_460.jpg?itok=aaCXN69n' alt='Flexible yet sturdy robot is designed to “grow” like a plant' />
+                        </div>
+                        <div class='news-block-details'>
+                            <div data-equalizer-watch>
+                                <h3>Flexible yet sturdy robot is designed to “grow” like a plant</h3>
+                                <hr class='meche-dots thin black' />
+                                <p>A new “growing robot” developed by Professor Harry Asada can navigate through tight spaces - such as an aircraft's propulsion system - and lift heavy loads, tighten screws, or grab items. </p>
+                            </div>
+                            <div class='link-wrap'>
+                                <a class='link link-primary blue' href='https://meche.mit.edu/news-media/flexible-yet-sturdy-robot-designed-“grow”-plant'>READ MORE</a>
+                            </div>
+                        </div>
+                    </div>
+                </div><div class='column large-4'>
+                    <div class='news-block clearfix'>
+                        <div class='img-container'>
+                            <img src='http://meche.mit.edu/sites/default/files/styles/faculty_highlight/public/highlights/Underwater-Robot_460.jpg?itok=zoW7PCrm' alt='Underwater Robot for Port Security' />
+                        </div>
+                        <div class='news-block-details'>
+                            <div data-equalizer-watch>
+                                <h3>Underwater Robot for Port Security</h3>
+                                <hr class='meche-dots thin black' />
+                                <p>Professor Asada and graduate student Sampriti Bhattacharyya developed a submersible robot that can slide along an underwater surface undetected to perform ultrasound scans.</p>
+                            </div>
+                            <div class='link-wrap'>
+                                <a class='link link-primary blue' href='http://meche.mit.edu/news-media/underwater-robot-port-security'>READ MORE</a>
+                            </div>
+                        </div>
+                    </div>
+                </div></div></section>  </div>
+</div>
+<div id="block-meche-blocks-profile-education-plus" class="block block-meche-blocks">
+
+    
+  <div class="content">
+    <section class='fluid jumper-nav-block white-block panel-block layer'>
+        <div class='row'>
+            <div class='column small-12 show-for-medium-up align-c'>
+                <h3 class='jump-nav-label'>Faculty Details</h3>
+            </div>
+            <div class='column small-12 show-for-medium-up align-c'>   
+                <div class='hbar hbar-nav-jumper'>
+                    <ul>
+                        <li><a href='#education'>Education</a></li>
+                        <li class='divider' aria-hidden='true'></li>
+                        <li><a href='#research-interests'>Research Interests</a></li>
+                        <li class='divider' aria-hidden='true'></li>
+                        <li><a href='#other-details'>Bio</a></li>
+                        <li class='divider' aria-hidden='true'></li>
+                        <li><a href='#online-data'>Online Data</a></li>
+                        <li class='divider' aria-hidden='true'></li>
+                        <li><a href='#honors-and-awards '>Honors/Awards</a></li>
+                        <li class='divider' aria-hidden='true'></li>
+                        <li><a href='#related-experience'>Related Experience</a></li>
+                        <li class='divider' aria-hidden='true'></li>
+                        <li><a href='#memberships'>Memberships</a></li>
+                    </ul>
+                    <ul>
+                        <li><a href='#professional-service'>Professional Service</a></li>
+                        <li class='divider' aria-hidden='true'></li>
+                        <li><a href='#mit-service'>MIT Service</a></li>
+                        <li class='divider' aria-hidden='true'></li>
+                        <li><a href='#classes'>Teaching</a></li>
+                        <li class='divider' aria-hidden='true'></li>
+                        <li><a href='#publications '>Publications</a></li>
+                        <li class='divider' aria-hidden='true'></li>
+                        <li><a href='#patents'>Patents</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section><section class='fluid panel-block profile-details layer'>
+        <div class='row'>
+            <div class='column small-12 education-block clearfix'>
+                <div id='education' class='education-block-content'>
+                    <h2>Education</h2>
+                    <div class='degrees'>
+                    <ul class='clearfix'><li class='degree'>
+            <div>
+                <h3>1973</h3>
+                <p>KYOTO UNIVERSITY, JAPAN </p>
+                <span>B.Sc.</span>
+            </div>
+        </li><li class='degree'>
+            <div>
+                <h3>1975</h3>
+                <p>KYOTO UNIVERSITY, JAPAN </p>
+                <span>M.Sc.</span>
+            </div>
+        </li><li class='degree'>
+            <div>
+                <h3>1979</h3>
+                <p>KYOTO UNIVERSITY, JAPAN </p>
+                <span>Ph.D.</span>
+            </div>
+        </li></ul></div></div></div><div class='column small-12 profile-block'>
+              <div id='research-interests' class='profile-block-content'><h2>Research Interests</h2><ul><li>Developing an assistance robot for passengers in railway stations.</li>
+<li>Supernumerary Robotic Limbs</li>
+<li>Nuclear Inspection Robots</li>
+<li>Smart Actuators</li>
+<li>Autonomous Mobile Robot Systems</li>
+<li>Regulating Vascular Growth</li>
+<li>Cytoskeleton Remodeling</li>
+<li>Focal Adhesion Dynamics</li>
+<li>Myogenesis<br /> </li>
+</ul></div></div><div class='column small-12 profile-block'>
+              <div id='online-data' class='profile-block-content'><h2>Online Data</h2><p>Google Scholar: (<a href="http://scholar.google.com/citations?user=byGVph8AAAAJ&amp;hl=en">http://scholar.google.com/citations?user=byGVph8AAAAJ&amp;hl=en</a>)</p>
+</div></div><div class='column small-12 profile-block'>
+              <div id='honors-and-awards' class='profile-block-content'><h2>Honors + Awards</h2><p>Best Paper Award,						Aug. 1979<br />
+Society of Instrument and Control Engineers</p>
+<p>Best Paper Award						Aug. 1984<br />
+Society of Instrument and Control Engineers</p>
+<p>SME Outstanding Young Manufacturing				Sept. 1984<br />
+Engineer Award</p>
+<p>O.Hugo Schuck Best Paper Award,					May 1985<br />
+American Control Council</p>
+<p>Y.Sawargi Best Paper Award,					May 1988<br />
+Japanese Association of Automatic Control Engineers</p>
+<p>Best Paper Award,						July 1990<br />
+Society of Instrument and Control Engineers</p>
+<p>Best Paper Award,						May 1993<br />
+1993 IEEE International Conference on Robotics<br />
+and Automation</p>
+<p>Best Paper Award,						Nov. 1995<br />
+1994 ASME Advanced Energy Systems Heat Pump</p>
+<p>Kayamori Best Paper Award,					May 1997<br />
+1997 IEEE Int. Conf. On Robotics and Automation</p>
+<p>Ford Professorship						Sept. 1997</p>
+<p>Henry Paynter Outstanding Researcher Award,         			Nov. 1998<br />
+ASME  Dynamic Systems and Control Division</p>
+<p>Best Paper Award, 						May 1999<br />
+1999 IEEE International Conference on Robotics and Automation  </p>
+<p>ASME Fellow, Dynamic Systems and Control Division	  	Sept. 2001</p>
+<p>Best Paper Award						Oct. 2002<br />
+Advanced Robotics, International Journal of the Robotics Society of Japan</p>
+<p>Best Automation Paper Award					May 2010<br />
+2010 IEEE International Conference on Robotics and Automation</p>
+<p>Best Paper Award						September 2010<br />
+2010 IFAC Symposium on Mechatronic Systems</p>
+<p>Ruth and Joel Spira Award for Distinguished Teaching		May 2011<br />
+School of Engineering, Massachusetts Institute of Technology</p>
+<p>Rufus T. Oldenburger Medal					November 2011<br />
+American Society of Mechanical Engineers</p>
+</div></div><div class='column small-12 profile-block'>
+              <div id='memberships' class='profile-block-content'><h2>Memberships</h2><ul><li>American Society of Mechanical Engineers</li>
+<li>Institute of Electrical and Electronics Engineers</li>
+</ul></div></div><div class='column small-12 profile-block'>
+              <div id='mit-service' class='profile-block-content'><h2>MIT Service</h2><ul><li>2010-2014, Head, Area 3 - Control, Instrumentation, and Robotics, Mechanical Eng. Dept.</li>
+<li>2012-2013  Instrumentation and Robotics Faculty Search Committee</li>
+<li>2011           Strategic Planning Committee, Mechanical Eng. Dept.</li>
+<li>2010-2012  Bioengineering Faculty Search Committee</li>
+<li>2009-2009  Graduate Committee</li>
+<li>2007-2008  Robotics Faculty Search Committee</li>
+</ul></div></div><div class='column small-12 profile-block'>
+              <div id='classes' class='profile-block-content'><h2>Teaching</h2><ul><li>Introduction to Robotics (2.12/2.120)</li>
+<li>Identification, Estimation, and Learning (2.160)</li>
+<li>Systems and Controls (2.04A)</li>
+</ul></div></div><div class='column small-12 profile-block'>
+              <div id='publications' class='profile-block-content'><h2>Publications</h2><p>1.	Hanafusa, H., and Asada, H., “Position Searching by a Robotic Hand with Pneumatic Sensors”, Trans. Soc. Instrument and Control Engineers, Vol. 11-5, pp. 592-599, 1975.</p>
+<p>2.	Hanafusa, H., and Asada, H., “Mechanics of Grasping by Artificial Fingers”, Trans. Soc. Instrument and Control Engineers, Vol. 12-5, pp. 536-542, 1976. Received the Best Journal Paper Award in 1979.</p>
+<p>3.	Hanafusa, H., and Asada, H., “Stable Prehension of Objects by Robotic Hands with Elastic Fingers”, Trans. Soc. Instrument and Control Engineers, Vol. 13-4, pp. 370-377, 1977.</p>
+<p>4.	Hanafusa, H., and Asada, H., “Analysis of Prehension Characteristics of Robot Hand Control Systems with Elastic Fingers and Its Synthesis”, Trans. Soc. Instrument and Control Engineers, Vol. 13-6, pp. 587-594, 1977.</p>
+<p>5.	Hanafusa, H., and Asada, H., “Handling of Constrained Objects by Active Elastic Fingers and Its Applications to Assembly”, Trans. Soc. Instrument and Control Engineers, Vol. 15-1, pp. 61-66, 1979.</p>
+<p>6.	Asada, H., and Hanafusa, H., “Playback Control of Force Teachable Robots”, Trans. Soc. Instrument and Control Engineers, Vol. 15-3, pp. 410-411, 1979.</p>
+<p>7.	Asada, H., and Hanafusa, H., “Prehension and Handling of Objects by Robotic Hands with Redundant Fingers”, Trans. Soc. Instrument and Control Engineers, Vol. 15-5, pp. 666-671, 1979.</p>
+<p>8.	Asano, S., Asada, H., and Hanafusa, H., “Design of Elastic Robot Hands for Precision Inserting Operations”, Systems and Control, Vol. 24-3, pp. 201-208, 1980.</p>
+<p>9.	Asada, H., and Hanafusa, H., “Spatial Curve Tracing Control of Industrial Robots”, Trans. Soc. Instrument and Control Engineers, Vol. 16-5, pp. 740-746, 1980.</p>
+<p>10.	Asada, H., “Development of a Direct-Drive Robot and Evaluation of Its Control Performance”, Trans. Soc. Instrument and Control Engineers, Vol. 19-1, pp. 77-84, 1983.</p>
+<p>11.	Asada, H., and Kanade, T., “Design of a Direct-Drive Mechanical Arms”, ASME Journal of Vibration, Stress, and Reliability in Design, Vol. 105-3, pp. 312-316, July 1983.</p>
+<p>12.	Asada, H., “A Geometrical Analysis of Manipulator Dynamics”, Trans. Soc. Instrument and Control Engineers, Vol. 19-6, pp. 500-505, 1983. Received the Best Journal Paper Award in 1984.</p>
+<p>13.	Asada, H., Kanade, T., and Takeyama, I., “Control of a Direct-Drive Arm”, ASME J. of Dynamic Systems, Measurement, and Control, Vol. 105-3, pp. 136-142, September 1983.</p>
+<p>14.	Asada, H. “A Geometrical Representation of Manipulator Dynamics and Its Application to Arm Design”, ASME J. Dynamic Systems, Measurement, and Control, Vol. 105-3, pp. 131-142, September 1983.</p>
+<p>15.	Asada, H., and Youcef-Toumi, K., “Analysis and Design of a Direct-Drive Arm with Five-Bar-Link Parallel Drive Mechanism”, ASME J. Dynamic Systems, Measurement, and Control, Vol. 106-3, pp. 225-230. September 1984.</p>
+<p>16.	Asada, H., and By, A.B., “Kinematic Analysis of Workpart Fixturing for Flexible Assembly with Automatically Reconfigurable Fixtures”, IEEE Journal of Robotics and Automation, Vol. RA-1, No. 2, pp. 1-9, June 1985.</p>
+<p>17.	Asada, H., and Ro, I. H., “A Linkage Design for Direct-Drive Robot Arms”, ASME J. Mechanisms, Transmissions and Automation in Design, Vol. 107, Issue 4, pp. 536-540, 1985.</p>
+<p>18.	Asada, H., and Sawada, Y., “Design of an Adaptable Tool Guide for Grinding Robots”, Int. J. Robotics and Computer-Integrated Manufacturing, Vol. 2, Issue 1, pp. 49-54, 1985.</p>
+<p>19.	Asada, H., “Basic Concepts and Applications of Programmable Jigs, and Fixtures Assembled by a Robot”, J. Robotics Society of Japan, Vol. 4-4, pp. 374-381, 1986.</p>
+<p>20.	Asada, H., “Measurement and Control of Joint Torques for Direct-Drive Arms”, Trans. Soc. Instrument and Control Engineers, Vol. 22-8, pp. 891-896, 1986.</p>
+<p>21.	Otsuki, H., and Asada, H., “Error Estimation of Workpart Locations for Curved Surface Contouring”, Trans. Soc. Instrument and Control Engineers, Vol. 22-10, pp. 1121-1123, 1986.</p>
+<p>22.	Asada, H., “Theory of Manipulator Arm Design for Decoupled and Invariant Inertia”, Trans. Soc. Instrument and Control Engineers, Vol. 23-2, pp. 155-162, 1987.</p>
+<p>23.	Youcef-Toumi, K., and Asada, H., “The Design of Open Loop Manipulator Arms with Decoupled and Configuration-Invariant Inertia Tensors”, ASME J. Dynamic Systems, Measurement, and Control, Vol. 109, Issue 3, pp. 268-275, September 1987.</p>
+<p>24.	Asada, H., and Ogawa, K., “Dynamic Analysis of Robotic Arms Using Inverse Inertia Matrices and Its Applications to Task Planning and End-Effector Design”, Trans. Soc. Instrument and Control Engineers, Vol. 24-9, 1987.</p>
+<p>25.	Ma, Z.-D., Asada, H., and Tokumaru, H., “Inverse Dynamics of Flexible Robot Arms for Trajectory Control”, Trans. Systems and Control, Vol. 31-10, 1987. Received the Sawaragi Best Paper Award in 1988</p>
+<p>26.	Asada, H., and Izumi, H., “Teaching and Program Generation for Hybrid Position/Force Control Via the Measurement of Human Manipulation Tasks”, J. Robotics Society of Japan, Vol. 5-6, pp. 452-459, 1987.</p>
+<p>27.	Hirai, S., Asada, H., and Tokumaru, H., “Kinematic Analysis of Contact State Transitions in Assembly Operations and Automatic Generation of Transition Network”, Trans. Society of Instrument and Control Engineers, Vol. 24-4, pp. 406-413, 1988. Received the Best Journal Paper Award in 1990.</p>
+<p>28.	Asada, H., and Asari, Y., “The Identification of Tool Suspension Impedance Via the Measurement of Expert Motion and Its Application to Robot Teaching”, Trans. Society of Instrument and Control Engineers, Vol. 24-12, 1988.</p>
+<p>29.	Hirai, S., H., and, Asada H., and Tokumaru, H., “Kinematics of Manipulation Using the Theory of Polyhedral Convex Cones and Its Applications to Grasping and Assembly Operations”, Trans. Society of Instrument and Control Engineers, Vol. 24-12, 1988.</p>
+<p>30.	Asada, H., and Izumi, H., “Automatic Program Generation from Teaching Data for the Hybrid Control of Robots”, IEEE Journal of Robotics and Automation, Vol. 5, No. 2, pp. 166-173, April 1989.</p>
+<p>31.	Asada, H., and Kitagawa, M., “Kinematic Analysis and Planning for Form Closure Grasps by Robotic Hands”, Int. J. Robotics and Computer-Integrated Manufacturing, Vol. 5, No. 4, pp. 293-299, 1989.</p>
+<p>32.	Fields, A., Youcef-Toumi, K., and Asada, H., &quot;Flexible Fixturing and Automatic Drilling of Sheet- Metal Parts Using a Robot Manipulator”, Int. J. Robotics and Computer-Integrated Manufacturing, Vol. 5, No. 4, pp. 371-380, 1989.</p>
+<p>33.	Asada, H., and Kim, Y.T., “Dynamic Compliance Control of Direct-Drive Robots with Built-In Optical Torque Sensors”, Journal of the Robotics Society of Japan, Vol. 7-4, 1989.</p>
+<p>34.	Ma, Z.-D., Asada, H., and Tokumaru, H., “On the Simplification of Flexible Arm Dynamics and Their Solutions to the Inverse Dynamics Problem”, Transaction of the Society of Instrument and Control Engineers, Vol. 25, No.4, pp. 440-447, 1989.</p>
+<p>35.	Ma, Z.-D., Asada, H., and Tokumaru, H., “Existence of Feasible Solutions to the Inverse Dynamics of Flexible Robot Arms and Guidelines for Designing Arm Links”, Transaction of the Society of Instrument and Control Engineers, Vol. 25, No.3, pp. 325-332, 1989.</p>
+<p>36.	Asada, H., Ma, Z.-D., and Tokumaru, H., “Inverse Dynamics of Flexible Robot Arms:  Modeling and Computation for Trajectory Control”, ASME J. Dynamic Systems, Measurement, and Control, Vol. 112, Issue 2, pp. 177-185, June 1990.</p>
+<p>37.	Asada, H., and Kakumoto, Y., “The Dynamic Analysis and Design of a High-Speed Insertion Hand Using the Generalized Centroid and Virtual Mass”, ASME Journal of Dynamic Systems, Measurement, and Control, Vol. 112, Issue 4, pp. 646-654, December 1990.</p>
+<p>38.	Asada, H., and Yang, B.H., “Skill Acquisition from Human Experts Through Pattern Processing of Teaching Data”, Journal of the Robotics Society of Japan, Vol. 8, No. 1, pp. 17-24, 1990.</p>
+<p>39.	Hirai, S., Asada, H., and Tokumaru, H., “A Model-Based Approach to the Interpretation of Force and Position Sensor Signals for the Process Monitoring of Assembly Operations”, Trans. of Soc. of Instrument and Control Engineers, Vol., 26, No. 2, pp. 225-232, 1990.</p>
+<p>40.	Liu, S., and Asada, H., “Transferring Manipulative Skills to Robots: Representation and Acquisition of Tool Manipulative Skills Using a Process Dynamics Model”, ASME J. Dynamic Systems, Measurement and Control, Vol. 114, Issue 2, pp. 220-228 June 1992.</p>
+<p>41.	McCarragher, B.J., and Asada, H., “Qualitative Template Matching Using Dynamic Process Models for State Transition Recognition of Robotic Assembly”, ASME Journal of Dynamic Systems, Measurement, and Control, Vol. 115, Issue 2(A), pp. 261-269, June 1993.</p>
+<p>42.	Asada, H., Federspiel, C.C., and Liu, S., &quot;Human Centered Control in Robotics and Consumer Product Design&quot;, ASME Journal of Dynamic Systems, Measurement, and Control, Vol. 115, Issue 2B, pp. 271-280, June 1993.</p>
+<p>43.	Asada, H., &quot;Representation and Learning of Nonlinear Compliance Using Neural Nets&quot;, IEEE Transaction on Robotics and Automation, Vol. 9, No. 6, pp. 863-867, December 1993.</p>
+<p>44.	Hirai, S., and Asada, H., &quot;Kinematics and Statics of Manipulation Using the Theory of Polyhedral Convex Cones&quot;, The International Journal of Robotics Research, vol. 12, No. 5, PP. 434-447, October 1993.</p>
+<p>45.	Park, J.-H., and Asada, H., &quot;Dynamic Analysis of Noncollocated Flexible Arms and Design of Torque Transmission Mechanisms&quot;, ASME J. Dynamic Systems, Measurement, and Control, Vol. 116, June 1994.</p>
+<p>46.	Park, JH., and Asada, H., &quot;Concurrent Design Optimization of Mechanical Structure and Control for High Speed Robots&quot;, ASME Journal of Dynamic Systems, Measurement, and Control, Vol. 116, Issue 3, pp. 344-356, September 1994.</p>
+<p>47.	Fedespiel, C.C., and Asada, H., &quot;User Adaptable Comfort Control of HVAC System&quot;, ASME Journal of Dynamics Systems, Measurement and Control, Vol. 116, Issue 3, pp. 474-486, September 1994.</p>
+<p>48.	Rai, S., and Asada, H., “Computer-Aided Structure Modification of Electromechanical Systems Using Singular Value Decomposition”, ASME Journal of Mechanical Design, Vol. 116, Issue 4, pp. 1148-1156, December 1994.</p>
+<p>49.	Nishikawa, K., West, A.M., and Asada, H., &quot;Development of a Holonomic Omnidirectional Vehicle and an Accurate Guidance Method for Vehicles&quot;, Journal of Robotics Society of Japan, Vol. 13, No. 2, pp. 249-256, 1995.</p>
+<p>50.	Asada, H., Asari, Y., &quot;The Direct Teaching of Tool Manupulation skills Via the Impedance Identification of Human Motions&quot;, Journal of Robotics Society of Japan, Vol. 13, 1995.</p>
+<p>51.	Yang, B-H., and Asada, H., &quot;Adaptive Reinforcement Learning and Its Application to Compliance Control&quot;, Journal of Robotics and Mechatronics, Vol. 7, No. 3, 1995.</p>
+<p>52.	West, A.M., and Asada, H., &quot;Design of Ball Wheel Mechanisms for Omnidirectional Vehicles with Full Mobility and Invariant Kinematics&quot;, ASME Journal of Mechanical Design, Vol.119, Issue 2, pp. 153-161, June 1997.</p>
+<p>53.	Rai, S., and Asada, H., &quot;Integrated Structure/Control Design of High Speed Flexible Robots Based on Time Optimal Control&quot;, ASME Journal of Dynamic Systems, Measurement and Control, Vol. 117, Issue 4, pp. 503-512, December 1995.</p>
+<p>54.	McCarragher, B.J. and Asada, H., &quot;The Discrete Event Modeling and Trajectory Planning of Robotic Assembly&quot;, ASME, Journal of Dynamic Systems, Measurement and Control, Vol. 117, Issue 3, pp. 394-400, September 1995.</p>
+<p>55.	McCarragher, B.J. and Asada, H., &quot;The Discrete Event Control of Robotic Assembly Tasks&quot;, ASME, Journal of Dynamic Systems, Measurement and Control, Vol. 117, Issue 3, pp. 384-393, September 1995.</p>
+<p>56.	Pil, A. and Asada, H., &quot;Rapid Recursive Structure Re-Design for Improved Dynamic Performance&quot;, ASME Journal of Dynamic Systems, Measurement and Control, July 1994, Vol. 117, December 1995.</p>
+<p>57.	Yang, B.-H. and Asada, H., &quot;Progressive Learning and Its Application to Robot Impedance Learning&quot;, IEEE Transaction on Neural Networks, Vol. 7, Issue  4, pp. 941-952, July 1996.</p>
+<p>58.	Liu, S. and Asada, H. &quot;Teaching Human Motion/Force Skills to Robots&quot;, Journal of Robotics Society of Japan, Vol. 13, No. 5, pp. 10-16, July 1996.</p>
+<p>59.	Pil, A.C., and Asada, H., &quot;Integrated Structure/Control Design of Mechatronic Systems using a recursive experimental optimization method&quot;, IEEE/ASME Transactions on Mechatronics, Vol. 1, Issue 3, pp 191-203, September 1996.</p>
+<p>60.	Shimokura, K. Asada, H. and Liu, S., “A Study of Human Skill Transfer for Teaching a Deburring Robot”, Journal of Robotics Society of Japan, Vol. 14, No. 1, pp. 144-149, January 1996.</p>
+<p>61.	He, X-D., Liu,S. and Asada, H. &quot;Modeling of Vapor Compression Cycles for Multivariable Feedback Control of HVAC Systems&quot;, ASME Journal of Dynamic Systems, Measurement, and Control, Vol.119, Issue 2, pp.183-191, June 1997.</p>
+<p>62.	Braunstein, D., and Asada, H., &quot;On-line Estimation of Power Law Fluid Parameter for Solder Paste Printing Control&quot;, Accepted for publication in ASME Journal of Electronic Packaging.</p>
+<p>63.	Ravuri, M. and Asada H., 1997 “Asymmetric Order Doubling with Application to the Endpoint Feedback of Coordinate Measuring Machines”, IEEE/ASME Transactions of Mechatronics.</p>
+<p>64.	He, X.-D., Liu, S., Asada, H., and Itoh, H., “Multivariable Control of Vapor Compression Systems”, ASHREA Journal of Heating, Ventilation, Airconditioning, and Refrigerating (HVAC&amp;R) Research, Vol. 4, No. 3, pp. 205-230, July 1998.</p>
+<p>65.	Zhou, M., Liu, S., and Asada, H., “Zero-Load Control of Indoor Thermal Environment”, ASHRAE Transactions, Vol. 104, Number 1, Section A, pages 752-758, January 1998.</p>
+<p>66.	Yang, B-H. Wada, M., and Asada, H., “Human-Centered Control and Its Application to Home Healthcare Systems,” Journal of Robotics Society of Japan, Vol. 16, No.3, pp. 19-23, April 1998.</p>
+<p>67.	Wada, M., and Asada, H.,” A Holonomic Omnidirectional Vehicle With a Reconfigurable Footprint Mechanism and Its Application to a Wheelchair”, Journal of Robotics Society of Japan, Vol. 16, No.6, pp. 82-89, September 1998.</p>
+<p>68.	Sooyong, Lee, and Asada, H., “A Perturbation/Correlation Method for Force Guided Robot Assembly”, IEEE Transactions on Robotics and Automation, Vol.15, Issue 4, pp.764-773, August 1999.</p>
+<p>69.	Wada, M., and Asada, H., “Design and Control of a Variable Footprint Mechanism for Holonomic Omnidirectional Vehicles and Its Application to Wheelchair”, IEEE Transactions on Robotics and Automation, Vol.15, Issue 6, pp. 978-989, December 1999.</p>
+<p>70.	Spano, J., and Asada, H., “Kinematic Analysis and Design of Surface Wave Distributed Actuators with Application to a Powered Bed for Bedridden Patients”, IEEE Transactions on Robotics and Automation, Vol.16, Issue 1, pp. 1-11, February 2000.</p>
+<p>71.	Gordon, B.W., Liu, S., and Asada, H., “Singularly Perturbed Sliding Manifolds for Modeling and Realization of Differential-Algebraic Systems”, International Journal of Control.</p>
+<p>72.	Spano, J., and Asada, H., “Design of Surface Wave Active Beds Based on Human Tissue Physiology”, Advanced Robotics, International Journal of the Robotics Society of Japan, Vol. 14, No. 8, pp. 717-742, 2001. Received the Best Journal Paper Award</p>
+<p>73.	Gordon, B.W., and Asada, H., &quot;Modeling, Realization, and Simulation of Thermo-Fluid Systems Using Singularly Perturbed Sliding Manifolds&quot;, ASME Journal of  Dynamic Systems, Measurement, and Control, Vol. 122, No. 4, pp. 699-707, December 2000.</p>
+<p>74.	Mascaro, S. and Asada, H., “Photoplethysmograph Fingernail Sensors for Measuring Finger Forces without Haptic Obstruction,” IEEE Transactions on Robotics and Automation, vol. 17, Issue 5, pp. 698-708, October 2001.</p>
+<p>75.	Rhee, S-W., Yang, B-H, and Asada, H., &quot;Artifact-Resistant, Power-Efficient Design of Finger-Ring Plethysmographic Sensors&quot;, IEEE Transactions on Biomedical Engineering, Vol.48, Issue 7, pp.795-805, July 2001.</p>
+<p>76.	Shaltis, P.A., Asada, H., and Rhee, S., &quot;Artifact-Resistant, Power-Efficient, High Speed Modulation Design for Photo Plethysmographic Ring Sensors,&quot; Annals of Biomedical Engineering, Vol. 29, Supplement 1, (S-117), 2001.</p>
+<p>77.	Tahboub, K. A., and Asada, H., “Dynamic Analysis and Control of a Holonomic Vehicle with a Continuously Variable Transmission”, ASME Journal of Dynamic Systems, Measurement, and Control, Vol. 124, Issue 1, pp.118-126, March 2002.</p>
+<p>78.	Mascaro, S. and Asada, H., “Measurement of Finger Posture and Three-Axis Fingertip Touch Force Using Fingernail Sensors”, IEEE Transactions on Robotics and Automation, Vol. 20, Issue 1, pp. 26-35, February 2004.</p>
+<p>79.	Asada, H, Shaltis P, Reisner A, Rhee S, and Hutchinson, RC., “Mobile Monitoring with Wearable Photoplethysmographic Biosensors”,  IEEE Engineering in Medicine and Biology Magazine, Vol.22, No.3, pp. 28-40, May-June 2003.</p>
+<p>80.	Gu, B. and Asada, H., “Co-Simulation of Algebraically Coupled Dynamic Subsystems without Disclosure of Proprietary Subsystem Models”, ASME Journal of Dynamic Systems, Measurement, and Control, Vol.126, No.1, pp. 1-13, March 2004.</p>
+<p>81.	Zhang, Y. and Asada, H., “Blind System Identification of Noncoprime Multichannel Systems and Its Application to Noninvasive Cardiovascular Monitoring”, ASME Journal of Dynamic Systems, Measurement, and Control, Vol.126, No.4, pp. 834-847, December 2004.</p>
+<p>82.	He, X-D., Chen, T., Kasahara, S. and Asada, H., &quot;An Oil Circulation Observer for Estimating Oil Concentration and Oil Amount in Refrigerant Compressors&quot;, ASHRAE Transaction, Vol. 110, Part 2, pp. 489-498, 2004.</p>
+<p>83.	Roy, B., Basmajian, A., and Asada, H., “Repositioning of a Rigid Body with a Flexible Sheet and its Application to an Automated Rehabilitation Bed”, IEEE Transactions on Automation Science and Engineering, Vol.2, Issue 3, pp.300 – 307, July 2005.</p>
+<p>84.	Gibbs, T., and Asada, H., “Wearable Conductive Fiber Sensors for Multi-Axis Human Joint Angle Measurements”, Journal of Neuroengineering and Rehabilitation, 2:7, March 2, 2005. Special Issue on Wearable Technology in Rehabilitation, February, 2005.</p>
+<p>85.	McCombie, D., Reisner, A., and Asada, H., “Laguerre Model Blind System Identification: Cardiovascular Dynamics Estimated from Multiple Peripheral Circulatory Signals”, IEEE Transactions on Biomedical Engineering, Vol. 52, No. 11, pp. 1889 – 1901, November 2005.</p>
+<p>86.	Odhner, L., and Asada, H., “Sensorless Temperature Estimation and Control of Shape Memory Alloy Actuators Using Thermoelectric Devices”, IEEE/ASME Transactions on Mechatronics, Vol. 11, Issue 2, pp.139-144, April 2006.</p>
+<p>87.	Selden, B., Cho, K.-J., and Asada, H., “Segmented Shape Memory Alloy Actuators Using Hysteresis Loop Control”, Smart Materials and Structures, Vol.15, No.2, pp.642-652, March 2006.</p>
+<p>88.	Cho, K.-J., and Asada, H., “Architecture Design of a Multi-Axis Cellular Actuator Array Using Segmented Binary Control of Shape Memory Alloy”, IEEE Transactions on Robotics, Vol. 22, Issue 4, pp.831-843, August 2006.</p>
+<p>89.	Wade, E., and Asada, H., “Design of a Broadcasting Modem for a DC PLC Scheme”,  IEEE-ASME transactions on Mechatronics, Volume 11, Issue 5, Pages 533-540, October 2006.</p>
+<p>90.	Mascaro, S. and Asada, H.,  “The Common Patterns of Blood Perfusion in the Fingernail Bed Subject to Fingertip Touch Force and Finger Posture ,” Haptics-e: The Electronic Journal of Haptics Research, Vol. 4, No. 3, pp. 1-6, July 21, 2006.</p>
+<p>91.	Wade, E., and Asada, H., &quot;Conductive Fabric Garment for a Cable-Free Body Area Network: Conductivity Analysis for DC Power-Line Communication over Fabric Media&quot;, IEEE Transactions on Pervasive Computing, Vol. 6, Issue 1, page 52-58, January – March 2007. (Special issue on pervasive computing in health care, December 2006.)</p>
+<p>92.	Reisner, A., Shaltis, P., McCombie, D., and Asada, H., “Utility of the Photoplethysmogram in Circulatory Monitoring”, The Journal of the American Society of Anesthesiologists, Inc., Vol. 108, Issue 5, pp 950-958, May 2008.</p>
+<p>93.	Ueda, J., Odhner, L. and Asada, H., “Broadcast Feedback of Stochastic Cellular Actuators Inspired by Biological Muscle Control”, The International Journal of Robotics Research, Vol. 26, No.11-12, pp.1251-1265, November 2007.</p>
+<p>94.	Shaltis, P., Reisner, A., and Asada, H., “Cuffless Blood Pressure Monitoring Using Hydrostatic Pressure Challenges”, IEEE Transactions on Biomedical Engineering, Vol. 55, Issue 6, pp. 1775 – 1777,  June 2008.</p>
+<p>95.	Hahn, J.-O., McCombie, D., Hojman, H., Reisner, A., and Asada, H., &quot;Identification of Multi-Channel Cardiovascular Dynamics Using Dual Laguerre Basis Functions for Noninvasive Cardiovascular Monitoring&quot;, IEEE Transactions on Control Systems Technology, Vol. 18, Issue 1, pp. 170-176,  January 2010.</p>
+<p>96.	Roy, B., and Asada, H., “Non-linear Feedback Control of a Gravity-assisted Underactuated Manipulator with Application to Aircraft Assembly”, IEEE Transactions on Robotics, Vol. 25, Issue 5, pp. 1125-1133, October 2009.</p>
+<p>97.	Hahn, J.-O., Reisner, A., and Asada, H., “Blind Identification of 2-Channel IIR Systems with Application to Central Cardiovascular Monitoring”, ASME Journal of Dynamic Systems, Measurement, and Control, Vol. 131, No 5, 2009.</p>
+<p>98.	Wood, L., Das, A., Kamm, R. and Asada, H., “A Stochastic Broadcast Feedback Approach to Regulating Cell Population Morphology for Microfluidic Angiogenesis Platforms”, IEEE Transactions on Biomedical Engineering, Vol.56, Issue 9, Part 2, pp.2299-2303, September, 2009.</p>
+<p>99.	Hahn, J.-O., Reisner, A., and Asada, H., “Modeling and 2-Sensor Blind Identification of  Human Cardiovascular System”, Control Engineering Practice, Vol. 17, Issue 11, pp. 1318-1328, November 2009.</p>
+<p>100.	Odhner, L., and Asada, H., “Stochastic Recruitment Control of Large Ensemble Systems with Limited Feedback”, ASME Journal of Dynamic Systems, Measurement, and Control, Vol. 132, Issue 4, 041008 (9 pages), September 2009.</p>
+<p>101.	Mazumdar, A., and Asada H., “An Under-actuated, Magnetic-Foot Robot for Steel Bridge Inspection”, ASME journal of Mechanisms and Robotics, vol.2, Issue 3, August 2010.</p>
+<p>102.	Das, A., Lauffenburger, D., Asada, H., and Kamm, R., “A Hybrid Continuum–Discrete Modeling Approach to Predict and Control Angiogenesis: Analysis of Combinatorial Growth Factor and Matrix Effects on Vessel-Sprouting Morphology”, Philosophical Transactions of the Royal Society A: Mathematical, Physical, and Engineering Sciences, vol. 368, no. 1921, pp. 2937-2960, June 2010.</p>
+<p>103.	Hahn, J.-O., Reisner, A., and Asada, H., “Estimation of Pulse Transit Time Using Two Diametric Blood Pressure Waveform Measurements”, Medical Engineering &amp; Physics, Vol. 32, Issue 7, pages 753-759, September 2010.</p>
+<p>104.	Secord, T., and Asada, H., &quot;A Variable Stiffness PZT Actuator Having Tunable Resonant Frequencies&quot;, IEEE Transactions on Robotics, vol.26, no.6, pp.993-1005, Dec.2010.</p>
+<p>105.	Ueda, J., Secord, T and Asada, H, &quot;Large Effective-Strain Piezoelectric Actuators Using Nested Cellular Architecture With Exponential Strain Amplification Mechanisms,&quot; IEEE/ASME Transactions on Mechatronics, vol.15, no.5, pp.770-782, Oct. 2010.</p>
+<p>106.	Wood, L., Kamm, R., and Asada, H., “Stochastic Modeling and Identification of Emergent Behaviors of an Endothelial Cell Population in Angiogenic Pattern Formation”, Int. Journal of Robotics Research, Special Issue on Stochasticity in Robotics and Bio-Systems, Vol. 30 No. 6, pp. 659-677, May 2011.</p>
+<p>107.	Menon, M., and Asada, H., “Design and Control of Paired Mobile Robots Working Across a Thin Plate with Application to Aircraft Manufacturing”, IEEE Transactions on Automation Science and Engineering, vol. 8, no. 3, pp. 614-624, July 2011.</p>
+<p>108.	Wood, L., and Asada, H., “Cellular Stochastic Control of the Collective Output of a Class of Distributed Hysteretic Systems”, ASME J. of Dynamic Systems, Measurement, and Control, Vol. 133, Issue 6, pp. 61011- 61022, November 2011.</p>
+<p>109.	Farahat, W., and Asada, H., “Estimation of State Transition Probabilities in Asynchronous Vector Markov Processes”, ASME J. of Dynamic Systems, Measurement, and Control, [DOI: 10.1115/1.4006087], Vol. 134, November 2012.</p>
+<p>110.	Hahn, J.-O., Reisner, A., Jaffer, F.A., and Asada, H., “Subject-Specific Estimation of Central Aortic Blood Pressure Using an individualized Transfer Function: a Preliminary feasibility Study”, IEEE Transactions on Information Technology in Biomedicine, Issue 99, PMID: 22147332, Vol. 16, No. 2, pp. 212 – 220, March 2012. </p>
+<p>111.	Farahat, W., Wood, L., Zervantonakis, I., Schor, A., Ong, S., Neal, D., Kamm, R., and Asada, H., “Ensemble Analysis of Angiogenic Growth in Three-Dimensional Microfluidic Cell Cultures”, PLoS ONE, Vol. 7, Issue 5, e37333, doi:10.1371/journal.pone.0037333, April 2012.</p>
+<p>112.	Ge, R., Tan, E., Sharghi-Namini, Soheila, Asada, H., “Exosomes in Cancer Microenvironment and Beyond: Have We Overlooked These Extracellular Messengers?”, Cancer Microenvironment, Vol. 5, Issue 3, pp.323-332,  DOI 10.1007/s12307-012-0110-2, May 2012.</p>
+<p>113.	Kim, Choong,  Chung, Seok,  Liu, Yuchun,  Kim, Min-Cheol,  Chan, Jerry K. Y., Asada, H., and Kamm, D., “In Vitro Angiogenesis Assay for the Study of Cell-Encapsulation Therapy”, in Lab on a Chip, Vol. 12, Issue 16, pp.2942-2950, DOI: 10.1039/C2LC40182G, May 2012.<br />
+114.	Wood, L., Ge, R., Kamm, R., and Asada, H., &quot;Nascent vessel elongation rate is inversely related to diameter in in vitro angiogenesis&quot;, Integrative Biology, Vol. 4, Issue 9, pp.1081-1089, DOI:10.1039/c2ib20054f, July 2012.</p>
+<p>115.	Sakar, M.S., Neal, D., Boudou, T., Borochin, M., Lic, Y., Weiss, R. Kamm, R.D., Chen, C. and Asada, H., “Formation and optogenetic control of engineered 3D skeletal muscle bioactuators”, Lab on a Chip, 2012, Issue 23, pp. 4976-4985, DOI: 10.1039/C2LC40338B, October 2012, Front Cover Article, Lab-on-a-Chip top 10%.</p>
+<p>116.	Kim, M.-C.,  Kim, C.,  Wood, L., Neal, D., Kamm, R., and Asada, H., “Integrating Focal Adhesion Dynamics, Cytoskeleton Remodeling, and Actin Motor Activity for Predicting Cell Migration on 3D Curved Surfaces of Extracellular Matrix”, Integrative Biology, Vol. 4(11), pp. 1386-1397, DOI: 10.1039/C2IB20159C, September 2012</p>
+<p>117.	Kim, M.-C., Neal, D., Kamm, R., and Asada, H., “Dynamic Modeling of Cell Migration and Spreading Behaviors on Fibronectin Coated Planar Substrates and Micropatterned Geometries”, PLoS Computational Biology 9(2): e1002926, February, 2013.</p>
+<p>118.	Kim, M.-C., Lam, R.H.W., Thorsen, T., and Asada, H., “Mathematical Analysis of Oxygen Transfer through Polydimethylsiloxane Membrane between Double Layers of Cell Culture Channel and Gas Chamber in Microfluidic Oxygenator”, Microfluidics and Nanofluidics, Vol. 15, Issue 3, pp. 285-296,  February 2013.</p>
+<p>119.	Mazumdar, A., and Asada, H., “Pulse Width Modulation of Water Jet Propulsion Systems Using High Speed Coanda-Effect Valves”, ASME Journal of Dynamic Systems, Measurement, and Control, Vol. 135(5), pp. 051019(1)- (11), September 2013.</p>
+<p>120.	Ong, L.-L.S., Dauwels, J., Ang, M., and Asada, H., “A Bayesian Filtering Approach to Incorporate 2D/3D Time-lapse Confocal Images for Tracking Angiogenic Sprouting Cells Interacting with the Gel Matrix”, Medical Image Analysis, Vol. 18, Issue 1, pp. 211-227, January 2014.</p>
+<p>121.	Chan V., Asada H. H., and Bashir, R., &quot;Utilization and control of bioactuators across multiple length scales,&quot; Lab Chip, 2014 (Advanced Article), DOI: 10.1039/C3LC50989C, Front Cover Article, Lab on a Chip HOT article, Issue 4, pp. 653-670, November 2013.</p>
+<p>122.	Ang, X.M., Lee, M.H.C., Blocki, A., Chen, C., Ong, L.L.S., Asada, H.H., Sheppard, A., and Raghunath, M., “Macromolecular crowding amplifies adipogenesis of human bone marrow-derived MSCs by enhancing the pro-adipogenic microenvironment”, Tissue Engineering A, doi: 10.1089/ten.TEA.2013.0337, 2013</p>
+<p>123.	Mazumdar, A., Asada, H., “Control-Configured Design of Spheroidal, Appendage-Free, Underwater Vehicles,” Vol. 30, Issue 2, pp. 448-460, December 19, 2013</p>
+<p>124.	Herath, S., Yue, D., Hui, S., Kim, M.C., Wang, D., Wang, Q., Van Vliet K.J., Asada, H.H., Chen, P., “Quantification of Magnetically Induced Changes in ECM Local Apparent Stiffness”, Biophysical Journal, Vol.106, Issue 1, pp.332-341, January 1, 2014.</p>
+<p>125.	Sharghi-Namini, S., Evan Tan, E., Ong, L.-L. S., Ge, R., and Asada, H.H., “Dll4-containing exosomes induce capillary sprout retraction in a 3D microenvironment”, Scientific Reports 4, Article number: 4031 doi:10.1038/srep04031, January 2014</p>
+<p>126.	Neal, D., and Asada, H., “Bipolar Piezoelectric Buckling Actuators”, ASME/IEEE Transactions on Mechatronics, Vol. 19, No. 1, pp. 9-19, February 2014.</p>
+<p>127.	Torres, J., Asada, H. H., “High-Gain, High Transmissibility PZT Displacement Amplification Using a Rolling-Contact Buckling Mechanism and Preload Compensation Springs,” Vol. 30, Issue 4, pp. 781-791, February 2014</p>
+<p>128.	Sharghi-Namini, S., Tan, E., Ong, L-L.S., Ge, R., and Asada, H. “Dll4-containing exosomes induce capillary sprout retraction in a 3D microenvironment, ” Nature, Scientific Reports, Vol. 4, p. 1-8, February 2014.</p>
+<p>129.	Neal, D., and Asada, H., “Bipolar Piezoelectric Buckling Actuators”, ASME/IEEE Transactions on Mechatronics, Vol. 19, No. 1, pp. 9-19, February 2014.</p>
+<p>130.	Herath, S., Du, Y., Wang, D., Liao, K., Wang, Q., Chen, P.C.Y., Asada, H., “Characterization of uniaxial stiffness of extracellular matrix embedded with magnetic beads via bio-conjugation and under the influence of an external magnetic field,” Journal of the Mechanical Behavior of Biomedical Materials, Vol. 30, pp. 253-265, February 2014.</p>
+<p>131.	Neal, D., Sakar, M. S., Ong, L.-L. S.and Asada, H. H., “Formation of Elongated Fascicle-Inspired 3D Tissues Consisting of High-Density, Aligned Cells Using Sacrificial Outer Molding”, Lab-on-a-Chip, DOI:10.1039/C4LC00023D, March 2014.</p>
+<p>132.	Ang, X. M., Lee, M. H., Blocki, A., Chen, C., Ong, L. L., Asada, H. H., … &amp; Raghunath, M., “Macromolecular crowding amplifies adipogenesis of human bone marrow-derived mesenchymal stem cells by enhancing the pro-adipogenic microenvironment,” Tissue engineering Part A, 20(5-6), 966-981, March 2014.</p>
+<p>133.	Mazumdar, A., Asada, H., “Control-Configured Design of Spheroidal, Appendage-Free, Underwater Vehicles,” IEEE Transactions on Robotics, Vol. 30, Issue 2, pp. 448-460, April 2014.</p>
+<p>134.	Raman, R., Cvetkovic, E., Chen, V., Asada, H., Bashir, R., “Three-Dimensionally Printed Electrically Paced Skeletal Muscle Powered Biological Machines”, Proceedings of National Academy of Science (PNAS), vol. 111 no. 28,  10125–10130, doi: 10.1073/pnas.1401577111, June, 2014</p>
+<p>135.	 Cvetkovic, C., Raman, R., Chan, V., Williams, B. J., Tolish, M., Bajaj, P., Bashir, R., Asada, H., “Three-dimensionally printed biological machines powered by skeletal muscle,” Proceedings of the National Academy of Science, Vol. 111, pp. 10125-10130, July 2014.</p>
+<p>136.	Torres, J., Asada, H. H., “High-Gain, High Transmissibility PZT Displacement Amplification Using a Rolling-Contact Buckling Mechanism and Preload Compensation Springs,” Transactions on Robotics, Vol. 30, Issue 4, pp. 781-791, August 2014.</p>
+<p>137.	Yan, J., Kang, Y., Xu, S., Ong, L.L.S., Zhuo, S., Bunte, R.M., Chen, N., Asada H.H., So, P.T.C., Wanless, I.R., Yu, H., “In vivo label-free quantification of liver microcirculation using dual-modality microscopy,” Journal of Biomedical Optics, Vol.19(11), pp. 116006-1-116006-6, November 2014.</p>
+<p>138.	Wang, M., Ong, L.L.S., Dauwels, J., Asada, H.H., “Automatic Detection of Endothelial Cells in 3D Angiogenic Sprouts from Experimental Phase Contrast Images,” SPIE Medical Imaging, Vol. 9413, pp. 1-7, March 20, 2015.</p>
+<p>139.	Mazumdar, A., Triantaffylou, M., and Asada, H., “Dynamic Analysis and Design of Spheroidal Underwater Robots for Precision Multi-Directional Maneuvering”, IEEE/ASME Transactions on Mechatronics, Vol.20, Issue 6, pp.2890-2902, April  2015.</p>
+<p>140.	Mazumdar, A., Asada, H.H., “Dynamic Analysis and Design of Spheroidal Underwater Robots for Precision Multi-Directional Maneuvering”, IEEE/ASME Transactions on Mechatronics, Vol. PP, Issue 99, pp. 1-13, April 2015.</p>
+<p>141.	Chan, V., Neal, D., Uzel, S. G. M., Kim, H., Bashir, R., and Asada, H. H. “Fabrication and characterization of optogenetic, multi-strip cardiac muscles,” Lab on a Chip, DOI: 10.1039/C5LC00222B, 15(10):2258-68 April 2015.</p>
+<p>142.	Neal, D., Sakar, S., Chan, V., Bashir, R., Asada, H.H., “Mechanical Characterization and Shape Optimization of Fascicle-Like 3D Skeletal Muscle Tissues Contracted with Electrical and Optical Stimuli,” Tissue Engineering Part A, Vol. 21, Issue 11-12, pp. 1848-1858, May 2015.</p>
+<p>143.	Mayalu, M.N., and Asada, H.H. “Multi-Model Selection of Integrated Mechanistic-Empirical Models Describing T-Cell Response,” Published in 2015 American Control Conference (ACC), pp. 3132-3137, print ISBN 978-1-4799-8685-9, Inspec 15343945, DOI 10.1109/acc.2015.7171814, Chicago, IL, July 1-3, 2015. </p>
+<p>144.	Kim, M.-C., Whisler, J., Silberberg, A. R., Kamm, R. D., and Asada, H. H., “Cell Invasion Dynamics into a Extracellular Matrix”, PLoS Computational Biology, doi: 10.1371/journal.pcbi.1004535, October 2015.</p>
+<p>145.	Parietti, F. and H. Asada, &quot;Supernumerary Robotic Limbs for Human Body Support&quot;, IEEE Transactions on Robotics, 2015, pp 1176-1183, inspec 14616930, DOI 10.1109/ICRA.2014.6907002 </p>
+<p>146.	Wu, F.Y. and H. H. Asada, “Implicit and Intuitive Grasp Posture Control for Wearable Robotic Fingers : a Data Driven Method Using Partial Least Squares,” IEEE Trans. Robotics, Vol. 32, Issue 1, PP. 176-186, January 2016. </p>
+<p>147.	Gonzalez, D.J. and Asada, H.H., “Triple Scissor Extender: A 6-DOF Lifting and Positioning Robot“, Proceedings of the 2016 IEEE International Conference on Robotics and Automation, pp. TBA, Stockholm, Sweden, May 2016.</p>
+<p>148.	Girard, A., and Asada, H.H., “A Practical Optimal Control Approach for Two-Speed Actuators”, Accepted for Publication at the IEEE International Conference on Robotics and Automation,, Stockholm, Sweden, May 2016.</p>
+</div></div><div class='column small-12 profile-block'>
+              <div id='patents' class='profile-block-content'><h2>Patents</h2><ul><li>H. Asada and T. Kanade, "Robotics Manipulator", -- the patent of direct-drive robots-- US Patent 4,425,818, Issued on Jan. 17, 1984.</li>
+<li>T. Kanade and H. Asada, "Non-Contact Visual Proximity Sensing Apparatus", US Patent 4,427,880, Issued on Jan. 24, 1984.</li>
+<li>H. Asada and N. Goldfine, "Method for Grinding", US Patent 4,753,048, Issued on June 18, 1988.</li>
+<li>C.C. Federspiel and H. Asada, "Controller for Air-Conditioner", US Patent 5,170,935, Issued on Dec. 15, 1992.</li>
+<li>H. Asada, and A. Pil, "Method and Apparatus for the Recursive Design of Physical Structure, US Patent 5,684,343, Issued on November 04, 1997.</li>
+<li>D. Braunstein, and H. Asada, "Apparatus for Real-Time Estimation of Printing", US Patent 5,988,856, Issued on November 23, 1999.</li>
+<li>H. Asada, and M. Wada, "Reconfigurable Footprint Mechanism for Holonomic Omnidirectional Vehicles, US Patent 5,927,423, Issued July 27, 1999.</li>
+<li>H. Asada and J. Spano, "Surface Wave Distributed Actuator Systems", US Patent 5,953,773, Issued September 21, 1999.</li>
+<li>H. Asada, B.-H. Yang, and S.-W. Rhee, "Patient Monitoring Finger Ring Sensor", US Patent 5,964,701, Issued October 12, 1999.</li>
+<li>H. Asada, S. Mascaro, and J. Spano, "Human Transport System with Dead Reckoning Facilitating Docking, US Patent 6,135,228, Issued October 2000.</li>
+<li>H. Asada, K.-W. Chang, and S. Mascaro, "Finger Touch Sensors and Virtual Switch Panels", US Patent 6,236,037, Issued May 22, 2001.</li>
+<li>H. Asada, C. Erin, and K.-Y. Siu, "Power Efficient Coding Protocol", US Patent 6,553,535, Issued April 22, 2003.</li>
+<li>S.-W. Rhee, B.-H. Yang, and H. Asada, "A New Ring Sensor Design for Alleviaing the Influence of External Disturbance on the Finger Photoplethysmography", US Patent 6,402,690, Issued June 11, 2002.</li>
+<li>H. Asada, B.-H. Yang, and Y. Zhang, "Cuff-less, Continuous Monitoring of Blood Pressure Using Hemodynamic Model", US Patent 6,413,223, Issued July 2, 2002.</li>
+<li>H. Asada and S. Mascaro, "Fingernail Sensors for Measuring Finger Forces and Finger Posture", US Patent 6,388,247, Issued May 14, 2002.</li>
+<li>H. Asada, R. C. Hutchinson, and P. Shaltis, S. Rhee, "Photoplethysmograph Signal-to-Noise Line Enhancement", US Patent 6,699,199, Issued March 2, 2004.</li>
+<li>H. Asada and Philip Shaltis, "Vibratory Venous and Arterial Oximetry Sensor", US Patent 6,947,781, Issued September 20, 2005.</li>
+<li>H. Asada, and Y. Zhang, "Multi-Channel Blind System Identification for Cardiovascular Monitoring", US Patent 7,169,111, Issued January 30, 2007.</li>
+<li>H. Asada, K.J. Cho, and B. Selden, "Shape Memory Alloy Actuator System Using Segmented Binary Control", US Patent 7,188,473, Issued March 13, 2007.</li>
+<li>X.-D. He and H. Asada, "Heating, Ventilation, and Air Conditioning (HVAC) System and Method using Feedback Linearization", US Patent 7,331,191 B2, Issued on February 19, 2008.</li>
+<li>H. Asada, C-H. Liu, C. Erin, and K.-Y. Siu,"Source Coding for Interference Reduction", US Patent 7,376,105 B2, Issued on May 20, 2008.</li>
+<li>D. McCombe, A. Reisner, H. Asada and P. Shaltis, "Wearable pulse wave velocity blood pressure sensor and methods of calibration thereof", US Patent 7,674,231, Issued on March 9, 2010</li>
+<li>H. Asada, P. Shaltis, D. McCombe, and A. Reisner, "Wearable Blood Pressure Sensor and Method of Calibration", US Patent 7,641,614, Issued on January 5, 2010</li>
+<li>H. Asada and M.C. Menon, "Rapid Cooling and Heating of Car Seats with Massaging Effect", US Patent 7,731,279, Issued on June 8, 2010.</li>
+<li>X.-D. He, H. Asada, and T. Cheng, "Oil Circulation Observer for HVAC Systems", US Patent 7,895,846 B2, Issued on March 1, 2011.</li>
+<li>B. Sarh and H. Asada, "Methods and Apparatus for an Instrumented Fastener", US Patent 7,937,817, Issued on May 10, 2011.</li>
+<li>H. Asada, D. B. McCombie, A. T. Reisner, "Calibration of pulse transit time measurements to arterial blood pressure using external arterial pressure applied along the pulse transit path," US Patent No. 8,313,439, Issued on November 20, 2012.</li>
+<li>H. Asada, M. Menon, and B. Sarh, "Electromagnetic Clamping Device", US Patent 8,490,955, Issued on July 23, 2013</li>
+<li>H. Asada, B. Sarh, G. I. Karasic, "Robot Having Obstacle Avoidance Mechanism," US Patent No. 8,544,163, Issued on October 1, 2013.</li>
+<li>H. Asada and D. M. Neal, "Phased Array Buckling Actuator," US Patent No. 8,593,035, Issued on November 26, 2013.</li>
+</ul></div></div></div></section>  </div>
+</div>
+  </div>
+        <div class="region region-footer">
+    <div id="block-block-2" class="block block-block">
+
+    
+  <div class="content">
+    <footer><div class="footer-inner mesh-bg light">
+        <div class="clearfix row full-width">
+            <div class="helpful-links clearfix large-6 medium-12 columns">
+                <ul class="link-group"><li class="top-link"><a href="#"><span class="heavy">at MechE</span></a></li>
+                    <li><a href="/sites/default/files/ME-Diversity-Statement.pdf">Diversity Statement</a></li>    
+                    <li><a href="/faculty-positions">Faculty Positions</a></li> 
+                    <li><a href="/contact">Contact</a></li>
+                    <li><a href="/how-apply">Apply</a></li>
+                    <li><a href="/sitemap.xml">Sitemap</a></li>
+                    <li><a href="/privacy">Privacy</a></li>
+                    <li><a href="https://accessibility.mit.edu/">Accessibility</a></li>
+                    <li><a href="/credits">Credits</a></li>
+                    <li><a class="toggle-contrast" href="#">Toggle High Contrast</a></li>
+                </ul><ul class="link-group"><li class="top-link"><a href="#"><span class="heavy">Student</span> <span class="light">Resources</span></a></li>
+                    <li><a href="https://meche-ad-portal.mit.edu/">MechE Academic Dashboard</a></li>
+                    <li><a href="https://meundergrad.mit.edu/">MechE Undergrad Portal</a></li>
+                    <li><a href="https://meche-res.mit.edu/resources/2A/">Online 2A Contract</a></li>
+                    <li><a href="https://meundergrad.mit.edu/sb-thesis-information">SB Thesis Information</a></li>
+                    <li><a href="https://meche-res.mit.edu/resources/grad/">Online Grad Card</a></li>
+                    <li><a href="http://odge.mit.edu/gpp/oversight/petitions/">ODGE Petition</a></li>
+                        <li><a href="/sites/default/files/ON-LINE_THESIS_SUBMISSION.pdf">On-Line Thesis Submission</a></li>
+                    <li><a href="/sites/default/files/Zoom%20Instructions%20for%20PhD%20Thesis%20Defenses.pdf">Zoom Instructions for Virtual Defenses</a></li>
+                    <li><a href="/sites/default/files/MechE_Grad_Guide.pdf">Guide to Graduate Study</a></li>
+                    <li><a href="http://handbook.mit.edu/">MIT's Mind &amp; Hand Book</a></li>
+                </ul><ul class="link-group"><li class="top-link"><a href="#"><span class="heavy">Staff</span> <span class="light">Resources</span></a></li>
+                    <li><a href="https://meche-reservations.mit.edu/Web/">Room Reservations</a></li>
+                   <li><a href="https://meche-res.mit.edu/resource_links/">MechE Resources</a></li>
+                   <li><a href="https://meche.mit.edu/Shibboleth.sso/Login?target=https://meche.mit.edu/handy-links">Edit My Profile <i class="fa fa-lock"></i></a></li>
+                </ul></div>
+            
+            <div class="social-links large-3 medium-12 columns">
+                <hr class="meche-dots thin pad-both" /><p>Follow our research.<br />Or, just follow us.</p>
+                <ul class="social-btns"><li><a href="http://facebook.com/mitmeche" target="_blank" class="social-btn"><i class="fa fa-facebook"></i><span>Facebook</span></a></li>
+                    <li><a href="http://twitter.com/mitmeche" target="_blank" class="social-btn"><i class="fa fa-twitter"></i><span>Twitter</span></a></li>
+                    <li><a href="http://www.youtube.com/mitmeche" target="_blank" class="social-btn"><i class="fa fa-youtube"></i><span>YouTube</span></a></li>
+                    <li><a href="http://instagram.com/mitmeche" target="_blank" class="social-btn"><i class="fa fa-instagram"></i><span>Instagram</span></a></li>
+                    <li><a href="https://www.linkedin.com/company/11244119/" target="_blank" class="social-btn"><i class="fa fa-linkedin"></i><span>Linkedin</span></a></li>
+                </ul><hr class="meche-dots thin pad-both" /><link href="//cdn-images.mailchimp.com/embedcode/slim-10_7.css" rel="stylesheet" type="text/css" /><style type="text/css">
+<!--/*--><![CDATA[/* ><!--*/
+
+                #mc_embed_signup{clear:left; font-family:"Rajdhani",Helvetica,sans-serif; margin-top: 20px; margin-left: 0px; padding-let: 0px;}
+                /* Add your own Mailchimp form style overrides in your site stylesheet or in this style block.
+                   We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+
+/*--><!]]>*/
+</style><div id="mc_embed_signup">
+<form action="https://mit.us17.list-manage.com/subscribe/post?u=6f5c7fd40df3024d6e08b1cbd&amp;id=917562481d" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate="">
+    <div id="mc_embed_signup_scroll">
+                <p><label for="mce-EMAIL" style="color: #02b2f4; font-weight: normal;">Sign up for our monthly newsletter</label></p>
+                <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required="" style="width: 70%;" /><!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups--><div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_6f5c7fd40df3024d6e08b1cbd_917562481d" tabindex="-1" value="" /></div>
+    <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button" /></div>
+    </div>
+</form>
+</div>
+ 
+<!--End mc_embed_signup-->
+
+
+
+            </div>
+
+            <div class="find-us medium-12 columns clearfix">
+                
+                <hr class="meche-dots thin pad-both" /><div class="address-group">
+                    <h3><span class="heavy">MechE</span> <span class="light">Analog</span></h3>
+                    <p>Massachusetts Institute of Technology</p>
+                    <p class="heavy">Department of Mechanical Engineering</p><br /><p>77 Massachusetts Avenue, Room 3-173</p>
+                    <p>Cambridge, Massachusetts 02139</p>
+                </div>
+                <div class="clearfix find-us-logos">
+                    <a class="pull-left logo-meche" href="http://meche.mit.edu"><img src="/sites/all/themes/mit_meche/img/logo-meche-footer@2x.png" alt="MIT Mechanical Engineering" /></a>
+                    <a class="pull-left logo-mit" href="http://www.mit.edu"><img src="/sites/all/themes/mit_meche/img/logo-mit-footer@2x.png" alt="MIT" /></a>
+                </div>
+            </div>
+            
+        </div>
+        
+    </div>
+</footer>  </div>
+</div>
+  </div>
+      
+    </div> <!-- close off-canvas inner-wrap -->
+  </div> <!-- close off-canvas wrap -->
+
+
+          <!-- JS Files -->
+
+        <!-- Loaded from CDN -->
+        
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+        <script>window.jQuery || document.write('<script src="/js/vendor/jquery.js"><\/script>')</script>
+        <!--
+            Load Concatenated and Minified Scripts ( plugins.js, foundation.js, scripts.js )
+        -->
+        <!-- jQuery Modal -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+
+        <script src="/sites/all/themes/mit_meche/js/scripts.all.min.js"></script>
+        <script type="text/javascript" src="/sites/all/themes/mit_meche/js/vendor/packery.pkgd.min.js"></script>
+        
+  <script>
+
+      $(document).ready(function(){
+
+          MecheController.init({});
+          
+          $(window).on("throttledresize", function( event ) {
+          
+              MecheController.resize();
+
+          }).trigger("throttledresize");
+      });
+
+  </script>
+
+
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"ab0374a39e","applicationID":"39297557","transactionName":"Z1QGZBZQVkNYU0YNWV4eJVMQWFdeFl1XB15VbgZcC1JTQ2ZAQAtQWV0BbxRQX1U=","queueTime":0,"applicationTime":192,"atts":"SxMFEl5KRU0=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

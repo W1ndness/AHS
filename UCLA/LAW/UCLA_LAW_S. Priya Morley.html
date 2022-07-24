@@ -1,0 +1,1527 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" prefix="og: https://ogp.me/ns#" class="md-no-js">
+<head>
+
+	<!-- Google Tag Manager -->
+	<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+	new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+	j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+	'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+	})(window,document,'script','dataLayer','GTM-5K47PP2');</script>
+	<!-- End Google Tag Manager -->
+
+	<meta charset="utf-8" /><script type="text/javascript">(window.NREUM||(NREUM={})).init={ajax:{deny_list:["bam.nr-data.net"]}};(window.NREUM||(NREUM={})).loader_config={licenseKey:"d1b3c075f2",applicationID:"392313091"};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var i=e[n]={exports:{}};t[n][0].call(i.exports,function(e){var i=t[n][1][e];return r(i||e)},i,i.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(t,e,n){function r(){}function i(t,e,n,r){return function(){return s.recordSupportability("API/"+e+"/called"),o(t+e,[u.now()].concat(c(arguments)),n?null:this,r),n?void 0:this}}var o=t("handle"),a=t(9),c=t(10),f=t("ee").get("tracer"),u=t("loader"),s=t(4),d=NREUM;"undefined"==typeof window.newrelic&&(newrelic=d);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",v=l+"ixn-";a(p,function(t,e){d[e]=i(l,e,!0,"api")}),d.addPageAction=i(l,"addPageAction",!0),d.setCurrentRouteName=i(l,"routeName",!0),e.exports=newrelic,d.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(t,e){var n={},r=this,i="function"==typeof e;return o(v+"tracer",[u.now(),t,n],r),function(){if(f.emit((i?"":"no-")+"fn-start",[u.now(),r,i],n),i)try{return e.apply(this,arguments)}catch(t){throw f.emit("fn-err",[arguments,this,t],n),t}finally{f.emit("fn-end",[u.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){m[e]=i(v,e)}),newrelic.noticeError=function(t,e){"string"==typeof t&&(t=new Error(t)),s.recordSupportability("API/noticeError/called"),o("err",[t,u.now(),!1,e])}},{}],2:[function(t,e,n){function r(t){if(NREUM.init){for(var e=NREUM.init,n=t.split("."),r=0;r<n.length-1;r++)if(e=e[n[r]],"object"!=typeof e)return;return e=e[n[n.length-1]]}}e.exports={getConfiguration:r}},{}],3:[function(t,e,n){var r=!1;try{var i=Object.defineProperty({},"passive",{get:function(){r=!0}});window.addEventListener("testPassive",null,i),window.removeEventListener("testPassive",null,i)}catch(o){}e.exports=function(t){return r?{passive:!0,capture:!!t}:!!t}},{}],4:[function(t,e,n){function r(t,e){var n=[a,t,{name:t},e];return o("storeMetric",n,null,"api"),n}function i(t,e){var n=[c,t,{name:t},e];return o("storeEventMetrics",n,null,"api"),n}var o=t("handle"),a="sm",c="cm";e.exports={constants:{SUPPORTABILITY_METRIC:a,CUSTOM_METRIC:c},recordSupportability:r,recordCustom:i}},{}],5:[function(t,e,n){function r(){return c.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,c=t(11);e.exports=r,e.exports.offset=a,e.exports.getLastTimestamp=i},{}],6:[function(t,e,n){function r(t,e){var n=t.getEntries();n.forEach(function(t){"first-paint"===t.name?l("timing",["fp",Math.floor(t.startTime)]):"first-contentful-paint"===t.name&&l("timing",["fcp",Math.floor(t.startTime)])})}function i(t,e){var n=t.getEntries();if(n.length>0){var r=n[n.length-1];if(u&&u<r.startTime)return;var i=[r],o=a({});o&&i.push(o),l("lcp",i)}}function o(t){t.getEntries().forEach(function(t){t.hadRecentInput||l("cls",[t])})}function a(t){var e=navigator.connection||navigator.mozConnection||navigator.webkitConnection;if(e)return e.type&&(t["net-type"]=e.type),e.effectiveType&&(t["net-etype"]=e.effectiveType),e.rtt&&(t["net-rtt"]=e.rtt),e.downlink&&(t["net-dlink"]=e.downlink),t}function c(t){if(t instanceof y&&!w){var e=Math.round(t.timeStamp),n={type:t.type};a(n),e<=v.now()?n.fid=v.now()-e:e>v.offset&&e<=Date.now()?(e-=v.offset,n.fid=v.now()-e):e=v.now(),w=!0,l("timing",["fi",e,n])}}function f(t){"hidden"===t&&(u=v.now(),l("pageHide",[u]))}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var u,s,d,p,l=t("handle"),v=t("loader"),m=t(8),g=t(3),y=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){s=new PerformanceObserver(r);try{s.observe({entryTypes:["paint"]})}catch(h){}d=new PerformanceObserver(i);try{d.observe({entryTypes:["largest-contentful-paint"]})}catch(h){}p=new PerformanceObserver(o);try{p.observe({type:"layout-shift",buffered:!0})}catch(h){}}if("addEventListener"in document){var w=!1,b=["click","keydown","mousedown","pointerdown","touchstart"];b.forEach(function(t){document.addEventListener(t,c,g(!1))})}m(f)}},{}],7:[function(t,e,n){function r(t,e){if(!i)return!1;if(t!==i)return!1;if(!e)return!0;if(!o)return!1;for(var n=o.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var c=navigator.userAgent,f=c.match(a);f&&c.indexOf("Chrome")===-1&&c.indexOf("Chromium")===-1&&(i="Safari",o=f[1])}e.exports={agent:i,version:o,match:r}},{}],8:[function(t,e,n){function r(t){function e(){t(c&&document[c]?document[c]:document[o]?"hidden":"visible")}"addEventListener"in document&&a&&document.addEventListener(a,e,i(!1))}var i=t(3);e.exports=r;var o,a,c;"undefined"!=typeof document.hidden?(o="hidden",a="visibilitychange",c="visibilityState"):"undefined"!=typeof document.msHidden?(o="msHidden",a="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(o="webkitHidden",a="webkitvisibilitychange",c="webkitVisibilityState")},{}],9:[function(t,e,n){function r(t,e){var n=[],r="",o=0;for(r in t)i.call(t,r)&&(n[o]=e(r,t[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],10:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,i=n-e||0,o=Array(i<0?0:i);++r<i;)o[r]=t[e+r];return o}e.exports=r},{}],11:[function(t,e,n){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(t,e,n){function r(){}function i(t){function e(t){return t&&t instanceof r?t:t?u(t,f,a):a()}function n(n,r,i,o,a){if(a!==!1&&(a=!0),!l.aborted||o){t&&a&&t(n,r,i);for(var c=e(i),f=m(n),u=f.length,s=0;s<u;s++)f[s].apply(c,r);var p=d[w[n]];return p&&p.push([b,n,r,c]),c}}function o(t,e){h[t]=m(t).concat(e)}function v(t,e){var n=h[t];if(n)for(var r=0;r<n.length;r++)n[r]===e&&n.splice(r,1)}function m(t){return h[t]||[]}function g(t){return p[t]=p[t]||i(n)}function y(t,e){l.aborted||s(t,function(t,n){e=e||"feature",w[n]=e,e in d||(d[e]=[])})}var h={},w={},b={on:o,addEventListener:o,removeEventListener:v,emit:n,get:g,listeners:m,context:e,buffer:y,abort:c,aborted:!1};return b}function o(t){return u(t,f,a)}function a(){return new r}function c(){(d.api||d.feature)&&(l.aborted=!0,d=l.backlog={})}var f="nr@context",u=t("gos"),s=t(9),d={},p={},l=e.exports=i();e.exports.getOrSetContext=o,l.backlog=d},{}],gos:[function(t,e,n){function r(t,e,n){if(i.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return t[e]=r,r}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){i.buffer([t],r),i.emit(t,e,n)}var i=t("ee").get("handle");e.exports=r,r.ee=i},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,o,function(){return i++})}var i=1,o="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!M++){var t=T.info=NREUM.info,e=m.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&e))return u.abort();f(x,function(e,n){t[e]||(t[e]=n)});var n=a();c("mark",["onload",n+T.offset],null,"api"),c("timing",["load",n]);var r=m.createElement("script");0===t.agent.indexOf("http://")||0===t.agent.indexOf("https://")?r.src=t.agent:r.src=l+"://"+t.agent,e.parentNode.insertBefore(r,e)}}function i(){"complete"===m.readyState&&o()}function o(){c("mark",["domContent",a()+T.offset],null,"api")}var a=t(5),c=t("handle"),f=t(9),u=t("ee"),s=t(7),d=t(2),p=t(3),l=d.getConfiguration("ssl")===!1?"http":"https",v=window,m=v.document,g="addEventListener",y="attachEvent",h=v.XMLHttpRequest,w=h&&h.prototype,b=!1;NREUM.o={ST:setTimeout,SI:v.setImmediate,CT:clearTimeout,XHR:h,REQ:v.Request,EV:v.Event,PR:v.Promise,MO:v.MutationObserver};var E=""+location,x={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1216.min.js"},O=h&&w&&w[g]&&!/CriOS/.test(navigator.userAgent),T=e.exports={offset:a.getLastTimestamp(),now:a,origin:E,features:{},xhrWrappable:O,userAgent:s,disabled:b};if(!b){t(1),t(6),m[g]?(m[g]("DOMContentLoaded",o,p(!1)),v[g]("load",r,p(!1))):(m[y]("onreadystatechange",i),v[y]("onload",r)),c("mark",["firstbyte",a.getLastTimestamp()],null,"api");var M=0}},{}],"wrap-function":[function(t,e,n){function r(t,e){function n(e,n,r,f,u){function nrWrapper(){var o,a,s,p;try{a=this,o=d(arguments),s="function"==typeof r?r(o,a):r||{}}catch(l){i([l,"",[o,a,f],s],t)}c(n+"start",[o,a,f],s,u);try{return p=e.apply(a,o)}catch(v){throw c(n+"err",[o,a,v],s,u),v}finally{c(n+"end",[o,a,p],s,u)}}return a(e)?e:(n||(n=""),nrWrapper[p]=e,o(e,nrWrapper,t),nrWrapper)}function r(t,e,r,i,o){r||(r="");var c,f,u,s="-"===r.charAt(0);for(u=0;u<e.length;u++)f=e[u],c=t[f],a(c)||(t[f]=n(c,s?f+r:r,i,f,o))}function c(n,r,o,a){if(!v||e){var c=v;v=!0;try{t.emit(n,r,o,e,a)}catch(f){i([f,n,r,o],t)}v=c}}return t||(t=s),n.inPlace=r,n.flag=p,n}function i(t,e){e||(e=s);try{e.emit("internal-error",t)}catch(n){}}function o(t,e,n){if(Object.defineProperty&&Object.keys)try{var r=Object.keys(t);return r.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(o){i([o],n)}for(var a in t)l.call(t,a)&&(e[a]=t[a]);return e}function a(t){return!(t&&t instanceof Function&&t.apply&&!t[p])}function c(t,e){var n=e(t);return n[p]=t,o(t,n,s),n}function f(t,e,n){var r=t[e];t[e]=c(r,n)}function u(){for(var t=arguments.length,e=new Array(t),n=0;n<t;++n)e[n]=arguments[n];return e}var s=t("ee"),d=t(10),p="nr@original",l=Object.prototype.hasOwnProperty,v=!1;e.exports=r,e.exports.wrapFunction=c,e.exports.wrapInPlace=f,e.exports.argsToArray=u},{}]},{},["loader"]);</script>
+<link rel="canonical" href="https://law.ucla.edu/faculty/faculty-profiles/s-priya-morley" />
+<meta property="og:site_name" content="UCLA School of Law" />
+<meta property="og:url" content="https://law.ucla.edu/faculty/faculty-profiles/s-priya-morley" />
+<meta name="Generator" content="Drupal 9 (https://www.drupal.org)" />
+<meta name="MobileOptimized" content="width" />
+<meta name="HandheldFriendly" content="true" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="icon" href="/sites/default/files/favicon.ico" type="image/vnd.microsoft.icon" />
+
+	<title>Morley, S. Priya | UCLA Law</title>
+	<link rel="stylesheet" media="all" href="/sites/default/files/css/css_JQyZ9StD4-4I5jikYtL8icbvn1b-f6xMTWUzpXDhKlc.css" />
+<link rel="stylesheet" media="all" href="/sites/default/files/css/css_QcTdNQxZ9WnwZhTkiobreMi-kmQDw9R0merxD9luTAM.css" />
+
+	<script src="/sites/default/files/js/js_-lPh4GDnrAMZNf3_YHVBFR-YAvFpvz47fXceeBTdK8A.js"></script>
+
+</head>
+<body class="with-emergency level">
+
+	<!-- Google Tag Manager (noscript) -->
+	<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5K47PP2"
+	height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+	<!-- End Google Tag Manager (noscript) -->
+
+	<svg aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<defs>
+		<symbol id="brei-icon-logo-black" viewBox="0 0 106 32">
+			<title>logo-black</title>
+			<path fill="#000" style="fill: var(--color1, #000)" d="M77.288 9.88h-2.649v12.73h8.838v-2.153h-6.189z"></path>
+			<path fill="#000" style="fill: var(--color1, #000)" d="M87.907 20.933c-0.869 0-1.428-0.31-1.428-1.18s0.621-1.159 1.904-1.428c0.58-0.104 1.159-0.29 1.697-0.538v1.387h0.021c-0.021 0.911-0.787 1.78-2.194 1.759v0zM92.378 16.379c0-2.153-1.18-3.395-3.871-3.395s-3.871 1.408-3.953 3.043h2.194c0.083-0.89 0.621-1.304 1.78-1.304 1.014 0 1.532 0.393 1.532 1.097s-0.704 0.828-2.215 1.056c-2.049 0.29-3.684 0.931-3.684 2.96 0 1.821 1.325 2.815 3.208 2.815 1.573 0 2.235-0.538 2.691-1.242 0.021 0.352 0.124 0.704 0.29 1.014h2.339v-0.083c-0.207-0.166-0.31-0.58-0.31-1.283v-4.678z"></path>
+			<path fill="#000" style="fill: var(--color1, #000)" d="M103.617 13.213l-1.159 4.285c-0.207 0.766-0.414 1.718-0.414 1.718s-0.228-0.994-0.435-1.739l-1.201-4.264h-2.070l-1.159 4.264c-0.186 0.766-0.393 1.739-0.393 1.739h-0.041c0 0-0.207-0.994-0.414-1.718l-1.097-4.285h-2.401l2.691 9.232h2.215l1.242-4.533 0.435-1.594c0 0 0.207 0.869 0.414 1.594l1.221 4.533h2.215l2.712-9.232h-2.36z"></path>
+			<path fill="#2774ae" style="fill: var(--color2, #2774ae)" d="M10.846 17.477l0.745-8.735h2.836l-0.787 8.797c-0.166 1.904 0.58 3.27 2.463 3.27s2.939-1.387 3.125-3.084l0.807-8.983h2.815l-0.745 8.88c-0.31 3.415-2.567 5.982-6.21 5.982-2.608 0.104-4.843-1.904-5.030-4.512h-0.021c-0.021-0.538-0.021-1.076 0-1.614v0zM31.565 8.473c1.325-0.021 2.629 0.352 3.726 1.076l-0.31 3.457c-0.849-1.18-2.235-1.821-3.684-1.718-3.022 0-4.678 2.111-4.906 4.781s1.118 4.678 4.036 4.678c1.552 0.021 3.022-0.642 4.057-1.801l-0.31 3.56c-1.201 0.704-2.546 1.097-3.933 1.118-4.802 0-6.996-3.581-6.644-7.514h-0.062c0.373-4.181 3.188-7.638 8.031-7.638v0zM37.589 8.742h2.794l-1.035 11.86h5.568c0 0.145-0.248 2.732-0.248 2.732h-8.404l1.325-14.592zM52.864 8.079h0.228l5.278 15.213h-3.001l-0.683-2.298h-5.464l-1.097 2.298h-3.022l7.762-15.213zM0 32.007h67.85v-32h-67.85v32z"></path>
+			<path fill="#2774ae" style="fill: var(--color2, #2774ae)" d="M52.699 14.185c-0.062-0.207-0.083-0.414-0.103-0.621h-0.041c-0.041 0.207-0.124 0.414-0.207 0.6l-1.966 4.367h3.602c-0.021 0-1.118-3.684-1.283-4.347z"></path>
+			<path fill="#fff" style="fill: var(--color3, #fff)" d="M10.867 19.091c0.186 2.629 2.401 4.636 5.030 4.512 3.643 0 5.899-2.567 6.21-5.982l0.745-8.88h-2.815l-0.807 8.983c-0.166 1.697-1.221 3.084-3.125 3.084s-2.649-1.366-2.463-3.27l0.787-8.797h-2.836l-0.745 8.735c-0.041 0.538-0.041 1.076 0 1.614h0.021z"></path>
+			<path fill="#fff" style="fill: var(--color3, #fff)" d="M30.22 23.645c1.387-0.041 2.732-0.414 3.912-1.118l0.31-3.56c-1.035 1.159-2.505 1.801-4.057 1.801-2.918 0-4.285-2.008-4.036-4.678 0.228-2.67 1.904-4.781 4.906-4.781 1.449-0.104 2.836 0.538 3.684 1.718l0.331-3.457c-1.118-0.724-2.401-1.097-3.726-1.076-4.843 0-7.658 3.477-8.031 7.658h0.062c-0.352 3.891 1.842 7.493 6.644 7.493z"></path>
+			<path fill="#fff" style="fill: var(--color3, #fff)" d="M44.937 20.602h-5.568l1.035-11.86h-2.794l-1.325 14.592h8.404c0 0 0.248-2.587 0.248-2.732z"></path>
+			<path fill="#fff" style="fill: var(--color3, #fff)" d="M52.347 14.185c0.083-0.186 0.166-0.393 0.207-0.6h0.041c0.021 0.207 0.062 0.414 0.103 0.621 0.145 0.662 1.263 4.347 1.263 4.347h-3.602l1.987-4.367zM49.201 20.995h5.464l0.683 2.298h3.001l-5.278-15.213h-0.228l-7.762 15.213h3.022l1.097-2.298z"></path>
+		</symbol>
+		<symbol id="brei-icon-logo-white" viewBox="0 0 106 32">
+			<title>logo-white</title>
+			<path fill="#fff" style="fill: var(--color3, #fff)" d="M77.288 9.88h-2.649v12.73h8.838v-2.153h-6.189z"></path>
+			<path fill="#fff" style="fill: var(--color3, #fff)" d="M87.907 20.933c-0.869 0-1.428-0.31-1.428-1.18s0.621-1.159 1.904-1.428c0.58-0.104 1.159-0.29 1.697-0.538v1.387h0.021c-0.021 0.911-0.787 1.78-2.194 1.759v0zM92.378 16.379c0-2.153-1.18-3.395-3.871-3.395s-3.871 1.408-3.953 3.043h2.194c0.083-0.89 0.621-1.304 1.78-1.304 1.014 0 1.532 0.393 1.532 1.097s-0.704 0.828-2.215 1.056c-2.049 0.29-3.684 0.931-3.684 2.96 0 1.821 1.325 2.815 3.208 2.815 1.573 0 2.235-0.538 2.691-1.242 0.021 0.352 0.124 0.704 0.29 1.014h2.339v-0.083c-0.207-0.166-0.31-0.58-0.31-1.283v-4.678z"></path>
+			<path fill="#fff" style="fill: var(--color3, #fff)" d="M103.617 13.213l-1.159 4.285c-0.207 0.766-0.414 1.718-0.414 1.718s-0.228-0.994-0.435-1.739l-1.201-4.264h-2.070l-1.159 4.264c-0.186 0.766-0.393 1.739-0.393 1.739h-0.041c0 0-0.207-0.994-0.414-1.718l-1.097-4.285h-2.401l2.691 9.232h2.215l1.242-4.533 0.435-1.594c0 0 0.207 0.869 0.414 1.594l1.221 4.533h2.215l2.712-9.232h-2.36z"></path>
+			<path fill="#2774ae" style="fill: var(--color2, #2774ae)" d="M10.846 17.477l0.745-8.735h2.836l-0.787 8.797c-0.166 1.904 0.58 3.27 2.463 3.27s2.939-1.387 3.125-3.084l0.807-8.983h2.815l-0.745 8.88c-0.31 3.415-2.567 5.982-6.21 5.982-2.608 0.104-4.843-1.904-5.030-4.512h-0.021c-0.021-0.538-0.021-1.076 0-1.614v0zM31.565 8.473c1.325-0.021 2.629 0.352 3.726 1.076l-0.31 3.457c-0.849-1.18-2.235-1.821-3.684-1.718-3.022 0-4.678 2.111-4.906 4.781s1.118 4.678 4.036 4.678c1.552 0.021 3.022-0.642 4.057-1.801l-0.31 3.56c-1.201 0.704-2.546 1.097-3.933 1.118-4.802 0-6.996-3.581-6.644-7.514h-0.062c0.373-4.181 3.188-7.638 8.031-7.638v0zM37.589 8.742h2.794l-1.035 11.86h5.568c0 0.145-0.248 2.732-0.248 2.732h-8.404l1.325-14.592zM52.864 8.079h0.228l5.278 15.213h-3.001l-0.683-2.298h-5.464l-1.097 2.298h-3.022l7.762-15.213zM0 32.007h67.85v-32h-67.85v32z"></path>
+			<path fill="#2774ae" style="fill: var(--color2, #2774ae)" d="M52.699 14.185c-0.062-0.207-0.083-0.414-0.103-0.621h-0.041c-0.041 0.207-0.124 0.414-0.207 0.6l-1.966 4.367h3.602c-0.021 0-1.118-3.684-1.283-4.347z"></path>
+			<path fill="#fff" style="fill: var(--color3, #fff)" d="M10.867 19.091c0.186 2.629 2.401 4.636 5.030 4.512 3.643 0 5.899-2.567 6.21-5.982l0.745-8.88h-2.815l-0.807 8.983c-0.166 1.697-1.221 3.084-3.125 3.084s-2.649-1.366-2.463-3.27l0.787-8.797h-2.836l-0.745 8.735c-0.041 0.538-0.041 1.076 0 1.614h0.021z"></path>
+			<path fill="#fff" style="fill: var(--color3, #fff)" d="M30.22 23.645c1.387-0.041 2.732-0.414 3.912-1.118l0.31-3.56c-1.035 1.159-2.505 1.801-4.057 1.801-2.918 0-4.285-2.008-4.036-4.678 0.228-2.67 1.904-4.781 4.906-4.781 1.449-0.104 2.836 0.538 3.684 1.718l0.331-3.457c-1.118-0.724-2.401-1.097-3.726-1.076-4.843 0-7.658 3.477-8.031 7.658h0.062c-0.352 3.891 1.842 7.493 6.644 7.493z"></path>
+			<path fill="#fff" style="fill: var(--color3, #fff)" d="M44.937 20.602h-5.568l1.035-11.86h-2.794l-1.325 14.592h8.404c0 0 0.248-2.587 0.248-2.732z"></path>
+			<path fill="#fff" style="fill: var(--color3, #fff)" d="M52.347 14.185c0.083-0.186 0.166-0.393 0.207-0.6h0.041c0.021 0.207 0.062 0.414 0.103 0.621 0.145 0.662 1.263 4.347 1.263 4.347h-3.602l1.987-4.367zM49.201 20.995h5.464l0.683 2.298h3.001l-5.278-15.213h-0.228l-7.762 15.213h3.022l1.097-2.298z"></path>
+		</symbol>
+		<symbol id="brei-icon-pause" viewBox="0 0 24 32">
+			<title>pause</title>
+			<path d="M0 0h8v32h-8v-32z"></path>
+			<path d="M16 0h8v32h-8v-32z"></path>
+		</symbol>
+		<symbol id="brei-icon-pin" viewBox="0 0 21 32">
+			<title>pin</title>
+			<path d="M10.667 32v0l-0.485-0.646c-0.485-0.646-10.182-15.030-10.182-20.687 0-5.98 4.848-10.667 10.828-10.505 5.818 0 10.505 4.687 10.505 10.505 0 5.657-9.697 20.040-10.182 20.687l-0.485 0.646zM10.667 5.818c-2.586 0-4.848 2.101-4.848 4.848 0 2.586 2.101 4.848 4.848 4.848s4.848-2.101 4.848-4.848c0 0 0 0 0 0-0.162-2.747-2.263-4.848-4.848-4.848v0z"></path>
+		</symbol>
+		<symbol id="brei-icon-phone" viewBox="0 0 31 32">
+			<title>phone</title>
+			<path d="M29.12 23.36l-5.28-1.76c-1.28-0.8-2.88-0.32-3.68 0.8-1.28 1.44-1.44 2.080-3.68 0.96-3.52-2.24-6.4-5.28-8.48-8.96-0.96-2.4-0.32-2.4 1.28-3.52 1.6-1.28 1.6-1.92 1.12-3.52l-1.44-5.44c-1.44-3.68-6.4-1.76-8.16 2.080-4.96 10.72 14.56 31.68 25.6 27.36 4-1.44 6.080-6.24 2.72-8z"></path>
+		</symbol>
+		<symbol id="brei-icon-website" viewBox="0 0 32 32">
+			<title>website</title>
+			<path d="M16.16 32v0c-8.96 0-16.16-7.2-16.16-16s7.2-16 16-16v0c8.8 0 16 7.2 16 16v0c0 8.8-7.040 16-15.84 16zM12.96 22.4v0 0 0c0.64 2.24 1.76 4.32 3.040 6.24 1.28-1.92 2.4-4 3.040-6.24h-6.080zM22.56 22.4c-0.16 0-0.32 0.16-0.32 0.32-0.48 1.28-0.96 2.72-1.44 4-0.16 0.32-0.32 0.64-0.48 0.8 0 0.16-0.16 0.32-0.16 0.48 2.88-0.96 5.28-3.040 6.88-5.6 0 0-0.16 0-0.16 0h-4.32zM4.96 22.4c0.96 2.24 4.96 5.44 6.72 5.6v0c0-0.16-0.16-0.16-0.16-0.32-0.64-1.44-1.12-2.88-1.6-4.16 0-0.16 0-0.32-0.16-0.32 0-0.16-0.16-0.32-0.16-0.48-0.16-0.32-0.32-0.32-0.48-0.32s-0.16 0-0.32 0-0.16 0-0.32 0h-3.52zM3.84 12.8c-0.16 0-0.32 0.16-0.32 0.32 0 0 0 0 0 0-0.48 1.92-0.48 3.84 0 5.76 0 0.16 0.16 0.32 0.32 0.32v0c0 0 0 0 0.16 0h4.64c0.16 0 0.32 0 0.32 0-0.32-2.080-0.32-4.16 0-6.4 0 0-0.16 0-0.16 0h-4.96zM23.36 12.8c0 0-0.16 0-0.16 0s-0.16 0-0.16 0c0.32 2.080 0.32 4.16 0 6.4 0 0 0.16 0 0.16 0h4.96c0.16 0 0.32-0.16 0.32-0.32 0 0 0 0 0 0 0.48-1.92 0.48-3.84 0-5.76 0-0.16-0.16-0.32-0.32-0.32v0 0h-4.8zM12.32 12.8c-0.32 2.080-0.32 4.16 0 6.4h7.52c0.32-2.080 0.32-4.16 0-6.4h-7.52zM25.6 9.6h1.44c-1.12-2.4-4.96-5.44-6.88-5.6 0.96 1.76 1.6 3.52 2.080 5.28 0.16 0.16 0.32 0.32 0.48 0.32 0.32 0 0.64 0 0.96 0h1.92zM11.84 4c-2.88 0.96-5.28 2.88-6.88 5.6 0 0 0 0 0.16 0h4.32c0.16 0 0.32-0.16 0.32-0.32 0.16-0.32 0.16-0.64 0.32-0.96s0.32-0.96 0.48-1.28c0.16-0.8 0.48-1.44 0.8-2.24 0.16-0.32 0.32-0.48 0.48-0.8v0zM16 3.2c-1.28 1.92-2.4 4.16-3.040 6.4h6.080c-0.64-2.24-1.6-4.48-3.040-6.4z"></path>
+		</symbol>
+		<symbol id="brei-icon-doublechevron" viewBox="0 0 25 32">
+			<title>doublechevron</title>
+			<path d="M16.4 15l-14-14.6c-0.6-0.6-1.4-0.6-2 0s-0.6 1.5 0 2.1l12 12.5c0.6 0.6 0.6 1.5 0 2.1l-0.4 0.4-11.6 12c-0.6 0.6-0.6 1.5 0 2.1s1.4 0.6 2 0l14-14.5c0.6-0.6 0.6-1.6 0-2.1z"></path>
+			<path d="M24.3 15l-14-14.5c-0.6-0.6-1.4-0.6-2 0-0.6 0.5-0.6 1.4-0.1 2l12 12.5c0.6 0.6 0.6 1.5 0 2.1l-0.4 0.4-11.6 12c-0.6 0.6-0.6 1.5 0 2.1s1.4 0.6 2 0l14-14.5c0.6-0.6 0.6-1.6 0.1-2.1z"></path>
+		</symbol>
+		<symbol id="brei-icon-email" viewBox="0 0 52 32">
+			<title>email</title>
+			<path d="M51.569 29.538c0-0.123 0.123-0.492 0.123-0.738v-23.877l-16 11.815 15.877 12.8z"></path>
+			<path d="M2.462 32h46.769l-16.123-13.538-2.585 1.969c-2.831 2.215-6.523 2.215-9.477 0l-2.462-1.969-16.123 13.538z"></path>
+			<path d="M0 4.923v23.877c0 0.246 0 0.615 0.123 0.738l15.877-12.8-16-11.815z"></path>
+			<path d="M51.692 0h-51.692v0.985l22.769 17.723c1.846 1.477 4.308 1.477 6.031 0l22.892-17.723v-0.985z"></path>
+		</symbol>
+		<symbol id="brei-icon-info" viewBox="0 0 11 32">
+			<title>info</title>
+			<path d="M10.012 25.919c-0.412 0.156-0.838 0.319-1.25 0.5-0.338 0.137-0.669 0.306-1.019 0.413-0.081 0.044-0.181 0.056-0.269 0.031-0.194-0.050-0.306-0.25-0.256-0.444 0.069-0.625 0.175-1.244 0.319-1.85 0.925-3.744 1.844-7.494 2.756-11.238 0.45-1.825-0.506-3.313-2.362-3.688-0.494-0.1-1.013-0.050-1.475 0.156-0.356 0.131-0.694 0.3-1.013 0.506-1.481 1.075-2.938 2.144-4.362 3.269-0.394 0.381-0.756 0.8-1.081 1.25v0.756c0.25 0.338 0.719 0.425 1.075 0.206 0.475-0.181 0.938-0.419 1.413-0.613 0.206-0.1 0.419-0.169 0.638-0.219 0.075-0.031 0.163-0.037 0.244-0.012 0.2 0.056 0.325 0.262 0.269 0.469-0.056 0.55-0.15 1.1-0.288 1.638-0.962 3.881-1.938 7.762-2.881 11.656-0.35 1.413 0.281 2.619 1.6 3.225 0.031 0.019 0.063 0.044 0.094 0.069h2.081c1.819-0.944 3.438-2.194 5.019-3.469 0.394-0.331 0.769-0.688 1.113-1.075 0.156-0.181 0.287-0.387 0.394-0.606 0.137-0.238 0.106-0.531-0.069-0.738-0.162-0.206-0.438-0.281-0.688-0.194z"></path>
+			<path d="M6.944 0c-2.175 0-3.938 1.762-3.944 3.938 0 2.175 1.762 3.944 3.938 3.944 0.006 0 0.013 0 0.019 0 2.169 0 3.931-1.763 3.925-3.931 0 0 0 0 0-0.006 0-2.175-1.762-3.944-3.938-3.944z"></path>
+		</symbol>
+		<symbol id="brei-icon-quote" viewBox="0 0 38 32">
+			<title>quote</title>
+			<path d="M15.601-0.001c-4.867 0-8.684 1.491-11.449 4.517-2.773 3.019-4.152 7.737-4.152 14.155v13.335h16.041v-14.409h-7.745c0-3.526 0.574-6.15 1.707-7.864 1.126-1.714 2.989-2.579 5.591-2.579l0.007-7.156zM37.597-0.001c-2.43 0-4.599 0.358-6.5 1.088s-3.541 1.856-4.875 3.384c-1.342 1.536-2.363 3.488-3.078 5.851-0.708 2.378-1.066 5.143-1.066 8.334v13.335h16.101v-14.394h-7.745c0-3.526 0.567-6.15 1.692-7.864s2.952-2.579 5.471-2.579v-7.156z"></path>
+		</symbol>
+		<symbol id="brei-icon-minus" viewBox="0 0 32 32">
+			<title>minus</title>
+			<path d="M0.042 14.542h32v3h-32v-3z"></path>
+		</symbol>
+		<symbol id="brei-icon-plus" viewBox="0 0 32 32">
+			<title>plus</title>
+			<path d="M32 14.667h-14.5v-14.667h-2.833v14.667h-14.667v2.833h14.667v14.5h2.833v-14.5h14.5z"></path>
+		</symbol>
+		<symbol id="brei-icon-play" viewBox="0 0 28 32">
+			<title>play</title>
+			<path d="M28.377 15.999l-28.377 16.001v-32z"></path>
+		</symbol>
+		<symbol id="brei-icon-home" viewBox="0 0 36 32">
+			<title>home</title>
+			<path d="M18.11 0c-0.157 0.022-0.295 0.094-0.397 0.2l-0 0-17.515 17.512c-0.122 0.123-0.197 0.292-0.197 0.479 0 0.375 0.303 0.679 0.677 0.681h3.7v12.453c0.009 0.369 0.311 0.665 0.681 0.665 0.001 0 0.001 0 0.002 0h26.261c0.373-0.002 0.676-0.304 0.678-0.678v-12.444h3.698c0.375-0.002 0.678-0.306 0.678-0.681 0-0.187-0.075-0.356-0.197-0.479l-4.271-4.267v-5.851c-0.002-0.373-0.304-0.676-0.678-0.678h-2.892c-0.373 0.002-0.676 0.304-0.678 0.678v1.598l-8.994-8.988c-0.124-0.126-0.296-0.204-0.486-0.204-0.025 0-0.049 0.001-0.073 0.004l0.003-0z"></path>
+		</symbol>
+		<symbol id="brei-icon-chevron" viewBox="0 0 17 32">
+			<title>chevron</title>
+			<path d="M16.427 14.962l-14.011-14.532c-0.553-0.574-1.449-0.574-2.001 0-0.554 0.573-0.554 1.502 0 2.076l12.007 12.456c0.553 0.574 0.553 1.502 0 2.076l-0.413 0.428v0.002l-11.594 12.026c-0.554 0.574-0.554 1.503 0 2.076 0.552 0.574 1.448 0.574 2.001 0l14.011-14.532c0.553-0.574 0.553-1.502 0-2.076z"></path>
+		</symbol>
+		<symbol id="brei-icon-close" viewBox="0 0 31 32">
+			<title>close</title>
+			<path d="M0.478 29.334l28.284-28.284 1.616 1.616-28.284 28.284-1.616-1.616z"></path>
+			<path d="M28.763 30.95l-28.284-28.284 1.616-1.616 28.284 28.284-1.616 1.616z"></path>
+		</symbol>
+		<symbol id="brei-icon-menu" viewBox="0 0 62 32">
+			<title>menu</title>
+			<path d="M0 0h61.538v2.462h-61.538v-2.462z"></path>
+			<path d="M0 14.769h61.538v2.462h-61.538v-2.462z"></path>
+			<path d="M0 29.538h61.538v2.462h-61.538v-2.462z"></path>
+		</symbol>
+		<symbol id="brei-icon-arrow" viewBox="0 0 32 32">
+			<title>arrow</title>
+			<path d="M31.719 15.244l-9.569-10.619c-0.375-0.419-0.988-0.419-1.369 0-0.375 0.419-0.375 1.1 0 1.519l7.919 8.787h-27.731c-0.256 0-0.5 0.113-0.681 0.313-0.375 0.419-0.375 1.1 0 1.519 0.181 0.2 0.425 0.313 0.681 0.313h27.731l-7.919 8.794c-0.375 0.419-0.375 1.1 0 1.519s0.988 0.419 1.369 0l9.569-10.619c0.375-0.425 0.375-1.1 0-1.525z"></path>
+		</symbol>
+		<symbol id="brei-icon-facebook" viewBox="0 0 16 32">
+			<title>facebook</title>
+			<path d="M11 6h5v-6h-5c-3.862 0-7 3.138-7 7v3h-4v6h4v16h6v-16h5l1-6h-6v-3c0-0.544 0.456-1 1-1z"></path>
+		</symbol>
+		<symbol id="brei-icon-instagram" viewBox="0 0 32 32">
+			<title>instagram</title>
+			<path d="M31.931 9.412c-0.094-1.369-0.313-2.544-0.644-3.531-0.431-1.175-1.081-2.2-1.962-3.075s-1.919-1.519-3.106-1.944c-1-0.331-2.181-0.525-3.538-0.6-1.356-0.069-3.587-0.106-6.681-0.106s-5.325 0.038-6.681 0.106c-1.356 0.075-2.537 0.269-3.537 0.6-1.188 0.425-2.219 1.075-3.1 1.944s-1.538 1.9-1.962 3.075c-0.338 0.994-0.537 2.156-0.606 3.5-0.075 1.338-0.113 3.544-0.113 6.606s0.037 5.262 0.113 6.606c0.069 1.344 0.269 2.506 0.606 3.5 0.425 1.175 1.081 2.2 1.962 3.075 0.881 0.869 1.919 1.494 3.106 1.875 1 0.375 2.181 0.6 3.537 0.675 1.356 0.069 3.581 0.106 6.681 0.106 3.094 0 5.319-0.038 6.675-0.106 1.356-0.075 2.538-0.269 3.538-0.6 1.194-0.425 2.225-1.075 3.106-1.944s1.531-1.894 1.962-3.075c0.331-0.994 0.538-2.156 0.606-3.5 0.075-1.344 0.106-3.544 0.106-6.606 0-3.069-0.019-5.262-0.069-6.581zM29.144 17.119c0 1.887-0.025 3.344-0.069 4.381-0.1 1.744-0.288 3.012-0.575 3.819-0.569 1.413-1.594 2.425-3.075 3.038-0.762 0.281-2.050 0.469-3.856 0.563-1 0.050-2.475 0.075-4.431 0.075h-2.281c-1.906 0-3.381-0.025-4.431-0.075-1.762-0.094-3.050-0.281-3.856-0.563-1.431-0.569-2.456-1.581-3.075-3.038-0.288-0.8-0.475-2.075-0.575-3.819-0.044-1.038-0.069-2.494-0.069-4.381v-2.262c0-1.887 0.025-3.344 0.069-4.381 0.1-1.794 0.288-3.063 0.575-3.819 0.569-1.456 1.594-2.475 3.075-3.038 0.806-0.281 2.094-0.469 3.856-0.563 1.050-0.050 2.525-0.069 4.431-0.069h2.281c1.906 0 3.381 0.019 4.431 0.069 1.806 0.094 3.094 0.281 3.856 0.563 1.475 0.569 2.5 1.581 3.075 3.038 0.288 0.756 0.475 2.025 0.575 3.819 0.044 0.988 0.069 2.45 0.069 4.381v2.262z"></path>
+			<path d="M20.3 8.713c-1.3-0.719-2.706-1.088-4.225-1.088-1.525 0-2.931 0.362-4.231 1.088-1.3 0.719-2.331 1.7-3.088 2.931-0.763 1.231-1.144 2.575-1.144 4.019s0.381 2.781 1.144 4.012c0.762 1.238 1.787 2.212 3.088 2.938 1.3 0.719 2.706 1.081 4.231 1.081 1.519 0 2.925-0.363 4.225-1.081s2.331-1.7 3.094-2.938c0.762-1.231 1.137-2.575 1.137-4.012 0-1.444-0.381-2.781-1.137-4.019-0.762-1.231-1.794-2.206-3.094-2.931zM19.969 19.369c-1.081 1.025-2.381 1.538-3.9 1.538-1.525 0-2.819-0.512-3.9-1.538s-1.619-2.262-1.619-3.7c0-1.444 0.537-2.681 1.619-3.7 1.075-1.025 2.375-1.537 3.9-1.537 1.519 0 2.819 0.512 3.9 1.537s1.619 2.256 1.619 3.7c0 1.438-0.538 2.675-1.619 3.7z"></path>
+			<path d="M24.531 5.938c-0.462 0-0.856 0.169-1.188 0.5s-0.5 0.731-0.5 1.194c0 0.463 0.169 0.856 0.5 1.188s0.731 0.5 1.188 0.5 0.844-0.169 1.163-0.5c0.313-0.331 0.488-0.731 0.531-1.188 0-0.463-0.169-0.856-0.5-1.194-0.337-0.338-0.738-0.5-1.194-0.5z"></path>
+		</symbol>
+		<symbol id="brei-icon-linkedin" viewBox="0 0 32 32">
+			<title>linkedin</title>
+			<path d="M24.196 10.474c-3.169 0-5.294 1.656-6.162 3.231h-0.087v-3.231h-6.238v20.525h6.5v-9.906c0-2.613 0.519-5.144 3.906-5.144 3.337 0 3.381 2.988 3.381 5.313v9.738h6.506v-10.988c0-5.394-1.219-9.537-7.806-9.537z"></path>
+			<path d="M0 31h7.025v-20.525h-7.025z"></path>
+			<path d="M3.513 1c-1.938 0-3.513 1.594-3.513 3.55s1.575 3.55 3.513 3.55 3.513-1.594 3.513-3.55-1.575-3.55-3.513-3.55z"></path>
+		</symbol>
+		<symbol id="brei-icon-search" viewBox="0 0 32 32">
+			<title>search</title>
+			<path d="M25.194 23.413l0.325-0.419c1.969-2.531 3.012-5.55 3.012-8.731 0-7.862-6.4-14.262-14.269-14.262s-14.262 6.4-14.262 14.262 6.4 14.269 14.262 14.269c3.181 0 6.2-1.044 8.731-3.012l0.419-0.325 6.806 6.806 1.781-1.781-6.806-6.806zM14.331 26.275c-6.588 0-11.944-5.356-11.944-11.944s5.356-11.944 11.944-11.944 11.944 5.356 11.944 11.944-5.356 11.944-11.944 11.944z"></path>
+		</symbol>
+		<symbol id="brei-icon-twitter" viewBox="0 0 32 32">
+			<title>twitter</title>
+			<path d="M28.231 7.131c1.356-0.813 2.394-2.094 2.887-3.625-1.269 0.75-2.675 1.3-4.169 1.588-1.2-1.275-2.906-2.063-4.794-2.063-3.625 0-6.563 2.931-6.563 6.55 0 0.512 0.056 1.012 0.169 1.494-5.45-0.281-10.287-2.888-13.525-6.85-0.563 0.969-0.887 2.094-0.887 3.294 0 2.269 1.156 4.281 2.919 5.45-1.075-0.031-2.087-0.331-2.975-0.819v0.081c0 3.175 2.263 5.825 5.269 6.425-0.55 0.15-1.131 0.231-1.731 0.231-0.425 0-0.831-0.044-1.237-0.119 0.838 2.6 3.263 4.494 6.131 4.55-2.25 1.756-5.075 2.806-8.156 2.806-0.531 0-1.050-0.031-1.569-0.094 2.913 1.863 6.362 2.944 10.063 2.944 12.069 0 18.675-9.988 18.675-18.644 0-0.287-0.006-0.569-0.019-0.85 1.281-0.919 2.394-2.069 3.275-3.388v0c-1.169 0.531-2.438 0.881-3.762 1.038z"></path>
+		</symbol>
+		<symbol id="brei-icon-youtube" viewBox="0 0 32 32">
+			<title>youtube</title>
+			<path d="M31.675 9.656v0c0 0-0.313-2.188-1.275-3.144-1.219-1.269-2.581-1.275-3.206-1.35-4.475-0.319-11.194-0.319-11.194-0.319h-0.012c0 0-6.719 0-11.194 0.319-0.625 0.075-1.987 0.081-3.206 1.35-0.963 0.963-1.269 3.15-1.269 3.15s-0.319 2.563-0.319 5.138v2.406c0 2.563 0.319 5.137 0.319 5.137s0.313 2.188 1.269 3.15c1.219 1.262 2.819 1.219 3.531 1.356 2.563 0.244 10.881 0.313 10.881 0.313s6.725-0.012 11.2-0.331c0.625-0.075 1.988-0.081 3.206-1.344 0.962-0.962 1.275-3.15 1.275-3.15s0.319-2.569 0.319-5.144v-2.406c-0.006-2.556-0.325-5.131-0.325-5.131zM12.688 20.125v-8.919l8.644 4.475-8.644 4.444z"></path>
+		</symbol>
+	</defs>
+</svg>
+
+	<div class="access-nav" role="navigation">
+	<a class="show-on-focus" href="#js-global-header">Jump to Header</a>
+	<a class="show-on-focus" href="#main">Jump to Main Content</a>
+	<a class="show-on-focus" href="#js-global-footer">Jump to Footer</a>
+</div>
+
+
+	
+	  <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas>
+    
+<div class="container">
+
+				<div class="emergency" id="emergency">
+			<ul class="emergency__accordion accordion">
+				<li class="emergency__item accordion-item">
+					<a href="#" class="emergency__heading accordion-title">
+						COVID-19 Information for UCLA Law
+						<span class="emergency__trigger">
+							<svg class='brei-icon brei-icon-plus' focusable='false'><use xlink:href='#brei-icon-plus'></use></svg>
+							<svg class='brei-icon brei-icon-minus' focusable='false'><use xlink:href='#brei-icon-minus'></use></svg>
+						</span>
+					</a>
+					<div class="emergency__content accordion-content user-markup">
+													<p>We encourage all members of the UCLA Law community to monitor UCLA's <a href="https://newsroom.ucla.edu/stories/coronavirus-information-for-the-ucla-campus-community" target="_blank">coronavirus page</a> and <a href="https://www.bso.ucla.edu/" target="_blank">Bruins Safe Online</a> for updates and resources.</p>
+
+						
+											</div>
+				</li>
+			</ul>
+		</div>
+	<header id="js-global-header" class="global-header">
+	<div class="global-header__wrapper">
+		<a href="/" class="global-header__logo">
+			<span class="show-for-sr">Go to Home Page</span>
+			<svg class='brei-icon brei-icon-logo-white' focusable='false'><use xlink:href='#brei-icon-logo-white'></use></svg>
+			<svg class='brei-icon brei-icon-logo-black' focusable='false'><use xlink:href='#brei-icon-logo-black'></use></svg>
+		</a>
+		<div class="global-header__nav">
+			
+<nav id="js-audience-nav" class="audience-nav">
+	        <ul class="audience-nav__list">
+						<li class="audience-nav__item">
+				<a href="/admissions" data-drupal-link-system-path="node/79696">Apply</a>
+											</li>
+					<li class="audience-nav__item">
+				<a href="https://giving.ucla.edu/campaign/Donate.aspx?SiteNum=5" target="_blank">Give</a>
+											</li>
+					<li class="audience-nav__item">
+				<a href="https://my.law.ucla.edu/" target="_blank">MyLaw</a>
+											</li>
+			</ul>
+		
+</nav>
+
+
+			<button type="button" class="global-header__menu-trigger" id="global-header__menu-trigger" aria-label="Open menu">
+				<span class="show-for-sr">Open Menu</span>
+				<svg class='brei-icon brei-icon-menu' focusable='false'><use xlink:href='#brei-icon-menu'></use></svg>
+				<svg class='brei-icon brei-icon-close' focusable='false'><use xlink:href='#brei-icon-close'></use></svg>
+			</button>
+			<div class="search">
+				<form class="search__form" action="/search">
+					<fieldset>
+						<legend class="show-for-sr">Search</legend>
+						<label>
+							<span class="show-for-sr">Site Search Keywords</span>
+							<input name="keys" type="search" placeholder="What are you looking for?" class="search__field" />
+						</label>
+						<button type="submit" class="search__submit" id="js-search__submit--header" aria-label="Search">
+							<svg class='brei-icon brei-icon-search' focusable='false'><use xlink:href='#brei-icon-search'></use></svg>
+						</button>
+					</fieldset>
+				</form>
+				<div class="search__triggers">
+					<button type="button" class="search__open" id="js-search__open" aria-label="Open Search Box">
+						<svg class='brei-icon brei-icon-search' focusable='false'><use xlink:href='#brei-icon-search'></use></svg>
+					</button>
+					<button type="button" class="search__close" id="js-search__close" aria-label="Close Search Box">
+						<svg class='brei-icon brei-icon-close' focusable='false'><use xlink:href='#brei-icon-close'></use></svg>
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="off-canvas-bar" id="off-canvas-bar" tabindex="-1">
+		<div class="off-canvas-bar__wrapper">
+			<div class="search">
+				<form class="search__form" action="/search">
+					<fieldset>
+						<legend class="show-for-sr">Search</legend>
+						<label>
+							<span class="show-for-sr">Site Search Keywords</span>
+							<input name="keys" type="search" placeholder="What are you looking for?" class="search__field" />
+						</label>
+						<button type="submit" class="search__submit" id="js-menu-search__submit--header" aria-label="Search">
+							<svg class='brei-icon brei-icon-search' focusable='false'><use xlink:href='#brei-icon-search'></use></svg>
+						</button>
+					</fieldset>
+				</form>
+				<div class="search__triggers">
+					<button type="button" class="search__open" id="js-menu-search__open" aria-label="Open Search Box">
+						<svg class='brei-icon brei-icon-search' focusable='false'><use xlink:href='#brei-icon-search'></use></svg>
+					</button>
+					<button type="button" class="search__close" id="js-menu-search__close" aria-label="Close Search Box">
+						<svg class='brei-icon brei-icon-close' focusable='false'><use xlink:href='#brei-icon-close'></use></svg>
+					</button>
+				</div>
+			</div>
+			<div class="off-canvas-bar__panel">
+					<nav id="js-primary-nav" class="primary-nav clearfix">
+		<ul class="primary-nav__list clearfix">
+						<li>
+				<a href="/academics" tabindex="-1" class="primary-nav__item" has-children>
+					<span>Academics</span>
+					<svg class='brei-icon brei-icon-chevron' focusable='false'><use xlink:href='#brei-icon-chevron'></use></svg>				</a>
+								<div class="primary-nav__sub" children-sub-menu>
+					<button type="button" tabindex="-1" class="primary-nav__back-button" back-button>
+						<svg class='brei-icon brei-icon-chevron' focusable='false'><use xlink:href='#brei-icon-chevron'></use></svg>
+						<span>Back</span>
+					</button>
+					<a href="/academics" tabindex="-1" class="primary-nav__child-title">
+						<span class="primary-nav__child-title-icon">
+							<svg class='brei-icon brei-icon-arrow' focusable='false'><use xlink:href='#brei-icon-arrow'></use></svg>
+						</span>
+						Academics
+					</a>
+					<ul class="primary-nav__child-list clearfix">
+												<li>
+							<a href="/academics/degrees" tabindex="-1" class="primary-nav__child-item" has-grandchildren>
+								<span>Degrees &amp; Specializations</span>
+								<svg class='brei-icon brei-icon-chevron' focusable='false'><use xlink:href='#brei-icon-chevron'></use></svg>							</a>
+														<div class="primary-nav__sub" grandchildren-sub-menu>
+								<button type="button" tabindex="-1" class="primary-nav__back-button" back-button>
+									<svg class='brei-icon brei-icon-chevron' focusable='false'><use xlink:href='#brei-icon-chevron'></use></svg>
+									<span>Back</span>
+								</button>
+								<a href="/academics/degrees" tabindex="-1" class="primary-nav__child-title">
+									<span class="primary-nav__child-title-icon">
+										<svg class='brei-icon brei-icon-arrow' focusable='false'><use xlink:href='#brei-icon-arrow'></use></svg>
+									</span>
+									Degrees &amp; Specializations
+								</a>
+								<ul class="primary-nav__child-list clearfix">
+																		<li>
+										<a href="/academics/degrees/jd-program" tabindex="-1" class="primary-nav__child-item">
+											<span>J.D Program</span>
+										</a>
+									</li>
+																		<li>
+										<a href="/academics/degrees/llm-program" tabindex="-1" class="primary-nav__child-item">
+											<span>LL.M Program</span>
+										</a>
+									</li>
+																		<li>
+										<a href="/academics/degrees/master-legal-studies" tabindex="-1" class="primary-nav__child-item">
+											<span>Master of Legal Studies</span>
+										</a>
+									</li>
+																		<li>
+										<a href="/academics/degrees/sjd-program" tabindex="-1" class="primary-nav__child-item">
+											<span>S.J.D Program</span>
+										</a>
+									</li>
+																	</ul>
+							</div>
+													</li>
+												<li>
+							<a href="https://law.ucla.edu/academics/curriculum?page=1&amp;term%5B0%5D=1676" tabindex="-1" class="primary-nav__child-item">
+								<span>Curriculum</span>
+															</a>
+													</li>
+												<li>
+							<a href="/academics/areas" tabindex="-1" class="primary-nav__child-item">
+								<span>Areas of Focus</span>
+															</a>
+													</li>
+												<li>
+							<a href="/academics/clinical-education" tabindex="-1" class="primary-nav__child-item" has-grandchildren>
+								<span>Clinical Education</span>
+								<svg class='brei-icon brei-icon-chevron' focusable='false'><use xlink:href='#brei-icon-chevron'></use></svg>							</a>
+														<div class="primary-nav__sub" grandchildren-sub-menu>
+								<button type="button" tabindex="-1" class="primary-nav__back-button" back-button>
+									<svg class='brei-icon brei-icon-chevron' focusable='false'><use xlink:href='#brei-icon-chevron'></use></svg>
+									<span>Back</span>
+								</button>
+								<a href="/academics/clinical-education" tabindex="-1" class="primary-nav__child-title">
+									<span class="primary-nav__child-title-icon">
+										<svg class='brei-icon brei-icon-arrow' focusable='false'><use xlink:href='#brei-icon-arrow'></use></svg>
+									</span>
+									Clinical Education
+								</a>
+								<ul class="primary-nav__child-list clearfix">
+																		<li>
+										<a href="/academics/clinical-education/clinics" tabindex="-1" class="primary-nav__child-item">
+											<span>Clinics</span>
+										</a>
+									</li>
+																		<li>
+										<a href="/academics/clinical-education/practicums" tabindex="-1" class="primary-nav__child-item">
+											<span>Practicums</span>
+										</a>
+									</li>
+																		<li>
+										<a href="/academics/clinical-education/simulation-courses" tabindex="-1" class="primary-nav__child-item">
+											<span>Simulation Courses</span>
+										</a>
+									</li>
+																		<li>
+										<a href="/academics/clinical-education/externships" tabindex="-1" class="primary-nav__child-item">
+											<span>Externships</span>
+										</a>
+									</li>
+																		<li>
+										<a href="/academics/clinical-education/binder-clinical-fellowship-program" tabindex="-1" class="primary-nav__child-item">
+											<span>Binder Clinical Fellowship Program</span>
+										</a>
+									</li>
+																	</ul>
+							</div>
+													</li>
+												<li>
+							<a href="/academics/centers" tabindex="-1" class="primary-nav__child-item">
+								<span>Centers</span>
+															</a>
+													</li>
+												<li>
+							<a href="/academics/journals" tabindex="-1" class="primary-nav__child-item">
+								<span>Journals</span>
+															</a>
+													</li>
+												<li>
+							<a href="/academics/academic-calendar" tabindex="-1" class="primary-nav__child-item">
+								<span>Academic Calendar</span>
+															</a>
+													</li>
+											</ul>
+				</div>
+							</li>
+						<li>
+				<a href="/admissions" tabindex="-1" class="primary-nav__item" has-children>
+					<span>Admissions &amp; Aid</span>
+					<svg class='brei-icon brei-icon-chevron' focusable='false'><use xlink:href='#brei-icon-chevron'></use></svg>				</a>
+								<div class="primary-nav__sub" children-sub-menu>
+					<button type="button" tabindex="-1" class="primary-nav__back-button" back-button>
+						<svg class='brei-icon brei-icon-chevron' focusable='false'><use xlink:href='#brei-icon-chevron'></use></svg>
+						<span>Back</span>
+					</button>
+					<a href="/admissions" tabindex="-1" class="primary-nav__child-title">
+						<span class="primary-nav__child-title-icon">
+							<svg class='brei-icon brei-icon-arrow' focusable='false'><use xlink:href='#brei-icon-arrow'></use></svg>
+						</span>
+						Admissions &amp; Aid
+					</a>
+					<ul class="primary-nav__child-list clearfix">
+												<li>
+							<a href="/admissions/jd-admissions" tabindex="-1" class="primary-nav__child-item" has-grandchildren>
+								<span>J.D. Admissions</span>
+								<svg class='brei-icon brei-icon-chevron' focusable='false'><use xlink:href='#brei-icon-chevron'></use></svg>							</a>
+														<div class="primary-nav__sub" grandchildren-sub-menu>
+								<button type="button" tabindex="-1" class="primary-nav__back-button" back-button>
+									<svg class='brei-icon brei-icon-chevron' focusable='false'><use xlink:href='#brei-icon-chevron'></use></svg>
+									<span>Back</span>
+								</button>
+								<a href="/admissions/jd-admissions" tabindex="-1" class="primary-nav__child-title">
+									<span class="primary-nav__child-title-icon">
+										<svg class='brei-icon brei-icon-arrow' focusable='false'><use xlink:href='#brei-icon-arrow'></use></svg>
+									</span>
+									J.D. Admissions
+								</a>
+								<ul class="primary-nav__child-list clearfix">
+																		<li>
+										<a href="/admissions/jd-admissions/first-year-jd-applicants" tabindex="-1" class="primary-nav__child-item">
+											<span>First-Year J.D. Applicants</span>
+										</a>
+									</li>
+																		<li>
+										<a href="/admissions/jd-admissions/early-decision-program" tabindex="-1" class="primary-nav__child-item">
+											<span>Early Decision Program</span>
+										</a>
+									</li>
+																		<li>
+										<a href="/admissions/jd-admissions/full-tuition-programs" tabindex="-1" class="primary-nav__child-item">
+											<span>Full Tuition Programs</span>
+										</a>
+									</li>
+																		<li>
+										<a href="/admissions/jd-admissions/joint-degree-programs" tabindex="-1" class="primary-nav__child-item">
+											<span>Joint Degree Programs</span>
+										</a>
+									</li>
+																		<li>
+										<a href="/admissions/jd-admissions/transfer-students" tabindex="-1" class="primary-nav__child-item">
+											<span>Transfer Students</span>
+										</a>
+									</li>
+																		<li>
+										<a href="/admissions/jd-admissions/visiting-students" tabindex="-1" class="primary-nav__child-item">
+											<span>Visiting Students</span>
+										</a>
+									</li>
+																		<li>
+										<a href="/admissions/jd-admissions/admissions-policy" tabindex="-1" class="primary-nav__child-item">
+											<span>Admissions Policy</span>
+										</a>
+									</li>
+																		<li>
+										<a href="/admissions/jd-admissions/class-profile" tabindex="-1" class="primary-nav__child-item">
+											<span>Class Profile</span>
+										</a>
+									</li>
+																		<li>
+										<a href="/admissions/jd-admissions/financial-aid" tabindex="-1" class="primary-nav__child-item">
+											<span>Financial Aid</span>
+										</a>
+									</li>
+																		<li>
+										<a href="/admissions/jd-admissions/tuition-fees" tabindex="-1" class="primary-nav__child-item">
+											<span>Tuition &amp; Fees</span>
+										</a>
+									</li>
+																		<li>
+										<a href="/admissions/meet-us" tabindex="-1" class="primary-nav__child-item">
+											<span>Meet Us</span>
+										</a>
+									</li>
+																		<li>
+										<a href="/admissions/jd-admissions/admitted-students" tabindex="-1" class="primary-nav__child-item">
+											<span>For Admitted Students</span>
+										</a>
+									</li>
+																		<li>
+										<a href="/admissions/jd-admissions/fee-waiver" tabindex="-1" class="primary-nav__child-item">
+											<span>Fee Waiver</span>
+										</a>
+									</li>
+																		<li>
+										<a href="/admissions/jd-admissions/frequently-asked-questions" tabindex="-1" class="primary-nav__child-item">
+											<span>Frequently Asked Questions</span>
+										</a>
+									</li>
+																	</ul>
+							</div>
+													</li>
+												<li>
+							<a href="/admissions/llm-admissions" tabindex="-1" class="primary-nav__child-item" has-grandchildren>
+								<span>LL.M. Admissions</span>
+								<svg class='brei-icon brei-icon-chevron' focusable='false'><use xlink:href='#brei-icon-chevron'></use></svg>							</a>
+														<div class="primary-nav__sub" grandchildren-sub-menu>
+								<button type="button" tabindex="-1" class="primary-nav__back-button" back-button>
+									<svg class='brei-icon brei-icon-chevron' focusable='false'><use xlink:href='#brei-icon-chevron'></use></svg>
+									<span>Back</span>
+								</button>
+								<a href="/admissions/llm-admissions" tabindex="-1" class="primary-nav__child-title">
+									<span class="primary-nav__child-title-icon">
+										<svg class='brei-icon brei-icon-arrow' focusable='false'><use xlink:href='#brei-icon-arrow'></use></svg>
+									</span>
+									LL.M. Admissions
+								</a>
+								<ul class="primary-nav__child-list clearfix">
+																		<li>
+										<a href="/admissions/llm-admissions/tuition-visa-information" tabindex="-1" class="primary-nav__child-item">
+											<span>Tuition and Visa Information</span>
+										</a>
+									</li>
+																		<li>
+										<a href="/admissions/llm-admissions/scholarships-financial-aid" tabindex="-1" class="primary-nav__child-item">
+											<span>Scholarships &amp; Financial Aid</span>
+										</a>
+									</li>
+																		<li>
+										<a href="/admissions/llm-admissions/jd-transfer-option" tabindex="-1" class="primary-nav__child-item">
+											<span>J.D. Transfer Option</span>
+										</a>
+									</li>
+																		<li>
+										<a href="/admissions/llm-admissions/llm-program-recruitment-events" tabindex="-1" class="primary-nav__child-item">
+											<span>Events</span>
+										</a>
+									</li>
+																		<li>
+										<a href="/admissions/llm-admissions/contact-us" tabindex="-1" class="primary-nav__child-item">
+											<span>Contact Us</span>
+										</a>
+									</li>
+																	</ul>
+							</div>
+													</li>
+												<li>
+							<a href="/admissions/master-legal-studies" tabindex="-1" class="primary-nav__child-item" has-grandchildren>
+								<span>Master of Legal Studies Admissions</span>
+								<svg class='brei-icon brei-icon-chevron' focusable='false'><use xlink:href='#brei-icon-chevron'></use></svg>							</a>
+														<div class="primary-nav__sub" grandchildren-sub-menu>
+								<button type="button" tabindex="-1" class="primary-nav__back-button" back-button>
+									<svg class='brei-icon brei-icon-chevron' focusable='false'><use xlink:href='#brei-icon-chevron'></use></svg>
+									<span>Back</span>
+								</button>
+								<a href="/admissions/master-legal-studies" tabindex="-1" class="primary-nav__child-title">
+									<span class="primary-nav__child-title-icon">
+										<svg class='brei-icon brei-icon-arrow' focusable='false'><use xlink:href='#brei-icon-arrow'></use></svg>
+									</span>
+									Master of Legal Studies Admissions
+								</a>
+								<ul class="primary-nav__child-list clearfix">
+																		<li>
+										<a href="/admissions/master-legal-studies" tabindex="-1" class="primary-nav__child-item">
+											<span>General Information</span>
+										</a>
+									</li>
+																		<li>
+										<a href="/academics/degrees/master-legal-studies/mls-program-structure" tabindex="-1" class="primary-nav__child-item">
+											<span>Course of Study</span>
+										</a>
+									</li>
+																		<li>
+										<a href="/academics/degrees/master-legal-studies/mls-student-profiles" tabindex="-1" class="primary-nav__child-item">
+											<span>Time Commitment</span>
+										</a>
+									</li>
+																		<li>
+										<a href="/admissions/master-legal-studies/faq" tabindex="-1" class="primary-nav__child-item">
+											<span>Tuition &amp; Costs</span>
+										</a>
+									</li>
+																		<li>
+										<a href="/admissions/master-legal-studies/mls-tuition-and-scholarships" tabindex="-1" class="primary-nav__child-item">
+											<span>Scholarships &amp; Financial Aid</span>
+										</a>
+									</li>
+																		<li>
+										<a href="/admissions/master-legal-studies/mls-dates-and-deadlines" tabindex="-1" class="primary-nav__child-item">
+											<span>Dates and Deadlines</span>
+										</a>
+									</li>
+																		<li>
+										<a href="/admissions/master-legal-studies/mls-international-students" tabindex="-1" class="primary-nav__child-item">
+											<span>FAQ and Visa Information</span>
+										</a>
+									</li>
+																		<li>
+										<a href="/admissions/master-legal-studies/contact-us-about-mls-program" tabindex="-1" class="primary-nav__child-item">
+											<span>Contact Us</span>
+										</a>
+									</li>
+																	</ul>
+							</div>
+													</li>
+												<li>
+							<a href="/admissions/sjd-program" tabindex="-1" class="primary-nav__child-item">
+								<span>S.J.D Program</span>
+															</a>
+													</li>
+												<li>
+							<a href="/admissions/other-programs" tabindex="-1" class="primary-nav__child-item" has-grandchildren>
+								<span>Other Programs</span>
+								<svg class='brei-icon brei-icon-chevron' focusable='false'><use xlink:href='#brei-icon-chevron'></use></svg>							</a>
+														<div class="primary-nav__sub" grandchildren-sub-menu>
+								<button type="button" tabindex="-1" class="primary-nav__back-button" back-button>
+									<svg class='brei-icon brei-icon-chevron' focusable='false'><use xlink:href='#brei-icon-chevron'></use></svg>
+									<span>Back</span>
+								</button>
+								<a href="/admissions/other-programs" tabindex="-1" class="primary-nav__child-title">
+									<span class="primary-nav__child-title-icon">
+										<svg class='brei-icon brei-icon-arrow' focusable='false'><use xlink:href='#brei-icon-arrow'></use></svg>
+									</span>
+									Other Programs
+								</a>
+								<ul class="primary-nav__child-list clearfix">
+																		<li>
+										<a href="/admissions/other-programs/foreign-exchange-program" tabindex="-1" class="primary-nav__child-item">
+											<span>Foreign Exchange Program</span>
+										</a>
+									</li>
+																		<li>
+										<a href="/admissions/other-programs/visiting-scholars-researchers" tabindex="-1" class="primary-nav__child-item">
+											<span>Visiting Scholars &amp; Researchers</span>
+										</a>
+									</li>
+																	</ul>
+							</div>
+													</li>
+												<li>
+							<a href="/admissions/financial-aid-overview" tabindex="-1" class="primary-nav__child-item">
+								<span>Financial Aid Overview</span>
+															</a>
+													</li>
+												<li>
+							<a href="/admissions/meet-us" tabindex="-1" class="primary-nav__child-item" has-grandchildren>
+								<span>Meet Us</span>
+								<svg class='brei-icon brei-icon-chevron' focusable='false'><use xlink:href='#brei-icon-chevron'></use></svg>							</a>
+														<div class="primary-nav__sub" grandchildren-sub-menu>
+								<button type="button" tabindex="-1" class="primary-nav__back-button" back-button>
+									<svg class='brei-icon brei-icon-chevron' focusable='false'><use xlink:href='#brei-icon-chevron'></use></svg>
+									<span>Back</span>
+								</button>
+								<a href="/admissions/meet-us" tabindex="-1" class="primary-nav__child-title">
+									<span class="primary-nav__child-title-icon">
+										<svg class='brei-icon brei-icon-arrow' focusable='false'><use xlink:href='#brei-icon-arrow'></use></svg>
+									</span>
+									Meet Us
+								</a>
+								<ul class="primary-nav__child-list clearfix">
+																		<li>
+										<a href="/admissions/meet-us/visit-campus" tabindex="-1" class="primary-nav__child-item">
+											<span>Visit Campus</span>
+										</a>
+									</li>
+																		<li>
+										<a href="/admissions/meet-us/virtual-tour" tabindex="-1" class="primary-nav__child-item">
+											<span>Virtual Tour</span>
+										</a>
+									</li>
+																		<li>
+										<a href="/admissions/meet-us/live-sessions-current-students" tabindex="-1" class="primary-nav__child-item">
+											<span>Live Sessions with Current Students</span>
+										</a>
+									</li>
+																	</ul>
+							</div>
+													</li>
+											</ul>
+				</div>
+							</li>
+						<li>
+				<a href="/faculty" tabindex="-1" class="primary-nav__item" has-children>
+					<span>Faculty &amp; Research</span>
+					<svg class='brei-icon brei-icon-chevron' focusable='false'><use xlink:href='#brei-icon-chevron'></use></svg>				</a>
+								<div class="primary-nav__sub" children-sub-menu>
+					<button type="button" tabindex="-1" class="primary-nav__back-button" back-button>
+						<svg class='brei-icon brei-icon-chevron' focusable='false'><use xlink:href='#brei-icon-chevron'></use></svg>
+						<span>Back</span>
+					</button>
+					<a href="/faculty" tabindex="-1" class="primary-nav__child-title">
+						<span class="primary-nav__child-title-icon">
+							<svg class='brei-icon brei-icon-arrow' focusable='false'><use xlink:href='#brei-icon-arrow'></use></svg>
+						</span>
+						Faculty &amp; Research
+					</a>
+					<ul class="primary-nav__child-list clearfix">
+												<li>
+							<a href="/faculty/faculty-profiles" tabindex="-1" class="primary-nav__child-item">
+								<span>Faculty Profiles</span>
+															</a>
+													</li>
+												<li>
+							<a href="/faculty/recent-faculty-scholarship" tabindex="-1" class="primary-nav__child-item">
+								<span>Recent Faculty Scholarship</span>
+															</a>
+													</li>
+												<li>
+							<a href="/faculty/faculty-books" tabindex="-1" class="primary-nav__child-item">
+								<span>Faculty Books</span>
+															</a>
+													</li>
+												<li>
+							<a href="/about-ucla-law/leadership" tabindex="-1" class="primary-nav__child-item">
+								<span>UCLA Law Leadership</span>
+															</a>
+													</li>
+											</ul>
+				</div>
+							</li>
+						<li>
+				<a href="/life-ucla-law" tabindex="-1" class="primary-nav__item" has-children>
+					<span>Life at UCLA Law</span>
+					<svg class='brei-icon brei-icon-chevron' focusable='false'><use xlink:href='#brei-icon-chevron'></use></svg>				</a>
+								<div class="primary-nav__sub" children-sub-menu>
+					<button type="button" tabindex="-1" class="primary-nav__back-button" back-button>
+						<svg class='brei-icon brei-icon-chevron' focusable='false'><use xlink:href='#brei-icon-chevron'></use></svg>
+						<span>Back</span>
+					</button>
+					<a href="/life-ucla-law" tabindex="-1" class="primary-nav__child-title">
+						<span class="primary-nav__child-title-icon">
+							<svg class='brei-icon brei-icon-arrow' focusable='false'><use xlink:href='#brei-icon-arrow'></use></svg>
+						</span>
+						Life at UCLA Law
+					</a>
+					<ul class="primary-nav__child-list clearfix">
+												<li>
+							<a href="/life-ucla-law/student-organizations" tabindex="-1" class="primary-nav__child-item">
+								<span>Student Organizations</span>
+															</a>
+													</li>
+												<li>
+							<a href="/life-ucla-law/living-la" tabindex="-1" class="primary-nav__child-item" has-grandchildren>
+								<span>Living in LA</span>
+								<svg class='brei-icon brei-icon-chevron' focusable='false'><use xlink:href='#brei-icon-chevron'></use></svg>							</a>
+														<div class="primary-nav__sub" grandchildren-sub-menu>
+								<button type="button" tabindex="-1" class="primary-nav__back-button" back-button>
+									<svg class='brei-icon brei-icon-chevron' focusable='false'><use xlink:href='#brei-icon-chevron'></use></svg>
+									<span>Back</span>
+								</button>
+								<a href="/life-ucla-law/living-la" tabindex="-1" class="primary-nav__child-title">
+									<span class="primary-nav__child-title-icon">
+										<svg class='brei-icon brei-icon-arrow' focusable='false'><use xlink:href='#brei-icon-arrow'></use></svg>
+									</span>
+									Living in LA
+								</a>
+								<ul class="primary-nav__child-list clearfix">
+																		<li>
+										<a href="/life-ucla-law/living-la/undocumented-student-resources" tabindex="-1" class="primary-nav__child-item">
+											<span>Undocumented Student Resources</span>
+										</a>
+									</li>
+																		<li>
+										<a href="/life-ucla-law/living-la/housing" tabindex="-1" class="primary-nav__child-item">
+											<span>Housing</span>
+										</a>
+									</li>
+																		<li>
+										<a href="/life-ucla-law/living-la/transportation" tabindex="-1" class="primary-nav__child-item">
+											<span>Transportation</span>
+										</a>
+									</li>
+																	</ul>
+							</div>
+													</li>
+												<li>
+							<a href="/life-ucla-law/diversity-inclusion" tabindex="-1" class="primary-nav__child-item" has-grandchildren>
+								<span>Diversity &amp; Inclusion</span>
+								<svg class='brei-icon brei-icon-chevron' focusable='false'><use xlink:href='#brei-icon-chevron'></use></svg>							</a>
+														<div class="primary-nav__sub" grandchildren-sub-menu>
+								<button type="button" tabindex="-1" class="primary-nav__back-button" back-button>
+									<svg class='brei-icon brei-icon-chevron' focusable='false'><use xlink:href='#brei-icon-chevron'></use></svg>
+									<span>Back</span>
+								</button>
+								<a href="/life-ucla-law/diversity-inclusion" tabindex="-1" class="primary-nav__child-title">
+									<span class="primary-nav__child-title-icon">
+										<svg class='brei-icon brei-icon-arrow' focusable='false'><use xlink:href='#brei-icon-arrow'></use></svg>
+									</span>
+									Diversity &amp; Inclusion
+								</a>
+								<ul class="primary-nav__child-list clearfix">
+																		<li>
+										<a href="/life-ucla-law/diversity-inclusion/outreach" tabindex="-1" class="primary-nav__child-item">
+											<span>Outreach</span>
+										</a>
+									</li>
+																	</ul>
+							</div>
+													</li>
+												<li>
+							<a href="/life-ucla-law/health-wellness" tabindex="-1" class="primary-nav__child-item" has-grandchildren>
+								<span>Health &amp; Wellness</span>
+								<svg class='brei-icon brei-icon-chevron' focusable='false'><use xlink:href='#brei-icon-chevron'></use></svg>							</a>
+														<div class="primary-nav__sub" grandchildren-sub-menu>
+								<button type="button" tabindex="-1" class="primary-nav__back-button" back-button>
+									<svg class='brei-icon brei-icon-chevron' focusable='false'><use xlink:href='#brei-icon-chevron'></use></svg>
+									<span>Back</span>
+								</button>
+								<a href="/life-ucla-law/health-wellness" tabindex="-1" class="primary-nav__child-title">
+									<span class="primary-nav__child-title-icon">
+										<svg class='brei-icon brei-icon-arrow' focusable='false'><use xlink:href='#brei-icon-arrow'></use></svg>
+									</span>
+									Health &amp; Wellness
+								</a>
+								<ul class="primary-nav__child-list clearfix">
+																		<li>
+										<a href="/life-ucla-law/health-wellness/athletics-recreation-fitness" tabindex="-1" class="primary-nav__child-item">
+											<span>Athletics, Recreation &amp; Fitness</span>
+										</a>
+									</li>
+																	</ul>
+							</div>
+													</li>
+												<li>
+							<a href="/life-ucla-law/careers" tabindex="-1" class="primary-nav__child-item" has-grandchildren>
+								<span>Careers</span>
+								<svg class='brei-icon brei-icon-chevron' focusable='false'><use xlink:href='#brei-icon-chevron'></use></svg>							</a>
+														<div class="primary-nav__sub" grandchildren-sub-menu>
+								<button type="button" tabindex="-1" class="primary-nav__back-button" back-button>
+									<svg class='brei-icon brei-icon-chevron' focusable='false'><use xlink:href='#brei-icon-chevron'></use></svg>
+									<span>Back</span>
+								</button>
+								<a href="/life-ucla-law/careers" tabindex="-1" class="primary-nav__child-title">
+									<span class="primary-nav__child-title-icon">
+										<svg class='brei-icon brei-icon-arrow' focusable='false'><use xlink:href='#brei-icon-arrow'></use></svg>
+									</span>
+									Careers
+								</a>
+								<ul class="primary-nav__child-list clearfix">
+																		<li>
+										<a href="/life-ucla-law/careers/post-graduate-outcomes" tabindex="-1" class="primary-nav__child-item">
+											<span>Post-Graduate Outcomes</span>
+										</a>
+									</li>
+																		<li>
+										<a href="/life-ucla-law/careers/employers" tabindex="-1" class="primary-nav__child-item">
+											<span>For Employers</span>
+										</a>
+									</li>
+																		<li>
+										<a href="/life-ucla-law/careers/students" tabindex="-1" class="primary-nav__child-item">
+											<span>For Students</span>
+										</a>
+									</li>
+																		<li>
+										<a href="/life-ucla-law/careers/alumni" tabindex="-1" class="primary-nav__child-item">
+											<span>For Alumni</span>
+										</a>
+									</li>
+																		<li>
+										<a href="/life-ucla-law/careers/career-services-policies" tabindex="-1" class="primary-nav__child-item">
+											<span>Career Services Policies</span>
+										</a>
+									</li>
+																		<li>
+										<a href="/life-ucla-law/careers/office-career-services" tabindex="-1" class="primary-nav__child-item">
+											<span>Office of Career Services</span>
+										</a>
+									</li>
+																		<li>
+										<a href="/life-ucla-law/careers/office-public-interest-programs" tabindex="-1" class="primary-nav__child-item">
+											<span>Office of Public Interest Programs</span>
+										</a>
+									</li>
+																	</ul>
+							</div>
+													</li>
+												<li>
+							<a href="/life-ucla-law/office-student-services" tabindex="-1" class="primary-nav__child-item">
+								<span>Office of Student Services</span>
+															</a>
+													</li>
+											</ul>
+				</div>
+							</li>
+						<li>
+				<a href="/alumni-giving" tabindex="-1" class="primary-nav__item" has-children>
+					<span>Alumni &amp; Giving</span>
+					<svg class='brei-icon brei-icon-chevron' focusable='false'><use xlink:href='#brei-icon-chevron'></use></svg>				</a>
+								<div class="primary-nav__sub" children-sub-menu>
+					<button type="button" tabindex="-1" class="primary-nav__back-button" back-button>
+						<svg class='brei-icon brei-icon-chevron' focusable='false'><use xlink:href='#brei-icon-chevron'></use></svg>
+						<span>Back</span>
+					</button>
+					<a href="/alumni-giving" tabindex="-1" class="primary-nav__child-title">
+						<span class="primary-nav__child-title-icon">
+							<svg class='brei-icon brei-icon-arrow' focusable='false'><use xlink:href='#brei-icon-arrow'></use></svg>
+						</span>
+						Alumni &amp; Giving
+					</a>
+					<ul class="primary-nav__child-list clearfix">
+												<li>
+							<a href="/alumni-giving/giving" tabindex="-1" class="primary-nav__child-item" has-grandchildren>
+								<span>Giving</span>
+								<svg class='brei-icon brei-icon-chevron' focusable='false'><use xlink:href='#brei-icon-chevron'></use></svg>							</a>
+														<div class="primary-nav__sub" grandchildren-sub-menu>
+								<button type="button" tabindex="-1" class="primary-nav__back-button" back-button>
+									<svg class='brei-icon brei-icon-chevron' focusable='false'><use xlink:href='#brei-icon-chevron'></use></svg>
+									<span>Back</span>
+								</button>
+								<a href="/alumni-giving/giving" tabindex="-1" class="primary-nav__child-title">
+									<span class="primary-nav__child-title-icon">
+										<svg class='brei-icon brei-icon-arrow' focusable='false'><use xlink:href='#brei-icon-arrow'></use></svg>
+									</span>
+									Giving
+								</a>
+								<ul class="primary-nav__child-list clearfix">
+																		<li>
+										<a href="/alumni-giving/giving/make-gift" tabindex="-1" class="primary-nav__child-item">
+											<span>Make a Gift</span>
+										</a>
+									</li>
+																		<li>
+										<a href="/alumni-giving/giving/deans-circle" tabindex="-1" class="primary-nav__child-item">
+											<span>Dean’s Circle</span>
+										</a>
+									</li>
+																		<li>
+										<a href="/alumni-giving/giving/support-priorities" tabindex="-1" class="primary-nav__child-item">
+											<span>Support Priorities</span>
+										</a>
+									</li>
+																		<li>
+										<a href="/alumni-giving/giving/giving-campaigns" tabindex="-1" class="primary-nav__child-item">
+											<span>Giving Campaigns</span>
+										</a>
+									</li>
+																	</ul>
+							</div>
+													</li>
+												<li>
+							<a href="/news?keywords=&amp;news-category=1031&amp;year=&amp;month=&amp;news-type%5B0%5D=1051&amp;page=1" tabindex="-1" class="primary-nav__child-item" has-grandchildren>
+								<span>Alumni News</span>
+								<svg class='brei-icon brei-icon-chevron' focusable='false'><use xlink:href='#brei-icon-chevron'></use></svg>							</a>
+														<div class="primary-nav__sub" grandchildren-sub-menu>
+								<button type="button" tabindex="-1" class="primary-nav__back-button" back-button>
+									<svg class='brei-icon brei-icon-chevron' focusable='false'><use xlink:href='#brei-icon-chevron'></use></svg>
+									<span>Back</span>
+								</button>
+								<a href="/news?keywords=&amp;news-category=1031&amp;year=&amp;month=&amp;news-type%5B0%5D=1051&amp;page=1" tabindex="-1" class="primary-nav__child-title">
+									<span class="primary-nav__child-title-icon">
+										<svg class='brei-icon brei-icon-arrow' focusable='false'><use xlink:href='#brei-icon-arrow'></use></svg>
+									</span>
+									Alumni News
+								</a>
+								<ul class="primary-nav__child-list clearfix">
+																		<li>
+										<a href="/alumni-giving/class-notes" tabindex="-1" class="primary-nav__child-item">
+											<span>Class Notes</span>
+										</a>
+									</li>
+																		<li>
+										<a href="/alumni-giving/ucla-law-awards" tabindex="-1" class="primary-nav__child-item">
+											<span>UCLA Law Awards</span>
+										</a>
+									</li>
+																	</ul>
+							</div>
+													</li>
+												<li>
+							<a href="/alumni-giving/ways-connect" tabindex="-1" class="primary-nav__child-item" has-grandchildren>
+								<span>Ways to Connect</span>
+								<svg class='brei-icon brei-icon-chevron' focusable='false'><use xlink:href='#brei-icon-chevron'></use></svg>							</a>
+														<div class="primary-nav__sub" grandchildren-sub-menu>
+								<button type="button" tabindex="-1" class="primary-nav__back-button" back-button>
+									<svg class='brei-icon brei-icon-chevron' focusable='false'><use xlink:href='#brei-icon-chevron'></use></svg>
+									<span>Back</span>
+								</button>
+								<a href="/alumni-giving/ways-connect" tabindex="-1" class="primary-nav__child-title">
+									<span class="primary-nav__child-title-icon">
+										<svg class='brei-icon brei-icon-arrow' focusable='false'><use xlink:href='#brei-icon-arrow'></use></svg>
+									</span>
+									Ways to Connect
+								</a>
+								<ul class="primary-nav__child-list clearfix">
+																		<li>
+										<a href="/alumni-giving/ways-connect/alumni-association" tabindex="-1" class="primary-nav__child-item">
+											<span>Alumni Association</span>
+										</a>
+									</li>
+																		<li>
+										<a href="/alumni-giving/ways-connect/ucla-law-women-lead" tabindex="-1" class="primary-nav__child-item">
+											<span>UCLA Law Women LEAD</span>
+										</a>
+									</li>
+																		<li>
+										<a href="/alumni-giving/ways-connect/volunteer-opportunities" tabindex="-1" class="primary-nav__child-item">
+											<span>Volunteer Opportunities</span>
+										</a>
+									</li>
+																		<li>
+										<a href="/alumni-giving/ways-connect/office-external-affairs-development" tabindex="-1" class="primary-nav__child-item">
+											<span>Contact Us</span>
+										</a>
+									</li>
+																	</ul>
+							</div>
+													</li>
+												<li>
+							<a href="/events?keywords=&amp;events-category%5B0%5D=1181&amp;year=&amp;month=&amp;page=1" tabindex="-1" class="primary-nav__child-item" has-grandchildren>
+								<span>Events</span>
+								<svg class='brei-icon brei-icon-chevron' focusable='false'><use xlink:href='#brei-icon-chevron'></use></svg>							</a>
+														<div class="primary-nav__sub" grandchildren-sub-menu>
+								<button type="button" tabindex="-1" class="primary-nav__back-button" back-button>
+									<svg class='brei-icon brei-icon-chevron' focusable='false'><use xlink:href='#brei-icon-chevron'></use></svg>
+									<span>Back</span>
+								</button>
+								<a href="/events?keywords=&amp;events-category%5B0%5D=1181&amp;year=&amp;month=&amp;page=1" tabindex="-1" class="primary-nav__child-title">
+									<span class="primary-nav__child-title-icon">
+										<svg class='brei-icon brei-icon-arrow' focusable='false'><use xlink:href='#brei-icon-arrow'></use></svg>
+									</span>
+									Events
+								</a>
+								<ul class="primary-nav__child-list clearfix">
+																		<li>
+										<a href="/alumni-giving/reunions" tabindex="-1" class="primary-nav__child-item">
+											<span>Reunions</span>
+										</a>
+									</li>
+																	</ul>
+							</div>
+													</li>
+												<li>
+							<a href="/alumni-giving/alumni-services" tabindex="-1" class="primary-nav__child-item">
+								<span>Alumni Services</span>
+															</a>
+													</li>
+											</ul>
+				</div>
+							</li>
+					</ul>
+	</nav>
+
+					<nav id="js-secondary-nav" class="secondary-nav clearfix">
+		<ul class="secondary-nav__list clearfix">
+						<li>
+				<a href="https://law.ucla.edu/academics/academic-calendar/commencement" tabindex="-1"  class="secondary-nav__item">
+					<span>2022 Commencement</span>
+									</a>
+							</li>
+						<li>
+				<a href="/about-ucla-law" tabindex="-1"  class="secondary-nav__item" has-children>
+					<span>About UCLA Law</span>
+					<svg class='brei-icon brei-icon-chevron' focusable='false'><use xlink:href='#brei-icon-chevron'></use></svg>				</a>
+								<div class="secondary-nav__sub" children-sub-menu>
+					<button type="button" tabindex="-1" class="secondary-nav__back-button" back-button>
+						<svg class='brei-icon brei-icon-chevron' focusable='false'><use xlink:href='#brei-icon-chevron'></use></svg>
+						<span>Back</span>
+					</button>
+					<a href="/about-ucla-law" tabindex="-1"  class="secondary-nav__item secondary-nav__child-title">
+						<span class="secondary-nav__child-title-icon">
+							<svg class='brei-icon brei-icon-arrow' focusable='false'><use xlink:href='#brei-icon-arrow'></use></svg>
+						</span>
+						About UCLA Law
+					</a>
+					<ul class="secondary-nav__child-list clearfix">
+												<li>
+							<a href="/about-ucla-law/fast-facts" tabindex="-1"  class="secondary-nav__child-item">
+								<span>Fast Facts</span>
+															</a>
+													</li>
+												<li>
+							<a href="/about-ucla-law/history" tabindex="-1"  class="secondary-nav__child-item">
+								<span>History</span>
+															</a>
+													</li>
+												<li>
+							<a href="/about-ucla-law/leadership" tabindex="-1"  class="secondary-nav__child-item">
+								<span>Leadership</span>
+															</a>
+													</li>
+											</ul>
+				</div>
+							</li>
+						<li>
+				<a href="/news" tabindex="-1"  class="secondary-nav__item" has-children>
+					<span>News</span>
+					<svg class='brei-icon brei-icon-chevron' focusable='false'><use xlink:href='#brei-icon-chevron'></use></svg>				</a>
+								<div class="secondary-nav__sub" children-sub-menu>
+					<button type="button" tabindex="-1" class="secondary-nav__back-button" back-button>
+						<svg class='brei-icon brei-icon-chevron' focusable='false'><use xlink:href='#brei-icon-chevron'></use></svg>
+						<span>Back</span>
+					</button>
+					<a href="/news" tabindex="-1"  class="secondary-nav__item secondary-nav__child-title">
+						<span class="secondary-nav__child-title-icon">
+							<svg class='brei-icon brei-icon-arrow' focusable='false'><use xlink:href='#brei-icon-arrow'></use></svg>
+						</span>
+						News
+					</a>
+					<ul class="secondary-nav__child-list clearfix">
+												<li>
+							<a href="/news?keywords=&amp;news-category=1031&amp;year=&amp;month=&amp;page=1" tabindex="-1"  class="secondary-nav__child-item">
+								<span>Latest News</span>
+															</a>
+													</li>
+												<li>
+							<a href="/news?keywords=&amp;news-category=1026&amp;year=&amp;month=&amp;page=1" tabindex="-1"  class="secondary-nav__child-item">
+								<span>In the Media</span>
+															</a>
+													</li>
+												<li>
+							<a href="/news/newsletters" tabindex="-1"  class="secondary-nav__child-item">
+								<span>Newsletters</span>
+															</a>
+													</li>
+												<li>
+							<a href="/news/ucla-law-magazine" tabindex="-1"  class="secondary-nav__child-item">
+								<span>UCLA Law Magazine</span>
+															</a>
+													</li>
+												<li>
+							<a href="/news/office-communications" tabindex="-1"  class="secondary-nav__child-item">
+								<span>Office of Communications</span>
+															</a>
+													</li>
+											</ul>
+				</div>
+							</li>
+						<li>
+				<a href="/events" tabindex="-1"  class="secondary-nav__item">
+					<span>Events</span>
+									</a>
+							</li>
+						<li>
+				<a href="/library" tabindex="-1"  class="secondary-nav__item" has-children>
+					<span>Library</span>
+					<svg class='brei-icon brei-icon-chevron' focusable='false'><use xlink:href='#brei-icon-chevron'></use></svg>				</a>
+								<div class="secondary-nav__sub" children-sub-menu>
+					<button type="button" tabindex="-1" class="secondary-nav__back-button" back-button>
+						<svg class='brei-icon brei-icon-chevron' focusable='false'><use xlink:href='#brei-icon-chevron'></use></svg>
+						<span>Back</span>
+					</button>
+					<a href="/library" tabindex="-1"  class="secondary-nav__item secondary-nav__child-title">
+						<span class="secondary-nav__child-title-icon">
+							<svg class='brei-icon brei-icon-arrow' focusable='false'><use xlink:href='#brei-icon-arrow'></use></svg>
+						</span>
+						Library
+					</a>
+					<ul class="secondary-nav__child-list clearfix">
+												<li>
+							<a href="/library/library-hours" tabindex="-1"  class="secondary-nav__child-item">
+								<span>Library Hours</span>
+															</a>
+													</li>
+												<li>
+							<a href="/library/library-resources" tabindex="-1"  class="secondary-nav__child-item">
+								<span>Library Resources</span>
+															</a>
+													</li>
+												<li>
+							<a href="/library/access-policies" tabindex="-1"  class="secondary-nav__child-item">
+								<span>Access Policies</span>
+															</a>
+													</li>
+												<li>
+							<a href="/library/library-services" tabindex="-1"  class="secondary-nav__child-item">
+								<span>Services</span>
+															</a>
+													</li>
+												<li>
+							<a href="https://law.ucla.edu/library/tour" tabindex="-1"  class="secondary-nav__child-item">
+								<span>Online Library Tour</span>
+															</a>
+													</li>
+												<li>
+							<a href="https://my.law.ucla.edu/library" tabindex="-1"  class="secondary-nav__child-item">
+								<span>Library on MyLaw</span>
+															</a>
+													</li>
+												<li>
+							<a href="/library/library-bookplates" tabindex="-1"  class="secondary-nav__child-item">
+								<span>Library Bookplates</span>
+															</a>
+													</li>
+												<li>
+							<a href="/library/library-staff-directory" tabindex="-1"  class="secondary-nav__child-item">
+								<span>Library Staff Directory</span>
+															</a>
+													</li>
+											</ul>
+				</div>
+							</li>
+						<li>
+				<a href="/academics/centers" tabindex="-1"  class="secondary-nav__item">
+					<span>Centers</span>
+									</a>
+							</li>
+						<li>
+				<a href="/life-ucla-law/careers" tabindex="-1"  class="secondary-nav__item">
+					<span>Careers</span>
+									</a>
+							</li>
+						<li>
+				<a href="https://my.law.ucla.edu/" tabindex="-1"  target="_blank" class="secondary-nav__item">
+					<span>MyLaw</span>
+									</a>
+							</li>
+					</ul>
+	</nav>
+
+			</div>
+		</div>
+	</div>
+	<div class="off-canvas-bar__facade"></div>
+</header>
+
+
+	<main id="main" class="main level faculty-detail">
+
+		<div class="masthead-faculty">
+	<div class="masthead-faculty__image-wrapper">
+		<div class="masthead-faculty__image image" style="background-image: url('https://law.ucla.edu/sites/default/files/styles/desktop/public/site-defaults/Default_Masthead_shutterstock_590720210_1640x550.jpg?itok=yWMalFqB');"></div>
+	</div>
+	<div class="masthead-faculty__wrapper">
+		<div class="overlay"></div>
+		<div class="gradient"></div>
+		<div class="masthead-faculty__content">
+							<div class="masthead-faculty__faculty-image image" style="background-image: url('https://apps.law.ucla.edu/FacultyPhoto/9955.jpg');"></div>
+						<div>
+				<div class="masthead-faculty__heading">S. Priya Morley</div>
+									<hr>
+					<p class="masthead-faculty__copy">
+													Racial Justice Policy Counsel
+																		</p>
+							</div>
+		</div>
+	</div>
+</div>
+
+		<div class="row level__row">
+			<div class="level__content large-9 large-push-3 columns">
+
+					<nav class="breadcrumbs">
+		<ul class="clearfix">
+												<li class="breadcrumbs__item breadcrumbs__item--home">
+						<a href="/" title="Home Page" class="breadcrumbs__link"><span class='show-for-sr'>Home Page</span><svg class='brei-icon brei-icon-home' focusable='false'><use xlink:href='#brei-icon-home'></use></svg></a>
+						<svg class='brei-icon brei-icon-chevron' focusable='false'><use xlink:href='#brei-icon-chevron'></use></svg>
+					</li>
+																<li class="breadcrumbs__item">
+						<a href="/faculty" class="breadcrumbs__link">Faculty &amp; Research</a>
+						<svg class='brei-icon brei-icon-chevron' focusable='false'><use xlink:href='#brei-icon-chevron'></use></svg>
+					</li>
+																<li class="breadcrumbs__item">
+						<a href="/faculty/faculty-profiles" class="breadcrumbs__link">Faculty Profiles</a>
+						<svg class='brei-icon brei-icon-chevron' focusable='false'><use xlink:href='#brei-icon-chevron'></use></svg>
+					</li>
+														<li class="breadcrumbs__item breadcrumbs__item--current">
+					<span class="breadcrumbs__link">S. Priya Morley</span>
+				</li>
+					</ul>
+	</nav>
+
+
+
+
+				
+
+				<div data-drupal-messages-fallback class="hidden"></div>
+
+
+
+				<div class="faculty-education user-markup">
+	
+	<div class="faculty-education__copy">
+		
+		
+
+		<p>S. Priya Morley is the Racial Justice Policy Counsel at the Promise Institute for Human Rights, where she is providing leadership on academic, advocacy, and policy initiatives at the intersection of racial justice and human rights. Drawing on her background in international human rights, and knowledge of critical race theory and Third World Approaches to International Law (TWAIL), Priya will work alongside Promise Institute faculty and affiliates to synthesize, translate, and disseminate their research in ways that are accessible and engaging to a wider audience. She will also work to connect the Promise Institute with local, national, and transnational coalitions working towards social change. Building on her previous experience, Priya’s own research will continue to explore how race intersects with migration, gender, and climate justice, particularly in the Americas.</p><p>Priya joins Promise from NYU School of Law, where she was an Arthur Helton Global Human Rights Fellow, researching the experiences of Black African and Haitian migrants and asylum-seekers in Mexico (including gender-based and racial discrimination). Alongside this role, Priya was advising NYU’s Global Justice Clinic’s Caribbean Climate Justice Project.</p><p>Priya holds an LLM in International Legal Studies from NYU, where she was a Vanderbilt Medalist, Transitional Justice Scholar, and Human Rights Scholar. After graduation, she did research on legal empowerment and migration with NYU's Global Justice Clinic and Bernstein Institute for Human Rights, and was an International Law and Human Rights Fellow with the UN Team of Experts on Rule of Law and Sexual Violence in Conflict.</p><p>Prior to moving to the US, Priya worked as a litigator and judicial law clerk in Toronto, Canada. She also has previous experience working with civil society organizations on sexual and gender-based violence, women’s and children’s rights, and human rights education. She holds LLB and BCL (common law and civil law) degrees from McGill University and a BA in International Relations from the University of British Columbia.</p>
+	</div>
+
+</div>
+
+
+	<div class="course-list">
+		<h2>Courses Available</h2>
+				<div class="course-list__wrapper">
+							<a href="/academics/curriculum/international-human-rights-clinic"  role="link" class="course-tile">
+	<div class="course-tile__content">
+		<div>
+			<span class="course-tile__section">LAW 717</span>
+			<h3 class="course-tile__title">International Human Rights Clinic</h3>
+		</div>
+		<div class="arrow-button">
+			<span class="arrow-button__icon">
+				<svg class='brei-icon brei-icon-arrow' focusable='false'><use xlink:href='#brei-icon-arrow'></use></svg>
+			</span>
+			<span class="arrow-button__title"></span>
+		</div>
+	</div>
+</a>
+
+					</div>
+	</div>
+
+
+
+
+			</div>
+			<aside class="level__aside large-3 large-pull-9 columns">
+
+																						<div class="sidebar-contact faculty-sidebar">
+
+																	<h2 class="faculty-sidebar__heading">Contact</h2>
+								
+																	<div class="faculty-sidebar__section">
+										<div class="faculty-sidebar__icon"><svg class='brei-icon brei-icon-pin' focusable='false'><use xlink:href='#brei-icon-pin'></use></svg></div>
+										<div class="faculty-sidebar__content">UCLA School of Law<br />385 Charles E. Young Dr. East<br />Los Angeles, CA, 90095</div>
+									</div>
+								
+								
+																	<div class="faculty-sidebar__section">
+										<div class="faculty-sidebar__icon"><svg class='brei-icon brei-icon-email' focusable='false'><use xlink:href='#brei-icon-email'></use></svg></div>
+										<div class="faculty-sidebar__content">
+											<a href="mailto:morley@law.ucla.edu">morley@law.ucla.edu</a></div>
+									</div>
+								
+																	
+																	
+							</div>
+															
+				
+			</aside>
+		</div>
+
+	</main>
+
+			
+<div class="global-footer__container">
+	<div class="global-footer__image" style="background-image: url('/themes/law/_files/img/_content/events_bg.png')"></div>
+	<div class="events fade-section">
+		<div class="events__wrapper">
+			<div class="events__content row column">
+				<div class="section-header">
+					<span>
+						<span>Events</span>
+					</span>
+					<hr>
+											<a href="/events">See All</a>
+									</div>
+				<div class="events__events-container">
+											<div class="event-item fade-item">
+							<div  role="article">
+    <div class="event-info">
+        <div class="date">
+            <span>07</span>
+            <span class="divider"></span>
+            <span>27</span>
+        </div>
+
+        <div class="event-meta">
+                        <div class="times">12:00 PM - 1:15 PM</div>
+            <div class="location">Zoom Webinar</div>
+        </div>
+    </div>
+
+    <div class="event-title">(Rescheduled) Mapping Anti-CRT Politics</div>
+    
+    <a class="arrow-button" href="/events/rescheduled-mapping-anti-crt-politics">
+		<span class="arrow-button__icon">
+			<svg class='brei-icon brei-icon-arrow' focusable='false'><use xlink:href='#brei-icon-arrow'></use></svg>
+		</span>
+        <span class="arrow-button__title">Read More</span>
+    </a>
+</div>
+						</div>
+											<div class="event-item fade-item hidden">
+							<div  role="article">
+    <div class="event-info">
+        <div class="date">
+            <span>09</span>
+            <span class="divider"></span>
+            <span>22</span>
+        </div>
+
+        <div class="event-meta">
+                        <div class="times">12:00 PM - 1:00 PM</div>
+            <div class="location">Zoom Webinar; RSVP for details</div>
+        </div>
+    </div>
+
+    <div class="event-title">The UCLA M.L.S. Difference</div>
+            <p>Prospective students can learn about the Master of Legal Studies program on a range of topics, including: student testimonials, specializations, career opportunities, available scholarships, and more!</p>
+    
+    <a class="arrow-button" href="/events/ucla-mls-difference">
+		<span class="arrow-button__icon">
+			<svg class='brei-icon brei-icon-arrow' focusable='false'><use xlink:href='#brei-icon-arrow'></use></svg>
+		</span>
+        <span class="arrow-button__title">Read More</span>
+    </a>
+</div>
+						</div>
+									</div>
+			</div>
+		</div>
+	</div>
+	<footer>
+		<div class="footer-cta row column">
+			
+<div class="footer-cta__ctas">
+	    					<a href="/admissions" data-drupal-link-system-path="node/79696"><span>Apply</span></a>
+					<a href="/admissions/meet-us/visit-campus" data-drupal-link-system-path="node/80986"><span>Visit</span></a>
+					<a href="/admissions/meet-us" data-drupal-link-system-path="node/80981"><span>Meet Us</span></a>
+			
+</div>
+
+
+			
+<nav class="footer-cta__nav row large-collapse">
+	        <ul class="footer-cta__nav-list columns">
+						<li>
+				<a href="/about-ucla-law" data-drupal-link-system-path="node/80346">About UCLA Law</a>
+											</li>
+					<li>
+				<a href="/news" data-drupal-link-system-path="node/59761">News</a>
+											</li>
+					<li>
+				<a href="/events" data-drupal-link-system-path="node/78541">Events</a>
+											</li>
+					<li>
+				<a href="/library" data-drupal-link-system-path="node/82116">Library</a>
+											</li>
+					<li>
+				<a href="/aba-required-disclosures" data-drupal-link-system-path="node/82111">ABA Required Disclosures</a>
+											</li>
+					<li>
+				<a href="/alumni-giving" data-drupal-link-system-path="node/80351">Make a Gift</a>
+											</li>
+					<li>
+				<a href="http://www.directory.ucla.edu" target="_blank">UCLA Directory</a>
+											</li>
+			</ul>
+		
+</nav>
+
+
+		</div>
+		<div id="js-global-footer" class="global-footer">
+			<div class="row column">
+				<div class="global-footer__wrapper">
+					<div class="legal">
+						
+<nav class="legal__nav">
+	        <ul class="legal__list">
+						<li class="legal__link">
+				<a href="http://www.ucla.edu/terms-of-use/">Terms of Use &amp; Privacy Policy</a>
+											</li>
+					<li class="legal__link">
+				<a href="http://www.ucla.edu/accessibility">Accessibility</a>
+											</li>
+					<li class="legal__link">
+				<a href="http://www.ucla.edu/site-information">Copyright Information</a>
+											</li>
+					<li class="legal__link">
+				<a href="https://www.ucop.edu/institutional-research-academic-planning/content-analysis/academic-planning/licensure-and-certification-disclosures.html" target="_blank">Licensure &amp; Certification Disclosures</a>
+											</li>
+			</ul>
+		
+</nav>
+
+
+						<div class="legal__copyright">© Copyright 2022 The Regents of the University of California. UCLA School of Law. All Rights Reserved.</div>
+					</div>
+											<div class="social-icons">
+							<ul class="social-icons__list">
+																	<li>
+										<a href="https://www.linkedin.com/school/university-of-california-los-angeles---school-of-law/" target="_blank" aria-label="LinkedIn">
+											<svg class='brei-icon brei-icon-linkedin' focusable='false'><use xlink:href='#brei-icon-linkedin'></use></svg>
+										</a>
+									</li>
+																									<li>
+										<a href="https://twitter.com/ucla_law" target="_blank" aria-label="Twitter">
+											<svg class='brei-icon brei-icon-twitter' focusable='false'><use xlink:href='#brei-icon-twitter'></use></svg>
+										</a>
+									</li>
+																									<li>
+										<a href="https://www.facebook.com/pages/UCLA-School-of-Law-Official/148867995080" target="_blank" aria-label="Facebook">
+											<svg class='brei-icon brei-icon-facebook' focusable='false'><use xlink:href='#brei-icon-facebook'></use></svg>
+										</a>
+									</li>
+																									<li>
+										<a href="https://www.youtube.com/user/UCLAschooloflaw" target="_blank" aria-label="YouTube">
+											<svg class='brei-icon brei-icon-youtube' focusable='false'><use xlink:href='#brei-icon-youtube'></use></svg>
+										</a>
+									</li>
+																									<li>
+										<a href="https://www.instagram.com/uclalawschool/?hl=en" target="_blank" aria-label="Instagram">
+											<svg class='brei-icon brei-icon-instagram' focusable='false'><use xlink:href='#brei-icon-instagram'></use></svg>
+										</a>
+									</li>
+															</ul>
+						</div>
+									</div>
+			</div>
+		</div>
+	</footer>
+</div>
+
+	
+</div>
+
+  </div>
+
+	
+
+	<script src="/sites/default/files/js/js_AhPGn71CI4M2SpDS6V1Et9LVbF1d-JGfFXGfoNennnE.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+<script src="/sites/default/files/js/js_1MOBspg71Jrk4SQt2gHoc_HwM0SrzwwSfi1H8IRGMU4.js"></script>
+
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"d1b3c075f2","applicationID":"392313091","transactionName":"ZgAEZktZWERZAhJQXF9KJ1FNUVlZFxEHXlZuBgdRUV0=","queueTime":0,"applicationTime":26,"atts":"SkcHEANDS0o=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

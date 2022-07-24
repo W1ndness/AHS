@@ -1,0 +1,495 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0">
+    <title>北京师范大学工商与经济管理学院</title>
+    <link rel="stylesheet" href="http://bs.bnu.edu.cn/new-ver-css/reset.css">
+    <link rel="stylesheet" href="http://bs.bnu.edu.cn/new-ver-css/index.css">
+	<link rel="stylesheet" href="http://bs.bnu.edu.cn/new-ver-css/xyslist.css">
+	<link rel="stylesheet" href="http://bs.bnu.edu.cn/new-ver-css/xys-tf.css">
+    <style>
+        .container{
+            width:100%;
+            height: auto;
+            overflow: hidden;
+        }
+        .header{
+            width:100%;
+            height:116px;
+            background:#EFF8FF;
+        }
+        .logo1{
+            width:1200px!important;
+            margin:0 auto;
+            position:relative;
+            float: none;
+			display:block;
+        }
+        .logo2{
+            float:right;
+        }
+        .logo1 p{
+            position:absolute;
+            top:5px;
+            right:5px;
+            font-size:13px;
+        }
+        .logo1 p:hover{
+            color:#112769;
+        }
+        .tu{
+            width:100%;
+            height:240px;
+            background:url('http://bs.bnu.edu.cn/newweb/grzy/images/tu.jpg') no-repeat top center;
+            background-size: 100%;
+        }
+        .lujing{
+            width:1200px;
+            height:58px;
+            margin:0 auto;
+            border-bottom:1px solid #aaa;
+            overflow:hidden;
+        }
+        .lujings{
+            margin:24px 0 0 0;
+            font-size:14px;
+        }
+        .content{
+            color:#333;
+            width:1200px;
+/*            height:2000px;*/
+            margin:0 auto;
+            margin-top:40px;
+/*            background:#c4c4c4;*/
+        }
+        
+        .xian{
+            width:100%;
+            height:8px;
+            background:#9A0812;
+        }
+        
+        .leftc{
+            float:left;
+        }
+        .rightc{
+            float:left;
+            margin-left:50px;
+/*            background:#666;*/
+            width:880px;
+/*            height:1000px;*/
+        }
+        .rheader{
+            width:880px;
+            height:210px;
+/*            background:yellow;*/
+        }
+        .xm{
+            font-size:30px;
+            height:40px;
+/*            border-bottom:4px solid #9A0812;*/
+            width:auto;
+            float:left;
+            line-height:40px;
+			margin-right:30px;
+        }
+        .zhiw{
+            font-size:18px;
+            height:40px;
+            line-height:50px;
+            margin-bottom:30px;
+        }
+        .tel{
+                font-size: 16px;
+                margin-top: 10px;
+                line-height: 20px;
+        }
+        .grjj{
+/*            height:300px;*/
+            width:880px;
+/*            background:yellow;*/
+            padding-bottom:40px;
+        }
+        .jjh{
+                font-size: 20px;
+                border-bottom: 1px solid #cecece;
+                height: 40px;
+                line-height: 40px;
+                padding-left: 30px;
+                background: url(http://bs.bnu.edu.cn/newweb/grzy/images/zw.png) no-repeat 0 16px;
+        }
+        
+        .jjc{
+            font-size:14px;
+            margin-top:30px;
+           
+            line-height:28px;
+            overflow:hidden;
+            text-align: justify;
+            text-justify:inter-ideograph;
+        }
+        .jjc1{
+            height:225px;
+            font-size:14px;
+            margin-top:30px;
+            
+            line-height:28px;
+            overflow:hidden;
+            text-align: justify;
+            text-justify:inter-ideograph;
+        }
+        
+        .dianji1{
+                background: url(http://bs.bnu.edu.cn/newweb/grzy/images/zw.png) no-repeat 0 -50px;
+                width: 13px;
+                height: 13px;
+                cursor: pointer;
+                display: block;
+            margin-top: 20px;
+            transition: all .2s linear;
+        }
+        .dianji1:hover{
+            background: url(http://bs.bnu.edu.cn/newweb/grzy/images/zw.png) no-repeat 0 -64px;
+        }
+        
+        .dianji{
+                background: url(http://bs.bnu.edu.cn/newweb/grzy/images/zw.png) no-repeat 0 -24px;
+                height: 13px;
+                cursor: pointer;
+                display: block;
+            margin-top: 20px;
+            transition: all .2s linear;
+        }
+        .dianji:hover{
+            background: url(http://bs.bnu.edu.cn/newweb/grzy/images/zw.png) no-repeat 0 -37px;
+        }
+        #jjc1{
+            text-indent:0em;
+        }
+        
+        .bks{
+            font-size:14px;
+            font-weight: 800;
+            margin-top:30px;
+            height:auto;
+            line-height:36px;
+        }
+        .bks1{
+            font-size:14px;
+            margin-top:30px;
+            height:auto;
+            line-height:36px;
+        }
+        .bksc{
+            height:36px;
+            line-height:36px;
+            font-size:14px;
+        }
+        
+        .yanzheng{
+            width:1200px;
+            height:100px;
+            margin:0 auto;
+        }
+        .yanzheng img{
+            display:block;
+            margin-top:26px;
+            float:left;
+        }
+		
+#appgame-leftside-share{width:42px; height:216px; position: fixed;bottom: 30px;right: 30px; z-index:9999;}
+.appgame-leftside-share{width:42px; height:259px;}
+#appgame-leftside-share a{display:block; width:42px; height:44px; background-color:#e6e6e6; z-index:1; position:absolute; left:0; box-sizing:border-box; -moz-box-sizing:border-box; border:1px #ddd solid; background-image:url(http://gh.bnu.edu.cn/images/share-icons.png); background-repeat:no-repeat; margin:0;  transition:0.4s; -webkit-transition:0.4s; -moz-transition:0.4s;}
+#appgame-leftside-share a:hover{background-color:#fff; border:1px #eee solid; z-index:2;}
+/*.appgame-leftside-weixin{top:0; background-position:-88px 0;}
+.appgame-leftside-weixin:hover{background-position:0px 0;}
+.appgame-leftside-qzone{top:43px; background-position:-88px -44px;}
+.appgame-leftside-qzone:hover{background-position:0px -44px;}*/
+.appgame-leftside-search{top:86px; background-position:-93px -89px;}
+.appgame-leftside-search:hover{background-position:-5px -86px;}
+.appgame-leftside-weixin{top:129px; background-position:-88px 0px;}
+.appgame-leftside-weixin:hover{background-position:0px 0px;}
+/*.appgame-leftside-fbook{top:172px; background-position:-88px -176px;}
+.appgame-leftside-fbook:hover{background-position:0px -176px;}
+.appgame-leftside-twi{top:215px; background-position:-88px -220px;}
+.appgame-leftside-twi:hover{background-position:0px -220px;}*/
+#appgame-leftside-share .appgame-leftside-top{background-image:url(http://gh.bnu.edu.cn/images/leftnav-off.png); background-position:-1px -395px; top:130px; cursor:pointer;}
+
+.rwt_share {
+/*	overflow:hidden;*/
+	float:left;
+	position:relative;
+}
+.rwt_share a {
+	display:inline-block;
+	margin-right:10px;
+	text-indent:-9999px;
+	margin-bottom:10px;
+	width:24px;
+	height:24px;
+	overflow:hidden;
+	cursor:pointer;
+	float:left;
+	font-size:12px;
+}
+.rwts_weixin {
+	background-position:0 -1612px;
+}
+.rwts_tsina {
+	background-position:0 -104px;
+}
+.rwts_tqq {
+	background-position:0 -260px;
+}
+.rwts_qzone {
+	background-position:0 -52px;
+}
+.rwts_sqq {
+	background-position:0 -2652px;
+}
+.rwts_tieba {
+	background-position:0 -728px;
+}
+.rwts_renren {
+	background-position:0 -208px;
+}
+.rwts_kaixin001 {
+	background-position:0 -312px;
+}
+.rwts_tqf {
+	background-position:0 -364px;
+}
+.rwts_douban {
+	background-position:0 -468px;
+}
+.rwts_twi {
+	background-position:0 -1404px;
+}
+.rwts_fbook {
+	background-position:0 -1352px;
+}
+.rwts_ty {
+	background-position:0 -1196px;
+}
+.rwts_mogujie {
+	background-position:0 -1768px;
+}
+.rwts_meilishuo {
+	background-position:0 -1716px;
+}
+.rwts_huaban {
+	background-position:0 -1872px;
+}
+.rwts_hi {
+	background-position:0 -416px;
+}
+.rwts_tsohu {
+	background-position:0 -520px;
+}
+.rwts_more {
+	background-position:0 0;
+}
+.rwt_share_wxShow_code>img {
+	width:100%;
+}
+.bks1 li{
+	list-style:disc;
+}
+@media screen and (max-width: 1200px){
+	.logo1{
+		width:100%!important;
+	}
+	.leftc img{
+		width:50%!important;
+		height:50%!important;
+	}
+	.logo2{display:none;}
+	.lujing{
+		width:90%;
+	}
+	.content{
+		width:90%;
+	}
+	.leftc{
+		float:none;
+		
+	}
+	.tu{display:none;}
+	
+	.rightc{
+		float:none;
+		width:100%;
+		margin-left:0px;
+	}
+	.footers{width:100%;}
+	.rheader{width:100%;}
+	.grjj{width:100%;}
+}
+@media screen and (max-width: 600px){
+.l3{width:95%;}
+.share{display:none;}
+.leftc img{
+		width:70%!important;
+		height:70%!important;
+	}
+}
+  
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo1">
+                <img src="http://bs.bnu.edu.cn/newweb/grzy/images/logo.png" alt="" class="l3" style="margin-top: 25px;float:left;">
+                <img src="http://bs.bnu.edu.cn/newweb/grzy/images/logo2.png" alt="" class="logo2">
+                <a href="http://bs.bnu.edu.cn/englishversion/facultyresearch/fulltimefaculty/azmsy/119695.html"><p>ENGLISH VERSION</p></a>
+            </div>
+        </div>
+        <div class="xian"></div>
+        <div class="tu"></div>
+        <div class="lujing">
+            <div class="lujings">
+                <a href="#">师资队伍</a>
+                 | 
+                <a href="#">金融系</a>
+            </div>
+        </div>
+        <div class="content">
+            <div class="leftc">
+                <img src="/Public/upload/2020/09/16/5f61e2b68be7d.png" alt="" width="270">
+            </div>
+            <div class="rightc">
+                <div class="rheader">
+                    <p class="xm">李 锐</p>
+                    <p class="zhiw">教授</p>
+                    <p class="tel"><strong style="display:block;width:100px;float:left;">电话</strong>：010-58807010</p> 
+                 <p class="tel"><strong style="display:block;width:100px;float:left;">E-mail</strong>：lirui67@bnu.edu.cn</p>
+                 <p class="tel"><strong style="display:block;width:100px;float:left;">Office hour</strong>：周一下午3：00--4：00</p>
+                 <p class="tel"><strong style="display:block;width:100px;float:left;">系所中心</strong>：金融系</p>
+              </div>
+			  <div class="grjj">
+                    <p class="jjh">个人简历</p>
+                    <div class="bks1" id="jjc"><div style="top: 0px;">﻿﻿<span style=" font-size: 16px; line-height: 24px; font-family: 楷体_GB2312;"><strong>一</strong></span><span style=" font-family: 宋体; font-size: 16px; line-height: 24px;"><strong>、工作经历</strong></span></div><p style="color: rgb(0, 0, 0); text-transform: none; line-height: 24px; text-indent: 28px; letter-spacing: normal;font-size:16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">1<span style="font-family:宋体;">、</span>2014.4<span style="font-family:宋体;">至今</span>&nbsp;&nbsp;<span style="font-family:宋体;">北京师范大学经济与工商管理学院</span>&nbsp;&nbsp;<span style="font-family:宋体;">教授</span></p><p style="color: rgb(0, 0, 0); text-transform: none; line-height: 24px; text-indent: 28px; letter-spacing: normal;font-size:16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;"><span style="font-family:宋体;">2、2015.9-2016.3&nbsp; 康奈尔大学经济系&nbsp; 访问学者</span></p><p style="color: rgb(0, 0, 0); text-transform: none; line-height: 24px; text-indent: 28px; letter-spacing: normal;font-size:16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">3<span style="font-family:宋体;">、</span>2012.8-2013.8&nbsp; MIT<span style="font-family:宋体;">（麻省理工学院）经济系</span>&nbsp;&nbsp;<span style="font-family:宋体;">访问学者</span></p><p style="color: rgb(0, 0, 0); text-transform: none; line-height: 24px; text-indent: 28px; letter-spacing: normal;font-size:16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">4<span style="font-family:宋体;">、</span>2005.10-2014.4&nbsp;&nbsp;<span style="font-family:宋体;">北京航空航天大学经济管理学院&nbsp;</span><span>&nbsp;</span><span style="font-family:宋体;">蓝天学者特聘教授、副教授</span></p><p style="color: rgb(0, 0, 0); text-transform: none; line-height: 24px; text-indent: 28px; letter-spacing: normal;font-size:16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">5<span style="font-family:宋体;">、</span>2009.3-2014.2&nbsp;&nbsp;<span style="font-family:宋体;">山东大学经济研究院</span>&nbsp;&nbsp;<span style="font-family:宋体;">泰山学者特聘教授（兼职）</span></p><p style="color: rgb(0, 0, 0); text-transform: none; line-height: 24px; text-indent: 28px; letter-spacing: normal;font-size:16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">6<span style="font-family:宋体;">、</span>2004.1-2005.10&nbsp;&nbsp;<span style="font-family:宋体;">清华大学经济管理学院经济系</span>&nbsp;&nbsp;<span style="font-family:宋体;">博士后</span></p><p style="color: rgb(0, 0, 0); text-transform: none; line-height: 24px; text-indent: 28px; letter-spacing: normal;font-size:16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">7<span style="font-family:宋体;">、</span>1991.7-2003.12&nbsp;&nbsp;<span style="font-family:宋体;">中国农科院农业经济研究所&nbsp;</span><span>&nbsp;</span><span style="font-family:宋体;">副研究员、助理研究员</span></p><p style="color: rgb(0, 0, 0); text-transform: none; line-height: 24px; text-indent: 0px; letter-spacing: normal;font-size:16px; font-style: normal; font-weight: 400; margin-top: 8px; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;"><strong><span style="line-height: 24px; font-size: 16px;"><span style="font-family:宋体;">二、教育背景</span></span></strong></p><p style="color: rgb(0, 0, 0); text-transform: none; line-height: 24px; text-indent: 28px; letter-spacing: normal;font-size:16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;"><span style="line-height: 24px;">1</span><span style="line-height: 24px; font-family: 楷体_GB2312;"><span style="font-family:宋体;">、</span></span>2000.9-2003.7&nbsp;&nbsp;<span style="font-family:宋体;">首都经济贸易大学&nbsp;</span><span>&nbsp;</span><span style="font-family:宋体;">博士学位</span></p><p style="color: rgb(0, 0, 0); text-transform: none; line-height: 24px; text-indent: 0px; letter-spacing: normal;font-size:16px; font-style: normal; font-weight: 400; margin-left: 28px; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">2<span style="font-family:宋体;">、</span>1988.9-1991.7&nbsp;&nbsp;<span style="font-family:宋体;">中国农科院研究生院&nbsp;</span><span>&nbsp;</span><span style="font-family:宋体;">硕士学位</span></p><p style="color: rgb(0, 0, 0); text-transform: none; line-height: 24px; text-indent: 0px; letter-spacing: normal;font-size:16px; font-style: normal; font-weight: 400; margin-left: 28px; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">3<span style="font-family:宋体;">、</span>1984.9-1988.7&nbsp;&nbsp;<span style="font-family:宋体;">湖南农业大学农经系&nbsp;</span><span>&nbsp;</span><span style="font-family: 楷体_GB2312;"><span style="font-family:宋体;">学士学位</span></span></p></div>
+                    
+                </div>				<div class="grjj">
+                    <p class="jjh">研究领域</p>
+                    <div class="bks1"><div style="top: 0px;">﻿﻿发展经济学、应用计量经济学和大数据金融</div></div>
+                </div>				<div class="grjj">
+                    <p class="jjh">研究成果</p>
+                    <div class="bks1" id="jjc1"><div style="top: 0px;">﻿﻿<span style=" font-size: 16px; line-height: 24px; font-family: 楷体_GB2312;"><strong><span style="font-family:宋体;">一、代表性论文（</span></strong></span><sup style="font-weight: bold;"><span style="line-height: 24px; font-size: 16px;">*</span></sup><span style=" font-size: 16px; line-height: 24px; font-family: 楷体_GB2312;"><strong><span style="font-family:宋体;">为通讯作者）（详见简历）</span></strong></span></div><p style="margin: 10px 0px 0px 53px; color: rgb(0, 0, 0); text-transform: none; line-height: 29px; text-indent: 0px; letter-spacing: normal;font-size:16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">1. Xiaofeng Lv, Xuran Sun, Yue Lu, Rui Li<sup>*</sup>.<span>&nbsp;</span><em>Nonparametric identification and estimation of dynamic treatment effects for survival data in a regression discontinuity design</em>, Economics Letters, 184（2019）, (SSCI).</p><p style="color: rgb(0, 0, 0); text-transform: none; line-height: 29px; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei';font-size:16px; font-style: normal; font-weight: 400; margin-left: 53px; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">2. Rui Li<strong><sup><span style="font-size: 16px;">*</span></sup></strong>, Qinghai Li, Xiaofeng Lv, Xi Zhu.<span style="font-family: ˎ̥, serif;"><span>&nbsp;</span><em>The land rental of Chinese rural households and its welfare effects</em>,<span>&nbsp;</span></span>China Economic Review, 54 (2019) 204–217, (SSCI).</p><p style="color: rgb(0, 0, 0); text-transform: none; line-height: 29px; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei';font-size:16px; font-style: normal; font-weight: 400; margin-left: 53px; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">3. Xiaofeng Lv, Rui Li*, Zheng Fang.<span>&nbsp;</span><em>Efficient semiparametric estimation for Gini inequality treatment effects</em>. Economics Letters, 154 (2017) 96–100, (SSCI).</p><p style="color: rgb(0, 0, 0); text-transform: none; line-height: 29px; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei';font-size:16px; font-style: normal; font-weight: 400; margin-left: 53px; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">4. Xiaofeng Lv, Gupeng Zhang, Qinghai Li, Rui Li.<em><span>&nbsp;</span><span style="font-family: ˎ̥, serif;">Maximum weighted likelihood for discrete choice models with a dependently censored covariate</span></em><span style="font-family: ˎ̥, serif;">. Journal of the Korean Statistical Society, 46</span><span>&nbsp;</span>(2017) 15–27. (SCI).</p><p style="color: rgb(0, 0, 0); text-transform: none; line-height: 29px; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei';font-size:16px; font-style: normal; font-weight: 400; margin-left: 53px; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">5. WANG S. H., LI R.*<span>&nbsp;</span><em>Forecasting dissolved oxygen and biochemical oxygen demand in a river with numerical solution of one-dimensional Bod-Do model</em>. Applied Ecology and Environmental Research 2017, 15 (3) 323-333. (SCI).</p><p style="color: rgb(0, 0, 0); text-transform: none; line-height: 29px; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei';font-size:16px; font-style: normal; font-weight: 400; margin-left: 53px; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">6. Rui Li<sup>*</sup>, Qinghai Li, Shaoan Huang, and Xi Zhu.<em><span>&nbsp;</span><a></a><a><span style="color:#000000;">The Credit Rationing of Chinese Rural Households and Its Welfare Loss: An Investigation Based on Panel Dat</span></a>a</em>. China Economic Review, 26 (2013) 17–27, (SSCI), IF: 1.390/2012.</p><p style="color: rgb(0, 0, 0); text-transform: none; line-height: 29px; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei';font-size:16px; font-style: normal; font-weight: 400; margin-left: 53px; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">7. Xiaofeng Lv, Rui Li<sup>*</sup>.<span>&nbsp;</span><em>Smoothed empirical likelihood analysis of partially linear quantile regression models with missing response variables</em>. ASTA-<a href="http://link.springer.com/journal/10182"><span style="color: windowtext;"><u>Advances in Statistical Analysis</u></span></a>, 2013, Vol.<span>&nbsp;</span><span style="background: white;">97, No. 4, pp. 317-347, (</span>SCIE), IF: 0.956/2012.</p><p style="color: rgb(0, 0, 0); text-transform: none; line-height: 29px; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei';font-size:16px; font-style: normal; font-weight: 400; margin-left: 53px; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;"><em>8.<span>&nbsp;</span></em>Xiaofeng Lv, Rui Li<sup>*</sup>.<span>&nbsp;</span><a></a><a></a><a></a><a><em><span style="color:#000000;">Smoothed empirical likelihood confidence intervals for quantile regression parameters with auxiliary information</span></em></a><em>,</em><span>&nbsp;</span><a href="http://www.sciencedirect.com/science/journal/15723127"><span style="color: windowtext;"><u>Statistical Methodology</u></span></a>, Vol.<span>&nbsp;</span><span style="background: white;">15, 46-54 (2013),</span><span>&nbsp;</span>(SCIE), IF: 0.726/2013.</p><p style="color: rgb(0, 0, 0); text-transform: none; line-height: 29px; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei';font-size:16px; font-style: normal; font-weight: 400; margin-left: 53px; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;"><em>9.<span>&nbsp;</span></em>Dongwen Tian, Rui Li, Wei Yao, and Li Huang.<span>&nbsp;</span><em><span style="background: white;">Study on the Survival of China Agri-Food Export Trade Relationships.<span>&nbsp;</span></span></em><span style="background: white;">China Agricultural Economic Review</span>, Vol. 6 No. 1, 2014. PP. 139-157, (SSCI),<em><span>&nbsp;</span></em>IF: 0.476/2012.</p><p style="color: rgb(0, 0, 0); text-transform: none; line-height: 29px; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei';font-size:16px; font-style: normal; font-weight: 400; margin-left: 53px; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">10. Dandan Liu, Rui Li, Jijun Tan.<span>&nbsp;</span><em>A Dual Measure of Correlation between the Solow Residual and Output Growth Discrete Covariates</em>. Journal of Productivity Analysis<em>,<strong><span>&nbsp;</span></strong></em>2012, Vol. 37, No. 1, 17-25, (SSCI), IF: 1.068/2012.</p><p style="color: rgb(0, 0, 0); text-transform: none; line-height: 29px; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei';font-size:16px; font-style: normal; font-weight: 400; margin-left: 53px; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">11. Dandan Liu, Rui Li, Zijun Wang.<span>&nbsp;</span><em>Testing for Structural Breaks in Panel Varying Coefficient Models: With An Application to OECD Health Expenditure</em>. Empirical Economics<span style="color: rgb(19, 20, 19);">,<span>&nbsp;</span></span>2011, 40, 95-118, (SSCI), IF: 0.597/2011.</p><p style="color: rgb(0, 0, 0); text-transform: none; line-height: 29px; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei';font-size:16px; font-style: normal; font-weight: 400; margin-left: 53px; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">12. Li Rui<sup>*</sup>, Zhu Xi.<span>&nbsp;</span><a></a><a><em><span style="color:#000000;">Econometric Analysis of Credit Constraints of Chinese Rural Households and Welfare Loss</span></em></a>. Applied Economics,<strong><span>&nbsp;</span></strong>2010, 42, 1615-1625, (SSCI), IF:0.424/2010</p><p style="color: rgb(0, 0, 0); text-transform: none; line-height: 29px; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei';font-size:16px; font-style: normal; font-weight: 400; margin-left: 53px; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">13. Gaosheng Ju, Rui Li, Zhongwen Liang.<span>&nbsp;</span><em>Nonparametric Estimation of Multivariate CDF with Categorical and Continuous Data.</em><span>&nbsp;</span>Advances in Econometrics, 2009, Vol. 25, pp. 291-318. (ESI)</p><p style="color: rgb(0, 0, 0); text-transform: none; line-height: 29px; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei';font-size:16px; font-style: normal; font-weight: 400; margin-left: 53px; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">14. Li Rui<sup>*</sup>, Guan Gong.<span>&nbsp;</span><em>K-nn Nonparametric Estimation of Regression Functions In the Presence of Irrelevant Variables</em>. Econometrics Journal, 2008, Vol. 11, pp. 396-408, (SSCI), IF: 1.00/2012.</p><p style="color: rgb(0, 0, 0); text-transform: none; line-height: 29px; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei';font-size:16px; font-style: normal; font-weight: 400; margin-left: 53px; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">15.<span>&nbsp;</span><span style="font-family: 仿宋;">师丽娟、李锐，</span>“<span style="font-family: 仿宋;">社会网络、收入稳定性与农户储蓄率：基于工具变量面板分位数回归模型的研究</span>”<span style="font-family: 仿宋;">，《管理工程学报》，</span>2018<span style="font-family: 仿宋;">年第</span>3<span style="font-family: 仿宋;">期，第</span>1-8<span style="font-family: 仿宋;">页。</span><br /></p><p style="color: rgb(0, 0, 0); text-transform: none; line-height: 29px; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei';font-size:16px; font-style: normal; font-weight: 400; margin-left: 53px; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">16.<span>&nbsp;</span><span style="font-family: 仿宋;">王芳、李锐，</span>“‘<span style="font-family: 仿宋;">新农保</span>’<span style="font-family: 仿宋;">对</span>‘<span style="font-family: 仿宋;">家庭养老</span>’<span style="font-family: 仿宋;">替代性的地区差异分析</span>”<span style="font-family: 仿宋;">，《</span><span style="font-family: 仿宋;">保险研究</span><span style="font-family: 仿宋;">》，</span>2016<span style="font-family: 仿宋;">年第</span>12<span style="font-family: 仿宋;">期，第</span>114-123<span style="font-family: 仿宋;">页。</span><br /></p><p style="color: rgb(0, 0, 0); text-transform: none; line-height: 29px; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei';font-size:16px; font-style: normal; font-weight: 400; margin-left: 53px; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">17.<span>&nbsp;</span><span style="font-family: 仿宋;">王娟、李锐，</span>“<span style="font-family: 仿宋;">农户消费信贷约束及其影响</span>——<span style="font-family: 仿宋;">来自</span>10<span style="font-family: 仿宋;">省样本</span>”<span style="font-family: 仿宋;">，《系统工程理论与实践》，</span>2016<span style="font-family: 仿宋;">年第</span>6<span style="font-family: 仿宋;">期，第</span>1372-1381<span style="font-family: 仿宋;">页。</span><br /></p><p style="color: rgb(0, 0, 0); text-transform: none; line-height: 29px; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei';font-size:16px; font-style: normal; font-weight: 400; margin-left: 53px; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">18.<span>&nbsp;</span><span style="font-family: 仿宋;">吕小锋、李锐、张古鹏，</span>“<span style="font-family: 仿宋;">分位数回归中基于检查函数的填补技术</span>”<span style="font-family: 仿宋;">，《统计研究》，</span>2015<span style="font-family: 仿宋;">（</span>10<span style="font-family: 仿宋;">）：</span>92-97<span style="font-family: 仿宋;">。</span><br /></p><p style="color: rgb(0, 0, 0); text-transform: none; line-height: 29px; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei';font-size:16px; font-style: normal; font-weight: 400; margin-left: 53px; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;"><span style="font-family: 仿宋;">19.<span>&nbsp;</span></span><span style="font-family: 仿宋;">李庆海、孙瑞博、李锐，</span>“<span style="font-family: 仿宋;">农村劳动力外出务工模式与留守儿童学习成绩</span>”<span style="font-family: 仿宋;">，《中国农村经济》，</span>2014<span style="font-family: 仿宋;">年第</span>10<span style="font-family: 仿宋;">期，第</span>4-20<span style="font-family: 仿宋;">页。</span></p><p style="color: rgb(0, 0, 0); text-transform: none; line-height: 29px; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei';font-size:16px; font-style: normal; font-weight: 400; margin-left: 53px; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;"><span style="font-family: 仿宋;">20.<span>&nbsp;</span></span><span style="font-family: 仿宋;">李晓楠、李锐，</span>“<span style="background: white;"><a href="http://www.jqte.net/ch/reader/view_abstract.aspx?file_no=20130906&amp;flag=1"><span style="color: windowtext; font-family: 仿宋;"><u>我国四大经济地区农户的消费结构及其影响因素分析</u></span></a></span>”<span style="font-family: 仿宋;">，</span><span style="background: white; font-family: 仿宋;">《数量经</span><span style="background: white; font-family: 仿宋;">济技术经济研究》，2013年30卷第9期，89-105页。</span><br /></p><p style="color: rgb(0, 0, 0); text-transform: none; line-height: 29px; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei';font-size:16px; font-style: normal; font-weight: 400; margin-left: 53px; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;"><span style="font-family: 仿宋;">21.<span>&nbsp;</span></span><span style="font-family: 仿宋;">李庆海、李锐、汪三贵，“<span style="background: white;">农户信贷配给及其福利损失-基于面板数据的分析</span>”，<span style="background: white;"><span>&nbsp;</span>《数量经济技术经济研究》，2012年第8期，34-48、78。</span></span></p><p style="color: rgb(0, 0, 0); text-transform: none; line-height: 29px; text-indent: 0px; letter-spacing: normal;font-size:16px; font-style: normal; font-weight: 400; margin-left: 53px; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">22. 李<span style="background: white; font-family: 仿宋_GB2312;"><span style="font-family:宋体;">庆海、李锐，</span></span><span style="background: white;">“</span><span style="background: white; font-family: 仿宋_GB2312;"><span style="font-family:宋体;">农户投资的微观计量分析</span></span><span style="background: white;">”</span><span style="background: white; font-family: 仿宋_GB2312;"><span style="font-family:宋体;">，《经济科学》，</span></span><span style="background: white;">2012</span><span style="background: white; font-family: 仿宋_GB2312;"><span style="font-family:宋体;">年第</span></span><span style="background: white;">6</span><span style="background: white; font-family: 仿宋_GB2312;"><span style="font-family:宋体;">期，第</span></span><span style="background: white;">103-115</span><span style="background: white; font-family: 仿宋_GB2312;"><span style="font-family:宋体;">。</span></span></p><p style="color: rgb(0, 0, 0); text-transform: none; line-height: 29px; text-indent: 0px; letter-spacing: normal;font-size:16px; font-style: normal; font-weight: 400; margin-left: 53px; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;"><span style="font-family: 仿宋;">23.<span>&nbsp;</span></span><span style="font-family: 仿宋;">李庆海、李锐、王兆华，</span><span style="font-family: 仿宋;">“</span><span style="font-family: 仿宋;">农户土地租赁行为及其福利效果</span><span style="font-family: 仿宋;">”，</span><span style="font-family: 仿宋;">《经济学季刊》，</span><a></a><a><span style="font-family: 仿宋;"><span style="color:#000000;">2011</span></span></a><span style="font-family: 仿宋;">年第11卷第1期</span><span style="font-family: 仿宋;">。</span></p><p style="color: rgb(0, 0, 0); text-transform: none; line-height: 29px; text-indent: 0px; letter-spacing: normal;font-size:16px; font-style: normal; font-weight: 400; margin-left: 53px; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">24.<span>&nbsp;</span><span style="font-family:宋体;">朱喜、史清华、李锐，</span>“<span style="font-family:宋体;">转型时期农户的经营投资行为—以长三角</span>15<span>&nbsp;</span><span style="font-family:宋体;">村跟踪观察农户为例</span>”<span style="font-family:宋体;">，</span><a></a><a><span style="font-family:宋体;color:#000000;">《经济学季刊》</span></a><span style="font-family:宋体;">，</span>2010<span style="font-family:宋体;">年第</span>9<span style="font-family:宋体;">卷第</span>2<span style="font-family:宋体;">期，第</span>713~730<span style="font-family:宋体;">页。</span></p><p style="color: rgb(0, 0, 0); text-transform: none; line-height: 29px; text-indent: 0px; letter-spacing: normal;font-size:16px; font-style: normal; font-weight: 400; margin-left: 53px; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">25.<span>&nbsp;</span><span style="font-family:宋体;">李锐、朱喜，</span>“<span style="font-family:宋体;">农户金融抑制及其福利损失的计量分析</span>”<span style="font-family:宋体;">，《经济研究》，</span>2007<span style="font-family:宋体;">年第</span>2<span style="font-family:宋体;">期，第</span>146~155<span style="font-family:宋体;">页。</span></p><p style="color: rgb(0, 0, 0); text-transform: none; line-height: 29px; text-indent: 0px; letter-spacing: normal;font-size:16px; font-style: normal; font-weight: 400; margin-left: 53px; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">26.<span>&nbsp;</span><span style="font-family:宋体;">章元、李锐、赵娜，</span>“<span style="font-family:宋体;">生育间隔与农村义务教育的实证分析</span>”<span style="font-family:宋体;">，《中国人口科学》，</span>2009<span style="font-family:宋体;">卷第</span>3<span style="font-family:宋体;">期，第</span>48~57<span style="font-family:宋体;">页。<br /></span></p><p style="color: rgb(0, 0, 0); text-transform: none; line-height: 29px; text-indent: 0px; letter-spacing: normal;font-size:16px; font-style: normal; font-weight: 400; margin-left: 53px; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">27.&nbsp;<span style="font-family:宋体;">李锐、李超，</span>“<span style="font-family:宋体;">农户借贷行为和偏好的计量分析</span>”<span style="font-family:宋体;">，《中国农村经济》，</span>2007<span style="font-family:宋体;">年第</span>8<span style="font-family:宋体;">期，第</span>4~14<span style="font-family:宋体;">页。</span></p><p style="color: rgb(0, 0, 0); text-transform: none; line-height: 29px; text-indent: 0px; letter-spacing: normal;font-size:16px; font-style: normal; font-weight: 400; margin-left: 53px; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">28.<span>&nbsp;</span><span style="font-family:宋体;">李锐、张澍，</span>“<span style="font-family:宋体;">真实汇率影响因素的计量分析</span>”<span style="font-family:宋体;">，《统计研究》，</span>2007<span style="font-family:宋体;">年第</span>6<span style="font-family:宋体;">期，第</span>58~62<span style="font-family:宋体;">页。</span></p><p style="color: rgb(0, 0, 0); text-transform: none; line-height: 29px; text-indent: 0px; letter-spacing: normal;font-size:16px; font-style: normal; font-weight: 400; margin-left: 53px; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">29.<span>&nbsp;</span><span style="font-family:宋体;">李锐，</span>“<span style="font-family:宋体;">我国农业科研投资效率的研究</span>”<span style="font-family:宋体;">，《管理科学学报》，</span>2007<span style="font-family:宋体;">年第</span>4<span style="font-family:宋体;">期。</span></p><p style="color: rgb(0, 0, 0); text-transform: none; line-height: 29px; text-indent: 0px; letter-spacing: normal;font-size:16px; font-style: normal; font-weight: 400; margin-left: 53px; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">30.<span>&nbsp;</span><span style="font-family:宋体;">李锐、项海容，</span>“<span style="font-family:宋体;">基于两期生命周期模型的农户金融行为的计量分析</span>”<span style="font-family:宋体;">，《管理世界》，</span>2006<span style="font-family:宋体;">年第</span>9<span style="font-family:宋体;">期，第</span>33~37<span style="font-family:宋体;">页。</span></p><p style="color: rgb(0, 0, 0); text-transform: none; line-height: 29px; text-indent: 0px; letter-spacing: normal;font-size:16px; font-style: normal; font-weight: 400; margin-left: 53px; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">31.<span>&nbsp;</span><span style="font-family:宋体;">李锐、项海容，</span>“<span style="font-family:宋体;">我国农业公共科研投资的配置：要素稀缺性技术诱导假说的检验</span>”<span style="font-family:宋体;">，《数量经济技术经济研究》，</span>2006<span style="font-family:宋体;">年第</span>9<span style="font-family:宋体;">期，第</span>39~45<span style="font-family:宋体;">页。</span></p><p style="color: rgb(0, 0, 0); text-transform: none; line-height: 29px; text-indent: 0px; letter-spacing: normal;font-size:16px; font-style: normal; font-weight: 400; margin-left: 53px; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">32.<span>&nbsp;</span><span style="font-family:宋体;">李锐、李宁辉，</span>“<span style="font-family:宋体;">农户借贷行为及其福利效果分析</span>”<span style="font-family:宋体;">，《经济研究》，</span>2004<span style="font-family:宋体;">年第</span>12<span style="font-family:宋体;">期，</span>96<span style="font-family:宋体;">～</span>104<span style="font-family:宋体;">页。<br /></span></p><p style="color: rgb(0, 0, 0); text-transform: none; line-height: 29px; text-indent: 0px; letter-spacing: normal;font-size:16px; font-style: normal; font-weight: 400; margin-left: 53px; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">33.<span>&nbsp;</span><span style="font-family:宋体;">李锐、李子奈、项海容，</span>“<span style="font-family:宋体;">基于截取回归模型的农村居民消费需求分析</span>”<span style="font-family:宋体;">，《数量经济技术经济研究》，</span>2004<span style="font-family:宋体;">年第</span>9<span style="font-family:宋体;">期，</span>29<span style="font-family:宋体;">～</span>37<span style="font-family:宋体;">页。</span></p><p style="color: rgb(0, 0, 0); text-transform: none; line-height: 29px; text-indent: 0px; letter-spacing: normal;font-size:16px; font-style: normal; font-weight: 400; margin-left: 53px; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">34.<span>&nbsp;</span><span style="font-family:宋体;">李锐、项海容，</span>“<span style="font-family:宋体;">不同类型收入对农村居民消费的影响</span>”<span style="font-family:宋体;">，《中国农村经济》，</span>2004<span style="font-family:宋体;">年第</span>6<span style="font-family:宋体;">期，</span>9<span style="font-family:宋体;">～</span>12<span style="font-family:宋体;">，</span>24<span style="font-family:宋体;">页。</span></p><p style="color: rgb(0, 0, 0); text-transform: none; line-height: 29px; text-indent: 0px; letter-spacing: normal;font-size:16px; font-style: normal; font-weight: 400; margin-left: 53px; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">35.<span>&nbsp;</span><span style="font-family:宋体;">李锐，</span>“<span style="font-family:宋体;">中国股票市场的月份效应</span>”<span style="font-family:宋体;">，《数量经济技术经济研究》，</span>2003<span style="font-family:宋体;">年第</span>7<span style="font-family:宋体;">期，</span>126<span style="font-family:宋体;">～</span>130<span style="font-family:宋体;">页。</span></p><p style="color: rgb(0, 0, 0); text-transform: none; line-height: 29px; text-indent: 0px; letter-spacing: normal;font-size:16px; font-style: normal; font-weight: 400; margin-left: 53px; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">36.<span>&nbsp;</span><span style="font-family:宋体;">李锐，</span>“<span style="font-family:宋体;">我国农村居民消费结构的数量分析</span>”<span style="font-family:宋体;">，《中国农村经济》，</span>2003<span style="font-family:宋体;">年第</span>5<span style="font-family:宋体;">期，</span>12<span style="font-family:宋体;">～</span>17<span style="font-family:宋体;">，</span>44<span style="font-family:宋体;">页。</span></p><p style="color: rgb(0, 0, 0); text-transform: none; line-height: 29px; text-indent: 0px; letter-spacing: normal;font-size:16px; font-style: normal; font-weight: 400; margin-left: 53px; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">37.<span>&nbsp;</span><span style="font-family:宋体;">李锐，</span>“<span style="font-family:宋体;">科研总投资分配的理论和计算方法的探讨</span>”<span style="font-family:宋体;">，《管理评论》，</span>1992<span style="font-family:宋体;">年第</span>1<span style="font-family:宋体;">期，</span>48<span style="font-family:宋体;">～</span>50<span style="font-family:宋体;">页。<br /></span></p><p style="color: rgb(0, 0, 0); text-transform: none; line-height: 29px; text-indent: 0px; letter-spacing: normal;font-size:16px; font-style: normal; font-weight: 400; margin-left: 53px; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">38.<span>&nbsp;</span><span style="font-family:宋体;">郑洪涛、李锐、张惠杰，</span>“<span style="font-family: 仿宋;">二十一世纪初我国农业资金供给形势的分析和预测</span>”<span style="font-family: 仿宋;">，《农业经济问题》，</span>2000<span style="font-family: 仿宋;">年第</span>9<span style="font-family: 仿宋;">期，</span>16-20<span style="font-family: 仿宋;">页。</span><br /></p><p style="color: rgb(0, 0, 0); text-transform: none; line-height: 29px; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei';font-size:16px; font-style: normal; font-weight: 400; margin-left: 53px; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;"><span style="font-family: 仿宋;"></span></p><p style="text-transform: none; line-height: 24px; text-indent: 0px; letter-spacing: normal;font-size:16px; font-style: normal; font-weight: 400; margin-top: 10px; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;"><a><strong><span style="line-height: 24px; font-family: 楷体_GB2312; font-size: 16px;"><span style="font-family:宋体;color:#000000;">二、专著</span></span></strong></a></p><p style="text-transform: none; line-height: 25px; text-indent: 0px; letter-spacing: normal;font-size:16px; font-style: normal; font-weight: 400; margin-left: 53px; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">1.<span>&nbsp;</span><span style="font-family: 楷体;">李庆海、李锐，《我国农户信贷配给及其影响的实证研究》，南京大学出版社，</span>2014<span style="font-family: 楷体;">年</span>9<span style="font-family: 楷体;">月</span><span style="font-family: 楷体;">。</span><br /></p><p style="color: rgb(0, 0, 0); text-transform: none; line-height: 29px; text-indent: 0px; letter-spacing: normal;font-size:16px; font-style: normal; font-weight: 400; margin-left: 53px; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">2.<span>&nbsp;</span><span style="font-family:宋体;">李锐，《中国农村金融问题研究——基于微观计量模型的政策分析》，中国财政经济出版社，</span>2006<span style="font-family:宋体;">年</span>12<span style="font-family:宋体;">月。</span></p><p style="text-transform: none; line-height: 24px; text-indent: 0px; letter-spacing: normal;font-size:16px; font-style: normal; font-weight: 400; margin-top: 10px; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;"><a></a><a><span style="font-weight: bold;"><span style="line-height: 24px; font-family: 楷体_GB2312; font-size: 16px;"><span style="color:#000000;"><span style="font-family:宋体;">三、</span><span style="line-height: 24px; font-family: 'times new roman'; font-size: 16px;">Working paper</span></span></span></span></a></p><p style="text-transform: none; line-height: 25px; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei';font-size:16px; font-style: normal; font-weight: 400; margin-left: 53px; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">1.<span>&nbsp;</span><em>Implementing a multidimensional poverty measure based on the SVM algorithm.</em><span>&nbsp;</span>(With Jin Wang).</p><p style="color: rgb(0, 0, 0); text-transform: none; line-height: 27px; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei';font-size:16px; font-style: normal; font-weight: 400; margin-left: 53px; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">2.<span>&nbsp;</span><em>The Impact of the New Rural Society Pension Insurance Program on Household Consumption.</em><span>&nbsp;</span>(With Fang Wang).</p><p style="color: rgb(0, 0, 0); text-transform: none; line-height: 25px; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei';font-size:16px; font-style: normal; font-weight: 400; margin-left: 53px; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">3.<span>&nbsp;</span><em>Study on noise trading and stock liquidity in China A-share market</em>. (With Chunchun Chen)</p><p style="color: rgb(0, 0, 0); text-transform: none; line-height: 25px; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei';font-size:16px; font-style: normal; font-weight: 400; margin-left: 53px; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">4.<span>&nbsp;</span><em>Quantile Regression with Missing Responses at Random in the Presence of Auxiliary Information</em>. (With Xiaofeng Lv).</p><p style="color: rgb(0, 0, 0); text-transform: none; line-height: 25px; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei';font-size:16px; font-style: normal; font-weight: 400; margin-left: 53px; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">5.<span>&nbsp;</span><em>Kernel Weighted Smoothed Quantile Regression with Endogenous Regressors</em>. (With Xiaofeng Lv).</p><p style="color: rgb(0, 0, 0); text-transform: none; line-height: 24px; text-indent: 0px; letter-spacing: normal;font-size:16px; font-style: normal; font-weight: 400; margin-top: 10px; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;"><strong><span style="line-height: 24px; font-family: 楷体_GB2312; font-size: 16px;"><span style="font-family:宋体;">四、获奖成果</span></span></strong></p><p style="color: rgb(0, 0, 0); text-transform: none; line-height: 24px; text-indent: 28px; letter-spacing: normal;font-size:16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">1<span style="font-family:宋体;">、</span>“<span style="font-family:宋体;">农村公共基础设施投资的研究</span>”<span style="font-family:宋体;">，</span>2001<span style="font-family: 楷体_GB2312;"><span style="font-family:宋体;">年获</span><a><span style="font-family:宋体;color:#000000;">农业部软科学成果</span></a></span><span style="font-family:宋体;">三等奖，为第一完成人，项目编号：</span>99014<span style="font-family:宋体;">。</span></p><p style="color: rgb(0, 0, 0); text-transform: none; line-height: 24px; text-indent: 0px; letter-spacing: normal;font-size:16px; font-style: normal; font-weight: 400; margin-left: 28px; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">2<span style="font-family:宋体;">、</span>“<span style="font-family:宋体;">高新技术改造传统农业的研究</span>”<span style="font-family:宋体;">，</span>1999<span style="font-family:宋体;">年获农业部科学技术进步二等奖，排名第七，证书号：</span>1999-04707<span style="font-family:宋体;">。</span></p><p style="color: rgb(0, 0, 0); text-transform: none; line-height: 24px; text-indent: 0px; letter-spacing: normal;font-size:16px; font-style: normal; font-weight: 400; margin-left: 28px; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">3<span style="font-family:宋体;">、</span>“<span style="font-family:宋体;">我国农业投资的份额和结构的研究</span>”<span style="font-family:宋体;">，</span>1993<span style="font-family:宋体;">年获农业部科学技术进步三等奖，排名第捌，证书号：</span>930340<span style="font-family:宋体;">。</span></p><p style="color: rgb(0, 0, 0); text-transform: none; line-height: 24px; text-indent: 28px; letter-spacing: normal;font-size:16px; font-style: normal; font-weight: 400; margin-right: 4px; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">4<span style="font-family:宋体;">、</span>“<span style="font-family:宋体;">加快农业科技成果推广的对策研究</span>”<span style="font-family:宋体;">，</span><span>&nbsp;</span>1993<span style="font-family:宋体;">年获农业部科学技术进步三等奖，<span style="line-height: 24px; font-size: 16px;">排名第拾</span>伍，证书号：</span>930570<span style="font-family: 楷体_GB2312;"><span style="font-family:宋体;">。</span></span></p></div>
+                    
+                </div>				<div class="grjj">
+                    <p class="jjh">研究课题</p>
+                  
+                    <div class="bks1"><div style="top: 0px;">﻿﻿</div><p style="color: rgb(0, 0, 0); text-transform: none; line-height: 24px; text-indent: 28px; letter-spacing: normal;font-size:16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;"><a><span style="color:#000000;">1</span></a><span style="font-family:宋体;">、</span>“<span style="font-family:宋体;">我国农村精准扶贫资金效率的研究</span>”<span style="font-family:宋体;">，国家自然科学基金面上项目，批准号：</span>71873020<span style="font-family:宋体;">，</span>2019<span style="font-family:宋体;">年</span>1<span style="font-family:宋体;">月</span>-2022<span style="font-family:宋体;">年</span>12<span style="font-family:宋体;">月，主持。</span></p><p style="color: rgb(0, 0, 0); text-transform: none; line-height: 24px; text-indent: 28px; letter-spacing: normal;font-size:16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">2<span style="font-family:宋体;">、</span>“<span style="font-family:宋体;">农村金融体系建设管理研究</span>”<span style="font-family: 仿宋_GB2312;"><span style="font-family:宋体;">，国家自然科学基金重点项目，</span><a></a><a><span style="font-family:宋体;color:#000000;">批准号：</span></a></span>71133001<span style="font-family:宋体;">，</span>2012<span style="font-family:宋体;">年</span>1<span style="font-family:宋体;">月</span>-2016<span style="font-family:宋体;">年</span>12<span style="font-family:宋体;">月，主持。</span></p><p style="color: rgb(0, 0, 0); text-transform: none; line-height: 24px; text-indent: 28px; letter-spacing: normal;font-size:16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">3<span style="font-family:宋体;">、</span>“<span style="font-family:宋体;">我国农村金融问题研究</span>”<span style="font-family:宋体;">，教育部新世纪优秀人才计划项目，</span>2009<span style="font-family:宋体;">年</span>1<span style="font-family:宋体;">月</span>-2011<span style="font-family:宋体;">年</span>12<span style="font-family:宋体;">月，主持。</span></p><p style="color: rgb(0, 0, 0); text-transform: none; line-height: 24px; text-indent: 28px; letter-spacing: normal;font-size:16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">4<span style="font-family:宋体;">、</span>“<span style="font-family:宋体;">我国农村信贷配给问题研究</span>”<span style="font-family:宋体;">，国家自然科学基金面上项目，批准号：</span>70773005<span style="font-family:宋体;">，</span>2008<span style="font-family:宋体;">年</span>1<span style="font-family:宋体;">月</span>-2010<span style="font-family:宋体;">年</span>12<span style="font-family:宋体;">月，主持。</span></p><p style="color: rgb(0, 0, 0); text-transform: none; line-height: 24px; text-indent: 28px; letter-spacing: normal;font-size:16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">5<span style="font-family:宋体;">、</span>“<span style="font-family:宋体;">农户借贷行为与农村金融体制改革的研究</span>”<span style="font-family:宋体;">，国家自然科学基金面上项目，批准号：</span>70573057<span style="font-family:宋体;">，</span>2006<span style="font-family:宋体;">年</span>1<span style="font-family:宋体;">月</span>-2008<span style="font-family:宋体;">年</span>12<span style="font-family:宋体;">月，主持。</span></p><p style="color: rgb(0, 0, 0); text-transform: none; line-height: 24px; text-indent: 28px; letter-spacing: normal;font-size:16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">6<span style="font-family:宋体;">、</span>“<span style="font-family:宋体;">农村金融体制改革的研究</span>”<span style="font-family:宋体;">，获中国博士后科学基金一等资助金（编号为</span>2005037006<span style="font-family:宋体;">），主持。</span></p><p style="color: rgb(0, 0, 0); text-transform: none; line-height: 24px; text-indent: 28px; letter-spacing: normal;font-size:16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">7<span style="font-family:宋体;">、</span>“<span style="font-family:宋体;">国库现金管理研究</span>”<span style="font-family:宋体;">，科技部资助，研究经费</span>80<span style="font-family:宋体;">万，</span>2004<span style="font-family:宋体;">年</span>2<span style="font-family:宋体;">月</span>-2007<span style="font-family:宋体;">年</span>4<span style="font-family:宋体;">月，第二主持。</span></p><p style="color: rgb(0, 0, 0); text-transform: none; line-height: 24px; text-indent: 28px; letter-spacing: normal;font-size:16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">8<span style="font-family:宋体;">、</span>“<span style="font-family:宋体;">我国农业科研投融资问题的研究</span>”<span style="font-family:宋体;">，国家自然科学基金面上项目，批准号：</span>70273052<span style="font-family:宋体;">，</span>2003<span style="font-family:宋体;">年</span>1<span style="font-family:宋体;">月</span>-2005<span style="font-family:宋体;">年</span>12<span style="font-family:宋体;">月，主持。</span></p><p style="color: rgb(0, 0, 0); text-transform: none; line-height: 24px; text-indent: 28px; letter-spacing: normal;font-size:16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">9<span style="font-family:宋体;">、</span>“<span style="font-family:宋体;">经济转型时期，我国农民消费行为的研究</span>”<span style="font-family:宋体;">，国家自然科学基金青年项目，批准号：</span>79900029<span style="font-family:宋体;">，</span>2000<span style="font-family:宋体;">年</span>1<span style="font-family:宋体;">月</span>-2002<span style="font-family:宋体;">年</span>12<span style="font-family:宋体;">月，主持。</span></p><p style="color: rgb(0, 0, 0); text-transform: none; line-height: 24px; text-indent: 28px; letter-spacing: normal;font-size:16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">10<span style="font-family:宋体;">、</span>“<span style="font-family:宋体;">我国农业投资问题的研究</span>”<span style="font-family:宋体;">，国家自然科学基金面上项目，批准号：</span>19270012<span style="font-family:宋体;">，</span>1993<span style="font-family:宋体;">年</span>1<span style="font-family:宋体;">月</span>-1995<span style="font-family:宋体;">年</span>12<span style="font-family:宋体;">月，主持。</span></p><p style="color: rgb(0, 0, 0); text-transform: none; line-height: 24px; text-indent: 28px; letter-spacing: normal;font-size:16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">11<span style="font-family:宋体;">、</span>“<span style="font-family:宋体;">国债投资对推动我国总体经济实力和科技进步的实证研究</span>”<span style="font-family:宋体;">，</span><span>&nbsp;</span><span style="font-family:宋体;">中国科学技术促进发展研究中心资助，研究经费</span>40<span style="font-family:宋体;">万元，</span><span style="color: rgb(51, 51, 51);">2003.7-2004.6</span><span style="font-family:宋体;"><span style="color: rgb(51, 51, 51); font-family: 仿宋_GB2312;">，第三主持</span>。</span></p><p style="color: rgb(0, 0, 0); text-transform: none; line-height: 24px; text-indent: 28px; letter-spacing: normal;font-size:16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">12<span style="font-family:宋体;">、</span>“<span style="font-family:宋体;">粮食主产区农民收入动态监测</span>”<span style="font-family:宋体;">，科研院所社会公益研究专项资金资助，</span>2003<span style="font-family:宋体;">年</span>9<span style="font-family:宋体;">月</span>-2005<span style="font-family:宋体;">年</span>9<span style="font-family:宋体;">月，研究经费</span>70<span style="font-family:宋体;">万，第二主持。</span></p><p style="color: rgb(0, 0, 0); text-transform: none; line-height: 24px; text-indent: 28px; letter-spacing: normal;font-size:16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">13<span style="font-family:宋体;">、</span>“<span style="font-family:宋体;">中国农业投资问题研究</span>”<span style="font-family:宋体;">，财政部和国家计委联合资助，研究经费</span>5<span style="font-family:宋体;">万元，</span>1999<span style="font-family:宋体;">年</span>1<span style="font-family:宋体;">月</span>-2000<span style="font-family:宋体;">年</span>5<span style="font-family:宋体;">月，主持。</span></p><p style="color: rgb(0, 0, 0); text-transform: none; line-height: 24px; text-indent: 28px; letter-spacing: normal;font-size:16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">14<span style="font-family:宋体;">、</span>“<span style="font-family:宋体;">农村小型公共基础设施建设与管理的市场化模式的研究</span>”<span style="font-family:宋体;">，农业部软科学基金项目，</span>2001<span style="font-family:宋体;">年</span>1<span style="font-family:宋体;">月</span>-2002<span style="font-family:宋体;">年</span>3<span style="font-family:宋体;">月，主持。</span></p><p style="color: rgb(0, 0, 0); text-transform: none; line-height: 24px; text-indent: 28px; letter-spacing: normal;font-size:16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">15<span style="font-family:宋体;">、</span>“<span style="font-family:宋体;">农村公共基础设施投资的研究</span>”<span style="font-family:宋体;">，农业部软科学基金项目，</span>1998<span style="font-family:宋体;">年</span>1<span style="font-family:宋体;">月</span>-1999<span style="font-family:宋体;">年</span>3<span style="font-family:宋体;">月，主持。</span></p><p style="color: rgb(0, 0, 0); text-transform: none; line-height: 24px; text-indent: 28px; letter-spacing: normal;font-size:16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">16<span style="font-family:宋体;">、</span>“<span style="font-family:宋体;">到</span>2010<span style="font-family:宋体;">年我国农业投资需求总量与投资结构研究</span>”<span style="font-family:宋体;">，农业部软科学基金项目，</span>1997<span style="font-family:宋体;">年</span>1<span style="font-family:宋体;">月</span>-1998<span style="font-family:宋体;">年</span>3<span style="font-family:宋体;">月，主持。</span></p><p style="color: rgb(0, 0, 0); text-transform: none; line-height: 24px; text-indent: 28px; letter-spacing: normal;font-size:16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;"><span style="font-family: 仿宋;">17</span><span style="font-family: 仿宋;">、“农业科研投入研究”，农业部软科学基金项目，1996年1月-1997年3月，主持。</span></p></div>
+                    
+                </div>				<div class="grjj">
+                    <p class="jjh">学生情况</p>
+                    <div class="bks1"><div style="top: 0px;">﻿﻿<span style="font-family: " microsoft="" yahei="" font-size:="" 16px="">已指导10人博士毕业。</span></div><p style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: 'Microsoft YaHei';font-size:16px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">目前招收发展经济学、大数据金融和计量经济学方向的博士生、硕士生、博士后、访问学者。</p></div>
+                    
+                </div>				<div class="grjj">
+                    <p class="jjh">教授课程</p>
+                    <div class="bks1"><div style="top: 0px;">﻿﻿<span style="font-family: 楷体_GB2312; font-size: 14px;">高级宏观经济学</span><span style="font-family: " times="" new="" roman="" serif="" font-size:="" 14px="">I</span><span style="font-family: 楷体_GB2312; font-size: 14px;">、微观经济学原理、宏观经济学原理、保险学、计量经济学</span></div></div>
+                    
+                </div>            </div>
+        </div>
+         <footer style="overflow: hidden;">
+            <div class="footers">
+                <div class="footersl">
+                    <img src="http://bs.bnu.edu.cn/newweb/images/ewm.jpg" alt="" class="imgewm">
+                    <div class="footerxx">
+                        <p>Copyright © 2020 北京师范大学经济与工商管理学院</p>
+                        <p><i class="fas fa-map-marker-alt"></i> 地址：北京市新街口外大街19号</p>
+                        <p><i class="fas fa-portrait"></i> 传真：010-58801867</p>
+                        <p><i class="fas fa-phone"></i> 电话：010-58801867</p>
+                        <p><i class="fas fa-envelope"></i> 邮编：100875</p>
+                    </div>
+                </div>
+                <img src="http://bs.bnu.edu.cn/newweb/images/db.png" alt="" width="140" class="dbimg">
+                <img src="http://bs.bnu.edu.cn/newweb/images/yx.png" alt="" class="yuanxun">
+            </div>
+        </footer>
+    </div>
+	<div class="share">
+		  <div id="appgame-leftside-share">
+	        <div class="appgame-leftside-share rwt_share" id="rwt_share">
+	         
+	        <!--<a class="appgame-leftside-search" data-cmd="search" title="search"  href="javascript:void(0);" onclick="opens('id')">search</a> --> <!--<div class="searchs" id="id">
+	         <form name="dataForm" action="/cms/search/searchResults.jsp" target="_blank" method="post" accept-Charset="utf-8"  onsubmit="document.charset='utf-8';">
+			        	<p>
+			        		<input name="siteID" size="4" value="127" type = "hidden">
+			        		<input type="text" name="query" id="search" class="searchInput" value="输入搜索词">
+			        		<button type="submit"></button>
+			        	</p>
+			        	</form>
+			        </div>-->
+			        <!-- <a class="appgame-leftside-weixin" data-cmd="weixin" title="">微信</a> -->
+                    
+			        <!-- <a class="appgame-leftside-qzone" data-cmd="qzone" title="">qq空间</a>
+			        
+			        <a class="appgame-leftside-tsina" data-cmd="tsina" title="">微博</a> -->			    </div>
+			        <a class="appgame-leftside-top" onclick="gotoTPoint()"></a>			</div>
+			        
+		</div>
+</body>
+<script src="http://gh.bnu.edu.cn/js/jquery-1.9.0.min.js"></script>
+<script src="http://gh.bnu.edu.cn/js/share.min.js"></script>
+<script>
+    var dj=document.getElementById('dianji');
+    var jjc=document.getElementById('jjc');
+    var dj1=document.getElementById('dianji1');
+    var jjc1=document.getElementById('jjc1');
+    var a=1;
+    function zhedie(m,n){
+        m.onclick=function(){
+            if(a==1){
+                n.className='jjc';
+                m.className='dianji1'
+                a=0;
+            }else{
+                n.className='jjc1';
+                m.className='dianji'
+                a=1;
+            }
+        }
+    }
+    zhedie(dj,jjc);
+    zhedie(dj1,jjc1);
+	
+	
+</script>
+<script>
+
+	
+	
+    
+
+    /*回到顶部*/
+	$(function(){
+	 	$(window).resize(function(){
+						var h = $(window).height();
+						$('.goTop').css('top',h-60);
+						$(window).scroll(function(){				
+							var scrollTop = $(document).scrollTop();					  
+							$('.goTop').stop().animate({
+								top: h + scrollTop-60
+							},300);
+						});
+		}).resize();
+		});
+	//gotop
+
+			$('.goTop').click(function(){
+
+				$('body,html').stop().animate({scrollTop:0});
+
+				return false;
+
+			});
+	
+	function gotoTPoint(){
+		$("html,body").animate({scrollTop:0},500);
+	}
+</script>
+</html>

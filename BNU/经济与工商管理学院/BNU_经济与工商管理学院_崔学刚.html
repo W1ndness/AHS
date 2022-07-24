@@ -1,0 +1,495 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0">
+    <title>北京师范大学工商与经济管理学院</title>
+    <link rel="stylesheet" href="http://bs.bnu.edu.cn/new-ver-css/reset.css">
+    <link rel="stylesheet" href="http://bs.bnu.edu.cn/new-ver-css/index.css">
+	<link rel="stylesheet" href="http://bs.bnu.edu.cn/new-ver-css/xyslist.css">
+	<link rel="stylesheet" href="http://bs.bnu.edu.cn/new-ver-css/xys-tf.css">
+    <style>
+        .container{
+            width:100%;
+            height: auto;
+            overflow: hidden;
+        }
+        .header{
+            width:100%;
+            height:116px;
+            background:#EFF8FF;
+        }
+        .logo1{
+            width:1200px!important;
+            margin:0 auto;
+            position:relative;
+            float: none;
+			display:block;
+        }
+        .logo2{
+            float:right;
+        }
+        .logo1 p{
+            position:absolute;
+            top:5px;
+            right:5px;
+            font-size:13px;
+        }
+        .logo1 p:hover{
+            color:#112769;
+        }
+        .tu{
+            width:100%;
+            height:240px;
+            background:url('http://bs.bnu.edu.cn/newweb/grzy/images/tu.jpg') no-repeat top center;
+            background-size: 100%;
+        }
+        .lujing{
+            width:1200px;
+            height:58px;
+            margin:0 auto;
+            border-bottom:1px solid #aaa;
+            overflow:hidden;
+        }
+        .lujings{
+            margin:24px 0 0 0;
+            font-size:14px;
+        }
+        .content{
+            color:#333;
+            width:1200px;
+/*            height:2000px;*/
+            margin:0 auto;
+            margin-top:40px;
+/*            background:#c4c4c4;*/
+        }
+        
+        .xian{
+            width:100%;
+            height:8px;
+            background:#9A0812;
+        }
+        
+        .leftc{
+            float:left;
+        }
+        .rightc{
+            float:left;
+            margin-left:50px;
+/*            background:#666;*/
+            width:880px;
+/*            height:1000px;*/
+        }
+        .rheader{
+            width:880px;
+            height:210px;
+/*            background:yellow;*/
+        }
+        .xm{
+            font-size:30px;
+            height:40px;
+/*            border-bottom:4px solid #9A0812;*/
+            width:auto;
+            float:left;
+            line-height:40px;
+			margin-right:30px;
+        }
+        .zhiw{
+            font-size:18px;
+            height:40px;
+            line-height:50px;
+            margin-bottom:30px;
+        }
+        .tel{
+                font-size: 16px;
+                margin-top: 10px;
+                line-height: 20px;
+        }
+        .grjj{
+/*            height:300px;*/
+            width:880px;
+/*            background:yellow;*/
+            padding-bottom:40px;
+        }
+        .jjh{
+                font-size: 20px;
+                border-bottom: 1px solid #cecece;
+                height: 40px;
+                line-height: 40px;
+                padding-left: 30px;
+                background: url(http://bs.bnu.edu.cn/newweb/grzy/images/zw.png) no-repeat 0 16px;
+        }
+        
+        .jjc{
+            font-size:14px;
+            margin-top:30px;
+           
+            line-height:28px;
+            overflow:hidden;
+            text-align: justify;
+            text-justify:inter-ideograph;
+        }
+        .jjc1{
+            height:225px;
+            font-size:14px;
+            margin-top:30px;
+            
+            line-height:28px;
+            overflow:hidden;
+            text-align: justify;
+            text-justify:inter-ideograph;
+        }
+        
+        .dianji1{
+                background: url(http://bs.bnu.edu.cn/newweb/grzy/images/zw.png) no-repeat 0 -50px;
+                width: 13px;
+                height: 13px;
+                cursor: pointer;
+                display: block;
+            margin-top: 20px;
+            transition: all .2s linear;
+        }
+        .dianji1:hover{
+            background: url(http://bs.bnu.edu.cn/newweb/grzy/images/zw.png) no-repeat 0 -64px;
+        }
+        
+        .dianji{
+                background: url(http://bs.bnu.edu.cn/newweb/grzy/images/zw.png) no-repeat 0 -24px;
+                height: 13px;
+                cursor: pointer;
+                display: block;
+            margin-top: 20px;
+            transition: all .2s linear;
+        }
+        .dianji:hover{
+            background: url(http://bs.bnu.edu.cn/newweb/grzy/images/zw.png) no-repeat 0 -37px;
+        }
+        #jjc1{
+            text-indent:0em;
+        }
+        
+        .bks{
+            font-size:14px;
+            font-weight: 800;
+            margin-top:30px;
+            height:auto;
+            line-height:36px;
+        }
+        .bks1{
+            font-size:14px;
+            margin-top:30px;
+            height:auto;
+            line-height:36px;
+        }
+        .bksc{
+            height:36px;
+            line-height:36px;
+            font-size:14px;
+        }
+        
+        .yanzheng{
+            width:1200px;
+            height:100px;
+            margin:0 auto;
+        }
+        .yanzheng img{
+            display:block;
+            margin-top:26px;
+            float:left;
+        }
+		
+#appgame-leftside-share{width:42px; height:216px; position: fixed;bottom: 30px;right: 30px; z-index:9999;}
+.appgame-leftside-share{width:42px; height:259px;}
+#appgame-leftside-share a{display:block; width:42px; height:44px; background-color:#e6e6e6; z-index:1; position:absolute; left:0; box-sizing:border-box; -moz-box-sizing:border-box; border:1px #ddd solid; background-image:url(http://gh.bnu.edu.cn/images/share-icons.png); background-repeat:no-repeat; margin:0;  transition:0.4s; -webkit-transition:0.4s; -moz-transition:0.4s;}
+#appgame-leftside-share a:hover{background-color:#fff; border:1px #eee solid; z-index:2;}
+/*.appgame-leftside-weixin{top:0; background-position:-88px 0;}
+.appgame-leftside-weixin:hover{background-position:0px 0;}
+.appgame-leftside-qzone{top:43px; background-position:-88px -44px;}
+.appgame-leftside-qzone:hover{background-position:0px -44px;}*/
+.appgame-leftside-search{top:86px; background-position:-93px -89px;}
+.appgame-leftside-search:hover{background-position:-5px -86px;}
+.appgame-leftside-weixin{top:129px; background-position:-88px 0px;}
+.appgame-leftside-weixin:hover{background-position:0px 0px;}
+/*.appgame-leftside-fbook{top:172px; background-position:-88px -176px;}
+.appgame-leftside-fbook:hover{background-position:0px -176px;}
+.appgame-leftside-twi{top:215px; background-position:-88px -220px;}
+.appgame-leftside-twi:hover{background-position:0px -220px;}*/
+#appgame-leftside-share .appgame-leftside-top{background-image:url(http://gh.bnu.edu.cn/images/leftnav-off.png); background-position:-1px -395px; top:130px; cursor:pointer;}
+
+.rwt_share {
+/*	overflow:hidden;*/
+	float:left;
+	position:relative;
+}
+.rwt_share a {
+	display:inline-block;
+	margin-right:10px;
+	text-indent:-9999px;
+	margin-bottom:10px;
+	width:24px;
+	height:24px;
+	overflow:hidden;
+	cursor:pointer;
+	float:left;
+	font-size:12px;
+}
+.rwts_weixin {
+	background-position:0 -1612px;
+}
+.rwts_tsina {
+	background-position:0 -104px;
+}
+.rwts_tqq {
+	background-position:0 -260px;
+}
+.rwts_qzone {
+	background-position:0 -52px;
+}
+.rwts_sqq {
+	background-position:0 -2652px;
+}
+.rwts_tieba {
+	background-position:0 -728px;
+}
+.rwts_renren {
+	background-position:0 -208px;
+}
+.rwts_kaixin001 {
+	background-position:0 -312px;
+}
+.rwts_tqf {
+	background-position:0 -364px;
+}
+.rwts_douban {
+	background-position:0 -468px;
+}
+.rwts_twi {
+	background-position:0 -1404px;
+}
+.rwts_fbook {
+	background-position:0 -1352px;
+}
+.rwts_ty {
+	background-position:0 -1196px;
+}
+.rwts_mogujie {
+	background-position:0 -1768px;
+}
+.rwts_meilishuo {
+	background-position:0 -1716px;
+}
+.rwts_huaban {
+	background-position:0 -1872px;
+}
+.rwts_hi {
+	background-position:0 -416px;
+}
+.rwts_tsohu {
+	background-position:0 -520px;
+}
+.rwts_more {
+	background-position:0 0;
+}
+.rwt_share_wxShow_code>img {
+	width:100%;
+}
+.bks1 li{
+	list-style:disc;
+}
+@media screen and (max-width: 1200px){
+	.logo1{
+		width:100%!important;
+	}
+	.leftc img{
+		width:50%!important;
+		height:50%!important;
+	}
+	.logo2{display:none;}
+	.lujing{
+		width:90%;
+	}
+	.content{
+		width:90%;
+	}
+	.leftc{
+		float:none;
+		
+	}
+	.tu{display:none;}
+	
+	.rightc{
+		float:none;
+		width:100%;
+		margin-left:0px;
+	}
+	.footers{width:100%;}
+	.rheader{width:100%;}
+	.grjj{width:100%;}
+}
+@media screen and (max-width: 600px){
+.l3{width:95%;}
+.share{display:none;}
+.leftc img{
+		width:70%!important;
+		height:70%!important;
+	}
+}
+  
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo1">
+                <img src="http://bs.bnu.edu.cn/newweb/grzy/images/logo.png" alt="" class="l3" style="margin-top: 25px;float:left;">
+                <img src="http://bs.bnu.edu.cn/newweb/grzy/images/logo2.png" alt="" class="logo2">
+                <a href="http://bs.bnu.edu.cn/englishversion/facultyresearch/fulltimefaculty/azmsy/119716.html"><p>ENGLISH VERSION</p></a>
+            </div>
+        </div>
+        <div class="xian"></div>
+        <div class="tu"></div>
+        <div class="lujing">
+            <div class="lujings">
+                <a href="#">师资队伍</a>
+                 | 
+                <a href="#">会计系</a>
+            </div>
+        </div>
+        <div class="content">
+            <div class="leftc">
+                <img src="/Public/upload/touxiang/11112013102.jpg" alt="" width="270">
+            </div>
+            <div class="rightc">
+                <div class="rheader">
+                    <p class="xm">崔学刚</p>
+                    <p class="zhiw">教授、博士生导师</p>
+                    <p class="tel"><strong style="display:block;width:100px;float:left;">电话</strong>：010-58806599</p> 
+                 <p class="tel"><strong style="display:block;width:100px;float:left;">E-mail</strong>：cxg@bnu.edu.cn</p>
+                 <p class="tel"><strong style="display:block;width:100px;float:left;">Office hour</strong>：周四上午</p>
+                 <p class="tel"><strong style="display:block;width:100px;float:left;">系所中心</strong>：会计系</p>
+              </div>
+			  <div class="grjj">
+                    <p class="jjh">个人简历</p>
+                    <div class="bks1" id="jjc"><p style="font-family: " microsoft="" yahei="" font-size:16px=""><span style="font-family: 微软雅黑, " microsoft="" yahei=""></span></p><p><span style="font-family:SimSun;"><span style="font-size: 18.6667px;"><strong>&nbsp;&nbsp;</strong></span>北京师范大学经济与工商管理学院副院长、认知神经管理学实验室主任、会计学教授、博士生导师。入选教育部新世纪优秀人才、财政部全国会计名家、北京市教学名师、首批全国会计领军人才(学术类)、全国会计领军人才特殊支持计划、北京市社科理论中青年“百人工程”、高校会计学者学术影响力50强等人才项目与荣誉奖项，兼任中国会计学会财务管理专业委员会委员、中国管理科学与工程学会-神经管理与神经工程研究会常务理事、中国技术经济学会神经经济管理专业委员会常务委员、中国总会计师协会卫生健康分会首届特聘专家、北京市卫生经济学会理事、北京市卫生经济学会财经专委会顾问。主持国家自科基金、国家社科基金、教育部人文社科规划项目等国家与省部级课题20余项，在<em>Abacus， International Journal of Finance and Economics ，Finance research Letters, Neuroscience，AsianBusiness and Management, </em>《会计研究》、《经济学动态》、《南开管理评论》等国内外学术期刊发表论文100余篇，出版专（合）著10部，发明专利2项，软件著作权1项，曾两次获得北京市哲学社会科学优秀成果奖二等奖、北京市教育教学优秀成果奖一等奖和二等奖、中国产学研合作创新奖(个人)、财政部中国会计学会优秀论文奖等奖项。主编和翻译教材10余部，其中主编的《会计学原理》《国际财务管理》教材分别入选国家级规划教材，《国际财务管理》被评为国家级精品教材。</span></p><br /><p style="font-family: " microsoft="" yahei="" font-size:16px=""><span style="font-family: 微软雅黑, " microsoft="" yahei=""></span></p></div>
+                    
+                </div>				<div class="grjj">
+                    <p class="jjh">研究领域</p>
+                    <div class="bks1"><p style="text-align:left;"><span style="font-family:宋体;">行为</span>/<span style="font-family:宋体;">神经会计与金融、资本市场财务与会计、政府管理会计</span></p><br /></div>
+                </div>				<div class="grjj">
+                    <p class="jjh">研究成果</p>
+                    <div class="bks1" id="jjc1"><p style="font-family: " microsoft="" yahei="" font-size:16px=""></p><p style="text-align:left;"><span style="font-family:SimSun;"><strong>1、代表性学术期刊论文</strong><br /></span></p><p><strong><span style="font-family:SimSun;">英文期刊论文</span></strong></p><p><span style="font-family:SimSun;"><span style="font-size: 10.5pt;">【1】</span><strong><span style="font-size: 10.5pt;">Xuegang Cui</span></strong><span style="font-size: 10.5pt;">, LeiXu, Huili Zhang</span><span style="font-size: 10.5pt;">，</span><span style="font-size: 10.5pt;">Yuxiao Zhang.2021.Executive compensation and firmperformance: Evidence from cross</span><span style="font-size: 10.5pt;">‐</span><span style="font-size: 10.5pt;">listed AH</span><span style="font-size: 10.5pt;">‐</span><span style="font-size: 10.5pt;">share firms. <strong><em><u>InternationalJournal of Finance and Economics</u></em></strong>, 26: 88-102</span><span style="font-size: 10.5pt;">，</span><span style="font-size: 10.5pt;">DOI: </span><a href="https://doi.org/10.1002/ijfe.1778"><span style="font-size: 10.5pt;">https://doi.org/10.1002/ijfe.1778</span></a></span></p><p style="text-align:left;"><span style="font-family:SimSun;"><span style="font-size: 10.5pt;">【2】</span><span style="font-size: 11pt; color: black;">Yunchuan Sun ,Xiaoping Zeng , Han Zhao , Betty Simkins ,Xuegang Cui</span><span style="font-size: 11pt; color: black;">(2021),&nbsp; The impact of COVID-19 on SMEs in China:Textual analysis and empirical evidence, </span><strong><em><u><span style="font-size: 11pt; color: black;">Finance Research Letters</span></u></em></strong><span style="font-size: 11pt; color: black;"> ,DOI: </span><span style="font-size: 11pt; color: blue;">https://doi.org/10.1016/j.frl.2021.102211</span></span></p><p><span style="font-family:SimSun;"><span style="font-size: 10.5pt;">【3】</span><span style="font-size: 10.5pt;">Kung Zhang, Yuanyuan Wang, <strong>Xuegang Cui </strong>, Hong Yue.&nbsp;2020. Can the academic experience ofsenior leadership improve corporate internal control quality?. <strong><em><u>AsianBusiness and Management</u></em></strong><em>&nbsp;,</em>DOI: https://doi.org/10.1057/s41291-020-00127-x</span></span></p><p><span style="font-family:SimSun;"><span style="font-size: 10.5pt;">【4】</span><strong><span style="font-size: 10.5pt;">Xuegang Cui, </span></strong><span style="font-size: 10.5pt;">Pingli Li, Mahmoud Al-Syed, Sean S.Zhou.2019.China’s Healthcare Costing in Times of Crisis: Conflicts,Interactions, and Hidden Agendas.<strong><em><u> Abacus</u></em></strong>, Vol. 55(3):620-633</span></span></p><p><span style="font-family:SimSun;"><span style="font-size: 10.5pt;">【5】</span><strong><span style="font-size: 10.5pt;">Xuegang Cui. </span></strong><span style="font-size: 10.5pt;">2019. Enterprise Management Control of Japan and China: Comparison, Trendsand Integration..<strong><em><u> Journal of Business &amp; Management Sciences</u></em></strong>,2:30-45</span></span></p><p><span style="font-family:SimSun;"><span style="font-size: 10.5pt;">【6】</span><span style="font-size: 10.5pt;">Yunchuan Sun Xiaoping Zeng, <strong>Xuegang Cui</strong>, Guangzhi Zhang,RongfangBie.2019.An active and dynamic credit reporting system for SMEs in China. <strong><em><u>Personaland Ubiquitous Computing</u></em></strong>, DOI</span><span style="font-size: 10.5pt;">：</span><span style="font-size: 10.5pt;">https://doi.org/10.1007/s00779-019-01275-4</span></span></p><p><span style="font-family:SimSun;"><span style="font-size: 10.5pt; color: rgb(51, 51, 51);">【7】</span><span style="font-size: 10.5pt; color: black;">TangH</span><span style="font-size: 10.5pt; color: black;">，</span><span style="font-size: 10.5pt; color: black;">XLu, Z Cui, C Feng, Q Lin,<strong> Xuegang Cui</strong>,Song Su</span><span style="font-size: 10.5pt; color: black;">，</span><span style="font-size: 10.5pt; color: black;">ChaoLiu.2018. Resting-state functional connectivity and deception: exploringindividualized deceptive propensity by machine learning.&nbsp;<strong><em><u>Neuroscience</u></em></strong>. Vol 395,101-112.</span></span></p><p><span style="font-family:SimSun;"><span style="font-size: 10.5pt;">【8】</span><span style="font-size: 10.5pt; color: black;">Yunchuan Sun</span><span style="font-size: 10.5pt; color: black;">，</span><span style="font-size: 10.5pt; color: black;">Lei Wu</span><span style="font-size: 10.5pt; color: black;">，</span><span style="font-size: 10.5pt; color: black;">Shizhong Wu</span><span style="font-size: 10.5pt; color: black;">，</span><span style="font-size: 10.5pt; color: black;">Shoupeng Li</span><span style="font-size: 10.5pt; color: black;">，</span><span style="font-size: 10.5pt; color: black;">Tao Zhang</span><span style="font-size: 10.5pt; color: black;">，</span><span style="font-size: 10.5pt; color: black;">Li Zhang</span><span style="font-size: 10.5pt; color: black;">，</span><span style="font-size: 10.5pt; color: black;">Junfeng Xu</span><span style="font-size: 10.5pt; color: black;">，</span><span style="font-size: 10.5pt; color: black;">Yongping Xiong</span><span style="font-size: 10.5pt; color: black;">，</span><strong><span style="font-size: 10.5pt;">Xuegang Cui</span></strong><span style="font-size: 10.5pt; color: black;">. </span><span style="font-size: 10.5pt;">2017.<span style="color:black;">Attacksand countermeasures in the internet of vehicles. <strong><em><u>Annals of Te</u></em></strong></span><strong><em><u>lecommunication</u></em></strong>,&nbsp;72:283–295</span></span></p><p><span style="font-family:SimSun;"><span style="font-size: 10.5pt; color: rgb(51, 51, 51);">【9】</span><span style="font-size: 10.5pt; color: rgb(51, 51, 51); background: white;">Linjuan Mu, <strong>Xuegang Cui.</strong> 2012. Trust andStimulation: An Experimental Research on Governance Mechanisms for Cost ofValue Chain</span><span style="font-size: 10.5pt; color: rgb(51, 51, 51); background: white;">，</span><strong><em><u><span style="font-size: 10.5pt; color: rgb(51, 51, 51); background: white;">Nankai Business International Review</span></u></em></strong><span style="font-size: 10.5pt; color: rgb(51, 51, 51); background: white;">，</span><span style="font-size: 10.5pt; color: rgb(51, 51, 51); background: white;">2012</span><span style="font-size: 10.5pt; color: rgb(51, 51, 51); background: white;">，</span><span style="font-size: 10.5pt; color: rgb(51, 51, 51); background: white;">Vol 2</span></span></p><p><span style="font-family:SimSun;"><span style="font-size: 10.5pt; color: rgb(51, 51, 51);">【10】</span><span style="font-size: 10.5pt; color: rgb(51, 51, 51); background: white;">Weizheng Yu, Maofeng Chen, <strong>Xuegang Cui</strong>.2005.Shareholding Structure and Pricing of A-shares</span><span style="font-size: 10.5pt; color: rgb(51, 51, 51); background: white;">，</span><strong><em><u><span style="font-size: 10.5pt; color: rgb(51, 51, 51); background: white;"> Journal of International Finance and Economics</span></u></em></strong><em><span style="font-size: 10.5pt; color: rgb(51, 51, 51); background: white;"> &nbsp;1: 10-20</span></em></span></p><p><strong><span style="color: rgb(68, 68, 68);"><span style="font-family:SimSun;">中文期刊论文</span></span></strong></p><p><span style="font-family:SimSun;"><span style="font-size: 10.5pt;">【1】</span><strong><span style="font-size: 10.5pt;">崔学刚</span></strong><span style="font-size: 10.5pt;">，葛传路</span><span style="font-size: 10.5pt;">. </span><span style="font-size: 10.5pt;">科林</span><span style="font-size: 10.5pt;">.</span><span style="font-size: 10.5pt;">卡默勒对行为与神经经济学的贡献——科睿唯安“引文桂冠”经济学奖得主学术贡献评介</span><span style="font-size: 10.5pt;">[J],</span><span style="font-size: 10.5pt;">《</span><span style="font-size: 10.5pt;">经济学动态》</span><span style="font-size: 10.5pt;">,2020(07):146-161</span></span></p><p><span style="font-family:SimSun;"><span style="font-size: 10.5pt;">【2】</span><strong><span style="font-size: 10.5pt;">崔学刚</span><span style="font-size: 10.5pt;">,</span></strong><span style="font-size: 10.5pt;">葛传路</span><span style="font-size: 10.5pt;">,</span><span style="font-size: 10.5pt;">张琨</span><span style="font-size: 10.5pt;">. </span><span style="font-size: 10.5pt;">从医院会计变迁看新中国政府会计发展</span><span style="font-size: 10.5pt;">70</span><span style="font-size: 10.5pt;">年</span><span style="font-size: 10.5pt;">[J].</span><span style="font-size: 10.5pt;">《</span><span style="font-size: 10.5pt;">会计研究》</span><span style="font-size: 10.5pt;">, 2020(01)</span><span style="font-size: 10.5pt;">：</span><span style="font-size: 10.5pt;">49-62</span></span></p><p><span style="font-family:SimSun;"><span style="font-size: 10.5pt;">【3】</span><strong><span style="font-size: 10.5pt;">崔学刚</span></strong><span style="font-size: 10.5pt;">,</span><span style="font-size: 10.5pt;">邓衢,邝文俊.卖空交易、市场行情与股价崩盘风险[J].《会计研究》,2019(06):43-50.</span></span></p><p><span style="font-family:SimSun;"><span style="font-size: 10.5pt;">【4】</span><span style="font-size: 10.5pt;">柴国俊，张琨，<strong>崔学刚</strong>.教育部审核评估对本科教育质量的提升效应分析———来自在校生学习成绩的自然实验证据[J].</span><span style="font-size:9.0pt;font-family:KTJ+ZGZLga-2;">《</span><span style="font-size: 10.5pt;">教育发展研究》,2019(07):42-52.</span></span></p><p><span style="font-family:SimSun;"><span style="font-size: 10.5pt;">【5】</span><span style="font-size: 10.5pt;">杨丹</span><span style="font-size: 10.5pt;">,</span><strong><span style="font-size: 10.5pt;">崔学刚</span></strong><span style="font-size: 10.5pt;">,</span><span style="font-size: 10.5pt;">杨梦丽</span><span style="font-size: 10.5pt;">.</span><span style="font-size: 10.5pt;">债权融资、经济关联与会计信息可比性</span><span style="font-size: 10.5pt;">[J].</span><span style="font-size: 10.5pt;">《中国会计评论》</span><span style="font-size: 10.5pt;">,2019,17(01):1-20.</span></span></p><p><span style="font-family:SimSun;"><span style="font-size: 10.5pt;">【6】</span><span style="font-size: 10.5pt;">王欣</span><span style="font-size: 10.5pt;">,</span><strong><span style="font-size: 10.5pt;">崔学刚</span></strong><span style="font-size: 10.5pt;">,</span><span style="font-size: 10.5pt;">潘临</span><span style="font-size: 10.5pt;">.</span><span style="font-size: 10.5pt;">提高会计信息可比性可以降低权益资本成本吗</span><span style="font-size: 10.5pt;">?[J].</span><span style="font-size: 10.5pt;">《中国会计评论》</span><span style="font-size: 10.5pt;">,2018,16(01):107-128.</span></span></p><p><span style="font-family:SimSun;"><span style="font-size: 10.5pt;">【7】</span><strong><span style="font-size: 10.5pt;">崔学刚</span></strong><span style="font-size: 10.5pt;">,</span><span style="font-size: 10.5pt;">邝文俊</span><span style="font-size: 10.5pt;">,</span><span style="font-size: 10.5pt;">薛贵</span><span style="font-size: 10.5pt;">.</span><span style="font-size: 10.5pt;">神经会计学</span><span style="font-size: 10.5pt;">:</span><span style="font-size: 10.5pt;">内涵、范式与展望</span><span style="font-size: 10.5pt;">[J].</span><span style="font-size: 10.5pt;">《北京工商大学学报</span><span style="font-size: 10.5pt;">(</span><span style="font-size: 10.5pt;">社会科学版</span><span style="font-size: 10.5pt;">)</span><span style="font-size: 10.5pt;">》</span><span style="font-size: 10.5pt;">,2017,32(04):11-23.</span></span></p><p><span style="font-family:SimSun;"><span style="font-size: 10.5pt;">【8】</span><strong><span style="font-size: 10.5pt;">崔学刚</span></strong><span style="font-size: 10.5pt;">,</span><span style="font-size: 10.5pt;">邓衢</span><span style="font-size: 10.5pt;">,</span><span style="font-size: 10.5pt;">邝文俊</span><span style="font-size: 10.5pt;">.</span><span style="font-size: 10.5pt;">基于神经科学方法的会计研究</span><span style="font-size: 10.5pt;">:</span><span style="font-size: 10.5pt;">分析与展望</span><span style="font-size: 10.5pt;">[J].</span><span style="font-size: 10.5pt;">《会计研究》</span><span style="font-size: 10.5pt;">,2016(12):21-28.</span><span style="font-size: 10.5pt;">人大复印资料《财务与会计导刊》（</span><span style="font-size: 10.5pt;">2017</span><span style="font-size: 10.5pt;">年第</span><span style="font-size: 10.5pt;">4</span><span style="font-size: 10.5pt;">期）全文转载</span></span></p><p><span style="font-family:SimSun;"><span style="font-size: 10.5pt;">【9】</span><strong><span style="font-size: 10.5pt;">崔学刚</span></strong><span style="font-size: 10.5pt;">, </span><span style="font-size: 10.5pt;">叶康涛</span><span style="font-size: 10.5pt;">, </span><span style="font-size: 10.5pt;">荆新</span><span style="font-size: 10.5pt;">, et al. </span><span style="font-size: 10.5pt;">权责发生制、政府会计改革与国家治理</span><span style="font-size: 10.5pt;">[J]. </span><span style="font-size: 10.5pt;">《会计研究》</span><span style="font-size: 10.5pt;">, 2015(7):92-95.</span></span></p><p><span style="font-family:SimSun;"><span style="font-size: 10.5pt;">【10】</span><span style="font-size: 10.5pt;">贺宏、<strong>崔学刚</strong></span><span style="font-size: 10.5pt;">.</span><span style="font-size: 10.5pt;">信息环境、证券分析师跟踪与综合收益的价值相关性，《财政研究》，</span><span style="font-size: 10.5pt;">2015</span><span style="font-size: 10.5pt;">（</span><span style="font-size: 10.5pt;">5</span><span style="font-size: 10.5pt;">）：</span><span style="font-size: 10.5pt;">98-102</span><span style="font-size: 10.5pt;">。</span></span></p><p><span style="font-family:SimSun;"><span style="font-size: 10.5pt;">【11】</span><strong><span style="font-size: 10.5pt;">崔学刚</span></strong><span style="font-size: 10.5pt;">, </span><span style="font-size: 10.5pt;">周颖</span><span style="font-size: 10.5pt;">. </span><span style="font-size: 10.5pt;">境外上市、股利政策与投资者保护</span><span style="font-size: 10.5pt;">[J].</span><span style="font-size: 10.5pt;">《财务研究》</span><span style="font-size: 10.5pt;">, 2015(05):82-88.</span><span style="font-size: 10.5pt;">人大复印资料《财务与会计导刊》（</span><span style="font-size: 10.5pt;">2016</span><span style="font-size: 10.5pt;">年第</span><span style="font-size: 10.5pt;">1</span><span style="font-size: 10.5pt;">期）全文转载</span></span></p><p><span style="font-family:SimSun;"><span style="font-size: 10.5pt;">【12】</span><span style="font-size: 10.5pt;">谢志华、<strong>崔学刚</strong>等</span><span style="font-size: 10.5pt;">.</span><span style="font-size: 10.5pt;">会计的投资者保护功能及评价，《会计研究》，</span><span style="font-size: 10.5pt;">2014</span><span style="font-size: 10.5pt;">（</span><span style="font-size: 10.5pt;">4</span><span style="font-size: 10.5pt;">）：</span><span style="font-size: 10.5pt;">34-41. </span><span style="font-size: 10.5pt;">人大复印资料《财务与会计导刊》（</span><span style="font-size: 10.5pt;">2014</span><span style="font-size: 10.5pt;">年第</span><span style="font-size: 10.5pt;">7</span><span style="font-size: 10.5pt;">期）全文转载</span></span></p><p><span style="font-family:SimSun;"><span style="font-size: 10.5pt;">【13】</span><strong><span style="font-size: 10.5pt;">崔学刚</span></strong><span style="font-size: 10.5pt;">、徐金亮</span><span style="font-size: 10.5pt;">.</span><span style="font-size: 10.5pt;">境外上市、绑定机制与公司费用粘性，《会计研究》，</span><span style="font-size: 10.5pt;">2013</span><span style="font-size: 10.5pt;">（</span><span style="font-size: 10.5pt;">12</span><span style="font-size: 10.5pt;">）</span><span style="font-size: 10.5pt;">:33-39.</span><span style="font-size: 10.5pt;">人大复印资料《财务与会计导刊》（</span><span style="font-size: 10.5pt;">2014</span><span style="font-size: 10.5pt;">年第</span><span style="font-size: 10.5pt;">3</span><span style="font-size: 10.5pt;">期）全文转载</span></span></p><p><span style="font-family:SimSun;"><span style="font-size: 10.5pt;">【14】</span><span style="font-size: 10.5pt;">穆林娟、<strong>崔学刚</strong></span><span style="font-size: 10.5pt;">.</span><span style="font-size: 10.5pt;">信任与激励：价值链成本治理机制的实验研究</span><span style="font-size: 10.5pt;">[J].</span><span style="font-size: 10.5pt;">《南开管理评论》，</span><span style="font-size: 10.5pt;">2011(05):21-40.</span></span></p><p><span style="font-family:SimSun;"><span style="font-size: 10.5pt;">【15】</span><span style="font-size: 10.5pt;">姚文韵、<strong>崔学刚</strong></span><span style="font-size: 10.5pt;">.</span><span style="font-size: 10.5pt;">会计治理功能研究：分析与展望</span><span style="font-size: 10.5pt;">[J].</span><span style="font-size: 10.5pt;">《会计研究》</span><span style="font-size: 10.5pt;">,2011(02):31-38</span><span style="font-size: 10.5pt;">。</span></span></p><p><span style="font-family:SimSun;"><span style="font-size: 10.5pt;">【16】</span><strong><span style="font-size: 10.5pt;">崔学刚</span></strong><span style="font-size: 10.5pt;">、谢志华、刘辉</span><span style="font-size: 10.5pt;">.</span><span style="font-size: 10.5pt;">预算功能彰显及其组织绩效研究</span><span style="font-size: 10.5pt;">[J].</span><span style="font-size: 10.5pt;">《中国会计评论》</span><span style="font-size: 10.5pt;">,2011(02):173-190.</span></span></p><p><span style="font-family:SimSun;"><span style="font-size: 10.5pt;">【17】</span><strong><span style="font-size: 10.5pt;">崔学刚</span></strong><span style="font-size: 10.5pt;">、王立彦、许红</span><span style="font-size: 10.5pt;">.</span><span style="font-size: 10.5pt;">企业增长与财务危机关系研究</span><span style="font-size: 10.5pt;">[J].</span><span style="font-size: 10.5pt;">《会计研究》</span><span style="font-size: 10.5pt;">,2007(12)</span><span style="font-size: 10.5pt;">：</span><span style="font-size: 10.5pt;">55-62.</span></span></p><p style="text-align:left;"><span style="font-family:SimSun;"><span style="font-size: 10.5pt;">【18】</span><strong><span style="font-size: 10.5pt;">崔学刚</span></strong><span style="font-size: 10.5pt;">、荆新</span><span style="font-size: 10.5pt;">.</span><span style="font-size: 10.5pt;">上市公司控制权转移预测研究</span><span style="font-size: 10.5pt;">[J].</span><span style="font-size: 10.5pt;">《会计研究》</span><span style="font-size: 10.5pt;">, 2006(01)</span></span></p><p style="text-align:left;"><span style="font-family:SimSun;"><span style="font-size: 10.5pt;">【19】</span><span style="font-size: 10.5pt;">谢志华、<strong>崔学刚</strong></span><strong><span style="font-size: 10.5pt;">. </span></strong><span style="font-size: 10.5pt;">风险导向审计：机理与运用</span><span style="font-size: 10.5pt;">[J]. </span><span style="font-size: 10.5pt;">《会计研究》</span><span style="font-size: 10.5pt;">, 2006(07)</span></span></p><p style="text-align:left;"><span style="font-family:SimSun;"><span style="font-size: 10.5pt;">【20】</span><strong><span style="font-size: 10.5pt;">崔学刚</span><span style="font-size: 10.5pt;">.</span></strong><span style="font-size: 10.5pt;">大股东变更、公司治理与公司绩效</span><span style="font-size: 10.5pt;">[J]. </span><span style="font-size: 10.5pt;">《中国会计评论》</span><span style="font-size: 10.5pt;">,2005(10)</span></span></p><p style="text-align:left;"><span style="font-family:SimSun;"><span style="font-size: 10.5pt;">【21】</span><span style="font-size: 10.5pt;">谢志华、<strong>崔学刚</strong></span><strong><span style="font-size: 10.5pt;">. </span></strong><span style="font-size: 10.5pt;">信息披露水平：市场推动与政府监管</span><span style="font-size: 10.5pt;">&nbsp;[J]. </span><span style="font-size: 10.5pt;">《审计研究》</span><span style="font-size: 10.5pt;">, 2005(04)</span></span></p><p style="text-align:left;"><span style="font-family:SimSun;"><span style="font-size: 10.5pt;">【22】</span><strong><span style="font-size: 10.5pt;">崔学刚</span><span style="font-size: 10.5pt;">. </span></strong><span style="font-size: 10.5pt;">公司治理机制对公司透明度的影响</span><span style="font-size: 10.5pt;">[J]. </span><span style="font-size: 10.5pt;">《会计研究》</span><span style="font-size: 10.5pt;">, 2004(08)</span></span></p><p style="text-align:left;"><span style="font-family:SimSun;"><span style="font-size: 10.5pt;">【23】</span><strong><span style="font-size: 10.5pt;">崔学刚</span><span style="font-size: 10.5pt;">. </span></strong><span style="font-size: 10.5pt;">上市公司财务信息披露：政府功能与角色定位</span><span style="font-size: 10.5pt;">[J]. </span><span style="font-size: 10.5pt;">《会计研究》</span><span style="font-size: 10.5pt;">, 2004(01) </span></span></p><p style="text-align:left;"><span style="font-family:SimSun;"><span style="font-size: 10.5pt;">【24】</span><strong><span style="font-size: 10.5pt;">崔学刚</span><span style="font-size: 10.5pt;">. </span></strong><span style="font-size: 10.5pt;">现代企业制度下所有者权益维护型的财务管理模式</span><span style="font-size: 10.5pt;">[J]. </span><span style="font-size: 10.5pt;">《财政研究》</span><span style="font-size: 10.5pt;">, 1999</span><span style="font-size: 10.5pt;">（</span><span style="font-size: 10.5pt;">10</span><span style="font-size: 10.5pt;">）</span></span></p><p style="text-align:left;"><span style="font-family:SimSun;"><span style="font-size: 10.5pt;">【25】</span><span style="font-size: 10.5pt;">郝继伦、<strong>崔学刚</strong></span><strong><span style="font-size: 10.5pt;">. </span></strong><span style="font-size: 10.5pt;">基点选择与变革逻辑：中国金融改革的宏观思考</span><span style="font-size: 10.5pt;">[J].</span><span style="font-size: 10.5pt;">《经济体制改革》</span><span style="font-size: 10.5pt;">, 1996</span><span style="font-size: 10.5pt;">（</span><span style="font-size: 10.5pt;">01</span><span style="font-size: 10.5pt;">）：</span><span style="font-size: 10.5pt;">103-108 </span></span></p><p style="text-align:left;"><span style="font-size: 10.5pt;"><span style="font-family:SimSun;">&nbsp;</span></span></p><p style="text-align:left;"><strong><span style="font-family:SimSun;">2、发明专利与软件著作权</span></strong></p><p style="text-align:left;"><span style="font-family:SimSun;"><span style="font-size: 10.5pt;">【1】</span><span style="font-size: 10.5pt;">发明专利：一种可自动更新的用于金融文本分析的情感字典构建方法（</span><span style="font-size: 10.5pt;">2020</span><span style="font-size: 10.5pt;">）</span></span></p><p style="text-align:left;"><span style="font-family:SimSun;"><span style="font-size: 10.5pt;">【2】</span><span style="font-size: 10.5pt;">发明专利：一种基于股票论坛的发帖文本分析的股市情绪报告生成方法（</span><span style="font-size: 10.5pt;">2021</span><span style="font-size: 10.5pt;">）</span></span></p><p style="text-align:left;"><span style="font-family:SimSun;"><span style="font-size: 10.5pt;">【3】</span><span style="font-size: 10.5pt;">软件著作权：会计信息决策有用性虚拟仿真实验软件</span><span style="font-size: 10.5pt;">V1.0 (2021)</span></span></p><p style="text-align:left;"><span style="font-size: 10.5pt;"><span style="font-family:SimSun;">&nbsp;</span></span></p><p style="text-align:left;"><strong><span style="font-family:SimSun;">&nbsp;3<span style="color: rgb(68, 68, 68);">、专著</span></span></strong></p><p style="text-align:left;"><span style="font-family:SimSun;"><span style="font-size: 10.5pt;">【1<span style="font-family: SimSun; font-size: 14px;">】</span></span><span style="font-size: 10.5pt;">《制度环境、会计稳健性与公司投资行为》，九州出版社，</span><span style="font-size: 10.5pt;">2019</span><span style="font-size: 10.5pt;">年</span><span style="font-size: 10.5pt;">12</span><span style="font-size: 10.5pt;">月</span></span></p><p style="text-align:left;"><span style="font-family:SimSun;"><span style="font-size: 10.5pt;">【2】</span><span style="font-size: 10.5pt;">《会计与投资者保护——理论、证据与案例》，中国财政经济出版社，</span><span style="font-size: 10.5pt;">2011</span><span style="font-size: 10.5pt;">年</span><span style="font-size: 10.5pt;">5</span><span style="font-size: 10.5pt;">月</span></span></p><p style="text-align:left;"><span style="font-family:SimSun;"><span style="font-size: 10.5pt;">【3】</span><span style="font-size: 10.5pt;">《</span><a href="http://kyc.btbu.edu.cn/business/book/book.do?actionType=view&amp;bean.id=5553&amp;pageFrom=commonList"><span style="font-size: 10.5pt; color: windowtext;">投资与合同协议内部控制</span><span style="font-size: 10.5pt; color: windowtext;">:</span><span style="font-size: 10.5pt; color: windowtext;">操作指引与典型案例研究</span></a><span style="font-size: 10.5pt;">》，大连出版社，</span><span style="font-size: 10.5pt;">2010</span><span style="font-size: 10.5pt;">年</span><span style="font-size: 10.5pt;">7</span><span style="font-size: 10.5pt;">月</span></span></p><p style="text-align:left;"><span style="font-family:SimSun;"><span style="font-size: 10.5pt;">【4】</span><span style="font-size: 10.5pt;">《</span><a href="http://kyc.btbu.edu.cn/book/book.do?actionType=view&amp;bean.id=4551"><span style="font-size: 10.5pt; color: windowtext;">上市公司重组绩效：理论与实证研究</span></a><span style="font-size: 10.5pt;">》，东北财经大学出版社，</span><span style="font-size: 10.5pt;">2007</span><span style="font-size: 10.5pt;">年</span><span style="font-size: 10.5pt;">7</span><span style="font-size: 10.5pt;">月</span></span></p><span style="font-family:SimSun;"><br /></span><br /></div>
+                    
+                </div>				<div class="grjj">
+                    <p class="jjh">研究课题</p>
+                  
+                    <div class="bks1"><p style="font-family: " microsoft="" yahei="" font-size:16px=""></p><p><span style="font-family:SimSun;"><span style="font-size: 10.5pt;">【1】</span><span style="font-size: 10.5pt;">财政部重点会计课题：制度环境与组织文化对医院预算管理实践的影响研究，</span><span style="font-size: 10.5pt;">2020.12-2021.12</span></span></p><p><span style="font-family:SimSun;"><span style="font-size: 10.5pt;">【2】</span><span style="font-size: 10.5pt;">国家自科基金项目（</span><span style="font-size: 10.5pt;">71772015</span><span style="font-size: 10.5pt;">）：基于认知特征与脑神经视角的企业薪酬激励机制优化研究，</span><span style="font-size: 10.5pt;">2018.1-2021.12</span></span></p><p><span style="font-family:SimSun;"><span style="font-size: 10.5pt;">【3】</span><span style="font-size: 10.5pt;">财政部会计名家工程项目，</span><span style="font-size: 10.5pt;">2019.12-2022.12</span></span></p><p><span style="font-family:SimSun;"><span style="font-size: 10.5pt;">【4】</span><span style="font-size: 10.5pt;">中澳种子基金项目：</span><span style="font-size: 10.5pt;">Political Connections and Corporate Governance ofListed Firms in China</span><span style="font-size: 10.5pt;">，</span><span style="font-size: 10.5pt;">2018.01-2020.12&nbsp;&nbsp; </span></span></p><p><span style="font-family:SimSun;"><span style="font-size: 10.5pt;">【5】</span><span style="font-size: 10.5pt;">北京市社科基金项目（</span><span style="font-size: 10.5pt;">17GLB016</span><span style="font-size: 10.5pt;">）：北京市政府和社会资本合作（</span><span style="font-size: 10.5pt;">PPP</span><span style="font-size: 10.5pt;">）模式下企业投融资行为研究</span><span style="font-size: 10.5pt;">&nbsp;&nbsp;&nbsp;&nbsp; 2017.7-2020.6</span></span></p><p style="text-align:left;"><span style="font-family:SimSun;"><span style="font-size: 10.5pt;">【6】</span><span style="font-size: 10.5pt;">财政部全国会计领军人才特殊支持计划项目，</span><span style="font-size: 10.5pt;">2016.10-2019.9&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></p><p><span style="font-family:SimSun;"><span style="font-size: 10.5pt;">【7】</span><span style="font-size: 10.5pt;">财政部重点会计课题项目（</span><span style="font-size: 10.5pt;">2015KJA007</span><span style="font-size: 10.5pt;">）：公共部门管理会计理论与方法研究——以医院为例，</span><span style="font-size: 10.5pt;">2015.7-2017.6&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></p><p style="text-align:left;"><span style="font-family:SimSun;"><span style="font-size: 10.5pt;">【8】</span><span style="font-size: 10.5pt;">教育部留学回国人员科研启动基金：中小企业境外上市融资行为及其价值效应研究，</span><span style="font-size: 10.5pt;">2013-2014</span></span></p><p style="text-align:left;"><span style="font-family:SimSun;"><span style="font-size: 10.5pt;">【9】</span><span style="font-size: 10.5pt;">教育部人文社会科学研究规划基金项目（</span><span style="font-size: 10.5pt;">13YJA630014</span><span style="font-size: 10.5pt;">）：制度环境、会计稳健性与公司投资行为研究，</span><span style="font-size: 10.5pt;">2013-2015</span></span></p><p style="text-align:left;"><span style="font-family:SimSun;"><span style="font-size: 10.5pt;">【10】</span><span style="font-size: 10.5pt;">教育部新世纪优秀人才支持计划项目（</span><span style="font-size: 10.5pt;">NCET-12-0602</span><span style="font-size: 10.5pt;">）：制度环境、会计稳健性与投资者保护效果研究，</span><span style="font-size: 10.5pt;">2013-2016</span></span></p><p style="text-align:left;"><span style="font-family:SimSun;"><span style="font-size: 10.5pt;">【11】</span><span style="font-size: 10.5pt;">北京市社科基金项目（</span><span style="font-size: 10.5pt;">12JGB116</span><span style="font-size: 10.5pt;">）：北京市经营性国有资产管理体制研究，</span><span style="font-size: 10.5pt;">2012-2013</span></span></p><p style="text-align:left;"><span style="font-family:SimSun;"><span style="font-size: 10.5pt;">【12】</span><span style="font-size: 10.5pt;">全国统计科学研究计划项目（</span><span style="font-size: 10.5pt;">2012LY026</span><span style="font-size: 10.5pt;">）：上市公司公开披露信息的政府统计功能及其开发应用，</span><span style="font-size: 10.5pt;">2012-2014</span></span></p><p style="text-align:left;"><span style="font-family:SimSun;"><span style="font-size: 10.5pt;">【13】</span><span style="font-size: 10.5pt;">北京市自然科学基金项目（</span><span style="font-size: 10.5pt;">9112005</span><span style="font-size: 10.5pt;">）：高科技中小企业境外上市融资效果及其融资模式创新研究</span><span style="font-size: 10.5pt;"> 2011-2013</span></span></p><p style="text-align:left;"><span style="font-family:SimSun;"><span style="font-size: 10.5pt;">【14】</span><span style="font-size: 10.5pt;">国家社科基金项目（</span><span style="font-size: 10.5pt;">08CJY008</span><span style="font-size: 10.5pt;">）：会计信息质量与投资者保护效果研究，</span><span style="font-size: 10.5pt;">2008-2011</span></span></p><p style="text-align:left;"><span style="font-family:SimSun;"><span style="font-size: 10.5pt;">【15】</span><span style="font-size: 10.5pt;">北京市社科基金重点项目（</span><span style="font-size: 10.5pt;">8AbjJG215</span><span style="font-size: 10.5pt;">）：首都流通企业价值链管理创新研究，</span><span style="font-size: 10.5pt;">2008-2010</span></span></p><p style="text-align:left;"><span style="font-family:SimSun;"><span style="font-size: 10.5pt;">【16】</span><span style="font-size: 10.5pt;">财政部重点会计课题（</span><span style="font-size: 10.5pt;">2008KJA14</span><span style="font-size: 10.5pt;">）：投资内部控制操作指引与典型案例研究，</span><span style="font-size: 10.5pt;">2008-2009</span></span></p><p style="text-align:left;"><span style="font-family:SimSun;"><span style="font-size: 10.5pt;">【17】</span><span style="font-size: 10.5pt;">中国博士后科学基金项目（</span><span style="font-size: 10.5pt;">20060390351</span><span style="font-size: 10.5pt;">）：信息披露透明度及其经济后果研究，</span><span style="font-size: 10.5pt;">2006-2007</span></span></p><p style="text-align:left;"><span style="font-family:SimSun;"><span style="font-size: 10.5pt;">【18】</span><span style="font-size: 10.5pt;">北京市教委社科课题（</span><span style="font-size: 10.5pt;">SM200610011002</span><span style="font-size: 10.5pt;">）：中小企业融资战略与风险价值管理，</span><span style="font-size: 10.5pt;">2006-2008</span></span></p><p style="text-align:left;"><span style="font-family:SimSun;"><span style="font-size: 10.5pt;">【19】</span><span style="font-size: 10.5pt;">北京市委组织部优秀人才资助项目：</span><a href="http://kyc.btbu.edu.cn/project/project.do?actionType=view&amp;bean.id=5171"><span style="font-size: 10.5pt; color: windowtext;">&nbsp;shareholdingstructure and pricing of a-shares</span></a><span style="font-size: 10.5pt;">&nbsp; 2005-2006</span></span></p><p style="text-align:left;"><span style="font-family:SimSun;"><span style="font-size: 10.5pt;">【20】</span><span style="font-size: 10.5pt;">北京市中青年骨干教师项目：会计透明度及其经济后果研究，</span><span style="font-size: 10.5pt;">2006-2008</span></span></p><span style="font-family:SimSun;"><br /></span><br /></div>
+                    
+                </div>				<div class="grjj">
+                    <p class="jjh">学生情况</p>
+                    <div class="bks1"><p style="font-family: " microsoft="" yahei="" font-size:16px=""><span style="font-family: 微软雅黑, " microsoft="" yahei=""></span></p><p style="text-align:left;"><span style="font-family:宋体;color:#444444;">招收工商管理专业博士后</span></p><p style="text-align:left;"><span style="font-family:宋体;color:#444444;">招收会计学博士研究生</span></p><p style="text-align:left;"><span style="font-family:宋体;color:#444444;">招收会计学学术型硕士研究生</span></p><p style="text-align:left;"><span style="font-family:宋体;color:#444444;">指导</span><span style="font-family:'Arial',sans-serif;color:#444444;">MBA</span><span style="font-family:宋体;color:#444444;">、</span><span style="font-family:'Arial',sans-serif;color:#444444;">MPAcc</span><span style="font-family:宋体;color:#444444;">硕士论文</span></p><br /><p style="font-family: " microsoft="" yahei="" font-size:16px=""><span style="font-family: 微软雅黑, " microsoft="" yahei=""></span></p></div>
+                    
+                </div>				<div class="grjj">
+                    <p class="jjh">教授课程</p>
+                    <div class="bks1"><p style="font-family: " microsoft="" yahei="" font-size:16px=""><span style="font-family: 微软雅黑, " microsoft="" yahei=""></span></p><p style="text-align:left;"><span style="font-family:'Arial',sans-serif;color:#444444;"></span></p><p style="text-align:left;"><span style="font-family:'Arial',sans-serif;color:#444444;">1</span><span style="font-family:宋体;color:#444444;">、本科课程：会计学原理；会计信息解读与应用；财务管理；国际财务管理</span></p><p style="text-align:left;"><span style="font-family:'Arial',sans-serif;color:#444444;">2</span><span style="font-family:宋体;color:#444444;">、学术硕士课程：公司金融；商业伦理与会计职业道德</span></p><p style="text-align:left;"><span style="font-family:'Arial',sans-serif;color:#444444;">3</span><span style="font-family:宋体;color:#444444;">、博士课程：高级公司金融；行为</span><span style="font-family:'Arial',sans-serif;color:#444444;">/</span><span style="font-family:宋体;color:#444444;">神经会计与金融</span></p><p style="text-align:left;"><span style="font-family:'Arial',sans-serif;color:#444444;">4</span><span style="font-family:宋体;color:#444444;">、</span><span style="font-family:'Arial',sans-serif;color:#444444;">MBA</span><span style="font-family:宋体;color:#444444;">课程：会计学；全面预算管理</span></p><p style="text-align:left;"><span style="font-family:'Arial',sans-serif;color:#444444;">5</span><span style="font-family:宋体;color:#444444;">、</span><span style="font-family:'Arial',sans-serif;color:#444444;">MOOCs</span><span style="font-family:宋体;color:#444444;">课程：神经会计学与智能会计</span></p><p style="text-align:left;"><span style="font-family:'Arial',sans-serif;color:#444444;">6</span><span style="font-family:宋体;color:#444444;">、高管培训课程：营运资金管理与风险控制；全面预算管理；行为与神经会计学；行为与神经金融；投资中的心理与行为及其经济后果；等</span></p><br /><p style="text-align:left;"><span style="font-family:宋体;color:#444444;"></span></p><p style="font-family: " microsoft="" yahei="" font-size:16px=""><span style="font-family: 微软雅黑, " microsoft="" yahei=""></span></p></div>
+                    
+                </div>            </div>
+        </div>
+         <footer style="overflow: hidden;">
+            <div class="footers">
+                <div class="footersl">
+                    <img src="http://bs.bnu.edu.cn/newweb/images/ewm.jpg" alt="" class="imgewm">
+                    <div class="footerxx">
+                        <p>Copyright © 2020 北京师范大学经济与工商管理学院</p>
+                        <p><i class="fas fa-map-marker-alt"></i> 地址：北京市新街口外大街19号</p>
+                        <p><i class="fas fa-portrait"></i> 传真：010-58801867</p>
+                        <p><i class="fas fa-phone"></i> 电话：010-58801867</p>
+                        <p><i class="fas fa-envelope"></i> 邮编：100875</p>
+                    </div>
+                </div>
+                <img src="http://bs.bnu.edu.cn/newweb/images/db.png" alt="" width="140" class="dbimg">
+                <img src="http://bs.bnu.edu.cn/newweb/images/yx.png" alt="" class="yuanxun">
+            </div>
+        </footer>
+    </div>
+	<div class="share">
+		  <div id="appgame-leftside-share">
+	        <div class="appgame-leftside-share rwt_share" id="rwt_share">
+	         
+	        <!--<a class="appgame-leftside-search" data-cmd="search" title="search"  href="javascript:void(0);" onclick="opens('id')">search</a> --> <!--<div class="searchs" id="id">
+	         <form name="dataForm" action="/cms/search/searchResults.jsp" target="_blank" method="post" accept-Charset="utf-8"  onsubmit="document.charset='utf-8';">
+			        	<p>
+			        		<input name="siteID" size="4" value="127" type = "hidden">
+			        		<input type="text" name="query" id="search" class="searchInput" value="输入搜索词">
+			        		<button type="submit"></button>
+			        	</p>
+			        	</form>
+			        </div>-->
+			        <!-- <a class="appgame-leftside-weixin" data-cmd="weixin" title="">微信</a> -->
+                    
+			        <!-- <a class="appgame-leftside-qzone" data-cmd="qzone" title="">qq空间</a>
+			        
+			        <a class="appgame-leftside-tsina" data-cmd="tsina" title="">微博</a> -->			    </div>
+			        <a class="appgame-leftside-top" onclick="gotoTPoint()"></a>			</div>
+			        
+		</div>
+</body>
+<script src="http://gh.bnu.edu.cn/js/jquery-1.9.0.min.js"></script>
+<script src="http://gh.bnu.edu.cn/js/share.min.js"></script>
+<script>
+    var dj=document.getElementById('dianji');
+    var jjc=document.getElementById('jjc');
+    var dj1=document.getElementById('dianji1');
+    var jjc1=document.getElementById('jjc1');
+    var a=1;
+    function zhedie(m,n){
+        m.onclick=function(){
+            if(a==1){
+                n.className='jjc';
+                m.className='dianji1'
+                a=0;
+            }else{
+                n.className='jjc1';
+                m.className='dianji'
+                a=1;
+            }
+        }
+    }
+    zhedie(dj,jjc);
+    zhedie(dj1,jjc1);
+	
+	
+</script>
+<script>
+
+	
+	
+    
+
+    /*回到顶部*/
+	$(function(){
+	 	$(window).resize(function(){
+						var h = $(window).height();
+						$('.goTop').css('top',h-60);
+						$(window).scroll(function(){				
+							var scrollTop = $(document).scrollTop();					  
+							$('.goTop').stop().animate({
+								top: h + scrollTop-60
+							},300);
+						});
+		}).resize();
+		});
+	//gotop
+
+			$('.goTop').click(function(){
+
+				$('body,html').stop().animate({scrollTop:0});
+
+				return false;
+
+			});
+	
+	function gotoTPoint(){
+		$("html,body").animate({scrollTop:0},500);
+	}
+</script>
+</html>

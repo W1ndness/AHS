@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html  lang="en" dir="ltr" prefix="content: http://purl.org/rss/1.0/modules/content/  dc: http://purl.org/dc/terms/  foaf: http://xmlns.com/foaf/0.1/  og: http://ogp.me/ns#  rdfs: http://www.w3.org/2000/01/rdf-schema#  schema: http://schema.org/  sioc: http://rdfs.org/sioc/ns#  sioct: http://rdfs.org/sioc/types#  skos: http://www.w3.org/2004/02/skos/core#  xsd: http://www.w3.org/2001/XMLSchema# ">
+  <head>
+    <meta charset="utf-8" /><script type="text/javascript">(window.NREUM||(NREUM={})).init={ajax:{deny_list:["bam.nr-data.net"]}};(window.NREUM||(NREUM={})).loader_config={licenseKey:"dd140e7b44",applicationID:"364940795"};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var i=e[n]={exports:{}};t[n][0].call(i.exports,function(e){var i=t[n][1][e];return r(i||e)},i,i.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(t,e,n){function r(){}function i(t,e,n,r){return function(){return s.recordSupportability("API/"+e+"/called"),o(t+e,[u.now()].concat(c(arguments)),n?null:this,r),n?void 0:this}}var o=t("handle"),a=t(9),c=t(10),f=t("ee").get("tracer"),u=t("loader"),s=t(4),d=NREUM;"undefined"==typeof window.newrelic&&(newrelic=d);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",v=l+"ixn-";a(p,function(t,e){d[e]=i(l,e,!0,"api")}),d.addPageAction=i(l,"addPageAction",!0),d.setCurrentRouteName=i(l,"routeName",!0),e.exports=newrelic,d.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(t,e){var n={},r=this,i="function"==typeof e;return o(v+"tracer",[u.now(),t,n],r),function(){if(f.emit((i?"":"no-")+"fn-start",[u.now(),r,i],n),i)try{return e.apply(this,arguments)}catch(t){throw f.emit("fn-err",[arguments,this,t],n),t}finally{f.emit("fn-end",[u.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){m[e]=i(v,e)}),newrelic.noticeError=function(t,e){"string"==typeof t&&(t=new Error(t)),s.recordSupportability("API/noticeError/called"),o("err",[t,u.now(),!1,e])}},{}],2:[function(t,e,n){function r(t){if(NREUM.init){for(var e=NREUM.init,n=t.split("."),r=0;r<n.length-1;r++)if(e=e[n[r]],"object"!=typeof e)return;return e=e[n[n.length-1]]}}e.exports={getConfiguration:r}},{}],3:[function(t,e,n){var r=!1;try{var i=Object.defineProperty({},"passive",{get:function(){r=!0}});window.addEventListener("testPassive",null,i),window.removeEventListener("testPassive",null,i)}catch(o){}e.exports=function(t){return r?{passive:!0,capture:!!t}:!!t}},{}],4:[function(t,e,n){function r(t,e){var n=[a,t,{name:t},e];return o("storeMetric",n,null,"api"),n}function i(t,e){var n=[c,t,{name:t},e];return o("storeEventMetrics",n,null,"api"),n}var o=t("handle"),a="sm",c="cm";e.exports={constants:{SUPPORTABILITY_METRIC:a,CUSTOM_METRIC:c},recordSupportability:r,recordCustom:i}},{}],5:[function(t,e,n){function r(){return c.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,c=t(11);e.exports=r,e.exports.offset=a,e.exports.getLastTimestamp=i},{}],6:[function(t,e,n){function r(t,e){var n=t.getEntries();n.forEach(function(t){"first-paint"===t.name?l("timing",["fp",Math.floor(t.startTime)]):"first-contentful-paint"===t.name&&l("timing",["fcp",Math.floor(t.startTime)])})}function i(t,e){var n=t.getEntries();if(n.length>0){var r=n[n.length-1];if(u&&u<r.startTime)return;var i=[r],o=a({});o&&i.push(o),l("lcp",i)}}function o(t){t.getEntries().forEach(function(t){t.hadRecentInput||l("cls",[t])})}function a(t){var e=navigator.connection||navigator.mozConnection||navigator.webkitConnection;if(e)return e.type&&(t["net-type"]=e.type),e.effectiveType&&(t["net-etype"]=e.effectiveType),e.rtt&&(t["net-rtt"]=e.rtt),e.downlink&&(t["net-dlink"]=e.downlink),t}function c(t){if(t instanceof y&&!w){var e=Math.round(t.timeStamp),n={type:t.type};a(n),e<=v.now()?n.fid=v.now()-e:e>v.offset&&e<=Date.now()?(e-=v.offset,n.fid=v.now()-e):e=v.now(),w=!0,l("timing",["fi",e,n])}}function f(t){"hidden"===t&&(u=v.now(),l("pageHide",[u]))}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var u,s,d,p,l=t("handle"),v=t("loader"),m=t(8),g=t(3),y=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){s=new PerformanceObserver(r);try{s.observe({entryTypes:["paint"]})}catch(h){}d=new PerformanceObserver(i);try{d.observe({entryTypes:["largest-contentful-paint"]})}catch(h){}p=new PerformanceObserver(o);try{p.observe({type:"layout-shift",buffered:!0})}catch(h){}}if("addEventListener"in document){var w=!1,b=["click","keydown","mousedown","pointerdown","touchstart"];b.forEach(function(t){document.addEventListener(t,c,g(!1))})}m(f)}},{}],7:[function(t,e,n){function r(t,e){if(!i)return!1;if(t!==i)return!1;if(!e)return!0;if(!o)return!1;for(var n=o.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var c=navigator.userAgent,f=c.match(a);f&&c.indexOf("Chrome")===-1&&c.indexOf("Chromium")===-1&&(i="Safari",o=f[1])}e.exports={agent:i,version:o,match:r}},{}],8:[function(t,e,n){function r(t){function e(){t(c&&document[c]?document[c]:document[o]?"hidden":"visible")}"addEventListener"in document&&a&&document.addEventListener(a,e,i(!1))}var i=t(3);e.exports=r;var o,a,c;"undefined"!=typeof document.hidden?(o="hidden",a="visibilitychange",c="visibilityState"):"undefined"!=typeof document.msHidden?(o="msHidden",a="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(o="webkitHidden",a="webkitvisibilitychange",c="webkitVisibilityState")},{}],9:[function(t,e,n){function r(t,e){var n=[],r="",o=0;for(r in t)i.call(t,r)&&(n[o]=e(r,t[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],10:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,i=n-e||0,o=Array(i<0?0:i);++r<i;)o[r]=t[e+r];return o}e.exports=r},{}],11:[function(t,e,n){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(t,e,n){function r(){}function i(t){function e(t){return t&&t instanceof r?t:t?u(t,f,a):a()}function n(n,r,i,o,a){if(a!==!1&&(a=!0),!l.aborted||o){t&&a&&t(n,r,i);for(var c=e(i),f=m(n),u=f.length,s=0;s<u;s++)f[s].apply(c,r);var p=d[w[n]];return p&&p.push([b,n,r,c]),c}}function o(t,e){h[t]=m(t).concat(e)}function v(t,e){var n=h[t];if(n)for(var r=0;r<n.length;r++)n[r]===e&&n.splice(r,1)}function m(t){return h[t]||[]}function g(t){return p[t]=p[t]||i(n)}function y(t,e){l.aborted||s(t,function(t,n){e=e||"feature",w[n]=e,e in d||(d[e]=[])})}var h={},w={},b={on:o,addEventListener:o,removeEventListener:v,emit:n,get:g,listeners:m,context:e,buffer:y,abort:c,aborted:!1};return b}function o(t){return u(t,f,a)}function a(){return new r}function c(){(d.api||d.feature)&&(l.aborted=!0,d=l.backlog={})}var f="nr@context",u=t("gos"),s=t(9),d={},p={},l=e.exports=i();e.exports.getOrSetContext=o,l.backlog=d},{}],gos:[function(t,e,n){function r(t,e,n){if(i.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return t[e]=r,r}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){i.buffer([t],r),i.emit(t,e,n)}var i=t("ee").get("handle");e.exports=r,r.ee=i},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,o,function(){return i++})}var i=1,o="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!M++){var t=T.info=NREUM.info,e=m.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&e))return u.abort();f(x,function(e,n){t[e]||(t[e]=n)});var n=a();c("mark",["onload",n+T.offset],null,"api"),c("timing",["load",n]);var r=m.createElement("script");0===t.agent.indexOf("http://")||0===t.agent.indexOf("https://")?r.src=t.agent:r.src=l+"://"+t.agent,e.parentNode.insertBefore(r,e)}}function i(){"complete"===m.readyState&&o()}function o(){c("mark",["domContent",a()+T.offset],null,"api")}var a=t(5),c=t("handle"),f=t(9),u=t("ee"),s=t(7),d=t(2),p=t(3),l=d.getConfiguration("ssl")===!1?"http":"https",v=window,m=v.document,g="addEventListener",y="attachEvent",h=v.XMLHttpRequest,w=h&&h.prototype,b=!1;NREUM.o={ST:setTimeout,SI:v.setImmediate,CT:clearTimeout,XHR:h,REQ:v.Request,EV:v.Event,PR:v.Promise,MO:v.MutationObserver};var E=""+location,x={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1216.min.js"},O=h&&w&&w[g]&&!/CriOS/.test(navigator.userAgent),T=e.exports={offset:a.getLastTimestamp(),now:a,origin:E,features:{},xhrWrappable:O,userAgent:s,disabled:b};if(!b){t(1),t(6),m[g]?(m[g]("DOMContentLoaded",o,p(!1)),v[g]("load",r,p(!1))):(m[y]("onreadystatechange",i),v[y]("onload",r)),c("mark",["firstbyte",a.getLastTimestamp()],null,"api");var M=0}},{}],"wrap-function":[function(t,e,n){function r(t,e){function n(e,n,r,f,u){function nrWrapper(){var o,a,s,p;try{a=this,o=d(arguments),s="function"==typeof r?r(o,a):r||{}}catch(l){i([l,"",[o,a,f],s],t)}c(n+"start",[o,a,f],s,u);try{return p=e.apply(a,o)}catch(v){throw c(n+"err",[o,a,v],s,u),v}finally{c(n+"end",[o,a,p],s,u)}}return a(e)?e:(n||(n=""),nrWrapper[p]=e,o(e,nrWrapper,t),nrWrapper)}function r(t,e,r,i,o){r||(r="");var c,f,u,s="-"===r.charAt(0);for(u=0;u<e.length;u++)f=e[u],c=t[f],a(c)||(t[f]=n(c,s?f+r:r,i,f,o))}function c(n,r,o,a){if(!v||e){var c=v;v=!0;try{t.emit(n,r,o,e,a)}catch(f){i([f,n,r,o],t)}v=c}}return t||(t=s),n.inPlace=r,n.flag=p,n}function i(t,e){e||(e=s);try{e.emit("internal-error",t)}catch(n){}}function o(t,e,n){if(Object.defineProperty&&Object.keys)try{var r=Object.keys(t);return r.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(o){i([o],n)}for(var a in t)l.call(t,a)&&(e[a]=t[a]);return e}function a(t){return!(t&&t instanceof Function&&t.apply&&!t[p])}function c(t,e){var n=e(t);return n[p]=t,o(t,n,s),n}function f(t,e,n){var r=t[e];t[e]=c(r,n)}function u(){for(var t=arguments.length,e=new Array(t),n=0;n<t;++n)e[n]=arguments[n];return e}var s=t("ee"),d=t(10),p="nr@original",l=Object.prototype.hasOwnProperty,v=!1;e.exports=r,e.exports.wrapFunction=c,e.exports.wrapInPlace=f,e.exports.argsToArray=u},{}]},{},["loader"]);</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-70083234-30"></script>
+<script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments)};gtag("js", new Date());gtag("set", "developer_id.dMDhkMT", true);gtag("config", "UA-70083234-30", {"groups":"default","anonymize_ip":true,"page_placeholder":"PLACEHOLDER_page_path","allow_ad_personalization_signals":false});</script>
+<link rel="canonical" href="https://polisci.osu.edu/people/schweller.2" />
+<meta name="description" content="Department of Political Science" />
+<meta name="Generator" content="Drupal 9 (https://www.drupal.org)" />
+<meta name="MobileOptimized" content="width" />
+<meta name="HandheldFriendly" content="true" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta about="/people/schweller.2" property="schema:name" content="Randall Schweller" lang="" />
+<link rel="icon" href="/themes/asc_bootstrap/favicon.ico" type="image/vnd.microsoft.icon" />
+<script src="/sites/default/files/google_tag/primary/google_tag.script.js?rf0qp5" defer></script>
+
+    <title>Randall Schweller | Department of Political Science</title>
+    <link rel="stylesheet" media="all" href="/sites/default/files/css/css_arVX0Rp3gtO_XrRgd29bMxrAdhnI75nK7PEuq629bxs.css" />
+<link rel="stylesheet" media="all" href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css" />
+<link rel="stylesheet" media="all" href="/sites/default/files/css/css_UAgFsE3L5B4IOzAk-ZIdtHFJTkSh-E7Ysd_hripUpts.css" />
+<link rel="stylesheet" media="all" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css" integrity="sha256-bZLfwXAP04zRMK2BjiO8iu9pf4FbLqX6zitd+tIvLhE=" crossorigin="anonymous" />
+<link rel="stylesheet" media="all" href="https://cdn.jsdelivr.net/npm/@unicorn-fail/drupal-bootstrap-styles@0.0.2/dist/3.4.0/8.x-3.x/drupal-bootstrap.min.css" integrity="sha512-tGFFYdzcicBwsd5EPO92iUIytu9UkQR3tLMbORL9sfi/WswiHkA1O3ri9yHW+5dXk18Rd+pluMeDBrPKSwNCvw==" crossorigin="anonymous" />
+<link rel="stylesheet" media="all" href="/sites/default/files/css/css_JdxXSkTBfNuiogY5YSyWuTfs80ro83ZH0UPxGtghov8.css" />
+<link rel="stylesheet" media="all" href="https://www.osu.edu/assets/fonts/extended/webfonts.css?ver=5.4.4" />
+<link rel="stylesheet" media="all" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
+
+    
+  </head>
+  <body class="path-user has-glyphicons">
+    <a href="#main-content" class="visually-hidden focusable skip-link">
+      Skip to main content
+    </a>
+    <noscript aria-hidden="true"><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P8MKDW6" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+      <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas>
+    
+<div class="layout-container">
+
+<header role="banner">
+
+    <div aria-labelledby="osu_navbar_heading" id="osu_navbar" role="navigation">
+      <h2 class="osu-semantic" id="osu_navbar_heading">Ohio State nav bar</h2>
+
+      <div class="container">
+        <div class="univ_info">
+          <p class="univ_name"><a href="http://osu.edu" title="The Ohio State University">The Ohio State University</a></p>
+        </div>
+        <!-- /univ_info -->
+
+        <div class="univ_links">
+          <div class="links">
+            <ul>
+              <li><a class="help" href="http://www.osu.edu/help.php">Help</a></li>
+              <li><a class="buckeyelink" href="http://buckeyelink.osu.edu/">BuckeyeLink</a></li>
+              <li><a class="map" href="http://www.osu.edu/map/">Map</a></li>
+              <li><a class="findpeople" href="http://www.osu.edu/findpeople.php">Find People</a></li>
+              <li><a class="webmail" href="https://email.osu.edu/">Webmail</a></li>
+              <li><a class="search" href="http://www.osu.edu/search/">Search Ohio State</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="container">
+      <div id="header-logos">
+        <a href="/" class="dep-logo">
+          <img alt="Department of Political Science" title="Department of Political Science" src="/sites/default/files/logos/department-logo.svg" id="dep-logo-img" />
+        </a>
+
+        <a href="https://artsandsciences.osu.edu/" class="osu-logo">
+                      <img alt="College of Arts and Sciences logo" title="College of Arts and Sciences logo" src="/themes/asc_bootstrap/images/logos/asc-logo.svg"  id="asc-logo-img" />
+                  </a>
+      </div>
+      <div id="header-logos-mobile">
+        <a href="https://artsandsciences.osu.edu/" class="osu-logo">
+                      <img alt="College of Arts and Sciences logo" title="College of Arts and Sciences logo" src="/themes/asc_bootstrap/images/logos/asc-logo-mobile.svg" id="asc-logo-img-mobile" />
+                  </a>
+        <a href="/" class="dep-logo">
+          <img alt="Department of Political Science" title="Department of Political Science" src="/sites/default/files/logos/department-logo-mobile.svg" id="dep-logo-img" />
+        </a>
+      </div>
+    </div>
+<div class="container">
+    </div>
+  </header>
+
+  <div id="main-nav">
+    <div class="container">
+        <nav aria-label="Main">
+            <div class="region region-navigation">
+    <section id="block-mainnavigation" class="block block-superfish block-superfishmain clearfix">
+  
+    
+
+      <span class="search-icon-mobile" role="button" aria-label="Toggle Search">
+  <a href="#" class="active-search" title="Search">
+    <i class="fa fa-search"></i>
+  </a>
+</span>
+
+<ul id="superfish-main" class="menu sf-menu sf-main sf-horizontal sf-style-white top-menu">
+  
+<li id="main-menu-link-content48e6740c-f0f5-4306-8ec6-48c7be3e35b5" class="sf-depth-1 sub-menu menuparent"><a href="/undergraduate" title="Undergraduate Experience - information about being a PoliSci undergrad" class="sf-depth-1 menu-link menuparent">Undergraduate Experience</a><ul><li id="main-menu-link-content6c44d158-1388-4291-903c-990b29507099" class="sf-depth-2 sub-menu sf-no-children"><a href="/undergraduate/profiles" class="sf-depth-2 menu-link">Meet Our Students</a></li><li id="main-menu-link-contentcb028a63-e0bf-4369-85a2-04632a7e1886" class="sf-depth-2 sub-menu menuparent"><a href="/undergraduate/ba-political-science" title="Information about the Political Science Bachelor of Arts (BA) degree" class="sf-depth-2 menu-link menuparent">Political Science Bachelor of Arts</a><ul><li id="main-menu-link-contenteefef9f6-5c3c-40cf-a47f-1b11396ded65" class="sf-depth-3 sub-menu sf-no-children"><a href="/undergraduate/ba-political-science/ba-spring-2022-courses" class="sf-depth-3 menu-link">Spring 2022 class offerings</a></li></ul></li><li id="main-menu-link-contentecd9a7a8-1e44-4455-9843-75472df29d68" class="sf-depth-2 sub-menu menuparent"><a href="/undergraduate/bs-political-science" title="Information about the Political Science Bachelor of Science degree" class="sf-depth-2 menu-link menuparent">Political Science Bachelor of Science</a><ul><li id="main-menu-link-content1d0a0171-ad39-4001-beed-ef6dedfcd4a4" class="sf-depth-3 sub-menu sf-no-children"><a href="/undergraduate/bs-political-science/spring-2022-class-offerings-bachelor-science" class="sf-depth-3 menu-link">Spring 2022 Class Offerings</a></li></ul></li><li id="main-menu-link-contentc7502405-f90b-4ab6-9a4d-e52deb122168" class="sf-depth-2 sub-menu menuparent"><a href="/undergraduate/ba-world-politics" title="Information about the World Politics Bachelor of Arts degree program" class="sf-depth-2 menu-link menuparent">World Politics Bachelor of Arts</a><ul><li id="main-menu-link-contente44049e3-913f-4d3b-a3b1-e8f536d10848" class="sf-depth-3 sub-menu sf-no-children"><a href="/undergraduate/ba-world-politics/spring-2022-class-offerings" class="sf-depth-3 menu-link">Spring 2022 Class Offerings</a></li></ul></li><li id="main-menu-link-contentaec14e55-3659-46b5-95c5-7160510439ab" class="sf-depth-2 sub-menu menuparent"><a href="/undergraduate/minors" title="Information for minor programs" class="sf-depth-2 menu-link menuparent">Minor Programs</a><ul><li id="main-menu-link-content9d090dc6-0911-4a01-8a5d-c3ea98f91232" class="sf-depth-3 sub-menu sf-no-children"><a href="/undergraduate/minors/spring-2022-class-offerings-political-science-minors" class="sf-depth-3 menu-link">Spring 2022 Class Offerings</a></li></ul></li><li id="main-menu-link-content38a047c1-353c-469f-9dc2-8736142e6b13" class="sf-depth-2 sub-menu menuparent"><a href="/undergraduate/honors-program" title="Honors Program information" class="sf-depth-2 menu-link menuparent">Honors Program</a><ul><li id="main-menu-link-contentae17587e-2005-4d5c-898f-bfc5a99c7a9f" class="sf-depth-3 sub-menu sf-no-children"><a href="/undergraduate/honors-program/thesis-reqs" title="Honors Thesis Requirements" class="sf-depth-3 menu-link">Honors Thesis Requirements</a></li></ul></li><li id="main-menu-link-contentb40b158e-cd83-4a84-b1a6-a782e40bbc54" class="sf-depth-2 sub-menu sf-no-children"><a href="/undergraduate/advising" title="PoliSci advising information" class="sf-depth-2 menu-link">Advising</a></li><li id="main-menu-link-content5be71fe9-fb1b-4f19-9b99-75786b4c2784" class="sf-depth-2 sub-menu menuparent"><a href="/undergraduate/internships" title="Internship information" class="sf-depth-2 menu-link menuparent">Internships</a><ul></ul></li><li id="main-menu-link-contentb323e3b5-7674-4a86-82bc-cbfc9676a512" class="sf-depth-2 sub-menu menuparent"><a href="/undergraduate/research-opportunities" title="Information about undergraduate research" class="sf-depth-2 menu-link menuparent">Research Opportunities</a><ul><li id="main-menu-link-content0d2be8ef-1f8a-423c-b7eb-21d4a3a09406" class="sf-depth-3 sub-menu sf-no-children"><a href="/undergraduate/research/funding" title="Undergraduate research grants" class="sf-depth-3 menu-link">Funding for Research</a></li></ul></li><li id="main-menu-link-content124e0a69-1bc1-4870-9b35-fe38417df50d" class="sf-depth-2 sub-menu menuparent"><a href="/undergraduate/advanced-empirical-research-politics-undergraduates-programs" class="sf-depth-2 menu-link menuparent">Advanced Empirical Research on Politics for Undergraduates Programs</a><ul><li id="main-menu-link-content8edf8cfe-9e0e-43e9-aa95-2392b1053927" class="sf-depth-3 sub-menu sf-no-children"><a href="/mentor-selected" class="sf-depth-3 menu-link">Mentor-Selected</a></li><li id="main-menu-link-content8b805a32-f918-41b1-8540-9127c0347bbb" class="sf-depth-3 sub-menu sf-no-children"><a href="/undergraduate/advanced-empirical-research-politics-undergraduates-programs/student-selected" class="sf-depth-3 menu-link">Student-Selected</a></li></ul></li><li id="main-menu-link-content6487411f-97b0-4301-aa73-5e99334309b4" class="sf-depth-2 sub-menu menuparent"><a href="/undergraduate/study-abroad" title="Information about study abroad" class="sf-depth-2 menu-link menuparent">Study Abroad</a><ul><li id="main-menu-link-content270cf8c1-d46e-4dd0-81b4-fe9761cc58c2" class="sf-depth-3 sub-menu sf-no-children"><a href="/undergraduate/study-abroad/funding" title="Undergraduate Scholarship Opportunities" class="sf-depth-3 menu-link">Funding for Study Abroad</a></li></ul></li><li id="main-menu-link-content0cd9c6a9-328d-4024-83d5-1f7e0b6db258" class="sf-depth-2 sub-menu sf-no-children"><a href="/undergraduate/student-organizations" title="Information about student clubs and organizations" class="sf-depth-2 menu-link">Student Organizations</a></li><li id="main-menu-link-content333bcb53-2391-4018-9727-3b22f4ba517f" class="sf-depth-2 sub-menu menuparent"><a href="/undergraduate/achievements-awards" title="Notable student achievements and awards" class="sf-depth-2 menu-link menuparent">Student Achievements and Awards</a><ul><li id="main-menu-link-contentfe4784ae-0091-4438-b474-41f86078a1eb" class="sf-depth-3 sub-menu sf-no-children"><a href="/undergraduate/achievements-awards/department-awards" title="Undergraduate student awards" class="sf-depth-3 menu-link">Departmental Awards</a></li><li id="main-menu-link-content9e28a917-834b-4609-8cee-7a96e8b3b453" class="sf-depth-3 sub-menu sf-no-children"><a href="/undergraduate/achievements-awards/pi-sigma-alpha" title="Information about Pi Sigma Alpha" class="sf-depth-3 menu-link">Pi Sigma Alpha</a></li></ul></li><li id="main-menu-link-content7fae6040-6f92-4bdb-897d-937402ed5c09" class="sf-depth-2 sub-menu sf-no-children"><a href="/undergraduate/careers-political-science" title="Careers in Political Science" class="sf-depth-2 menu-link">Careers in Political Science</a></li><li id="main-menu-link-contentac5dd279-9ba8-4131-aef8-0c09d9c5d2ba" class="sf-depth-2 sub-menu sf-no-children"><a href="/undergraduate/prospective-students/law-graduate-school" title="General info on Law and Grad School" class="sf-depth-2 menu-link">Law and Graduate School</a></li><li id="main-menu-link-content4bfbd8d7-5751-4fc0-af6c-862916328677" class="sf-depth-2 sub-menu sf-no-children"><a href="/undergraduate/columbus" title="" class="sf-depth-2 menu-link">Living in Columbus</a></li><li id="main-menu-link-content83d298f0-2667-4a0a-a6cd-550a684fb720" class="sf-depth-2 sub-menu sf-no-children"><a href="/about-us/ohio-state" title="About Ohio State" class="sf-depth-2 menu-link">About Ohio State</a></li><li id="main-menu-link-contentb603f067-5800-4407-84b9-3a79080e3c20" class="sf-depth-2 sub-menu sf-no-children"><a href="http://buckeyelink.osu.edu" title="Buckeye Link - Ohio State&#039;s Online Academic Center" class="sf-depth-2 menu-link sf-external">Buckeye Link</a></li><li id="main-menu-link-contentac3f12f0-f9d9-4579-87f6-a75f44e7bb94" class="sf-depth-2 sub-menu sf-no-children"><a href="/about-us/facultystaff-offices" title="Find office listings for department faculty and staff" class="sf-depth-2 menu-link">Find Faculty/Staff Offices</a></li><li id="main-menu-link-content3dd2aebe-ee35-4115-9c9b-846bff085c90" class="sf-depth-2 sub-menu sf-no-children"><a href="/undergraduate/mental-health-and-wellness-resources" class="sf-depth-2 menu-link">Mental Health and Wellness Resources</a></li></ul></li><li id="main-menu-link-content978e2b49-0fc5-4e33-b869-dafca3284d65" class="sf-depth-1 sub-menu menuparent"><a href="/graduate" title="Graduate Experience - information for Graduates in PoliSci" class="sf-depth-1 menu-link menuparent">Graduate Experience</a><ul><li id="main-menu-link-contentd922d76d-3f26-4748-9e58-9b531cc2727d" class="sf-depth-2 sub-menu menuparent"><a href="/graduate/prospective-students" class="sf-depth-2 menu-link menuparent">Prospective Students</a><ul><li id="main-menu-link-contentf478e17d-45b5-4d2a-b65d-a6779ffbb758" class="sf-depth-3 sub-menu sf-no-children"><a href="/graduate/prospective-students/admissions" class="sf-depth-3 menu-link">Admissions and Application Information</a></li><li id="main-menu-link-content19541438-bebd-4638-9bd2-13c0950dd7a0" class="sf-depth-3 sub-menu sf-no-children"><a href="/graduate/prospective-students/financial-aid" class="sf-depth-3 menu-link">Fellowships and Funding</a></li><li id="main-menu-link-content20ac110f-5bb6-4089-9814-e8c09bc03700" class="sf-depth-3 sub-menu sf-no-children"><a href="/graduate/prospective-students/placement" title="Chart and Map showing placement of OSU Department of Political Science graduates over the years." class="sf-depth-3 menu-link">Placement</a></li><li id="main-menu-link-content6ce9017b-6c85-42b7-9a0b-ed1955e21b6e" class="sf-depth-3 sub-menu sf-no-children"><a href="/graduate/placement/completion" class="sf-depth-3 menu-link">Time to Completion</a></li><li id="main-menu-link-contentdb68ff5d-8961-4ceb-b293-c1ff72de03cb" class="sf-depth-3 sub-menu sf-no-children"><a href="/graduate/prospective-students/faqs" title="" class="sf-depth-3 menu-link">Admissions FAQs</a></li><li id="main-menu-link-contentae548044-397e-439a-b7c5-ce1ebe8adad6" class="sf-depth-3 sub-menu sf-no-children"><a href="http://polisci.osu.edu/undergraduate/columbus" title="" class="sf-depth-3 menu-link sf-external">Living in Columbus</a></li></ul></li><li id="main-menu-link-content92c909ba-d20a-45ec-beef-a667e94d32bc" class="sf-depth-2 sub-menu sf-no-children"><a href="/graduate/fields-study" class="sf-depth-2 menu-link">Fields of Study</a></li><li id="main-menu-link-content0a6b7090-af44-4d8f-afb6-50cd546f2198" class="sf-depth-2 sub-menu sf-no-children"><a href="/graduate-handbook" class="sf-depth-2 menu-link">Graduate Handbook</a></li><li id="main-menu-link-content3cfd7eae-4c86-47ae-98b7-0bd0224b693d" class="sf-depth-2 sub-menu menuparent"><a href="https://polisci.osu.edu/directory?tid%5B0%5D=14" title="" class="sf-depth-2 menu-link sf-external menuparent">Current Students</a><ul><li id="main-menu-link-contenta353e519-50cd-45da-acdd-184032fde429" class="sf-depth-3 sub-menu sf-no-children"><a href="/research/workshops" class="sf-depth-3 menu-link">Research Workshops</a></li><li id="main-menu-link-contentd89df65e-9bf7-49da-9336-65dbdabfe8f9" class="sf-depth-3 sub-menu menuparent"><a href="/graduate/fields-study/courses" class="sf-depth-3 menu-link menuparent">Course Listings</a><ul><li id="main-menu-link-contenta9ea1f3e-0c03-44f8-93ad-9310ffc8a23f" class="sf-depth-4 sub-menu sf-no-children"><a href="/graduate/fields-study/courses/course-offerings-spring-2022" class="sf-depth-4 menu-link">Course offerings for Spring 2022</a></li><li id="main-menu-link-content79a8da4f-2373-4109-8a17-816194bfe27e" class="sf-depth-4 sub-menu sf-no-children"><a href="/graduate/fields-study/courses/archived-syllabi" class="sf-depth-4 menu-link">Archived Syllabi</a></li><li id="main-menu-link-contente0a2f127-75e0-4601-a958-250a348f904d" class="sf-depth-4 sub-menu sf-no-children"><a href="/graduate/fields-study/semester-course-conversion" class="sf-depth-4 menu-link">Semester Course Conversion</a></li></ul></li><li id="main-menu-link-content26c4ff1c-5616-4849-b816-94abe529212e" class="sf-depth-3 sub-menu sf-no-children"><a href="/graduate/current-students/additional-resources" title="" class="sf-depth-3 menu-link">University Resources and Research Facilities</a></li><li id="main-menu-link-contentbc84640c-8f08-4be5-be4a-4f3fa756e7e6" class="sf-depth-3 sub-menu sf-no-children"><a href="/graduate/current-students/PoliSciU-advanced-methodology" class="sf-depth-3 menu-link" title="PoliSci U - Advanced Methodology">PoliSci U - Advanced Methodology</a></li><li id="main-menu-link-contentb37868d3-27e6-40db-b036-9a1f2d6cae8e" class="sf-depth-3 sub-menu sf-no-children"><a href="/graduate/current-students/grants-awards" title="Grants and Award opportunities for Graduate Students." class="sf-depth-3 menu-link">OSU Funding Opportunities</a></li><li id="main-menu-link-content57c2badb-3d93-4d4f-8860-1e9d993c88e2" class="sf-depth-3 sub-menu sf-no-children"><a href="/graduate/current-students/external-funding" class="sf-depth-3 menu-link">External Funding Opportunities</a></li><li id="main-menu-link-contente7d73f75-8026-498a-a6bc-e269c7c9425a" class="sf-depth-3 sub-menu sf-no-children"><a href="/graduate/current-students/post-doctoral-funding" class="sf-depth-3 menu-link">Post-Doctoral Funding Opportunities</a></li><li id="main-menu-link-contentd575db44-7c3e-4147-a1bc-dd648e043390" class="sf-depth-3 sub-menu sf-no-children"><a href="/research/prism" target="" rel="" class="sf-depth-3 menu-link" title="PRISM">PRISM</a></li><li id="main-menu-link-contenta86465cd-f2a1-4b65-9632-73c6baf94c69" class="sf-depth-3 sub-menu sf-no-children"><a href="/current-graduate-student-achievements" class="sf-depth-3 menu-link">Current Graduate Student Achievements</a></li><li id="main-menu-link-contentd7b3178d-1639-4d7d-9f3a-d1210e21ee95" class="sf-depth-3 sub-menu sf-no-children"><a href="/mental-health-and-wellness-resources" class="sf-depth-3 menu-link">Mental Health and Wellness Resources</a></li><li id="main-menu-link-content9889fb09-2882-40d3-a778-00cca2ae70a1" class="sf-depth-3 sub-menu sf-no-children"><a href="/graduate/current-students/women-political-science" class="sf-depth-3 menu-link" title="Women in Political Science">Women in Political Science</a></li></ul></li><li id="main-menu-link-content4a3fa79c-c173-4dc7-aa89-40df21ba15d6" class="sf-depth-2 sub-menu sf-no-children"><a href="/graduate/current-students/hire-phd" title="Hire an OSU PhD" class="sf-depth-2 menu-link">Hire an OSU PhD</a></li><li id="main-menu-link-content7d1bbbcb-fab8-4a3f-94f8-963646ecbb8d" class="sf-depth-2 sub-menu sf-no-children"><a href="/graduate/graduate-immersion-conference" class="sf-depth-2 menu-link">Graduate Immersion Conference</a></li><li id="main-menu-link-content0a409473-0f57-49af-ae53-ffc13a587b26" class="sf-depth-2 sub-menu sf-no-children"><a href="/graduate/graduate-student-departmental-awards" class="sf-depth-2 menu-link">Graduate Student Departmental Awards</a></li></ul></li><li id="main-menu-link-content765da779-091d-4d10-a213-8c9007539c09" class="sf-depth-1 sub-menu menuparent"><a href="/research" title="Research" class="sf-depth-1 menu-link menuparent">Research</a><ul><li id="main-menu-link-contentaa6e7e7a-9a14-47d9-ba14-c86871712e49" class="sf-depth-2 sub-menu menuparent"><a href="/research/workshops" class="sf-depth-2 menu-link menuparent">Research Workshops</a><ul><li id="main-menu-link-contentaf746289-5b36-4a37-8d8b-e058e4741090" class="sf-depth-3 sub-menu sf-no-children"><a href="/comparative-politics-research-workshop" class="sf-depth-3 menu-link">Comparative Politics Research Workshop</a></li><li id="main-menu-link-contentce8f4ba9-94c7-4056-87c4-eb707416cd68" class="sf-depth-3 sub-menu sf-no-children"><a href="/workshop-american-politics" class="sf-depth-3 menu-link">Workshop in American Politics</a></li><li id="main-menu-link-content77a56218-ffdc-4068-8c48-0c9185c371d0" class="sf-depth-3 sub-menu sf-no-children"><a href="/research/workshops/worlds-contention-workshop" class="sf-depth-3 menu-link">Worlds in Contention workshop</a></li><li id="main-menu-link-content1050b8dc-f561-4092-97f3-91d73b1361b6" class="sf-depth-3 sub-menu sf-no-children"><a href="/political-theory-workshop" class="sf-depth-3 menu-link">Political Theory Workshop</a></li></ul></li><li id="main-menu-link-contentf92ee2c4-1e6b-4c6a-a4a5-6bc03e71cad3" class="sf-depth-2 sub-menu menuparent"><a href="/research/prism" class="sf-depth-2 menu-link menuparent">PRISM</a><ul><li id="main-menu-link-contentc20a06be-aa33-4889-ba1b-f2cd63f8ac2c" class="sf-depth-3 sub-menu sf-no-children"><a href="/research/prism/scholars" title="PRISM fellows description and members." class="sf-depth-3 menu-link">Scholars</a></li><li id="main-menu-link-contentbc9d2f77-d26b-45c5-a2dc-707f67f816e2" class="sf-depth-3 sub-menu sf-no-children"><a href="/research/prism/speaker-series" title="PRISM Speaker series information." class="sf-depth-3 menu-link">Series</a></li><li id="main-menu-link-content602ef02a-6e79-4a8c-adb2-398a2dccadb0" class="sf-depth-3 sub-menu sf-no-children"><a href="/research/prism/presentations" class="sf-depth-3 menu-link">Luncheon</a></li><li id="main-menu-link-content191c16f0-2134-4214-a1a8-8354d9cf113c" class="sf-depth-3 sub-menu sf-no-children"><a href="/research/prism/courses" class="sf-depth-3 menu-link">Methods Courses</a></li><li id="main-menu-link-content9879a89c-09da-4add-979d-7a01f4ce5ff2" class="sf-depth-3 sub-menu sf-no-children"><a href="/research/prism/resources" class="sf-depth-3 menu-link">Resources</a></li><li id="main-menu-link-content0ae3fe13-d271-4e13-a4ea-249230062561" class="sf-depth-3 sub-menu sf-no-children"><a href="/research/prism/links" class="sf-depth-3 menu-link">Links</a></li></ul></li><li id="main-menu-link-content5b27428d-fed4-4b00-9657-21d80fdfdb98" class="sf-depth-2 sub-menu sf-no-children"><a href="/graduate/current-students/additional-resources" class="sf-depth-2 menu-link">University Resources and Research Facilities</a></li></ul></li><li id="main-menu-link-contentd12988e7-45d8-474d-a72f-0a22b5a525ce" class="sf-depth-1 sub-menu sf-no-children"><a href="/people" class="sf-depth-1 menu-link">People</a></li><li id="main-menu-link-content142c80c7-aec5-4425-8916-7892f9100bec" class="sf-depth-1 sub-menu menuparent"><a href="/about-us" title="Information about PoliSci" class="sf-depth-1 menu-link menuparent">About Us</a><ul><li id="main-menu-link-content92779917-1f17-4a79-b541-fd0ede5aa211" class="sf-depth-2 sub-menu menuparent"><a href="/about-us/history" class="sf-depth-2 menu-link menuparent">History</a><ul><li id="main-menu-link-content004ae4f6-c4b1-4ef3-ba99-3c219bb7fa61" class="sf-depth-3 sub-menu sf-no-children"><a href="/research/awards-recognition" class="sf-depth-3 menu-link">Awards &amp; Recognition</a></li></ul></li><li id="main-menu-link-contentd72670f8-2d49-46d6-aecb-59705d2827b7" class="sf-depth-2 sub-menu sf-no-children"><a href="/undergraduate/columbus" title="Living in Columbus" class="sf-depth-2 menu-link">Living in Columbus</a></li><li id="main-menu-link-content1188b850-51e9-474c-9b5b-1127be466946" class="sf-depth-2 sub-menu sf-no-children"><a href="/about-us/ohio-state" class="sf-depth-2 menu-link">About Ohio State</a></li><li id="main-menu-link-contenta8327c7e-ef25-47b8-8e6f-8f9fd142b152" class="sf-depth-2 sub-menu sf-no-children"><a href="/about-us/facultystaff-offices" title="Faculty/Staff Office floorplan." class="sf-depth-2 menu-link">Faculty/Staff Offices</a></li><li id="main-menu-link-contentda672a5b-f99f-43d3-bf6e-642150324e34" class="sf-depth-2 sub-menu sf-no-children"><a href="/about-us/brice-acree-memorial-hack-fest-mental-health" class="sf-depth-2 menu-link">Brice Acree Memorial Hack Fest on Mental Health</a></li><li id="main-menu-link-contentea625a74-9a9c-4bbb-92d3-a1514c5a2407" class="sf-depth-2 sub-menu menuparent"><a href="https://polisci.osu.edu/diversity-equity-and-inclusion-committee" class="sf-depth-2 menu-link sf-external menuparent" title="DEI Committee">Diversity Equity and Inclusion Committee</a><ul><li id="main-menu-link-content40908353-e8fb-4f72-94d4-79be4309a1c4" class="sf-depth-3 sub-menu sf-no-children"><a href="/being-ally" class="sf-depth-3 menu-link">Being an Ally</a></li><li id="main-menu-link-contentc5e800d0-251c-4c70-aa54-6af4a8ec020f" class="sf-depth-3 sub-menu sf-no-children"><a href="/mentoring-undergraduates" class="sf-depth-3 menu-link">Mentoring Undergraduates</a></li><li id="main-menu-link-contenta23912c9-c32d-45c3-a5f0-d08a2f0c1eed" class="sf-depth-3 sub-menu sf-no-children"><a href="/mentoring-graduate-students" class="sf-depth-3 menu-link">Mentoring Graduate Students</a></li><li id="main-menu-link-content047b9cd8-1635-417e-93f4-608cde4d4dfb" class="sf-depth-3 sub-menu sf-no-children"><a href="/classroom-discussion" class="sf-depth-3 menu-link">Classroom Discussion</a></li><li id="main-menu-link-contente508e39e-ca44-4b1d-8fc0-0ba78ff38490" class="sf-depth-3 sub-menu sf-no-children"><a href="/hosting-job-candidate" class="sf-depth-3 menu-link">Hosting A Job Candidate</a></li></ul></li><li id="main-menu-link-content772aaa09-9b45-42f2-8bb0-dc32ec809e50" class="sf-depth-2 sub-menu sf-no-children"><a href="/resources" title="Resources for faculty, staff, and students" class="sf-depth-2 menu-link">Internal Resources</a></li><li id="main-menu-link-content5558d67f-b775-4e9a-8a81-d3d7efce7ccf" class="sf-depth-2 sub-menu sf-no-children"><a href="https://polisci.osu.edu/advisory-board" class="sf-depth-2 menu-link sf-external" title="Political Science Advisory Board">Political Science Advisory Board</a></li><li id="main-menu-link-content608951a6-6c93-43d1-aa47-8e20b04129bb" class="sf-depth-2 sub-menu sf-no-children"><a href="/about-us/awardsaccomplishments-submission-survey" class="sf-depth-2 menu-link">Awards/Accomplishments Submission Survey</a></li></ul></li><li id="main-menu-link-contentddd3439c-e356-4209-9a43-eb2c4b3fb0d4" class="sf-depth-1 sub-menu menuparent"><a href="/alumni" title="Alumni information" class="sf-depth-1 menu-link menuparent">Alumni</a><ul><li id="main-menu-link-contentfc3bf4c3-8c57-4418-bb18-70d1f5433ad7" class="sf-depth-2 sub-menu sf-no-children"><a href="/giving/political-science" class="sf-depth-2 menu-link">Giving</a></li><li id="main-menu-link-contentccf6393e-8aeb-42c0-b7eb-33ba888cfc22" class="sf-depth-2 sub-menu sf-no-children"><a href="/alumni/award" title="Distinguished Alumni Award Recipients" class="sf-depth-2 menu-link">Distinguished Alumni Award</a></li></ul></li><li id="main-menu-link-contente99b6c3b-6d52-458b-9942-99791befe016" class="sf-depth-1 sub-menu sf-no-children"><a href="/derby-hall-news" title="Link to the Politcal Science Department&#039;s newsletter" class="sf-depth-1 menu-link">Newsletter</a></li>
+</ul>
+<ul>
+<span class="search-icon" role="button" aria-label="Toggle Search">
+  <a href="#" class="active-search" title="Search">
+    <i class="fa fa-search"></i>
+  </a>
+</span>
+
+  </section>
+
+<div class="search-block-form block block-search block-search-form-block" data-drupal-selector="search-block-form" id="block-asc-bootstrap-search" role="search">
+  
+      <h2 class="visually-hidden">Search</h2>
+    
+      <form action="/search/node" method="get" id="search-block-form" accept-charset="UTF-8">
+  <div class="form-item js-form-item form-type-search js-form-type-search form-item-keys js-form-item-keys form-no-label form-group">
+      <label for="edit-keys" class="control-label sr-only">Search</label>
+  
+  
+  <div class="input-group"><input title="Enter the terms you wish to search for." data-drupal-selector="edit-keys" class="form-search form-control" placeholder="Search" type="search" id="edit-keys" name="keys" value="" size="15" maxlength="128" data-toggle="tooltip" /><span class="input-group-btn"><button type="submit" value="Search" class="button js-form-submit form-submit btn-primary btn icon-only" name=""><span class="sr-only">Search</span><span class="icon glyphicon glyphicon-search" aria-hidden="true"></span></button></span></div>
+
+  
+  
+  </div>
+<div class="form-actions form-group js-form-wrapper form-wrapper" data-drupal-selector="edit-actions" id="edit-actions"></div>
+
+</form>
+
+  </div>
+
+  </div>
+
+        </nav>
+      </div>
+  </div>
+  <div id="breadcrumb-container">
+    <div class="container">
+      <nav aria-label="Breadcrumb">
+          <div class="region region-breadcrumb">
+        <ol class="breadcrumb">
+          <li >
+                  <a href="/">Home</a>
+              </li>
+          <li >
+                  <a href="/people">People</a>
+              </li>
+          <li  class="active">
+                  Randall Schweller
+              </li>
+      </ol>
+
+
+  </div>
+
+      </nav>
+    </div>
+  </div>
+
+    <div role="main" class="main-container  js-quickedit-main-content">
+    <div class="container">
+    <div class="row">
+
+                  <section class="col-sm-12">
+
+
+                
+                          <a id="main-content"></a>
+            <div class="region region-content">
+    <div data-drupal-messages-fallback class="hidden"></div>    <h1 class="page-header">Randall Schweller</h1>
+
+  <article typeof="schema:Person" about="/people/schweller.2">
+    <div class="bio-header bio-header-top">
+      <div class="col-xs-12 col-sm-3 bio-top-right">
+                  <img src="https://opic.osu.edu/schweller.2?aspect=p&width=300" alt="Randall Schweller" />
+              </div>
+      <div class="col-xs-12 col-sm-5 bio-top-left">
+        <h1>
+          Randall Schweller
+        </h1>
+
+                  <p class="bio-title">
+            Professor
+                        </p>
+        
+                  <p>
+            <a href="mailto:schweller.2@osu.edu" title="Email Randall Schweller">
+              schweller.2@osu.edu
+            </a>
+          </p>
+        
+        
+                  <p>
+                          2106 Derby Hall<br/>
+                                      154 N Oval Mall<br />
+Columbus, OH<br />
+43210
+                      </p>
+        
+      </div>
+      <div class="col-xs-12 col-sm-4 bio-info">
+                              
+  <div class="field field--name-field-google-map field--type-string field--label-visually_hidden">
+    <div class="field--label sr-only">Google Map</div>
+              <div class="field--item">      <iframe width="100%" height="320" title="" frameborder="0" style="border:0" src="https://www.google.com/maps/embed?origin=mfe&amp;pb=!1m4!2m1!1s154+N+Oval+Mall+Columbus%2C+OH+43210!5e0!6i14!5m1!1sen"></iframe>
+</div>
+          </div>
+
+                        </div>
+    </div>
+
+    <div class="col-xs-12 col-sm-3 bio-btm-right">
+      
+    
+    
+    
+        </div>
+    <div class="col-xs-12 col-sm-9 bio-btm-left">
+      
+              <p> </p>
+
+<p><a href="https://polisci.osu.edu/sites/default/files/2021-06/Schweller%20cv%20%282021%29.pdf" title="Schweller CV 2021">Schweller CV (2021)</a></p>
+
+<p>Randall L. Schweller is Professor of Political Science, Director of the Program for the Study of Realist Foreign Policy, a Social and Behavioral Sciences Joan N. Huber Faculty Fellow at Ohio State University, and editor-in-chief of <em>Security Studies</em>.  Schweller joined OSU in 1994. He is the author of <em>Maxwell’s Demon and the Golden Apple: Global Discord in the New Millennium</em> (Johns Hopkins University, 2014); <em>Unanswered Threats: Political Constraints on the Balance of Power</em> (Princeton University Press, 2006); and <em>Deadly Imbalances: Tripolarity and Hitler’s Strategy of World Conquest</em> (Columbia University Press, 1998). He has also published many articles in leading journals, including <em>World Politics</em>, <em>International Studies Quarterly</em>, <em>International Security</em>, <em>American Political Science Review</em>, <em>Global Governance</em>, <em>American Journal of Political Science</em>, <em>Review of International Studies</em>, <em>Cambridge Review of International Affairs</em>, <em>The National Interest</em>, <em>International Theory</em>, and <em>Security Studies</em>. He is currently a member of the editorial boards of <em>International Security</em>, <em>Security Studies</em>, <em>Foreign Affairs Review</em> (China), and the <em>Studies in Asian Security </em>book series published by Stanford University Press<em>.</em></p>
+
+<p>Noted for his work as a grand theorist of international relations and as a founder of neoclassical realism, Schweller's recent publications include: “In Defense of Trump’s Foreign Policy,” <em>Foreign Affairs</em>, Vol. 97, No. 5 (September/October 2018); “Opposite but Compatible Nationalisms: A Neoclassical Realist Approach to the Future of US-China Relations,” <em>The Chinese Journal of International Politics</em>, Vol. 11, Issue 1 (March 2018), pp. 23-48; Why Trump Now: A Third-Image Explanation,” in Robert Jervis, Francis Gavin, Joshua Rovner, and Diane Labrosse, eds., <em>America and the World—2017 and Beyond</em> (New York: Columbia University Press, 2018); "After Unipolarity: China’s Vision of International Order in an Era of U.S. Decline" <em>International Security</em>, Vol. 36, No. 1 (Summer 2011), co-authored with Xiaoyu Pu; “Emerging Powers in the Age of Disorder.” <em>Global Governance</em>, Vol. 17, No. 3 (July-Sept. 2011); "Rational Theory for a Bygone Era," <em>Security Studies</em>, Vol. 20 (September 2011); “The Future is Uncertain and the End is Always Near,” <em>Cambridge Review of International Affairs</em>, Vol. 24, No. 2 (September 2011); “Knowing the Unknown Unknowns: Misplaced Certainty and the Onset of War,” <em>Security Studies</em>, Vol. 20, No. 1 (Jan-March 2011), co-authored with Jennifer Mitzen; “The Logic and Illogic of Contemporary Realism,” <em>International Theory</em>, Vol. 2, Issue 3 (December 2010); “Ennui Becomes Us,” <em>The National Interest</em>, No. 105 (Jan/Feb 2010); and “Entropy and the Trajectory of World Politics: Why Polarity Has Become Less Meaningful,” <em>Cambridge Review of International Affairs</em>, Vol. 23, No. 1 (March 2010).</p>
+
+<p>In a survey of international relations faculty in 10 countries conducted by the <em>Institute for the Theory and Practice of International Relations</em>, Schweller was selected as one of the top 25 scholars who have produced the most interesting work in the field of international relations. In 1993, he received a John M. Olin Post-Doctoral Fellowship in National Security at the Center for International Affairs, Harvard University. In early 2012, Schweller was awarded a Social and Behavioral Sciences Joan N. Huber Faculty Fellowship.</p>
+
+<p>[pdf] - Some links on the page are to Adobe .pdf files, requiring Adobe Reader. If you need any of them in a more accessible format, please contact <a href="mailto:schweller.2@osu.edu" title="Email Randall Schweller">schweller.2@osu.edu</a>.</p>
+      
+      
+      
+                </div>
+
+</article>
+
+
+  </div>
+
+        
+                
+                
+                
+                
+      </section>
+
+          </div>
+  </div>
+</div>
+
+ <footer class="footer " role="contentinfo">
+  <div class="container">
+    <div id="footer1-container" class="col-xs-12 col-md-4">
+              
+              <div class="region region-footer-one">
+    
+<div class="footer-address">
+  <p class="contact-heading"><a href="/contact">Contact Us</a></p>
+  <p>
+          2140 Derby Hall<br/>
+    
+          154 North Oval Mall<br/>
+    
+          Columbus,
+    
+          OH
+    
+          43210
+      </p>
+</div>
+
+<div class="footer-email">
+  <p>E-Mail:
+      <a href="mailto:polisci@osu.edu" title="Email Department of Political Science">
+          polisci@osu.edu
+      </a>
+  </p>
+</div>
+
+<div class="footer-phone">
+  <p>
+          Phone: (614) 292-2880
+          </p>
+</div>
+
+  </div>
+
+
+                  </div>
+    <div id="footer2-container" class="col-xs-12 col-md-4">
+          </div>
+    <div id="footer3-container" class="col-xs-12 col-md-4">
+              
+              <div class="region region-footer-three">
+    <section id="block-socialmedialinks" class="block-social-media-links block block-social-media-links-block clearfix">
+  
+    
+
+      
+
+<ul class="social-media-links--platforms platforms inline horizontal">
+      <li>
+      <a class="social-media-link-icon--facebook" href="https://www.facebook.com/ASCatOSU"  aria-label="Follow us on Facebook" title="Follow us on Facebook" >
+        <span class='fa fa-facebook fa-2x'></span>
+      </a>
+
+          </li>
+      <li>
+      <a class="social-media-link-icon--twitter" href="https://www.twitter.com/osupolisci"  aria-label="Follow us on Twitter" title="Follow us on Twitter" >
+        <span class='fa fa-twitter fa-2x'></span>
+      </a>
+
+          </li>
+      <li>
+      <a class="social-media-link-icon--flickr" href="https://www.flickr.com/photos/182213121@N08/"  aria-label="Follow us on Flickr" title="Follow us on Flickr" >
+        <span class='fa fa-flickr fa-2x'></span>
+      </a>
+
+          </li>
+      <li>
+      <a class="social-media-link-icon--rss" href="/rss.xml"  aria-label="Follow us on RSS" title="Follow us on RSS" >
+        <span class='fa fa-rss fa-2x'></span>
+      </a>
+
+          </li>
+  </ul>
+
+  </section>
+
+
+  </div>
+
+
+                  </div>
+  </div>
+</footer>
+
+<div id="subfoot">
+  <div class="container">
+    <div class="col-xs-12 col-md-6 sf-col1">
+      <a href="https://osu.edu/">
+        <img src="/themes/asc_bootstrap/images/osu-web-footer-wordmark-rev.png" alt="The Ohio State University logo" />
+      </a>
+    </div>
+
+    <div class="col-xs-12 col-md-6 sf-col2">
+      <ul>
+        <li id="access-area">
+          If you have a disability and experience difficulty accessing this site, please contact us for assistance via email at <a href="mailto:asc-accessibility@osu.edu" class="email-link" title="Email for accessibility assistance">asc-accessibility@osu.edu</a>.
+        </li>
+                <li>
+          <a href="https://go.osu.edu/privacy">
+            Privacy Statement
+          </a>
+        </li>
+        <li>
+                      <a href="/saml_login">
+              LOGIN
+            </a>
+                </li>
+      </ul>
+    </div>
+  </div>
+  <div class="container">
+    <div class="col-xs-12 col-md-6 sf-col1">
+      <p><small>&copy; 2022. The Ohio State University</small></p>
+    </div>
+
+    <div class="col-xs-12 col-md-6 sf-col2">
+      <p><small><i>Designed and built by <a href="https://asctech.osu.edu/services/web-services" class="email-link">ASCTech Web Services</a></i></small></p>
+    </div>
+  </div>
+</div>
+
+</div>
+  </div>
+
+    
+    <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","scriptPath":null,"pathPrefix":"","currentPath":"user\/147","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"en"},"pluralDelimiter":"\u0003","suppressDeprecationErrors":true,"ajaxPageState":{"libraries":"asc_bootstrap\/asc_bootstrap-corescripts,asc_bootstrap\/bootstrap-scripts,asc_bootstrap\/font-awesome,asc_bootstrap\/global-styling,asc_bootstrap\/osu-webfonts,book_settings_changes\/custom_css,bootstrap\/popover,bootstrap\/theme,bootstrap\/tooltip,buckeye_alert\/buckeye_alert,ckeditor_indentblock\/indentblock,google_analytics\/google_analytics,social_media_links\/fontawesome.component,social_media_links\/social_media_links.theme,superfish\/superfish,superfish\/superfish_hoverintent,superfish\/superfish_smallscreen,superfish\/superfish_style_white,superfish\/superfish_supersubs,superfish\/superfish_supposition,system\/base,webform_bootstrap\/webform_bootstrap","theme":"asc_bootstrap","theme_token":null},"ajaxTrustedUrl":{"\/search\/node":true},"google_analytics":{"account":{},"trackOutbound":true,"trackMailto":true,"trackTel":true,"trackDownload":true,"trackDownloadExtensions":"7z|aac|arc|arj|asf|asx|avi|bin|csv|doc(x|m)?|dot(x|m)?|exe|flv|gif|gz|gzip|hqx|jar|jpe?g|js|mp(2|3|4|e?g)|mov(ie)?|msi|msp|pdf|phps|png|ppt(x|m)?|pot(x|m)?|pps(x|m)?|ppam|sld(x|m)?|thmx|qtm?|ra(m|r)?|sea|sit|tar|tgz|torrent|txt|wav|wma|wmv|wpd|xls(x|m|b)?|xlt(x|m)|xlam|xml|z|zip"},"bootstrap":{"forms_has_error_value_toggle":1,"modal_animation":1,"modal_backdrop":"true","modal_focus_input":1,"modal_keyboard":1,"modal_select_text":1,"modal_show":1,"modal_size":"","popover_enabled":1,"popover_animation":1,"popover_auto_close":1,"popover_container":"body","popover_content":"","popover_delay":"0","popover_html":0,"popover_placement":"right","popover_selector":"","popover_title":"","popover_trigger":"click","tooltip_enabled":1,"tooltip_animation":1,"tooltip_container":"body","tooltip_delay":"0","tooltip_html":0,"tooltip_placement":"auto left","tooltip_selector":"","tooltip_trigger":"hover"},"superfish":{"superfish-main":{"id":"superfish-main","sf":{"animation":{"opacity":"show","height":"show"},"speed":"fast"},"plugins":{"smallscreen":{"mode":"window_width","breakpoint":769,"accordionButton":"2","title":"Menu"},"supposition":true,"supersubs":true}}},"buckeye_alert":{"feed_url":"\/\/www.osu.edu\/feeds\/emergency-alert.rss","messageClass":"l-constrained","animate":1,"additional":""},"user":{"uid":0,"permissionsHash":"98c13f5dd3a57983cd29c41d7bc3b1b629fb18b4d82014046b0138c6225bb971"}}</script>
+<script src="/sites/default/files/js/js_bXh3EzD58k6eeNjRD7rackzv06riJPwof2FwcBpYLUc.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/js/bootstrap.min.js" integrity="sha256-nuL8/2cJ5NDSSwnKD8VqreErSWHtnEP9E7AySL+1ev4=" crossorigin="anonymous"></script>
+<script src="/sites/default/files/js/js_cAQaXBN9HqmgWTwwVXrokvmFrkGGgcyTu7GtWDl556Q.js"></script>
+
+  <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"dd140e7b44","applicationID":"364940795","transactionName":"YFxQZEpUWUMHWkZdWlkWc1NMXFheSUlTU1BoWlNTUFA=","queueTime":0,"applicationTime":71,"atts":"TBtTEgJOSk0=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

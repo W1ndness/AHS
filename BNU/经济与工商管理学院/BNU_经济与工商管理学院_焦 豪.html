@@ -1,0 +1,495 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0">
+    <title>北京师范大学工商与经济管理学院</title>
+    <link rel="stylesheet" href="http://bs.bnu.edu.cn/new-ver-css/reset.css">
+    <link rel="stylesheet" href="http://bs.bnu.edu.cn/new-ver-css/index.css">
+	<link rel="stylesheet" href="http://bs.bnu.edu.cn/new-ver-css/xyslist.css">
+	<link rel="stylesheet" href="http://bs.bnu.edu.cn/new-ver-css/xys-tf.css">
+    <style>
+        .container{
+            width:100%;
+            height: auto;
+            overflow: hidden;
+        }
+        .header{
+            width:100%;
+            height:116px;
+            background:#EFF8FF;
+        }
+        .logo1{
+            width:1200px!important;
+            margin:0 auto;
+            position:relative;
+            float: none;
+			display:block;
+        }
+        .logo2{
+            float:right;
+        }
+        .logo1 p{
+            position:absolute;
+            top:5px;
+            right:5px;
+            font-size:13px;
+        }
+        .logo1 p:hover{
+            color:#112769;
+        }
+        .tu{
+            width:100%;
+            height:240px;
+            background:url('http://bs.bnu.edu.cn/newweb/grzy/images/tu.jpg') no-repeat top center;
+            background-size: 100%;
+        }
+        .lujing{
+            width:1200px;
+            height:58px;
+            margin:0 auto;
+            border-bottom:1px solid #aaa;
+            overflow:hidden;
+        }
+        .lujings{
+            margin:24px 0 0 0;
+            font-size:14px;
+        }
+        .content{
+            color:#333;
+            width:1200px;
+/*            height:2000px;*/
+            margin:0 auto;
+            margin-top:40px;
+/*            background:#c4c4c4;*/
+        }
+        
+        .xian{
+            width:100%;
+            height:8px;
+            background:#9A0812;
+        }
+        
+        .leftc{
+            float:left;
+        }
+        .rightc{
+            float:left;
+            margin-left:50px;
+/*            background:#666;*/
+            width:880px;
+/*            height:1000px;*/
+        }
+        .rheader{
+            width:880px;
+            height:210px;
+/*            background:yellow;*/
+        }
+        .xm{
+            font-size:30px;
+            height:40px;
+/*            border-bottom:4px solid #9A0812;*/
+            width:auto;
+            float:left;
+            line-height:40px;
+			margin-right:30px;
+        }
+        .zhiw{
+            font-size:18px;
+            height:40px;
+            line-height:50px;
+            margin-bottom:30px;
+        }
+        .tel{
+                font-size: 16px;
+                margin-top: 10px;
+                line-height: 20px;
+        }
+        .grjj{
+/*            height:300px;*/
+            width:880px;
+/*            background:yellow;*/
+            padding-bottom:40px;
+        }
+        .jjh{
+                font-size: 20px;
+                border-bottom: 1px solid #cecece;
+                height: 40px;
+                line-height: 40px;
+                padding-left: 30px;
+                background: url(http://bs.bnu.edu.cn/newweb/grzy/images/zw.png) no-repeat 0 16px;
+        }
+        
+        .jjc{
+            font-size:14px;
+            margin-top:30px;
+           
+            line-height:28px;
+            overflow:hidden;
+            text-align: justify;
+            text-justify:inter-ideograph;
+        }
+        .jjc1{
+            height:225px;
+            font-size:14px;
+            margin-top:30px;
+            
+            line-height:28px;
+            overflow:hidden;
+            text-align: justify;
+            text-justify:inter-ideograph;
+        }
+        
+        .dianji1{
+                background: url(http://bs.bnu.edu.cn/newweb/grzy/images/zw.png) no-repeat 0 -50px;
+                width: 13px;
+                height: 13px;
+                cursor: pointer;
+                display: block;
+            margin-top: 20px;
+            transition: all .2s linear;
+        }
+        .dianji1:hover{
+            background: url(http://bs.bnu.edu.cn/newweb/grzy/images/zw.png) no-repeat 0 -64px;
+        }
+        
+        .dianji{
+                background: url(http://bs.bnu.edu.cn/newweb/grzy/images/zw.png) no-repeat 0 -24px;
+                height: 13px;
+                cursor: pointer;
+                display: block;
+            margin-top: 20px;
+            transition: all .2s linear;
+        }
+        .dianji:hover{
+            background: url(http://bs.bnu.edu.cn/newweb/grzy/images/zw.png) no-repeat 0 -37px;
+        }
+        #jjc1{
+            text-indent:0em;
+        }
+        
+        .bks{
+            font-size:14px;
+            font-weight: 800;
+            margin-top:30px;
+            height:auto;
+            line-height:36px;
+        }
+        .bks1{
+            font-size:14px;
+            margin-top:30px;
+            height:auto;
+            line-height:36px;
+        }
+        .bksc{
+            height:36px;
+            line-height:36px;
+            font-size:14px;
+        }
+        
+        .yanzheng{
+            width:1200px;
+            height:100px;
+            margin:0 auto;
+        }
+        .yanzheng img{
+            display:block;
+            margin-top:26px;
+            float:left;
+        }
+		
+#appgame-leftside-share{width:42px; height:216px; position: fixed;bottom: 30px;right: 30px; z-index:9999;}
+.appgame-leftside-share{width:42px; height:259px;}
+#appgame-leftside-share a{display:block; width:42px; height:44px; background-color:#e6e6e6; z-index:1; position:absolute; left:0; box-sizing:border-box; -moz-box-sizing:border-box; border:1px #ddd solid; background-image:url(http://gh.bnu.edu.cn/images/share-icons.png); background-repeat:no-repeat; margin:0;  transition:0.4s; -webkit-transition:0.4s; -moz-transition:0.4s;}
+#appgame-leftside-share a:hover{background-color:#fff; border:1px #eee solid; z-index:2;}
+/*.appgame-leftside-weixin{top:0; background-position:-88px 0;}
+.appgame-leftside-weixin:hover{background-position:0px 0;}
+.appgame-leftside-qzone{top:43px; background-position:-88px -44px;}
+.appgame-leftside-qzone:hover{background-position:0px -44px;}*/
+.appgame-leftside-search{top:86px; background-position:-93px -89px;}
+.appgame-leftside-search:hover{background-position:-5px -86px;}
+.appgame-leftside-weixin{top:129px; background-position:-88px 0px;}
+.appgame-leftside-weixin:hover{background-position:0px 0px;}
+/*.appgame-leftside-fbook{top:172px; background-position:-88px -176px;}
+.appgame-leftside-fbook:hover{background-position:0px -176px;}
+.appgame-leftside-twi{top:215px; background-position:-88px -220px;}
+.appgame-leftside-twi:hover{background-position:0px -220px;}*/
+#appgame-leftside-share .appgame-leftside-top{background-image:url(http://gh.bnu.edu.cn/images/leftnav-off.png); background-position:-1px -395px; top:130px; cursor:pointer;}
+
+.rwt_share {
+/*	overflow:hidden;*/
+	float:left;
+	position:relative;
+}
+.rwt_share a {
+	display:inline-block;
+	margin-right:10px;
+	text-indent:-9999px;
+	margin-bottom:10px;
+	width:24px;
+	height:24px;
+	overflow:hidden;
+	cursor:pointer;
+	float:left;
+	font-size:12px;
+}
+.rwts_weixin {
+	background-position:0 -1612px;
+}
+.rwts_tsina {
+	background-position:0 -104px;
+}
+.rwts_tqq {
+	background-position:0 -260px;
+}
+.rwts_qzone {
+	background-position:0 -52px;
+}
+.rwts_sqq {
+	background-position:0 -2652px;
+}
+.rwts_tieba {
+	background-position:0 -728px;
+}
+.rwts_renren {
+	background-position:0 -208px;
+}
+.rwts_kaixin001 {
+	background-position:0 -312px;
+}
+.rwts_tqf {
+	background-position:0 -364px;
+}
+.rwts_douban {
+	background-position:0 -468px;
+}
+.rwts_twi {
+	background-position:0 -1404px;
+}
+.rwts_fbook {
+	background-position:0 -1352px;
+}
+.rwts_ty {
+	background-position:0 -1196px;
+}
+.rwts_mogujie {
+	background-position:0 -1768px;
+}
+.rwts_meilishuo {
+	background-position:0 -1716px;
+}
+.rwts_huaban {
+	background-position:0 -1872px;
+}
+.rwts_hi {
+	background-position:0 -416px;
+}
+.rwts_tsohu {
+	background-position:0 -520px;
+}
+.rwts_more {
+	background-position:0 0;
+}
+.rwt_share_wxShow_code>img {
+	width:100%;
+}
+.bks1 li{
+	list-style:disc;
+}
+@media screen and (max-width: 1200px){
+	.logo1{
+		width:100%!important;
+	}
+	.leftc img{
+		width:50%!important;
+		height:50%!important;
+	}
+	.logo2{display:none;}
+	.lujing{
+		width:90%;
+	}
+	.content{
+		width:90%;
+	}
+	.leftc{
+		float:none;
+		
+	}
+	.tu{display:none;}
+	
+	.rightc{
+		float:none;
+		width:100%;
+		margin-left:0px;
+	}
+	.footers{width:100%;}
+	.rheader{width:100%;}
+	.grjj{width:100%;}
+}
+@media screen and (max-width: 600px){
+.l3{width:95%;}
+.share{display:none;}
+.leftc img{
+		width:70%!important;
+		height:70%!important;
+	}
+}
+  
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo1">
+                <img src="http://bs.bnu.edu.cn/newweb/grzy/images/logo.png" alt="" class="l3" style="margin-top: 25px;float:left;">
+                <img src="http://bs.bnu.edu.cn/newweb/grzy/images/logo2.png" alt="" class="logo2">
+                <a href="http://bs.bnu.edu.cn/englishversion/facultyresearch/fulltimefaculty/azmsy/119703.html"><p>ENGLISH VERSION</p></a>
+            </div>
+        </div>
+        <div class="xian"></div>
+        <div class="tu"></div>
+        <div class="lujing">
+            <div class="lujings">
+                <a href="#">师资队伍</a>
+                 | 
+                <a href="#">企业管理系</a>
+            </div>
+        </div>
+        <div class="content">
+            <div class="leftc">
+                <img src="/Public/upload/2021/06/29/60daba4e8ffd5.jpg" alt="" width="270">
+            </div>
+            <div class="rightc">
+                <div class="rheader">
+                    <p class="xm">焦 豪</p>
+                    <p class="zhiw">教授、博士生导师</p>
+                    <p class="tel"><strong style="display:block;width:100px;float:left;">电话</strong>：010-58800662</p> 
+                 <p class="tel"><strong style="display:block;width:100px;float:left;">E-mail</strong>：haojiao@bnu.edu.cn</p>
+                 <p class="tel"><strong style="display:block;width:100px;float:left;">Office hour</strong>：周二下午</p>
+                 <p class="tel"><strong style="display:block;width:100px;float:left;">系所中心</strong>：企业管理系</p>
+              </div>
+			  <div class="grjj">
+                    <p class="jjh">个人简历</p>
+                    <div class="bks1" id="jjc"><div style="text-indent: 32px; top: 0px;"><div style="top: 0px;"><span style="font-family:Microsoft YaHei;font-size:18px;">﻿﻿北京师范大学经济与工商管理学院教授，博士生导师，企业管理系主任。国家优秀青年科学基金获得者、国家社科基金重大项目首席专家、爱思唯尔工商管理学科中国高被引学者。</span></div><div style="top: 0px;"><span style="font-family:Microsoft YaHei;font-size:18px;">研究方向主要为﻿﻿战略管理、创业管理、创新管理、公司治理，主持国家自然科学基金和教育部人文社科基金等多项国家级和省部级研究项目。</span></div><div style="top: 0px;"><span style="font-family: &quot;Microsoft YaHei&quot;;font-size:18px;">荣获教育部霍英东高等院校青年教师奖（创业和中小企业管理方向）、教育部高等学校科学研究优秀成果奖（人文社会科学）二等奖和三等奖、宝钢优秀教师奖、蒋一苇企业改革与发展学术基金优秀专著奖、全国商业科技进步奖一等奖、北京高校第十一届青年教师教学基本功比赛三等奖、北京高校青年教师社会调研优秀项目奖、第六届中国国际“互联网+”大学生创新创业大赛（北京赛区）优秀指导教师等奖项和荣誉。</span><br /></div></div></div>
+                    
+                </div>				<div class="grjj">
+                    <p class="jjh">研究领域</p>
+                    <div class="bks1"><div style="top: 0px;"><span style="font-size: 18px;"><span style="font-family:Microsoft YaHei;">战略管理、创业管理、创新管理、公司治理</span></span></div></div>
+                </div>				<div class="grjj">
+                    <p class="jjh">研究成果</p>
+                    <div class="bks1" id="jjc1"><div style="top: 0px;"><p></p><p style="margin: 0cm 0cm 0.0001pt; text-align: justify; line-height: 16pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"></p><p><strong><span style="font-size:12.0pt;">代表性论文</span></strong></p><p>&nbsp;<span style="font-size: 12pt; font-family: " times="" new="" roman="" serif="">(1)&nbsp;&nbsp; </span><strong><span style="font-size:12.0pt;font-family:'Times New Roman',serif;">Hao Jiao</span></strong><span style="font-size: 12pt; font-family: " times="" new="" roman="" serif="">, Tang Wang and Ilan Alon. 2021. Financial Wealth, Socioemotional Wealth, and Founder Exit: An Empirical Examination of Chinese IPOs. <strong><em>Entrepreneurship &amp; Regional Development</em></strong>.Vol. 33 No. 3-4. pp. 208-226.&nbsp;</span></p><p><span style="font-size:12.0pt;font-family:'Times New Roman',serif;">(2)&nbsp;&nbsp; </span><strong><span style="font-size:12.0pt;font-family:'Times New Roman',serif;">Hao Jiao,</span></strong><span style="font-size:12.0pt;font-family:'Times New Roman',serif;"> Jifeng Yang, Jianghua Zhou, and Jizhen Li. 2019.Commercial Partnerships and Collaborative Innovation in China: The Moderating Effect of Technological Uncertainty and Dynamic Capabilities. <strong><em>Journal of Knowledge Management.</em></strong> Vol. 23 No. 7, pp. 1429-1454. </span></p><p><span style="font-size:12.0pt;font-family:'Times New Roman',serif;">(3)&nbsp;&nbsp; </span><strong><span style="font-size:12.0pt;font-family:'Times New Roman',serif;">Hao</span></strong><span style="font-size:12.0pt;font-family:'Times New Roman',serif;"> <strong>Jiao</strong>,Yupei Wang, and Minjia Liu. 2019. The Effect of the Social Network of the Top Management Team on Innovation in Cultural and Creative Industries: A Study Based on Knowledge Network Embedding. <strong><em>Journal of Chinese Human ResourceManagement. </em></strong>Vol. 10 No. 1/2, pp. 4-18.</span></p><p><span style="font-size:12.0pt;font-family:'Times New Roman',serif;">(4)&nbsp;&nbsp; </span><strong><span style="font-size:12.0pt;font-family:'Times New Roman',serif;">Hao Jiao,</span></strong><span style="font-size:12.0pt;font-family:'Times New Roman',serif;"> Jianghua Zhou, Taishan Gao, and Xielin Liu. 2016.The More Interactions the Better? The Moderating Effect of the Interactionbetween Local Producers and Users of Knowledge on the relationship between R&amp;D Investment and Regional Innovation Systems. <strong><em>Technological Forecasting and Social Change</em></strong><em>.</em> Vol. 110 pp.13-20. </span></p><p><span style="font-size:12.0pt;font-family:'Times New Roman',serif;">(5)&nbsp;&nbsp; </span><strong><span style="font-size:12.0pt;font-family:'Times New Roman',serif;">Hao Jiao,</span></strong><span style="font-size:12.0pt;font-family:'Times New Roman',serif;"> Dan Yang, Minghua Gao, Peihong Xie and Yibing Wu.2016. Entrepreneurial ability and technological innovation: evidence from public listed companies in an emerging economy. <strong><em>Technological Forecasting and Social Change</em></strong><em>.</em> Vol. 112 pp.164-170. </span></p><p><span style="font-size:12.0pt;font-family:'Times New Roman',serif;">(6)&nbsp;&nbsp; </span><strong><span style="font-size:12.0pt;font-family:'Times New Roman',serif;">Hao Jiao</span></strong><span style="font-size:12.0pt;font-family:'Times New Roman',serif;">, Yu Cui, Qing Wang, and Shichun Xu. 2015. High Impact Strategy Research by Overseas Chinese Scholars in Leading Business Journals: 1991-2011. <strong><em>Asia Pacific Journal of Management</em></strong><em>.</em> Vol. 32 No. 4. pp. 1065-1082. </span></p><p><span style="font-size:12.0pt;font-family:'Times New Roman',serif;">(7)&nbsp;&nbsp; </span><strong><span style="font-size:12.0pt;font-family:'Times New Roman',serif;">Hao Jiao,</span></strong><span style="font-size:12.0pt;font-family:'Times New Roman',serif;"> Koo Chun Kwong, and Yu Cui. 2015. Legal Environment, Government Effectiveness and Firms' Innovation in China: Examiningthe Moderating Influence of Government Ownership. <strong><em>Technological Forecasting and Social Change</em></strong><em>.</em> Vol. 96 pp.15-24. </span></p><p><span style="font-size:12.0pt;font-family:'Times New Roman',serif;">(8)&nbsp;&nbsp; </span><strong><span style="font-size:12.0pt;font-family:'Times New Roman',serif;">Hao Jiao</span></strong><span style="font-size:12.0pt;font-family:'Times New Roman',serif;">, Koo Chun Kwong, Yu Cui, and Jin Chen. 2015. Who are More Sensitive to Procedural Fairness? The Impact of an Innovation Implementation Approach, Employees’ Status Concerns and Need for Control. <strong><em>Technology Analysis &amp; Strategic Management</em></strong>. Vol. 27 No. 6. pp. 709-721. </span></p><p><span style="font-size:12.0pt;font-family:'Times New Roman',serif;">(9)&nbsp;&nbsp;&nbsp;&nbsp;</span><strong><span style="font-size:12.0pt;font-family:'Times New Roman',serif;">Hao Jiao</span></strong><span style="font-size:12.0pt;font-family:'Times New Roman',serif;"> and Jin Chen. 2015. Critical review of: On Competition, Updated and Expanded Edition by Michael E. Porter. <strong><em>Technological Forecasting and Social Change</em></strong><em>.</em> Vol. 92</span><span style="font-size:12.0pt;font-family:'Times New Roman',serif;">pp. 359-361. </span></p><p><span style="font-size:12.0pt;font-family:'Times New Roman',serif;">(10)&nbsp;&nbsp;&nbsp; </span><span style="font-size:12.0pt;font-family:'Times New Roman',serif;">Yu Cui,<strong> HaoJiao* </strong>and Guozhen Zhao. 2021. A heuristic for all? A multiple needsapproach to fairness heuristic formation in digital transformation in Chinese work organizations.<strong><em> IEEE Transactions on Engineering Management</em></strong><em>.</em> </span><a href="https://doi.org/10.1108/JIC-10-2019-0236"><span style="font-size:12.0pt;font-family:'Times New Roman',serif;">https://doi.org/10.1109/TEM.2020.3045415</span></a><span style="font-size:12.0pt;font-family:'Times New Roman',serif;">. (<strong>*Corresponding author</strong>) </span></p><p><span style="font-size:12.0pt;font-family:'Times New Roman',serif;">(11)&nbsp;&nbsp;&nbsp; </span><span style="font-size:12.0pt;font-family:'Times New Roman',serif;">Yu Cui,<strong> Hao Jiao* </strong>and Jin Chen. 2020. Critical review of: Lead and disrupt: How tosolve the innovator's dilemma.<strong><em> Technological Forecasting and Social Change</em></strong><em>.</em></span><span style="font-size:12.0pt;font-family:'Times New Roman',serif;">Vol. 152 pp. 1-4. (<strong>* Corresponding author</strong>) </span></p><p><span style="font-size:12.0pt;font-family:'Times New Roman',serif;">(12)&nbsp;&nbsp;&nbsp; </span><span style="font-size:12.0pt;font-family:'Times New Roman',serif;">Yu Cui and&nbsp;<strong>Hao Jiao*</strong>. 2019. OrganizationalJustice and Management Trustworthiness during Organizational Change:Interactions of Benevolence, Integrity, and Managerial Approaches. <strong><em>Information Processing and Management.</em></strong> Vol. 56 No. 4. pp. 1526-1542. (<strong>* Corresponding author</strong>) </span></p><p><span style="font-size:12.0pt;font-family:'Times New Roman',serif;">(13)&nbsp;&nbsp;&nbsp; </span><span style="font-size:12.0pt;font-family:'Times New Roman',serif;">Tang Wang, <strong>HaoJiao*</strong>,Zhijian Xu and XiaomingYang<strong>.</strong> 2018. Entrepreneurial Finance Meets Government Investment at Initial Public Offering: The Role of Minority State Ownership. <strong><em>Corporate Governance: An International Review.</em></strong> Vol. 26 No. 2.pp. 97-117. (<strong>* Corresponding author</strong>)</span></p><p><span style="font-size:12.0pt;font-family:'Times New Roman',serif;">(14)&nbsp;&nbsp;&nbsp; </span><span style="font-size:12.0pt;font-family:'Times New Roman',serif;">Dan Yang, <strong>HaoJiao* </strong>and Roger Buckland. 2017. The Determinants of Financial Fraud in Chinese Firms: Does Corporate Governance as an Institutional Innovation Matter?<strong><em>Technological Forecasting and Social Change</em></strong><em>.</em></span><span style="font-size:12.0pt;font-family:'Times New Roman',serif;">Vol. 125 pp. 309-320. (<strong>* Corresponding author</strong>) </span></p><p><span style="font-size:12.0pt;font-family:'Times New Roman',serif;">(15)&nbsp;&nbsp;&nbsp; </span><span style="font-size:12.0pt;font-family:'Times New Roman',serif;">Jin Chen, <strong>HaoJiao* </strong>and Xiaoting Zhao. 2016. A knowledge-based theory of the firm:Managing Innovation in Biotechnology. <strong><em>Chinese Management Studies</em></strong><em>.</em> Vol. 10 No. 1. pp. 41-58. (<strong>* Corresponding author</strong>) </span></p><p><span style="font-size:12.0pt;font-family:'Times New Roman',serif;">(16)&nbsp;&nbsp;&nbsp; </span><span style="font-size:12.0pt;font-family:'Times New Roman',serif;">Guozhen Zhao<strong>*</strong>, Holly Chiu, <strong>Hao Jiao*</strong>, Mengyu Chengand Ying Chen. 2021. The Effect of Person-Team Conscientiousness Fit onKnowledge Sharing: The Moderating Role of Internal Team Environment, <strong><em>Group &amp; Organization Management</em></strong>. </span><a href="https://doi.org/10.1177/1059601120985663"><span style="font-size:12.0pt;font-family:'Times New Roman',serif;">https://doi.org/10.1177/1059601120985663</span></a><span style="font-size:12.0pt;font-family:'Times New Roman',serif;">. (<strong>*Corresponding author</strong>) </span></p><p><span style="font-size:12.0pt;font-family:'Times New Roman',serif;">(17)&nbsp;&nbsp;&nbsp; </span><span style="font-size:12.0pt;font-family:'Times New Roman',serif;">Jianghua Zhou, Jizhen Li,<strong> Hao Jiao*</strong>,Hang Qiu andZixu Liu<strong>.</strong> 2020. The More Funding theBetter? The Moderating Role of Knowledge Stock on the Effects of Different Government-funded Research Projects on Firm Innovation in Chinese Cultural and Creative Industries. <strong><em>Technovation</em></strong>. Vol. 92-93, pp. 1-13.(<strong>* Corresponding author</strong>) </span></p><p><span style="font-size:12.0pt;font-family:'Times New Roman',serif;">(18)&nbsp;&nbsp;&nbsp; </span><span style="font-size:12.0pt;font-family:'Times New Roman',serif;">Tachia Chin, Genyi Li, <strong>Hao Jiao*</strong>, Frederick Addo, and Jawahar Jim. 2019. Careersustainability during manufacturing innovation: A review, a conceptual framework and future research agenda. <strong><em>Career Development International.</em></strong></span><span style="font-size:12.0pt;font-family:'Times New Roman',serif;">Vol. 24 No. 6, pp. 509-528.(<strong>* Corresponding author</strong>) </span></p><p><span style="font-size:12.0pt;font-family:'Times New Roman',serif;">(19)&nbsp;&nbsp;&nbsp; </span><span style="font-size:12.0pt;font-family:'Times New Roman',serif;">Hang Wu, Jin Chen, and <strong>Hao Jiao*</strong>. 2016. Dynamic Capabilities as a Mediator Linking International Diversification and Innovation Performance of Firms in an Emerging Economy.<strong><em> Journal of Business Research</em></strong><em>.</em> Vol. 69 No. 8. pp. 2678-2686. (<strong>* Corresponding author</strong>) </span></p><p><span style="font-size:12.0pt;font-family:'Times New Roman',serif;">(20)&nbsp;&nbsp;&nbsp; </span><span style="font-size:12.0pt;font-family:'Times New Roman',serif;">Yunxia Zhu, Alison Konrad, and <strong>Hao Jiao*</strong>. 2016. Violation and Activation of Gender Expectations:Do Chinese Managerial Women Face a Narrow Band of Acceptable Career <em>Guanxi </em>Strategies?<strong><em> Asia Pacific Journal of Management</em></strong><em>. </em>Vol. 33 No. 1.pp. 53-86. (<strong>* Corresponding author</strong>) </span></p><p><span style="font-size:12.0pt;font-family:'Times New Roman',serif;">(21)&nbsp;&nbsp;&nbsp; </span><span style="font-size:12.0pt;font-family:'Times New Roman',serif;">Yu Cui, Jie Jiao and <strong>Hao Jiao*</strong><em>. </em>2016.Technological Innovation in Brazil, Russia, India, China and South Africa (BRICS): An Organizational Ecology Perspective. <strong><em>Technological Forecasting and Social Change</em></strong><em>.</em> Vol. 107 pp.28-36. (<strong>* Corresponding author</strong>) </span></p><p><span style="font-size:12.0pt;font-family:'Times New Roman',serif;">(22)&nbsp;&nbsp;&nbsp; </span><span style="font-size:12.0pt;font-family:'Times New Roman',serif;">Tang Wang, Dirk Libaers and <strong>Hao Jiao*</strong><em>. </em>2015. Opening the Black Box of Upper Echelons in China: TMT Attributes and Strategic Flexibility. <strong><em>Journal of Product Innovation Management</em></strong><em>.</em>Vol. 32 No. 5. pp. 685-703. (<strong>*Corresponding author</strong>) </span></p><p><span style="font-size:12.0pt;font-family:'Times New Roman',serif;">(23)&nbsp;&nbsp;&nbsp; </span><span style="font-size:12.0pt;font-family:'Times New Roman',serif;">Yanli Fu, Ruiming Liu, Jifeng Yang, <strong>Hao Jiao*</strong>, andYuke Jin. 2020.“Lean in”: The Moderating Effect of FemaleOwnership on the Relationship between Human Capital and OrganizationalInnovation in China. <strong><em>Journal of Intellectual Capital. </em></strong></span><a href="https://doi.org/10.1108/JIC-10-2019-0236"><span style="font-size:12.0pt;font-family:'Times New Roman',serif;">https://doi.org/10.1108/JIC-10-2019-0236</span></a><span style="font-size:12.0pt;font-family:'Times New Roman',serif;">. (<strong>* Corresponding author</strong>) </span></p><p><span style="font-size:12.0pt;font-family:'Times New Roman',serif;">(24)&nbsp;&nbsp;&nbsp; </span><span style="font-size:12.0pt;font-family:'Times New Roman',serif;">Yuan Tian, Yupei Wang, Xuemei Xie, Jie Jiao and <strong>Hao Jiao*.</strong> 2019. The impact of business-government relations on firms' innovation: Evidence from the Chinese manufacturing industry. <strong><em>Technological Forecasting and Social Change</em></strong><em>.</em></span><span style="font-size:12.0pt;font-family:'Times New Roman',serif;">Vol. 143 pp. 1-8. (<strong>* Corresponding author</strong>) </span></p><p><span style="font-size:12.0pt;font-family:'Times New Roman',serif;">(25)&nbsp;&nbsp;&nbsp; </span><span style="font-size:12.0pt;font-family:'Times New Roman',serif;">Clive Muir,&nbsp;<strong>Hao Jiao</strong> and Yunxia Zhu. Talking Strategy: Does it Make Senior ManagersVulnerable? <strong><em>Academy of Management Perspectives</em></strong><em>. </em>Vol. 29 No. 2. pp. 1-4. </span></p><p><span style="font-size:12.0pt;font-family:'Times New Roman',serif;">(26)&nbsp;&nbsp;&nbsp; </span><span style="font-size:12.0pt;font-family:'Times New Roman',serif;">Yang Liu, Ying Ying, and <strong>Hao Jiao</strong>. 2021. Status and Digital Innovation: A Middle-StatusConformity Perspective.<strong><em> Technological Forecasting and Social Change</em></strong><em>.</em> </span></p><p><span style="font-size:12.0pt;font-family:'Times New Roman',serif;">(27)&nbsp;&nbsp;&nbsp; </span><span style="font-size:12.0pt;font-family:'Times New Roman',serif;">Caleb Tse, Chi Kin Bennet Yim, Eden Yin, Feng Wang,and <strong>Hao Jiao</strong>. 2021. R&amp;D Internationalization and Subsidiary Innovation Performance: The Moderating Effect of Local Government Support and Entry Mode.<strong><em> Technological Forecasting and Social Change</em></strong><em>.</em></span><span style="font-size:12.0pt;font-family:'Times New Roman',serif;">https://doi.org/10.1016/j.techfore.2021.120603</span><span style="font-size:12.0pt;font-family:'Times New Roman',serif;">. </span></p><p><span style="font-size:12.0pt;font-family:'Times New Roman',serif;">(28)&nbsp;&nbsp;&nbsp; </span><span style="font-size:12.0pt;font-family:'Times New Roman',serif;">Tachia Chin, <strong>HaoJiao</strong>, and Jawahar Jim. 2019. Career sustainability to innovation in digitalmanufacturing. <strong><em>Career Development International. </em></strong>Vol. 24 No. 5. pp. 397-403.</span></p><p><span style="font-size:12.0pt;font-family:'Times New Roman',serif;">(29)&nbsp;&nbsp;&nbsp; </span><span style="font-size:12.0pt;font-family:'Times New Roman',serif;">Xuemei Xie, Hongwei Wang and <strong>Hao Jiao.</strong> 2019. Non-R&amp;D Innovation and Firms’ New ProductPerformance: The Joint Moderating Effect of R&amp;D Intensity and Network Embeddedness. <strong><em>R&amp;D Management</em></strong>. Vol. 49 No. 5. pp. 748-761.</span></p><p><span style="font-size:12.0pt;font-family:'Times New Roman',serif;">(30)&nbsp;&nbsp;&nbsp; </span><span style="font-size:12.0pt;font-family:'Times New Roman',serif;">Feihu Zheng,<strong>Hao Jiao</strong>, and Hongbo Cai. 2018. Reappraisal of Outbound Open Innovationunder the policy of China’s ‘Market for Technology’. <strong><em>Technology Analysis &amp;Strategic Management</em></strong>. Vol. 30 No. 1. pp. 1-14. </span></p><p><span style="font-size:12.0pt;font-family:'Times New Roman',serif;">(31)&nbsp;&nbsp;&nbsp; </span><span style="font-size:12.0pt;font-family:'Times New Roman',serif;">Chaoqun Zhang, Jingjing Guo, Xiaobo Wu, and <strong>Hao Jiao. </strong>2018.Linking user interaction and new venture growth: the mediatingrole of new product development. <strong><em>Asian Journal of Technology Innovation</em></strong>.Vol. 26 No.2. pp. 146-171. </span></p><p><span style="font-family: " microsoft="" yahei=""><span style="font-size:16px;">(32)&nbsp;&nbsp;&nbsp; <strong>焦豪</strong>，杨季枫，应瑛．动态能力研究述评及开展中国情境化研究的建议[J]．《<strong>管理世界</strong>》，2021年第5期，pp191-210。</span></span></p><p><span style="font-family: " times="" new="" roman="" serif="" font-size:="" 16px=""><span style="font-family: " microsoft="" yahei=""><span style="font-size:16px;">(33) 刘瑞明，<strong>焦豪</strong>*，石阳，毛宇．高校属地招生弱化政策改革与生源质量提升[J]．《<strong>经济研究</strong>》，2021年第7期，pp160-176。(* 通讯作者)</span></span></span></p><p><span style="font-family: " times="" new="" roman="" serif="" font-size:="" 16px=""><span style="font-family: " microsoft="" yahei=""><span style="font-size:16px;"><span style="font-family: " times="" new="" roman="" serif="" font-size:="" 16px="">(34)&nbsp;</span>李倩，<strong>焦豪*</strong>．高管团队内薪酬差距与企业绩效：顾客需求不确定性与企业成长性的双重视角[J]．《<strong>经济管理</strong>》，2021年第6期，pp53-68。(* 通讯作者)</span></span></span></p><p><span style="font-family: " times="" new="" roman="" serif="" font-size:="" 16px=""><span style="font-family: " microsoft="" yahei=""><span style="font-size:16px;"><span times="" new="" roman="" serif="" font-size:="" 16px="">(35)&nbsp;&nbsp;</span><strong>焦豪</strong>，杨季枫．政治策略、市场策略与企业成长价值——基于世界银行的企业调查数据[J]．《<strong>经济管理</strong>》，2019年第2期，pp5-19。（被中国人民大学复印报刊资料《企业管理研究》2019年第5期全文转载）</span></span></span></p><p><span style="font-family: " times="" new="" roman="" serif="" font-size:="" 16px=""><span style="font-family: " microsoft="" yahei=""><span style="font-size:16px;">(36)&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://glsj.cbpt.cnki.net/EditorB2N/UserManagement/ExpandMenu/UserInfoDetail.aspx?userId=jiaohao" style=""><strong><span style="color: windowtext;">焦豪</span></strong></a>，赖德胜．经济管理学科微观数据库建设与利用：国际视野和中国经验[J]．《<strong>管理世界</strong>》，2018年第3期，pp167-171。<br /></span></span></span></p><p><span style="font-family: " microsoft="" yahei=""><span style="font-size:16px;">(37)&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://glsj.cbpt.cnki.net/EditorB2N/UserManagement/ExpandMenu/UserInfoDetail.aspx?userId=jiaohao"><strong><span style="color: windowtext;">焦豪</span></strong></a>，<a href="http://glsj.cbpt.cnki.net/EditorB2N/UserManagement/ExpandMenu/UserInfoDetail.aspx?userId=jiaojie"><span style="color: windowtext;">焦捷</span></a>，<a href="http://glsj.cbpt.cnki.net/EditorB2N/UserManagement/ExpandMenu/UserInfoDetail.aspx?userId=liuruiming"><span style="color: windowtext;">刘瑞明</span></a>．政府质量、公司治理结构与投资决策：基于世界银行企业调查数据的经验研究[J]．《<strong>管理世界</strong>》，2017年第10期，pp66-78。（被中国人民大学复印报刊资料《企业管理研究》2018年第2期全文转载）</span></span></p><p><span style="font-family: " microsoft="" yahei=""><span style="font-size:16px;">(38)&nbsp;&nbsp;&nbsp; 刘瑞明，杨冰岩，<strong>焦豪*</strong>．短视认知偏差、公共产品提供与社会道德救助——应该如何重建我们的社会秩序？[J]．《<strong>管理世界</strong>》，2018年第11期，pp31-56。(<strong>* 通讯作者</strong>)</span></span></p><p><span style="font-family: " microsoft="" yahei=""><span style="font-size:16px;">(39)&nbsp;&nbsp;&nbsp; 罗仲伟，任国良，<strong>焦豪</strong>，蔡宏波，许扬帆．动态能力、技术范式转变与创新战略：基于腾讯微信“整合”与“迭代”微创新的纵向案例分析[J]．《<strong>管理世界</strong>》，2014年第8期，pp152-168。（被中国人民大学复印报刊资料《企业管理研究》2015年第1期全文转载）</span></span></p><p><span style="font-family: " microsoft="" yahei=""><span style="font-size:16px;"><span style="font-family: " times="" new="" roman="" serif="" font-size:="" 16px="">(40)&nbsp; &nbsp;</span><strong>焦豪</strong>，王情．海外华人学者战略管理学研究现状评估——基于1991-2011年间的文献计量分析[J]．《<strong>经济管理</strong>》，2013年第8期，pp189-199。</span></span></p><p><span style="font-family: " microsoft="" yahei=""><span style="font-size:16px;"><span times="" new="" roman="" serif="">(41)&nbsp;&nbsp;&nbsp; </span><strong>焦豪</strong>．双元型组织竞争优势的构建路径：基于动态能力理论的实证研究<span times="" new="" roman="" serif="">[J]</span>．《<strong>管理世界</strong>》，<span times="" new="" roman="" serif="">2011</span>年第<span times="" new="" roman="" serif="">11</span>期，<span times="" new="" roman="" serif="">pp76-91</span>。<br /></span></span></p><p><span style="font-family: " microsoft="" yahei=""><span style="font-size:16px;">(42)&nbsp;&nbsp;&nbsp; <strong>焦豪</strong>，魏江，崔瑜．企业动态能力构建路径分析：基于创业导向和组织学习的视角[J]．《<strong>管理世界</strong>》，2008年第4期，pp91-106。</span></span></p><p><span style="font-size:16px;"><span style="font-family: " microsoft="" yahei=""><span times="" new="" roman="" serif="" font-size:="" 16px="" style="">(43)&nbsp;&nbsp;&nbsp;<strong>&nbsp;</strong></span><strong>焦豪</strong>，邬爱其．国外经典社会创业过程模型评介与创新[J]．《<strong>外国经济与管理</strong>》，2008年第3期，pp16-28。</span><br /><span style="font-family: Arial, Helvetica, sans-serif;">&nbsp;</span><br /></span></p><p><strong><span style="font-size:16px;">代表性著作</span></strong></p><p><span style="font-family: " microsoft="" yahei=""><span style="font-size:16px;">(1)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;陈劲、焦豪，《战略管理：打造组织动态能力》. 北京大学出版社，2021年。</span></span></p><p><span style="font-family: " microsoft="" yahei=""><span style="font-size:16px;">(2)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;焦豪、陈劲&nbsp;译，（英）保罗·特罗特（Pall Trott）等著，《创新管理和新产品研发》. 机械工业出版社，2020年。</span></span></p><p><span style="font-family: " microsoft="" yahei=""><span style="font-size:16px;">(3)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;焦豪&nbsp;译、魏江&nbsp;校，（美）迈克尔·A·希特（Michael A. Hitt）等著，《战略管理：竞争与全球化（第12版）》. 机械工业出版社，2018年。</span></span></p><p><span style="font-family: " microsoft="" yahei=""><span style="font-size:16px;">(4)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;焦豪&nbsp;译、魏江&nbsp;校，（美）迈克尔·A·希特（Michael A. Hitt）等著，《战略管理：竞争与全球化（第11版）》. 机械工业出版社，2016年。</span></span></p><p><span style="font-family: " microsoft="" yahei=""><span style="font-size:16px;">(5)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;焦豪．《企业动态能力论：企业家的创新视角》. 北京师范大学出版社，2013年。</span></span></p><p><span style="font-size:16px;">&nbsp;</span></p><br /><br /></div></div>
+                    
+                </div>				<div class="grjj">
+                    <p class="jjh">研究课题</p>
+                  
+                    <div class="bks1"><div style="top: 0px;"><span style="font-family:Microsoft YaHei;">﻿﻿<span style="line-height: 24px; text-indent: 32px; font-size: 16px;">主持国家自然科学基金项目（</span><span style="line-height: 24px; text-indent: 32px; font-size: 16px;">4</span><span style="line-height: 24px; text-indent: 32px; font-size: 16px;">项）、国家社科基金重大项目、教育部人文社科项目、北京哲学社会科学重点项目等。</span></span></div></div>
+                    
+                </div>				<div class="grjj">
+                    <p class="jjh">学生情况</p>
+                    <div class="bks1"><div style="top: 0px;"><span style="font-family:Microsoft YaHei;">﻿﻿<span style=""><span style="line-height: 24px; text-indent: 32px; font-size: 16px;">担任博士后合作导师、博士生导师、硕士生导师（学术型、专业学位</span><span style="line-height: 24px; text-indent: 32px; font-size: 16px;">MBA和MIB</span><span style="line-height: 24px; text-indent: 32px; font-size: 16px;">）、励耘本科导师和本科新生导师，<span style="font-size: 16px; text-indent: 32px;">指导博士后、博<span style="font-size: 16px; text-indent: 32px;">硕</span>士研究生及本科生</span>在<span style="font-size: 16px;">《</span><span style="font-size: 16px; "><strong>管理世界</strong></span><span style="font-size: 16px;">》《<strong>管理科学学报</strong>》《<strong>中国工业经济</strong>》《<strong>经济管理</strong>》及<strong><em>Technovation</em></strong>等刊物发表学术研究成果，</span></span></span><span style="line-height: 24px; text-indent: 32px; font-size: 16px;">欢迎报考与咨询：</span><span style="line-height: 24px; text-indent: 32px; font-size: 16px;"><a><span style="color:#000000;">haojiao@bnu.edu.cn</span></a></span><span style="line-height: 24px; text-indent: 32px; font-size: 16px;">。</span></span></div></div>
+                    
+                </div>				<div class="grjj">
+                    <p class="jjh">教授课程</p>
+                    <div class="bks1"><div style="top: 0px;"><div style="text-indent: 32px; top: 0px;"><span style="font-size: 16px;"><span style="font-family:Microsoft YaHei;">战略管理（Strategic Management）</span></span></div><div style="text-indent: 32px; top: 0px;"><span style="font-size: 16px;"><span style="font-family:Microsoft YaHei;">创新管理（Innovation Management）</span></span></div><div style="text-indent: 32px; top: 0px;"><span style="font-size: 16px;"><span style="font-family:Microsoft YaHei;">人力资源管理（Human Resource Management）</span></span></div><div style="text-indent: 32px; top: 0px;"><span style="font-size: 16px;"><span style="font-family:Microsoft YaHei;">国际管理（International Management）</span></span></div><div style="text-indent: 32px; top: 0px;"><span style="font-family:Microsoft YaHei;"><span style="font-size: 16px;">创业管理（Entrepreneurship Management）</span><br /></span></div><div style="text-indent: 32px; top: 0px;"><span style="font-family:Microsoft YaHei;"><span style="font-size: 16px;">管理学前沿文献导读（Frontier of Management and Organization）</span><br /></span></div><div style="text-indent: 32px; top: 0px;"><span style="font-family:Microsoft YaHei;"><span style="font-size: 16px;">比较管理研究（Comparative Study in Management ）</span><br /></span></div><div style="text-indent: 32px; top: 0px;"><span style="font-size: 16px;"><span style="font-family:Microsoft YaHei;">社会创业与社会企业（Social Entrepreneurship &amp; Social Enterprise）</span></span><br /></div></div></div>
+                    
+                </div>            </div>
+        </div>
+         <footer style="overflow: hidden;">
+            <div class="footers">
+                <div class="footersl">
+                    <img src="http://bs.bnu.edu.cn/newweb/images/ewm.jpg" alt="" class="imgewm">
+                    <div class="footerxx">
+                        <p>Copyright © 2020 北京师范大学经济与工商管理学院</p>
+                        <p><i class="fas fa-map-marker-alt"></i> 地址：北京市新街口外大街19号</p>
+                        <p><i class="fas fa-portrait"></i> 传真：010-58801867</p>
+                        <p><i class="fas fa-phone"></i> 电话：010-58801867</p>
+                        <p><i class="fas fa-envelope"></i> 邮编：100875</p>
+                    </div>
+                </div>
+                <img src="http://bs.bnu.edu.cn/newweb/images/db.png" alt="" width="140" class="dbimg">
+                <img src="http://bs.bnu.edu.cn/newweb/images/yx.png" alt="" class="yuanxun">
+            </div>
+        </footer>
+    </div>
+	<div class="share">
+		  <div id="appgame-leftside-share">
+	        <div class="appgame-leftside-share rwt_share" id="rwt_share">
+	         
+	        <!--<a class="appgame-leftside-search" data-cmd="search" title="search"  href="javascript:void(0);" onclick="opens('id')">search</a> --> <!--<div class="searchs" id="id">
+	         <form name="dataForm" action="/cms/search/searchResults.jsp" target="_blank" method="post" accept-Charset="utf-8"  onsubmit="document.charset='utf-8';">
+			        	<p>
+			        		<input name="siteID" size="4" value="127" type = "hidden">
+			        		<input type="text" name="query" id="search" class="searchInput" value="输入搜索词">
+			        		<button type="submit"></button>
+			        	</p>
+			        	</form>
+			        </div>-->
+			        <!-- <a class="appgame-leftside-weixin" data-cmd="weixin" title="">微信</a> -->
+                    
+			        <!-- <a class="appgame-leftside-qzone" data-cmd="qzone" title="">qq空间</a>
+			        
+			        <a class="appgame-leftside-tsina" data-cmd="tsina" title="">微博</a> -->			    </div>
+			        <a class="appgame-leftside-top" onclick="gotoTPoint()"></a>			</div>
+			        
+		</div>
+</body>
+<script src="http://gh.bnu.edu.cn/js/jquery-1.9.0.min.js"></script>
+<script src="http://gh.bnu.edu.cn/js/share.min.js"></script>
+<script>
+    var dj=document.getElementById('dianji');
+    var jjc=document.getElementById('jjc');
+    var dj1=document.getElementById('dianji1');
+    var jjc1=document.getElementById('jjc1');
+    var a=1;
+    function zhedie(m,n){
+        m.onclick=function(){
+            if(a==1){
+                n.className='jjc';
+                m.className='dianji1'
+                a=0;
+            }else{
+                n.className='jjc1';
+                m.className='dianji'
+                a=1;
+            }
+        }
+    }
+    zhedie(dj,jjc);
+    zhedie(dj1,jjc1);
+	
+	
+</script>
+<script>
+
+	
+	
+    
+
+    /*回到顶部*/
+	$(function(){
+	 	$(window).resize(function(){
+						var h = $(window).height();
+						$('.goTop').css('top',h-60);
+						$(window).scroll(function(){				
+							var scrollTop = $(document).scrollTop();					  
+							$('.goTop').stop().animate({
+								top: h + scrollTop-60
+							},300);
+						});
+		}).resize();
+		});
+	//gotop
+
+			$('.goTop').click(function(){
+
+				$('body,html').stop().animate({scrollTop:0});
+
+				return false;
+
+			});
+	
+	function gotoTPoint(){
+		$("html,body").animate({scrollTop:0},500);
+	}
+</script>
+</html>

@@ -1,0 +1,1025 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><script type="text/javascript">(window.NREUM||(NREUM={})).init={ajax:{deny_list:["bam.nr-data.net"]}};(window.NREUM||(NREUM={})).loader_config={licenseKey:"ab0374a39e",applicationID:"39297557"};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var i=e[n]={exports:{}};t[n][0].call(i.exports,function(e){var i=t[n][1][e];return r(i||e)},i,i.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(t,e,n){function r(){}function i(t,e,n,r){return function(){return s.recordSupportability("API/"+e+"/called"),o(t+e,[u.now()].concat(c(arguments)),n?null:this,r),n?void 0:this}}var o=t("handle"),a=t(9),c=t(10),f=t("ee").get("tracer"),u=t("loader"),s=t(4),d=NREUM;"undefined"==typeof window.newrelic&&(newrelic=d);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",v=l+"ixn-";a(p,function(t,e){d[e]=i(l,e,!0,"api")}),d.addPageAction=i(l,"addPageAction",!0),d.setCurrentRouteName=i(l,"routeName",!0),e.exports=newrelic,d.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(t,e){var n={},r=this,i="function"==typeof e;return o(v+"tracer",[u.now(),t,n],r),function(){if(f.emit((i?"":"no-")+"fn-start",[u.now(),r,i],n),i)try{return e.apply(this,arguments)}catch(t){throw f.emit("fn-err",[arguments,this,t],n),t}finally{f.emit("fn-end",[u.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){m[e]=i(v,e)}),newrelic.noticeError=function(t,e){"string"==typeof t&&(t=new Error(t)),s.recordSupportability("API/noticeError/called"),o("err",[t,u.now(),!1,e])}},{}],2:[function(t,e,n){function r(t){if(NREUM.init){for(var e=NREUM.init,n=t.split("."),r=0;r<n.length-1;r++)if(e=e[n[r]],"object"!=typeof e)return;return e=e[n[n.length-1]]}}e.exports={getConfiguration:r}},{}],3:[function(t,e,n){var r=!1;try{var i=Object.defineProperty({},"passive",{get:function(){r=!0}});window.addEventListener("testPassive",null,i),window.removeEventListener("testPassive",null,i)}catch(o){}e.exports=function(t){return r?{passive:!0,capture:!!t}:!!t}},{}],4:[function(t,e,n){function r(t,e){var n=[a,t,{name:t},e];return o("storeMetric",n,null,"api"),n}function i(t,e){var n=[c,t,{name:t},e];return o("storeEventMetrics",n,null,"api"),n}var o=t("handle"),a="sm",c="cm";e.exports={constants:{SUPPORTABILITY_METRIC:a,CUSTOM_METRIC:c},recordSupportability:r,recordCustom:i}},{}],5:[function(t,e,n){function r(){return c.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,c=t(11);e.exports=r,e.exports.offset=a,e.exports.getLastTimestamp=i},{}],6:[function(t,e,n){function r(t,e){var n=t.getEntries();n.forEach(function(t){"first-paint"===t.name?l("timing",["fp",Math.floor(t.startTime)]):"first-contentful-paint"===t.name&&l("timing",["fcp",Math.floor(t.startTime)])})}function i(t,e){var n=t.getEntries();if(n.length>0){var r=n[n.length-1];if(u&&u<r.startTime)return;var i=[r],o=a({});o&&i.push(o),l("lcp",i)}}function o(t){t.getEntries().forEach(function(t){t.hadRecentInput||l("cls",[t])})}function a(t){var e=navigator.connection||navigator.mozConnection||navigator.webkitConnection;if(e)return e.type&&(t["net-type"]=e.type),e.effectiveType&&(t["net-etype"]=e.effectiveType),e.rtt&&(t["net-rtt"]=e.rtt),e.downlink&&(t["net-dlink"]=e.downlink),t}function c(t){if(t instanceof y&&!w){var e=Math.round(t.timeStamp),n={type:t.type};a(n),e<=v.now()?n.fid=v.now()-e:e>v.offset&&e<=Date.now()?(e-=v.offset,n.fid=v.now()-e):e=v.now(),w=!0,l("timing",["fi",e,n])}}function f(t){"hidden"===t&&(u=v.now(),l("pageHide",[u]))}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var u,s,d,p,l=t("handle"),v=t("loader"),m=t(8),g=t(3),y=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){s=new PerformanceObserver(r);try{s.observe({entryTypes:["paint"]})}catch(h){}d=new PerformanceObserver(i);try{d.observe({entryTypes:["largest-contentful-paint"]})}catch(h){}p=new PerformanceObserver(o);try{p.observe({type:"layout-shift",buffered:!0})}catch(h){}}if("addEventListener"in document){var w=!1,b=["click","keydown","mousedown","pointerdown","touchstart"];b.forEach(function(t){document.addEventListener(t,c,g(!1))})}m(f)}},{}],7:[function(t,e,n){function r(t,e){if(!i)return!1;if(t!==i)return!1;if(!e)return!0;if(!o)return!1;for(var n=o.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var c=navigator.userAgent,f=c.match(a);f&&c.indexOf("Chrome")===-1&&c.indexOf("Chromium")===-1&&(i="Safari",o=f[1])}e.exports={agent:i,version:o,match:r}},{}],8:[function(t,e,n){function r(t){function e(){t(c&&document[c]?document[c]:document[o]?"hidden":"visible")}"addEventListener"in document&&a&&document.addEventListener(a,e,i(!1))}var i=t(3);e.exports=r;var o,a,c;"undefined"!=typeof document.hidden?(o="hidden",a="visibilitychange",c="visibilityState"):"undefined"!=typeof document.msHidden?(o="msHidden",a="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(o="webkitHidden",a="webkitvisibilitychange",c="webkitVisibilityState")},{}],9:[function(t,e,n){function r(t,e){var n=[],r="",o=0;for(r in t)i.call(t,r)&&(n[o]=e(r,t[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],10:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,i=n-e||0,o=Array(i<0?0:i);++r<i;)o[r]=t[e+r];return o}e.exports=r},{}],11:[function(t,e,n){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(t,e,n){function r(){}function i(t){function e(t){return t&&t instanceof r?t:t?u(t,f,a):a()}function n(n,r,i,o,a){if(a!==!1&&(a=!0),!l.aborted||o){t&&a&&t(n,r,i);for(var c=e(i),f=m(n),u=f.length,s=0;s<u;s++)f[s].apply(c,r);var p=d[w[n]];return p&&p.push([b,n,r,c]),c}}function o(t,e){h[t]=m(t).concat(e)}function v(t,e){var n=h[t];if(n)for(var r=0;r<n.length;r++)n[r]===e&&n.splice(r,1)}function m(t){return h[t]||[]}function g(t){return p[t]=p[t]||i(n)}function y(t,e){l.aborted||s(t,function(t,n){e=e||"feature",w[n]=e,e in d||(d[e]=[])})}var h={},w={},b={on:o,addEventListener:o,removeEventListener:v,emit:n,get:g,listeners:m,context:e,buffer:y,abort:c,aborted:!1};return b}function o(t){return u(t,f,a)}function a(){return new r}function c(){(d.api||d.feature)&&(l.aborted=!0,d=l.backlog={})}var f="nr@context",u=t("gos"),s=t(9),d={},p={},l=e.exports=i();e.exports.getOrSetContext=o,l.backlog=d},{}],gos:[function(t,e,n){function r(t,e,n){if(i.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return t[e]=r,r}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){i.buffer([t],r),i.emit(t,e,n)}var i=t("ee").get("handle");e.exports=r,r.ee=i},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,o,function(){return i++})}var i=1,o="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!M++){var t=T.info=NREUM.info,e=m.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&e))return u.abort();f(x,function(e,n){t[e]||(t[e]=n)});var n=a();c("mark",["onload",n+T.offset],null,"api"),c("timing",["load",n]);var r=m.createElement("script");0===t.agent.indexOf("http://")||0===t.agent.indexOf("https://")?r.src=t.agent:r.src=l+"://"+t.agent,e.parentNode.insertBefore(r,e)}}function i(){"complete"===m.readyState&&o()}function o(){c("mark",["domContent",a()+T.offset],null,"api")}var a=t(5),c=t("handle"),f=t(9),u=t("ee"),s=t(7),d=t(2),p=t(3),l=d.getConfiguration("ssl")===!1?"http":"https",v=window,m=v.document,g="addEventListener",y="attachEvent",h=v.XMLHttpRequest,w=h&&h.prototype,b=!1;NREUM.o={ST:setTimeout,SI:v.setImmediate,CT:clearTimeout,XHR:h,REQ:v.Request,EV:v.Event,PR:v.Promise,MO:v.MutationObserver};var E=""+location,x={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1216.min.js"},O=h&&w&&w[g]&&!/CriOS/.test(navigator.userAgent),T=e.exports={offset:a.getLastTimestamp(),now:a,origin:E,features:{},xhrWrappable:O,userAgent:s,disabled:b};if(!b){t(1),t(6),m[g]?(m[g]("DOMContentLoaded",o,p(!1)),v[g]("load",r,p(!1))):(m[y]("onreadystatechange",i),v[y]("onload",r)),c("mark",["firstbyte",a.getLastTimestamp()],null,"api");var M=0}},{}],"wrap-function":[function(t,e,n){function r(t,e){function n(e,n,r,f,u){function nrWrapper(){var o,a,s,p;try{a=this,o=d(arguments),s="function"==typeof r?r(o,a):r||{}}catch(l){i([l,"",[o,a,f],s],t)}c(n+"start",[o,a,f],s,u);try{return p=e.apply(a,o)}catch(v){throw c(n+"err",[o,a,v],s,u),v}finally{c(n+"end",[o,a,p],s,u)}}return a(e)?e:(n||(n=""),nrWrapper[p]=e,o(e,nrWrapper,t),nrWrapper)}function r(t,e,r,i,o){r||(r="");var c,f,u,s="-"===r.charAt(0);for(u=0;u<e.length;u++)f=e[u],c=t[f],a(c)||(t[f]=n(c,s?f+r:r,i,f,o))}function c(n,r,o,a){if(!v||e){var c=v;v=!0;try{t.emit(n,r,o,e,a)}catch(f){i([f,n,r,o],t)}v=c}}return t||(t=s),n.inPlace=r,n.flag=p,n}function i(t,e){e||(e=s);try{e.emit("internal-error",t)}catch(n){}}function o(t,e,n){if(Object.defineProperty&&Object.keys)try{var r=Object.keys(t);return r.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(o){i([o],n)}for(var a in t)l.call(t,a)&&(e[a]=t[a]);return e}function a(t){return!(t&&t instanceof Function&&t.apply&&!t[p])}function c(t,e){var n=e(t);return n[p]=t,o(t,n,s),n}function f(t,e,n){var r=t[e];t[e]=c(r,n)}function u(){for(var t=arguments.length,e=new Array(t),n=0;n<t;++n)e[n]=arguments[n];return e}var s=t("ee"),d=t(10),p="nr@original",l=Object.prototype.hasOwnProperty,v=!1;e.exports=r,e.exports.wrapFunction=c,e.exports.wrapInPlace=f,e.exports.argsToArray=u},{}]},{},["loader"]);</script>
+        <title>MECHE PEOPLE: Michael Triantafyllou | MIT Department of Mechanical Engineering</title>
+        <meta name="description" content="MIT's Department of Mechanical Engineering (MechE) offers a world-class education that combines thorough analysis with hands-on discovery. One of the original six courses offered when MIT was founded in 1865, MechE's faculty and students conduct research that pushes boundaries and provides creative solutions for the world's problems.">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1">
+        <!--[if lt IE 9]>
+            <link href='http://fonts.googleapis.com/css?family=Rajdhani:300' rel='stylesheet' type='text/css' data-norem>
+            <link href='http://fonts.googleapis.com/css?family=Rajdhani:400' rel='stylesheet' type='text/css' data-norem>
+            <link href='http://fonts.googleapis.com/css?family=Rajdhani:500' rel='stylesheet' type='text/css' data-norem>
+            <link href='http://fonts.googleapis.com/css?family=Rajdhani:600' rel='stylesheet' type='text/css' data-norem>
+            <link href='http://fonts.googleapis.com/css?family=Rajdhani:700' rel='stylesheet' type='text/css' data-norem>
+            <link href='http://fonts.googleapis.com/css?family=Rajdhani:300' rel='stylesheet' type='text/css' data-norem>
+            <link href='http://fonts.googleapis.com/css?family=Rajdhani:300italic' rel='stylesheet' type='text/css' data-norem>
+            <link href='http://fonts.googleapis.com/css?family=Rajdhani:400' rel='stylesheet' type='text/css' data-norem>
+            <link href='http://fonts.googleapis.com/css?family=Rajdhani:400italic' rel='stylesheet' type='text/css' data-norem>
+            <link href='http://fonts.googleapis.com/css?family=Rajdhani:600' rel='stylesheet' type='text/css' data-norem>
+            <link href='http://fonts.googleapis.com/css?family=Rajdhani:600italic' rel='stylesheet' type='text/css' data-norem>
+            <link href='http://fonts.googleapis.com/css?family=Rajdhani:700' rel='stylesheet' type='text/css' data-norem>
+            <link href='http://fonts.googleapis.com/css?family=Rajdhani:700italic' rel='stylesheet' type='text/css' data-norem>
+        <![endif]-->
+
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="Generator" content="Drupal 7 (http://drupal.org)" />
+<meta name="format-detection" content="telephone=no"/><link rel="shortcut icon" href="http://meche.mit.edu/sites/all/themes/mit_meche/favicon.ico" type="image/vnd.microsoft.icon" />
+        <link type="text/css" rel="stylesheet" href="http://meche.mit.edu/sites/default/files/css/css_xE-rWrJf-fncB6ztZfd2huxqgxu4WO-qwma6Xer30m4.css" media="all" />
+<link type="text/css" rel="stylesheet" href="http://meche.mit.edu/sites/default/files/css/css_yqfEEn3F5mXOC0UUFM4YKvpmMs9qQxvb1Jy9f6FVT5Y.css" media="all" />
+<link type="text/css" rel="stylesheet" href="http://meche.mit.edu/sites/default/files/css/css_GckY0EjoR6WBLjIENeNuZVvw3ojQ1Mjn5COL87fZnj8.css" media="all" />
+        <script type="text/javascript" src="http://meche.mit.edu/sites/default/files/js/js_YD9ro0PAqY25gGWrTki6TjRUG8TdokmmxjfqpNNfzVU.js"></script>
+<script type="text/javascript" src="http://meche.mit.edu/sites/default/files/js/js_rsGiM5M1ffe6EhN-RnhM5f3pDyJ8ZAPFJNKpfjtepLk.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+(function(i,s,o,g,r,a,m){i["GoogleAnalyticsObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,"script","https://www.google-analytics.com/analytics.js","ga");ga("create", "UA-2242837-1", {"cookieDomain":"auto"});ga("set", "anonymizeIp", true);ga('create', 'UA-1592615-30',{'name':'mitsitewide'});ga("send", "pageview");ga('mitsitewide.send','pageview');
+//--><!]]>
+</script>
+<script type="text/javascript" src="http://meche.mit.edu/sites/default/files/js/js_uVZxTz_aN3L7bgFGkqfygEck8aPPFnm3VAGf9QBBomY.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings, {"basePath":"\/","pathPrefix":"","setHasJsCookie":0,"ajaxPageState":{"theme":"mit_meche","theme_token":"K6jPVHFPBhoZIlcy2843gXvj_jkPawJcMTyoVoCkfrI","js":{"misc\/jquery.js":1,"misc\/jquery-extend-3.4.0.js":1,"misc\/jquery-html-prefilter-3.5.0-backport.js":1,"misc\/jquery.once.js":1,"misc\/drupal.js":1,"sites\/all\/modules\/contrib\/google_analytics\/googleanalytics.js":1,"0":1,"sites\/all\/themes\/mit_meche\/js\/vendor\/video.js":1,"sites\/all\/themes\/mit_meche\/js\/vendor\/video.youtube.js":1,"sites\/all\/themes\/mit_meche\/js\/modernizr.prod.min.js":1},"css":{"modules\/system\/system.base.css":1,"modules\/system\/system.menus.css":1,"modules\/system\/system.messages.css":1,"modules\/system\/system.theme.css":1,"sites\/all\/modules\/contrib\/calendar\/css\/calendar_multiday.css":1,"modules\/comment\/comment.css":1,"sites\/all\/modules\/contrib\/date\/date_api\/date.css":1,"sites\/all\/modules\/contrib\/date\/date_popup\/themes\/datepicker.1.7.css":1,"modules\/field\/theme\/field.css":1,"modules\/node\/node.css":1,"modules\/user\/user.css":1,"sites\/all\/modules\/contrib\/views\/css\/views.css":1,"sites\/all\/modules\/contrib\/media\/modules\/media_wysiwyg\/css\/media_wysiwyg.base.css":1,"sites\/all\/modules\/contrib\/ctools\/css\/ctools.css":1,"sites\/all\/modules\/contrib\/shib_auth\/shib_auth.css":1,"modules\/search\/search.css":1,"sites\/all\/themes\/mit_meche\/css\/foundation.min.css":1,"sites\/all\/themes\/mit_meche\/css\/style.css":1,"sites\/all\/themes\/mit_meche\/css\/tablesaw.stackonly.css":1,"sites\/all\/themes\/mit_meche\/css\/video-js.css":1,"sites\/all\/themes\/mit_meche\/css\/vjs-sublime-skin.css":1,"https:\/\/cdnjs.cloudflare.com\/ajax\/libs\/jquery-modal\/0.9.1\/jquery.modal.min.css":1,"sites\/all\/themes\/mit_meche\/css\/extra.css":1}},"urlIsAjaxTrusted":{"\/people\/faculty\/MISTETRI@MIT.EDU":true},"googleanalytics":{"trackOutbound":1,"trackMailto":1,"trackDownload":1,"trackDownloadExtensions":"7z|aac|arc|arj|asf|asx|avi|bin|csv|doc(x|m)?|dot(x|m)?|exe|flv|gif|gz|gzip|hqx|jar|jpe?g|js|mp(2|3|4|e?g)|mov(ie)?|msi|msp|pdf|phps|png|ppt(x|m)?|pot(x|m)?|pps(x|m)?|ppam|sld(x|m)?|thmx|qtm?|ra(m|r)?|sea|sit|tar|tgz|torrent|txt|wav|wma|wmv|wpd|xls(x|m|b)?|xlt(x|m)|xlam|xml|z|zip"}});
+//--><!]]>
+</script>
+
+        <!-- Inlined Modernizr extensions to prevent delayed position jump ( Must be after Modernizr load ) -->
+        <script>
+            ;(function(Modernizr, window) {
+                Modernizr.addTest('positionfixed', function () {
+                    var test  = document.createElement('div'),
+                        control = test.cloneNode(false),
+                            fake = false,
+                            root = document.body || (function () {
+                            fake = true;
+                            return document.documentElement.appendChild(document.createElement('body'));
+                        }());
+
+                    var oldCssText = root.style.cssText;
+                    root.style.cssText = 'padding:0;margin:0';
+                    test.style.cssText = 'position:fixed;top:42px';
+                    root.appendChild(test);
+                    root.appendChild(control);
+               
+                    var ret = test.offsetTop !== control.offsetTop;
+               
+                    root.removeChild(test);
+                    root.removeChild(control);
+                    root.style.cssText = oldCssText;
+               
+                    if (fake) {
+                        document.documentElement.removeChild(root);
+                    }
+               
+                    return ret;
+                });
+                
+                Modernizr.addTest('iospositionfixed', function () {
+                    var test  = document.createElement('div'),
+                        ret,
+                        fake = false,
+                        root = document.body || (function () {
+                            fake = true;
+                            return document.documentElement.appendChild(document.createElement('body'));
+                        }());
+                    
+                    if (typeof document.body.scrollIntoViewIfNeeded === 'function') {
+                    
+                        var oldCssText = root.style.cssText,
+                            testScrollTop = 20,
+                            originalScrollTop = window.pageYOffset;
+
+                        root.appendChild(test);
+
+                        test.style.cssText = 'position:fixed;top:0px;height:10px;';
+
+                        root.style.height="3000px";
+                        
+                        /* avoided hoisting for clarity */
+                        var testScroll = function() {
+                            if (ret === undefined) {
+                                test.scrollIntoViewIfNeeded();
+                                if (window.pageYOffset === testScrollTop) {
+                                    ret = true;
+                                } else {
+                                    ret = false;
+                                }
+                            }
+                            window.removeEventListener('scroll', testScroll, false);
+                        }
+
+                        try {
+                        window.addEventListener('scroll', testScrollTop, false);
+                        }
+                        catch(err) {
+                        //      
+                        }
+                        
+                        window.setTimeout(testScroll, 20); // ios 4 does'nt publish the scroll event on scrollto
+                        window.scrollTo(0, testScrollTop);
+                        testScroll();
+
+                        root.removeChild(test);
+                        root.style.cssText = oldCssText;
+                        window.scrollTo(0, originalScrollTop);
+
+                    } else {
+                        ret = Modernizr.positionfixed; // firefox and IE doesnt have document.body.scrollIntoViewIfNeeded, so we test with the original modernizr test
+                    }
+                        
+                    if (fake) {
+                        document.documentElement.removeChild(root);
+                    }
+
+                    return ret;
+                });
+            })(Modernizr, window);
+        </script>
+
+        <!-- Inlined loading of web fonts to prevent FOUT -->
+        <script src="//ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont.js"></script>
+
+        <!-- New handler for font load so MecheController can be initialized once fonts are available -->
+        <script>
+            (function() {
+
+                var controllerUpdated = false;
+                var wait;
+
+                function updateControllerFonts() {
+                    
+                    if(typeof MecheController != "undefined") {
+                        clearInterval(wait);
+                        MecheController.initWithFonts();
+                        
+                    }
+                }
+
+                function onFontsLoaded() {
+                   
+                    if(typeof MecheController != "undefined") {
+                        MecheController.initWithFonts();
+                    } else {
+                        wait = setInterval(updateControllerFonts, 50);
+                    }
+                }
+                // load fonts
+                window.WebFontConfig
+                WebFont.load( {
+
+                        google: {
+                                families: ['Open Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700', 'Rajdhani:300,400,500,600,700']
+                        },
+                        active : onFontsLoaded,
+                        loading : function() {
+                                
+                        },
+                        timeout : 5000
+
+                });
+            })();
+            
+        </script>
+        
+
+        <title>MECHE PEOPLE: Michael Triantafyllou | MIT Department of Mechanical Engineering</title>
+    </head>
+<body class="html not-front not-logged-in no-sidebars page-people page-people-faculty page-people-faculty-mistetrimitedu people faculty-plus mix-blend-mode mix-blend-mode" >
+      <div class="app-outer-wrap">
+      <div class="app-inner-wrap">
+      <a href="#" class="screen-btn exit-off-canvas">close menu</a>
+        <div class="region region-navigation">
+    <div id="block-block-1" class="block block-block">
+
+    
+  <div class="content">
+    <aside class="off-canvas-menu"><div class="nav-wrap">
+        <div class="main-nav-wrap nano-wrap">
+            <nav id="main-menu" class="main-nav nano-content overthrow" role="navigation" aria-label="main"><div class="main-nav-top">
+                      <a href="https://meche-res.mit.edu/resource_links/" class="resources-btn"><span class="fa fa-lock"></span><span>Find Resources</span><span class="fa fa-chevron-right"></span></a>
+                    <!-- NOTE | CHANGE on 10/08/15
+                         - - - - - - - - - - - - -
+                         Added <span class="visually-hidden">Close Menu</span> and aria-hidden="true" to the icon
+                    -->
+                    <a href="#exit-menu" class="close-btn exit-off-canvas" role="button" title="close side navigation">
+                        <span class="fa fa-close"></span>
+                        <span class="visually-hidden">Close Menu</span>
+                    </a>
+                </div>
+
+                <div class="main-nav-core">
+                    <div class="search-bar" role="search">
+                        <form class="search-form" action="/people/faculty/MISTETRI@MIT.EDU" method="post" id="search-form" accept-charset="UTF-8"><div><div class="container-inline form-wrapper" id="edit-basic"><div class="form-item form-type-textfield form-item-keys">
+  <input placeholder="Search" type="text" id="edit-keys" name="keys" value="" size="20" maxlength="255" class="form-text" /></div>
+<input type="submit" id="edit-submit" name="op" value="Search" class="form-submit" /><input type="hidden" name="get" value="[]" /><button type="submit"><i class="fa fa-search"></i></button></div><input type="hidden" name="form_build_id" value="form-dPMDTWUincrm1-l14cqarB6JaHtyH-JvR8injZwgV3Y" /><input type="hidden" name="form_id" value="apachesolr_search_custom_page_search_form_menu" /></div></form>                    </div>
+                    <hr class="meche-dots" /><!-- NOTE | CHANGE on 10/08/15
+                         - - - - - - - - - - - - -
+                         Added <span class="visually-hidden">...</span> to the icon button icons for
+                         each of the items that have a secondary navigation panel to support screen readers
+                    --><div role="region" aria-label="menu">
+                        <ul class="main-nav-items special"><li class="main-nav-item education" data-subnav="about">
+                                
+                                <h2 class="main-nav-item">
+                                    <a href="/about" class="main-nav-item-link">
+                                        <span class="main-nav-item-title">About</span>
+                                        <span class="main-nav-item-detail">Who we are</span>
+                                    </a>
+                                </h2>
+                                <a href="1" class="main-nav-item-more-btn" aria-haspopup="true" aria-owns="about-nav">
+                                    <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                                    <span class="visually-hidden">See About Menu</span>
+                                </a>
+                            </li>
+                            <li class="meche-dots" aria-hidden="true"></li>
+
+
+                            <li class="main-nav-item impact" data-subnav="impact">
+                                
+                                <h2 class="main-nav-item">
+                                    <a href="/impact" class="main-nav-item-link">
+                                        <span class="main-nav-item-title">Impact</span>
+                                        <span class="main-nav-item-detail">World-Changing Engineering</span>
+                                    </a>
+                                </h2>
+                                <a href="1" class="main-nav-item-more-btn" aria-haspopup="true" aria-owns="impact-nav">
+                                    <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                                    <span class="visually-hidden">See Impact Menu</span>
+                                </a>
+                            </li>
+                            <li class="meche-dots" aria-hidden="true"></li>
+                            <li class="main-nav-item research" data-subnav="research">
+                                <h2 class="main-nav-item">
+                                    <a class="main-nav-item-link" href="/research">
+                                        <span class="main-nav-item-title">Research</span>
+                                        <span class="main-nav-item-detail">Focus Areas and Labs</span>
+                                    </a>
+                                </h2>
+    
+                                <a href="2" class="main-nav-item-more-btn" aria-haspopup="true" aria-owns="research-nav">
+                                    <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                                    <span class="visually-hidden">See Research Menu</span>
+                                </a>
+                            </li>
+                            <li class="meche-dots" aria-hidden="true"></li>
+                            <li class="main-nav-item people" data-subnav="people">
+                                <h2 class="main-nav-item">
+                                    <a class="main-nav-item-link" href="/people">
+                                        <span class="main-nav-item-title">People</span>
+                                        <span class="main-nav-item-detail">Faculty and Staff</span>
+                                    </a>
+                                </h2>
+                                <a href="3" class="main-nav-item-more-btn" aria-haspopup="true" aria-owns="people-nav">
+                                    <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                                    <span class="visually-hidden">See People Submenu</span>
+                                </a>
+                            </li>
+                            <li class="meche-dots"></li>
+                            <li class="main-nav-item education" data-subnav="education">
+                                <h2 class="main-nav-item">
+                                    <a class="main-nav-item-link" href="/education">
+                                        <span class="main-nav-item-title">Education</span>
+                                        <span class="main-nav-item-detail">Degree Programs and Classes</span>
+                                    </a>
+                                </h2>
+                                
+                                <a href="4" class="main-nav-item-more-btn" aria-haspopup="true" aria-owns="education-nav">
+                                    <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                                    <span class="visually-hidden">See Education Menu</span>
+                                </a>
+                            </li>
+                            <li class="meche-dots"></li>
+                            <li class="main-nav-item news-and-media" data-subnav="news-media">
+                                <h2 class="main-nav-item">
+                                    <a class="main-nav-item-link" href="/news-media">
+                                        <span class="main-nav-item-title">News &amp; Video</span>
+                                        <span class="main-nav-item-detail">News, Press, Video and Photos</span>
+                                    </a>
+                                </h2>
+                                <a href="4" class="main-nav-item-more-btn" aria-haspopup="true" aria-owns="news-media-nav">
+                                    <i aria-hidden="true" class="fa fa-chevron-right"></i>
+                                    <span class="visually-hidden">See news and media menu</span>
+                                </a>
+                            </li>
+                        </ul></div>        
+                   <h2 class="support-meche-item"><a class="support-meche main-nav-item-app-link" href="/how-apply">Apply to MIT MechE</a></h2>
+                </div>
+            </nav></div>
+
+        
+        <div class="sub-nav-wrap nano-wrap">
+            <div class="nano-content overthrow"><!-- *** NEW NODE *** -->
+                <div class="sub-nav-top">
+                    <a href="#main-menu" class="btn-main-menu"><span class="fa fa-chevron-left"></span><span class="btn-label">Back</span></a>
+                    <a href="#close-menu" class="close-btn exit-off-canvas" role="button" title="close side navigation">
+                        <span class="fa fa-close"></span>
+                        <span class="visually-hidden">Close Menu</span>
+                    </a>
+                </div>
+                <div role="region" aria-label="submenu">
+
+                  <nav id="about-nav" class="sub-nav-group about" role="navigation" aria-label="about items"><div class="sub-nav-header">
+                            <a href="/about">
+                                <span>About</span>
+                            </a>
+                        </div>
+                        <!--<hr class="meche-dots" />-->
+                        <ul class="sub-nav-items"><li class="sub-nav-item"><a class="sub-nav-item-link" href="/meche-history-and-timeline">History</a></li>
+                            <li class="sub-nav-item"><a class="sub-nav-item-link" href="/people/diversity-equity-and-inclusion">Diversity Equity &amp; Inclusion</a></li>
+                            <li class="sub-nav-item"><a class="sub-nav-item-link" href="/ethics">Ethics and Integrity</a></li>
+                            <li class="sub-nav-item"><a class="sub-nav-item-link" href="/sites/default/files/2018-Strategic-Plan.pdf">Strategic Plan (PDF)</a></li>
+                            <li class="sub-nav-item"><a class="sub-nav-item-link" href="/faculty-positions">Faculty Openings</a></li>
+                            <li class="sub-nav-item"><a class="sub-nav-item-link" href="/alumni">Alumni</a></li>
+                            <li class="sub-nav-item"><a class="sub-nav-item-link" href="/alliance">MechE Alliance</a></li>
+                            <li class="sub-nav-item"><a class="sub-nav-item-link" href="https://giving.mit.edu/explore/schools/engineering/meche">Support MechE</a></li>
+                            <li class="sub-nav-item"><a class="sub-nav-item-link" href="/contact">Contact Us</a></li>
+                        </ul></nav><nav id="impact-nav" class="sub-nav-group impact" role="navigation" aria-label="impact items"><div class="sub-nav-header">
+                            <a href="/impact">
+                                <span>Impact</span>
+                            </a>
+                        </div>
+                        <!--<hr class="meche-dots" />-->
+                        <ul class="sub-nav-items"><li class="sub-nav-item"><a class="sub-nav-item-link" href="/impact/health">Health</a></li>
+                            <li class="sub-nav-item"><a class="sub-nav-item-link" href="/impact/environment">Environment</a></li>
+                            <li class="sub-nav-item"><a class="sub-nav-item-link" href="/impact/innovation">Innovation</a></li>
+                            <li class="sub-nav-item"><a class="sub-nav-item-link" href="/impact/energy">Energy</a></li>
+                            <li class="sub-nav-item"><a class="sub-nav-item-link" href="/impact/security">Security</a></li>
+                        </ul></nav><nav id="research-nav" class="sub-nav-group research" role="navigation" aria-label="research items"><div class="sub-nav-header">
+                            <a href="/research">
+                                <span>Research</span>
+                            </a>
+                        </div>
+                        <!--<hr class="meche-dots" />-->
+                        <ul class="sub-nav-items"><li class="sub-nav-item"><a class="sub-nav-item-link" href="/research/mechanics">Mechanics</a></li>
+                            <li class="sub-nav-item"><a class="sub-nav-item-link" href="/research/design">Design</a></li>
+                            <li class="sub-nav-item"><a class="sub-nav-item-link" href="/research/controls">Controls</a></li>
+                            <li class="sub-nav-item"><a class="sub-nav-item-link" href="/research/energy">Energy</a></li>
+                            <li class="sub-nav-item"><a class="sub-nav-item-link" href="/research/ocean">Ocean</a></li>
+                            <li class="sub-nav-item"><a class="sub-nav-item-link" href="/research/bioengineering">Bio</a></li>
+                            <li class="sub-nav-item"><a class="sub-nav-item-link" href="/research/nano">Micro + Nano</a></li>
+                        </ul></nav><nav id="people-nav" class="sub-nav-group people" role="navigation" aria-label="people"><div class="sub-nav-header">
+                            <a href="/people">
+                                <span>People</span>
+                            </a>
+                        </div>
+                        <!--<hr class="meche-dots" />-->
+                        <ul class="sub-nav-items"><li class="sub-nav-item"><a class="sub-nav-item-link" href="/people/diversity-equity-and-inclusion">Diversity, Equity, and Inclusion</a></li>
+                            <li class="sub-nav-item"><a class="sub-nav-item-link" href="/people?">Faculty</a></li>
+                            <li class="sub-nav-item"><a class="sub-nav-item-link" href="/people/emeritus">Faculty Emeritus</a></li>
+                            <li class="sub-nav-item"><a class="sub-nav-item-link" href="/people/staff-listing?field_staff_role_tid[]=46">Research Staff</a></li>
+                            <li class="sub-nav-item"><a class="sub-nav-item-link" href="/people/staff-listing?field_staff_role_tid[]=55">Post Docs</a></li>
+                            <li class="sub-nav-item"><a class="sub-nav-item-link" href="/people/staff-listing?field_staff_role_tid[]=47">Teaching Staff</a></li>
+                            <li class="sub-nav-item"><a class="sub-nav-item-link" href="/people/staff-listing?field_staff_role_tid[]=43">Admin Staff</a></li>
+                            <li class="sub-nav-item"><a class="sub-nav-item-link" href="/people/staff-listing?field_staff_role_tid[]=44">Support Staff</a></li>
+                            <li class="sub-nav-item"><a class="sub-nav-item-link" href="/people/all">Full Directory</a></li>
+                        </ul></nav><nav id="education-nav" class="sub-nav-group education" role="navigation" aria-label="education"><div class="sub-nav-header">
+                            <a href="/education">
+                                <span>Education</span>
+                            </a>
+                        </div>
+                        <!--<hr class="meche-dots" />-->
+                        <ul class="sub-nav-items"><li class="sub-nav-item"><a class="sub-nav-item-link" href="/featured-classes">Class Offerings</a></li>
+                            <li class="sub-nav-item"><a class="sub-nav-item-link" href="/education/prospective-students">Prospective Students</a></li>
+                            <li class="sub-nav-item"><a class="sub-nav-item-link" href="/education/undergraduate">Undergraduate</a></li>
+                            <li class="sub-nav-item"><a class="sub-nav-item-link" href="/education/graduate">Graduate</a></li>
+                            <li class="sub-nav-item"><a class="sub-nav-item-link" href="/education/post-doc">Post-Doc</a></li>
+                           <li class="sub-nav-item"><a class="sub-nav-item-link" href="/careers">Careers</a></li>
+                 <!-- removed 9/1/2000 per JF request
+                            <li class="sub-nav-item"><a class="sub-nav-item-link" href="/education/professional">Professional Education</a></li>
+                            <li class="sub-nav-item"><a class="sub-nav-item-link" href="/education/meche-summer-x">MechE Summer X</a></li>
+                 -->
+                        </ul></nav><nav id="culture-nav" class="sub-nav-group culture" role="navigation" aria-label="culture"><div class="sub-nav-header">
+                            <a href="/culture">
+                                <span>Culture</span>
+                            </a>
+                        </div>
+                        <hr class="meche-dots" /></nav><nav id="news-nav" class="sub-nav-group news-media" role="navigation" aria-label="news and media"><div class="sub-nav-header">
+                            <a href="/news-media">
+                                <span>News + Video</span>
+                            </a>
+                        </div>
+                        <!--<hr class="meche-dots" />-->
+                        <ul class="sub-nav-items"><li class="sub-nav-item"><a class="sub-nav-item-link" href="/news-media/news">Press</a></li>
+                            <li class="sub-nav-item"><a class="sub-nav-item-link" href="/news-media/video/">Video Galleries</a></li>
+                            <li class="sub-nav-item"><a class="sub-nav-item-link" href="/news-media/image-gallery/906">Photo Galleries</a></li>
+                            <li class="sub-nav-item"><a class="sub-nav-item-link" href="/meche-connects-newsletter">Newsletter</a></li>
+                            <li class="sub-nav-item"><a class="sub-nav-item-link" href="/international-colloquia-thermal-innovations">Colloquia</a></li>
+                        </ul></nav></div>
+            </div><!-- *** NEW NODE ( CLOSING TAG ) *** -->
+        </div>
+    </div>
+</aside>  </div>
+</div>
+  </div>
+
+      <div class="fluid">
+          <div class="hbar hbar-alert clearfix hide"><a href="#" class="small message"><i> ••• </i>Lorem ipsum dolor sit amet. Lorem ipsum.</a><a class="btn-close">Close Alert</a></div>
+      </div>
+      
+      <div class="hbar hbar-nav-main fixed" role="region" aria-label="navigation bar">
+          <a href="/" class="nav-bar-logo">MIT MechE</a>
+          <div id="vr-btn" class="btn-container">
+            <a class="btn btn-primary blue centered" style="margin-top:0px; background-color:#ef0166; padding-top: 0px; padding-bottom: 0px; min-width:0px; min-height: 0px; width: -moz-max-content; width: -webkit-max-content; width: max-content;" href="/meche-covid-19-resources">MechE Covid-19 Resources <i class="fa fa-arrow-circle-right"></i></a>
+          </div>
+          <nav class='breadcrumbs' role='menubar' aria-label='breadcrumbs'>
+    <li class='home' role='menuitem'><a href='/'><i class='fa fa-arrow-circle-o-left'></i>Home</a></li><li role='menuitem' ><a href='/people'>People</a></li><li role='menuitem' class='current'><a href='#'>Triantafyllou, Michael S</a></li></nav>          <a href="#main-menu" class="btn-side-menu right-off-canvas-toggle" role="button" aria-expanded="false" aria-controls="main-nav-side-menu"><span>menu</span><i class="fa fa-2x fa-navicon"></i></a>
+      </div>
+        <div class="region region-rotator">
+    <div id="block-meche-blocks-profile-hero" class="block block-meche-blocks">
+
+    
+  <div class="content">
+    <!-- ****************  F S   B A C K G R O U N D   I M A G E  ****************-->       
+    <div class='fluid panel-container fs-hero no-cover'>
+        <div>
+    
+            <!-- FULLSCREEN BG IMAGE -->
+            <div class='bg-fluid-image'>
+                <div class='mesh-bg light'></div>
+                <img class='bg-img bg-width' src='http://meche.mit.edu/sites/default/files/styles/hero/public/Michael%20S.%20Triantafyllou.jpg?itok=upfF4r12' alt='Michael Triantafyllou' />
+            </div>
+            <div class='bg-img-content vc-parent middle left' role='banner'>
+                <div class='vc-child faculty-plus-hero-content orange'>
+                    <hr class='meche-dots fat' />
+                    <div class='intro'>
+                        <h3 class='faculty-rank'>Professor</h3>
+                        <h1 class='faculty-name'>Michael Triantafyllou </h1>
+                        <p>Henry L. and Grace Doherty Professor in Ocean Science and Engineering; Professor of Mechanical and Ocean Engineering; Director, MIT Sea Grant</p>
+                    </div>
+                    <div class='interests'>
+                        <hr class='meche-dots hairline' />
+                        <h3>Interests</h3>
+                        <ol class='numeric'>
+                            <li class='inverted'>Biomimetic ocean robots and sensors</li><li class='inverted'>Flow-structure interaction</li><li class='inverted'>Dynamics and control of ocean vehicles</li>
+                        </ol>
+                    </div>
+                    <hr class='meche-dots thin' />
+                </div>
+            </div>
+            
+        </div>
+    </div>
+  <div class='row hbar-secondary-container'>
+    <div class='scroll-btn-container align-c hide-for-small-only'>
+        <a class='btn btn-jumper'>
+            <p class='jump-label'>More About Michael</p>
+            <i class='jump-icon fa fa-chevron-circle-down'></i>
+        </a>
+    </div>
+</div><section class='fluid layer'>
+    <div class='hbar hbar-faculty-details'>
+        <div class='top-details clearfix'>
+            <div class='info-header show-for-small-only'>
+                <h3>Contact Info</h3>
+            </div>
+            <div class='location-group clearfix'>
+                <div class='room-block vc-parent'>
+                    <div class='vc-child'>
+                        <span class='room-title'>room</span>
+                        <span class='room-number'><a href='http://whereis.mit.edu/?mapterms=5-226' class='room-number'>5-226<i class='fa fa-map-marker'></i></a></span>
+                    </div>
+                </div>
+                <div class='address-block vc-parent'>
+                    <div class='vc-child'>
+                        <p>Massachusetts Institute of Technology</p>
+                        <p>77 Massachusetts Avenue</p>
+                        <p>Cambridge, Massachusetts 02139</p>
+                    </div>
+                    
+                </div>
+            </div>
+            <div class='contact-group clearfix'>
+                <div class='contact-block digital vc-parent'>
+                    <div class='vc-child'>
+                        <ul>
+                            <li class='primary-contact-method email'><a href='mailto:MISTETRI@MIT.EDU'><i class='fa fa-envelope'></i><span>email</span></a></li></ul>
+                    </div>
+                </div>
+                <div class='contact-block vc-parent'>
+                    <div class='vc-child'>
+                        <ul>
+                            <li><a class='tel' href='tel:+1617.253.9614'><i class='fa fa-phone'></i><span>617.253.9614</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class='personal-group'>
+                <div class='cv-block vc-parent'>
+                    <div class='vc-child'>
+                        <a href='http://meche.mit.edu/sites/default/files/cv/mistetri_CV.pdf' class='btn btn-primary orange'>Download CV <i class='fa fa-arrow-circle-down'></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class='research-group'>
+                <div class='ra-block vc-parent'>
+                    <div class='vc-child'>
+                        <div class='ra-icon-bar'>
+                            <span class='title'>Associated Research Areas</span>
+                            <ul class='clearfix'>
+                            <li >
+        <a href='/research/mechanics' data-tooltip aria-haspopup='true' data-options='additional_inheritable_classes: ra-tip;' class='has-tip tip-top ra-tip' title='mechanics'>
+            <i class='ra-icon mechanics'><span class='visually-hidden'>mechanics</span></i>
+        </a>
+        </li><li >
+        <a href='/research/design' data-tooltip aria-haspopup='true' data-options='additional_inheritable_classes: ra-tip;' class='has-tip tip-top ra-tip' title='design'>
+            <i class='ra-icon design'><span class='visually-hidden'>design</span></i>
+        </a>
+        </li><li >
+        <a href='/research/controls' data-tooltip aria-haspopup='true' data-options='additional_inheritable_classes: ra-tip;' class='has-tip tip-top ra-tip' title='controls'>
+            <i class='ra-icon controls'><span class='visually-hidden'>controls</span></i>
+        </a>
+        </li><li >
+        <a href='/research/energy' data-tooltip aria-haspopup='true' data-options='additional_inheritable_classes: ra-tip;' class='has-tip tip-top ra-tip' title='energy'>
+            <i class='ra-icon energy'><span class='visually-hidden'>energy</span></i>
+        </a>
+        </li><li class='active'>
+        <a href='/research/ocean' data-tooltip aria-haspopup='true' data-options='additional_inheritable_classes: ra-tip;' class='has-tip tip-top ra-tip' title='ocean'>
+            <i class='ra-icon ocean'><span class='visually-hidden'>ocean</span></i>
+        </a>
+        </li><li >
+        <a href='/research/bioengineering' data-tooltip aria-haspopup='true' data-options='additional_inheritable_classes: ra-tip;' class='has-tip tip-top ra-tip' title='bioengineering'>
+            <i class='ra-icon bio'><span class='visually-hidden'>bioengineering</span></i>
+        </a>
+        </li><li >
+        <a href='/research/nano' data-tooltip aria-haspopup='true' data-options='additional_inheritable_classes: ra-tip;' class='has-tip tip-top ra-tip' title='nano'>
+            <i class='ra-icon nano'><span class='visually-hidden'>nano</span></i>
+        </a>
+        </li></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><div class='hbar hbar-admin-details'>
+             <!-- ADMIN CONTACT -->
+            <div class='bottom-details'>
+                <div class='admin-details clearfix'>
+                    <span class='arrow-box admin-detail label'>Administrative Contact</span>
+                    <a class='arrow-box admin-detail person' href='/people/staff/maria@mit.edu'>Riefstahl, Maria A</a>
+                    <span class='admin-detail contact-detail room'><a href='http://whereis.mit.edu/?mapterms=5-228' class='room-number'><i class='fa fa-map-marker'></i>5-228</a></span>
+                    <span class='admin-detail contact-detail email'><a href='mailto:MARIA@MIT.EDU'><i class='fa fa-envelope'></i>MARIA@MIT.EDU</a></span>
+                    <span class='admin-detail contact-detail phone'><a class='tel' href='tel:+1617.253.4330'><i class='fa fa-phone'></i>617.253.4330</a></span>
+                </div>  
+            </div>
+        </div></section>  </div>
+</div>
+  </div>
+  <div class="region region-content">
+    <div id="block-meche-blocks-profile-highlights" class="block block-meche-blocks">
+
+    
+  <div class="content">
+    <!-- ****************  F E A T U R E D   B L O C K (s)  ****************-->
+      <section class='fluid panel-block default-featured-block layer gray-block'>   
+          <div class='row header-block'>
+              <div class='column small-12'>
+                  <h3 class='align-c xlarge'>Professor Triantafyllou News + Media</h3>
+                  <hr class='meche-dots thin black' />
+              </div>
+          </div>
+          <div class='row' data-equalizer><div class='column large-4'>
+                    <div class='news-block clearfix'>
+                        <div class='img-container'>
+                            <img src='http://meche.mit.edu/sites/default/files/styles/faculty_highlight/public/highlights/seal_video_460.jpg?itok=bK0jXuVp' alt='Artificial whisker reveals source of harbor seal’s uncanny prey-sensing ability' />
+                        </div>
+                        <div class='news-block-details'>
+                            <div data-equalizer-watch>
+                                <h3>Artificial whisker reveals source of harbor seal’s uncanny prey-sensing ability</h3>
+                                <hr class='meche-dots thin black' />
+                                <p>Professor Michael Triantafyllou believes that biologically inspired sensors, modeled after the harbor seal’s whiskers, may aid underwater vehicles in tracking schools of fish, as well as sources of pollution.</p>
+                            </div>
+                            <div class='link-wrap'>
+                                <a class='link link-primary blue' href='http://meche.mit.edu/news-media/artificial-whisker-reveals-source-harbor-seal’s-uncanny-prey-sensing-ability-0'>READ MORE</a>
+                            </div>
+                        </div>
+                    </div>
+                </div><div class='column large-4'>
+                    <div class='news-block clearfix'>
+                        <div class='img-container'>
+                            <img src='http://meche.mit.edu/sites/default/files/styles/faculty_highlight/public/highlights/michael_news1_460.jpg?itok=q2HHj6G9' alt='Intelligent Towing Tank propels human-robot-computer research' />
+                        </div>
+                        <div class='news-block-details'>
+                            <div data-equalizer-watch>
+                                <h3>Intelligent Towing Tank propels human-robot-computer research</h3>
+                                <hr class='meche-dots thin black' />
+                                <p>A novel experimental facility, developed by postdoc Dixia Fan SM '16 PhD '19 and researchers at MIT Sea Grant, conducted five years' worth of experiments on vortex-induced vibrations in a matter of weeks. </p>
+                            </div>
+                            <div class='link-wrap'>
+                                <a class='link link-primary blue' href='http://meche.mit.edu/news-media/intelligent-towing-tank-propels-human-robot-computer-research-0'>READ MORE</a>
+                            </div>
+                        </div>
+                    </div>
+                </div><div class='column large-4'>
+                    <div class='news-block clearfix'>
+                        <div class='img-container'>
+                            <img src='http://meche.mit.edu/sites/default/files/styles/faculty_highlight/public/highlights/michael_news2_460.jpg?itok=rFP1GdO_' alt='Albatross robot takes flight' />
+                        </div>
+                        <div class='news-block-details'>
+                            <div data-equalizer-watch>
+                                <h3>Albatross robot takes flight</h3>
+                                <hr class='meche-dots thin black' />
+                                <p>MIT engineers including Professor Michael Triantafyllou and Professor Jean-Jacques Slotine have designed an autonomous robotic glider that can skim along the water’s surface.</p>
+                            </div>
+                            <div class='link-wrap'>
+                                <a class='link link-primary blue' href='http://meche.mit.edu/news-media/albatross-robot-takes-flight'>READ MORE</a>
+                            </div>
+                        </div>
+                    </div>
+                </div></div></section>  </div>
+</div>
+<div id="block-meche-blocks-profile-education-plus" class="block block-meche-blocks">
+
+    
+  <div class="content">
+    <section class='fluid jumper-nav-block white-block panel-block layer'>
+        <div class='row'>
+            <div class='column small-12 show-for-medium-up align-c'>
+                <h3 class='jump-nav-label'>Faculty Details</h3>
+            </div>
+            <div class='column small-12 show-for-medium-up align-c'>   
+                <div class='hbar hbar-nav-jumper'>
+                    <ul>
+                        <li><a href='#education'>Education</a></li>
+                        <li class='divider' aria-hidden='true'></li>
+                        <li><a href='#research-interests'>Research Interests</a></li>
+                        <li class='divider' aria-hidden='true'></li>
+                        <li><a href='#other-details'>Bio</a></li>
+                        <li class='divider' aria-hidden='true'></li>
+                        <li><a href='#online-data'>Online Data</a></li>
+                        <li class='divider' aria-hidden='true'></li>
+                        <li><a href='#honors-and-awards '>Honors/Awards</a></li>
+                        <li class='divider' aria-hidden='true'></li>
+                        <li><a href='#related-experience'>Related Experience</a></li>
+                        <li class='divider' aria-hidden='true'></li>
+                        <li><a href='#memberships'>Memberships</a></li>
+                    </ul>
+                    <ul>
+                        <li><a href='#professional-service'>Professional Service</a></li>
+                        <li class='divider' aria-hidden='true'></li>
+                        <li><a href='#mit-service'>MIT Service</a></li>
+                        <li class='divider' aria-hidden='true'></li>
+                        <li><a href='#classes'>Teaching</a></li>
+                        <li class='divider' aria-hidden='true'></li>
+                        <li><a href='#publications '>Publications</a></li>
+                        <li class='divider' aria-hidden='true'></li>
+                        <li><a href='#patents'>Patents</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section><section class='fluid panel-block profile-details layer'>
+        <div class='row'>
+            <div class='column small-12 education-block clearfix'>
+                <div id='education' class='education-block-content'>
+                    <h2>Education</h2>
+                    <div class='degrees'>
+                    <ul class='clearfix'><li class='degree'>
+            <div>
+                <h3>1974</h3>
+                <p>NATIONAL TECHNICAL UNIVERSITY OF ATHENS</p>
+                <span>B.</span>
+            </div>
+        </li><li class='degree'>
+            <div>
+                <h3>1977</h3>
+                <p>MASSACHUSETTS INSTITUTE OF TECHNOLOGY (MIT)</p>
+                <span>M.Sc.</span>
+            </div>
+        </li><li class='degree'>
+            <div>
+                <h3>1977</h3>
+                <p>MASSACHUSETTS INSTITUTE OF TECHNOLOGY (MIT)</p>
+                <span>M.Sc.</span>
+            </div>
+        </li><li class='degree'>
+            <div>
+                <h3>1979</h3>
+                <p>MASSACHUSETTS INSTITUTE OF TECHNOLOGY (MIT)</p>
+                <span>D.Sc.</span>
+            </div>
+        </li></ul></div></div></div><div class='column small-12 profile-block'>
+              <div id='research-interests' class='profile-block-content'><h2>Research Interests</h2><ul><li>Experimental fluid mechanics</li>
+<li>Biomimetics</li>
+<li>Sensing and Control</li>
+</ul></div></div><div class='column small-12 profile-block'>
+              <div id='online-data' class='profile-block-content'><h2>Online Data</h2><ul><li><a href="http://scholar.google.com/citations?user=Q7BIbQ8AAAAJ&amp;hl=en">Google Scholar</a>: (http://scholar.google.com/citations?user=Q7BIbQ8AAAAJ&amp;hl=en)</li>
+</ul></div></div><div class='column small-12 profile-block'>
+              <div id='honors-and-awards' class='profile-block-content'><h2>Honors + Awards</h2><ul><li>Fellow, American Physical Society, 2014</li>
+<li>Aurel Stodola Medal and Lecture “Biomimetic survival hydrodynamics and sensing”, ETH Zurich, May 2014.</li>
+<li>William I. Koch Professor of Marine Technology (2008 - 2017).</li>
+<li>Guest Editor, Special issue on animal swimming, Experiments in Fluids, November 2007; edited as a book by Springer-Verlag (2010).</li>
+<li>Article on trout swimming in vortices also on cover of Science, Nov. 28, 2003.</li>
+<li>First generation RoboTuna on permanent exhibit at the Museum of Science, London (since 1998).  Prototype RoboTuna in national traveling exhibit on robots, organized by the Science Museum of Minnessota (2003-2004); currently on permanent exhibit at the MIT Museum.</li>
+<li>Smithsonian Magazine Article on Robotic Tuna (August 2000).</li>
+<li>Discover Magazine Awards for Technological Innovation (1998).</li>
+<li>ABS/Linnard Prize for best paper in the Transactions of SNAME (1997).</li>
+<li>Work on Robotic Tuna on cover of Scientific American (March 1995).</li>
+<li>Highlight Paper of 1995  Scientific American.</li>
+<li>H. L. Doherty Professorship in Ocean Utilization (1983-1985).</li>
+<li>Best Graduate paper award (SNAME) 1978.</li>
+<li>Special award for top performance, National Technical University of Athens (1972).</li>
+<li>Merit scholarship, National Technical University of Athens (1969-1974).<br /> </li>
+</ul></div></div><div class='column small-12 profile-block'>
+              <div id='related-experience' class='profile-block-content'><h2>Related Experience</h2><ul><li>Visiting Professor: Singapore–MIT Alliance, NUS, Singapore (2012, 2015)</li>
+<li>NTNU, Trondheim, Norway (1993, 2001, 2011)</li>
+<li>ETH Zurich (April 1999)</li>
+<li>National Technical University of Athens, Greece (1994-1995 &amp; 2007-2008)</li>
+<li>Kyushu University, Japan (April 1986).</li>
+</ul></div></div><div class='column small-12 profile-block'>
+              <div id='memberships' class='profile-block-content'><h2>Memberships</h2><ul><li>American Physical Society</li>
+<li>Society of Naval Architects and Marine Engineers (SNAME)</li>
+<li>International Society of Offshore Mechanics and Polar Engineers  (ISOPE) American Society of Mechanical Engineers (ASME)</li>
+</ul></div></div><div class='column small-12 profile-block'>
+              <div id='professional-service' class='profile-block-content'><h2>Professional Service</h2><ul><li>2013-present: Chairman of the Board, National Technical University of Athens, Greece</li>
+<li>1994-present: SNAME, Papers committee; Education committee; Vice-chairman OC-2 committee on moorings and offshore terminals.</li>
+<li>2002--present: Associate Editor, J. ISOPE.</li>
+<li>1996-1998: Associate Editor, Journal of Fluids Engineering.</li>
+</ul></div></div><div class='column small-12 profile-block'>
+              <div id='mit-service' class='profile-block-content'><h2>MIT Service</h2><ul><li>2005-2017: Director, Center for Ocean Engineering</li>
+<li>2008-2010: Associate Department Head, Mechanical Enging. Dept.</li>
+<li>1988-present: Director, Towing Tank Facility</li>
+<li>2003-present: Co-director, Propeller Tunnel Facility</li>
+</ul></div></div><div class='column small-12 profile-block'>
+              <div id='classes' class='profile-block-content'><h2>Teaching</h2><ul><li>Design Principles for Ocean Vehicles (2.22)</li>
+<li>Maneuvering and Control of Surface and Underwater Vehicles</li>
+<li>Multivariable Control Systems I and II (inter-departmental controls two semester course in multivariable linear systems control)</li>
+</ul></div></div><div class='column small-12 profile-block'>
+              <div id='publications' class='profile-block-content'><h2>Publications</h2><p>1.	G. Weymouth, V. Subramaniam, &amp; M.S. Triantafyllou, 2015, “Ultra-fast escape maneuver of an octopus-inspired robot”, Bioinspiration &amp; Biomimetics, 10, 016016.<br />
+2.	A. Mazubdar, H. Asada, &amp; M.S. Triantafyllou, 2015, “Dynamic Analysis and Design of Spheroidal Underwater Robots for Precision Multi-Directional Maneuvering”, IEEE/ASME Transactions on Mechatronics (TMECH), (to appear).<br />
+3.	A. Kottapalli, Asadnia M., J.M. Miao, &amp; M.S. Triantafyllou, 2014, “Touch at a Distance Sensing: Lateral-Line inspired MEMS Flow Sensors”, Bioinspiration &amp; Biomimetics, 9, 046011 (14pp).<br />
+4.	R. Bourguet, G.E. Karniadakis, &amp; M.S. Triantafyllou, 2014, “On the validity of the independence principle applied to the vortex induced vibrations of a flexible cylinder inclined at 60 degrees”, Journal of Fluids and Structures (to appear).<br />
+5.	A. Maertens, M.S. Triantafyllou, 2014, “The boundary layer instability of a gliding fish helps rather than prevents object identification”, Journal of Fluid Mechanics, 757, 179-207.<br />
+6.	R. Bourguet, G.E. Karniadakis, &amp; M.S. Triantafyllou, 2014, “Vortex induced vibrations of a flexible cylinder at large inclination angle”, Phil. Trans. R. Soc. A 373, 20140108. <a href="http://dx.doi.org/10.1098/rsta.2014.0108">http://dx.doi.org/10.1098/rsta.2014.0108</a>.<br />
+7.	H. Zheng, R.E. Price, Y. Modarres-Sadeghi, M.S. Triantafyllou, 2014, “On fatigue damage of long flexible cylinders due to the higher harmonic force components and chaotic vortex-induced vibrations”, Ocean Engineering, 88, 318-329.<br />
+8.	H. Hans, J.M. Miao, &amp; M.S. Triantafyllou, 2014, “Mechanical characteristics of harbor seal (Phoca vitulina) vibrissae under different circumstances and their implications for sensing methodology”, Bioinspir. Biomim., 9, 036013 (14pp).<br />
+9.	J.S. Izraelevitz, &amp; M.S. Triantafyllou, 2014, “Adding in-line motion and model-based optimization offers exceptional force control authority in flapping foils”, Journal of Fluid Mechanics, 742, 5-34.<br />
+10.	A. Kottapalli, Asadnia M., J.M. Miao, &amp; M.S. Triantafyllou, 2014, “Soft-polymer Membrane Micro-sensor Arrays Inspired by the Mechanosensory Lateral-line on the Blind Cavefish”, J. Intelligent Material Systems and Structures (JIMSS), DOI: 10.1177/1045389X14521702.<br />
+11.	G. Weymouth, &amp; M.S. Triantafyllou, 2013, “Ultra-fast escape of a deformable jet-propelled body”, Journal of Fluid Mechanics, 721, 36-385.<br />
+12.	J. Dusek, A.G.P. Kottapalli, M.E. Woo, M. Asadnia, J. Miao, J.H. Lang, M.S. Triantafyllou, 2013, “Development and testing of bio-inspired MEMS pressure sensor arrays for increased situational awareness by marine vehicles”, Smart Materials and Structures, 22, doi: 10.1088/0964-1726/22/1/014002.<br />
+13.	R. Bourguet, G.E. Karniadakis, &amp; M.S. Triantafyllou, 2013, “Multi-frequency vortex-induced vibrations of a long tensioned beam in linear and exponential shear flow”, Journal of Fluids and Structures, 41, 33-42.<br />
+14.	R. Bourguet, G. Karniadakis, &amp; M.S. Triantafyllou, 2013, “Distributed lock-in drives broadband vortex-induced vibrations of a long flexible cylinder in shear flow”, Journal of Fluid Mechanics, 717, 361-375.<br />
+15.	M. Asadnia, A. Kottapalli, Z. Shen, J. Miao, &amp; M.S. Triantafyllou, 2013, “Flexible and surface mountable piezoelectric sensor arrays for underwater sensing in marine vehicles”, IEEE Sensors Journal, 13 (10), 3918- 3925.<br />
+16.	H.R. Beem, M.R. Hildner, &amp; M.S. Triantafyllou, 2013, “Calibration and validation of a harbor seal whisker-inspired flow sensor”, Smart Materials and Structures, 22, doi: 10.1088/0964-1726/22/1/014022.<br />
+17.	R. Bourguet, G.E. Karniadakis, &amp; M.S. Triantafyllou, 2013, “Phasing mechanisms between the in-line and cross-flow vortex-induced vibrations of a long tensioned beam in shear flow”, Computers &amp; Structures, 122, 155- 163.<br />
+18.	R. Bourguet, D. Lucor, &amp; M.S. Triantafyllou, 2012, “Mono- and multi-frequency vortex-induced vibrations of a long tensioned beam in shear flow”, Journal of Fluids and Structures, 32, 52-64.<br />
+19.	H. Beem, D.E. Rival, &amp; M.S. Triantafyllou, 2012, “On the stabilization of leading-edge vortices with strong spanwise flow”, Experiments in Fluids, 52, 511-517.<br />
+20.	M. Wibawa, S. Steele, J. Dahl, D. Rival, G. Weymouth, &amp; M.S. Triantafyllou, 2012, “Global vorticity shedding for a vanishing wing”, Journal of Fluid Mechanics, 695, 112-134.<br />
+21.	V.I. Fernandez, A. Maertens, F.M. Yaul, J. Dahl, J. Lang, &amp; M.S. Triantafyllou, 2011, Lateral-line-inspired sensor arrays for navigation and object identification”, Marine Technology Society Journal, 45 (4), 130-146.<br />
+22.	Y. Modares-Sadeghi, F. Chasparis, M.S. Triantafyllou, M. Tognarelli, &amp; P. Beynet, 2011, “Chaotic Response is a Generic Feature of Vortex-Induced Vibrations of Flexible Risers”, Journal of Sound and Vibration, 330, 2565-2579.<br />
+23.	R. Bourguet, G. Karniadakis, &amp; M.S. Triantafyllou, 2011, “Vortex-induced vibrations of a long flexible cylinder in shear flow”, Journal of Fluid Mechanics, 677, 342-382.<br />
+24.	R. Bourguet, G. Karniadakis, &amp; M.S. Triantafyllou, 2011, “Lock-in of the vortex-induced vibrations of a long tensioned beam in shear flow”, Journal of Fluids and Structures, 27, 838-847.<br />
+25.	A. Kottapalli, J. Miao, &amp; M.S. Triantafyllou, 2011, “Liquid crystal polymer membrane MEMS sensor for flow rate and flow direction sensing applications”, Journal of Micromechanics and Microengineering, 21, 085006.<br />
+26.	R. Bourguet, Y. Modarres-Sadeghi, G.E. Karniadakis, &amp; M.S. Triantafyllou, 2011, “Wake-body resonance of long flexible structures is dominated by counter-clockwise orbits”, Physical Review Letters, 107, 134502, 23 Sept. 2011.<br />
+27.	M.S. Triantafyllou, 2012, “Survival hydrodynamics”, Journal of Fluid Mechanics, 698, 1-4 (Focus on Fluids).<br />
+28.	G. Weymouth, &amp; M.S. Triantafyllou, 2012, “Global vorticity shedding for a shrinking cylinder”, Journal of Fluid Mechanics, 702, 470-487.<br />
+29.	Y. Liu, L. Tian, J.W. Lee, H.Y.H. Huang, M.S. Triantafyllou,  &amp; G. Barbastathis, 2012, “Scanning-free compressive reconstruction of object motion with sub-pixel accuracy”, Optics Letters, 37 (16), 3357-3359.<br />
+30.	A. Kottapalli, Asadnia M., J.M. Miao, G. Barbastathis, &amp; M.S. Triantafyllou, 2012, “Liquid crystal polymer MEMS pressure sensor array for fish-like underwater sensing”, Smart Materials and Structures, 21, 115030 (13pp).<br />
+31.	A. Kottapalli, Asadnia M., J.M. Miao, C.W. Tan, G. Barbastathis, &amp; M.S. Triantafyllou, 2012, “Polymer MEMS pressure sensor array for fish-like underwater applications”, Micro &amp; Nano Letters, 7 (12), 1189-1192.<br />
+32.	H. Mukundan, F. Chasparis, F.S. Hover, &amp; M.S. Triantafyllou, 2010, “Optimal lift coefficient databases from riser experiments”, Journal of Fluids and Structures, 26, 160-175.<br />
+33.	Y. Modarres-Sadeghi, H. Mukundan, J.M. Dahl, F.S. Hover, &amp; M.S. Triantafyllou, 2010, “The effect of higher harmonic forces on fatigue life of marine risers”, Journal of Sound and Vibration, 329, 43-55.<br />
+34.	J.M. Dahl, F. Hover, M.S. Triantafyllou, &amp; O.H. Oakley, 2010, “Dual resonance in VIV at subcritical and supercritical Reynolds numbers”, Journal of Fluid Mechanics, 643, 395-424.<br />
+35.	S. Licht, M. Wibawa, F. S. Hover, &amp; M.S. Triantafyllou, 2010, “In-line motion causes high thrust and efficiency in flapping foils that use power downstroke”, Journal of Experimental Biology, 213, 63-71.<br />
+36.	P. Prempraneerach, F.S. Hover, M.S. Triantafyllou, &amp; G.E. Karniadakis, 2010, “Uncertainty Quantification in Simulations of Power Systems: Multi-Element Polynomial Chaos Methods”, Reliability Engineering and System Safety, 95, 632-646.<br />
+37.	H. Mukundan, F.S. Hover, &amp; M.S. Triantafyllou, 2010, “A systematic approach to riser VIV response reconstruction”, Journal of Fluids and Structures, 26, 722-746.<br />
+38.	J. Conte, Y. Modarres-Sadeghi, M. Watts, F.S. Hover, &amp; M.S. Triantafyllou, 2010, “A fast-starting mechanical fish that accelerates at 40 m/s2”, Bioinspiration and Biomimetics, 5 (3), 035004 (9 pp.).<br />
+39.	H. Mukundan, Y. Modarres-Sadeghi, F.S. Hover, &amp; M.S. Triantafyllou, 2009, “Monitoring fatigue damage on marine risers”, Journal of Fluids and Structures, 25, 617-628.<br />
+40.	D. Lucor, H. Mukundan, &amp; M.S. Triantafyllou, 2008, “Parametric study of a two degree–of–freedom cylinder subject to vortex–induced vibrations”, Journal of Fluids and Structures, 24, 1284-1293.<br />
+41.	D. Lucor, &amp; M.S. Triantafyllou, 2008, “Riser response analysis by modal phase reconstruction”, J. Offshore Mech. Arct. Eng., 130, 011008.<br />
+42.	R. Galvao, E. Lee, D. Farrell, F.S. Hover, M.S. Triantafyllou, N. Kitney, &amp; P. Beynet, 2008, “Flow Control in Flow-Structure Interaction”, Journal of Fluids and Structures, 24, 1216-1226.<br />
+43.	G.V. Papaioannou, D.K.P. Yue, M.S. Triantafyllou, &amp; G.E. Karniadakis, 2008, “On the effect of spacing on the vortex-induced vibrations of two tandem cylinders”, J. Fluids Struct., 24, 833-854.<br />
+44.	J.M. Dahl, F. Hover, M.S. Triantafyllou, S. Dong, &amp; G.E. Karniadakis, 2007, “Resonant vibrations of bluff bodies cause multi-vortex shedding and high frequency forces”, Physical Review Letters, 99 (14) Article 144503, 5 October, 2007.<br />
+45.	P. Prempraneerach, F.S. Hover, M.S. Triantafyllou, T.J. McCoy, C. Chryssostomidis, &amp; G.E. Karniadakis, 2007, “Sensitivity Analysis of the Shipboard Integrated Power System”, Naval Engineers Journal, 12, article 25.<br />
+46.	F.S. Hover, &amp; M.S. Triantafyllou, 2006, “Application of polynomial chaos in stability and control”, Automatica, 42, 789-795.<br />
+47.	D.N. Beal, F.S. Hover, M.S. Triantafyllou, J.C. Liao, &amp; G.V. Lauder, 2006, “Passive propulsion in vortex wakes”, Journal of Fluid Mechanics, 549, 385-402.<br />
+48.	G.V. Papaioannou, D.K.P. Yue, M.S. Triantafyllou, &amp; G.E. Karniadakis, 2006, “Evidence of holes in the Arnold tongues of flow past two oscillating cylinders”, Physical Review Letters, 96, 014501 (4 pp).<br />
+49.	G.V. Papaioannou, Dick K.P. Yue, M.S. Triantafyllou, &amp; G.E. Karniadakis, 2006, “Three-dimensionality effects on the flow around two tandem cylinders in the lower subcritical regime”, Journal of Fluid Mechanics, 558, 387-413.<br />
+50.	J.M. Dahl, F.S. Hover, &amp; M.S. Triantafyllou, 2006, “Two-degree-of-freedom vortex-induced vibrations using a force assisted apparatus”, Journal of Fluids and Structures, 22, 807-818.<br />
+51.	D. Lucor, H. Mukundan, &amp; M.S. Triantafyllou, 2006, “Riser modal identification in CFD and full-scale experiments”, Journal of Fluids and Structures, 22, 905–917.<br />
+52.	Q. Zhu, J. Zeng, M.S. Triantafyllou, &amp; D.K.P. Yue, 2006, “Direct numerical simulation of single-molecule DNA by cable dynamics”, IEEE Journal of Microelectromechanical Systems (MEMS), 15 (5), 1078-1087.<br />
+53.	P. Blondeaux, L. Guglielmini, &amp; M.S. Triantafyllou, 2005, “Chaotic flow generated by an oscillating foil”, AIAA J., 43 (4), 918-921.<br />
+54.	L. Schouveiler, F.S. Hover, &amp; M.S. Triantafyllou, 2005, “Performance of flapping foil propulsion”, Journal of Fluids and Structures, 20, 949-959.<br />
+55.	J.R. Chaplin, P.W. Bearman, Y. Cheng, E. Fontaine, J.M.R. Graham, K. Herfjord, F.J. Huera Huarte, M. Isherwood, K. Lambrakos, C.M. Larsen, J.R. Meneghini, G. Moe, R.J. Pattenden, M.S. Triantafyllou, &amp; R.H.J. Willden, 2005, “Blind predictions of laboratory measurements of vortex-induced vibrations of a tension riser”, Journal of Fluids and Structures, 21, 25-40.<br />
+56.	J.W. Stettler, F.S. Hover, &amp; M.S. Triantafyllou, 2005, “Investigating the steady and unsteady maneuvering dynamics of an azimuthing podded propulsor, Transactions of the Society of Naval Architects and Marine Engineers, 113.<br />
+57.	P. Blondeaux, F. Fornarelli, L. Guglielmini, M.S. Triantafyllou, &amp; R. Verzicco, 2005, “Numerical experiments on flapping foils mimicking fish-like locomotion”, Physics of Fluids, 17, 113601.<br />
+58.	M.S. Triantafyllou, F.S. Hover, A.H. Techet, &amp; D.K.P. Yue, 2005, “Review of Hydrodynamic Scaling Laws in Aquatic Locomotion and Fish-Like Swimming”, Applied Mechanics Reviews, 58, (4), 226-237.<br />
+59.	F.S. Hover, O. Haugsdahl, &amp; M.S. Triantafyllou, 2004, “Control of angle of attack profiles in flapping foil propulsion”, Journal of Fluids and Structures, 19, 37-47.<br />
+60.	F.S. Hover, J.T. Davis, &amp; M.S. Triantafyllou 2004, “Three-dimensionality of mode transition in vortex-induced vibrations of a circular cylinder”, European Journal of Mechanics B - Fluids, 23 (1), 29-40.<br />
+61.	R. Pouliot, R. Azhari, H.F. Qanadilo, M.S. Triantafyllou, &amp; R. Langer, 2004, “Tissue engineering of fish skin: behavior of fish cells on poly(ethylene glycol terephthalate) /poly(butylene terephthalate) copolymers in relation to the composition of the polymer substrate as an initial step in constructing a robotic/living tissue hybrid”, Tissue Engineering, 10 (1-2), 7-21.<br />
+62.	M.S. Triantafyllou, A.H. Techet,  &amp; F.S. Hover, 2004, “Review of Experimental Work in Biomimetic Foils”, J. Oceanic Engng. (IEEE), 29 (3), 585-594.<br />
+63.	S. Licht, V. Polidoro, M. Flores, F.S. Hover, &amp; M.S. Triantafyllou, 2004, “Design and Projected Performance of a Flapping Foil AUV”, J. Oceanic Engng. (IEEE), 29 (3), 786-794.<br />
+64.	D.A. Read, F.S. Hover, &amp; M.S. Triantafyllou, 2003, “Forces on oscillating foils for propulsion and maneuvering”, Journal of Fluids and Structures, 17, 163-183.<br />
+65.	M.S. Triantafyllou, A.H. Techet, Q. Zhu, D.N. Beal, F.S. Hover, &amp; D.K.P. Yue, 2003, “Vorticity control in fish-like propulsion and maneuvering”, Integ. Comp. Biol., 42 (5), 1026-1031.<br />
+66.	J.C. Liao, D.N. Beal, G.V. Lauder, &amp; M.S. Triantafyllou, 2003, “The Karman gait: novel body kinematics of rainbow trout swimming in a vortex street”, Journal of Experimental Biology, 206, 1059-1073.<br />
+67.	A.H. Techet, F.S. Hover, &amp; M.S. Triantafyllou, 2003, “Separation and Turbulence Control in Biomimetic Flows”, Flow, Turbulence and Combustion, 71 (1-4), 105-118.<br />
+68.	L. Shen, X. Zhang, D.K.P. Yue, &amp; M.S. Triantafyllou, 2003, “Turbulent Flow over a Flexible Wall Undergoing a Streamwise Traveling Wavy Motion”, J. Fluid Mech., 484, 197-221.<br />
+69.	J.C. Liao, D.N. Beal, G.V. Lauder, &amp; M.S. Triantafyllou, 2003, “Fish exploiting vortices use less muscle”, Science, 302 (5650), 1566-1569, November 28, 2003.<br />
+70.	Q. Zhu, M.J. Wolfgang, D.K.P. Yue, &amp; M.S. Triantafyllou, 2002, “Three-dimensional flow structures and vorticity control in fish-like swimming”, Journal of Fluid Mechanics, 468, 1-28.<br />
+71.	J.I Gobat, M.A. Grosenbaugh, &amp; M.S. Triantafyllou, 2002, “Generalized- time integration solutions for hanging chain dynamics”, Journal of Engineering Mechanics, 128 (6), 677-687.<br />
+72.	T.R. Consi, P.A. Seifert, M.S. Triantafyllou, &amp; E.R. Edelman, 2001, “The Dorsal Fin Engine of the Seahorse, Hippocampus sp.”, Journal of Morphology, 248 (1), 80-97.<br />
+73.	F.S. Hover, &amp; M.S. Triantafyllou, 2001, “Galloping response of a cylinder with upstream wake interference”, Journal of Fluids and Structures, 15, 503-512.<br />
+74.	K. Burr, D.K.P. Yue, &amp; M.S. Triantafyllou, 2001, “Asymptotic governing equation for wave propagation along weakly non-uniform Euler-Bernoulli beams”, Journal of Sound and Vibration, 247 (4), 577-613.<br />
+75.	J.C. Liao, D.N. Beal, G.V. Lauder, &amp; M.S. Triantafyllou, 2001, “Novel body kinematics of trout swimming in a von Karman trail; can fish tune to vortices”, American Zoologist, 41 (6), 1505-1506.<br />
+76.	S.J. Brown, M.S. Triantafyllou, &amp; D.K.P. Yue, 2001, “Complex analysis of resonance conditions for coupled capillary and dilational waves”, Proc. Roy. Soc. London A, A 458, 1167-1187.<br />
+77.	F.S. Hover, H. Tvedt, &amp; M.S. Triantafyllou, 2001, “Vortex-induced vibrations of a cylinder with tripping wires”, Journal of Fluid Mechanics, 448, 175-195.<br />
+78.	K. Burr, D.K.P. Yue, &amp; M.S. Triantafyllou, 2000, “Asymptotic analysis of wave propagation along weakly non-uniform repetitive systems”, Journal of Sound and Vibration, 229 (1), 21-64.<br />
+79.	M.S. Triantafyllou, G.S. Triantafyllou, &amp; D.K.P. Yue, 2000, “Hydrodynamics of Fish Swimming”, Annual Review of Fluid Mechanics, 32, 33-53.<br />
+80.	H. Kagemoto, M.J. Wolfgang, M.S. Triantafyllou, &amp; D.K.P. Yue, 2000, “Force and power estimation in fish-like locomotion using a vortex-lattice method”, Journal of Fluids Engineering, 122, 239-253.<br />
+81.	Q. Zhu, Y. Liu, A.A. Tjavaras, M.S. Triantafyllou, &amp; D.K.P. Yue, 1999, “Mechanics of nonlinear short-wave generation by a moored near-surface buoy”, Journal of Fluid Mechanics, 381, 305-335.<br />
+82.	M.J. Wolfgang, J.M. Anderson, M.A. Grosenbaugh, D.K.P. Yue, &amp; M.S. Triantafyllou, 1999, “Near-body flow dynamics in swimming fish”, Journal of Experimental Biology, 202, 2303-2327.<br />
+83.	D.S. Barrett, M.S. Triantafyllou, D.K.P. Yue, M.A. Grosenbaugh, &amp; M.J. Wolfgang, 1999, “Drag reduction in fish-like locomotion”, Journal of Fluid Mechanics, 392, 183-212.<br />
+84.	M.J. Wolfgang, D.K.P. Yue, &amp; M.S. Triantafyllou, 1999, “Visualization of complex near-body transport processes in flexible-body propulsion”, Journal of Flow Visualization, 2(2), 143-151.<br />
+85.	F.S. Hover, &amp; M.S. Triantafyllou, 1999, “Linear dynamics of curved tensioned elastic beams”, Journal of Sound and Vibration, 228(4), 923-930.<br />
+86.	J.M. Anderson, K. Streitlien, D.S. Barrett, &amp; M.S. Triantafyllou, 1998, “Oscillating foils of high propulsive efficiency”, Journal of Fluid Mechanics, 360, 41-72.<br />
+87.	A.H. Techet, F.S. Hover, &amp; M.S. Triantafyllou, 1998, “Vortical patterns behind tapered cylinders oscillating transversely to a uniform flow”, Journal of Fluid Mechanics, 363, 79-96.<br />
+88.	F.S. Hover, A.H. Techet, &amp; M.S. Triantafyllou, 1998, “Forces on oscillating uniform and tapered cylinders in crossflow”, Journal of Fluid Mechanics, 363, 97-114.<br />
+89.	A.A. Tjavaras, Q. Zhu, Y. Liu, M.S. Triantafyllou &amp; D.K.P. Yue, 1998, “The mechanics of highly-extensible cables”, Journal of Sound and Vibration, 213, 709-737.<br />
+90.	F.S. Hover, S.N. Miller, &amp; M.S. Triantafyllou, 1997, “Vortex induced vibration of marine cables: Experiments using force feedback”, Journal of Fluids and Structures, 11, 307-326.<br />
+91.	F.S. Hover, S.N. Miller, &amp; M.S. Triantafyllou, 1997, “Vortex-induced oscillations in inclined cables”, Journal of Wind Engineering and Industrial Aerodynamics, 69-71, 203-211.<br />
+92.	T. Tjavaras, &amp; M.S. Triantafyllou, 1996, “Nonlinear response of two disordered pendula”, Journal of Sound and Vibration, 190, 65-76.<br />
+93.	T. Tjavaras, &amp; M.S. Triantafyllou, 1996, “Shock waves in curved synthetic cables”, Journal of Engineering Mechanics, 122 (4), 308-315.<br />
+94.	S. Mavrakos, V. Papazoglou, M.S. Triantafyllou, &amp; J. Chatjigeorgiou, 1996, “Deep Water Mooring Dynamics”, Marine Structures, 9 (1), 181-209.<br />
+95.	M.S. Triantafyllou, D.S. Barrett, D.K.P. Yue, J.M. Anderson, M.A. Grosenbaugh, K. Streitlien, &amp; G.S. Triantafyllou, 1996, “A New Paradigm of Propulsion and Maneuvering for Marine Vehicles”, Transactions of the Society of Naval Architects and Marine Engineers, 104, 81-100.<br />
+96.	K. Streitlien, G.S. Triantafyllou, &amp; M.S. Triantafyllou, 1996, “Efficient Foil Propulsion through Vortex Control”, AIAA Journal, 34 (11), 2315-2319.<br />
+97.	K. Streitlien, &amp; M.S. Triantafyllou, 1995, “Force and Moment on a Joukowski Profile in the Presence of Point Vortices”, AIAA Journal, 33 (4), 603-610.<br />
+98.	M.S. Triantafyllou, &amp; G.S. Triantafyllou, 1995, “An Efficient Swimming Machine”, Scientific American, 272 (3), 64-70.<br />
+99.	M.S. Triantafyllou, &amp; D.K.P. Yue, 1995, “Damping Amplification in Highly Extensible Hysteretic Cables”, Journal of Sound and Vibration, 186 (3), 355-368.<br />
+100.	F.S. Hover, M.A. Grosenbaugh, &amp; M.S. Triantafyllou, 1994, “Calculation of Dynamic Motions and Tensions in Towed Underwater Cables”, IEEE Journal of Oceanic Engineering, 19 (3), 449-457.<br />
+101.	M.S. Triantafyllou, &amp; C.T. Howell, 1994, “Dynamic Response of Cables under Negative Tension: An Ill-Posed Problem”, Journal of Sound and Vibration, 173 (4), 433-447.<br />
+102.	R. Gopalkrishnan, M.S. Triantafyllou, G.S. Triantafyllou, &amp; D.S. Barrett, 1994, “Active Vorticity Control in a Shear Flow Using a Flapping Foil”, Journal of Fluid Mechanics, 274, 1-21.<br />
+103.	C.T. Howell, &amp; M.S. Triantafyllou, 1993, “Stable and Unstable Nonlinear Resonant Response of Hanging Chains: Theory and Experiment”, Proceedings of the Royal Society of London, A 440, 345-364.<br />
+104.	G.S. Triantafyllou, M.S. Triantafyllou, &amp; M.A. Grosenbaugh, 1993, “Optimal Thrust Development in Oscillating Foils with Application to Fish Propulsion”, Journal of Fluids and Structures, 7, 205-224.<br />
+105.	M.S. Triantafyllou, &amp; C.T. Howell, 1993, “Nonlinear unstable response of hanging chains”, Journal of Sound and Vibration, 162 (2), 263-280.<br />
+106.	C.T. Howell, &amp; M.S. Triantafyllou, 1993, “Investigation of Large Amplitude Nonlinear Dynamics of Hanging Chains&#039;”, Int. J. Offshore Polar Engng., 3 (3), 162-167.<br />
+107.	M.S. Triantafyllou, &amp; C.T. Howell, 1993, “The Ill-Posed Problem of a Cable in Compression”, Int. J. Offshore Polar Engng., 3 (3), 168-171.<br />
+108.	C.N. White, R.G. Goldsmith, &amp; M.S. Triantafyllou, 1993, “Heave restrained platform reduces costs and eases operations”, J. Petrol. Technol., 45 (8), 752-761.<br />
+109.	M.S. Triantafyllou, &amp; C.T. Howell, 1992, “Nonlinear Impulsive Motions of Low Tension Cables”, Journal of Engineering Mechanics, 118 (4), 807-830.<br />
+110.	M.S. Triantafyllou, &amp; M.A. Grosenbaugh, 1991, “Robust Control for Underwater Vehicle Systems with Time Delays”, Journal of Oceanic Engineering (IEEE), OE-16 (1), 146-151.<br />
+111.	D.R. Yoerger, M.A. Grosenbaugh, M.S. Triantafyllou, &amp; J.J. Burgess, 1991, “Drag Forces and Flow-Induced Vibrations of a Long Vertical Tow Cable - Part I: Steady-State Towing Conditions”, Journal of Offshore Mechanics and Arctic Engineering (ASME), 113, 117-127.<br />
+112.	M.A. Grosenbaugh, D.R. Yoerger, M.S. Triantafyllou, &amp; F.S. Hover, 1991, “Drag Forces and Flow-Induced Vibrations of a Long Vertical Tow Cable - Part II: Unsteady Towing Conditions”, Journal of Offshore Mechanics and Arctic Engineering (ASME), 113 (3), 199-204.<br />
+113.	M.S. Triantafyllou, &amp; G.S. Triantafyllou, 1991, “The Paradox of the Hanging String: An Explanation using Singular Perturbations”, Journal of Sound and Vibration, 148 (2), 343-351.<br />
+114.	M.S. Triantafyllou, &amp; G.S. Triantafyllou, 1991, “Frequency Coalescence and Mode-Localization Phenomena: A Geometric Theory”, Journal of Sound and Vibration, 150 (3), 485-500.<br />
+115.	M.S. Triantafyllou, G.S. Triantafyllou, &amp; R. Gopalkrishnan, 1991, “Wake Mechanics for Thrust Generation in Oscillating Foils”, Physics of Fluids A, 3 (12), 2835-2837.<br />
+116.	V. Papazoglou, S. Mavrakos, &amp; M.S. Triantafyllou, 1990, ``Nonlinear cable response and model testing in water&#039;&#039;, Journal of Sound and Vibration, 140 (1), 103-115.<br />
+117.	J.J. Burgess, &amp; M.S. Triantafyllou, 1988, “The Elastic Frequencies of Cables”, Journal of Sound and Vibration, 120 (1), pp. 153-165.<br />
+118.	J.H. Milgram, M.S. Triantafyllou, F. Frimm, &amp; G. Anagnostou, 1988, “Seakeeping and Extreme Tensions in Offshore Towing”, Transactions of the Society of Naval Architects and Marine Engineers, 96, 35-72.<br />
+119.	G.S. Triantafyllou, M.S. Triantafyllou, &amp; C. Chryssostomidis, 1987, “Stability Analysis to Predict Vortex Street Characteristics and Forces on Circular Cylinders”, Journal of Offshore Mechanics and Arctic Engineering (ASME), 109, 148-154.<br />
+120.	G.S. Triantafyllou, M.S. Triantafyllou &amp; C. Chryssostomidis, 1986, “On the formation of vortex streets behind stationary cylinders”, Journal of Fluid Mechanics, 170, 461-477.<br />
+121.	M.S. Triantafyllou 1985, “The Dynamics of Translating Cables”, Journal of Sound and Vibration, 103 (2), pp. 171-182.<br />
+122.	M.S. Triantafyllou, A. Bliek, &amp; H. Shin, 1985, “Dynamic Analysis as a Tool for Mooring System Design”, Transactions of the Society of Naval Architects and Marine Engineers, 93, 303-324.<br />
+123.	M.S. Triantafyllou, &amp; L. Grinfogel, 1985, “Natural Frequencies and Natural Mode Shapes of Inclined Cables”, Journal of Structural Engineering (ASCE), 112 (1), 139-148.<br />
+124.	M.S. Triantafyllou, 1984, “The Dynamics of Taut Inclined Cables”, Quarterly Journal of Mechanics and Applied Mathematics, 37, 421-440.<br />
+125.	Y.C. Kim, &amp; M.S. Triantafyllou 1984, “The Nonlinear Dynamics of Long Slender Cylinders”, Journal of Energy Resources Technology, 106 (2), 250-256.<br />
+126.	M.S. Triantafyllou, M. Bodson, &amp; M. Athans, 1983, “Real Time Estimation of Ship Motions Using Kalman Filtering Techniques”, Journal of Oceanic Engineering (IEEE), OE-8 (1), 9-20.<br />
+127.	M.S. Triantafyllou, 1982, “Preliminary Design of Mooring Systems”, Journal of Ship Research, 26 (1), 25-35.<br />
+128.	M.S. Triantafyllou, 1982, “A Consistent Hydrodynamic Theory for Moored and Positioned Vessels”, Journal of Ship Research, 26 (2) 97-105.<br />
+129.	M.S. Triantafyllou, 1980, “Strip Theory of Ship Motions in the Presence of a Current”, Journal of Ship Research, 24 (1), 40-44.<br />
+130.	M.S. Triantafyllou, 1979, “Computer Aided Propeller Preliminary Design Using the B –series”, Marine Technology, 16 (4), 381-391.</p>
+<p>BOOKS AND CHAPTERS IN BOOKS<br />
+1.	M.S. Triantafyllou, R. Bourguet, J. Dahl, Y. Modarres-Sadeghi, 2015, “Vortex-Induced Vibrations of Slender Structures in Shear Flow”, Springer Handbook of Ocean Engineering.<br />
+2.	M.S. Triantafyllou, &amp; C. Chryssostomidis, 2014, Environment Description, Force Prediction, and Statistics for Ocean System Design, to be published in the Oxford University Press- MIT Pappalardo Series in Mechanical Engineering.<br />
+3.	G. Taylor, M.S. Triantafyllou, &amp; C. Tropea (editors), 2010, Animal Locomotion: The Physics of Flying, The Hydrodynamics of Swimming, Springer, Berlin.<br />
+4.	M.S. Triantafyllou, 2002, “Fish Hydrodynamics”, McGraw-Hill 2002 Yearbook of Science &amp; Technology.<br />
+5.	M.S. Triantafyllou, 1999, “Cable Dynamics for Offshore Applications”, in Developments in Offshore Engineering: Wave Phenomena and Offshore Topics, editor J.B. Herbich, 256-294, Gulf Publishing Company, Houston, Texas.<br />
+6.	F.S. Hover, &amp; M.S. Triantafyllou, 1999, “Combined simulation and real-time force feedback: A new tool for experimental fluid mechanics”, in System Theory: Modeling, Analysis and Control, eds. T. Tzaferis &amp; I. Schick, Kluwer Academic Publishers.</p>
+<p>Review Papers<br />
+1.	M.S. Triantafyllou, 2010, Science and Technology Challenges and Potential Game Changing Opportunities”, Paper Prepared for the Committee on Naval Engineering in the 21st Century, Transportation Research Board, National Academy of Sciences, May 2010.<br />
+2.	M.S. Triantafyllou, 1991, “Dynamics of cables, towing cables and mooring systems”, The Shock and Vibration Digest, 23 (7), 3-8.<br />
+3.	M.S. Triantafyllou, 1987, “Dynamics of cables and chains”, The Shock and Vibration Digest, 19 (12), 3-5.<br />
+4.	M.S. Triantafyllou, 1984, “Linear dynamics of cables and chains”, The Shock and Vibration Digest, 16 (3), 9-17.</p>
+</div></div><div class='column small-12 profile-block'>
+              <div id='patents' class='profile-block-content'><h2>Patents</h2><ul><li> J.G. de Oliveira, A.W. Morton, P.R. Erb, &amp; M.S. Triantafyllou, “Buoy Having Minimal Motion Characteristics”, U.S. Patent 4,768,984, Sept. 6, 1988.</li>
+<li>M.S. Triantafyllou &amp; D.S. Barrett, “Propulsion Mechanism Employing Flapping Foils”, U.S. Patent 5,401,196, March 28, 1995.</li>
+<li>M.S. Triantafyllou &amp; D.S. Barrett, “Method and Apparatus for Reducing Drag on a Moving Body”, U.S. Patent 5,740,750, April 21, 1998.</li>
+<li>M.S. Triantafyllou, 1999, “Human Powered Marine Vehicle and Method for the Operation Thereof”, U.S. Patent 5,997,369, December 7, 1999.</li>
+<li>A.G.P Kottapalli, C.W. Tan, J.M. Miao, G. Barbastathis &amp; M.S. Triantafyllou, 2013, “A liquid crystal polymer membrane MEMS sensor for flow rate and flow direction sensing, medical and environmental applications”, US Provisional patent Application No.: 61/541,232, ILO Ref: 11266S-CE-US/PRV.</li>
+<li>A.G.P Kottapalli, J.M. Miao, M. Asadnia, &amp; M.S. Triantafyllou, 2014, “Sensor, Method for forming the same, and method of controlling the same”, International Publication Number WO 2014/107139 A1, 10 July 2014.</li>
+<li>A.G.P Kottapalli, M. Asadnia, J.M. Miao, &amp; M.S. Triantafyllou, 2014, “Bio-inspired nanofibril encapsulated hydrogel cupulae for ultra-sensitive MEMS flow sensor development”, US Provisional patent Application No.: 61/748,184, ILO Ref: 2378S-CE/PRV (Currently under full patent conversion).</li>
+<li>M. Asadniaye Fard Jahromi, A.G.P Kottapalli, , J.M. Miao, &amp; M.S. Triantafyllou, 2014, “Ultrasensitive and Self-Powered PDVF Nanofiber Strain Sensors”, US Provisional patent Application (filed January 7, 2015).<br /> </li>
+</ul></div></div></div></section>  </div>
+</div>
+  </div>
+        <div class="region region-footer">
+    <div id="block-block-2" class="block block-block">
+
+    
+  <div class="content">
+    <footer><div class="footer-inner mesh-bg light">
+        <div class="clearfix row full-width">
+            <div class="helpful-links clearfix large-6 medium-12 columns">
+                <ul class="link-group"><li class="top-link"><a href="#"><span class="heavy">at MechE</span></a></li>
+                    <li><a href="/sites/default/files/ME-Diversity-Statement.pdf">Diversity Statement</a></li>    
+                    <li><a href="/faculty-positions">Faculty Positions</a></li> 
+                    <li><a href="/contact">Contact</a></li>
+                    <li><a href="/how-apply">Apply</a></li>
+                    <li><a href="/sitemap.xml">Sitemap</a></li>
+                    <li><a href="/privacy">Privacy</a></li>
+                    <li><a href="https://accessibility.mit.edu/">Accessibility</a></li>
+                    <li><a href="/credits">Credits</a></li>
+                    <li><a class="toggle-contrast" href="#">Toggle High Contrast</a></li>
+                </ul><ul class="link-group"><li class="top-link"><a href="#"><span class="heavy">Student</span> <span class="light">Resources</span></a></li>
+                    <li><a href="https://meche-ad-portal.mit.edu/">MechE Academic Dashboard</a></li>
+                    <li><a href="https://meundergrad.mit.edu/">MechE Undergrad Portal</a></li>
+                    <li><a href="https://meche-res.mit.edu/resources/2A/">Online 2A Contract</a></li>
+                    <li><a href="https://meundergrad.mit.edu/sb-thesis-information">SB Thesis Information</a></li>
+                    <li><a href="https://meche-res.mit.edu/resources/grad/">Online Grad Card</a></li>
+                    <li><a href="http://odge.mit.edu/gpp/oversight/petitions/">ODGE Petition</a></li>
+                        <li><a href="/sites/default/files/ON-LINE_THESIS_SUBMISSION.pdf">On-Line Thesis Submission</a></li>
+                    <li><a href="/sites/default/files/Zoom%20Instructions%20for%20PhD%20Thesis%20Defenses.pdf">Zoom Instructions for Virtual Defenses</a></li>
+                    <li><a href="/sites/default/files/MechE_Grad_Guide.pdf">Guide to Graduate Study</a></li>
+                    <li><a href="http://handbook.mit.edu/">MIT's Mind &amp; Hand Book</a></li>
+                </ul><ul class="link-group"><li class="top-link"><a href="#"><span class="heavy">Staff</span> <span class="light">Resources</span></a></li>
+                    <li><a href="https://meche-reservations.mit.edu/Web/">Room Reservations</a></li>
+                   <li><a href="https://meche-res.mit.edu/resource_links/">MechE Resources</a></li>
+                   <li><a href="https://meche.mit.edu/Shibboleth.sso/Login?target=https://meche.mit.edu/handy-links">Edit My Profile <i class="fa fa-lock"></i></a></li>
+                </ul></div>
+            
+            <div class="social-links large-3 medium-12 columns">
+                <hr class="meche-dots thin pad-both" /><p>Follow our research.<br />Or, just follow us.</p>
+                <ul class="social-btns"><li><a href="http://facebook.com/mitmeche" target="_blank" class="social-btn"><i class="fa fa-facebook"></i><span>Facebook</span></a></li>
+                    <li><a href="http://twitter.com/mitmeche" target="_blank" class="social-btn"><i class="fa fa-twitter"></i><span>Twitter</span></a></li>
+                    <li><a href="http://www.youtube.com/mitmeche" target="_blank" class="social-btn"><i class="fa fa-youtube"></i><span>YouTube</span></a></li>
+                    <li><a href="http://instagram.com/mitmeche" target="_blank" class="social-btn"><i class="fa fa-instagram"></i><span>Instagram</span></a></li>
+                    <li><a href="https://www.linkedin.com/company/11244119/" target="_blank" class="social-btn"><i class="fa fa-linkedin"></i><span>Linkedin</span></a></li>
+                </ul><hr class="meche-dots thin pad-both" /><link href="//cdn-images.mailchimp.com/embedcode/slim-10_7.css" rel="stylesheet" type="text/css" /><style type="text/css">
+<!--/*--><![CDATA[/* ><!--*/
+
+                #mc_embed_signup{clear:left; font-family:"Rajdhani",Helvetica,sans-serif; margin-top: 20px; margin-left: 0px; padding-let: 0px;}
+                /* Add your own Mailchimp form style overrides in your site stylesheet or in this style block.
+                   We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+
+/*--><!]]>*/
+</style><div id="mc_embed_signup">
+<form action="https://mit.us17.list-manage.com/subscribe/post?u=6f5c7fd40df3024d6e08b1cbd&amp;id=917562481d" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate="">
+    <div id="mc_embed_signup_scroll">
+                <p><label for="mce-EMAIL" style="color: #02b2f4; font-weight: normal;">Sign up for our monthly newsletter</label></p>
+                <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required="" style="width: 70%;" /><!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups--><div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_6f5c7fd40df3024d6e08b1cbd_917562481d" tabindex="-1" value="" /></div>
+    <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button" /></div>
+    </div>
+</form>
+</div>
+ 
+<!--End mc_embed_signup-->
+
+
+
+            </div>
+
+            <div class="find-us medium-12 columns clearfix">
+                
+                <hr class="meche-dots thin pad-both" /><div class="address-group">
+                    <h3><span class="heavy">MechE</span> <span class="light">Analog</span></h3>
+                    <p>Massachusetts Institute of Technology</p>
+                    <p class="heavy">Department of Mechanical Engineering</p><br /><p>77 Massachusetts Avenue, Room 3-173</p>
+                    <p>Cambridge, Massachusetts 02139</p>
+                </div>
+                <div class="clearfix find-us-logos">
+                    <a class="pull-left logo-meche" href="http://meche.mit.edu"><img src="/sites/all/themes/mit_meche/img/logo-meche-footer@2x.png" alt="MIT Mechanical Engineering" /></a>
+                    <a class="pull-left logo-mit" href="http://www.mit.edu"><img src="/sites/all/themes/mit_meche/img/logo-mit-footer@2x.png" alt="MIT" /></a>
+                </div>
+            </div>
+            
+        </div>
+        
+    </div>
+</footer>  </div>
+</div>
+  </div>
+      
+    </div> <!-- close off-canvas inner-wrap -->
+  </div> <!-- close off-canvas wrap -->
+
+
+          <!-- JS Files -->
+
+        <!-- Loaded from CDN -->
+        
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+        <script>window.jQuery || document.write('<script src="/js/vendor/jquery.js"><\/script>')</script>
+        <!--
+            Load Concatenated and Minified Scripts ( plugins.js, foundation.js, scripts.js )
+        -->
+        <!-- jQuery Modal -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+
+        <script src="/sites/all/themes/mit_meche/js/scripts.all.min.js"></script>
+        <script type="text/javascript" src="/sites/all/themes/mit_meche/js/vendor/packery.pkgd.min.js"></script>
+        
+  <script>
+
+      $(document).ready(function(){
+
+          MecheController.init({});
+          
+          $(window).on("throttledresize", function( event ) {
+          
+              MecheController.resize();
+
+          }).trigger("throttledresize");
+      });
+
+  </script>
+
+
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"ab0374a39e","applicationID":"39297557","transactionName":"Z1QGZBZQVkNYU0YNWV4eJVMQWFdeFl1XB15VbgZcC1JTQ2ZAQAtQWV0BbxRQX1U=","queueTime":0,"applicationTime":215,"atts":"SxMFEl5KRU0=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

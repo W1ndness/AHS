@@ -1,0 +1,487 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0">
+    <title>北京师范大学工商与经济管理学院</title>
+    <link rel="stylesheet" href="http://bs.bnu.edu.cn/new-ver-css/reset.css">
+    <link rel="stylesheet" href="http://bs.bnu.edu.cn/new-ver-css/index.css">
+	<link rel="stylesheet" href="http://bs.bnu.edu.cn/new-ver-css/xyslist.css">
+	<link rel="stylesheet" href="http://bs.bnu.edu.cn/new-ver-css/xys-tf.css">
+    <style>
+        .container{
+            width:100%;
+            height: auto;
+            overflow: hidden;
+        }
+        .header{
+            width:100%;
+            height:116px;
+            background:#EFF8FF;
+        }
+        .logo1{
+            width:1200px!important;
+            margin:0 auto;
+            position:relative;
+            float: none;
+			display:block;
+        }
+        .logo2{
+            float:right;
+        }
+        .logo1 p{
+            position:absolute;
+            top:5px;
+            right:5px;
+            font-size:13px;
+        }
+        .logo1 p:hover{
+            color:#112769;
+        }
+        .tu{
+            width:100%;
+            height:240px;
+            background:url('http://bs.bnu.edu.cn/newweb/grzy/images/tu.jpg') no-repeat top center;
+            background-size: 100%;
+        }
+        .lujing{
+            width:1200px;
+            height:58px;
+            margin:0 auto;
+            border-bottom:1px solid #aaa;
+            overflow:hidden;
+        }
+        .lujings{
+            margin:24px 0 0 0;
+            font-size:14px;
+        }
+        .content{
+            color:#333;
+            width:1200px;
+/*            height:2000px;*/
+            margin:0 auto;
+            margin-top:40px;
+/*            background:#c4c4c4;*/
+        }
+        
+        .xian{
+            width:100%;
+            height:8px;
+            background:#9A0812;
+        }
+        
+        .leftc{
+            float:left;
+        }
+        .rightc{
+            float:left;
+            margin-left:50px;
+/*            background:#666;*/
+            width:880px;
+/*            height:1000px;*/
+        }
+        .rheader{
+            width:880px;
+            height:210px;
+/*            background:yellow;*/
+        }
+        .xm{
+            font-size:30px;
+            height:40px;
+/*            border-bottom:4px solid #9A0812;*/
+            width:auto;
+            float:left;
+            line-height:40px;
+			margin-right:30px;
+        }
+        .zhiw{
+            font-size:18px;
+            height:40px;
+            line-height:50px;
+            margin-bottom:30px;
+        }
+        .tel{
+                font-size: 16px;
+                margin-top: 10px;
+                line-height: 20px;
+        }
+        .grjj{
+/*            height:300px;*/
+            width:880px;
+/*            background:yellow;*/
+            padding-bottom:40px;
+        }
+        .jjh{
+                font-size: 20px;
+                border-bottom: 1px solid #cecece;
+                height: 40px;
+                line-height: 40px;
+                padding-left: 30px;
+                background: url(http://bs.bnu.edu.cn/newweb/grzy/images/zw.png) no-repeat 0 16px;
+        }
+        
+        .jjc{
+            font-size:14px;
+            margin-top:30px;
+           
+            line-height:28px;
+            overflow:hidden;
+            text-align: justify;
+            text-justify:inter-ideograph;
+        }
+        .jjc1{
+            height:225px;
+            font-size:14px;
+            margin-top:30px;
+            
+            line-height:28px;
+            overflow:hidden;
+            text-align: justify;
+            text-justify:inter-ideograph;
+        }
+        
+        .dianji1{
+                background: url(http://bs.bnu.edu.cn/newweb/grzy/images/zw.png) no-repeat 0 -50px;
+                width: 13px;
+                height: 13px;
+                cursor: pointer;
+                display: block;
+            margin-top: 20px;
+            transition: all .2s linear;
+        }
+        .dianji1:hover{
+            background: url(http://bs.bnu.edu.cn/newweb/grzy/images/zw.png) no-repeat 0 -64px;
+        }
+        
+        .dianji{
+                background: url(http://bs.bnu.edu.cn/newweb/grzy/images/zw.png) no-repeat 0 -24px;
+                height: 13px;
+                cursor: pointer;
+                display: block;
+            margin-top: 20px;
+            transition: all .2s linear;
+        }
+        .dianji:hover{
+            background: url(http://bs.bnu.edu.cn/newweb/grzy/images/zw.png) no-repeat 0 -37px;
+        }
+        #jjc1{
+            text-indent:0em;
+        }
+        
+        .bks{
+            font-size:14px;
+            font-weight: 800;
+            margin-top:30px;
+            height:auto;
+            line-height:36px;
+        }
+        .bks1{
+            font-size:14px;
+            margin-top:30px;
+            height:auto;
+            line-height:36px;
+        }
+        .bksc{
+            height:36px;
+            line-height:36px;
+            font-size:14px;
+        }
+        
+        .yanzheng{
+            width:1200px;
+            height:100px;
+            margin:0 auto;
+        }
+        .yanzheng img{
+            display:block;
+            margin-top:26px;
+            float:left;
+        }
+		
+#appgame-leftside-share{width:42px; height:216px; position: fixed;bottom: 30px;right: 30px; z-index:9999;}
+.appgame-leftside-share{width:42px; height:259px;}
+#appgame-leftside-share a{display:block; width:42px; height:44px; background-color:#e6e6e6; z-index:1; position:absolute; left:0; box-sizing:border-box; -moz-box-sizing:border-box; border:1px #ddd solid; background-image:url(http://gh.bnu.edu.cn/images/share-icons.png); background-repeat:no-repeat; margin:0;  transition:0.4s; -webkit-transition:0.4s; -moz-transition:0.4s;}
+#appgame-leftside-share a:hover{background-color:#fff; border:1px #eee solid; z-index:2;}
+/*.appgame-leftside-weixin{top:0; background-position:-88px 0;}
+.appgame-leftside-weixin:hover{background-position:0px 0;}
+.appgame-leftside-qzone{top:43px; background-position:-88px -44px;}
+.appgame-leftside-qzone:hover{background-position:0px -44px;}*/
+.appgame-leftside-search{top:86px; background-position:-93px -89px;}
+.appgame-leftside-search:hover{background-position:-5px -86px;}
+.appgame-leftside-weixin{top:129px; background-position:-88px 0px;}
+.appgame-leftside-weixin:hover{background-position:0px 0px;}
+/*.appgame-leftside-fbook{top:172px; background-position:-88px -176px;}
+.appgame-leftside-fbook:hover{background-position:0px -176px;}
+.appgame-leftside-twi{top:215px; background-position:-88px -220px;}
+.appgame-leftside-twi:hover{background-position:0px -220px;}*/
+#appgame-leftside-share .appgame-leftside-top{background-image:url(http://gh.bnu.edu.cn/images/leftnav-off.png); background-position:-1px -395px; top:130px; cursor:pointer;}
+
+.rwt_share {
+/*	overflow:hidden;*/
+	float:left;
+	position:relative;
+}
+.rwt_share a {
+	display:inline-block;
+	margin-right:10px;
+	text-indent:-9999px;
+	margin-bottom:10px;
+	width:24px;
+	height:24px;
+	overflow:hidden;
+	cursor:pointer;
+	float:left;
+	font-size:12px;
+}
+.rwts_weixin {
+	background-position:0 -1612px;
+}
+.rwts_tsina {
+	background-position:0 -104px;
+}
+.rwts_tqq {
+	background-position:0 -260px;
+}
+.rwts_qzone {
+	background-position:0 -52px;
+}
+.rwts_sqq {
+	background-position:0 -2652px;
+}
+.rwts_tieba {
+	background-position:0 -728px;
+}
+.rwts_renren {
+	background-position:0 -208px;
+}
+.rwts_kaixin001 {
+	background-position:0 -312px;
+}
+.rwts_tqf {
+	background-position:0 -364px;
+}
+.rwts_douban {
+	background-position:0 -468px;
+}
+.rwts_twi {
+	background-position:0 -1404px;
+}
+.rwts_fbook {
+	background-position:0 -1352px;
+}
+.rwts_ty {
+	background-position:0 -1196px;
+}
+.rwts_mogujie {
+	background-position:0 -1768px;
+}
+.rwts_meilishuo {
+	background-position:0 -1716px;
+}
+.rwts_huaban {
+	background-position:0 -1872px;
+}
+.rwts_hi {
+	background-position:0 -416px;
+}
+.rwts_tsohu {
+	background-position:0 -520px;
+}
+.rwts_more {
+	background-position:0 0;
+}
+.rwt_share_wxShow_code>img {
+	width:100%;
+}
+.bks1 li{
+	list-style:disc;
+}
+@media screen and (max-width: 1200px){
+	.logo1{
+		width:100%!important;
+	}
+	.leftc img{
+		width:50%!important;
+		height:50%!important;
+	}
+	.logo2{display:none;}
+	.lujing{
+		width:90%;
+	}
+	.content{
+		width:90%;
+	}
+	.leftc{
+		float:none;
+		
+	}
+	.tu{display:none;}
+	
+	.rightc{
+		float:none;
+		width:100%;
+		margin-left:0px;
+	}
+	.footers{width:100%;}
+	.rheader{width:100%;}
+	.grjj{width:100%;}
+}
+@media screen and (max-width: 600px){
+.l3{width:95%;}
+.share{display:none;}
+.leftc img{
+		width:70%!important;
+		height:70%!important;
+	}
+}
+  
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo1">
+                <img src="http://bs.bnu.edu.cn/newweb/grzy/images/logo.png" alt="" class="l3" style="margin-top: 25px;float:left;">
+                <img src="http://bs.bnu.edu.cn/newweb/grzy/images/logo2.png" alt="" class="logo2">
+                <a href=""><p>ENGLISH VERSION</p></a>
+            </div>
+        </div>
+        <div class="xian"></div>
+        <div class="tu"></div>
+        <div class="lujing">
+            <div class="lujings">
+                <a href="#">师资队伍</a>
+                 | 
+                <a href="#">经济系</a>
+            </div>
+        </div>
+        <div class="content">
+            <div class="leftc">
+                <img src="/Public/upload/2020/09/16/5f61e322bb127.png" alt="" width="270">
+            </div>
+            <div class="rightc">
+                <div class="rheader">
+                    <p class="xm">万海远 教授</p>
+                    <p class="zhiw"></p>
+                    <p class="tel"><strong style="display:block;width:100px;float:left;">电话</strong>：</p> 
+                 <p class="tel"><strong style="display:block;width:100px;float:left;">E-mail</strong>：why@bnu.edu.cn</p>
+                 <p class="tel"><strong style="display:block;width:100px;float:left;">Office hour</strong>：</p>
+                 <p class="tel"><strong style="display:block;width:100px;float:left;">系所中心</strong>：经济系</p>
+              </div>
+			  <div class="grjj">
+                    <p class="jjh">个人简历</p>
+                    <div class="bks1" id="jjc"><span style="font-family: " microsoft="" yahei="" font-size:16px="">法国里昂大学博士</span><br /></div>
+                    
+                </div>				<div class="grjj">
+                    <p class="jjh">研究领域</p>
+                    <div class="bks1">收入分配与宏观经济政策</div>
+                </div>				<div class="grjj">
+                    <p class="jjh">研究成果</p>
+                    <div class="bks1" id="jjc1"><p style="font-family: " microsoft="" yahei="" font-size:16px=""><span style="font-family: " times="" new="" roman=""><span style="font-size: 14px;"></span></span></p><p style="text-align:left;"><span style="font-family:Times New Roman;"></span></p><p style="text-align:left;"><span style="font-family:Times New Roman;"></span></p><p style="text-align:left;"><span style="font-family:Times New Roman;">1.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <strong>《走向共同富裕之路》</strong>，人民出版社，2022年1月</span></p><p style="text-align:left;"><span style="font-family: &quot;Times New Roman&quot;;">2.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="font-family: &quot;Times New Roman&quot;; "><strong>《居民收入分配四十年》</strong></span><span style="font-family: &quot;Times New Roman&quot;;">，格致出版社，2018年12月&nbsp; &nbsp;</span><br /></p><p style="text-align:left;"><span style="font-family:Times New Roman;">3.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <strong>《税收制度的收入分配效应》</strong>，社会科学文献出版社，2018年10月</span></p><p style="text-align:left;"><span style="font-family:Times New Roman;">4.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <strong>《收入不平等与公共政策》</strong>，社会科学文献出版社，2017年7月 &nbsp;</span></p><p style="text-align:left;"><span style="font-family:Times New Roman;">5.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <strong>《新型城镇化与人口迁移模式》</strong>，广东经济出版社，2014年8月</span></p><p style="text-align:left;"><span style="font-family:Times New Roman;">6.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <strong>《经济新常态下居民收入分配研究》</strong>，经济科学出版社，2019年4月</span></p><p style="text-align:left;"><span style="font-family:Times New Roman;">7.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 《城市社会基础设施投资的创业带动作用》，<strong>《经济研究》</strong>，2021年9期</span></p><p style="text-align:left;"><span style="font-family:Times New Roman;">8.&nbsp;&nbsp;&nbsp; 《户籍歧视与城乡收入差距》，<strong>《经济研究》</strong>，2013年9期</span></p><p style="text-align:left;"><span style="font-family:Times New Roman;">9.&nbsp;&nbsp;&nbsp; 《中国住房需求居高不下之谜》，<strong>《经济研究》</strong>，2015年5期</span></p><p style="text-align:left;"><span style="font-family:Times New Roman;">10.&nbsp;&nbsp;&nbsp; 《劳动力市场培育与中等收入陷阱》，<strong>《经济研究》</strong>，2014年4期</span></p><p style="text-align:left;"><span style="font-family:Times New Roman;">11.&nbsp;&nbsp;&nbsp; 《中国农村财政与村庄收入分配》，<strong>《管理世界》</strong>，2015年12期</span></p><p style="text-align:left;"><span style="font-family:Times New Roman;">12.&nbsp;&nbsp;&nbsp; 《住房公积金制度的收入分配效应》，<strong>《经济学(季刊)》</strong>，2020年4期</span></p><p style="text-align:left;"><span style="font-family:Times New Roman;">13.&nbsp;&nbsp;&nbsp; 《共同富裕的理论内涵与量化方法》，<strong>《财贸经济》</strong>，2021年12期</span></p><p style="text-align:left;"><span style="font-family:Times New Roman;">14.&nbsp;&nbsp;&nbsp; 《为教育而流动》，<strong>《财贸经济》</strong>，2018年1期</span></p><p style="text-align:left;"><span style="font-family:Times New Roman;">15.&nbsp;&nbsp;&nbsp; 《贫民住区改造与主观幸福感》，<strong>《财贸经济》</strong>，2013年6期</span></p><p style="text-align:left;"><span style="font-family:Times New Roman;">16.&nbsp;&nbsp;&nbsp; 《高净值人群缺失与财产差距》，<strong>《财政研究》</strong>，2022年2期</span></p><p style="text-align:left;"><span style="font-family:Times New Roman;">17.&nbsp;&nbsp;&nbsp; 《共享发展的全球比较与共同富裕的中国路径》，<strong>《财政研究》</strong>，2021年9期</span></p><p style="text-align:left;"><span style="font-family:Times New Roman;">18.&nbsp;&nbsp;&nbsp; 《中国老年人低就业率成因》，《<strong>统计研究</strong>》，2020年4期 &nbsp;</span></p><p style="text-align:left;"><span style="font-family:Times New Roman;">19.&nbsp;&nbsp;&nbsp; 《中国收入分配极化的长期变动趋势》，《<strong>统计研究</strong>》，2022年</span></p><p style="text-align:left;"><span style="font-family:Times New Roman;">20.&nbsp;&nbsp;&nbsp; 《从投资拉动到创新驱动》，《<strong>统计研究</strong>》，2019年3期</span></p><p style="text-align:left;"><span style="font-family:Times New Roman;">21.&nbsp;&nbsp;&nbsp; 《农户退耕还林政策的参与决策研究》，<strong>《统计研究》</strong>，2013年8期</span></p><p style="text-align:left;"><span style="font-family:Times New Roman;">22.&nbsp;&nbsp;&nbsp; 《城市医生资源和新冠肺炎防控效率》，《<strong>统计研究</strong>》，2021年5期</span></p><p style="text-align:left;"><span style="font-family:Times New Roman;">23.&nbsp;&nbsp;&nbsp; 《全民基本收入理论与政策评介》，《<strong>经济学动态</strong>》，2020年1期</span></p><p style="text-align:left;"><span style="font-family:Times New Roman;">24.&nbsp;&nbsp;&nbsp; 《提高我国基尼系数估算的可信度》，<strong>《经济学动态》</strong>，2013年2期</span></p><p style="text-align:left;"><span style="font-family:Times New Roman;">25.&nbsp;&nbsp;&nbsp; 《收入分配格局与再分配政策》(会综述)，《<strong>经济学动态</strong>》，2017年6期</span></p><p style="text-align:left;"><span style="font-family:Times New Roman;">26.&nbsp;&nbsp;&nbsp; 《我国城乡居民收入差距趋势预测》，《<strong>数量经济与技术经济研究</strong>》，2019年3期</span></p><p style="text-align:left;"><span style="font-family:Times New Roman;">27.&nbsp;&nbsp;&nbsp; 《住房公积金与居民收入分配》，《<strong>数量经济与技术经济研究</strong>》，2018年9期</span></p><p style="text-align:left;"><span style="font-family:Times New Roman;">28.&nbsp;&nbsp;&nbsp; 《生育影响住房需求》，《<strong>经济科学</strong>》，2019年4期</span></p><p style="text-align:left;"><span style="font-family:Times New Roman;">29.&nbsp;&nbsp;&nbsp; 《南北工资差距的新变化及市场化成因》，<strong>《中国人口科学》</strong>，2021年8期</span></p><p style="text-align:left;"><span style="font-family:Times New Roman;">30.&nbsp;&nbsp;&nbsp; 《贫困残疾人识别及扶贫政策评价》，<strong>《中国人口科学》</strong>，2011年4期</span></p><p style="text-align:left;"><span style="font-family:Times New Roman;">31.&nbsp;&nbsp;&nbsp; 《高净值人群修补技术新进展》，<strong>《中国人口科学》</strong>，2020年10期</span></p><p style="text-align:left;"><span style="font-family:Times New Roman;">32.&nbsp;&nbsp;&nbsp; 《中国居民财产差距研究的回顾与展望》，<strong>《劳动经济研究》</strong>，2015年5期</span></p><p style="text-align:left;"><span style="font-family:Times New Roman;">33.&nbsp;&nbsp;&nbsp; 《房价下跌的消费冲击》，<strong>《劳动经济研究》</strong>，2020年3期。</span></p><p style="text-align:left;"><span style="font-family:Times New Roman;">34.&nbsp;&nbsp;&nbsp; 《扩大我国中等收入群体》，《<strong>新华文摘</strong>》，2017年19期 &nbsp;</span></p><p style="text-align:left;"><span style="font-family:Times New Roman;">35.&nbsp;&nbsp;&nbsp; 《共同富裕的改革路径与推进政策》，《<strong>北京工商大学学报</strong>》，2022年3期</span></p><p style="text-align:left;"><span style="font-family:Times New Roman;">36.&nbsp;&nbsp;&nbsp; 《我国中等收入群体比重及特征》，《<strong>北京工商大学学报</strong>》，2018年11期</span></p><p style="text-align:left;"><span style="font-family:Times New Roman;">37.&nbsp;&nbsp;&nbsp; 《对当前劳动力成本的基本判断》，《<strong>China Economist</strong>》，2017年1期</span></p><p style="text-align:left;"><span style="font-family:Times New Roman;">38.&nbsp;&nbsp;&nbsp; 《扩大中等收入群体》，《<strong>宏观经济管理</strong>》，2016年9期</span></p><p style="text-align:left;"><span style="font-family:Times New Roman;">39.&nbsp;&nbsp;&nbsp; 《收入分配政策的政府协同机制研究》，<strong>《行政管理改革》，</strong>2015年1期</span></p><p style="text-align:left;"><span style="font-family:Times New Roman;">40.&nbsp;&nbsp;&nbsp; “<strong>Income Distribution and China's Economic New Normal”</strong>,<em> World Scientific Press</em>, 2019, September. </span></p><p style="text-align:left;"><span style="font-family:Times New Roman;">41.&nbsp;&nbsp;&nbsp; “Why has China’s Inequality of Household Wealth Risen Rapidly in the Twenty-First Century?”, <em><strong>Review of Income and Wealth</strong></em>, 2021, No.12507. </span></p><p style="text-align:left;"><span style="font-family:Times New Roman;">42.&nbsp;&nbsp;&nbsp; “The Long-term Evolution of Income Polarizationin China”, <em><strong>Journal of Development Studies</strong></em>, 2021, 21(4). &nbsp;</span></p><p style="text-align:left;"><span style="font-family:Times New Roman;">43.&nbsp;&nbsp;&nbsp; <span style="color:black;">“</span>Working beyond the Normal Retirement Age in Urban China and Urban Russia”,<em><strong>IZA Journal of Development and Migration</strong></em>, 2021, 3(11). &nbsp;</span></p><p style="text-align:left;"><span style="font-family:Times New Roman;"><span style="color:black;">44.&nbsp;&nbsp;&nbsp; </span><span style="color:black;">“Top Incomes in China: Data Collection and the Impact on Income Inequality”, <em><strong>China Economic Review</strong></em>, May 2020.</span></span></p><p style="text-align:left;"><span style="font-family:Times New Roman;"><span style="color:black;">45.&nbsp;&nbsp;&nbsp; </span><span style="color:black;">“Social Stratification and Housing Wealth Inequality in Transitional Urban China”, <em><strong>International Journal of Urban Sciences</strong></em>,November, 2020.&nbsp; </span></span></p><p style="text-align:left;"><span style="font-family:Times New Roman;"><span style="color:black;">46.&nbsp;&nbsp;&nbsp; </span><span style="color:black;">“Wage Growth and Wage Inequality in Urban China:1988–2013</span>”,<span style="color:black;"> <em><strong>China Economic Review</strong></em>, July 2020.</span></span></p><p style="text-align:left;"><span style="font-family:Times New Roman;"><span style="color:black;">47.&nbsp;&nbsp;&nbsp; </span><span style="color:black;">“Effect of Minimum Wage Regulation on Wage Growth and Its Distribution in China”, in <em><strong>Minimum Wages in China</strong> </em>(Li S., LinS. eds) May, 2021.</span></span></p><p style="text-align:left;"><span style="font-family:Times New Roman;">48.&nbsp;&nbsp;&nbsp; “The Increasing Inequality of Wealth inChina”, Ch. 4 in T. Sicular eds, <em><strong>Changing Trends in China’s Inequality.Evidence, Analysis and Prospects</strong></em>, New York: Oxford University Press.</span></p><p style="text-align:left;"><span style="font-family:Times New Roman;">49.&nbsp;&nbsp;&nbsp; “Evolution of Wealth Inequality inChina”, <em><strong>China Economic Journal</strong></em><strong>,</strong> 8(3), 2015. </span></p><p style="text-align:left;"><span style="font-family:Times New Roman;">50.&nbsp;&nbsp;&nbsp; “The Agricultural Tax Abolishment Program and On-farm Labour Time in Rural China”, Ch. 5 in J. Whalley eds.,<em> <strong>The Economies of China and India,</strong> WorldScientific</em>, June, 2017. </span></p><p style="text-align:left;"><span style="font-family:Times New Roman;">51.&nbsp;&nbsp;&nbsp; “Yuan and Roubles: Comparing Wage Determination in Urban China and Russia”, <em><strong>China Economic Review</strong>,</em> February, 2015.</span></p><p style="text-align:left;"><span style="font-family:Times New Roman;">52.&nbsp;&nbsp;&nbsp; “Institutional Labour Market Segmentation in China”, <em><strong>Business and Public Administration Studies</strong></em>, 2014, Vol.8, No. 1.</span></p><p style="text-align:left;"><span style="font-family:Times New Roman;">53.&nbsp;&nbsp;&nbsp; “Payments for Ecological Restorationand Rural Labor Migration in China”,<em> <strong>IZA Journal of Migration</strong></em>, Dec,2012, pp.717-735.</span></p><p style="text-align:left;"><span style="font-family:Times New Roman;"></span></p><p style="font-family: " microsoft="" yahei="" font-size:16px=""><span style="font-family: " times="" new="" roman="" font-size:="" 14px=""></span></p></div>
+                    
+                </div>				<div class="grjj">
+                    <p class="jjh">研究课题</p>
+                  
+                    <div class="bks1"><p style="text-align:left;"><span style="font-family:Times New Roman;"></span></p><p style="text-align:left;"><span style="font-family:Times New Roman;"></span></p><p style="text-align:left;"><span style="font-family:Times New Roman;">1.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 国家社会科学基金重大项目（课题首席专家），研究阐释党的十九届五中全会精神重大专项，到2035年共同富裕取得明显实质性进展远景目标研究，2021年4月。</span></p><p style="text-align:left;"><span style="font-family:Times New Roman;">2.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 国家社会科学基金重大项目（课题负责人），中国特色和谐劳动关系的演进路径与机制构建研究（首席专家宋晓梧），2016年5月。 &nbsp;</span></p><p style="text-align:left;"><span style="font-family:Times New Roman;">3.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 国家社会科学基金重大专项（子课题负责人），开启第二个百年奋斗目标推进共同富裕研究，2018年9月。 &nbsp;&nbsp;</span></p><p style="text-align:left;"><span style="font-family:Times New Roman;">4.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 国家社会科学基金重大项目（子课题负责人），农村家庭数据库建设及其应用研究，2018年4月。 &nbsp;</span></p><p style="text-align:left;"><span style="font-family:Times New Roman;">5.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 国家社会科学基金项目（课题负责人），我国中等收入者问题研究，2019年5月。</span></p><p style="text-align:left;"><span style="font-family:Times New Roman;">6.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 国家社会科学基金项目（课题负责人），收入差距与公共政策调节研究，2014年7月。</span></p></div>
+                    
+                </div>								            </div>
+        </div>
+         <footer style="overflow: hidden;">
+            <div class="footers">
+                <div class="footersl">
+                    <img src="http://bs.bnu.edu.cn/newweb/images/ewm.jpg" alt="" class="imgewm">
+                    <div class="footerxx">
+                        <p>Copyright © 2020 北京师范大学经济与工商管理学院</p>
+                        <p><i class="fas fa-map-marker-alt"></i> 地址：北京市新街口外大街19号</p>
+                        <p><i class="fas fa-portrait"></i> 传真：010-58801867</p>
+                        <p><i class="fas fa-phone"></i> 电话：010-58801867</p>
+                        <p><i class="fas fa-envelope"></i> 邮编：100875</p>
+                    </div>
+                </div>
+                <img src="http://bs.bnu.edu.cn/newweb/images/db.png" alt="" width="140" class="dbimg">
+                <img src="http://bs.bnu.edu.cn/newweb/images/yx.png" alt="" class="yuanxun">
+            </div>
+        </footer>
+    </div>
+	<div class="share">
+		  <div id="appgame-leftside-share">
+	        <div class="appgame-leftside-share rwt_share" id="rwt_share">
+	         
+	        <!--<a class="appgame-leftside-search" data-cmd="search" title="search"  href="javascript:void(0);" onclick="opens('id')">search</a> --> <!--<div class="searchs" id="id">
+	         <form name="dataForm" action="/cms/search/searchResults.jsp" target="_blank" method="post" accept-Charset="utf-8"  onsubmit="document.charset='utf-8';">
+			        	<p>
+			        		<input name="siteID" size="4" value="127" type = "hidden">
+			        		<input type="text" name="query" id="search" class="searchInput" value="输入搜索词">
+			        		<button type="submit"></button>
+			        	</p>
+			        	</form>
+			        </div>-->
+			        <!-- <a class="appgame-leftside-weixin" data-cmd="weixin" title="">微信</a> -->
+                    
+			        <!-- <a class="appgame-leftside-qzone" data-cmd="qzone" title="">qq空间</a>
+			        
+			        <a class="appgame-leftside-tsina" data-cmd="tsina" title="">微博</a> -->			    </div>
+			        <a class="appgame-leftside-top" onclick="gotoTPoint()"></a>			</div>
+			        
+		</div>
+</body>
+<script src="http://gh.bnu.edu.cn/js/jquery-1.9.0.min.js"></script>
+<script src="http://gh.bnu.edu.cn/js/share.min.js"></script>
+<script>
+    var dj=document.getElementById('dianji');
+    var jjc=document.getElementById('jjc');
+    var dj1=document.getElementById('dianji1');
+    var jjc1=document.getElementById('jjc1');
+    var a=1;
+    function zhedie(m,n){
+        m.onclick=function(){
+            if(a==1){
+                n.className='jjc';
+                m.className='dianji1'
+                a=0;
+            }else{
+                n.className='jjc1';
+                m.className='dianji'
+                a=1;
+            }
+        }
+    }
+    zhedie(dj,jjc);
+    zhedie(dj1,jjc1);
+	
+	
+</script>
+<script>
+
+	
+	
+    
+
+    /*回到顶部*/
+	$(function(){
+	 	$(window).resize(function(){
+						var h = $(window).height();
+						$('.goTop').css('top',h-60);
+						$(window).scroll(function(){				
+							var scrollTop = $(document).scrollTop();					  
+							$('.goTop').stop().animate({
+								top: h + scrollTop-60
+							},300);
+						});
+		}).resize();
+		});
+	//gotop
+
+			$('.goTop').click(function(){
+
+				$('body,html').stop().animate({scrollTop:0});
+
+				return false;
+
+			});
+	
+	function gotoTPoint(){
+		$("html,body").animate({scrollTop:0},500);
+	}
+</script>
+</html>

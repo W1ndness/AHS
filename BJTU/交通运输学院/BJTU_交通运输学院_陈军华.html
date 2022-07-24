@@ -1,0 +1,909 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>北京交通大学交通运输学院</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link href="/static/trans/css/bootstrap.css" rel="stylesheet">
+ 	<link href="/static/trans/css/custom.css" rel="stylesheet">
+ 	<link href="/static/trans/css/custom_list.css" rel="stylesheet">
+	<link rel="stylesheet" href="/static/ace1.3/css/jquery.dataTables.min.css" />
+	<style>
+	    .title_a{
+			margin-right:5px;
+			width:150px;
+			float:left;
+			}
+	    .title_a a{
+			line-height:30px;
+			}
+			
+		.zhiwei strong{margin-right:17px;}
+		.zhiwei a{margin-right:10px;display:inline;width:150px;float:left;margin-top:10px;}
+		#words a{line-height:25px;width:30px;height:25px;text-align:center;background:#e8f3fe;float:left;border:1px solid #c6dff7;margin-right:15px;margin-top:15px;}
+		#words a:hover{background:#11518f;color:#FF0;border:1px solid #11518f;}
+		.sub_con_tp{width:880px; margin:0 auto; padding:8px 0 2px}
+		.sub_con_tp h3{background:#fff url(/static/trans/img/h4_head.jpg) no-repeat left center;font-size:14px; font-weight:bold; color:#08509A; text-align:left; padding:14px 0 14px 40px; border-bottom:1px solid #AAAAAA; margin-bottom:12px}
+		.sub_con_tp p{line-height:24px; }
+		.sub_con_tp ul,li {margin:auto;}
+		
+		.sub_con_tp1{width:880px; margin:0 auto; padding:8px 0 2px}
+		.sub_con_tp1 h3{font-size:14px; font-weight:bold; color:#08509A; text-align:center; padding:14px 0; border-bottom:1px solid #AAAAAA; margin-bottom:12px}
+		.sub_con_tp1 p{line-height:24px; margin-bottom:8px; }								
+	</style> 
+    <script src="/static/ace1.3/js/jquery/1.11.0/jquery.min.js"></script>
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="/static/trans/js/html5shiv.js"></script>
+    <![endif]-->
+
+</head>
+<body>
+	<div class="boxbody">
+		<header>
+			<div class="container clearfix">
+				<div class="row-fluid">
+					<div class="span12">
+						<h1 class="brandlogo"><a href="http://trans.bjtu.edu.cn/cms/"><img src="/static/trans/img/logo.png" alt=""></a></h1>
+						<div class="topinfo">
+							<div class="list-soc">
+								<a href="http://trans1.bjtu.edu.cn/english/index.php">English</a>
+							</div>
+							<div class="infophone">
+								<div class="control-group">
+									<div class="controls">
+										<div class="input-prepend">
+                            				<form name="keyform" action="http://trans.bjtu.edu.cn/cms/item/" method="get">
+                              				<span class="add-on"><i class="icon-search"></i></span>
+                              				<input  id="inputIcon" type="text" class="input-medium"  name="keyword">
+                              				</form>
+                              			</div>
+                          			</div>
+                        		</div>
+							</div>
+			  			</div>
+						<div class="clearfix"></div>
+						<div class="row-nav navbar">
+							<div class="navbar-inner">
+								<ul id="nav" class="nav">
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+		<div class="text-center">
+			<img src="/static/trans/img/sha.png" class="slidershadow" alt="">
+		</div>
+		<div id="wrap">
+      		<div class="row-fluid container bggay">
+        		<div class="span4">
+          			<div class="leftbox_top">
+          				<div class="h4border">
+		                	<p>陈军华</p>
+		                	<div class="clearfix"></div>
+		                </div>
+						<div class="list_sidebar">
+              				<div class="categories">
+              					<ul>
+									<li><a href="#basic">基本情况</a></li>
+                                    
+                                    <li><a href="#jybj">教育背景</a></li>
+                                    
+                                    <li><a href="#gzjl">工作经历</a></li>
+                                    
+                                    <li><a href="#yjfx">研究方向</a></li>
+                                    
+                                    <li><a href="#zszy">招生专业</a></li>
+                                    
+                                    <li><a href="#kyxm">科研项目</a></li>
+                                    
+                                    <li><a href="#jxgz">教学工作</a></li>
+                                    
+                                    <li><a href="#lwqk">论文/期刊</a></li>
+                                    
+                                    <li><a href="#zzyz">专著/译著</a></li>
+                                    
+                                    <li><a href="#zl">专利</a></li>
+                                    
+                                    <li><a href="#rjzzq">软件著作权</a></li>
+                                    
+                                    <li><a href="#hjry">获奖与荣誉</a></li>
+                                    
+                                    <li><a href="#shjz">社会兼职</a></li>
+                                    
+              					</ul>
+              				</div>
+          				</div>
+          			</div>
+        		</div>
+        		<div class="span8">
+          			<div class="mainleft_box "> 
+						<h4 class="h4border">	            	
+				  		个人简介
+		        		</h4>
+                		<div class="main_nr">
+							<div style="padding:0px 10px;">
+				            	
+				            	<div class="sub_con_tp">
+				            		<h3 style="width:830px;float:right"><a name="basic">基本情况</a></h3>
+									<div style="padding:15px; line-height:25px;">
+										<div class="MsoNormal">
+											<table class="MsoNormalTable" border="0" cellspacing="0" cellpadding="0" width="840" align="center" height="1964" style="width: 840px; border-collapse: collapse; height: auto">
+												<tbody>
+													<tr style="height: 20pt">
+														<td width="80" style=" padding-bottom: 0cm; padding-left: 5.4pt; padding-right: 5.4pt; height: 20pt;  padding-top: 0cm">
+															<p style="text-align: left"><span >姓&nbsp;&nbsp;名：</span></p>
+														</td>
+														<td width="216" style=" border-left: medium none; padding-bottom: 0cm; padding-left: 5.4pt; width: 162pt; padding-right: 5.4pt; height: 20pt;  padding-top: 0cm">
+															<p style="text-align: left"><span >陈军华</span></p>
+														</td>
+														<td valign="top" rowspan="9" width="245" style=" border-left: medium none; padding-bottom: 0cm; padding-left: 5.4pt; width: 142.05pt; padding-right: 5.4pt; height: 20pt;  padding-top: 0cm">
+															
+															<img id="photo" src="/media/avatar/2021/11/30/20211130143015_45.jpg" width="216" height="252">
+														</td>
+													</tr>
+													<tr style="height: 20pt">
+														<td width="80" style=" padding-bottom: 0cm; padding-left: 5.4pt; padding-right: 5.4pt; height: 20pt; border-top: medium none;  padding-top: 0cm">
+														<p style="text-align: left"><span >职&nbsp;&nbsp;务：</span></p>
+														</td>
+														<td width="216" style=" border-left: medium none; padding-bottom: 0cm; padding-left: 5.4pt; width: 162pt; padding-right: 5.4pt; border-top: medium none;  padding-top: 0cm">
+														<p style="text-align: left"><span >交通运输学院副院长</span></p>
+														</td>
+													</tr>
+													<tr style="height: 24pt">
+														<td width="80" style=" padding-bottom: 0cm; padding-left: 5.4pt; padding-right: 5.4pt; height: 24pt; border-top: medium none;  padding-top: 0cm">
+														<p style="text-align: left"><span >职&nbsp;&nbsp;称：</span></p>
+														</td>
+														<td width="216" style=" border-left: medium none; padding-bottom: 0cm; padding-left: 5.4pt; width: 162pt; padding-right: 5.4pt; height: 24pt; border-top: medium none;  padding-top: 0cm">
+														<p style="text-align: left"><span >副教授</span></p>
+														</td>
+													</tr>
+													<tr style="height: 20pt">
+														<td width="80" style=" padding-bottom: 0cm; padding-left: 5.4pt; padding-right: 5.4pt; height: 20pt; border-top: medium none;  padding-top: 0cm">
+														<p style="text-align: left"><span >学&nbsp;&nbsp;历：</span></p>
+														</td>
+														<td width="216" style=" border-left: medium none; padding-bottom: 0cm; padding-left: 5.4pt; width: 162pt; padding-right: 5.4pt; height: 20pt; border-top: medium none;  padding-top: 0cm">
+														<p style="text-align: left"><span >研究生</span></p>
+														</td>
+													</tr>
+													<tr style="height: 20pt">
+														<td width="80" style=" padding-bottom: 0cm; padding-left: 5.4pt; padding-right: 5.4pt; height: 20pt; border-top: medium none;  padding-top: 0cm">
+														<p style="text-align: left"><span >学&nbsp;&nbsp;位：</span></p>
+														</td>
+														<td width="216" style=" border-left: medium none; padding-bottom: 0cm; padding-left: 5.4pt; width: 162pt; padding-right: 5.4pt; height: 20pt; border-top: medium none;  padding-top: 0cm">
+														<p style="text-align: left"><span >博士</span></p>
+														</td>
+													</tr>
+													<tr style="height: 24pt">
+														<td width="80" style=" padding-bottom: 0cm; padding-left: 5.4pt; padding-right: 5.4pt; height: 24pt; border-top: medium none;  padding-top: 0cm">
+														<p style="text-align: left"><span >通信地址：</span></p>
+														</td>
+														<td width="216" style=" border-left: medium none; padding-bottom: 0cm; padding-left: 5.4pt; width: 162pt; padding-right: 5.4pt; height: 24pt; border-top: medium none;  padding-top: 0cm">
+														<p style="text-align: left"><span >北京交通大学交通运输学院</span></p>
+														</td>
+													</tr>
+													<tr style="height: 20pt">
+														<td width="80" style=" padding-bottom: 0cm; padding-left: 5.4pt; padding-right: 5.4pt; height: 20pt; border-top: medium none;  padding-top: 0cm">
+														<p style="text-align: left"><span >邮&nbsp;&nbsp;编：</span></p>
+														</td>
+														<td width="216" style=" border-left: medium none; padding-bottom: 0cm; padding-left: 5.4pt; width: 162pt; padding-right: 5.4pt; height: 20pt; border-top: medium none;  padding-top: 0cm">
+														<p style="text-align: left"><span >100044</span></p>
+														</td>
+													</tr>
+													<tr style="height: 20pt">
+														<td width="80" style=" padding-bottom: 0cm; padding-left: 5.4pt; padding-right: 5.4pt; height: 20pt; border-top: medium none;  padding-top: 0cm">
+														<p style="text-align: left"><span >办公电话：</span></p>
+														</td>
+														<td width="216" style=" border-left: medium none; padding-bottom: 0cm; padding-left: 5.4pt; width: 162pt; padding-right: 5.4pt; height: 20pt; border-top: medium none;  padding-top: 0cm">
+														<p style="text-align: left"><span >010-51685033</span></p>
+														</td>
+													</tr>
+													<tr style="height: 24pt">
+														<td width="80" style=" padding-bottom: 0cm; padding-left: 5.4pt; padding-right: 5.4pt; height: 24pt; border-top: medium none;  padding-top: 0cm">
+														<p style="text-align: left"><span >电子邮箱：</span></p>
+														</td>
+														<td width="216" style=" border-left: medium none; padding-bottom: 0cm; padding-left: 5.4pt; width: 162pt; padding-right: 5.4pt; height: 24pt; border-top: medium none;  padding-top: 0cm">
+														<p style="text-align: left"><a href="mailto:cjh@bjtu.edu.cn"><span >cjh@bjtu.edu.cn</span></a></p>
+														</td>
+													</tr>
+				
+												</tbody>
+											</table>
+										</div>
+									</div>
+                                    
+                                    <h3 style="width:830px;float:right;"><a name = "jybj">教育背景</a></h3>
+									<div style="padding:15px; line-height:25px;">
+										<div class="MsoNormal">
+											<table class="MsoNormalTable" border="0" cellspacing="0" cellpadding="0" width="840" align="center" height="1964" style="width: 840px; border-collapse: collapse; height: auto">
+												<tbody>
+													<tr>
+														<td width="659" style=" padding-bottom: 0cm; padding-left: 5.4pt; padding-right: 5.4pt; height: 24pt;  padding-top: 0cm">
+															 <p>
+	2015-2016：美国，<span style="color:#545454;font-family:arial, sans-serif;font-size:small;line-height:16.5455px;background-color:#FFFFFF;">亚利桑那州立大学（Arizona State University</span><span style="color:#545454;font-family:arial, sans-serif;font-size:small;line-height:16.5455px;background-color:#FFFFFF;">）土木工程系（访问学者）</span>
+</p>
+<p>
+	<span style="color:#545454;font-family:arial, sans-serif;font-size:small;line-height:16.5455px;background-color:#FFFFFF;">2003-2009：<span style="color:#545454;font-family:arial, sans-serif;font-size:small;line-height:16.5455px;background-color:#FFFFFF;">北京交通大学交通运输学院，交通运输规划与管理专业（博士研究生）</span></span> 
+</p>
+<p>
+	<span style="color:#545454;font-family:arial, sans-serif;font-size:small;line-height:16.5455px;background-color:#FFFFFF;">1999-2003：<span style="color:#545454;font-family:arial, sans-serif;font-size:small;line-height:16.5455px;background-color:#FFFFFF;">北京交通大学交通运输学院（本科生）</span></span> 
+</p>
+
+														</td>
+													</tr>
+
+												</tbody>
+											</table>
+										</div>
+									</div>
+                                    
+                                    <h3 style="width:830px;float:right;"><a name = "gzjl">工作经历</a></h3>
+									<div style="padding:15px; line-height:25px;">
+										<div class="MsoNormal">
+											<table class="MsoNormalTable" border="0" cellspacing="0" cellpadding="0" width="840" align="center" height="1964" style="width: 840px; border-collapse: collapse; height: auto">
+												<tbody>
+													<tr>
+														<td width="659" style=" padding-bottom: 0cm; padding-left: 5.4pt; padding-right: 5.4pt; height: 24pt;  padding-top: 0cm">
+															 <p>
+	<span style="color:#545454;line-height:16.54px;font-family:arial, sans-serif;font-size:small;background-color:#FFFFFF;">2012-2013：神华集团包神铁路集团公司运输生产段（挂职副段长）</span> 
+</p>
+<p>
+	<span style="color:#545454;line-height:16.54px;font-family:arial, sans-serif;font-size:small;background-color:#FFFFFF;">2009-2011：北京交通大学电子信息工程学院（博士后）</span> 
+</p>
+														</td>
+													</tr>
+
+												</tbody>
+											</table>
+										</div>
+									</div>
+                                    
+                                    <h3 style="width:830px;float:right;"><a name = "yjfx">研究方向</a></h3>
+									<div style="padding:15px; line-height:25px;">
+										<div class="MsoNormal">
+											<table class="MsoNormalTable" border="0" cellspacing="0" cellpadding="0" width="840" align="center" height="1964" style="width: 840px; border-collapse: collapse; height: auto">
+												<tbody>
+													<tr>
+														<td width="659" style=" padding-bottom: 0cm; padding-left: 5.4pt; padding-right: 5.4pt; height: 24pt;  padding-top: 0cm">
+															 <ul>
+
+    <li>交通运输规划与管理</li>
+
+    <li>交通运输（专业学位）</li>
+
+    <li>运输组织理论与技术</li>
+
+</ul>
+														</td>
+													</tr>
+
+												</tbody>
+											</table>
+										</div>
+									</div>
+                                    
+                                    <h3 style="width:830px;float:right;"><a name = "zszy">招生专业</a></h3>
+									<div style="padding:15px; line-height:25px;">
+										<div class="MsoNormal">
+											<table class="MsoNormalTable" border="0" cellspacing="0" cellpadding="0" width="840" align="center" height="1964" style="width: 840px; border-collapse: collapse; height: auto">
+												<tbody>
+													<tr>
+														<td width="659" style=" padding-bottom: 0cm; padding-left: 5.4pt; padding-right: 5.4pt; height: 24pt;  padding-top: 0cm">
+															 <ul>
+
+    <li>交通运输规划与管理硕士</li>
+
+    <li>交通运输硕士</li>
+
+    <li>交通运输规划与管理博士</li>
+
+</ul>
+														</td>
+													</tr>
+
+												</tbody>
+											</table>
+										</div>
+									</div>
+                                    
+                                    <h3 style="width:830px;float:right;"><a name = "kyxm">科研项目</a></h3>
+									<div style="padding:15px; line-height:25px;">
+										<div class="MsoNormal">
+											<table class="MsoNormalTable" border="0" cellspacing="0" cellpadding="0" width="840" align="center" height="1964" style="width: 840px; border-collapse: collapse; height: auto">
+												<tbody>
+													<tr>
+														<td width="659" style=" padding-bottom: 0cm; padding-left: 5.4pt; padding-right: 5.4pt; height: 24pt;  padding-top: 0cm">
+															 
+<p>
+	1.国铁集团重点项目：京沪通道高速铁路与普速铁路线网运能合理匹配与协调优化研究，2020.12-2022.12，70万元，子课题负责
+</p>
+<p>
+	2.国铁集团项目：高速铁路运输能力运用综合优化技术研究，2019.07-2020.07，20万元，主持
+</p>
+<p>
+	3.&nbsp;<span>国家自然科学基金（专项）：</span>面向未来高速铁路主要技术领域发展趋势及关键问题研究，2020.10-2020.12,子课题负责
+</p>
+<p>
+	4.国家自然科学基金（重点）：高速铁路网络通过能力综合利用理论与方法，2017.12.26--2020.12-31，236.0万元，子课题负责
+</p>
+<p>
+	5.科技部 国家重点研发计划：成网条件下高速铁路能力计算与利用技术研究，2018.05.01--2021.01.31，106万元，任务负责
+</p>
+<p>
+	<span>6.专利许可项目：一种行为感知系统及方法专利许可，2022, 90万元，主持</span>
+</p>
+<p>
+	<span>7.横向课题：丰台西站货检作业VR实训平台，2021.1-&gt;2022.1,16万元，主持</span>
+</p>
+<p>
+	8.横向课题：山西铁路货运系统高质量发展战略研究，2019.12.05-&gt;2020.12.04,25万元，主持<span></span> 
+</p>
+<p>
+	9.基本科研业务费.重点：高速铁路列车开行方案与运行图一体化编制云平台设计和开发.2020.04.30-&gt;2023.03.31,100万元，任务负责<span></span> 
+</p>
+<p>
+	10.国家自然科学基金：高速铁路运营管理学科成果调研与前瞻性研究探讨，2017.09.30--2018.03-01，12.0万元，参加
+</p>
+<p>
+	11.科技部 国家重点研发计划：“一带一路”陆路通道国际联运研究与交流中心。2017.09.15—2020.08.31,623万，参加
+</p>
+<p>
+	12.科技部“863”：基于物理模型的复杂场景动态演化技术。2015.01.01—2017.12.31，78.1万元，主持&nbsp;
+</p>
+<p>
+	13.校重点科研业务费：城市轨道交通动态演化模拟技术与系统。2015.04.01—2018.12.31，115.0万元，主持
+</p>
+<p>
+	14.北京城建集团：轨道交通车站环境友好设计评价技术研究。2020.07-31-<span id="__kindeditor_bookmark_start_5__">2020.12.31，14万，参加</span> 
+</p>
+<p>
+	<span>15.北京交通大学：高速铁路列车开行方案与运行图一体化编制云平台设计和开发。2020.06.08-2023.03.31，100万。课题负责</span> 
+</p>
+<p>
+	16.北京交通大学：包神铁路集团区域管控体系下的大物流运输模式技术优化研究。2016.12.29—2019.06.30，82万，参加
+</p>
+<p>
+	17.北京市教委：我国特大城市综合交通网络协调优化理论与服务效率评价研究，2013.06.01—2014.05.31，50.0万元，参加&nbsp;
+</p>
+<p>
+	18.铁道部科技司：高速铁路精细化经营管理技术——基于乘客价值创造的铁路客运服务能力测度理论与技术，2014-01-01--2015-12-31，50.0万元，参加&nbsp;
+</p>
+<p>
+	19.铁道部科技司：客户体验管理和开发利用客户价值的理论与方法研究，2014-01-01--2015-12-31，20.0万元，参加&nbsp;
+</p>
+<p>
+	20.国家自然科学基金：基于数据挖掘的煤运重载铁路列车运行参数动态偏移规律及调度优化决策支持研究 ，2014-01-01--2016-12-31，60.0万元，参加&nbsp;
+</p>
+<p>
+	21.北京交通大学：包神铁路运输能力分析与加强方案研究，2012-01-01--2015-12-31，280.0万元，参加&nbsp;
+</p>
+<p>
+	22.北京交通大学：基于数据挖掘的区间运行时间与运行图稳定性研究，2012-12-01--2013-12-31，5.5万元，主持&nbsp;
+</p>
+<p>
+	23.北京交通大学：首都体育学院干部考核管理信息系统布署与实施，2012-12-01--2013-12-31，2.2万元，主持&nbsp;
+</p>
+<p>
+	24.科技部“973”：基于居民出行行为的公交运营策略优化研究，2012-06-18--2013-12-31，20.0万元，参加&nbsp;
+</p>
+<p>
+	25.人才基金：基于数据挖掘的列车运行时分规律与运行图稳定性研究，2012-03-02--2015-03-01，1.0万元，主持&nbsp;
+</p>
+<p>
+	26.基本科研业务费：基于稳定性的高速铁路运行图编制系统研究 ，2012-03-16--2014-12-31，8.0万元，主持&nbsp;
+</p>
+<p>
+	27.北京市教委：城市轨道交通换乘效率与换乘方案编制技术研究，2011-01-01--2011-12-31，37.55万元，参加&nbsp;
+</p>
+<p>
+	28.北京交通大学：神华大准铁路危险货物运输安全综合分析，2010-12-15--2011-12-31，50.0万元，参加&nbsp;
+</p>
+<p>
+	29.铁道部科技司：中国高速铁路运营模式与支撑体系研究，2009-12-01--2010-12-31，50.0万元，参加&nbsp;
+</p>
+<p>
+	30.国家自然科学基金：后奥运时期都市圈综合交通系统动态适应性研究与分析，2010-01-01--2010-12-31，10.0万元，参加
+</p>
+<p>
+	31.教改项目.&nbsp;学校研究生院:基于OBE的《最优化理论与方法》课程平台建设. 2017.07.01—2018.07.01，5万，主持
+</p>
+<p>
+	32.教改项目.&nbsp;学校研究生院:基于Moocs理念的《最优化理论与方法》在线课程建设. 2017.07.01—2018.06.01，5万，主持
+</p>
+<p>
+	33.教改项目. 学校教务处:面向国际需求的《管理运筹学》研究性教学体系建设与实践. 2017.06.01—2018.12.01，2万，主持
+</p>
+
+														</td>
+													</tr>
+
+												</tbody>
+											</table>
+										</div>
+									</div>
+                                    
+                                    <h3 style="width:830px;float:right;"><a name = "jxgz">教学工作</a></h3>
+									<div style="padding:15px; line-height:25px;">
+										<div class="MsoNormal">
+											<table class="MsoNormalTable" border="0" cellspacing="0" cellpadding="0" width="840" align="center" height="1964" style="width: 840px; border-collapse: collapse; height: auto">
+												<tbody>
+													<tr>
+														<td width="659" style=" padding-bottom: 0cm; padding-left: 5.4pt; padding-right: 5.4pt; height: 24pt;  padding-top: 0cm">
+															 <p>
+	本科专业必修课：铁路行车组织
+</p>
+<p>
+	<span>本科专业基础课：</span>管理运筹学（北京市重点优质课程、学校<span>课程思政示范课</span>）
+</p>
+<p>
+	<span>研究生专业核心<span>课</span></span>：交通运输系统最优化理论与方法<span>（北京市</span><span>课程思政示范课</span><span>）</span> 
+</p>
+<p>
+	国家精品在线课程《城市轨道交通运营管理》主讲教师&nbsp;&nbsp;<a></a><a href="https://www.icourse163.org/course/NJTU-1002921001">https://www.icourse163.org/course/NJTU-1002921001</a> 
+</p>
+<p>
+	国家级课程思政示范课《<span>城市轨道交通运营管理》团队成员</span> 
+</p>
+<p>
+	<span><br />
+</span> 
+</p>
+<p>
+	北京市<span>教学成果奖一等奖参与2项</span> 
+</p>
+<p>
+	校级教学成果奖特等奖参与2项，主持二等奖2项
+</p>
+<p>
+	<br />
+</p>
+<p>
+	北京市本科毕业设计优秀指导老师
+</p>
+<p>
+	北京市交通科技大赛优秀指导教师
+</p>
+<p>
+	<span>学校</span><span>课程思政示范课名师</span> 
+</p>
+<p>
+	教改论文在全国交通运输专业课程思政研讨会获一等奖
+</p>
+<p>
+	<br />
+</p>
+<p>
+	竞赛指导：
+</p>
+<p>
+	<span>国家级：获得2021第16届全国交通运输科技大赛一等奖（研究生赛道）</span> 
+</p>
+<p>
+	<span><span>国家级：</span>获得2020第15届全国交通运输科技大赛一等奖</span> 
+</p>
+<p>
+	<span><span>国家级：</span><span>获得2022第12届MathorCup高校数学建模挑战赛本科生组一等奖</span><br />
+</span>
+</p>
+<p>
+	<span>国家级：</span>获得2018第13届全国交通科技大赛国家二等奖
+</p>
+<p>
+	<span><span>国家级：</span>获得2013第8届全国交通科技大赛国家二等奖</span> 
+</p>
+<p>
+	<span>国家级：</span>获得2019第二届中国城市轨道交通创新创业大赛（URIC）三等奖
+</p>
+<p>
+	<br />
+</p>
+<p>
+	省部级：获得2021北京市交通科技大赛一等奖
+</p>
+<p>
+	省部级：获得2019北京市交通科技大赛一等奖
+</p>
+<p>
+	<span>省部级：</span>获得2020年“挑战杯”首都大学生创业计划铜奖
+</p>
+<p>
+	<span>省部级：</span>获得2019年北京市优秀毕业设计
+</p>
+<p>
+	其他：多人次获得2019-2022国家级、北京市级大创项目
+</p>
+
+														</td>
+													</tr>
+
+												</tbody>
+											</table>
+										</div>
+									</div>
+                                    
+                                    <h3 style="width:830px;float:right;"><a name = "lwqk">论文/期刊</a></h3>
+									<div style="padding:15px; line-height:25px;">
+										<div class="MsoNormal">
+											<table class="MsoNormalTable" border="0" cellspacing="0" cellpadding="0" width="840" align="center" height="1964" style="width: 840px; border-collapse: collapse; height: auto">
+												<tbody>
+													<tr>
+														<td width="659" style=" padding-bottom: 0cm; padding-left: 5.4pt; padding-right: 5.4pt; height: 24pt;  padding-top: 0cm">
+															 
+<p>
+	1. 期刊A1-&gt; Monirehalsadat, &nbsp;Junhua Chen*, Tie Shi, Yongxiang Zhang, Xuesong Zhou,A cumulative service state representation for the pickup and delivery problem with transfers,Transportation Research Part B: Methodological,Volume 129,2019,Pages 351-380,ISSN 0191-2615, (<a href="http://www.sciencedirect.com/science/article/pii/S0191261517306859">http://www.sciencedirect.com/science/article/pii/S0191261517306859</a>)
+</p>
+<p>
+	2.&nbsp;<span>期刊A-&gt;</span><span style="font-family:&quot;font-size:13.3333px;background-color:#FFFFFF;">徐辉章，陈军华*，李崇楠，张星臣，基于邻域核密度估计的高速铁路列车正晚点分布模型研究[J].铁道学报,2022,Vol44,No.5<span style="font-family:&quot;font-size:14.6667px;background-color:#FFFFFF;">.</span></span>
+</p>
+<p>
+	<span>3. 期刊A-&gt;</span><span style="font-family:&quot;font-size:13.3333px;background-color:#FFFFFF;">Chunxiao Zhao, Junhua Chen *, Xingchen Zhang and Zanyang Cui,&nbsp;<span style="font-family:&quot;font-size:14.6667px;background-color:#FFFFFF;">Solution of Multi-Crew Depots Railway Crew Scheduling Problems: the Chinese High-Speed Railway Case[J].&nbsp;Sustainability,2022.</span></span> 
+</p>
+<p>
+	4. 期刊A2-&gt;<span style="font-family:&quot;font-size:13.3333px;background-color:#FFFFFF;">Angyang Chen, Xingchen Zhang, Junhua Chen1*, Zhimei Wang,&nbsp;<span style="font-family:&quot;font-size:14.6667px;background-color:#FFFFFF;">Joint optimization of high-speed train timetable, speed level and stop plan for increase capacity based on compressed multi-layer space-time network[J].&nbsp;<span style="font-family:&quot;font-size:14.6667px;background-color:#FFFFFF;">PLOS ONE,2022.</span></span></span> 
+</p>
+<p>
+	<span style="font-family:&quot;font-size:13.3333px;background-color:#FFFFFF;"><span style="font-family:&quot;font-size:14.6667px;background-color:#FFFFFF;"><span style="font-family:&quot;font-size:14.6667px;background-color:#FFFFFF;">5.&nbsp;<span>期刊A*-&gt;</span></span></span></span><span style="font-family:&quot;font-size:13.3333px;background-color:#FFFFFF;">Hao Zheng, Xingchen Zhang and Junhua Chen *</span><span style="font-family:&quot;font-size:14.6667px;background-color:#FFFFFF;"><span style="font-family:&quot;font-size:13.3333px;background-color:#FFFFFF;">, Ju,</span></span><span style="font-family:&quot;font-size:13.3333px;background-color:#FFFFFF;">Study on Customized Shuttle Transit Mode
+responding to Spatiotemporal Inhomogeneous Demand in Super-peak[J],&nbsp;</span><span style="color:#333333;font-family:&quot;background-color:#FFFFFF;">Information.2078-2489,2021</span><span style="font-family:&quot;font-size:13.3333px;background-color:#FFFFFF;"></span><span style="font-family:&quot;font-size:14.6667px;background-color:#FFFFFF;"></span> 
+</p>
+<p>
+	<span style="font-family:&quot;font-size:13.3333px;background-color:#FFFFFF;"><span style="font-family:&quot;font-size:14.6667px;background-color:#FFFFFF;">6. 期刊-&gt;<span style="font-family:&quot;font-size:13.3333px;background-color:#FFFFFF;"> 李崇楠 陈军华* ,<span style="font-family:&quot;font-size:14.6667px;background-color:#FFFFFF;">基于AnyLogic的高速铁路动车组出入段能力仿真分析[J].&nbsp;<span style="font-family:&quot;font-size:14.6667px;background-color:#FFFFFF;">铁道运输与经济,2021.</span></span></span></span></span> 
+</p>
+<p>
+	<span style="font-family:&quot;font-size:13.3333px;background-color:#FFFFFF;"><span style="font-family:&quot;font-size:14.6667px;background-color:#FFFFFF;"><span style="font-family:&quot;font-size:13.3333px;background-color:#FFFFFF;"><span style="font-family:&quot;font-size:14.6667px;background-color:#FFFFFF;"><span style="font-family:&quot;font-size:14.6667px;background-color:#FFFFFF;">7. 期刊-&gt;</span><span style="font-family:&quot;font-size:13.3333px;background-color:#FFFFFF;">&nbsp;<span style="font-family:&quot;font-size:13.3333px;background-color:#FFFFFF;">卢特尔1，陈军华*</span>&nbsp;,<span style="font-family:&quot;font-size:14.6667px;background-color:#FFFFFF;"><span style="font-family:&quot;font-size:14.6667px;background-color:#FFFFFF;">高速铁路可变编组列车开行计划优化</span>[J].&nbsp;铁道运输与经济,2021.</span></span></span></span></span></span> 
+</p>
+<p>
+	<span><span>8.&nbsp;期刊A2-&gt;Zheng H, Chen J*, Zhang X, et al. Designing a New Shuttle Service to Meet Large-Scale Instantaneous Peak Demands for Passenger Transportation in a Metropolitan Context: A Green, Low-Cost Mass Transport Option[J]. Sustainability, 2019, 11(18): 5025.</span></span> 
+</p>
+<p>
+	<span><span>9. 期刊A3-&gt;<span style="font-family:&quot;font-size:13.3333px;background-color:#FFFFFF;">Jianjun Fu and Junhua Chen *,&nbsp;<span style="font-family:&quot;font-size:14.6667px;background-color:#FFFFFF;">A Green Transportation Planning Approach for Coal Heavy-haul Railway System by Simultaneously Optimizing Energy Consumption and Capacity Utilization[J].&nbsp;<span>Sustainability, 2021.</span></span></span></span></span> 
+</p>
+<p>
+	<span><span><span style="font-family:&quot;font-size:13.3333px;background-color:#FFFFFF;"><span style="font-family:&quot;font-size:14.6667px;background-color:#FFFFFF;"></span></span></span></span> 
+</p>
+<p align="left" class="MsoNormal" style="background:white;text-indent:-18pt;margin-left:18.75pt;">
+	<span><span></span></span> 
+</p>
+<p>
+	<span>10.&nbsp;期刊-&gt;</span>姜安培<span>,</span>陈军华*<span>,</span>王志美<span>.</span>基于时空<span>-</span>状态网络的机车调配运用模型与算法研究<span>[J].</span>铁道运输与经济<span>,2019(09):85-92.</span> 
+</p>
+<p>
+	<span><span><span><span><span><span><span><span><span><span>11.&nbsp;期刊-&gt;</span>杨子贤<span>,</span>陈军华*<span>. </span>复杂客流条件下铁路客运站应急疏散仿真<span>[J].</span>铁道运输与经济<span>,2020.11. </span></span></span></span></span></span></span></span></span></span> 
+</p>
+<span><span><span> 
+<p align="left" class="MsoNormal" style="background:white;text-indent:-18pt;">
+	<span></span> 
+</p>
+<p>
+	<span><span><span>12.&nbsp;会议-&gt;</span>罗强<span>,</span>陈军华*<span>. </span>基于运营数据分析的重载铁路能力计算<span>. EITRT 2019</span>，青岛，<span>2019-10.</span></span></span> 
+</p>
+<p align="left" class="MsoNormal" style="background:white;text-indent:-18pt;">
+	<span></span> 
+</p>
+<p>
+	<span><span><span>13. 会议-&gt;</span>赵春晓<span>,</span>陈军华*<span>,</span>张星臣<span>. Solution of Multi-Crew Bases Train Attendants Crew Scheduling Problems: the Chinese High-Speed Railway Case. the Transportation Research Board 2020 Annual Meeting.</span></span></span> 
+</p>
+<p>
+	<span>14. 期刊-&gt;</span>刘品之<span>,</span>陈军华*<span>.</span>重载铁路通道准时制班列开行方案研究<span>[J].</span>交通运输系统工程与信息<span>,2018,18(S1):120-126.</span> 
+</p>
+<p>
+	<span><span><span><span>15.&nbsp;期刊-&gt;</span>王金珊<span>,</span>陈军华*<span>,</span>袁霞<span>.</span>基于仿真的大宗货物集装箱装载加固方案<span>[J].</span>交通运输系统工程与信息<span>,2018,18(S1):115-119.<span><span><span><span></span></span></span></span></span></span></span></span> 
+</p>
+<p>
+	<span><span><span><span><span><span><span><span>16. 期 刊-&gt; 陈军华，刘淇，于剑，郑亚晶. Models and Algorithms of Locomotive Layout Optimization in Regional Heavy Haul Rail Network [J]。JOURNAL OF APPLIED SCIENCES，2013-10，9(13), 1544:1550</span></span></span></span></span></span></span></span> 
+</p>
+<p>
+	<span>17. 期刊-&gt;L Zhou, L tong,&nbsp;junhunchen, Joint optimization of high-speed train timetables and speed profiles:A unified modeling approach using space-time-speed grid networks. Transport&nbsp;Research&nbsp;part B, 2017&nbsp;</span> 
+</p>
+</span></span></span> 
+<p>
+	18.&nbsp; 期 刊-&gt;陈军华，张星臣，王志美，王勇.     企业铁路煤运通道空重车调配优化模型[J] 中国铁道科学,2014-5,3(35),129:136.
+</p>
+<p align="left" class="MsoNormal" style="background:white;text-indent:-18pt;margin-left:18.75pt;">
+	19.&nbsp; 期 刊-&gt; 陈军华，张星臣,蔡涵哲,郑亚晶.A monitoring data mining based approach to measuring and correcting timetable parameters[J]。Procedia Social and Behavioral Sciences，2012-08，43（2012），644：652
+</p>
+<p align="left" class="MsoNormal" style="background:white;text-indent:-18pt;margin-left:18.75pt;">
+	20.&nbsp; 期 刊-&gt; 郑亚晶，张星臣,陈军华,徐彬.单线铁路成对非追踪平行运行图最小周期时间的混合整数非线性规划模型[J]。中国铁道科学，2012-03，33（2），100：106
+</p>
+<p align="left" class="MsoNormal" style="background:white;text-indent:-18pt;margin-left:18.75pt;">
+	21.&nbsp; 期 刊-&gt; 曹键，陈军华,徐彬,李桢.城市轨道交通系统点线能力协调优化研究[J]。物流技术，2012-07，31（7），204：214
+</p>
+<p align="left" class="MsoNormal" style="background:white;text-indent:-18pt;margin-left:18.75pt;">
+	22.&nbsp; 期 刊-&gt; 王军，陈军华,徐彬,张懿.运煤专用线列车运行的Petri网仿真模型研究[J]。物流技术，2011-08，30（8），74：84
+</p>
+<p align="left" class="MsoNormal" style="background:white;text-indent:-18pt;margin-left:18.75pt;">
+	23.&nbsp; 期 刊-&gt; 陈军华，张星臣,徐彬,褚文君.高速铁路列车运行图稳定性及其影响因素分析[J]。物流技术，2011-08，30（8），81：84
+</p>
+<p align="left" class="MsoNormal" style="background:white;text-indent:-18pt;margin-left:18.75pt;">
+	24. 期 刊-&gt; 陈军华，张星臣,徐彬,黄晓波.信息化条件下车站作业标准时间查定方法研究[J]。交通运输系统工程与信息，2011-06，11（3），119：123
+</p>
+<p align="left" class="MsoNormal" style="background:white;text-indent:-18pt;margin-left:18.75pt;">
+	25. 期 刊-&gt; 王军，张星臣,张懿,陈军华.基于监控数据挖掘的运行图参数查定与修正方法[J]。中国铁道科学，2011-04，32（4），117：121
+</p>
+<p align="left" class="MsoNormal" style="background:white;text-indent:-18pt;margin-left:18.75pt;">
+	26. 期 刊-&gt; 陈军华，张星臣,徐彬.基于着色赋时PETRI网的运行图稳定性评价研究[J]。系统仿真学报，2011-04，23（4），770：816
+</p>
+<p align="left" class="MsoNormal" style="background:white;text-indent:-18pt;margin-left:18.75pt;">
+	27. 会议论文-&gt;田祥龙,陈军华*.Study for Robustness Evaluation of High-Speed Railway Capacity Utilization: A Method.<span>ICTD 2020，美国</span>，2017-11,2020-05
+</p>
+<p align="left" class="MsoNormal" style="background:white;text-indent:-18pt;margin-left:18.75pt;">
+	28.&nbsp;会议论文-&gt;许钰涵,陈军华*.Cognitive Internship System and Scheme Design of Fengtai West Railway Station Based on VR<span> </span><span>.ICTD 2020，美国，2017-11,2020-05</span> 
+</p>
+<p align="left" class="MsoNormal" style="background:white;text-indent:-18pt;margin-left:18.75pt;">
+	29. 会议论文-&gt;陈昂扬,陈军华. Urban Rail Transit Operation Simulation Based on Virtual Reality Technology。CICTP2017，上海
+</p>
+<p align="left" class="MsoNormal" style="background:white;text-indent:-18pt;margin-left:18.75pt;">
+	30.&nbsp; 会议论文-&gt;许璐，张星臣,陈军华.<span> </span>Transfer Efficiency Evaluation Method of Urban Rail Transit Based on the Generalized Cost Function&nbsp; 。3rd International Conference on Civil Engineering and Transportation, ICCET 2013，昆明，91：91，2013-07
+</p>
+<p align="left" class="MsoNormal" style="background:white;text-indent:-18pt;margin-left:18.75pt;">
+	31.&nbsp;&nbsp;会议论文-&gt; 李桢，王军,张星臣,陈军华,郑亚晶.Study on railroad capacity strengthening method based on nonperiodic dynamic programming。The 2nd International Conference on Railway Engineering，北京，91：91，2012-07
+</p>
+<p align="left" class="MsoNormal" style="background:white;text-indent:-18pt;margin-left:18.75pt;">
+	32.&nbsp;&nbsp;会议论文-&gt; 陈军华，张星臣,徐彬.Research on Timetable Stability and its Effect on Railway Transportation。7th World Congress on High Speed Rail，北京国家奥体会议中心
+</p>
+<p align="left" class="MsoNormal" style="background:white;text-indent:-18pt;margin-left:18.75pt;">
+	<span> </span> 
+</p>
+
+														</td>
+													</tr>
+
+												</tbody>
+											</table>
+										</div>
+									</div>
+                                    
+                                    <h3 style="width:830px;float:right;"><a name = "zzyz">专著/译著</a></h3>
+									<div style="padding:15px; line-height:25px;">
+										<div class="MsoNormal">
+											<table class="MsoNormalTable" border="0" cellspacing="0" cellpadding="0" width="840" align="center" height="1964" style="width: 840px; border-collapse: collapse; height: auto">
+												<tbody>
+													<tr>
+														<td width="659" style=" padding-bottom: 0cm; padding-left: 5.4pt; padding-right: 5.4pt; height: 24pt;  padding-top: 0cm">
+															 
+<p>
+	2019&nbsp;专著《铁路运输经典问题建模与实现》
+</p>
+<p>
+	2016 运营教材《城市轨道交通运营管理》，参编。
+</p>
+
+														</td>
+													</tr>
+
+												</tbody>
+											</table>
+										</div>
+									</div>
+                                    
+                                    <h3 style="width:830px;float:right;"><a name = "zl">专利</a></h3>
+									<div style="padding:15px; line-height:25px;">
+										<div class="MsoNormal">
+											<table class="MsoNormalTable" border="0" cellspacing="0" cellpadding="0" width="840" align="center" height="1964" style="width: 840px; border-collapse: collapse; height: auto">
+												<tbody>
+													<tr>
+														<td width="659" style=" padding-bottom: 0cm; padding-left: 5.4pt; padding-right: 5.4pt; height: 24pt;  padding-top: 0cm">
+															 <p align="left" style="text-align:left;">
+	<span><span> </span></span> 
+</p>
+<p align="left" style="text-align:left;">
+	1. 201910882261.3：Method and system for identifying and eliminating railway transport capacity bottleneck
+</p>
+<p align="left" style="text-align:left;">
+	2. 201710186263X：一种行为感知系统及方法
+</p>
+<p align="left" style="text-align:left;">
+	<span><span>3. 2016 1 0550187.1:</span><span style="font-family:宋体;">一种解决城市轨道交通末班车衔接问题的快速方法</span></span>
+</p>
+<p align="left" style="text-align:left;">
+	<span><span>4. 2012 1 0540122.0:</span><span style="font-family:宋体;">一种车站作业标准时间与能力查定的方法及系统</span></span> 
+</p>
+<p align="left" style="text-align:left;">
+	<br />
+</p>
+
+														</td>
+													</tr>
+
+												</tbody>
+											</table>
+										</div>
+									</div>
+                                    
+                                    <h3 style="width:830px;float:right;"><a name = "rjzzq">软件著作权</a></h3>
+									<div style="padding:15px; line-height:25px;">
+										<div class="MsoNormal">
+											<table class="MsoNormalTable" border="0" cellspacing="0" cellpadding="0" width="840" align="center" height="1964" style="width: 840px; border-collapse: collapse; height: auto">
+												<tbody>
+													<tr>
+														<td width="659" style=" padding-bottom: 0cm; padding-left: 5.4pt; padding-right: 5.4pt; height: 24pt;  padding-top: 0cm">
+															 <p>
+	<span>1.2021SRBJ1051 铁路通道流数据分析系统 <br />
+</span>
+</p>
+<p>
+	<span>2.<span style="color:#333333;font-family:&quot;background-color:#FFFFFF;">2021SRBJ0691</span> 高速铁路通过能力计算系统</span> 
+</p>
+<p>
+	<span>3.<span style="color:#333333;font-family:&quot;background-color:#FFFFFF;">2021SRBJ0690</span> 高速铁路能力基础要素管理系统</span> 
+</p>
+<p>
+	<span>4.<span style="color:#333333;font-family:&quot;background-color:#FFFFFF;">2021SRBJ0689</span> 铁路运输能力综合运用动态仿真系统</span> 
+</p>
+<p>
+	5.<span style="color:#333333;font-family:&quot;background-color:#FFFFFF;">2019SRBJ1123</span> 基于虚拟现实技术的高速铁路车站仿真系统
+</p>
+<p>
+	6.<span style="color:#333333;font-family:&quot;background-color:#FFFFFF;">2019SRBJ0913</span> 基于VR的铁路编组站作业过程仿真系统
+</p>
+<p>
+	7.<span style="color:#333333;font-family:&quot;background-color:#FFFFFF;">2019SRBJ0914</span> 高速铁路能力要素管理信息系统
+</p>
+<p>
+	8.<span style="color:#333333;font-family:&quot;background-color:#FFFFFF;">2019SRBJ0912&nbsp;</span>列车行为模式辨识辅助分析系统
+</p>
+<p>
+	9.2015SBRJ0243	铁路线路能力及作业时间标准管理信息系统V1.0&nbsp;
+</p>
+<p>
+	10.2015SBRJ0241	基于电务数据挖掘的车站区间能力计算与评估软件V1.0&nbsp;
+</p>
+<p>
+	11. 2015SBRJ0240	基于实景的城市轨道交通列车运行模拟体验与评价系统V1.0&nbsp;
+</p>
+<p>
+	12. 2015SBRJ0239	列车运行图模拟铺画教学演示系统V1.0&nbsp;
+</p>
+<p>
+	13. 2010SRBJ5297	专业技术岗位评聘申报系统V1.0
+</p>
+
+														</td>
+													</tr>
+
+												</tbody>
+											</table>
+										</div>
+									</div>
+                                    
+                                    <h3 style="width:830px;float:right;"><a name = "hjry">获奖与荣誉</a></h3>
+									<div style="padding:15px; line-height:25px;">
+										<div class="MsoNormal">
+											<table class="MsoNormalTable" border="0" cellspacing="0" cellpadding="0" width="840" align="center" height="1964" style="width: 840px; border-collapse: collapse; height: auto">
+												<tbody>
+													<tr>
+														<td width="659" style=" padding-bottom: 0cm; padding-left: 5.4pt; padding-right: 5.4pt; height: 24pt;  padding-top: 0cm">
+															 <p>
+	1. 2021年科技部“重大示范活动”优秀个人
+</p>
+<p>
+	2.&nbsp;<span>2021年北京交通大学课程思政教学名师</span> 
+</p>
+<p>
+	3. 2021年北京交通大学校友与基金工作优秀个人
+</p>
+<p>
+	4. 2020年北京交通大学学院“我最敬爱的老师”
+</p>
+<p>
+	5. 2019年北京市优秀毕业设计指导教师
+</p>
+<p>
+	6. 2017年度智瑾奖教金获得者
+</p>
+<p>
+	7. 2019北京市交通科技大赛优秀指导教师
+</p>
+<p>
+	8. 学校本科竞赛优秀指导教师（2015）&nbsp;
+</p>
+<p>
+	9. 学校工会积极分子（2015）
+</p>
+<p>
+	10. 学校乒乓球男单青年组冠军（2018）、男单甲组季军（2019）
+</p>
+<p>
+	<br />
+</p>
+<p>
+	<br />
+</p>
+
+														</td>
+													</tr>
+
+												</tbody>
+											</table>
+										</div>
+									</div>
+                                    
+                                    <h3 style="width:830px;float:right;"><a name = "shjz">社会兼职</a></h3>
+									<div style="padding:15px; line-height:25px;">
+										<div class="MsoNormal">
+											<table class="MsoNormalTable" border="0" cellspacing="0" cellpadding="0" width="840" align="center" height="1964" style="width: 840px; border-collapse: collapse; height: auto">
+												<tbody>
+													<tr>
+														<td width="659" style=" padding-bottom: 0cm; padding-left: 5.4pt; padding-right: 5.4pt; height: 24pt;  padding-top: 0cm">
+															 <p>
+	教学育部虚拟仿真教学创新联盟交通运输专业委员会秘书长
+</p>
+<p>
+	离散系统仿真学会会员
+</p>
+<p>
+	学校教职工乒乓球协会主席
+</p>
+<p>
+	期刊：Transportation part B、C、D 审稿人
+</p>
+
+														</td>
+													</tr>
+
+												</tbody>
+											</table>
+										</div>
+									</div>
+                                    
+
+								</div>
+								<div class="clear"></div>
+								
+							</div>
+						</div>
+                  		<div class="clearfix"></div>
+              		</div>
+        		</div>
+       		</div>
+       		<div id="push"></div>
+    	</div>
+	    <div id="footer">
+       		<div class="copy">
+        		<p>版权所有©北京交通大学交通运输学院 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;BJTUICP备:14010705 &nbsp;&nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp;&nbsp;  学院信箱：saad@bjtu.edu.cn</p>
+      		</div>
+  		</div>
+	</div>
+
+		<script>
+		    $.ajax({
+		      dataType: 'JSONP',
+		      url:"http://trans.bjtu.edu.cn/ajax_menu/",
+		      success: function(data){
+		      	var arch_str = '<li class="first"><a href="http://trans.bjtu.edu.cn/cms/">首页</a></li>';
+		      	var left_Str = '';
+		        $.each(data, function(i, n)
+		        {
+		        	arch_str = arch_str + '<li class="divider-vertical"></li><li class="dropdown '
+		        	if (n.id == 16){arch_str = arch_str + 'active'}
+		        	arch_str = arch_str + '"><a href="http://trans.bjtu.edu.cn/cms/item/?cat=' + n.id +'">'+n.name+'</a></li>';
+
+		        	if (n.vcs)
+		        	{
+		        		$.each(n.vcs, function(i, m){
+		        			if (n.id == 16)
+		        			{
+		        				left_Str = left_Str + '<li><a target="_parent"  href="http://trans.bjtu.edu.cn/cms/item/?cat=' + m.id +'">' +m.name + '</a>';
+		        			
+		        				if (m.cvcs)
+		        				{
+		        					left_Str = left_Str + '<ul class="sec_li">';
+			        				$.each(m.cvcs, function(i, k){
+					        				left_Str = left_Str + '<li><a target="_parent"  href="http://trans.bjtu.edu.cn/cms/item/?cat=' + k.id +'">' +k.name + '</a></li>';
+					        		});
+					        		left_Str = left_Str + '</ul>';
+		        				}
+		        				left_Str = left_Str + '</li>';
+		        			}
+		        		});
+		        	}
+		        });
+		        $("#nav").html(arch_str);
+		      }
+		    });
+		</script>
+</body>
+</html>

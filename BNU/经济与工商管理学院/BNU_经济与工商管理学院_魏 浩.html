@@ -1,0 +1,490 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0">
+    <title>北京师范大学工商与经济管理学院</title>
+    <link rel="stylesheet" href="http://bs.bnu.edu.cn/new-ver-css/reset.css">
+    <link rel="stylesheet" href="http://bs.bnu.edu.cn/new-ver-css/index.css">
+	<link rel="stylesheet" href="http://bs.bnu.edu.cn/new-ver-css/xyslist.css">
+	<link rel="stylesheet" href="http://bs.bnu.edu.cn/new-ver-css/xys-tf.css">
+    <style>
+        .container{
+            width:100%;
+            height: auto;
+            overflow: hidden;
+        }
+        .header{
+            width:100%;
+            height:116px;
+            background:#EFF8FF;
+        }
+        .logo1{
+            width:1200px!important;
+            margin:0 auto;
+            position:relative;
+            float: none;
+			display:block;
+        }
+        .logo2{
+            float:right;
+        }
+        .logo1 p{
+            position:absolute;
+            top:5px;
+            right:5px;
+            font-size:13px;
+        }
+        .logo1 p:hover{
+            color:#112769;
+        }
+        .tu{
+            width:100%;
+            height:240px;
+            background:url('http://bs.bnu.edu.cn/newweb/grzy/images/tu.jpg') no-repeat top center;
+            background-size: 100%;
+        }
+        .lujing{
+            width:1200px;
+            height:58px;
+            margin:0 auto;
+            border-bottom:1px solid #aaa;
+            overflow:hidden;
+        }
+        .lujings{
+            margin:24px 0 0 0;
+            font-size:14px;
+        }
+        .content{
+            color:#333;
+            width:1200px;
+/*            height:2000px;*/
+            margin:0 auto;
+            margin-top:40px;
+/*            background:#c4c4c4;*/
+        }
+        
+        .xian{
+            width:100%;
+            height:8px;
+            background:#9A0812;
+        }
+        
+        .leftc{
+            float:left;
+        }
+        .rightc{
+            float:left;
+            margin-left:50px;
+/*            background:#666;*/
+            width:880px;
+/*            height:1000px;*/
+        }
+        .rheader{
+            width:880px;
+            height:210px;
+/*            background:yellow;*/
+        }
+        .xm{
+            font-size:30px;
+            height:40px;
+/*            border-bottom:4px solid #9A0812;*/
+            width:auto;
+            float:left;
+            line-height:40px;
+			margin-right:30px;
+        }
+        .zhiw{
+            font-size:18px;
+            height:40px;
+            line-height:50px;
+            margin-bottom:30px;
+        }
+        .tel{
+                font-size: 16px;
+                margin-top: 10px;
+                line-height: 20px;
+        }
+        .grjj{
+/*            height:300px;*/
+            width:880px;
+/*            background:yellow;*/
+            padding-bottom:40px;
+        }
+        .jjh{
+                font-size: 20px;
+                border-bottom: 1px solid #cecece;
+                height: 40px;
+                line-height: 40px;
+                padding-left: 30px;
+                background: url(http://bs.bnu.edu.cn/newweb/grzy/images/zw.png) no-repeat 0 16px;
+        }
+        
+        .jjc{
+            font-size:14px;
+            margin-top:30px;
+           
+            line-height:28px;
+            overflow:hidden;
+            text-align: justify;
+            text-justify:inter-ideograph;
+        }
+        .jjc1{
+            height:225px;
+            font-size:14px;
+            margin-top:30px;
+            
+            line-height:28px;
+            overflow:hidden;
+            text-align: justify;
+            text-justify:inter-ideograph;
+        }
+        
+        .dianji1{
+                background: url(http://bs.bnu.edu.cn/newweb/grzy/images/zw.png) no-repeat 0 -50px;
+                width: 13px;
+                height: 13px;
+                cursor: pointer;
+                display: block;
+            margin-top: 20px;
+            transition: all .2s linear;
+        }
+        .dianji1:hover{
+            background: url(http://bs.bnu.edu.cn/newweb/grzy/images/zw.png) no-repeat 0 -64px;
+        }
+        
+        .dianji{
+                background: url(http://bs.bnu.edu.cn/newweb/grzy/images/zw.png) no-repeat 0 -24px;
+                height: 13px;
+                cursor: pointer;
+                display: block;
+            margin-top: 20px;
+            transition: all .2s linear;
+        }
+        .dianji:hover{
+            background: url(http://bs.bnu.edu.cn/newweb/grzy/images/zw.png) no-repeat 0 -37px;
+        }
+        #jjc1{
+            text-indent:0em;
+        }
+        
+        .bks{
+            font-size:14px;
+            font-weight: 800;
+            margin-top:30px;
+            height:auto;
+            line-height:36px;
+        }
+        .bks1{
+            font-size:14px;
+            margin-top:30px;
+            height:auto;
+            line-height:36px;
+        }
+        .bksc{
+            height:36px;
+            line-height:36px;
+            font-size:14px;
+        }
+        
+        .yanzheng{
+            width:1200px;
+            height:100px;
+            margin:0 auto;
+        }
+        .yanzheng img{
+            display:block;
+            margin-top:26px;
+            float:left;
+        }
+		
+#appgame-leftside-share{width:42px; height:216px; position: fixed;bottom: 30px;right: 30px; z-index:9999;}
+.appgame-leftside-share{width:42px; height:259px;}
+#appgame-leftside-share a{display:block; width:42px; height:44px; background-color:#e6e6e6; z-index:1; position:absolute; left:0; box-sizing:border-box; -moz-box-sizing:border-box; border:1px #ddd solid; background-image:url(http://gh.bnu.edu.cn/images/share-icons.png); background-repeat:no-repeat; margin:0;  transition:0.4s; -webkit-transition:0.4s; -moz-transition:0.4s;}
+#appgame-leftside-share a:hover{background-color:#fff; border:1px #eee solid; z-index:2;}
+/*.appgame-leftside-weixin{top:0; background-position:-88px 0;}
+.appgame-leftside-weixin:hover{background-position:0px 0;}
+.appgame-leftside-qzone{top:43px; background-position:-88px -44px;}
+.appgame-leftside-qzone:hover{background-position:0px -44px;}*/
+.appgame-leftside-search{top:86px; background-position:-93px -89px;}
+.appgame-leftside-search:hover{background-position:-5px -86px;}
+.appgame-leftside-weixin{top:129px; background-position:-88px 0px;}
+.appgame-leftside-weixin:hover{background-position:0px 0px;}
+/*.appgame-leftside-fbook{top:172px; background-position:-88px -176px;}
+.appgame-leftside-fbook:hover{background-position:0px -176px;}
+.appgame-leftside-twi{top:215px; background-position:-88px -220px;}
+.appgame-leftside-twi:hover{background-position:0px -220px;}*/
+#appgame-leftside-share .appgame-leftside-top{background-image:url(http://gh.bnu.edu.cn/images/leftnav-off.png); background-position:-1px -395px; top:130px; cursor:pointer;}
+
+.rwt_share {
+/*	overflow:hidden;*/
+	float:left;
+	position:relative;
+}
+.rwt_share a {
+	display:inline-block;
+	margin-right:10px;
+	text-indent:-9999px;
+	margin-bottom:10px;
+	width:24px;
+	height:24px;
+	overflow:hidden;
+	cursor:pointer;
+	float:left;
+	font-size:12px;
+}
+.rwts_weixin {
+	background-position:0 -1612px;
+}
+.rwts_tsina {
+	background-position:0 -104px;
+}
+.rwts_tqq {
+	background-position:0 -260px;
+}
+.rwts_qzone {
+	background-position:0 -52px;
+}
+.rwts_sqq {
+	background-position:0 -2652px;
+}
+.rwts_tieba {
+	background-position:0 -728px;
+}
+.rwts_renren {
+	background-position:0 -208px;
+}
+.rwts_kaixin001 {
+	background-position:0 -312px;
+}
+.rwts_tqf {
+	background-position:0 -364px;
+}
+.rwts_douban {
+	background-position:0 -468px;
+}
+.rwts_twi {
+	background-position:0 -1404px;
+}
+.rwts_fbook {
+	background-position:0 -1352px;
+}
+.rwts_ty {
+	background-position:0 -1196px;
+}
+.rwts_mogujie {
+	background-position:0 -1768px;
+}
+.rwts_meilishuo {
+	background-position:0 -1716px;
+}
+.rwts_huaban {
+	background-position:0 -1872px;
+}
+.rwts_hi {
+	background-position:0 -416px;
+}
+.rwts_tsohu {
+	background-position:0 -520px;
+}
+.rwts_more {
+	background-position:0 0;
+}
+.rwt_share_wxShow_code>img {
+	width:100%;
+}
+.bks1 li{
+	list-style:disc;
+}
+@media screen and (max-width: 1200px){
+	.logo1{
+		width:100%!important;
+	}
+	.leftc img{
+		width:50%!important;
+		height:50%!important;
+	}
+	.logo2{display:none;}
+	.lujing{
+		width:90%;
+	}
+	.content{
+		width:90%;
+	}
+	.leftc{
+		float:none;
+		
+	}
+	.tu{display:none;}
+	
+	.rightc{
+		float:none;
+		width:100%;
+		margin-left:0px;
+	}
+	.footers{width:100%;}
+	.rheader{width:100%;}
+	.grjj{width:100%;}
+}
+@media screen and (max-width: 600px){
+.l3{width:95%;}
+.share{display:none;}
+.leftc img{
+		width:70%!important;
+		height:70%!important;
+	}
+}
+  
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo1">
+                <img src="http://bs.bnu.edu.cn/newweb/grzy/images/logo.png" alt="" class="l3" style="margin-top: 25px;float:left;">
+                <img src="http://bs.bnu.edu.cn/newweb/grzy/images/logo2.png" alt="" class="logo2">
+                <a href="http://bs.bnu.edu.cn/englishversion/facultyresearch/fulltimefaculty/azmsy/119503.html"><p>ENGLISH VERSION</p></a>
+            </div>
+        </div>
+        <div class="xian"></div>
+        <div class="tu"></div>
+        <div class="lujing">
+            <div class="lujings">
+                <a href="#">师资队伍</a>
+                 | 
+                <a href="#">国际经济与贸易系</a>
+            </div>
+        </div>
+        <div class="content">
+            <div class="leftc">
+                <img src="/Public/upload/touxiang/07018.jpg" alt="" width="270">
+            </div>
+            <div class="rightc">
+                <div class="rheader">
+                    <p class="xm">魏 浩</p>
+                    <p class="zhiw">教授、博士生导师</p>
+                    <p class="tel"><strong style="display:block;width:100px;float:left;">电话</strong>：010-58802462</p> 
+                 <p class="tel"><strong style="display:block;width:100px;float:left;">E-mail</strong>：weihao9989@163.com</p>
+                 <p class="tel"><strong style="display:block;width:100px;float:left;">Office hour</strong>：邮件预约</p>
+                 <p class="tel"><strong style="display:block;width:100px;float:left;">系所中心</strong>：国际经济与贸易系</p>
+              </div>
+			  <div class="grjj">
+                    <p class="jjh">个人简历</p>
+                    <div class="bks1" id="jjc"><div style="top: 120px;"><span style="font-size:16px;">&nbsp; &nbsp; &nbsp; &nbsp;魏浩，江苏人，北京师范大学经济与工商管理学院教授、博士生导师，国际经济与贸易系主任，国家进口研究中心主任，国家社会科学基金重大项目首席专家，入选国家&quot;万人计划&quot;，《国家哲学社会科学成果文库》获得者，中国世界经济学会副秘书长。南京大学商学院经济学博士，美国哥伦比亚大学经济系访问学者。主要研究领域是国际贸易、世界经济，重点研究进口贸易、出口贸易、国际人才跨国流动等问题。<br />&nbsp; &nbsp; &nbsp; &nbsp;以第一作者或者独立作者身份，先后在《管理世界》《世界经济》《经济学季刊》《金融研究》《统计研究》《教育研究》等CSSCI/SSCI期刊上发表学术论文200多篇，20多篇论文被人大复印资料、《中国社会科学文摘》等全文转载；在“贸易经济”领域，论文被引数连续多年位列全国前列；在《人民日报》《光明日报》《人民日报海外版》《经济日报》《中国经济时报》《国际商报》等媒体发表大量署名文章和观点；出版个人专著5部，主编教材6部。<br />&nbsp; &nbsp; &nbsp; &nbsp;主持国家社科基金重大项目、国家自然科学基金面上项目（2项）、国家社会科学基金项目、国家社会科学基金重大项目子课题（3项）、教育部人文社会科学基金项目（3项）、北京市社科基金项目（2项）等20多个项目的研究；承担国家商务部、国家发改委、国家财政部、国家统计局、国家高端智库理事会等委托项目多项，为国家部委提供研究报告数十份，连续多年发布并出版《中国进口发展报告》。<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 研究成果荣获“第七届高等学校科学研究优秀成果奖（人文社会科学）”（教育部）、“<span style="color:#313131;">第六届全国教育科学研究优秀成果奖</span>”（教育部）、“安子介国际贸易研究奖”（6次）、“全国商务发展研究成果奖”（商务部，9次）、“全国统计科研优秀成果奖”（国家统计局）、“北京市哲学社会科学优秀成果奖”等省部级奖励20多项，个人专著入选《国家哲学社会科学成果文库》。<br />&nbsp; &nbsp; &nbsp; &nbsp;荣获“国家万人计划青年拔尖人才”、<span style="font-size:16px;">“北京高等学校青年英才”</span>、宝钢全国优秀教师奖、“中国哲学社会科学最有影响力学者”、“中国人文社科最具影响力青年学者”、“陶大镛基金青年教师英才奖”、“北京师范大学青年英才”、“北京师范大学教学名师”、“北京师范大学优秀博士学位论文指导教师”、“北京师范大学通鼎青年教师奖”、北京师范大学优质研究生课程、北京师范大学本科教学优秀奖、北京师范大学优秀新生导师、北京师范大学优秀辅导员、北京师范大学优秀本科学位论文指导教师等奖励和称号。<br />&nbsp; &nbsp; &nbsp;&nbsp; 主要学术兼职包括中国世界经济学会副秘书长、全国高校国际贸易学科协作组青年论坛秘书处副秘书长等，长期担任《中国社会科学》、《经济研究》、《管理世界》、《世界经济》、《经济学季刊》、《金融研究》、《中国工业经济》、《经济学动态》、<span style="font-size:16px;">《统计研究》、</span>《财贸经济》、《国际贸易问题》、《世界经济与政治论坛》等10多家CSSCI学术期刊的匿名审稿人。</span>﻿﻿</div><div style="top: 0px;">﻿﻿</div></div>
+                    
+                </div>				<div class="grjj">
+                    <p class="jjh">研究领域</p>
+                    <div class="bks1"><div style="top: 0px;"><span style="font-family:Microsoft YaHei;font-size:16px;">﻿﻿国际贸易、世界经济</span></div></div>
+                </div>				<div class="grjj">
+                    <p class="jjh">研究成果</p>
+                    <div class="bks1" id="jjc1"><div style="top: 0px;"><span style="font-size:16px;">出版部分专著、发布报告：<br /></span></div><div style="top: 0px;"><span style="font-size:16px;">&nbsp;&nbsp;&nbsp; 魏浩：《积极扩大进口与中国经济增长》，人民出版社，2021年。<span style="font-family:KaiTi_GB2312;font-size:16px;">入选《国家哲学社会科学成果文库》</span><span style="font-family:KaiTi_GB2312;">。</span><br /></span></div><div style="top: 0px;"><span style="font-size:16px;"></span><p style="text-align:left;"><span style="font-family:宋体;color:black;font-size:9.0pt;"></span></p><p style="text-align:left;"><span style="font-family:宋体;color:black;font-size:9.0pt;"></span></p><p style="text-align:left;"><span style="font-family:Microsoft YaHei;font-size:12.0pt;">&nbsp;&nbsp;&nbsp; 魏浩：《中国工业制成品出口商品结构及其就业效应研究》，北京师范大学出版社，2013年。<span style="font-family:KaiTi_GB2312;">荣获商务部“全国商务发展研究成果奖”。</span></span></p><p style="text-align:left;"><span style="font-family:Microsoft YaHei;font-size:12.0pt;">&nbsp;&nbsp;&nbsp; 魏浩：《中国对外贸易出口结构研究》，人民出版社，2010年。<span style="font-family:KaiTi_GB2312;">荣获商务部“全国商务发展研究成果奖”。</span></span></p><p style="text-align:left;"><span style="font-family:宋体;color:black;font-size:9.0pt;"><span style="font-size:16px;"><span style="font-size:16px;"></span></span><span style="font-family:'Calibri','sans-serif';color:black;font-size:9.0pt;"></span></span></p><span style="font-size:16px;">&nbsp;&nbsp;&nbsp; 魏浩：《2018中国进口发展报告》</span></div><div style="top: 0px;"><span style="font-size:16px;">&nbsp;&nbsp;&nbsp; 魏浩：《2019中国进口发展报告》，中国经济出版社，2020年。<span style="font-family:KaiTi_GB2312;">荣获商务部<span style="font-size:16px;">“全国商务发展研究成果奖”。</span></span><br /></span></div><div style="top: 0px;"><span style="font-size:16px;">&nbsp;&nbsp;&nbsp; 魏浩：《2020中国进口发展报告》</span></div><div style="top: 0px;"><span style="font-size:16px;">&nbsp;&nbsp;&nbsp; 魏浩：《2021中国进口发展报告》<span style="font-size:16px;">，中国经济出版社，2022年。</span></span></div><div style="top: 0px;"><span style="font-size:16px;"><span style="font-size:16px;">&nbsp;&nbsp;&nbsp; 魏浩：《2022中国进口发展报告》</span><span style="font-size:12px;">﻿</span></span>﻿﻿</div></div>
+                    
+                </div>								<div class="grjj">
+                    <p class="jjh">学生情况</p>
+                    <div class="bks1"><div style="top: 0px;"><span style="font-size:16px;">﻿﻿<span microsoft="" yahei="" 16px="">招收世界经济、国际贸易专业的硕士生、博士生、博士后、访问学者。</span></span></div><div style="top: 0px;"><span style="font-size:16px;"><span microsoft="" yahei="" 16px=""><span style="font-size:16px;">招收国际商务、工商管理专业的硕士生</span>。<br /></span></span></div></div>
+                    
+                </div>				<div class="grjj">
+                    <p class="jjh">教授课程</p>
+                    <div class="bks1"><p><span style="font-family:Microsoft YaHei;font-size:16px;">出版教材：</span></p><p><span style="font-family:Microsoft YaHei;font-size:16px;">&nbsp; &nbsp; <span microsoft="" yahei="" font-size:16px="">&nbsp; &nbsp;&nbsp;<span microsoft="" yahei="" font-size:="" 16px="" style="">魏浩：国际贸易学（第二版），高等教育出版社，2022。</span>&nbsp; &nbsp; &nbsp; &nbsp;</span></span></p><p><span style="font-family:Microsoft YaHei;font-size:16px;"><span microsoft="" yahei="" font-size:16px="">&nbsp; &nbsp; &nbsp; &nbsp; 魏浩：国际贸易学，高等教育出版社，2017。</span></span></p><p><span style="font-family:Microsoft YaHei;font-size:16px;">&nbsp; &nbsp; &nbsp; &nbsp; 魏浩：世界经济概论（第二版），机械工业出版社，2017。</span></p><p><span style="font-family:Microsoft YaHei;font-size:16px;">&nbsp;</span><span microsoft="" yahei="" font-size:16px="">&nbsp; &nbsp; &nbsp; &nbsp; <span style="font-size:16px;">&nbsp;魏浩：国际经济学，北京大学出版社，2018。</span></span></p><p><span microsoft="" yahei="" font-size:16px=""><span style="font-size:16px;"><span style="font-size:16px;">&nbsp; &nbsp; &nbsp; &nbsp; 魏浩：世界经济学，北京大学出版社，2014。</span></span></span></p><p><span microsoft="" yahei="" font-size:16px=""><span style="font-size:16px;"><span microsoft="" yahei="" style="">&nbsp; &nbsp; &nbsp; &nbsp; 魏浩：世界经济概论，机械工业出版社，2014。</span><br /></span></span></p><p><span microsoft="" yahei="" font-size:16px=""><span style="font-size:16px;"><br /></span></span></p><p><span microsoft="" yahei="" font-size:16px=""><span style="font-size:16px;"><br /></span></span></p></div>
+                    
+                </div>            </div>
+        </div>
+         <footer style="overflow: hidden;">
+            <div class="footers">
+                <div class="footersl">
+                    <img src="http://bs.bnu.edu.cn/newweb/images/ewm.jpg" alt="" class="imgewm">
+                    <div class="footerxx">
+                        <p>Copyright © 2020 北京师范大学经济与工商管理学院</p>
+                        <p><i class="fas fa-map-marker-alt"></i> 地址：北京市新街口外大街19号</p>
+                        <p><i class="fas fa-portrait"></i> 传真：010-58801867</p>
+                        <p><i class="fas fa-phone"></i> 电话：010-58801867</p>
+                        <p><i class="fas fa-envelope"></i> 邮编：100875</p>
+                    </div>
+                </div>
+                <img src="http://bs.bnu.edu.cn/newweb/images/db.png" alt="" width="140" class="dbimg">
+                <img src="http://bs.bnu.edu.cn/newweb/images/yx.png" alt="" class="yuanxun">
+            </div>
+        </footer>
+    </div>
+	<div class="share">
+		  <div id="appgame-leftside-share">
+	        <div class="appgame-leftside-share rwt_share" id="rwt_share">
+	         
+	        <!--<a class="appgame-leftside-search" data-cmd="search" title="search"  href="javascript:void(0);" onclick="opens('id')">search</a> --> <!--<div class="searchs" id="id">
+	         <form name="dataForm" action="/cms/search/searchResults.jsp" target="_blank" method="post" accept-Charset="utf-8"  onsubmit="document.charset='utf-8';">
+			        	<p>
+			        		<input name="siteID" size="4" value="127" type = "hidden">
+			        		<input type="text" name="query" id="search" class="searchInput" value="输入搜索词">
+			        		<button type="submit"></button>
+			        	</p>
+			        	</form>
+			        </div>-->
+			        <!-- <a class="appgame-leftside-weixin" data-cmd="weixin" title="">微信</a> -->
+                    
+			        <!-- <a class="appgame-leftside-qzone" data-cmd="qzone" title="">qq空间</a>
+			        
+			        <a class="appgame-leftside-tsina" data-cmd="tsina" title="">微博</a> -->			    </div>
+			        <a class="appgame-leftside-top" onclick="gotoTPoint()"></a>			</div>
+			        
+		</div>
+</body>
+<script src="http://gh.bnu.edu.cn/js/jquery-1.9.0.min.js"></script>
+<script src="http://gh.bnu.edu.cn/js/share.min.js"></script>
+<script>
+    var dj=document.getElementById('dianji');
+    var jjc=document.getElementById('jjc');
+    var dj1=document.getElementById('dianji1');
+    var jjc1=document.getElementById('jjc1');
+    var a=1;
+    function zhedie(m,n){
+        m.onclick=function(){
+            if(a==1){
+                n.className='jjc';
+                m.className='dianji1'
+                a=0;
+            }else{
+                n.className='jjc1';
+                m.className='dianji'
+                a=1;
+            }
+        }
+    }
+    zhedie(dj,jjc);
+    zhedie(dj1,jjc1);
+	
+	
+</script>
+<script>
+
+	
+	
+    
+
+    /*回到顶部*/
+	$(function(){
+	 	$(window).resize(function(){
+						var h = $(window).height();
+						$('.goTop').css('top',h-60);
+						$(window).scroll(function(){				
+							var scrollTop = $(document).scrollTop();					  
+							$('.goTop').stop().animate({
+								top: h + scrollTop-60
+							},300);
+						});
+		}).resize();
+		});
+	//gotop
+
+			$('.goTop').click(function(){
+
+				$('body,html').stop().animate({scrollTop:0});
+
+				return false;
+
+			});
+	
+	function gotoTPoint(){
+		$("html,body").animate({scrollTop:0},500);
+	}
+</script>
+</html>
